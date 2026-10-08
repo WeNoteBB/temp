@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m pip list)",
+      "Bash(pdftotext -layout \"剑桥PET 官方模考题精讲讲练 _23-24.pdf\" out.txt)",
+      "Bash(echo \"exit=$?\")",
+      "Read(//mingw64/**)",
+      "Bash(py --version)",
+      "Bash(cd /tmp)",
+      "Bash(python -c \"import sys; print\\(sys.version\\); print\\(sys.executable\\)\")",
+      "Bash(python -m pip --version)",
+      "Read(//c/Users/89300/AppData/Local/Temp/pdfrender/out/**)",
+      "Bash(node --check src/content.js)",
+      "Bash(echo \"=== exit=$? ===\")",
+      "Bash(grep -n '，$' src/content.js)",
+      "Bash(grep -nE '\"\"，|\"，$' src/content.js)",
+      "Bash(node tools/fixquotes.cjs src/content.js)",
+      "Bash(node --check src/app.js)",
+      "Bash(node build.mjs)",
+      "Bash(node tools/verify.cjs)",
+      "Read(//tmp/**)",
+      "Bash(timeout 240 npm install jsdom --no-audit --no-fund)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(node tools/setperm.cjs)",
+      "Bash(NODE_PATH=\"C:/Users/89300/AppData/Local/Temp/pdfrender/node_modules\" node tools/smoke.cjs)",
+      "Bash(cmd.exe /c start \"\" \"PET精读-Digging into the past.html\")",
+      "Bash(explorer.exe \"PET精读-Digging into the past.html\")"
+    ]
+  }
+}

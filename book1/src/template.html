@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PET 精读 · Digging into the past</title>
+<style>
+/*__CSS__*/
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">PET 精读<small>Exam Practice Test 1 · Reading Part 4</small></div>
+
+  <div class="tabs">
+    <button class="tab on" data-tab="read">原文精读</button>
+    <button class="tab" data-tab="quiz">题目分析</button>
+  </div>
+
+  <div class="spacer"></div>
+
+  <div class="tools">
+    <span class="voice-warn" id="voiceWarn" hidden></span>
+    <button class="tool" id="tglQuiz">做题模式</button>
+    <button class="tool" id="tglAllTr">全部翻译</button>
+    <button class="tool" id="btnStop">⏹ 停止朗读</button>
+    <button class="tool" id="btnClear">清空生词本</button>
+  </div>
+</div>
+
+<div class="cols">
+  <!-- 第一列：原文 / 题目 切换 -->
+  <div class="col">
+    <div class="col-head">
+      <span id="col1Title">原文</span>
+      <span class="hint" id="col1Hint">点词查词 · <span style="background:var(--phrase);padding:0 4px;border-radius:3px">黄色</span>是词组 · 🔊 0.75×英音</span>
+    </div>
+    <div class="col-body">
+      <div id="passage"></div>
+      <div id="qList" hidden></div>
+    </div>
+  </div>
+
+  <!-- 第二列：生词本（两部分共用） -->
+  <div class="col">
+    <div class="col-head"><span>单词 / 词组</span><span class="hint">点词自动收录</span></div>
+    <div class="col-body" id="vocab"></div>
+  </div>
+
+  <!-- 第三列：分析（两部分共用） -->
+  <div class="col">
+    <div class="col-head"><span>分析</span><span class="hint" id="col3Hint">点句子查看</span></div>
+    <div class="col-body" id="analysis"></div>
+  </div>
+</div>
+
+<script>
+/*__CONTENT__*/
+</script>
+<script>
+/*__APP__*/
+</script>
+</body>
+</html>
