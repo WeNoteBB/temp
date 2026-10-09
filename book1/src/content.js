@@ -14,6 +14,11 @@ window.PET_CONTENT = {
     title: "Digging into the past",
     words: 319,
     sentences: 22,
+    /* 句型（ana.pat）覆盖说明 —— 免得日后误以为漏了：
+       本文没有 There be 句、没有强调句（it is … that …）、
+       没有完全倒装或疑问倒装。真正的倒装只有 2 处「引语倒装」（2-1 和 3-4 的 Says Kate）。
+       pat[0] 取自主句型封闭集：主谓宾 / 主系表 / 主谓双宾 / 主谓 / 倒装引语，
+       verify.cjs 用这个白名单卡错别字。 */
     paragraphs: [
 
       /* ---------- 第 1 段 ---------- */
@@ -23,6 +28,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "去年，凯特·马歇尔得到了一个非常令人兴奋的机会——去一个历史遗址帮她父亲，她父亲是一位历史讲师！",
           ana: {
+            pat: ["主谓宾", "被动语态", "非限制性定语从句"],
             frame: "主干：<b>Kate Marshall was given an opportunity</b>（凯特获得了一个机会）",
             parts: [
               ["主语", "Kate Marshall"],
@@ -42,6 +48,7 @@ window.PET_CONTENT = {
           s: "He was leading a team to dig up and explore the area.",
           tr: "他正带着一个团队挖掘并勘探这片区域。",
           ana: {
+            pat: ["主谓宾", "不定式作目的状语"],
             frame: "主干：<b>He was leading a team</b>（他正带着一个团队）",
             parts: [
               ["主语", "He（指凯特的父亲）"],
@@ -64,6 +71,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "不过，等他们到了之后，现场和凯特预想的不太一样。",
           ana: {
+            pat: ["主系表", "表语从句", "时间状语从句"],
             frame: "主干：<b>the site wasn't quite what Kate had expected</b>（现场和凯特预想的不太一样）",
             parts: [
               ["时间状语从句", "<code>When they arrived</code>"],
@@ -75,7 +83,7 @@ window.PET_CONTENT = {
             clauses: ["时间状语从句 when...", "表语从句 what...", "though 作插入语"],
             gram: ["表语从句", "时间状语从句", "插入语", "过去完成时"],
             tip: "<b>not quite</b> 不是“不相当”，而是<b>“不完全、不太”</b>，语气比 not 委婉。<code>what Kate had expected</code> 直译“凯特所预料的东西”，中文说成<b>“跟凯特想的不太一样”</b>更自然。had expected 用过去完成时，是因为“预料”发生在“到达”之前。",
-            phrases: ["not quite"]
+            phrases: ["wasn't quite"]
           }
         }
       ],
@@ -86,6 +94,7 @@ window.PET_CONTENT = {
           s: "{16}So the first job was to remove it all and prepare the land for digging.",
           tr: "所以第一件事就是把它们全部清掉，把地整出来准备挖掘。",
           ana: {
+            pat: ["主系表", "不定式作表语"],
             frame: "主干：<b>the first job was to remove it all and prepare the land</b>（第一件事是清掉它们、把地整出来）",
             parts: [
               ["主语", "the first job"],
@@ -104,6 +113,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "凯特说：“爸爸根本没提醒过我，一到那儿我就得干这么重的活！”",
           ana: {
+            pat: ["倒装引语", "宾语从句", "时间状语从句"],
             frame: "主干：<b>Says Kate, ...</b>（凯特说……）—— 引语倒装结构",
             parts: [
               ["谓语 + 主语", "<code>Says Kate</code> —— 倒装，正常语序是 Kate says"],
@@ -124,6 +134,7 @@ window.PET_CONTENT = {
           s: "But when the site was completely cleared, the team found pieces of ancient pots on the ground.",
           tr: "等现场被彻底清理干净后，团队在地面上发现了古代陶罐的碎片。",
           ana: {
+            pat: ["主谓宾", "时间状语从句", "被动语态"],
             frame: "主干：<b>the team found pieces of ancient pots</b>（团队发现了古代陶罐的碎片）",
             parts: [
               ["时间状语从句", "<code>when the site was completely cleared</code> —— 从句本身是被动语态"],
@@ -143,6 +154,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "然而，这些东西并没有大家想的那么让人兴奋。",
           ana: {
+            pat: ["主系表", "as…as 比较句"],
             frame: "主干：<b>those weren't as exciting as everyone had thought</b>（那些东西没大家想的那么令人兴奋）",
             parts: [
               ["主语", "those（指上句的陶罐碎片）"],
@@ -160,6 +172,7 @@ window.PET_CONTENT = {
           s: "Kate's dad told them that the important pots were still under the ground.",
           tr: "凯特的爸爸告诉他们，真正重要的陶罐还在地下。",
           ana: {
+            pat: ["主谓双宾", "宾语从句"],
             frame: "主干：<b>Kate's dad told them that...</b>（凯特爸爸告诉他们……）",
             parts: [
               ["主语", "Kate's dad"],
@@ -178,6 +191,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "而且因为几百年来没人碰过它们，团队能了解到关于它们历史的多得多的信息——但首先，他们得挖得更深。",
           ana: {
+            pat: ["主谓宾", "并列句", "原因状语从句"],
             frame: "主干：<b>the team would learn far more</b>（团队能了解到多得多的东西）",
             parts: [
               ["原因状语从句", "<code>because no-one had touched them for centuries</code>"],
@@ -197,6 +211,7 @@ window.PET_CONTENT = {
           s: "Says Kate, '{17}But we all knew Dad was right!'",
           tr: "凯特说：“但我们都清楚爸爸是对的！”",
           ana: {
+            pat: ["倒装引语", "宾语从句"],
             frame: "主干：<b>we all knew (that) Dad was right</b>（我们都知道爸爸是对的）",
             parts: [
               ["谓语 + 主语", "<code>Says Kate</code> —— 引语倒装"],
@@ -220,6 +235,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "现场被划分成一个个小方块，每个方块有一名负责人，负责告诉大家怎么挖。",
           ana: {
+            pat: ["主谓宾", "被动语态", "with 复合结构", "非限制性定语从句"],
             frame: "主干：<b>The site was divided into small squares</b>（现场被划分成小方块）",
             parts: [
               ["主语", "The site"],
@@ -238,6 +254,7 @@ window.PET_CONTENT = {
           s: "'That wasn't as easy as it sounded, either,' Kate reports.",
           tr: "凯特说：“那活儿也没有听上去那么容易。”",
           ana: {
+            pat: ["主系表", "as…as 比较句", "引语后置"],
             frame: "主干：<b>That wasn't as easy as it sounded</b>（那事没听起来那么容易）",
             parts: [
               ["主语", "That（指划分方块、按规矩挖这件事）"],
@@ -257,6 +274,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "我们都不能像原来那样直接挖大坑，而是得非常小心地挖，每次只取走一点点土。",
           ana: {
+            pat: ["主谓宾", "并列谓语", "instead of + 动名词"],
             frame: "主干：<b>we all had to dig carefully and remove small amounts of soil</b>（我们都得非常小心地挖、每次只取走一点点土）",
             parts: [
               ["状语", "<code>Instead of just digging great big holes</code> —— instead of + 动名词"],
@@ -277,6 +295,7 @@ window.PET_CONTENT = {
           s: "{18}So it made sense.'",
           tr: "所以这样做是有道理的。“",
           ana: {
+            pat: ["主谓宾", "代词指代"],
             frame: "主干：<b>it made sense</b>（这说得通 / 有道理）",
             parts: [
               ["主语", "it（指代前面“小心挖、每次取少量土”的做法）"],
@@ -298,6 +317,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "凯特解释说：“我家里那些朋友对我做的事特别感兴趣。”",
           ana: {
+            pat: ["主系表", "介词宾语从句"],
             frame: "主干：<b>My friends were interested in what I was doing</b>（我朋友对我做的事很感兴趣）",
             parts: [
               ["主语", "My friends"],
@@ -316,6 +336,7 @@ window.PET_CONTENT = {
           s: "'They kept texting me to ask what I'd found.",
           tr: "他们不停地给我发短信，问我找到了什么。“",
           ana: {
+            pat: ["主谓宾", "宾语从句", "不定式作目的状语"],
             frame: "主干：<b>They kept texting me</b>（他们不停地给我发短信）",
             parts: [
               ["主语", "They（指朋友们）"],
@@ -335,6 +356,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "但其实，我们找的是那些普普通通的日常物件——它们能告诉我们几百年前住在这一带的人是什么样。",
           ana: {
+            pat: ["主谓宾", "限制性定语从句", "定语从句嵌套"],
             frame: "主干：<b>we were looking for ordinary, everyday objects</b>（我们在找普通的日常物件）",
             parts: [
               ["转折状语", "<code>But actually</code>"],
@@ -359,6 +381,7 @@ window.PET_CONTENT = {
           s: "In the end, though, Kate wasn't disappointed by what she found.",
           tr: "不过到最后，凯特并没有对自己发现的东西感到失望。",
           ana: {
+            pat: ["主系表", "介词宾语从句"],
             frame: "主干：<b>Kate wasn't disappointed</b>（凯特没有失望）",
             parts: [
               ["时间状语", "<code>In the end</code>"],
@@ -377,6 +400,7 @@ window.PET_CONTENT = {
           s: "'One day, when I was digging away, I found a stone with a strange shape.",
           tr: "有一天，我正挖着挖着，发现了一块形状奇怪的石头。“",
           ana: {
+            pat: ["主谓宾", "时间状语从句", "with 短语作后置定语"],
             frame: "主干：<b>I found a stone</b>（我发现了一块石头）",
             parts: [
               ["时间状语", "One day"],
@@ -397,6 +421,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "显然这是几百年前有人做出来的，这就意味着它非常重要。",
           ana: {
+            pat: ["主谓宾", "非限制性定语从句", "宾语从句"],
             frame: "主干：<b>Someone had made it, which meant it was important</b>（有人做了它，这意味着它很重要）",
             parts: [
               ["主语", "Someone"],
@@ -417,6 +442,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "于是爸爸把它清理干净，说它会被送到附近的博物馆去。",
           ana: {
+            pat: ["主谓宾", "并列谓语", "宾语从句"],
             frame: "主干：<b>Dad cleaned it up and said...</b>（爸爸把它清理干净，并说……）",
             parts: [
               ["主语", "Dad"],
@@ -436,6 +462,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "所以我很高兴，我终于找到了点有意思的东西！“",
           ana: {
+            pat: ["主系表", "宾语从句"],
             frame: "主干：<b>I was pleased</b>（我很高兴）",
             parts: [
               ["主语", "I"],

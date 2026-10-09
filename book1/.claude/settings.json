@@ -25,7 +25,8 @@
       "Bash(node tools/setperm.cjs)",
       "Bash(NODE_PATH=\"C:/Users/89300/AppData/Local/Temp/pdfrender/node_modules\" node tools/smoke.cjs)",
       "Bash(cmd.exe /c start \"\" \"PET精读-Digging into the past.html\")",
-      "Bash(explorer.exe \"PET精读-Digging into the past.html\")"
+      "Bash(explorer.exe \"PET精读-Digging into the past.html\")",
+      "Bash(powershell.exe -NoProfile -Command \"Start-Process -FilePath '.\\\\PET精读-Digging into the past.html'\")"
     ]
   }
 }

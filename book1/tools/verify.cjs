@@ -70,7 +70,42 @@ C.questions.forEach(q => {
 const extra = Object.keys(C.options).filter(L => !used.has(L));
 console.log("  干扰项：" + extra.join(", ") + "（应为 3 个）" + (extra.length === 3 ? " ✓" : " ⚠"));
 
-/* ---- 5. 原文复原（供人工比对） ---- */
+/* ---- 5. 句型字段 ---- */
+const MAIN_PAT = ["主谓宾", "主系表", "主谓双宾", "主谓", "倒装引语"];
+const badPat = [];
+const patTally = {};
+sents.forEach(s => {
+  const p = s.ana && s.ana.pat;
+  if (!Array.isArray(p) || !p.length) { badPat.push(s.ref + " 缺 pat"); return; }
+  if (MAIN_PAT.indexOf(p[0]) < 0) badPat.push(s.ref + " 主句型不在白名单：" + p[0]);
+  patTally[p[0]] = (patTally[p[0]] || 0) + 1;
+});
+console.log("\n句型：" + (badPat.length === 0 ? "22 句全部合规 ✓" : badPat.length + " 句有问题"));
+badPat.forEach(b => console.log("  ✗ " + b));
+console.log("  主句型分布：" + Object.keys(patTally).map(k => k + "×" + patTally[k]).join("  "));
+
+/* ---- 6. ana.phrases 全量对照 ----
+   界面上「本句词组」以自动推导为准，手打条目里凡是没被推导命中的
+   会显示成虚线 chip。这里把非字面条目如实列出，人工过一眼：
+     · 含省略号的（as ... as / prepare ... for）—— 结构写法，正常
+     · 原形与正文变形不同的（lead a team / was leading a team）—— 正常
+     · 其余 —— 疑似笔误，该修 */
+const phraseSet = new Set(C.phrases.map(p => p.toLowerCase().replace(/\s+/g, " ")));
+const nonLiteral = [];
+sents.forEach(s => {
+  const seq = " " + words(s.s).map(w => w.toLowerCase()).join(" ") + " ";
+  (s.ana && s.ana.phrases || []).forEach(m => {
+    const k = m.toLowerCase().replace(/\s+/g, " ").trim();
+    if (!seq.includes(" " + k + " ")) {
+      nonLiteral.push({ ref: s.ref, m, inTable: phraseSet.has(k) });
+    }
+  });
+});
+console.log("\n手打词组非字面条目 " + nonLiteral.length + " 处（会显示为虚线 chip）：");
+nonLiteral.forEach(d => console.log("  " + (d.inTable ? "⚠ 在词组表里但正文没有 → 疑似漂移" : "· ") +
+  " " + d.ref + "  「" + d.m + "」"));
+
+/* ---- 7. 原文复原（供人工比对） ---- */
 if (process.argv[2] === "--dump") {
   console.log("\n===== 原文 =====\n");
   C.passage.paragraphs.forEach((p, i) => {

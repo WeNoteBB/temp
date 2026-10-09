@@ -71,16 +71,37 @@ button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
   padding:4px 10px;border-radius:7px;
 }
 
-/* ---------- 三列 ---------- */
+/* ---------- 2:1:1 布局 ----------
+   原文占左半全高；右半上下切分，上=句子分析、下=单词。
+   面积比 2:1:1（原文 = 宽1/2 × 高1/1，右上右下各 = 宽1/2 × 高1/2） */
 .cols{
   display:grid;
-  grid-template-columns:minmax(0,1.45fr) minmax(0,1fr) minmax(0,1.25fr);
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  grid-template-rows:minmax(0,1fr) minmax(0,1fr);   /* 必须 minmax(0,·)：裸 1fr 的下限是 min-content，内容一长会撑爆行高 */
+  grid-template-areas:
+    "p a"
+    "p v";
   gap:14px;padding:14px;
   flex:1;min-height:0;
 }
+#col1    {grid-area:p}
+#colAna  {grid-area:a}
+#colVocab{grid-area:v}
+
+/* 显隐组合：只换 areas，左右比例恒为 1:1 */
+.cols.hide-ana  {grid-template-areas:"p v" "p v"}    /* 收起句子 → 单词占满右半 */
+.cols.hide-vocab{grid-template-areas:"p a" "p a"}    /* 收起单词 → 句子占满右半 */
+.cols.hide-ana.hide-vocab{
+  grid-template-columns:minmax(0,1fr);
+  grid-template-areas:"p" "p";                        /* 都收起 → 原文全屏 */
+}
+/* 必须 display:none：没有 area 的元素会被自动放进隐式轨道，凭空多出一列 */
+.cols.hide-ana #colAna,.cols.hide-vocab #colVocab{display:none}
+
 .col{
   background:var(--panel);border-radius:var(--radius);box-shadow:var(--shadow);
-  display:flex;flex-direction:column;overflow:hidden;min-width:0;
+  display:flex;flex-direction:column;overflow:hidden;
+  min-width:0;min-height:0;
 }
 .col-head{
   display:flex;align-items:center;justify-content:space-between;gap:8px;
@@ -88,8 +109,16 @@ button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
   font-size:12px;font-weight:700;letter-spacing:.8px;color:var(--ink-3);
   text-transform:uppercase;flex:none;
 }
-.col-head .hint{font-weight:400;letter-spacing:0;text-transform:none;font-size:12px}
-.col-body{overflow-y:auto;padding:16px;flex:1;scroll-behavior:smooth}
+.col-head .hint{font-weight:400;letter-spacing:0;text-transform:none;font-size:12px;margin-left:auto}
+.col-head .collapse{
+  flex:none;width:22px;height:22px;border-radius:6px;font-size:11px;line-height:1;
+  color:var(--ink-3);display:flex;align-items:center;justify-content:center;
+  transition:all .12s;
+}
+.col-head .collapse:hover{background:#fdeaea;color:#d64545}
+/* overflow-x 必须显式写 hidden：只写 overflow-y:auto 时 x 轴会计算成 auto，
+   一旦内容溢出就会冒出横向滚动条 */
+.col-body{overflow-y:auto;overflow-x:hidden;padding:16px;flex:1;scroll-behavior:smooth}
 .col-body::-webkit-scrollbar{width:9px}
 .col-body::-webkit-scrollbar-thumb{background:#d6dce8;border-radius:5px}
 .col-body::-webkit-scrollbar-thumb:hover{background:#c2cbdb}
@@ -100,12 +129,16 @@ button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
 }
 .passage-meta{font-size:12.5px;color:var(--ink-3);margin-bottom:16px}
 .para{margin:0 0 15px}
+/* 所有句子都留一条透明左边框占位：
+   ① 明确"可点"（hover 时显蓝）② 选中时不再横移（原来是 box-shadow + padding 变化，会抖 10px） */
 .sent{
   display:block;position:relative;
-  padding:3px 0 3px 0;border-radius:6px;
-  transition:background .18s;
+  padding:4px 10px 4px 9px;margin-left:-9px;
+  border-left:3px solid transparent;border-radius:0 6px 6px 0;
+  cursor:pointer;transition:background .15s,border-color .15s;
 }
-.sent.cur{background:#f7faff;box-shadow:inset 3px 0 0 var(--accent);padding-left:10px;margin-left:-10px}
+.sent:hover{background:#f2f7ff;border-left-color:#9dbcf7}
+.sent.cur{background:#eef3ff;border-left-color:var(--accent)}
 .sent-txt{}
 
 /* 单词 */
@@ -146,8 +179,9 @@ body.quiz .ins{background:transparent;box-shadow:none;color:var(--ink-3)}
 body.quiz .blank{background:#eef1f6;border-style:dashed;border-color:#b9c3d4;color:var(--ink-3)}
 
 /* 长难句 */
-.sent.hard{background:var(--hard-bg);padding:4px 10px 4px 9px;margin-left:-9px;border-left:3px solid var(--hard)}
-.sent.hard.cur{background:#fdf5ec}
+.sent.hard{background:var(--hard-bg);border-left-color:var(--hard)}
+.sent.hard:hover{background:#fbe8d5}
+.sent.hard.cur{background:#fdf5ec;border-left-color:var(--accent)}
 
 /* 行内按钮 */
 .row-btns{
@@ -179,47 +213,67 @@ body.alltr .tr{display:block}
   padding:36px 16px;line-height:1.9;
 }
 .empty .big{font-size:26px;display:block;margin-bottom:8px;opacity:.5}
-.vcard{
-  border:1px solid var(--line);border-radius:9px;padding:11px 13px;margin-bottom:9px;
-  animation:pop .22s ease-out;
-}
 @keyframes pop{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
-.vcard.phrase{border-color:#e8d48a;background:#fffdf4}
-.vcard .vt{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
-.vcard .vw{font-size:17px;font-weight:700;letter-spacing:.2px}
-.vcard .vipa{font-size:13px;color:var(--accent);font-family:"Segoe UI",system-ui,sans-serif}
-.vcard .vpos{
-  font-size:11px;font-weight:700;color:#fff;background:var(--ink-3);
-  padding:1.5px 7px;border-radius:20px;letter-spacing:.3px;
+
+/* 列表行，不是卡片：只有一条细分隔线 */
+.vcard{border-bottom:1px solid var(--line-2)}
+.vcard:last-child{border-bottom:none}
+.vcard.phrase{box-shadow:inset 3px 0 0 #e8d48a;background:#fffdf6}
+.vcard.open{background:#f2f6ff}
+
+.vhead{display:block;width:100%;padding:0;text-align:left;background:none;border:none}
+
+/* 单行四栏。用 grid 而非 flex：同一份轨道定义让跨行列起点天然对齐，
+   且 minmax(0,·) 保证任何容器宽度都不横向溢出 */
+.vline{
+  display:grid;
+  grid-template-columns:minmax(0,1.5fr) minmax(0,.9fr) auto minmax(0,1.55fr) 14px;
+  column-gap:8px;align-items:baseline;
+  padding:6px 8px;border-radius:7px;
+  font-size:13px;line-height:1.5;        /* ← 整行唯一的字号声明 */
+}
+.vhead:hover .vline{background:var(--accent-soft)}
+.vw,.vipa,.vcn{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.vw{font-weight:700;color:var(--ink)}
+.vipa{color:var(--accent)}
+.vpos{
+  background:var(--ink-3);color:#fff;border-radius:20px;
+  padding:0 7px;font-weight:700;white-space:nowrap;
 }
 .vcard.phrase .vpos{background:#c79a12}
-.vcard .vcn{font-size:14.5px;margin-top:6px;line-height:1.7}
-.vcard .vctx{
-  font-size:12.5px;color:var(--ink-3);margin-top:7px;padding-top:7px;
-  border-top:1px dashed var(--line);line-height:1.6;
+.vcn{color:var(--ink-2)}
+.vcar{color:var(--ink-3);font-size:11px;justify-self:end;transition:transform .15s}
+.vcard.open .vcar{transform:rotate(90deg)}
+
+/* 展开体 */
+.vbody{display:none;padding:2px 8px 12px 12px}
+.vcard.open .vbody{display:block}
+.vcard .vfull{
+  font-size:13px;color:var(--ink);font-weight:700;margin-bottom:7px;
+  word-break:break-word;line-height:1.7;
 }
-.vcard .vctx em{color:var(--ink-2);font-style:normal;background:#fff6d6;padding:0 2px;border-radius:3px}
-.vcard .vrow{display:flex;align-items:center;gap:8px;margin-top:9px}
-.vcard .vspk{
-  font-size:12px;color:var(--accent);border:1px solid #cfe0ff;background:#f5f9ff;
-  padding:3px 10px;border-radius:6px;display:inline-flex;gap:5px;align-items:center;
-}
-.vcard .vspk:hover{background:var(--accent-soft)}
-.vcard .vdel{font-size:12px;color:var(--ink-3);margin-left:auto;padding:3px 6px;border-radius:5px}
-.vcard .vdel:hover{background:#fdeaea;color:#d64545}
+.vcard .vfull span{font-weight:400;color:var(--accent)}
 .vcard .vnote{
-  font-size:12.5px;color:var(--ink-2);background:#f7f9fc;
-  border-radius:6px;padding:7px 10px;margin-top:8px;line-height:1.65;
+  font-size:13px;color:var(--ink-2);background:#f7f9fc;
+  border-radius:6px;padding:8px 11px;line-height:1.75;
 }
 .vcard .vph{
-  font-size:12px;color:var(--ink-3);margin-top:8px;line-height:2;
+  font-size:12.5px;color:var(--ink-3);margin-top:9px;line-height:2;
 }
 .vcard .vphchip{
-  display:inline-block;font-size:12px;padding:2px 9px;margin:0 4px 3px 0;
+  display:inline-block;font-size:12.5px;padding:2px 9px;margin:0 4px 3px 0;
   background:var(--phrase);border-radius:20px;color:#6b5300;
   box-shadow:inset 0 -1px 0 rgba(180,140,0,.25);transition:background .12s;
 }
 .vcard .vphchip:hover{background:var(--phrase-hover)}
+.vcard .vrow{display:flex;align-items:center;gap:8px;margin-top:4px}
+.vcard .vspk{
+  font-size:13px;color:var(--accent);border:1px solid #cfe0ff;background:#f5f9ff;
+  padding:4px 11px;border-radius:6px;display:inline-flex;gap:5px;align-items:center;
+}
+.vcard .vspk:hover{background:var(--accent-soft)}
+.vcard .vdel{font-size:13px;color:var(--ink-3);margin-left:auto;padding:4px 7px;border-radius:5px}
+.vcard .vdel:hover{background:#fdeaea;color:#d64545}
 
 /* ---------- 句子分析 ---------- */
 .ana{animation:pop .2s ease-out}
@@ -250,13 +304,22 @@ body.alltr .tr{display:block}
 }
 .chip.cl{background:#eef3ff;border-color:#d3e0fb;color:#2b5bc4}
 .chip.ph2{background:#fff8dd;border-color:#eddfa4;color:#8a6a05}
+.chip.ph3{background:transparent;border-style:dashed;color:var(--ink-3)}
 .chip.gr{background:#eefaf1;border-color:#c9ecd5;color:#1d7a45}
+.chip.pat{background:#f1eefe;border-color:#dcd3fb;color:#5b3fd1}
+.chip.pat0{background:#5b3fd1;border-color:#5b3fd1;color:#fff;font-weight:700}
+button.chip{cursor:pointer;transition:filter .12s}
+button.chip:hover{filter:brightness(.94)}
+button.chip.ph2:hover{background:var(--phrase-hover)}
 
 .struct{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:2px}
 .struct td{padding:6px 8px;border-bottom:1px solid var(--line-2);vertical-align:top;line-height:1.65}
 .struct tr:last-child td{border-bottom:none}
+/* width 只是建议值：'非限制性定语从句' 这类长标签的 min-content 会赢过它，
+   所以允许折行并给个上限，避免挤掉右侧内容列 */
 .struct td:first-child{
-  width:104px;color:var(--accent);font-weight:600;white-space:nowrap;font-size:12.5px;
+  width:1%;max-width:96px;color:var(--accent);font-weight:600;
+  white-space:normal;font-size:12.5px;line-height:1.45;padding-right:6px;
 }
 .struct td:last-child{color:var(--ink-2)}
 .struct code{background:#eef1f6;padding:0 5px;border-radius:3px;font-family:"Cascadia Code",Consolas,monospace;font-size:12.5px;color:#b3402f}
@@ -328,10 +391,20 @@ body.alltr .tr{display:block}
 .qa-b b{color:var(--ink)}
 .qa-b code{background:#eef1f6;padding:1px 6px;border-radius:4px;font-family:"Cascadia Code",Consolas,monospace;font-size:13px;color:#b3402f}
 
-/* 窄屏 */
+/* 窄屏：一律单列堆叠。必须带上 hide-* 变体，否则上面按 areas 定义的
+   规则（优先级更高）会盖掉这里 */
 @media(max-width:1180px){
-  .cols{grid-template-columns:1fr;height:auto;gap:12px}
-  .col{max-height:78vh}
+  body{overflow:auto;height:auto;min-height:100vh}
+  .cols,.cols.hide-ana,.cols.hide-vocab,.cols.hide-ana.hide-vocab{
+    grid-template-columns:1fr;grid-template-rows:auto;
+    grid-template-areas:none;flex:none;gap:12px;
+  }
+  /* 必须显式重置 grid-area！grid-area:p 是 custom-ident，
+     按 CSS Grid 规范 §8.3，找不到同名网格线时「所有隐式网格线都视为具有该名字」，
+     元素会被丢进隐式轨道 → 窄屏下不是堆叠而是凭空多出隐形列。
+     只写 grid-template-areas:none 不够 */
+  #col1,#colAna,#colVocab{grid-area:auto}
+  .col{max-height:78vh;min-height:0}
   .col-body{max-height:none}
 }
 
@@ -351,6 +424,8 @@ body.alltr .tr{display:block}
 
   <div class="tools">
     <span class="voice-warn" id="voiceWarn" hidden></span>
+    <button class="tool on" id="tglAna" title="显示 / 隐藏右上角的句子分析栏">▣ 句子列</button>
+    <button class="tool on" id="tglVocab" title="显示 / 隐藏右下角的单词栏">▣ 单词列</button>
     <button class="tool" id="tglQuiz">做题模式</button>
     <button class="tool" id="tglAllTr">全部翻译</button>
     <button class="tool" id="btnStop">⏹ 停止朗读</button>
@@ -358,9 +433,12 @@ body.alltr .tr{display:block}
   </div>
 </div>
 
+<!-- DOM 顺序 = col1 → colAna → colVocab。
+     窄屏 grid-template-areas:none 后按 DOM 顺序流式排布，
+     这个顺序让窄屏堆叠也是「原文 → 句子分析 → 单词」的阅读顺序 -->
 <div class="cols">
-  <!-- 第一列：原文 / 题目 切换 -->
-  <div class="col">
+  <!-- 左半，全高：原文 / 题目 切换 -->
+  <div class="col" id="col1">
     <div class="col-head">
       <span id="col1Title">原文</span>
       <span class="hint" id="col1Hint">点词查词 · <span style="background:var(--phrase);padding:0 4px;border-radius:3px">黄色</span>是词组 · 🔊 0.75×英音</span>
@@ -371,16 +449,24 @@ body.alltr .tr{display:block}
     </div>
   </div>
 
-  <!-- 第二列：生词本（两部分共用） -->
-  <div class="col">
-    <div class="col-head"><span>单词 / 词组</span><span class="hint">点词自动收录</span></div>
-    <div class="col-body" id="vocab"></div>
+  <!-- 右上半：句子分析 -->
+  <div class="col" id="colAna">
+    <div class="col-head">
+      <span>句子分析</span>
+      <span class="hint" id="colAnaHint">点句子查看 · 22 句都能点</span>
+      <button class="collapse" data-collapse="ana" title="收起句子分析栏">✕</button>
+    </div>
+    <div class="col-body" id="analysis"></div>
   </div>
 
-  <!-- 第三列：分析（两部分共用） -->
-  <div class="col">
-    <div class="col-head"><span>分析</span><span class="hint" id="col3Hint">点句子查看</span></div>
-    <div class="col-body" id="analysis"></div>
+  <!-- 右下半：单词 / 词组 -->
+  <div class="col" id="colVocab">
+    <div class="col-head">
+      <span>单词 / 词组</span>
+      <span class="hint">点词自动收录 · 点一行展开</span>
+      <button class="collapse" data-collapse="vocab" title="收起单词栏">✕</button>
+    </div>
+    <div class="col-body" id="vocab"></div>
   </div>
 </div>
 
@@ -401,6 +487,11 @@ window.PET_CONTENT = {
     title: "Digging into the past",
     words: 319,
     sentences: 22,
+    /* 句型（ana.pat）覆盖说明 —— 免得日后误以为漏了：
+       本文没有 There be 句、没有强调句（it is … that …）、
+       没有完全倒装或疑问倒装。真正的倒装只有 2 处「引语倒装」（2-1 和 3-4 的 Says Kate）。
+       pat[0] 取自主句型封闭集：主谓宾 / 主系表 / 主谓双宾 / 主谓 / 倒装引语，
+       verify.cjs 用这个白名单卡错别字。 */
     paragraphs: [
 
       /* ---------- 第 1 段 ---------- */
@@ -410,6 +501,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "去年，凯特·马歇尔得到了一个非常令人兴奋的机会——去一个历史遗址帮她父亲，她父亲是一位历史讲师！",
           ana: {
+            pat: ["主谓宾", "被动语态", "非限制性定语从句"],
             frame: "主干：<b>Kate Marshall was given an opportunity</b>（凯特获得了一个机会）",
             parts: [
               ["主语", "Kate Marshall"],
@@ -429,6 +521,7 @@ window.PET_CONTENT = {
           s: "He was leading a team to dig up and explore the area.",
           tr: "他正带着一个团队挖掘并勘探这片区域。",
           ana: {
+            pat: ["主谓宾", "不定式作目的状语"],
             frame: "主干：<b>He was leading a team</b>（他正带着一个团队）",
             parts: [
               ["主语", "He（指凯特的父亲）"],
@@ -451,6 +544,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "不过，等他们到了之后，现场和凯特预想的不太一样。",
           ana: {
+            pat: ["主系表", "表语从句", "时间状语从句"],
             frame: "主干：<b>the site wasn't quite what Kate had expected</b>（现场和凯特预想的不太一样）",
             parts: [
               ["时间状语从句", "<code>When they arrived</code>"],
@@ -462,7 +556,7 @@ window.PET_CONTENT = {
             clauses: ["时间状语从句 when...", "表语从句 what...", "though 作插入语"],
             gram: ["表语从句", "时间状语从句", "插入语", "过去完成时"],
             tip: "<b>not quite</b> 不是“不相当”，而是<b>“不完全、不太”</b>，语气比 not 委婉。<code>what Kate had expected</code> 直译“凯特所预料的东西”，中文说成<b>“跟凯特想的不太一样”</b>更自然。had expected 用过去完成时，是因为“预料”发生在“到达”之前。",
-            phrases: ["not quite"]
+            phrases: ["wasn't quite"]
           }
         }
       ],
@@ -473,6 +567,7 @@ window.PET_CONTENT = {
           s: "{16}So the first job was to remove it all and prepare the land for digging.",
           tr: "所以第一件事就是把它们全部清掉，把地整出来准备挖掘。",
           ana: {
+            pat: ["主系表", "不定式作表语"],
             frame: "主干：<b>the first job was to remove it all and prepare the land</b>（第一件事是清掉它们、把地整出来）",
             parts: [
               ["主语", "the first job"],
@@ -491,6 +586,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "凯特说：“爸爸根本没提醒过我，一到那儿我就得干这么重的活！”",
           ana: {
+            pat: ["倒装引语", "宾语从句", "时间状语从句"],
             frame: "主干：<b>Says Kate, ...</b>（凯特说……）—— 引语倒装结构",
             parts: [
               ["谓语 + 主语", "<code>Says Kate</code> —— 倒装，正常语序是 Kate says"],
@@ -511,6 +607,7 @@ window.PET_CONTENT = {
           s: "But when the site was completely cleared, the team found pieces of ancient pots on the ground.",
           tr: "等现场被彻底清理干净后，团队在地面上发现了古代陶罐的碎片。",
           ana: {
+            pat: ["主谓宾", "时间状语从句", "被动语态"],
             frame: "主干：<b>the team found pieces of ancient pots</b>（团队发现了古代陶罐的碎片）",
             parts: [
               ["时间状语从句", "<code>when the site was completely cleared</code> —— 从句本身是被动语态"],
@@ -530,6 +627,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "然而，这些东西并没有大家想的那么让人兴奋。",
           ana: {
+            pat: ["主系表", "as…as 比较句"],
             frame: "主干：<b>those weren't as exciting as everyone had thought</b>（那些东西没大家想的那么令人兴奋）",
             parts: [
               ["主语", "those（指上句的陶罐碎片）"],
@@ -547,6 +645,7 @@ window.PET_CONTENT = {
           s: "Kate's dad told them that the important pots were still under the ground.",
           tr: "凯特的爸爸告诉他们，真正重要的陶罐还在地下。",
           ana: {
+            pat: ["主谓双宾", "宾语从句"],
             frame: "主干：<b>Kate's dad told them that...</b>（凯特爸爸告诉他们……）",
             parts: [
               ["主语", "Kate's dad"],
@@ -565,6 +664,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "而且因为几百年来没人碰过它们，团队能了解到关于它们历史的多得多的信息——但首先，他们得挖得更深。",
           ana: {
+            pat: ["主谓宾", "并列句", "原因状语从句"],
             frame: "主干：<b>the team would learn far more</b>（团队能了解到多得多的东西）",
             parts: [
               ["原因状语从句", "<code>because no-one had touched them for centuries</code>"],
@@ -584,6 +684,7 @@ window.PET_CONTENT = {
           s: "Says Kate, '{17}But we all knew Dad was right!'",
           tr: "凯特说：“但我们都清楚爸爸是对的！”",
           ana: {
+            pat: ["倒装引语", "宾语从句"],
             frame: "主干：<b>we all knew (that) Dad was right</b>（我们都知道爸爸是对的）",
             parts: [
               ["谓语 + 主语", "<code>Says Kate</code> —— 引语倒装"],
@@ -607,6 +708,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "现场被划分成一个个小方块，每个方块有一名负责人，负责告诉大家怎么挖。",
           ana: {
+            pat: ["主谓宾", "被动语态", "with 复合结构", "非限制性定语从句"],
             frame: "主干：<b>The site was divided into small squares</b>（现场被划分成小方块）",
             parts: [
               ["主语", "The site"],
@@ -625,6 +727,7 @@ window.PET_CONTENT = {
           s: "'That wasn't as easy as it sounded, either,' Kate reports.",
           tr: "凯特说：“那活儿也没有听上去那么容易。”",
           ana: {
+            pat: ["主系表", "as…as 比较句", "引语后置"],
             frame: "主干：<b>That wasn't as easy as it sounded</b>（那事没听起来那么容易）",
             parts: [
               ["主语", "That（指划分方块、按规矩挖这件事）"],
@@ -644,6 +747,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "我们都不能像原来那样直接挖大坑，而是得非常小心地挖，每次只取走一点点土。",
           ana: {
+            pat: ["主谓宾", "并列谓语", "instead of + 动名词"],
             frame: "主干：<b>we all had to dig carefully and remove small amounts of soil</b>（我们都得非常小心地挖、每次只取走一点点土）",
             parts: [
               ["状语", "<code>Instead of just digging great big holes</code> —— instead of + 动名词"],
@@ -664,6 +768,7 @@ window.PET_CONTENT = {
           s: "{18}So it made sense.'",
           tr: "所以这样做是有道理的。“",
           ana: {
+            pat: ["主谓宾", "代词指代"],
             frame: "主干：<b>it made sense</b>（这说得通 / 有道理）",
             parts: [
               ["主语", "it（指代前面“小心挖、每次取少量土”的做法）"],
@@ -685,6 +790,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "凯特解释说：“我家里那些朋友对我做的事特别感兴趣。”",
           ana: {
+            pat: ["主系表", "介词宾语从句"],
             frame: "主干：<b>My friends were interested in what I was doing</b>（我朋友对我做的事很感兴趣）",
             parts: [
               ["主语", "My friends"],
@@ -703,6 +809,7 @@ window.PET_CONTENT = {
           s: "'They kept texting me to ask what I'd found.",
           tr: "他们不停地给我发短信，问我找到了什么。“",
           ana: {
+            pat: ["主谓宾", "宾语从句", "不定式作目的状语"],
             frame: "主干：<b>They kept texting me</b>（他们不停地给我发短信）",
             parts: [
               ["主语", "They（指朋友们）"],
@@ -722,6 +829,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "但其实，我们找的是那些普普通通的日常物件——它们能告诉我们几百年前住在这一带的人是什么样。",
           ana: {
+            pat: ["主谓宾", "限制性定语从句", "定语从句嵌套"],
             frame: "主干：<b>we were looking for ordinary, everyday objects</b>（我们在找普通的日常物件）",
             parts: [
               ["转折状语", "<code>But actually</code>"],
@@ -746,6 +854,7 @@ window.PET_CONTENT = {
           s: "In the end, though, Kate wasn't disappointed by what she found.",
           tr: "不过到最后，凯特并没有对自己发现的东西感到失望。",
           ana: {
+            pat: ["主系表", "介词宾语从句"],
             frame: "主干：<b>Kate wasn't disappointed</b>（凯特没有失望）",
             parts: [
               ["时间状语", "<code>In the end</code>"],
@@ -764,6 +873,7 @@ window.PET_CONTENT = {
           s: "'One day, when I was digging away, I found a stone with a strange shape.",
           tr: "有一天，我正挖着挖着，发现了一块形状奇怪的石头。“",
           ana: {
+            pat: ["主谓宾", "时间状语从句", "with 短语作后置定语"],
             frame: "主干：<b>I found a stone</b>（我发现了一块石头）",
             parts: [
               ["时间状语", "One day"],
@@ -784,6 +894,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "显然这是几百年前有人做出来的，这就意味着它非常重要。",
           ana: {
+            pat: ["主谓宾", "非限制性定语从句", "宾语从句"],
             frame: "主干：<b>Someone had made it, which meant it was important</b>（有人做了它，这意味着它很重要）",
             parts: [
               ["主语", "Someone"],
@@ -804,6 +915,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "于是爸爸把它清理干净，说它会被送到附近的博物馆去。",
           ana: {
+            pat: ["主谓宾", "并列谓语", "宾语从句"],
             frame: "主干：<b>Dad cleaned it up and said...</b>（爸爸把它清理干净，并说……）",
             parts: [
               ["主语", "Dad"],
@@ -823,6 +935,7 @@ window.PET_CONTENT = {
           hard: true,
           tr: "所以我很高兴，我终于找到了点有意思的东西！“",
           ana: {
+            pat: ["主系表", "宾语从句"],
             frame: "主干：<b>I was pleased</b>（我很高兴）",
             parts: [
               ["主语", "I"],
@@ -1282,8 +1395,11 @@ window.PET_CONTENT = {
     tab: "read",
     quiz: false,      // 做题模式：藏起填入的答案句
     allTr: false,     // 全部显示翻译
-    vocab: [],        // 生词本 [{id,type,key,src}]
+    vocab: [],        // 生词本 [{id,type,key,entry}]
     openQ: {},        // 已展开分析的题号
+    openV: {},        // 生词本里已展开的行，键为 v.id。
+                      // 必须放在 state 里：addVocab 每次都全量重刷 innerHTML，
+                      // 展开态若只写 DOM class，点任意一个词就会把已展开的行重置
     activeQ: null
   };
 
@@ -1295,6 +1411,52 @@ window.PET_CONTENT = {
   }
   function saveVocab() {
     try { localStorage.setItem(LS_KEY, JSON.stringify(state.vocab)); } catch (e) {}
+  }
+
+  /* ---- 右半两栏的显示 / 隐藏（与生词本分开存） ---- */
+  var LS_UI = "pet-ui-book1-v1";
+  var cols = { ana: true, vocab: true };
+  // [状态键, 顶栏按钮 id 后缀, 按钮文案]
+  var COL_DEFS = [["ana", "Ana", "句子列"], ["vocab", "Vocab", "单词列"]];
+
+  function loadUI() {
+    try {
+      var o = JSON.parse(localStorage.getItem(LS_UI) || "null");
+      if (!o || typeof o !== "object") return;
+      // 兼容上一版的 { "2": 单词, "3": 分析 } 结构
+      if ("vocab" in o) cols.vocab = !!o.vocab; else if ("2" in o) cols.vocab = !!o["2"];
+      if ("ana" in o) cols.ana = !!o.ana; else if ("3" in o) cols.ana = !!o["3"];
+    } catch (e) {}
+  }
+  function saveUI() {
+    try { localStorage.setItem(LS_UI, JSON.stringify(cols)); } catch (e) {}
+  }
+
+  function applyCols() {
+    var box = document.querySelector(".cols");
+    if (!box) return;
+    box.classList.toggle("hide-ana", !cols.ana);
+    box.classList.toggle("hide-vocab", !cols.vocab);
+    COL_DEFS.forEach(function (d) {
+      var b = document.getElementById("tgl" + d[1]);
+      if (!b) return;
+      b.classList.toggle("on", cols[d[0]]);
+      b.textContent = (cols[d[0]] ? "▣ " : "▢ ") + d[2];
+      b.title = (cols[d[0]] ? "收起" : "展开") + d[2];
+    });
+    // 第一列提示：两栏都收起时改成"已全屏"。基准文案由 switchTab 写入 dataset.orig
+    var hint = document.getElementById("col1Hint");
+    if (hint && hint.dataset.orig) {
+      hint.innerHTML = (!cols.ana && !cols.vocab)
+        ? "已全屏 · 可从顶栏重新展开句子 / 单词栏"
+        : hint.dataset.orig;
+    }
+    saveUI();
+  }
+
+  function toggleCol(key) {
+    cols[key] = !cols[key];
+    applyCols();
   }
 
   /* =======================================================
@@ -1547,6 +1709,9 @@ window.PET_CONTENT = {
         h += '<span class="' + cls + '" data-sent="' + pi + "-" + si + '">';
         h += '<span class="sent-txt">' + renderSentence(sent) + "</span>";
         h += '<span class="row-btns">';
+        // 不需要新 JS：这个按钮不带 .w/.ph/.blank/.spk/.trb 任何类，
+        // 点击会自然落到 bindPassage 末尾的 .sent 分支 = 高亮 + showAnalysis
+        h += '<button class="mini" title="查看这句的讲解">析</button>';
         h += '<button class="mini spk" data-say="' + pi + "-" + si + '" title="0.75倍速英音朗读">🔊</button>';
         h += '<button class="mini trb" data-tr="' + pi + "-" + si + '" title="显示/隐藏翻译">译</button>';
         h += "</span>";
@@ -1571,10 +1736,10 @@ window.PET_CONTENT = {
      ======================================================= */
   function vocabKeyOf(type, key) { return type + ":" + key; }
 
-  function addVocab(type, key, entry, ctxSent) {
+  function addVocab(type, key, entry) {
     var id = vocabKeyOf(type, key);
     state.vocab = state.vocab.filter(function (v) { return v.id !== id; });
-    state.vocab.unshift({ id: id, type: type, key: key, entry: entry, ctx: ctxSent || "" });
+    state.vocab.unshift({ id: id, type: type, key: key, entry: entry });
     if (state.vocab.length > 200) state.vocab.length = 200;
     saveVocab();
     renderVocab();
@@ -1593,13 +1758,22 @@ window.PET_CONTENT = {
     state.vocab.forEach(function (v) {
       var e = v.entry;
       var isPh = v.type === "phrase";
-      h += '<div class="vcard' + (isPh ? " phrase" : "") + '">';
-      h += '<div class="vt">';
-      h += '<span class="vw">' + esc(v.key) + "</span>";
-      if (e.ipa) h += '<span class="vipa">' + esc(e.ipa) + "</span>";
-      if (e.pos) h += '<span class="vpos">' + esc(e.pos) + "</span>";
-      h += "</div>";
-      h += '<div class="vcn">' + e.cn + "</div>";
+      var open = !!state.openV[v.id];
+      h += '<div class="vcard' + (isPh ? " phrase" : "") + (open ? " open" : "") + '">';
+      h += '<button class="vhead" type="button" aria-expanded="' + (open ? "true" : "false") +
+        '" data-vtoggle="' + esc(v.id) + '">';
+      h += '<span class="vline">';
+      h += '<span class="vw" title="' + esc(v.key) + '">' + esc(v.key) + "</span>";
+      h += '<span class="vipa">' + esc(e.ipa || "") + "</span>";
+      h += '<span class="vpos">' + esc(e.pos || "") + "</span>";
+      h += '<span class="vcn" title="' + esc(stripTags(e.cn || "")) + '">' + (e.cn || "") + "</span>";
+      h += '<span class="vcar">▸</span>';
+      h += "</span></button>";
+
+      h += '<div class="vbody">';
+      // 单行会被省略号截断，这里给出完整信息兜底
+      h += '<div class="vfull">' + esc(v.key) +
+        (e.ipa ? ' <span>' + esc(e.ipa) + "</span>" : "") + "</div>";
       if (e.note) h += '<div class="vnote">' + e.note + "</div>";
       if (!isPh) {
         var rel = phrasesWith(v.key);
@@ -1611,15 +1785,17 @@ window.PET_CONTENT = {
           h += "</div>";
         }
       }
-      if (v.ctx) {
-        h += '<div class="vctx">原文：' + highlightCtx(v.ctx, v.key) + "</div>";
-      }
       h += '<div class="vrow">';
       h += '<button class="vspk" data-vsay="' + esc(v.key) + '">🔊 0.75×</button>';
       h += '<button class="vdel" data-vdel="' + esc(v.id) + '">移除</button>';
-      h += "</div></div>";
+      h += "</div></div></div>";
     });
     elVocab.innerHTML = h;
+  }
+
+  // 词条释义里带 <b>/<code> 标签，title 属性里要去掉
+  function stripTags(s) {
+    return String(s).replace(/<[^>]*>/g, "");
   }
 
   // 找出包含某个词的词组
@@ -1630,12 +1806,6 @@ window.PET_CONTENT = {
     });
   }
 
-  function highlightCtx(ctx, key) {
-    var safe = esc(ctx);
-    var k = esc(key);
-    var re = new RegExp("\\b(" + k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")\\b", "gi");
-    return safe.replace(re, "<em>$1</em>");
-  }
 
   /* =======================================================
      六、渲染 · 句子分析
@@ -1645,17 +1815,46 @@ window.PET_CONTENT = {
     return C.passage.paragraphs[+p[0]][+p[1]];
   }
 
+  // 该句实际包含的词组。直接复用正文黄标那套 tokenize + markPhrases，
+  // 输入输出与 renderSentence 逐字一致，所以不可能漂移
+  function phrasesOf(sent) {
+    var groups = markPhrases(tokenize(sent.s), PHRASE_IDX);
+    var seen = {}, out = [];
+    groups.forEach(function (g) {
+      if (seen[g.key]) return;
+      seen[g.key] = 1;
+      out.push({ key: g.key, label: g.label });
+    });
+    return out;
+  }
+
+  var normPhrase = function (x) {
+    return String(x).toLowerCase().replace(/\s+/g, " ").trim();
+  };
+
+  // 面板宽而矮（1080p 下约 490px 高），板块按重要性递减排，
+  // 保证不滚动就能看到最核心的句型 / 翻译 / 骨架
   function showAnalysis(ref) {
     var s = findSent(ref);
     var h = '<div class="ana">';
     h += '<div class="ana-h">句子分析</div>';
     h += '<div class="ana-sent">' + esc(s.s.replace(/\{\d+\}/g, "____")) + "</div>";
 
-    if (s.tr) {
-      h += '<div class="sec"><div class="sec-t">翻译</div><div class="sec-b">' + esc(s.tr) + "</div></div>";
-    }
     if (s.ana) {
       var a = s.ana;
+
+      // 句型 —— 最上层的结论，最先给
+      if (a.pat && a.pat.length) {
+        h += '<div class="sec"><div class="sec-t">句型</div><div class="chips">';
+        a.pat.forEach(function (p, i) {
+          h += '<span class="chip pat' + (i === 0 ? " pat0" : "") + '">' + p + "</span>";
+        });
+        h += "</div></div>";
+      }
+
+      if (s.tr) {
+        h += '<div class="sec"><div class="sec-t">翻译</div><div class="sec-b">' + esc(s.tr) + "</div></div>";
+      }
       if (a.frame) {
         h += '<div class="sec"><div class="sec-t">句子骨架</div><div class="sec-b">' + a.frame + "</div></div>";
       }
@@ -1671,22 +1870,37 @@ window.PET_CONTENT = {
         a.clauses.forEach(function (c) { h += '<span class="chip cl">' + c + "</span>"; });
         h += "</div></div>";
       }
-      if (a.tip) {
-        h += '<div class="sec"><div class="sec-t">翻译思路</div><div class="sec-b">' + a.tip + "</div></div>";
-      }
-      if (a.phrases && a.phrases.length) {
+
+      // 本句词组：以正文实际标黄的为准（自动推导），手打的搭配作补充
+      var derived = phrasesOf(s);
+      var manual = a.phrases || [];
+      var extra = manual.filter(function (m) {
+        return !derived.some(function (d) { return normPhrase(d.label) === normPhrase(m); });
+      });
+      if (derived.length || extra.length) {
         h += '<div class="sec"><div class="sec-t">本句词组</div><div class="chips">';
-        a.phrases.forEach(function (c) { h += '<span class="chip ph2">' + c + "</span>"; });
+        derived.forEach(function (d) {
+          h += '<button class="chip ph2" data-vph="' + esc(d.key) + '" title="点一下收进生词本">' +
+            esc(d.label) + "</button>";
+        });
+        extra.forEach(function (m) {
+          h += '<span class="chip ph3" title="搭配 / 结构，未进正文词表">' + m + "</span>";
+        });
         h += "</div></div>";
       }
+
       if (a.gram && a.gram.length) {
         h += '<div class="sec"><div class="sec-t">考点</div><div class="chips">';
         a.gram.forEach(function (c) { h += '<span class="chip gr">' + c + "</span>"; });
         h += "</div></div>";
       }
+      if (a.tip) {
+        h += '<div class="sec"><div class="sec-t">翻译思路</div><div class="sec-b">' + a.tip + "</div></div>";
+      }
     } else {
+      // 当前 22 句全有 ana，这个分支实际不可达，留着防御未来数据缺失
       h += '<div class="sec"><div class="sec-b" style="color:var(--ink-3)">' +
-        "这是一句常规句，没有复杂的从句结构。点带 <b>橙色左边框</b> 的句子看长难句拆解。" +
+        "这句还没有讲解数据。" +
         "</div></div>";
     }
     h += "</div>";
@@ -1788,11 +2002,6 @@ window.PET_CONTENT = {
   /* =======================================================
      八、事件
      ======================================================= */
-  function ctxOf(sentEl) {
-    var box = sentEl.querySelector(".sent-txt");
-    return box ? box.textContent.trim().replace(/\s+/g, " ") : "";
-  }
-
   function bindPassage(root) {
     root.addEventListener("click", function (ev) {
       var t = ev.target;
@@ -1804,10 +2013,9 @@ window.PET_CONTENT = {
         var res = lookup(raw);
         markActive(w);
         if (res) {
-          addVocab("word", raw, res.entry, ctxOf(w.closest(".sent") || root));
+          addVocab("word", raw, res.entry);
         } else {
-          addVocab("word", raw, { pos: "", ipa: "", cn: "（未收录）", note: "这个词没进词表，可以补进去。" },
-            ctxOf(w.closest(".sent") || root));
+          addVocab("word", raw, { pos: "", ipa: "", cn: "（未收录）", note: "这个词没进词表，可以补进去。" });
         }
         return;
       }
@@ -1818,9 +2026,8 @@ window.PET_CONTENT = {
         var key = ph.dataset.ph;
         var r = lookupPhrase(key);
         markActive(ph);
-        if (r) addVocab("phrase", r.key, r.entry, ctxOf(ph.closest(".sent") || root));
-        else addVocab("phrase", key, { pos: "phrase", ipa: "", cn: "（词组释义待补）" },
-          ctxOf(ph.closest(".sent") || root));
+        if (r) addVocab("phrase", r.key, r.entry);
+        else addVocab("phrase", key, { pos: "phrase", ipa: "", cn: "（词组释义待补）" });
         return;
       }
 
@@ -1881,8 +2088,8 @@ window.PET_CONTENT = {
       if (w) {
         var raw = w.dataset.w, res = lookup(raw);
         markActive(w);
-        if (res) addVocab("word", raw, res.entry, "");
-        else addVocab("word", raw, { pos: "", ipa: "", cn: "（未收录）" }, "");
+        if (res) addVocab("word", raw, res.entry);
+        else addVocab("word", raw, { pos: "", ipa: "", cn: "（未收录）" });
         return;
       }
 
@@ -1921,13 +2128,23 @@ window.PET_CONTENT = {
       var d = ev.target.closest("[data-vdel]");
       if (d) {
         state.vocab = state.vocab.filter(function (v) { return v.id !== d.dataset.vdel; });
+        delete state.openV[d.dataset.vdel];   // 顺带清掉，否则已删的 id 在这里留垃圾
         saveVocab(); renderVocab();
         return;
       }
       var pc = ev.target.closest("[data-vph]");
       if (pc) {
         var r = lookupPhrase(pc.dataset.vph);
-        if (r) addVocab("phrase", r.key, r.entry, "");
+        if (r) addVocab("phrase", r.key, r.entry);
+        return;
+      }
+      // 展开 / 收起整行。放在最后：上面几个按钮都在 .vbody 里，是 .vhead 的兄弟
+      var tg = ev.target.closest("[data-vtoggle]");
+      if (tg) {
+        if (window.getSelection && String(window.getSelection())) return;  // 拖选文字不误触
+        var id = tg.dataset.vtoggle;
+        state.openV[id] = !state.openV[id];
+        renderVocab();
       }
     });
   }
@@ -1953,13 +2170,17 @@ window.PET_CONTENT = {
     document.getElementById("passage").hidden = !isRead;
     document.getElementById("qList").hidden = isRead;
     document.getElementById("col1Title").textContent = isRead ? "原文" : "题目与答案";
-    document.getElementById("col1Hint").innerHTML = isRead
+    var h1 = document.getElementById("col1Hint");
+    h1.dataset.orig = isRead
       ? '点词查词 · <span style="background:var(--phrase);padding:0 4px;border-radius:3px">黄色</span>是词组 · 🔊 0.75×英音'
       : "点「分析」看解析 · 点选项里的词也能查";
-    document.getElementById("col3Hint").textContent = isRead ? "点句子查看" : "点「分析」查看";
+    document.getElementById("colAnaHint").textContent =
+      isRead ? "点句子查看 · 22 句都能点" : "点「分析」查看";
+    applyCols();   // 重新套用列显隐（会顺带刷新第一列提示）
     elAna.innerHTML = '<div class="empty"><span class="big">🔍</span>' +
       (isRead
-        ? '点左边任意句子<br>这里显示句子分析<br><br>带<span style="color:var(--hard)">橙色左边框</span>的是长难句'
+        ? '点左边<b>任意一句</b>，这里显示讲解<br>句型 · 翻译 · 骨架 · 成分 · 词组<br><br>' +
+          '带<span style="color:var(--hard)">橙色底</span>的是长难句'
         : "点题目的「分析」按钮<br>这里显示题目解析") + "</div>";
   }
 
@@ -1976,6 +2197,7 @@ window.PET_CONTENT = {
 
     bindPassage(elPassage);
     bindVocab(elVocab);
+    bindVocab(elAna);   // 分析栏里的词组 chip 也要能点进生词本（闭合"点句子→看词组→收录"）
     bindQuestions(document.getElementById("qList"));
 
     document.querySelectorAll(".tab").forEach(function (b) {
@@ -2005,7 +2227,19 @@ window.PET_CONTENT = {
 
     document.getElementById("btnStop").addEventListener("click", function () { TTS.stop(); });
 
-    switchTab("read");
+    // 右半两栏的显示 / 隐藏
+    COL_DEFS.forEach(function (d) {
+      document.getElementById("tgl" + d[1])
+        .addEventListener("click", function () { toggleCol(d[0]); });
+    });
+    document.querySelectorAll("[data-collapse]").forEach(function (b) {
+      // 注意：不要加 + 号。键已改成 "ana"/"vocab" 字符串，+"ana" 是 NaN，
+      // cols[NaN] 不报错但按钮会静默失效
+      b.addEventListener("click", function () { toggleCol(b.dataset.collapse); });
+    });
+
+    loadUI();            // 先读回上次的列状态，再渲染
+    switchTab("read");   // switchTab 内部会调 applyCols()
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
