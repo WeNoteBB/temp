@@ -1,0 +1,2251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PET 精读 · Digging into the past</title>
+<style>
+/* ===== PET 精读自学页 ===== */
+:root{
+  --bg:#f5f6f8;
+  --panel:#ffffff;
+  --ink:#1e2430;
+  --ink-2:#5a6474;
+  --ink-3:#8b95a6;
+  --line:#e3e7ee;
+  --line-2:#eef1f6;
+  --accent:#2f6fed;
+  --accent-soft:#e8f0ff;
+  --phrase:#ffe98a;
+  --phrase-hover:#ffd93d;
+  --ins-bg:#e7f6ec;
+  --ins-line:#3aa864;
+  --hard:#e8833a;
+  --hard-bg:#fdf1e6;
+  --radius:10px;
+  --shadow:0 1px 3px rgba(20,30,50,.06),0 6px 20px rgba(20,30,50,.05);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font:15px/1.6 -apple-system,"Segoe UI",system-ui,"Microsoft YaHei",sans-serif;
+  -webkit-font-smoothing:antialiased;
+  height:100vh;display:flex;flex-direction:column;overflow:hidden;
+}
+button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
+
+/* ---------- 顶栏 ---------- */
+.topbar{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  padding:10px 20px;background:var(--panel);
+  border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:50;
+}
+.brand{font-weight:700;font-size:15px;letter-spacing:.2px}
+.brand small{font-weight:400;color:var(--ink-3);margin-left:8px;letter-spacing:0}
+
+.tabs{display:flex;gap:4px;background:var(--line-2);padding:3px;border-radius:var(--radius)}
+.tab{
+  padding:6px 16px;border-radius:7px;font-size:14px;color:var(--ink-2);
+  transition:background .15s,color .15s;
+}
+.tab:hover{color:var(--ink)}
+.tab.on{background:var(--panel);color:var(--accent);font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+
+.spacer{flex:1}
+.tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.tool{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 12px;border:1px solid var(--line);border-radius:8px;
+  font-size:13px;color:var(--ink-2);background:var(--panel);
+  transition:all .15s;
+}
+.tool:hover{border-color:#c9d3e4;color:var(--ink)}
+.tool.on{background:var(--accent-soft);border-color:#b9cffb;color:var(--accent);font-weight:600}
+.voice-warn{
+  font-size:12px;color:#a8641a;background:#fdf3e3;border:1px solid #f2ddb8;
+  padding:4px 10px;border-radius:7px;
+}
+
+/* ---------- 2:1:1 布局 ----------
+   原文占左半全高；右半上下切分，上=句子分析、下=单词。
+   面积比 2:1:1（原文 = 宽1/2 × 高1/1，右上右下各 = 宽1/2 × 高1/2） */
+.cols{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  grid-template-rows:minmax(0,1fr) minmax(0,1fr);   /* 必须 minmax(0,·)：裸 1fr 的下限是 min-content，内容一长会撑爆行高 */
+  grid-template-areas:
+    "p a"
+    "p v";
+  gap:14px;padding:14px;
+  flex:1;min-height:0;
+}
+#col1    {grid-area:p}
+#colAna  {grid-area:a}
+#colVocab{grid-area:v}
+
+/* 显隐组合：只换 areas，左右比例恒为 1:1 */
+.cols.hide-ana  {grid-template-areas:"p v" "p v"}    /* 收起句子 → 单词占满右半 */
+.cols.hide-vocab{grid-template-areas:"p a" "p a"}    /* 收起单词 → 句子占满右半 */
+.cols.hide-ana.hide-vocab{
+  grid-template-columns:minmax(0,1fr);
+  grid-template-areas:"p" "p";                        /* 都收起 → 原文全屏 */
+}
+/* 必须 display:none：没有 area 的元素会被自动放进隐式轨道，凭空多出一列 */
+.cols.hide-ana #colAna,.cols.hide-vocab #colVocab{display:none}
+
+.col{
+  background:var(--panel);border-radius:var(--radius);box-shadow:var(--shadow);
+  display:flex;flex-direction:column;overflow:hidden;
+  min-width:0;min-height:0;
+}
+.col-head{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  padding:11px 16px;border-bottom:1px solid var(--line-2);
+  font-size:12px;font-weight:700;letter-spacing:.8px;color:var(--ink-3);
+  text-transform:uppercase;flex:none;
+}
+.col-head .hint{font-weight:400;letter-spacing:0;text-transform:none;font-size:12px;margin-left:auto}
+.col-head .collapse{
+  flex:none;width:22px;height:22px;border-radius:6px;font-size:11px;line-height:1;
+  color:var(--ink-3);display:flex;align-items:center;justify-content:center;
+  transition:all .12s;
+}
+.col-head .collapse:hover{background:#fdeaea;color:#d64545}
+/* overflow-x 必须显式写 hidden：只写 overflow-y:auto 时 x 轴会计算成 auto，
+   一旦内容溢出就会冒出横向滚动条 */
+.col-body{overflow-y:auto;overflow-x:hidden;padding:16px;flex:1;scroll-behavior:smooth}
+.col-body::-webkit-scrollbar{width:9px}
+.col-body::-webkit-scrollbar-thumb{background:#d6dce8;border-radius:5px}
+.col-body::-webkit-scrollbar-thumb:hover{background:#c2cbdb}
+
+/* ---------- 原文 ---------- */
+.passage-title{
+  font-size:20px;font-weight:700;margin:2px 0 4px;letter-spacing:.2px;
+}
+.passage-meta{font-size:12.5px;color:var(--ink-3);margin-bottom:16px}
+.para{margin:0 0 15px}
+/* 所有句子都留一条透明左边框占位：
+   ① 明确"可点"（hover 时显蓝）② 选中时不再横移（原来是 box-shadow + padding 变化，会抖 10px） */
+.sent{
+  display:block;position:relative;
+  padding:4px 10px 4px 9px;margin-left:-9px;
+  border-left:3px solid transparent;border-radius:0 6px 6px 0;
+  cursor:pointer;transition:background .15s,border-color .15s;
+}
+.sent:hover{background:#f2f7ff;border-left-color:#9dbcf7}
+.sent.cur{background:#eef3ff;border-left-color:var(--accent)}
+.sent-txt{}
+
+/* 单词 */
+.w{
+  border-radius:4px;padding:1px 1px;cursor:pointer;
+  transition:background .12s,color .12s;
+}
+.w:hover{background:var(--accent-soft);color:var(--accent)}
+.w.known{background:#eef7f0}
+.w.known:hover{background:#d9eedd}
+.w.act{background:var(--accent);color:#fff}
+
+/* 词组 */
+.ph{
+  background:var(--phrase);border-radius:4px;padding:1px 2px;cursor:pointer;
+  box-shadow:inset 0 -1px 0 rgba(180,140,0,.25);
+  transition:background .12s;
+}
+.ph:hover{background:var(--phrase-hover)}
+.ph.act{background:var(--accent);color:#fff;box-shadow:none}
+
+/* 填空题干与答案句 */
+.blank{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:34px;height:22px;padding:0 7px;margin:0 3px;
+  background:#eef1f6;border:1.5px dashed #b9c3d4;border-radius:6px;
+  font-size:12.5px;font-weight:700;color:var(--ink-3);vertical-align:1px;
+  cursor:pointer;transition:all .15s;
+}
+.blank:hover{border-color:var(--accent);color:var(--accent)}
+.blank.filled{background:var(--ins-bg);border:1.5px solid var(--ins-line);color:#1d7a45}
+.blank.act{background:var(--accent);border-color:var(--accent);color:#fff}
+.ins{
+  background:var(--ins-bg);border-radius:4px;padding:1px 3px;
+  box-shadow:inset 0 -1.5px 0 var(--ins-line);
+}
+body.quiz .ins{background:transparent;box-shadow:none;color:var(--ink-3)}
+body.quiz .blank{background:#eef1f6;border-style:dashed;border-color:#b9c3d4;color:var(--ink-3)}
+
+/* 长难句 */
+.sent.hard{background:var(--hard-bg);border-left-color:var(--hard)}
+.sent.hard:hover{background:#fbe8d5}
+.sent.hard.cur{background:#fdf5ec;border-left-color:var(--accent)}
+
+/* 行内按钮 */
+.row-btns{
+  display:inline-flex;gap:3px;margin-left:6px;vertical-align:1px;
+  opacity:.45;transition:opacity .15s;
+}
+.sent:hover .row-btns,.sent.cur .row-btns{opacity:1}
+.mini{
+  width:24px;height:22px;border-radius:5px;font-size:12px;line-height:1;
+  display:inline-flex;align-items:center;justify-content:center;
+  color:var(--ink-3);transition:all .12s;
+}
+.mini:hover{background:var(--accent-soft);color:var(--accent)}
+.mini.on{background:var(--accent);color:#fff}
+.mini.speaking{background:#ffe1e1;color:#d64545}
+
+/* 翻译 */
+.tr{
+  display:none;margin:5px 0 2px;padding:8px 11px;
+  background:#f7f9fc;border-left:3px solid var(--accent);border-radius:0 6px 6px 0;
+  font-size:14px;color:var(--ink-2);line-height:1.75;
+}
+.tr.show{display:block}
+body.alltr .tr{display:block}
+
+/* ---------- 生词本 ---------- */
+.empty{
+  color:var(--ink-3);font-size:13.5px;text-align:center;
+  padding:36px 16px;line-height:1.9;
+}
+.empty .big{font-size:26px;display:block;margin-bottom:8px;opacity:.5}
+@keyframes pop{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
+
+/* 列表行，不是卡片：只有一条细分隔线 */
+.vcard{border-bottom:1px solid var(--line-2)}
+.vcard:last-child{border-bottom:none}
+.vcard.phrase{box-shadow:inset 3px 0 0 #e8d48a;background:#fffdf6}
+.vcard.open{background:#f2f6ff}
+
+.vhead{display:block;width:100%;padding:0;text-align:left;background:none;border:none}
+
+/* 单行四栏。用 grid 而非 flex：同一份轨道定义让跨行列起点天然对齐，
+   且 minmax(0,·) 保证任何容器宽度都不横向溢出 */
+.vline{
+  display:grid;
+  grid-template-columns:minmax(0,1.5fr) minmax(0,.9fr) auto minmax(0,1.55fr) 14px;
+  column-gap:8px;align-items:baseline;
+  padding:6px 8px;border-radius:7px;
+  font-size:13px;line-height:1.5;        /* ← 整行唯一的字号声明 */
+}
+.vhead:hover .vline{background:var(--accent-soft)}
+.vw,.vipa,.vcn{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.vw{font-weight:700;color:var(--ink)}
+.vipa{color:var(--accent)}
+.vpos{
+  background:var(--ink-3);color:#fff;border-radius:20px;
+  padding:0 7px;font-weight:700;white-space:nowrap;
+}
+.vcard.phrase .vpos{background:#c79a12}
+.vcn{color:var(--ink-2)}
+.vcar{color:var(--ink-3);font-size:11px;justify-self:end;transition:transform .15s}
+.vcard.open .vcar{transform:rotate(90deg)}
+
+/* 展开体 */
+.vbody{display:none;padding:2px 8px 12px 12px}
+.vcard.open .vbody{display:block}
+.vcard .vfull{
+  font-size:13px;color:var(--ink);font-weight:700;margin-bottom:7px;
+  word-break:break-word;line-height:1.7;
+}
+.vcard .vfull span{font-weight:400;color:var(--accent)}
+.vcard .vnote{
+  font-size:13px;color:var(--ink-2);background:#f7f9fc;
+  border-radius:6px;padding:8px 11px;line-height:1.75;
+}
+.vcard .vph{
+  font-size:12.5px;color:var(--ink-3);margin-top:9px;line-height:2;
+}
+.vcard .vphchip{
+  display:inline-block;font-size:12.5px;padding:2px 9px;margin:0 4px 3px 0;
+  background:var(--phrase);border-radius:20px;color:#6b5300;
+  box-shadow:inset 0 -1px 0 rgba(180,140,0,.25);transition:background .12s;
+}
+.vcard .vphchip:hover{background:var(--phrase-hover)}
+.vcard .vrow{display:flex;align-items:center;gap:8px;margin-top:4px}
+.vcard .vspk{
+  font-size:13px;color:var(--accent);border:1px solid #cfe0ff;background:#f5f9ff;
+  padding:4px 11px;border-radius:6px;display:inline-flex;gap:5px;align-items:center;
+}
+.vcard .vspk:hover{background:var(--accent-soft)}
+.vcard .vdel{font-size:13px;color:var(--ink-3);margin-left:auto;padding:4px 7px;border-radius:5px}
+.vcard .vdel:hover{background:#fdeaea;color:#d64545}
+
+/* ---------- 句子分析 ---------- */
+.ana{animation:pop .2s ease-out}
+.ana-h{
+  font-size:12px;font-weight:700;letter-spacing:.8px;color:var(--ink-3);
+  text-transform:uppercase;margin:0 0 10px;
+}
+.ana-sent{
+  font-size:15px;line-height:1.8;background:#f7f9fc;border-radius:8px;
+  padding:11px 13px;margin-bottom:13px;border-left:3px solid var(--accent);
+}
+.sec{margin-bottom:14px}
+.sec-t{
+  font-size:12.5px;font-weight:700;color:var(--accent);margin-bottom:6px;
+  display:flex;align-items:center;gap:6px;
+}
+.sec-t::before{content:"";width:3px;height:12px;background:var(--accent);border-radius:2px}
+.sec-b{font-size:14px;line-height:1.8;color:var(--ink-2)}
+.sec-b b{color:var(--ink)}
+.sec-b code{
+  background:#eef1f6;padding:1px 6px;border-radius:4px;font-size:13px;
+  font-family:"Cascadia Code",Consolas,monospace;color:#b3402f;
+}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.chip{
+  font-size:12.5px;padding:3px 10px;border-radius:20px;
+  background:var(--line-2);color:var(--ink-2);border:1px solid var(--line);
+}
+.chip.cl{background:#eef3ff;border-color:#d3e0fb;color:#2b5bc4}
+.chip.ph2{background:#fff8dd;border-color:#eddfa4;color:#8a6a05}
+.chip.ph3{background:transparent;border-style:dashed;color:var(--ink-3)}
+.chip.gr{background:#eefaf1;border-color:#c9ecd5;color:#1d7a45}
+.chip.pat{background:#f1eefe;border-color:#dcd3fb;color:#5b3fd1}
+.chip.pat0{background:#5b3fd1;border-color:#5b3fd1;color:#fff;font-weight:700}
+button.chip{cursor:pointer;transition:filter .12s}
+button.chip:hover{filter:brightness(.94)}
+button.chip.ph2:hover{background:var(--phrase-hover)}
+
+.struct{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:2px}
+.struct td{padding:6px 8px;border-bottom:1px solid var(--line-2);vertical-align:top;line-height:1.65}
+.struct tr:last-child td{border-bottom:none}
+/* width 只是建议值：'非限制性定语从句' 这类长标签的 min-content 会赢过它，
+   所以允许折行并给个上限，避免挤掉右侧内容列 */
+.struct td:first-child{
+  width:1%;max-width:96px;color:var(--accent);font-weight:600;
+  white-space:normal;font-size:12.5px;line-height:1.45;padding-right:6px;
+}
+.struct td:last-child{color:var(--ink-2)}
+.struct code{background:#eef1f6;padding:0 5px;border-radius:3px;font-family:"Cascadia Code",Consolas,monospace;font-size:12.5px;color:#b3402f}
+
+/* ---------- 题目 ---------- */
+.qcard{
+  border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:12px;
+  transition:border-color .15s,box-shadow .15s;
+}
+.qcard.open{border-color:#cfe0ff;box-shadow:0 2px 12px rgba(47,111,237,.09)}
+.qhead{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.qnum{
+  width:27px;height:27px;flex:none;border-radius:50%;background:var(--accent);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;
+}
+.qtxt{font-size:15.5px;font-weight:600;line-height:1.75;flex:1}
+.qans{
+  display:flex;align-items:center;gap:9px;margin-top:11px;padding:10px 12px;
+  background:var(--ins-bg);border-radius:8px;border:1px solid #c9ecd5;
+}
+.qans .lbl{font-size:12px;font-weight:700;color:#1d7a45;letter-spacing:.5px;flex:none}
+.qans .letter{
+  width:24px;height:24px;flex:none;border-radius:6px;background:#1d7a45;color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;
+}
+.qans .atxt{flex:1;font-size:14.5px;line-height:1.7}
+.qbtns{display:flex;gap:8px;margin-top:11px}
+.btn{
+  padding:6px 14px;border-radius:7px;font-size:13px;border:1px solid var(--line);
+  color:var(--ink-2);background:var(--panel);display:inline-flex;align-items:center;gap:6px;
+  transition:all .15s;
+}
+.btn:hover{border-color:#c9d3e4;color:var(--ink)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+.btn.pri:hover{background:#2560d8;color:#fff}
+.btn.on{background:var(--accent-soft);border-color:#b9cffb;color:var(--accent);font-weight:600}
+.qbody{display:none;margin-top:13px;padding-top:13px;border-top:1px dashed var(--line)}
+.qbody.show{display:block}
+
+.opt{
+  display:flex;gap:10px;padding:9px 11px;border-radius:8px;margin-bottom:5px;
+  font-size:14.5px;line-height:1.7;border:1px solid transparent;transition:all .15s;
+}
+.opt:hover{background:#f7f9fc}
+.opt .ol{
+  width:22px;height:22px;flex:none;border-radius:5px;background:var(--line-2);color:var(--ink-2);
+  display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:700;
+}
+.opt.right{background:var(--ins-bg);border-color:#c9ecd5}
+.opt.right .ol{background:#1d7a45;color:#fff}
+.opt.wrong{opacity:.72}
+.opt.used{background:#f4f6fa;border-color:var(--line)}
+.opt .otxt{flex:1}
+.opt .tag{
+  font-size:11.5px;padding:1px 8px;border-radius:20px;align-self:flex-start;
+  background:var(--line-2);color:var(--ink-3);white-space:nowrap;flex:none;
+}
+.opt.right .tag{background:#1d7a45;color:#fff}
+.opt.used .tag{background:#dfe4ee;color:var(--ink-2)}
+
+.qa-sec{margin-top:13px}
+.qa-sec:first-child{margin-top:0}
+.qa-t{
+  font-size:12.5px;font-weight:700;color:var(--accent);
+  margin-bottom:6px;display:flex;align-items:center;gap:6px;
+}
+.qa-t::before{content:"";width:3px;height:12px;background:var(--accent);border-radius:2px}
+.qa-b{font-size:14px;line-height:1.85;color:var(--ink-2)}
+.qa-b b{color:var(--ink)}
+.qa-b code{background:#eef1f6;padding:1px 6px;border-radius:4px;font-family:"Cascadia Code",Consolas,monospace;font-size:13px;color:#b3402f}
+
+/* 窄屏：一律单列堆叠。必须带上 hide-* 变体，否则上面按 areas 定义的
+   规则（优先级更高）会盖掉这里 */
+@media(max-width:1180px){
+  body{overflow:auto;height:auto;min-height:100vh}
+  .cols,.cols.hide-ana,.cols.hide-vocab,.cols.hide-ana.hide-vocab{
+    grid-template-columns:1fr;grid-template-rows:auto;
+    grid-template-areas:none;flex:none;gap:12px;
+  }
+  /* 必须显式重置 grid-area！grid-area:p 是 custom-ident，
+     按 CSS Grid 规范 §8.3，找不到同名网格线时「所有隐式网格线都视为具有该名字」，
+     元素会被丢进隐式轨道 → 窄屏下不是堆叠而是凭空多出隐形列。
+     只写 grid-template-areas:none 不够 */
+  #col1,#colAna,#colVocab{grid-area:auto}
+  .col{max-height:78vh;min-height:0}
+  .col-body{max-height:none}
+}
+
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">PET 精读<small>Exam Practice Test 1 · Reading Part 4</small></div>
+
+  <div class="tabs">
+    <button class="tab on" data-tab="read">原文精读</button>
+    <button class="tab" data-tab="quiz">题目分析</button>
+  </div>
+
+  <div class="spacer"></div>
+
+  <div class="tools">
+    <span class="voice-warn" id="voiceWarn" hidden></span>
+    <button class="tool on" id="tglAna" title="显示 / 隐藏右上角的句子分析栏">▣ 句子列</button>
+    <button class="tool on" id="tglVocab" title="显示 / 隐藏右下角的单词栏">▣ 单词列</button>
+    <button class="tool" id="tglQuiz">做题模式</button>
+    <button class="tool" id="tglAllTr">全部翻译</button>
+    <button class="tool" id="btnStop">⏹ 停止朗读</button>
+    <button class="tool" id="btnClear">清空生词本</button>
+  </div>
+</div>
+
+<!-- DOM 顺序 = col1 → colAna → colVocab。
+     窄屏 grid-template-areas:none 后按 DOM 顺序流式排布，
+     这个顺序让窄屏堆叠也是「原文 → 句子分析 → 单词」的阅读顺序 -->
+<div class="cols">
+  <!-- 左半，全高：原文 / 题目 切换 -->
+  <div class="col" id="col1">
+    <div class="col-head">
+      <span id="col1Title">原文</span>
+      <span class="hint" id="col1Hint">点词查词 · <span style="background:var(--phrase);padding:0 4px;border-radius:3px">黄色</span>是词组 · 🔊 0.75×英音</span>
+    </div>
+    <div class="col-body">
+      <div id="passage"></div>
+      <div id="qList" hidden></div>
+    </div>
+  </div>
+
+  <!-- 右上半：句子分析 -->
+  <div class="col" id="colAna">
+    <div class="col-head">
+      <span>句子分析</span>
+      <span class="hint" id="colAnaHint">点句子查看 · 22 句都能点</span>
+      <button class="collapse" data-collapse="ana" title="收起句子分析栏">✕</button>
+    </div>
+    <div class="col-body" id="analysis"></div>
+  </div>
+
+  <!-- 右下半：单词 / 词组 -->
+  <div class="col" id="colVocab">
+    <div class="col-head">
+      <span>单词 / 词组</span>
+      <span class="hint">点词自动收录 · 点一行展开</span>
+      <button class="collapse" data-collapse="vocab" title="收起单词栏">✕</button>
+    </div>
+    <div class="col-body" id="vocab"></div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   PET 精读 · 内容数据
+   来源：剑桥PET官方模考题精讲讲练 · Exam Practice Test 1 · Reading Part 4
+   文章：Digging into the past（Questions 16–20，五选句填空）
+   ============================================================ */
+window.PET_CONTENT = {
+
+  meta: {
+    label: "Exam Practice Test 1 · Reading Part 4",
+    note: "答案为依据上下文推断，请对照书后 P185 核对"
+  },
+
+  passage: {
+    title: "Digging into the past",
+    words: 319,
+    sentences: 22,
+    /* 句型（ana.pat）覆盖说明 —— 免得日后误以为漏了：
+       本文没有 There be 句、没有强调句（it is … that …）、
+       没有完全倒装或疑问倒装。真正的倒装只有 2 处「引语倒装」（2-1 和 3-4 的 Says Kate）。
+       pat[0] 取自主句型封闭集：主谓宾 / 主系表 / 主谓双宾 / 主谓 / 倒装引语，
+       verify.cjs 用这个白名单卡错别字。 */
+    paragraphs: [
+
+      /* ---------- 第 1 段 ---------- */
+      [
+        {
+          s: "Last year, Kate Marshall was given a very exciting opportunity – to help her father, who's a history lecturer, at a historical site!",
+          hard: true,
+          tr: "去年，凯特·马歇尔得到了一个非常令人兴奋的机会——去一个历史遗址帮她父亲，她父亲是一位历史讲师！",
+          ana: {
+            pat: ["主谓宾", "被动语态", "非限制性定语从句"],
+            frame: "主干：<b>Kate Marshall was given an opportunity</b>（凯特获得了一个机会）",
+            parts: [
+              ["主语", "Kate Marshall"],
+              ["谓语", "<code>was given</code> —— 一般过去时的被动语态（was/were + 过去分词）"],
+              ["宾语", "a very exciting opportunity"],
+              ["同位语", "<code>to help her father ... at a historical site</code> —— 破折号引出的不定式，解释这个 opportunity 具体是什么"],
+              ["定语从句", "<code>who's a history lecturer</code> —— 非限制性定语从句，补充说明 father"],
+              ["地点状语", "at a historical site"]
+            ],
+            clauses: ["非限制性定语从句 who's...", "不定式作同位语（解释机会的内容）"],
+            gram: ["被动语态", "非限制性定语从句", "不定式作同位语"],
+            tip: "被动语态 <code>was given</code> 直译是“被给予”，中文习惯说成<b>“得到了”</b>。破折号后面的不定式要提到前面去译——先说“一个…的机会”，再说机会是什么。这是英文“先抽象后具体”、中文“先具体后抽象”的典型差异。",
+            phrases: ["a very exciting opportunity", "a historical site", "history lecturer"]
+          }
+        },
+        {
+          s: "He was leading a team to dig up and explore the area.",
+          tr: "他正带着一个团队挖掘并勘探这片区域。",
+          ana: {
+            pat: ["主谓宾", "不定式作目的状语"],
+            frame: "主干：<b>He was leading a team</b>（他正带着一个团队）",
+            parts: [
+              ["主语", "He（指凯特的父亲）"],
+              ["谓语", "<code>was leading</code> —— 过去进行时，表示当时正在进行的动作"],
+              ["宾语", "a team"],
+              ["目的状语", "<code>to dig up and explore the area</code> —— 不定式表目的，两个动词并列"]
+            ],
+            clauses: ["不定式作目的状语"],
+            gram: ["过去进行时", "不定式表目的", "并列不定式"],
+            tip: "英文目的状语放后面，中文习惯放前面：<b>“他正带着一个团队去挖掘和勘探这片区域”</b>。两个不定式 <code>dig up</code> 和 <code>explore</code> 共用一个 to，这叫“并列不定式”，第二个 to 省略。",
+            phrases: ["dig up", "lead a team"]
+          }
+        }
+      ],
+
+      /* ---------- 第 2 段 ---------- */
+      [
+        {
+          s: "When they arrived, though, the site wasn't quite what Kate had expected.",
+          hard: true,
+          tr: "不过，等他们到了之后，现场和凯特预想的不太一样。",
+          ana: {
+            pat: ["主系表", "表语从句", "时间状语从句"],
+            frame: "主干：<b>the site wasn't quite what Kate had expected</b>（现场和凯特预想的不太一样）",
+            parts: [
+              ["时间状语从句", "<code>When they arrived</code>"],
+              ["插入语", "<code>though</code> —— 插在句中表转折，前后加逗号"],
+              ["主语", "the site"],
+              ["系动词", "wasn't"],
+              ["表语从句", "<code>what Kate had expected</code> —— what 引导的名词性从句作表语"]
+            ],
+            clauses: ["时间状语从句 when...", "表语从句 what...", "though 作插入语"],
+            gram: ["表语从句", "时间状语从句", "插入语", "过去完成时"],
+            tip: "<b>not quite</b> 不是“不相当”，而是<b>“不完全、不太”</b>，语气比 not 委婉。<code>what Kate had expected</code> 直译“凯特所预料的东西”，中文说成<b>“跟凯特想的不太一样”</b>更自然。had expected 用过去完成时，是因为“预料”发生在“到达”之前。",
+            phrases: ["wasn't quite"]
+          }
+        }
+      ],
+
+      /* ---------- 第 3 段 ---------- */
+      [
+        {
+          s: "{16}So the first job was to remove it all and prepare the land for digging.",
+          tr: "所以第一件事就是把它们全部清掉，把地整出来准备挖掘。",
+          ana: {
+            pat: ["主系表", "不定式作表语"],
+            frame: "主干：<b>the first job was to remove it all and prepare the land</b>（第一件事是清掉它们、把地整出来）",
+            parts: [
+              ["主语", "the first job"],
+              ["系动词", "was"],
+              ["表语", "<code>to remove it all and prepare the land</code> —— 不定式作表语"],
+              ["目的状语", "for digging"]
+            ],
+            clauses: ["不定式作表语"],
+            gram: ["不定式作表语", "代词指代", "并列不定式"],
+            tip: "<b>it all</b> 是理解第 16 题的关键——它是一个代词，必须指向前文出现过的东西（也就是草）。翻译时不能照字面译“它全部”，要还原成<b>“把它们全部清掉”</b>。",
+            phrases: ["the first job", "prepare ... for"]
+          }
+        },
+        {
+          s: "Says Kate, 'Dad hadn't warned me I'd have to work so hard as soon as we got there!'",
+          hard: true,
+          tr: "凯特说：“爸爸根本没提醒过我，一到那儿我就得干这么重的活！”",
+          ana: {
+            pat: ["倒装引语", "宾语从句", "时间状语从句"],
+            frame: "主干：<b>Says Kate, ...</b>（凯特说……）—— 引语倒装结构",
+            parts: [
+              ["谓语 + 主语", "<code>Says Kate</code> —— 倒装，正常语序是 Kate says"],
+              ["宾语从句", "<code>Dad hadn't warned me (that) I'd have to work so hard</code> —— warn sb that... 结构"],
+              ["时间状语从句", "<code>as soon as we got there</code>"]
+            ],
+            clauses: ["引语倒装 Says Kate", "warn sb (that) 宾语从句", "as soon as 时间状语从句"],
+            gram: ["引语倒装", "过去完成时", "warn sb that 从句", "as soon as"],
+            tip: "英文引语常用 <b>Says + 人名</b> 倒装（新闻报道里尤其多），中文照常译“凯特说”。<code>hadn't warned</code> 用过去完成时，强调“在到达之前就没提醒过”。<b>as soon as</b> = 一…就…，是 PET 高频短语。",
+            phrases: ["as soon as", "have to", "so hard"]
+          }
+        }
+      ],
+
+      /* ---------- 第 4 段 ---------- */
+      [
+        {
+          s: "But when the site was completely cleared, the team found pieces of ancient pots on the ground.",
+          tr: "等现场被彻底清理干净后，团队在地面上发现了古代陶罐的碎片。",
+          ana: {
+            pat: ["主谓宾", "时间状语从句", "被动语态"],
+            frame: "主干：<b>the team found pieces of ancient pots</b>（团队发现了古代陶罐的碎片）",
+            parts: [
+              ["时间状语从句", "<code>when the site was completely cleared</code> —— 从句本身是被动语态"],
+              ["主语", "the team"],
+              ["谓语", "found"],
+              ["宾语", "pieces of ancient pots"],
+              ["地点状语", "on the ground"]
+            ],
+            clauses: ["时间状语从句（被动）"],
+            gram: ["时间状语从句", "被动语态", "名词作定语（ancient pots）"],
+            tip: "<b>pieces of ancient pots</b> 是“名词 + of + 名词”的所有关系，中文倒过来译“古代陶罐的碎片”。这种 of 结构在英文里很常见，翻译时基本都要把顺序颠倒。",
+            phrases: ["pieces of"]
+          }
+        },
+        {
+          s: "However, those weren't as exciting as everyone had thought.",
+          hard: true,
+          tr: "然而，这些东西并没有大家想的那么让人兴奋。",
+          ana: {
+            pat: ["主系表", "as…as 比较句"],
+            frame: "主干：<b>those weren't as exciting as everyone had thought</b>（那些东西没大家想的那么令人兴奋）",
+            parts: [
+              ["主语", "those（指上句的陶罐碎片）"],
+              ["系动词", "weren't"],
+              ["表语", "as exciting"],
+              ["比较状语从句", "<code>as everyone had thought</code> —— 从句里省略了 they would be"]
+            ],
+            clauses: ["as...as 比较结构", "比较从句中的省略", "过去完成时"],
+            gram: ["as...as 比较结构", "比较从句省略", "过去完成时"],
+            tip: "<b>not as + 形容词 + as</b> = “不如…那么…”，是比较级的常考句型。从句 <code>as everyone had thought</code> 后面其实省略了 <code>they would be</code>，完整是 as everyone had thought they would be。<b>had thought</b> 用过去完成时，因为“以为”发生在“发现”之前。",
+            phrases: ["as ... as"]
+          }
+        },
+        {
+          s: "Kate's dad told them that the important pots were still under the ground.",
+          tr: "凯特的爸爸告诉他们，真正重要的陶罐还在地下。",
+          ana: {
+            pat: ["主谓双宾", "宾语从句"],
+            frame: "主干：<b>Kate's dad told them that...</b>（凯特爸爸告诉他们……）",
+            parts: [
+              ["主语", "Kate's dad"],
+              ["谓语", "told"],
+              ["间接宾语", "them"],
+              ["宾语从句", "<code>that the important pots were still under the ground</code>"]
+            ],
+            clauses: ["that 引导宾语从句"],
+            gram: ["tell sb that 从句", "宾语从句"],
+            tip: "<b>tell sb (that)...</b> 是“告诉某人……”。that 在宾语从句里只起连接作用、不作成分，口语里常省略。注意 <code>still</code> 的位置——放在 be 动词后面。",
+            phrases: ["under the ground"]
+          }
+        },
+        {
+          s: "And because no-one had touched them for centuries, the team would learn far more about their history – but first they would have to dig deeper.",
+          hard: true,
+          tr: "而且因为几百年来没人碰过它们，团队能了解到关于它们历史的多得多的信息——但首先，他们得挖得更深。",
+          ana: {
+            pat: ["主谓宾", "并列句", "原因状语从句"],
+            frame: "主干：<b>the team would learn far more</b>（团队能了解到多得多的东西）",
+            parts: [
+              ["原因状语从句", "<code>because no-one had touched them for centuries</code>"],
+              ["主语", "the team"],
+              ["谓语", "<code>would learn</code> —— 过去将来时"],
+              ["宾语", "<code>far more</code> —— far 修饰比较级 more"],
+              ["定语", "about their history"],
+              ["转折分句", "<code>but first they would have to dig deeper</code>"]
+            ],
+            clauses: ["because 原因状语从句", "but 连接并列分句", "过去完成时", "过去将来时"],
+            gram: ["原因状语从句", "过去完成时", "过去将来时", "far + 比较级"],
+            tip: "两个考点：① <b>far 修饰比较级</b>，表示”…得多“，同类还有 much / a lot / even + 比较级；② <b>would</b> 是过去将来时——因为整篇都在讲过去的事，”将会了解“就要退一步说成 would learn。",
+            phrases: ["far more", "dig deeper", "for centuries"]
+          }
+        },
+        {
+          s: "Says Kate, '{17}But we all knew Dad was right!'",
+          tr: "凯特说：“但我们都清楚爸爸是对的！”",
+          ana: {
+            pat: ["倒装引语", "宾语从句"],
+            frame: "主干：<b>we all knew (that) Dad was right</b>（我们都知道爸爸是对的）",
+            parts: [
+              ["谓语 + 主语", "<code>Says Kate</code> —— 引语倒装"],
+              ["主语", "we"],
+              ["状语", "<code>all</code> —— 放在实义动词前，表示“全都”"],
+              ["谓语", "knew"],
+              ["宾语从句", "<code>(that) Dad was right</code> —— 省略了 that"]
+            ],
+            clauses: ["宾语从句省略 that", "引语倒装"],
+            gram: ["宾语从句省略 that", "all 的位置"],
+            tip: "<b>all</b> 作同位语时位置很关键：放在实义动词<b>前</b>（we all knew），但放在 be 动词<b>后</b>（we were all）。这是常考的语序点。",
+            phrases: ["all knew"]
+          }
+        }
+      ],
+
+      /* ---------- 第 5 段 ---------- */
+      [
+        {
+          s: "The site was divided into small squares, with a leader for each square, who told everyone how to dig.",
+          hard: true,
+          tr: "现场被划分成一个个小方块，每个方块有一名负责人，负责告诉大家怎么挖。",
+          ana: {
+            pat: ["主谓宾", "被动语态", "with 复合结构", "非限制性定语从句"],
+            frame: "主干：<b>The site was divided into small squares</b>（现场被划分成小方块）",
+            parts: [
+              ["主语", "The site"],
+              ["谓语", "<code>was divided</code> —— 被动语态"],
+              ["状语", "into small squares"],
+              ["伴随状语", "<code>with a leader for each square</code> —— with + 名词，附带说明"],
+              ["定语从句", "<code>who told everyone how to dig</code> —— 修饰 leader"]
+            ],
+            clauses: ["被动语态", "with 复合结构作伴随状语", "非限制性定语从句 who...", "疑问词 + 不定式 how to dig"],
+            gram: ["被动语态", "with 复合结构", "非限制性定语从句", "疑问词 + 不定式"],
+            tip: "这句有两个难点。<b>with 结构</b>（with + 名词 + 修饰语）是英文很爱用的“附带说明”，中文要拆成一个独立小句：“每个方块有一名负责人”。<b>how to dig</b> 是“疑问词 + 不定式”，相当于一个名词短语，作 told 的直接宾语。",
+            phrases: ["divided into", "how to"]
+          }
+        },
+        {
+          s: "'That wasn't as easy as it sounded, either,' Kate reports.",
+          tr: "凯特说：“那活儿也没有听上去那么容易。”",
+          ana: {
+            pat: ["主系表", "as…as 比较句", "引语后置"],
+            frame: "主干：<b>That wasn't as easy as it sounded</b>（那事没听起来那么容易）",
+            parts: [
+              ["主语", "That（指划分方块、按规矩挖这件事）"],
+              ["系动词", "wasn't"],
+              ["表语", "as easy"],
+              ["比较状语从句", "<code>as it sounded</code>"],
+              ["副词", "<code>either</code> —— 用于否定句句末，表“也（不）”"]
+            ],
+            clauses: ["as...as 比较结构"],
+            gram: ["as...as 比较结构", "either 的用法", "代词指代"],
+            tip: "<b>either</b> 用在<b>否定句</b>末尾表示“也不”，肯定句要用 <b>too</b> 或 <b>also</b>。这是 PET 常考的易混点：I don't like it either.（我也不喜欢）/ I like it too.（我也喜欢）。",
+            phrases: ["as ... as"]
+          }
+        },
+        {
+          s: "'Instead of just digging great big holes, we all had to dig really carefully, and remove small amounts of soil each time.",
+          hard: true,
+          tr: "我们都不能像原来那样直接挖大坑，而是得非常小心地挖，每次只取走一点点土。",
+          ana: {
+            pat: ["主谓宾", "并列谓语", "instead of + 动名词"],
+            frame: "主干：<b>we all had to dig carefully and remove small amounts of soil</b>（我们都得非常小心地挖、每次只取走一点点土）",
+            parts: [
+              ["状语", "<code>Instead of just digging great big holes</code> —— instead of + 动名词"],
+              ["主语", "we"],
+              ["状语", "all"],
+              ["谓语", "<code>had to dig</code> —— have to 的过去式，表“不得不”"],
+              ["状语", "really carefully"],
+              ["并列谓语", "<code>(had to) remove small amounts of soil</code>"],
+              ["时间状语", "each time"]
+            ],
+            clauses: ["instead of + 动名词", "并列谓语", "had to 表义务"],
+            gram: ["instead of + doing", "had to", "并列谓语", "动名词"],
+            tip: "两个易错点：① <b>instead of 后面必须跟名词或动名词（doing）</b>，绝不能跟动词原形；② <b>great big</b> 是口语里加强语气的说法，等于“好大的、大大的”，不是“伟大的大的”。",
+            phrases: ["instead of", "had to", "small amounts of", "great big"]
+          }
+        },
+        {
+          s: "{18}So it made sense.'",
+          tr: "所以这样做是有道理的。“",
+          ana: {
+            pat: ["主谓宾", "代词指代"],
+            frame: "主干：<b>it made sense</b>（这说得通 / 有道理）",
+            parts: [
+              ["主语", "it（指代前面“小心挖、每次取少量土”的做法）"],
+              ["谓语", "made"],
+              ["宾语", "sense"]
+            ],
+            clauses: ["固定搭配 make sense"],
+            gram: ["make sense 固定搭配", "代词指代"],
+            tip: "<b>make sense</b> = 有道理、说得通、合情理。这是英语口语高频短语。<code>it</code> 指代前文整件事，中文要还原成“这样做”。",
+            phrases: ["made sense"]
+          }
+        }
+      ],
+
+      /* ---------- 第 6 段 ---------- */
+      [
+        {
+          s: "'My friends at home were really interested in what I was doing,' Kate explains.",
+          hard: true,
+          tr: "凯特解释说：“我家里那些朋友对我做的事特别感兴趣。”",
+          ana: {
+            pat: ["主系表", "介词宾语从句"],
+            frame: "主干：<b>My friends were interested in what I was doing</b>（我朋友对我做的事很感兴趣）",
+            parts: [
+              ["主语", "My friends"],
+              ["定语", "<code>at home</code> —— 介词短语作后置定语，修饰 friends"],
+              ["系动词", "were"],
+              ["表语", "<code>really interested</code>"],
+              ["介词宾语从句", "<code>what I was doing</code> —— 作介词 in 的宾语"]
+            ],
+            clauses: ["介词后接宾语从句", "what 引导名词性从句", "过去进行时"],
+            gram: ["be interested in", "介词后宾语从句", "what 引导名词性从句"],
+            tip: "三个点：① <b>be interested in</b> 后面跟名词或动名词，如果跟从句要用 <b>what</b> 不能用 that；② <b>at home</b> 作后置定语修饰 friends，中文要前置译“家里那些朋友”；③ what = the thing that，“我所做的事”。",
+            phrases: ["interested in", "at home"]
+          }
+        },
+        {
+          s: "'They kept texting me to ask what I'd found.",
+          tr: "他们不停地给我发短信，问我找到了什么。“",
+          ana: {
+            pat: ["主谓宾", "宾语从句", "不定式作目的状语"],
+            frame: "主干：<b>They kept texting me</b>（他们不停地给我发短信）",
+            parts: [
+              ["主语", "They（指朋友们）"],
+              ["谓语", "<code>kept texting</code> —— keep doing sth，持续做某事"],
+              ["宾语", "me"],
+              ["目的状语", "<code>to ask</code>"],
+              ["宾语从句", "<code>what I'd found</code>"]
+            ],
+            clauses: ["keep doing 结构", "不定式表目的", "what 引导宾语从句", "过去完成时"],
+            gram: ["keep doing", "不定式表目的", "what 宾语从句", "过去完成时"],
+            tip: "<b>keep doing sth</b> = 不停地做某事（强调反复）；注意区分 <b>keep on doing</b>（继续做）和 <b>keep sb doing</b>（让某人一直做）。<code>I'd found</code> 是 I had found 的缩写，过去完成时。",
+            phrases: ["kept texting", "to ask"]
+          }
+        },
+        {
+          s: "{19}But actually, we were looking for ordinary, everyday objects that could tell us about the people who'd lived in the area centuries ago.'",
+          hard: true,
+          tr: "但其实，我们找的是那些普普通通的日常物件——它们能告诉我们几百年前住在这一带的人是什么样。",
+          ana: {
+            pat: ["主谓宾", "限制性定语从句", "定语从句嵌套"],
+            frame: "主干：<b>we were looking for ordinary, everyday objects</b>（我们在找普通的日常物件）",
+            parts: [
+              ["转折状语", "<code>But actually</code>"],
+              ["主语", "we"],
+              ["谓语", "<code>were looking for</code> —— 过去进行时"],
+              ["宾语", "ordinary, everyday objects"],
+              ["定语从句①", "<code>that could tell us about the people</code> —— 修饰 objects"],
+              ["定语从句②", "<code>who'd lived in the area centuries ago</code> —— 修饰 the people"],
+              ["时间状语", "centuries ago"]
+            ],
+            clauses: ["限制性定语从句 that...", "定语从句嵌套 who...", "过去进行时", "过去完成时"],
+            gram: ["限制性定语从句", "定语从句嵌套", "过去进行时", "过去完成时"],
+            tip: "这是全篇<b>最典型的长难句</b>——从句里面套从句（objects ← that... ← the people ← who...）。中文没有定语从句，必须<b>拆成两个短句</b>顺着说：“我们找的是日常物件，它们能告诉我们……的人是什么样”。千万别硬译成“能告诉我们关于几百年前住在这个地区的人们的日常物件”。",
+            phrases: ["looking for", "everyday objects", "tell us about"]
+          }
+        }
+      ],
+
+      /* ---------- 第 7 段 ---------- */
+      [
+        {
+          s: "In the end, though, Kate wasn't disappointed by what she found.",
+          tr: "不过到最后，凯特并没有对自己发现的东西感到失望。",
+          ana: {
+            pat: ["主系表", "介词宾语从句"],
+            frame: "主干：<b>Kate wasn't disappointed</b>（凯特没有失望）",
+            parts: [
+              ["时间状语", "<code>In the end</code>"],
+              ["插入语", "<code>though</code>"],
+              ["主语", "Kate"],
+              ["谓语", "<code>wasn't disappointed</code> —— 系表结构，表被动意义"],
+              ["介词宾语从句", "<code>by what she found</code>"]
+            ],
+            clauses: ["介词后接宾语从句 what...", "though 作插入语"],
+            gram: ["be disappointed by", "介词后宾语从句", "though 插入语"],
+            tip: "<b>be disappointed by/at/with</b> 都可以表示“对…失望”，by 侧重“因…而失望”。注意 <code>though</code> 插在句中前后加逗号，等于 however。",
+            phrases: ["in the end", "disappointed by"]
+          }
+        },
+        {
+          s: "'One day, when I was digging away, I found a stone with a strange shape.",
+          tr: "有一天，我正挖着挖着，发现了一块形状奇怪的石头。“",
+          ana: {
+            pat: ["主谓宾", "时间状语从句", "with 短语作后置定语"],
+            frame: "主干：<b>I found a stone</b>（我发现了一块石头）",
+            parts: [
+              ["时间状语", "One day"],
+              ["时间状语从句", "<code>when I was digging away</code> —— 过去进行时"],
+              ["主语", "I"],
+              ["谓语", "found"],
+              ["宾语", "a stone"],
+              ["后置定语", "<code>with a strange shape</code>"]
+            ],
+            clauses: ["when 时间状语从句", "过去进行时"],
+            gram: ["时间状语从句", "过去进行时", "with 短语作后置定语"],
+            tip: "<b>with a strange shape</b> 作后置定语修饰 stone，中文必须<b>前置</b>：“一块形状奇怪的石头”。<code>dig away</code> 表示“不停地挖、一直挖”，away 在这里强调持续性。",
+            phrases: ["digging away", "a strange shape"]
+          }
+        },
+        {
+          s: "{20}Someone had obviously made it hundreds of years ago, which meant it was really important.",
+          hard: true,
+          tr: "显然这是几百年前有人做出来的，这就意味着它非常重要。",
+          ana: {
+            pat: ["主谓宾", "非限制性定语从句", "宾语从句"],
+            frame: "主干：<b>Someone had made it, which meant it was important</b>（有人做了它，这意味着它很重要）",
+            parts: [
+              ["主语", "Someone"],
+              ["谓语", "<code>had made</code> —— 过去完成时，动作发生在“发现”之前"],
+              ["宾语", "it（指那块石头／雕像）"],
+              ["状语", "obviously"],
+              ["时间状语", "hundreds of years ago"],
+              ["非限制性定语从句", "<code>which meant it was really important</code> —— which 指代前面整句话"]
+            ],
+            clauses: ["非限制性定语从句 which 指代整句", "过去完成时", "宾语从句省略 that"],
+            gram: ["非限制性定语从句指代整句", "过去完成时", "代词指代"],
+            tip: "这是第 20 题的题眼。① <b>which 指代的是“有人几百年前做了它”这一整件事</b>，不是某一个词，中文必须译成“这（就）意味着…”；② <code>made it</code> 的 <b>it</b> 必须是一个“能做出来的东西“——石头是天然的，所以说 it 其实是一件人造物，这正是选 A（小马雕像）的理由。",
+            phrases: ["years ago", "which meant"]
+          }
+        },
+        {
+          s: "So Dad cleaned it up, and said it would go to the nearby museum.",
+          hard: true,
+          tr: "于是爸爸把它清理干净，说它会被送到附近的博物馆去。",
+          ana: {
+            pat: ["主谓宾", "并列谓语", "宾语从句"],
+            frame: "主干：<b>Dad cleaned it up and said...</b>（爸爸把它清理干净，并说……）",
+            parts: [
+              ["主语", "Dad"],
+              ["谓语①", "<code>cleaned up</code> —— 动副短语"],
+              ["宾语", "it"],
+              ["谓语②", "<code>(and) said</code> —— 并列谓语"],
+              ["宾语从句", "<code>it would go to the nearby museum</code> —— 省略了 that"]
+            ],
+            clauses: ["并列谓语", "宾语从句省略 that", "过去将来时"],
+            gram: ["动副短语代词位置", "并列谓语", "宾语从句", "过去将来时"],
+            tip: "<b>clean up</b> 是“动词 + 副词”型短语。这类短语的宾语如果是<b>代词，必须夹在中间</b>：clean <b>it</b> up ✓ / clean up it ✗。这是极高频考点，类似的还有 pick it up、turn it off、write it down。",
+            phrases: ["cleaned it up"]
+          }
+        },
+        {
+          s: "So I was pleased that at last, I'd found something interesting!'",
+          hard: true,
+          tr: "所以我很高兴，我终于找到了点有意思的东西！“",
+          ana: {
+            pat: ["主系表", "宾语从句"],
+            frame: "主干：<b>I was pleased</b>（我很高兴）",
+            parts: [
+              ["主语", "I"],
+              ["系动词", "was"],
+              ["表语", "pleased"],
+              ["原因状语从句", "<code>that at last, I'd found something interesting</code>"],
+              ["时间状语", "<code>at last</code>"],
+              ["宾语", "<code>something interesting</code> —— 形容词后置修饰不定代词"]
+            ],
+            clauses: ["be pleased that 从句", "过去完成时", "形容词修饰不定代词后置"],
+            gram: ["be pleased that 从句", "过去完成时", "形容词后置修饰不定代词"],
+            tip: "两个考点：① <b>be pleased that...</b> 中 that 引导的是<b>原因</b>状语从句（高兴的原因），不是同位语；② <b>形容词修饰 something / anything / nothing 这类不定代词时必须后置</b>——something interesting ✓，interesting something ✗。这是 PET 必考语法点。",
+            phrases: ["at last", "something interesting"]
+          }
+        }
+      ]
+    ]
+  },
+
+  /* ============================================================
+     词组表（文中自动标黄，最长优先匹配）
+     ============================================================ */
+  phrases: [
+    "dig up", "as soon as", "have to", "had to", "dig deeper", "in the end", "at last",
+    "instead of", "made sense", "divided into", "small amounts of", "interested in",
+    "looking for", "kept texting", "cleaned it up", "digging away", "turned out",
+    "in fact", "a bit", "the whole area", "gold jewellery", "a new experience",
+    "great big", "far more", "a historical site", "history lecturer", "at home",
+    "everyday objects", "years ago", "the first job", "how to", "pieces of",
+    "under the ground", "for centuries", "a strange shape", "tell us about",
+    "wasn't quite", "so hard", "a very exciting opportunity", "which meant",
+    "disappointed by", "to ask", "all knew", "made that mistake"
+  ],
+
+  /* ============================================================
+     词条表（key 必须小写；IPA 为英式 RP 音标）
+     ============================================================ */
+  glossary: {
+
+    /* ---- 词组 ---- */
+    "dig up": { pos: "phr.", ipa: "/ˌdɪɡ ˈʌp/", cn: "挖出，掘起", note: "动词 + 副词型短语。代词作宾语要夹中间：dig <b>it</b> up。" },
+    "as soon as": { pos: "phr.", ipa: "/əz ˈsuːn əz/", cn: "一……就……", note: "引导时间状语从句。PET 高频。例：As soon as he arrived, he called me." },
+    "have to": { pos: "phr.", ipa: "/ˈhæv tu/", cn: "不得不，必须", note: "表示客观上的“必须”（外部原因）；must 偏主观。过去式 had to，将来式 will have to。" },
+    "had to": { pos: "phr.", ipa: "/ˈhæd tu/", cn: "不得不（have to 的过去式）", note: "过去必须做某事。否定 didn't have to = 不必（≠ mustn't 禁止）。" },
+    "dig deeper": { pos: "phr.", ipa: "/ˌdɪɡ ˈdiːpə/", cn: "挖得更深", note: "deep 的比较级是 deeper。引申义：深入研究。" },
+    "in the end": { pos: "phr.", ipa: "/ɪn ði ˈend/", cn: "最后，终于", note: "= finally。注意区分 at the end of（在…的末尾，后接名词）。" },
+    "at last": { pos: "phr.", ipa: "/ət ˈlɑːst/", cn: "终于", note: "带有“盼了很久”的感情色彩，常和 finally 互换，但 at last 更强调等待之久。" },
+    "instead of": { pos: "phr.", ipa: "/ɪnˈsted əv/", cn: "而不是，代替", note: "<b>后面必须跟名词或动名词 doing</b>，不能跟动词原形。例：instead of <b>going</b> ✓ / instead of go ✗" },
+    "made sense": { pos: "phr.", ipa: "/ˌmeɪd ˈsens/", cn: "有道理，说得通", note: "原形 make sense。例：It makes sense to book early. 早点订票是明智的。" },
+    "divided into": { pos: "phr.", ipa: "/dɪˈvaɪdɪd ˈɪntu/", cn: "被分成", note: "divide A into B 把 A 分成 B。被动：A is divided into B。" },
+    "small amounts of": { pos: "phr.", ipa: "/smɔːl əˈmaʊnts əv/", cn: "少量的", note: "amount 用来修饰不可数名词；可数名词要用 a few / a small number of。" },
+    "interested in": { pos: "phr.", ipa: "/ˈɪntrəstɪd ɪn/", cn: "对……感兴趣", note: "be interested in + 名词/doing；跟从句要用 what，不用 that。interested 修饰人，interesting 修饰物。" },
+    "looking for": { pos: "phr.", ipa: "/ˈlʊkɪŋ fɔː/", cn: "寻找", note: "look for 强调“找”的动作；find 强调“找到”的结果。这是 PET 高频易混点。" },
+    "kept texting": { pos: "phr.", ipa: "/ˌkept ˈtekstɪŋ/", cn: "不停地发短信", note: "keep doing sth 持续做某事（强调反复）。" },
+    "cleaned it up": { pos: "phr.", ipa: "/ˌkliːnd ɪt ˈʌp/", cn: "把它清理干净", note: "clean up 是动副短语，<b>代词作宾语必须夹中间</b>。clean up it ✗" },
+    "digging away": { pos: "phr.", ipa: "/ˈdɪɡɪŋ əˈweɪ/", cn: "不停地挖", note: "away 在这里表示“持续不断地”，不表示“离开”。类似：work away, type away。" },
+    "turned out": { pos: "phr.", ipa: "/tɜːnd ˈaʊt/", cn: "结果是，原来是", note: "turn out (to be) 结果是……。例：It turned out to be a mistake. 结果证明是个错误。" },
+    "in fact": { pos: "phr.", ipa: "/ɪn ˈfækt/", cn: "事实上，其实", note: "用来补充或纠正前面的说法，是重要的逻辑衔接词。" },
+    "a bit": { pos: "phr.", ipa: "/ə ˈbɪt/", cn: "有点儿，稍微", note: "修饰形容词或动词，语气比 a little 更口语。a bit of + 不可数名词。" },
+    "the whole area": { pos: "phr.", ipa: "/ðə ˌhəʊl ˈeəriə/", cn: "整片区域", note: "whole 前必须加 the / 物主代词。注意语序：the whole area ✓ / whole the area ✗" },
+    "gold jewellery": { pos: "phr.", ipa: "/ˌɡəʊld ˈdʒuːəlri/", cn: "金首饰", note: "jewellery 是<b>不可数名词</b>，没有复数形式。英式拼写 jewellery，美式 jewelry。" },
+    "a new experience": { pos: "phr.", ipa: "/ə ˌnjuː ɪkˈspɪəriəns/", cn: "一次新的经历", note: "experience 作“经历”讲时可数（an experience）；作“经验”讲时不可数。" },
+    "great big": { pos: "phr.", ipa: "/ˌɡreɪt ˈbɪɡ/", cn: "好大的（口语强调）", note: "口语里 great 用来加强 big 的语气，等于“特别大”。不是“伟大的”。" },
+    "far more": { pos: "phr.", ipa: "/ˌfɑː ˈmɔː/", cn: "多得多的", note: "far 修饰比较级，表示“…得多”。同类：much / a lot / even / still + 比较级。" },
+    "a historical site": { pos: "phr.", ipa: "/ə hɪˌstɒrɪkl ˈsaɪt/", cn: "历史遗址", note: "historical 指“与历史有关的”；historic 指“有历史意义的、里程碑式的”。a historic moment 历史性时刻。" },
+    "history lecturer": { pos: "phr.", ipa: "/ˈhɪstri ˌlektʃərə/", cn: "历史讲师", note: "英文里“学科名词 + 职位”直接并列即可作定语，不用加 of。" },
+    "at home": { pos: "phr.", ipa: "/ət ˈhəʊm/", cn: "在家；在国内", note: "这里作后置定语修饰 friends：“家里的朋友们”。注意 at home 不加 the。" },
+    "everyday objects": { pos: "phr.", ipa: "/ˈevrideɪ ˌɒbdʒɪkts/", cn: "日常物品", note: "everyday 是形容词（日常的）；every day 是时间状语（每天）。写成一个词还是两个词，词性和意思都不同。" },
+    "years ago": { pos: "phr.", ipa: "/ˈjɪəz əˌɡəʊ/", cn: "……年前", note: "ago 用于一般过去时；before 用于过去完成时。hundreds of years ago 几百年前。" },
+    "the first job": { pos: "phr.", ipa: "/ðə ˌfɜːst ˈdʒɒb/", cn: "第一件事，第一项工作", note: "英文用 job 指“要做的活儿/任务”，中文常说成“第一件事”。" },
+    "how to": { pos: "phr.", ipa: "/ˌhaʊ ˈtuː/", cn: "如何……（疑问词 + 不定式）", note: "疑问词 + 不定式 = 一个名词短语，可作主语、宾语、表语。例：I don't know what to do." },
+    "pieces of": { pos: "phr.", ipa: "/ˈpiːsɪz əv/", cn: "……的碎片／块", note: "a piece of + 不可数名词，表示“一块/一片”。a piece of paper, a piece of advice。" },
+    "under the ground": { pos: "phr.", ipa: "/ˌʌndə ðə ˈɡraʊnd/", cn: "在地下", note: "under 表示“在…正下方”；below 只表示位置更低，不一定正对。" },
+    "for centuries": { pos: "phr.", ipa: "/fə ˈsentʃəriz/", cn: "几个世纪以来", note: "for + 一段时间，配合完成时。这里是过去完成时 had touched。" },
+    "a strange shape": { pos: "phr.", ipa: "/ə ˌstreɪndʒ ˈʃeɪp/", cn: "奇怪的形状", note: "in the shape of... 呈……的形状。" },
+    "tell us about": { pos: "phr.", ipa: "/ˌtel ʌs əˈbaʊt/", cn: "告诉我们关于……的事", note: "tell sb about sth。注意 tell 后必须接人，say 后不直接接人（say to sb）。" },
+    "wasn't quite": { pos: "phr.", ipa: "/ˈwɒznt ˈkwaɪt/", cn: "不完全是，不太", note: "语气比 wasn't 委婉。<b>quite</b> 在这里是“完全”的意思，not quite = 不完全、不太。wasn't quite what I expected = 跟我预想的不太一样。" },
+    "how": { pos: "adv.", ipa: "/haʊ/", cn: "如何，怎样", note: "how to do sth = 如何做某事，是“疑问词 + 不定式”结构，相当于一个名词短语。" },
+    "so hard": { pos: "phr.", ipa: "/ˌsəʊ ˈhɑːd/", cn: "这么努力地，这么辛苦", note: "so + 副词，表示程度“这么”。hard 作副词是“努力地”，hardly 却是“几乎不”，意思完全不同。" },
+    "a very exciting opportunity": { pos: "phr.", ipa: "/ə veri ɪkˈsaɪtɪŋ ˌɒpəˈtjuːnəti/", cn: "一个非常令人兴奋的机会", note: "opportunity 可数，常搭配：get / have / take / miss an opportunity。" },
+    "which meant": { pos: "phr.", ipa: "/wɪtʃ ˈment/", cn: "这意味着", note: "which 引导非限制性定语从句，指代前面<b>整句话</b>，中文译成“这意味着…”。" },
+    "disappointed by": { pos: "phr.", ipa: "/ˌdɪsəˈpɔɪntɪd ˈbaɪ/", cn: "对……感到失望", note: "也可用 be disappointed at / with。disappointed 修饰人，disappointing 修饰事。" },
+    "to ask": { pos: "phr.", ipa: "/tu ˈɑːsk/", cn: "来问，去问（不定式表目的）", note: "不定式作目的状语，中文常常要提前：“给我发短信<b>来问</b>…”" },
+    "all knew": { pos: "phr.", ipa: "/ɔːl ˈnjuː/", cn: "全都知道", note: "all 作同位语放在实义动词<b>前</b>、be 动词<b>后</b>：We all knew ✓ / We were all tired ✓" },
+    "made that mistake": { pos: "phr.", ipa: "/ˌmeɪd ðæt mɪˈsteɪk/", cn: "犯了那个错误", note: "make a mistake 犯错。mistake 前面用 make 不用 do，这是固定搭配。" },
+
+    /* ---- 名词 ---- */
+    "opportunity": { pos: "n.", ipa: "/ˌɒpəˈtjuːnəti/", cn: "机会，时机", note: "可数名词。常搭配：a good opportunity to do sth。" },
+    "father": { pos: "n.", ipa: "/ˈfɑːðə/", cn: "父亲，爸爸" },
+    "history": { pos: "n.", ipa: "/ˈhɪstri/", cn: "历史" },
+    "lecturer": { pos: "n.", ipa: "/ˈlektʃərə/", cn: "讲师（大学教师）", note: "英式大学里比 professor 低一级的职称。词根 lecture（讲课）。" },
+    "site": { pos: "n.", ipa: "/saɪt/", cn: "场地，地点，遗址", note: "a historical site 历史遗址；a building site 建筑工地。" },
+    "team": { pos: "n.", ipa: "/tiːm/", cn: "团队，队", note: "英式英语里 team 可作单数也可作复数：The team is/are playing well." },
+    "area": { pos: "n.", ipa: "/ˈeəriə/", cn: "地区，区域，面积" },
+    "job": { pos: "n.", ipa: "/dʒɒb/", cn: "工作，活儿，任务", note: "可数。指具体的“一份活儿“；work 泛指”工作“，不可数。" },
+    "land": { pos: "n.", ipa: "/lænd/", cn: "土地，陆地", note: "作“土地”讲不可数；作“国家”讲可数。" },
+    "piece": { pos: "n.", ipa: "/piːs/", cn: "一块，一片，一件", note: "a piece of + 不可数名词。" },
+    "pieces": { pos: "n.", ipa: "/ˈpiːsɪz/", cn: "碎片（piece 的复数）" },
+    "pot": { pos: "n.", ipa: "/pɒt/", cn: "罐，壶，盆" },
+    "pots": { pos: "n.", ipa: "/pɒts/", cn: "罐子（pot 的复数）" },
+    "ground": { pos: "n.", ipa: "/ɡraʊnd/", cn: "地面，土地", note: "on the ground 在地面上；under the ground 在地下。" },
+    "century": { pos: "n.", ipa: "/ˈsentʃəri/", cn: "世纪，一百年" },
+    "centuries": { pos: "n.", ipa: "/ˈsentʃəriz/", cn: "世纪（century 的复数）", note: "复数去 y 加 ies。" },
+    "square": { pos: "n.", ipa: "/skweə/", cn: "正方形，广场；adj. 正方形的，公平的" },
+    "squares": { pos: "n.", ipa: "/skweəz/", cn: "方块（square 的复数）" },
+    "leader": { pos: "n.", ipa: "/ˈliːdə/", cn: "领导者，负责人", note: "动词 lead + er。" },
+    "hole": { pos: "n.", ipa: "/həʊl/", cn: "洞，孔，坑" },
+    "holes": { pos: "n.", ipa: "/həʊlz/", cn: "洞（hole 的复数）" },
+    "amount": { pos: "n.", ipa: "/əˈmaʊnt/", cn: "数量，金额", note: "修饰不可数名词：a large amount of water。" },
+    "amounts": { pos: "n.", ipa: "/əˈmaʊnts/", cn: "数量（amount 的复数）" },
+    "soil": { pos: "n.", ipa: "/sɔɪl/", cn: "土壤，泥土", note: "不可数名词。" },
+    "sense": { pos: "n.", ipa: "/sens/", cn: "道理，意义；感觉", note: "make sense 有道理；a sense of humour 幽默感。" },
+    "friend": { pos: "n.", ipa: "/frend/", cn: "朋友" },
+    "friends": { pos: "n.", ipa: "/frendz/", cn: "朋友们（friend 的复数）" },
+    "home": { pos: "n.", ipa: "/həʊm/", cn: "家", note: "at home 在家（不加 the）；go home 回家（不加 to）。" },
+    "object": { pos: "n.", ipa: "/ˈɒbdʒɪkt/", cn: "物品，物体", note: "作动词时读 /əbˈdʒekt/，重音在后，意思是“反对”。" },
+    "objects": { pos: "n.", ipa: "/ˈɒbdʒɪkts/", cn: "物品（object 的复数）" },
+    "stone": { pos: "n.", ipa: "/stəʊn/", cn: "石头，石料" },
+    "shape": { pos: "n.", ipa: "/ʃeɪp/", cn: "形状，外形", note: "in the shape of... 呈……形状。" },
+    "hundred": { pos: "num.", ipa: "/ˈhʌndrəd/", cn: "百", note: "确切数字后不加 s：two hundred；表示“数百”时加 s + of：hundreds of。" },
+    "hundreds": { pos: "num.", ipa: "/ˈhʌndrədz/", cn: "数百，成百上千", note: "hundreds of years 数百年。" },
+    "museum": { pos: "n.", ipa: "/mjuˈziːəm/", cn: "博物馆" },
+    "end": { pos: "n.", ipa: "/end/", cn: "结尾，末端", note: "in the end 最后；at the end of 在…的末尾。" },
+    "year": { pos: "n.", ipa: "/jɪə/", cn: "年" },
+    "day": { pos: "n.", ipa: "/deɪ/", cn: "天，日子" },
+
+    /* ---- 形容词 ---- */
+    "exciting": { pos: "adj.", ipa: "/ɪkˈsaɪtɪŋ/", cn: "令人兴奋的", note: "修饰物。修饰人的感受用 excited：I'm excited." },
+    "historical": { pos: "adj.", ipa: "/hɪˈstɒrɪkl/", cn: "历史的，与历史有关的", note: "对比 historic（有历史意义的）：a historic victory 历史性胜利。" },
+    "ancient": { pos: "adj.", ipa: "/ˈeɪnʃənt/", cn: "古代的，古老的" },
+    "important": { pos: "adj.", ipa: "/ɪmˈpɔːtnt/", cn: "重要的" },
+    "interested": { pos: "adj.", ipa: "/ˈɪntrəstɪd/", cn: "感兴趣的", note: "修饰<b>人</b>。be interested in sth/doing。" },
+    "interesting": { pos: "adj.", ipa: "/ˈɪntrəstɪŋ/", cn: "有趣的", note: "修饰<b>物</b>。形容词修饰 something/anything 时要后置：something interesting。" },
+    "ordinary": { pos: "adj.", ipa: "/ˈɔːdnri/", cn: "普通的，平常的", note: "= common, usual。反义：extraordinary 非凡的。" },
+    "everyday": { pos: "adj.", ipa: "/ˈevrideɪ/", cn: "日常的，每天的", note: "形容词，写成一个词。every day 是两个词，作时间状语。" },
+    "disappointed": { pos: "adj.", ipa: "/ˌdɪsəˈpɔɪntɪd/", cn: "失望的", note: "修饰人。be disappointed at/by/with。" },
+    "strange": { pos: "adj.", ipa: "/streɪndʒ/", cn: "奇怪的，陌生的" },
+    "nearby": { pos: "adj.", ipa: "/ˌnɪəˈbaɪ/", cn: "附近的；adv. 在附近" },
+    "pleased": { pos: "adj.", ipa: "/pliːzd/", cn: "高兴的，满意的", note: "be pleased with/about sth；be pleased to do sth。" },
+    "easy": { pos: "adj.", ipa: "/ˈiːzi/", cn: "容易的", note: "比较级 easier，最高级 easiest。" },
+    "hard": { pos: "adj./adv.", ipa: "/hɑːd/", cn: "困难的；努力地；硬的", note: "作副词是“努力地”；<b>hardly</b> 却是“几乎不”，别搞混。" },
+    "great": { pos: "adj.", ipa: "/ɡreɪt/", cn: "大的；伟大的；很好的", note: "口语里 great big = 好大的。" },
+    "big": { pos: "adj.", ipa: "/bɪɡ/", cn: "大的" },
+    "right": { pos: "adj.", ipa: "/raɪt/", cn: "对的，正确的；右边的", note: "That's right. 对了。all right 好吧。" },
+    "deep": { pos: "adj./adv.", ipa: "/diːp/", cn: "深的；深地" },
+    "deeper": { pos: "adj./adv.", ipa: "/ˈdiːpə/", cn: "更深的（deep 的比较级）" },
+
+    /* ---- 动词 ---- */
+    "help": { pos: "v.", ipa: "/help/", cn: "帮助", note: "help sb (to) do sth，to 可省略。" },
+    "lead": { pos: "v.", ipa: "/liːd/", cn: "带领，领导", note: "过去式 led，过去分词 led。注意不是 leaded。" },
+    "leading": { pos: "v.", ipa: "/ˈliːdɪŋ/", cn: "带领（lead 的现在分词）" },
+    "dig": { pos: "v.", ipa: "/dɪɡ/", cn: "挖，掘", note: "过去式 dug，过去分词 dug。<b>双写 g</b> 加 ing：digging。" },
+    "digging": { pos: "v.", ipa: "/ˈdɪɡɪŋ/", cn: "挖（dig 的现在分词）" },
+    "explore": { pos: "v.", ipa: "/ɪkˈsplɔː/", cn: "勘探，探索" },
+    "arrive": { pos: "v.", ipa: "/əˈraɪv/", cn: "到达", note: "arrive <b>at</b> 小地方 / arrive <b>in</b> 大地方。不能说 arrive 直接加宾语。" },
+    "arrived": { pos: "v.", ipa: "/əˈraɪvd/", cn: "到达（arrive 的过去式）" },
+    "expect": { pos: "v.", ipa: "/ɪkˈspekt/", cn: "预料，期待", note: "expect to do sth；expect sb to do sth。" },
+    "expected": { pos: "v.", ipa: "/ɪkˈspektɪd/", cn: "预料（expect 的过去式/过去分词）" },
+    "remove": { pos: "v.", ipa: "/rɪˈmuːv/", cn: "移走，清除，去掉" },
+    "prepare": { pos: "v.", ipa: "/prɪˈpeə/", cn: "准备", note: "prepare for sth 为…做准备；prepare sth 准备某物。" },
+    "warn": { pos: "v.", ipa: "/wɔːn/", cn: "警告，提醒", note: "warn sb of/about sth；warn sb (not) to do sth。" },
+    "warned": { pos: "v.", ipa: "/wɔːnd/", cn: "警告（warn 的过去式/过去分词）" },
+    "work": { pos: "v./n.", ipa: "/wɜːk/", cn: "工作；起作用", note: "作名词不可数。works 表示“作品”或“工厂”。" },
+    "clear": { pos: "v./adj.", ipa: "/klɪə/", cn: "清理；清楚的，晴朗的" },
+    "cleared": { pos: "v.", ipa: "/klɪəd/", cn: "清理干净（clear 的过去式/过去分词）" },
+    "clean": { pos: "v./adj.", ipa: "/kliːn/", cn: "打扫，清理；干净的" },
+    "cleaned": { pos: "v.", ipa: "/kliːnd/", cn: "清理（clean 的过去式/过去分词）" },
+    "find": { pos: "v.", ipa: "/faɪnd/", cn: "找到，发现", note: "过去式/过去分词都是 found。find out 查明。" },
+    "found": { pos: "v.", ipa: "/faʊnd/", cn: "发现（find 的过去式/过去分词）", note: "注意：作“建立”讲时 found 是原形，过去式 founded。" },
+    "think": { pos: "v.", ipa: "/θɪŋk/", cn: "想，认为", note: "过去式/过去分词 thought /θɔːt/。" },
+    "thought": { pos: "v.", ipa: "/θɔːt/", cn: "想，认为（think 的过去式/过去分词）" },
+    "touch": { pos: "v.", ipa: "/tʌtʃ/", cn: "触摸，碰" },
+    "touched": { pos: "v.", ipa: "/tʌtʃt/", cn: "触碰（touch 的过去式/过去分词）" },
+    "learn": { pos: "v.", ipa: "/lɜːn/", cn: "学习，了解到", note: "过去式 learned 或 learnt 都可以。" },
+    "divide": { pos: "v.", ipa: "/dɪˈvaɪd/", cn: "划分，分开", note: "divide A into B 把 A 分成 B。" },
+    "divided": { pos: "v.", ipa: "/dɪˈvaɪdɪd/", cn: "划分（divide 的过去分词）" },
+    "tell": { pos: "v.", ipa: "/tel/", cn: "告诉", note: "tell sb sth。过去式/过去分词 told。" },
+    "told": { pos: "v.", ipa: "/təʊld/", cn: "告诉（tell 的过去式/过去分词）" },
+    "say": { pos: "v.", ipa: "/seɪ/", cn: "说", note: "say sth (to sb)。过去式/过去分词 said /sed/。" },
+    "said": { pos: "v.", ipa: "/sed/", cn: "说（say 的过去式/过去分词）", note: "发音是 /sed/，不是 /seɪd/。" },
+    "report": { pos: "v./n.", ipa: "/rɪˈpɔːt/", cn: "报道，说；报告" },
+    "reports": { pos: "v.", ipa: "/rɪˈpɔːts/", cn: "说，报道（report 的第三人称单数）" },
+    "sound": { pos: "v./n.", ipa: "/saʊnd/", cn: "听起来；声音", note: "系动词，后接形容词：It sounds great." },
+    "sounded": { pos: "v.", ipa: "/ˈsaʊndɪd/", cn: "听起来（sound 的过去式）" },
+    "explain": { pos: "v.", ipa: "/ɪkˈspleɪn/", cn: "解释，说明", note: "explain sth to sb，<b>不能说 explain sb sth</b>。" },
+    "explains": { pos: "v.", ipa: "/ɪkˈspleɪnz/", cn: "解释，说明（explain 的第三人称单数）" },
+    "text": { pos: "v./n.", ipa: "/tekst/", cn: "发短信；文本，短信" },
+    "texting": { pos: "v.", ipa: "/ˈtekstɪŋ/", cn: "发短信（text 的现在分词）" },
+    "ask": { pos: "v.", ipa: "/ɑːsk/", cn: "问，要求", note: "ask sb sth；ask sb to do sth。" },
+    "look": { pos: "v.", ipa: "/lʊk/", cn: "看，寻找", note: "look for 寻找（动作）；find 找到（结果）。" },
+    "looking": { pos: "v.", ipa: "/ˈlʊkɪŋ/", cn: "看，找（look 的现在分词）" },
+    "live": { pos: "v.", ipa: "/lɪv/", cn: "居住，生活", note: "作形容词“活的、现场的”时读 /laɪv/。" },
+    "lived": { pos: "v.", ipa: "/lɪvd/", cn: "居住（live 的过去式/过去分词）" },
+    "mean": { pos: "v.", ipa: "/miːn/", cn: "意味着，意思是", note: "过去式/过去分词 meant /ment/。" },
+    "meant": { pos: "v.", ipa: "/ment/", cn: "意味着（mean 的过去式/过去分词）", note: "发音 /ment/，和 mint 同音。" },
+    "make": { pos: "v.", ipa: "/meɪk/", cn: "做，制造，使得", note: "过去式/过去分词 made。make sb do sth（不加 to）。" },
+    "made": { pos: "v.", ipa: "/meɪd/", cn: "做（make 的过去式/过去分词）" },
+    "turn": { pos: "v.", ipa: "/tɜːn/", cn: "转，变成", note: "turn out 结果是；turn on/off 开关。" },
+    "imagine": { pos: "v.", ipa: "/ɪˈmædʒɪn/", cn: "想象，设想", note: "imagine doing sth，不能跟不定式。" },
+    "keep": { pos: "v.", ipa: "/kiːp/", cn: "保持，持续", note: "keep doing sth 一直做；keep sb doing 让某人一直做。" },
+    "go": { pos: "v.", ipa: "/ɡəʊ/", cn: "去，走", note: "过去式 went，过去分词 gone。" },
+    "get": { pos: "v.", ipa: "/ɡet/", cn: "得到，到达，变得", note: "过去式 got，过去分词 got（英式）/ gotten（美式）。" },
+    "got": { pos: "v.", ipa: "/ɡɒt/", cn: "得到，到达（get 的过去式/过去分词）" },
+    "know": { pos: "v.", ipa: "/nəʊ/", cn: "知道，认识", note: "过去式 knew /njuː/，过去分词 known。" },
+    "knew": { pos: "v.", ipa: "/njuː/", cn: "知道（know 的过去式）" },
+    "disappear": { pos: "v.", ipa: "/ˌdɪsəˈpɪə/", cn: "消失", note: "反义词 appear 出现。dis- 是否定前缀。" },
+    "mistake": { pos: "n./v.", ipa: "/mɪˈsteɪk/", cn: "错误；弄错", note: "make a mistake 犯错（用 make，不用 do）。" },
+
+    /* ---- 副词 / 其他 ---- */
+    "however": { pos: "adv.", ipa: "/haʊˈevə/", cn: "然而，不过", note: "后面要加逗号。比 but 更正式，常用于书面语。" },
+    "completely": { pos: "adv.", ipa: "/kəmˈpliːtli/", cn: "完全地，彻底地" },
+    "carefully": { pos: "adv.", ipa: "/ˈkeəfəli/", cn: "小心地，仔细地", note: "形容词 careful + ly。" },
+    "careful": { pos: "adj.", ipa: "/ˈkeəfl/", cn: "小心的，仔细的", note: "be careful with/about sth。" },
+    "actually": { pos: "adv.", ipa: "/ˈæktʃuəli/", cn: "实际上，其实", note: "用来纠正或补充前面的说法，是重要的逻辑信号词。" },
+    "obviously": { pos: "adv.", ipa: "/ˈɒbviəsli/", cn: "显然，明显地", note: "形容词 obvious + ly。" },
+    "really": { pos: "adv.", ipa: "/ˈriːəli/", cn: "真正地，确实" },
+    "instead": { pos: "adv.", ipa: "/ɪnˈsted/", cn: "代替，反而", note: "instead 单独用；instead of 后面要跟名词或动名词。" },
+    "soon": { pos: "adv.", ipa: "/suːn/", cn: "不久，很快" },
+    "quite": { pos: "adv.", ipa: "/kwaɪt/", cn: "相当；完全", note: "not quite = 不完全、不太。quite a few = 相当多。" },
+    "far": { pos: "adv./adj.", ipa: "/fɑː/", cn: "远；……得多", note: "修饰比较级表示“…得多”：far more, far better。" },
+    "either": { pos: "adv.", ipa: "/ˈaɪðə/", cn: "也（用于否定句）", note: "否定句末尾用 either；肯定句用 too。" },
+    "when": { pos: "conj.", ipa: "/wen/", cn: "当……的时候", note: "引导时间状语从句。" },
+    "though": { pos: "adv./conj.", ipa: "/ðəʊ/", cn: "不过，然而；虽然", note: "放句末或句中作副词= however；放句首作连词= although。" },
+    "because": { pos: "conj.", ipa: "/bɪˈkɒz/", cn: "因为", note: "because 后接从句；because of 后接名词。" },
+    "but": { pos: "conj.", ipa: "/bʌt/", cn: "但是", note: "but 和 though/although 不能同时用在一个句子里。" },
+    "as": { pos: "conj./prep.", ipa: "/æz/", cn: "如同；作为；当……时", note: "as...as 和…一样；as soon as 一…就。" },
+    "so": { pos: "conj./adv.", ipa: "/səʊ/", cn: "所以；这么，如此" },
+    "that": { pos: "pron./conj.", ipa: "/ðæt/", cn: "那个；引导从句", note: "引导宾语从句时常可省略；引导定语从句时作主语不能省。" },
+    "which": { pos: "pron.", ipa: "/wɪtʃ/", cn: "哪一个；这（指代前文）", note: "引导非限制性定语从句时可指代<b>整句话</b>，前面要有逗号。" },
+    "who": { pos: "pron.", ipa: "/huː/", cn: "谁；……的人（关系代词）", note: "指人。whose 表所有格，whom 作宾语。" },
+    "what": { pos: "pron.", ipa: "/wɒt/", cn: "什么；……的东西", note: "引导名词性从句时 = the thing that，不能换成 that。" },
+    "someone": { pos: "pron.", ipa: "/ˈsʌmwʌn/", cn: "某人", note: "作主语时谓语用单数。" },
+    "no-one": { pos: "pron.", ipa: "/ˈnəʊ wʌn/", cn: "没有人", note: "= nobody。作主语时谓语用单数。" },
+    "they": { pos: "pron.", ipa: "/ðeɪ/", cn: "他们，它们" },
+    "them": { pos: "pron.", ipa: "/ðem/", cn: "他们（宾格）" },
+    "their": { pos: "pron.", ipa: "/ðeə/", cn: "他们的" },
+    "there": { pos: "adv.", ipa: "/ðeə/", cn: "那里" },
+    "it": { pos: "pron.", ipa: "/ɪt/", cn: "它", note: "五选句填空里，it 常常是判断答案的关键——一定要找到它指代什么。" },
+    "we": { pos: "pron.", ipa: "/wiː/", cn: "我们" },
+    "under": { pos: "prep.", ipa: "/ˈʌndə/", cn: "在……下面", note: "under 强调正下方；below 只表示位置更低。" },
+    "all": { pos: "det./pron.", ipa: "/ɔːl/", cn: "全部，所有", note: "作同位语时位置：实义动词前，be 动词后。" },
+    "each": { pos: "det.", ipa: "/iːtʃ/", cn: "每个", note: "each 强调个体，every 强调全体。each 可作代词，every 不行。" },
+    "every": { pos: "det.", ipa: "/ˈevri/", cn: "每一个" },
+    "first": { pos: "adv./adj.", ipa: "/fɜːst/", cn: "首先；第一的" },
+    "still": { pos: "adv.", ipa: "/stɪl/", cn: "仍然，还" },
+    "ago": { pos: "adv.", ipa: "/əˈɡəʊ/", cn: "以前", note: "用于一般过去时；before 用于过去完成时。" },
+    "away": { pos: "adv.", ipa: "/əˈweɪ/", cn: "离开；不停地", note: "在 dig away, work away 里表示“持续不断地”。" },
+    "one": { pos: "num./pron.", ipa: "/wʌn/", cn: "一；一个" },
+    "now": { pos: "adv.", ipa: "/naʊ/", cn: "现在" },
+    "last": { pos: "adj.", ipa: "/lɑːst/", cn: "上一个的；最后的" },
+
+    /* ---- 基础词（保证每个词点下去都有内容） ---- */
+    "a": { pos: "art.", ipa: "/ə/", cn: "一个（不定冠词）", note: "用在辅音音素开头的词前；元音音素前用 an。a university /an hour。" },
+    "the": { pos: "art.", ipa: "/ðə/", cn: "这，那（定冠词）", note: "表示特指、或前文已提到过的人或物。第二次提到时一般用 the。" },
+    "and": { pos: "conj.", ipa: "/ænd/", cn: "和，并且" },
+    "of": { pos: "prep.", ipa: "/ɒv/", cn: "……的", note: "A of B 译成中文要倒过来：the name of the book = 这本书的名字。" },
+    "to": { pos: "prep.", ipa: "/tuː/", cn: "到，向；[不定式符号]", note: "作不定式符号时后面跟动词原形；作介词时后面跟名词或动名词。" },
+    "in": { pos: "prep.", ipa: "/ɪn/", cn: "在……里；在（某段时间）" },
+    "on": { pos: "prep.", ipa: "/ɒn/", cn: "在……上；在（某一天）" },
+    "at": { pos: "prep.", ipa: "/æt/", cn: "在（某地点／某时刻）", note: "at 用于具体时刻和小地点；in 用于大地点；on 用于具体某天。" },
+    "for": { pos: "prep.", ipa: "/fɔː/", cn: "为了；给；持续（一段时间）", note: "for + 一段时间，常与完成时连用：for centuries 几个世纪以来。" },
+    "with": { pos: "prep.", ipa: "/wɪð/", cn: "和……一起；带有", note: "with + 名词 + 修饰语可作伴随状语，中文常要拆成独立小句。" },
+    "about": { pos: "prep.", ipa: "/əˈbaʊt/", cn: "关于；大约" },
+    "into": { pos: "prep.", ipa: "/ˈɪntu/", cn: "进入，到……里面", note: "divide A into B 把 A 分成 B。" },
+    "by": { pos: "prep.", ipa: "/baɪ/", cn: "被（用于被动语态）；通过；在……旁" },
+    "up": { pos: "adv.", ipa: "/ʌp/", cn: "向上；起来", note: "常和动词组成短语：dig up 挖出，clean up 清理，pick up 捡起。" },
+    "he": { pos: "pron.", ipa: "/hiː/", cn: "他" },
+    "she": { pos: "pron.", ipa: "/ʃiː/", cn: "她" },
+    "her": { pos: "pron.", ipa: "/hɜː/", cn: "她（宾格）；她的" },
+    "me": { pos: "pron.", ipa: "/miː/", cn: "我（宾格）" },
+    "my": { pos: "pron.", ipa: "/maɪ/", cn: "我的" },
+    "i": { pos: "pron.", ipa: "/aɪ/", cn: "我", note: "英语里 I 永远大写，不管在句子哪个位置。" },
+    "us": { pos: "pron.", ipa: "/ʌs/", cn: "我们（宾格）" },
+    "was": { pos: "v.", ipa: "/wɒz/", cn: "是（be 的过去式，用于 I / he / she / it 及单数）" },
+    "were": { pos: "v.", ipa: "/wɜː/", cn: "是（be 的过去式，用于 we / you / they 及复数）" },
+    "be": { pos: "v.", ipa: "/biː/", cn: "是，成为", note: "原形 be，现在式 am/is/are，过去式 was/were，过去分词 been。" },
+    "had": { pos: "v.", ipa: "/hæd/", cn: "有；已经（have 的过去式／过去分词）", note: "had + 过去分词构成过去完成时，表示“过去的过去”。" },
+    "have": { pos: "v.", ipa: "/hæv/", cn: "有；已经", note: "have + 过去分词构成现在完成时。" },
+    "would": { pos: "modal", ipa: "/wʊd/", cn: "将会；愿意（will 的过去式）", note: "在过去时的叙述里，will 要退一步变成 would，叫过去将来时。" },
+    "could": { pos: "modal", ipa: "/kʊd/", cn: "能够；可能（can 的过去式）", note: "情态动词后面永远跟动词原形。" },
+    "very": { pos: "adv.", ipa: "/ˈveri/", cn: "非常，很", note: "very 修饰形容词和副词；不能直接修饰动词（不能说 I very like it）。" },
+    "just": { pos: "adv.", ipa: "/dʒʌst/", cn: "仅仅；刚刚；正好" },
+    "more": { pos: "adv./det.", ipa: "/mɔː/", cn: "更多；更……", note: "many/much 的比较级。far more = 多得多的。" },
+    "those": { pos: "pron.", ipa: "/ðəʊz/", cn: "那些（that 的复数）" },
+    "everyone": { pos: "pron.", ipa: "/ˈevriwʌn/", cn: "每个人，大家", note: "作主语时谓语用单数：Everyone knows it." },
+    "people": { pos: "n.", ipa: "/ˈpiːpl/", cn: "人们，人", note: "本身是复数，不能加 s。一个人是 a person。" },
+    "time": { pos: "n.", ipa: "/taɪm/", cn: "时间（不可数）；次，回（可数）", note: "each time 每次；three times 三次。" },
+    "small": { pos: "adj.", ipa: "/smɔːl/", cn: "小的" },
+    "something": { pos: "pron.", ipa: "/ˈsʌmθɪŋ/", cn: "某事，某物", note: "形容词修饰它时要后置：something interesting。" },
+    "do": { pos: "v.", ipa: "/duː/", cn: "做，干", note: "过去式 did，过去分词 done。do 和 make 都译“做”：do 偏“做事”，make 偏“做出实物”。" },
+    "doing": { pos: "v.", ipa: "/ˈduːɪŋ/", cn: "做（do 的现在分词）" },
+    "give": { pos: "v.", ipa: "/ɡɪv/", cn: "给，给予", note: "过去式 gave，过去分词 given。give sb sth = give sth to sb。" },
+    "given": { pos: "v.", ipa: "/ˈɡɪvn/", cn: "给（give 的过去分词）", note: "文中 was given 是被动语态，直译“被给予”，中文说“得到了“更顺。" },
+    "kept": { pos: "v.", ipa: "/kept/", cn: "保持，不停（keep 的过去式／过去分词）", note: "keep doing sth 不停地做某事。" },
+    "kate": { pos: "n.", ipa: "/keɪt/", cn: "凯特（人名，女子名）", note: "专有名词首字母永远大写。" },
+    "marshall": { pos: "n.", ipa: "/ˈmɑːʃl/", cn: "马歇尔（姓氏）" },
+    "dad": { pos: "n.", ipa: "/dæd/", cn: "爸爸", note: "口语用词，相当于 father。作称呼时首字母大写，如 Dad。" },
+
+    /* ---- 缩写 / 缩略形式 ---- */
+    "wasn't": { pos: "缩写", ipa: "/ˈwɒznt/", cn: "was not 的缩写（不是）" },
+    "weren't": { pos: "缩写", ipa: "/wɜːnt/", cn: "were not 的缩写" },
+    "hadn't": { pos: "缩写", ipa: "/ˈhædnt/", cn: "had not 的缩写" },
+    "i'd": { pos: "缩写", ipa: "/aɪd/", cn: "I had 或 I would 的缩写", note: "看后面接什么：I'd found = I had found；I'd go = I would go。" },
+    "who's": { pos: "缩写", ipa: "/huːz/", cn: "who is 或 who has 的缩写" },
+    "who'd": { pos: "缩写", ipa: "/huːd/", cn: "who had 或 who would 的缩写" }
+  },
+
+  /* ============================================================
+     选项 A–H
+     ============================================================ */
+  options: {
+    A: "It turned out to be a small figure of a horse.",
+    B: "No-one made that mistake, luckily.",
+    C: "That way, everyone made sure they didn't miss anything.",
+    D: "In fact, the whole area was actually still covered in grass.",
+    E: "It was a bit sad to see it disappear.",
+    F: "Some people were a bit disappointed by that news.",
+    G: "They probably imagined it was things like gold jewellery.",
+    H: "It was a new experience for me, too."
+  },
+
+  /* ============================================================
+     题目 16–20
+     ============================================================ */
+  questions: [
+    {
+      n: 16,
+      prompt: "第 16 空（段首）—— 前一段结尾是“现场和凯特预想的不太一样”，空后紧跟“So the first job was to remove it all…”",
+      answer: "D",
+      why: "上一段刚说“现场跟凯特想的不一样“，D 句 <b>In fact, the whole area was actually still covered in grass</b>（其实整片地还长满了草）正好解释”哪儿不一样“。更关键的是空后那句 <code>remove <b>it all</b></code>——remove 的宾语 it all 必须有所指，指的就是这片草。",
+      clues: ["In fact 表解释说明", "the whole area ↔ the site", "it all 的指代", "still ↔ wasn't quite what she expected"],
+      others: [
+        ["E", "<b>It was a bit sad to see it disappear.</b> —— it 没有指代对象；而且“看着它消失”不可能发生在“清除”之前，逻辑顺序反了。这是最像的干扰项，考的就是代词。"],
+        ["F", "<b>Some people were a bit disappointed by that news.</b> —— that news 在本段找不到来源，“失望”要到下一段要挖更深时才出现。"],
+        ["H", "<b>It was a new experience for me, too.</b> —— too 要求前文有人也经历过类似的事，本段没有这个铺垫。"]
+      ],
+      tip: "五选句填空的第一步永远是<b>看代词</b>。空后出现 it / they / this / that，就往前找它指谁——找不到指代对象的选项，一定是错的。",
+      ana: {
+        parts: [
+          ["状语", "<code>In fact</code> —— 评注性状语，表示“其实、事实上”"],
+          ["主语", "the whole area"],
+          ["系动词", "was"],
+          ["状语", "<code>actually</code>、<code>still</code> —— 两个副词都修饰后面的表语"],
+          ["表语", "covered in grass —— 过去分词短语作表语，表状态"]
+        ],
+        gram: ["be covered in/with 表状态", "副词位置", "In fact 逻辑衔接"],
+        tr: "其实，整片区域当时还长满了草。"
+      }
+    },
+    {
+      n: 17,
+      prompt: "第 17 空 —— 在凯特的话里，空后紧跟“But we all knew Dad was right!”",
+      answer: "F",
+      why: "空后是 <b>But</b> we all knew Dad was right，but 表转折，说明前一句一定是“有人不认同、不高兴“。F 句 <b>Some people were a bit disappointed by that news</b>（有些人对这个消息有点失望）正好对上：有人失望，但我们都知道爸爸是对的。<code>that news</code> 指的就是上句”得挖得更深才能了解更多“这件事。",
+      clues: ["But 表转折，前后语义相反", "that news 回指上句的坏消息", "a bit 缓和语气"],
+      others: [
+        ["B", "<b>No-one made that mistake, luckily.</b> —— that mistake 前文没有任何“错误”可指代，凭空出现。"],
+        ["C", "<b>That way, everyone made sure they didn't miss anything.</b> —— That way 要指代一种做法，可本段还没讲到具体做法。"],
+        ["H", "<b>It was a new experience for me, too.</b> —— too 没有铺垫，前文没人提到类似的经历。"]
+      ],
+      tip: "看到空后是 <b>But / However</b>，就去选项里找<b>意思相反</b>的那句。这是五选句填空最快的一招。",
+      ana: {
+        parts: [
+          ["主语", "Some people"],
+          ["系动词 + 表语", "<code>were disappointed</code> —— 系表结构，表状态"],
+          ["程度状语", "<code>a bit</code> —— 修饰形容词，语气比 very 弱"],
+          ["原因状语", "<code>by that news</code> —— that 回指上文的坏消息"]
+        ],
+        gram: ["be disappointed by", "a bit 修饰形容词", "that 的回指"],
+        tr: "有些人对这个消息有点失望。"
+      }
+    },
+    {
+      n: 18,
+      prompt: "第 18 空 —— 空后紧跟“So it made sense.”",
+      answer: "C",
+      why: "空前说“我们都不能挖大坑，得非常小心地挖、每次只取一点土“，空后说 <b>So it made sense</b>（所以这是有道理的）。中间必须补上”这样做的好处“。C 句 <b>That way, everyone made sure they didn't miss anything</b>（这样一来，谁都不会漏掉任何东西）——<code>That way</code> 指代前面”小心挖“的做法，正好是”有道理“的原因。",
+      clues: ["That way 回指前面的做法", "So it made sense 需要前文给理由", "didn't miss anything 对应 carefully"],
+      others: [
+        ["E", "<b>It was a bit sad to see it disappear.</b> —— 跟本段“小心挖掘”的话题完全不搭，而且 it 无所指。"],
+        ["B", "<b>No-one made that mistake, luckily.</b> —— 本段从头到尾没提到任何 mistake。"],
+        ["H", "<b>It was a new experience for me, too.</b> —— too 仍然没有铺垫。"]
+      ],
+      tip: "空后是 <b>So...</b>，说明<b>空前是因、空后是果</b>。要找的是一句能当“原因”的话。",
+      ana: {
+        parts: [
+          ["状语", "<code>That way</code> —— 指代前文提到的做法，“这样一来”"],
+          ["主语", "everyone"],
+          ["谓语", "<code>made sure</code> —— 确保"],
+          ["宾语从句", "<code>(that) they didn't miss anything</code> —— 省略了 that"]
+        ],
+        gram: ["That way 指代前文", "make sure (that) 从句", "宾语从句省略 that"],
+        tr: "这样一来，每个人都能确保自己不会漏掉任何东西。"
+      }
+    },
+    {
+      n: 19,
+      prompt: "第 19 空 —— 空前是“朋友一直发短信问我找到了什么”，空后紧跟“But actually, we were looking for ordinary, everyday objects…”",
+      answer: "G",
+      why: "空前说朋友总问我找到了什么，空后是 <b>But actually</b>（但其实），表示“纠正别人的想法“。所以中间必须填”朋友以为我找到的是什么“。G 句 <b>They probably imagined it was things like gold jewellery</b>（他们大概以为是什么金首饰之类的东西）——<code>They</code> 指朋友，<code>gold jewellery</code> 和后面的 <code>ordinary, everyday objects</code> 形成鲜明对比，正好被 But actually 纠正。",
+      clues: ["They 回指 friends", "But actually 表纠正", "gold jewellery ↔ ordinary, everyday objects 对比"],
+      others: [
+        ["A", "<b>It turned out to be a small figure of a horse.</b> —— 这是最后一段“发现小马雕像”的内容，放这里就剧透了，而且和“朋友的想象”这个话题无关。"],
+        ["H", "<b>It was a new experience for me, too.</b> —— too 依然没有铺垫。"],
+        ["B", "<b>No-one made that mistake, luckily.</b> —— 依旧无 mistake 可指。"]
+      ],
+      tip: "<b>But actually / In fact</b> 后面如果是“纠正”，那么前面就要找<b>被纠正的那个错误想法</b>。前后一定是“对立”关系。",
+      ana: {
+        parts: [
+          ["主语", "They —— 指前文的 friends"],
+          ["状语", "probably —— 表推测"],
+          ["谓语", "imagined"],
+          ["宾语从句", "<code>it was things like gold jewellery</code> —— it 指“我找到的东西”"]
+        ],
+        gram: ["imagine (that) 从句", "代词 they 的回指", "like 表举例"],
+        tr: "他们大概以为是什么金首饰之类的东西。"
+      }
+    },
+    {
+      n: 20,
+      prompt: "第 20 空 —— 空前是“我发现了一块形状奇怪的石头”，空后是“Someone had obviously made it hundreds of years ago”",
+      answer: "A",
+      why: "空前说发现“一块形状奇怪的石头“，空后说 <code>Someone had obviously made <b>it</b> hundreds of years ago</code>（显然有人几百年前做了<b>它</b>）。如果 it 只指”石头“，那”有人做了石头“就说不通了——石头是天然的，不是做出来的。所以中间必须交代这块石头其实是什么。A 句 <b>It turned out to be a small figure of a horse</b>（原来是一匹小马的雕像）正好：figure 是人工雕刻品，<code>made it</code> 才讲得通。",
+      clues: ["It turned out to be… 引出真相", "made it 的 it 必须是人造物", "figure 是人工雕刻品"],
+      others: [
+        ["E", "<b>It was a bit sad to see it disappear.</b> —— 跟“发现宝贝”的语境正好相反，而且句子里两个 it 都找不到指代。"],
+        ["B", "<b>No-one made that mistake, luckily.</b> —— 全文没有任何 mistake。"],
+        ["H", "<b>It was a new experience for me, too.</b> —— too 始终没有铺垫。"]
+      ],
+      tip: "这道题最能说明五选句填空的核心：<b>代词指代决定答案</b>。<code>made it</code> 的 it 必须是“能做出来的东西”——石头不行，雕像才行。",
+      ana: {
+        parts: [
+          ["主语", "It —— 指前面那块“形状奇怪的石头”"],
+          ["谓语", "<code>turned out</code> —— 结果是，原来是"],
+          ["表语", "<code>to be a small figure of a horse</code> —— 不定式作表语"],
+          ["（figure）", "figure 在这里是“人像、雕像”的意思，不是“数字”"]
+        ],
+        gram: ["turn out to be", "不定式作表语", "figure 的一词多义"],
+        tr: "原来它是一匹小马的雕像。"
+      }
+    }
+  ]
+};
+
+</script>
+<script>
+/* ===== PET 精读页 · 引擎 ===== */
+(function () {
+  "use strict";
+  var C = window.PET_CONTENT;
+
+  /* =======================================================
+     一、状态
+     ======================================================= */
+  var LS_KEY = "pet-vocab-book1-v1";
+  var state = {
+    tab: "read",
+    quiz: false,      // 做题模式：藏起填入的答案句
+    allTr: false,     // 全部显示翻译
+    vocab: [],        // 生词本 [{id,type,key,entry}]
+    openQ: {},        // 已展开分析的题号
+    openV: {},        // 生词本里已展开的行，键为 v.id。
+                      // 必须放在 state 里：addVocab 每次都全量重刷 innerHTML，
+                      // 展开态若只写 DOM class，点任意一个词就会把已展开的行重置
+    activeQ: null
+  };
+
+  function loadVocab() {
+    try {
+      var raw = localStorage.getItem(LS_KEY);
+      if (raw) state.vocab = JSON.parse(raw) || [];
+    } catch (e) { state.vocab = []; }
+  }
+  function saveVocab() {
+    try { localStorage.setItem(LS_KEY, JSON.stringify(state.vocab)); } catch (e) {}
+  }
+
+  /* ---- 右半两栏的显示 / 隐藏（与生词本分开存） ---- */
+  var LS_UI = "pet-ui-book1-v1";
+  var cols = { ana: true, vocab: true };
+  // [状态键, 顶栏按钮 id 后缀, 按钮文案]
+  var COL_DEFS = [["ana", "Ana", "句子列"], ["vocab", "Vocab", "单词列"]];
+
+  function loadUI() {
+    try {
+      var o = JSON.parse(localStorage.getItem(LS_UI) || "null");
+      if (!o || typeof o !== "object") return;
+      // 兼容上一版的 { "2": 单词, "3": 分析 } 结构
+      if ("vocab" in o) cols.vocab = !!o.vocab; else if ("2" in o) cols.vocab = !!o["2"];
+      if ("ana" in o) cols.ana = !!o.ana; else if ("3" in o) cols.ana = !!o["3"];
+    } catch (e) {}
+  }
+  function saveUI() {
+    try { localStorage.setItem(LS_UI, JSON.stringify(cols)); } catch (e) {}
+  }
+
+  function applyCols() {
+    var box = document.querySelector(".cols");
+    if (!box) return;
+    box.classList.toggle("hide-ana", !cols.ana);
+    box.classList.toggle("hide-vocab", !cols.vocab);
+    COL_DEFS.forEach(function (d) {
+      var b = document.getElementById("tgl" + d[1]);
+      if (!b) return;
+      b.classList.toggle("on", cols[d[0]]);
+      b.textContent = (cols[d[0]] ? "▣ " : "▢ ") + d[2];
+      b.title = (cols[d[0]] ? "收起" : "展开") + d[2];
+    });
+    // 第一列提示：两栏都收起时改成"已全屏"。基准文案由 switchTab 写入 dataset.orig
+    var hint = document.getElementById("col1Hint");
+    if (hint && hint.dataset.orig) {
+      hint.innerHTML = (!cols.ana && !cols.vocab)
+        ? "已全屏 · 可从顶栏重新展开句子 / 单词栏"
+        : hint.dataset.orig;
+    }
+    saveUI();
+  }
+
+  function toggleCol(key) {
+    cols[key] = !cols[key];
+    applyCols();
+  }
+
+  /* =======================================================
+     二、分词
+     ======================================================= */
+  // 把句子切成 词 / 标点空白 / 空位 三类片段
+  var TOKEN_RE = /\{(\d+)\}|([A-Za-z]+(?:[’'\-][A-Za-z]+)*)/g;
+
+  function tokenize(text) {
+    var out = [], last = 0, m;
+    TOKEN_RE.lastIndex = 0;
+    while ((m = TOKEN_RE.exec(text)) !== null) {
+      if (m.index > last) out.push({ k: "p", v: text.slice(last, m.index) });
+      if (m[1] !== undefined) out.push({ k: "b", v: m[1] });
+      else out.push({ k: "w", v: m[2] });
+      last = TOKEN_RE.lastIndex;
+    }
+    if (last < text.length) out.push({ k: "p", v: text.slice(last) });
+    return out;
+  }
+
+  /* ---- 词组标注：最长优先，不重叠 ---- */
+  function buildPhraseIndex(phrases) {
+    var set = new Map(), max = 1;
+    phrases.forEach(function (p) {
+      var key = p.toLowerCase().trim().replace(/\s+/g, " ");
+      var n = key.split(" ").length;
+      if (n > max) max = n;
+      set.set(key, p);
+    });
+    return { set: set, max: max };
+  }
+
+  // 返回 Map<tokenIndex, {key, end}> 与分组列表
+  function markPhrases(tokens, pidx) {
+    var wi = [], wl = [];                 // 词 token 的下标 / 小写词形
+    tokens.forEach(function (t, i) {
+      if (t.k === "w") { wi.push(i); wl.push(t.v.toLowerCase()); }
+    });
+    // 两个词之间只能有空白，夹了标点就不算一个词组
+    function onlySpaceBetween(a, b) {
+      for (var k = wi[a] + 1; k < wi[b]; k++) {
+        if (tokens[k].k !== "p" || /\S/.test(tokens[k].v)) return false;
+      }
+      return true;
+    }
+
+    var groups = [], taken = new Set();
+    for (var n = pidx.max; n >= 2; n--) {
+      for (var i = 0; i + n <= wl.length; i++) {
+        var free = true;
+        for (var j = 0; j < n; j++) {
+          if (taken.has(wi[i + j]) || (j > 0 && !onlySpaceBetween(i + j - 1, i + j))) {
+            free = false; break;
+          }
+        }
+        if (!free) continue;
+        var key = wl.slice(i, i + n).join(" ");
+        if (pidx.set.has(key)) {
+          for (var q = 0; q < n; q++) taken.add(wi[i + q]);
+          groups.push({ from: wi[i], to: wi[i + n - 1], key: key, label: pidx.set.get(key) });
+          i += n - 1;
+        }
+      }
+    }
+    return groups;
+  }
+
+  /* ---- 查词回退：原形 → 小写 → 去屈折 ---- */
+  function dedouble(s) {
+    return /([bdfglmnprt])\1$/.test(s) ? s.slice(0, -1) : null;
+  }
+  function lookup(raw) {
+    var g = C.glossary;
+    var low = raw.toLowerCase();
+    var cands = [low];
+    function add(x) { if (x && x.length > 1 && cands.indexOf(x) < 0) cands.push(x); }
+
+    if (/[’']s$/.test(low)) add(low.replace(/[’']s$/, ""));
+    if (low.slice(-3) === "ies") add(low.slice(0, -3) + "y");
+    if (low.slice(-4) === "ives") add(low.slice(0, -4) + "ife");
+    if (low.slice(-2) === "es") add(low.slice(0, -2));
+    if (low.slice(-1) === "s") add(low.slice(0, -1));
+    if (low.slice(-3) === "ing") {
+      add(low.slice(0, -3)); add(low.slice(0, -3) + "e");
+      add(dedouble(low.slice(0, -3)));
+    }
+    if (low.slice(-2) === "ed") {
+      add(low.slice(0, -2)); add(low.slice(0, -1));
+      add(dedouble(low.slice(0, -2)));
+    }
+    if (low.slice(-3) === "ies") add(low.slice(0, -3) + "y");
+    if (low.slice(-2) === "er") { add(low.slice(0, -2)); add(dedouble(low.slice(0, -2))); }
+    if (low.slice(-3) === "est") { add(low.slice(0, -3)); add(dedouble(low.slice(0, -3))); }
+
+    for (var i = 0; i < cands.length; i++) {
+      if (g[cands[i]]) return { key: cands[i], entry: g[cands[i]], matched: cands[i] !== low };
+    }
+    return null;
+  }
+  function lookupPhrase(key) {
+    var e = C.glossary[key];
+    return e ? { key: key, entry: e } : null;
+  }
+
+  /* =======================================================
+     三、英音朗读 (0.75x)
+     ======================================================= */
+  var TTS = (function () {
+    var voices = [], chosen = null, checked = false;
+    var btn = null;
+
+    function pick() {
+      var list = speechSynthesis.getVoices() || [];
+      if (!list.length) return;
+      voices = list;
+      checked = true;
+      var gb = list.filter(function (v) { return /^en[-_]GB/i.test(v.lang); });
+      // 优先挑英音里的自然音色，再退到任意英音，最后任意英语
+      chosen =
+        gb.filter(function (v) { return /natural|online|neural/i.test(v.name); })[0] ||
+        gb.filter(function (v) { return /libby|sonia|hazel|serena|kate|stephanie|ryan|george|thomas|oliver/i.test(v.name); })[0] ||
+        gb[0] ||
+        list.filter(function (v) { return /^en/i.test(v.lang); })[0] ||
+        null;
+      renderNotice();
+    }
+
+    function renderNotice() {
+      var el = document.getElementById("voiceWarn");
+      if (!el) return;
+      if (!checked) { el.hidden = true; return; }
+      if (!chosen) {
+        el.hidden = false;
+        el.textContent = "⚠ 系统没找到英语语音，朗读可能不可用";
+      } else if (!/^en[-_]GB/i.test(chosen.lang)) {
+        el.hidden = false;
+        el.textContent = "⚠ 未找到英音(" + chosen.lang + ")，已退回：" + chosen.name;
+      } else {
+        el.hidden = true;
+      }
+    }
+
+    function speak(text, button) {
+      if (!("speechSynthesis" in window)) {
+        alert("这个浏览器不支持语音朗读，建议用 Edge 或 Chrome 打开。");
+        return;
+      }
+      speechSynthesis.cancel();               // 互斥：掐掉上一句
+      if (btn) { btn.classList.remove("speaking"); btn = null; }
+
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = "en-GB";
+      u.rate = 0.75;                           // 0.75 倍速
+      u.pitch = 1;
+      if (chosen) u.voice = chosen;
+      if (button) {
+        btn = button;
+        btn.classList.add("speaking");
+      }
+      u.onend = u.onerror = function () {
+        if (btn) { btn.classList.remove("speaking"); btn = null; }
+      };
+      speechSynthesis.speak(u);
+    }
+
+    function stop() {
+      speechSynthesis.cancel();
+      if (btn) { btn.classList.remove("speaking"); btn = null; }
+    }
+
+    if ("speechSynthesis" in window) {
+      pick();
+      speechSynthesis.onvoiceschanged = pick;
+      // Chrome 首次 getVoices() 常为空，延迟再试
+      setTimeout(pick, 300);
+      setTimeout(pick, 1200);
+    }
+    return { speak: speak, stop: stop, ready: function () { return !!chosen; } };
+  })();
+
+  /* =======================================================
+     四、渲染 · 原文
+     ======================================================= */
+  var elPassage, elVocab, elAna;
+
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+
+  // 把一句原文渲染成 HTML（词 / 词组 / 空位）
+  function renderSentence(sent) {
+    var tokens = tokenize(sent.s);
+    var groups = markPhrases(tokens, PHRASE_IDX);
+
+    // tokenIndex -> 词组信息
+    var phAt = new Map();
+    groups.forEach(function (g) {
+      for (var i = g.from; i <= g.to; i++) phAt.set(i, g);
+    });
+
+    var html = "", i = 0;
+    while (i < tokens.length) {
+      var t = tokens[i];
+      if (t.k === "p") {
+        html += esc(t.v);
+        i++;
+      } else if (t.k === "b") {
+        html += renderBlank(t.v);
+        i++;
+      } else {
+        var g = phAt.get(i);
+        if (g && g.from === i) {
+          // 整段词组
+          var inner = "";
+          for (var j = g.from; j <= g.to; j++) {
+            inner += '<span class="w" data-w="' + esc(tokens[j].v) + '">' + esc(tokens[j].v) + "</span>";
+            if (j < g.to && tokens[j + 1].k === "p") inner += esc(tokens[j + 1].v);
+          }
+          html += '<span class="ph" data-ph="' + esc(g.key) + '">' + inner + "</span>";
+          // 词组占用的词已全部渲染；后面的标点/空格交给主循环，别吞掉
+          i = g.to + 1;
+        } else {
+          html += '<span class="w" data-w="' + esc(t.v) + '">' + esc(t.v) + "</span>";
+          i++;
+        }
+      }
+    }
+    return html;
+  }
+  function renderBlank(n) {
+    var q = C.questions.filter(function (x) { return String(x.n) === String(n); })[0];
+    var filled = q && q.answer;
+    var cls = "blank" + (filled ? " filled" : "");
+    return '<span class="' + cls + '" data-blank="' + n + '">' + n + "</span>";
+  }
+
+  function buildPassage() {
+    var h = "";
+    h += '<h1 class="passage-title">' + esc(C.passage.title) + "</h1>";
+    h += '<div class="passage-meta">' + esc(C.meta.label) + " · " + C.passage.words + " 词 · " +
+      C.passage.sentences + " 句 · 长难句 " + countHard() + " 句</div>";
+
+    C.passage.paragraphs.forEach(function (para, pi) {
+      h += '<p class="para">';
+      para.forEach(function (sent, si) {
+        var cls = "sent" + (sent.hard ? " hard" : "");
+        h += '<span class="' + cls + '" data-sent="' + pi + "-" + si + '">';
+        h += '<span class="sent-txt">' + renderSentence(sent) + "</span>";
+        h += '<span class="row-btns">';
+        // 不需要新 JS：这个按钮不带 .w/.ph/.blank/.spk/.trb 任何类，
+        // 点击会自然落到 bindPassage 末尾的 .sent 分支 = 高亮 + showAnalysis
+        h += '<button class="mini" title="查看这句的讲解">析</button>';
+        h += '<button class="mini spk" data-say="' + pi + "-" + si + '" title="0.75倍速英音朗读">🔊</button>';
+        h += '<button class="mini trb" data-tr="' + pi + "-" + si + '" title="显示/隐藏翻译">译</button>';
+        h += "</span>";
+        if (sent.tr) h += '<span class="tr" data-trbox="' + pi + "-" + si + '">' + esc(sent.tr) + "</span>";
+        h += "</span> ";
+      });
+      h += "</p>";
+    });
+    return h;
+  }
+
+  function countHard() {
+    var n = 0;
+    C.passage.paragraphs.forEach(function (p) {
+      p.forEach(function (s) { if (s.hard) n++; });
+    });
+    return n;
+  }
+
+  /* =======================================================
+     五、渲染 · 生词本
+     ======================================================= */
+  function vocabKeyOf(type, key) { return type + ":" + key; }
+
+  function addVocab(type, key, entry) {
+    var id = vocabKeyOf(type, key);
+    state.vocab = state.vocab.filter(function (v) { return v.id !== id; });
+    state.vocab.unshift({ id: id, type: type, key: key, entry: entry });
+    if (state.vocab.length > 200) state.vocab.length = 200;
+    saveVocab();
+    renderVocab();
+  }
+
+  function renderVocab() {
+    if (!state.vocab.length) {
+      elVocab.innerHTML =
+        '<div class="empty"><span class="big">📖</span>' +
+        "点左边的<b>单词</b>查词<br>点<b>黄色词组</b>看搭配<br><br>" +
+        "查过的会攒在这里，<br>这一课学完就是一份复习清单。" +
+        "</div>";
+      return;
+    }
+    var h = "";
+    state.vocab.forEach(function (v) {
+      var e = v.entry;
+      var isPh = v.type === "phrase";
+      var open = !!state.openV[v.id];
+      h += '<div class="vcard' + (isPh ? " phrase" : "") + (open ? " open" : "") + '">';
+      h += '<button class="vhead" type="button" aria-expanded="' + (open ? "true" : "false") +
+        '" data-vtoggle="' + esc(v.id) + '">';
+      h += '<span class="vline">';
+      h += '<span class="vw" title="' + esc(v.key) + '">' + esc(v.key) + "</span>";
+      h += '<span class="vipa">' + esc(e.ipa || "") + "</span>";
+      h += '<span class="vpos">' + esc(e.pos || "") + "</span>";
+      h += '<span class="vcn" title="' + esc(stripTags(e.cn || "")) + '">' + (e.cn || "") + "</span>";
+      h += '<span class="vcar">▸</span>';
+      h += "</span></button>";
+
+      h += '<div class="vbody">';
+      // 单行会被省略号截断，这里给出完整信息兜底
+      h += '<div class="vfull">' + esc(v.key) +
+        (e.ipa ? ' <span>' + esc(e.ipa) + "</span>" : "") + "</div>";
+      if (e.note) h += '<div class="vnote">' + e.note + "</div>";
+      if (!isPh) {
+        var rel = phrasesWith(v.key);
+        if (rel.length) {
+          h += '<div class="vph">包含它的词组：';
+          rel.slice(0, 4).forEach(function (p) {
+            h += '<button class="vphchip" data-vph="' + esc(p) + '">' + esc(p) + "</button>";
+          });
+          h += "</div>";
+        }
+      }
+      h += '<div class="vrow">';
+      h += '<button class="vspk" data-vsay="' + esc(v.key) + '">🔊 0.75×</button>';
+      h += '<button class="vdel" data-vdel="' + esc(v.id) + '">移除</button>';
+      h += "</div></div></div>";
+    });
+    elVocab.innerHTML = h;
+  }
+
+  // 词条释义里带 <b>/<code> 标签，title 属性里要去掉
+  function stripTags(s) {
+    return String(s).replace(/<[^>]*>/g, "");
+  }
+
+  // 找出包含某个词的词组
+  function phrasesWith(word) {
+    var w = word.toLowerCase();
+    return C.phrases.filter(function (p) {
+      return p.toLowerCase().split(/\s+/).indexOf(w) >= 0;
+    });
+  }
+
+
+  /* =======================================================
+     六、渲染 · 句子分析
+     ======================================================= */
+  function findSent(ref) {
+    var p = ref.split("-");
+    return C.passage.paragraphs[+p[0]][+p[1]];
+  }
+
+  // 该句实际包含的词组。直接复用正文黄标那套 tokenize + markPhrases，
+  // 输入输出与 renderSentence 逐字一致，所以不可能漂移
+  function phrasesOf(sent) {
+    var groups = markPhrases(tokenize(sent.s), PHRASE_IDX);
+    var seen = {}, out = [];
+    groups.forEach(function (g) {
+      if (seen[g.key]) return;
+      seen[g.key] = 1;
+      out.push({ key: g.key, label: g.label });
+    });
+    return out;
+  }
+
+  var normPhrase = function (x) {
+    return String(x).toLowerCase().replace(/\s+/g, " ").trim();
+  };
+
+  // 面板宽而矮（1080p 下约 490px 高），板块按重要性递减排，
+  // 保证不滚动就能看到最核心的句型 / 翻译 / 骨架
+  function showAnalysis(ref) {
+    var s = findSent(ref);
+    var h = '<div class="ana">';
+    h += '<div class="ana-h">句子分析</div>';
+    h += '<div class="ana-sent">' + esc(s.s.replace(/\{\d+\}/g, "____")) + "</div>";
+
+    if (s.ana) {
+      var a = s.ana;
+
+      // 句型 —— 最上层的结论，最先给
+      if (a.pat && a.pat.length) {
+        h += '<div class="sec"><div class="sec-t">句型</div><div class="chips">';
+        a.pat.forEach(function (p, i) {
+          h += '<span class="chip pat' + (i === 0 ? " pat0" : "") + '">' + p + "</span>";
+        });
+        h += "</div></div>";
+      }
+
+      if (s.tr) {
+        h += '<div class="sec"><div class="sec-t">翻译</div><div class="sec-b">' + esc(s.tr) + "</div></div>";
+      }
+      if (a.frame) {
+        h += '<div class="sec"><div class="sec-t">句子骨架</div><div class="sec-b">' + a.frame + "</div></div>";
+      }
+      if (a.parts && a.parts.length) {
+        h += '<div class="sec"><div class="sec-t">成分拆解</div><table class="struct">';
+        a.parts.forEach(function (p) {
+          h += "<tr><td>" + p[0] + "</td><td>" + p[1] + "</td></tr>";
+        });
+        h += "</table></div>";
+      }
+      if (a.clauses && a.clauses.length) {
+        h += '<div class="sec"><div class="sec-t">从句 / 语法点</div><div class="chips">';
+        a.clauses.forEach(function (c) { h += '<span class="chip cl">' + c + "</span>"; });
+        h += "</div></div>";
+      }
+
+      // 本句词组：以正文实际标黄的为准（自动推导），手打的搭配作补充
+      var derived = phrasesOf(s);
+      var manual = a.phrases || [];
+      var extra = manual.filter(function (m) {
+        return !derived.some(function (d) { return normPhrase(d.label) === normPhrase(m); });
+      });
+      if (derived.length || extra.length) {
+        h += '<div class="sec"><div class="sec-t">本句词组</div><div class="chips">';
+        derived.forEach(function (d) {
+          h += '<button class="chip ph2" data-vph="' + esc(d.key) + '" title="点一下收进生词本">' +
+            esc(d.label) + "</button>";
+        });
+        extra.forEach(function (m) {
+          h += '<span class="chip ph3" title="搭配 / 结构，未进正文词表">' + m + "</span>";
+        });
+        h += "</div></div>";
+      }
+
+      if (a.gram && a.gram.length) {
+        h += '<div class="sec"><div class="sec-t">考点</div><div class="chips">';
+        a.gram.forEach(function (c) { h += '<span class="chip gr">' + c + "</span>"; });
+        h += "</div></div>";
+      }
+      if (a.tip) {
+        h += '<div class="sec"><div class="sec-t">翻译思路</div><div class="sec-b">' + a.tip + "</div></div>";
+      }
+    } else {
+      // 当前 22 句全有 ana，这个分支实际不可达，留着防御未来数据缺失
+      h += '<div class="sec"><div class="sec-b" style="color:var(--ink-3)">' +
+        "这句还没有讲解数据。" +
+        "</div></div>";
+    }
+    h += "</div>";
+    elAna.innerHTML = h;
+  }
+
+  /* =======================================================
+     七、渲染 · 题目
+     ======================================================= */
+  function buildQuestions() {
+    var h = "";
+
+    // 选项池
+    var usedMap = {};
+    C.questions.forEach(function (q) { if (q.answer) usedMap[q.answer] = q.n; });
+
+    h += '<div class="qcard" style="background:#fbfcfe">';
+    h += '<div class="qhead"><span class="qnum" style="background:var(--ink-3)">A–H</span>' +
+      '<span class="qtxt">备选句（8 选 5，多出 3 句是干扰项）</span></div>';
+    Object.keys(C.options).forEach(function (L) {
+      var used = usedMap[L];
+      h += '<div class="opt' + (used ? " used" : "") + '" data-opt="' + L + '">';
+      h += '<span class="ol">' + L + "</span>";
+      h += '<span class="otxt">' + renderSentence({ s: C.options[L] }) + "</span>";
+      h += '<button class="mini spk" data-sayraw="' + esc(C.options[L]) + '" title="朗读">🔊</button>';
+      h += '<span class="tag">' + (used ? "→ 第 " + used + " 空" : "干扰项") + "</span>";
+      h += "</div>";
+    });
+    h += "</div>";
+
+    // 逐题
+    C.questions.forEach(function (q) {
+      var open = !!state.openQ[q.n];
+      h += '<div class="qcard' + (open ? " open" : "") + '" data-q="' + q.n + '">';
+      h += '<div class="qhead"><span class="qnum">' + q.n + "</span>";
+      h += '<span class="qtxt">' + esc(q.prompt) + "</span></div>";
+
+      h += '<div class="qbtns">';
+      h += '<button class="btn pri" data-qbtn="' + q.n + '">' + (open ? "收起分析" : "分析") + "</button>";
+      h += '<button class="btn" data-qsay="' + q.n + '">🔊 朗读答案 0.75×</button>';
+      h += "</div>";
+
+      h += '<div class="qbody' + (open ? " show" : "") + '">';
+      h += '<div class="qans"><span class="lbl">答案</span><span class="letter">' + q.answer + "</span>" +
+        '<span class="atxt">' + renderSentence({ s: C.options[q.answer] }) + "</span>" +
+        '<button class="mini spk" data-sayraw="' + esc(C.options[q.answer]) + '">🔊</button></div>';
+
+      h += '<div class="qa-sec"><div class="qa-t">为什么选它</div><div class="qa-b">' + q.why + "</div></div>";
+      h += '<div class="qa-sec"><div class="qa-t">线索词 / 衔接</div><div class="chips">';
+      q.clues.forEach(function (c) { h += '<span class="chip cl">' + c + "</span>"; });
+      h += "</div></div>";
+      h += '<div class="qa-sec"><div class="qa-t">其他选项为什么不行</div><div class="qa-b">' +
+        q.others.map(function (o) { return "<b>" + o[0] + "</b> — " + o[1]; }).join("<br>") + "</div></div>";
+      if (q.tip) {
+        h += '<div class="qa-sec"><div class="qa-t">做题方法</div><div class="qa-b">' + q.tip + "</div></div>";
+      }
+      h += "</div></div>";
+    });
+
+    return h;
+  }
+
+  function showQAnalysis(n) {
+    var q = C.questions.filter(function (x) { return x.n === n; })[0];
+    if (!q) return;
+    var h = '<div class="ana">';
+    h += '<div class="ana-h">第 ' + n + ' 题 · 题目分析</div>';
+    h += '<div class="ana-sent">' + esc(q.prompt) + "</div>";
+
+    h += '<div class="sec"><div class="sec-t">正确答案</div><div class="sec-b">' +
+      '<b>' + q.answer + "</b> — " + esc(C.options[q.answer]) + "</div></div>";
+
+    h += '<div class="sec"><div class="sec-t">解题思路</div><div class="sec-b">' + q.why + "</div></div>";
+
+    if (q.ana) {
+      var a = q.ana;
+      if (a.parts && a.parts.length) {
+        h += '<div class="sec"><div class="sec-t">答案句拆解</div><table class="struct">';
+        a.parts.forEach(function (p) { h += "<tr><td>" + p[0] + "</td><td>" + p[1] + "</td></tr>"; });
+        h += "</table></div>";
+      }
+      if (a.gram && a.gram.length) {
+        h += '<div class="sec"><div class="sec-t">语法 / 搭配</div><div class="chips">';
+        a.gram.forEach(function (c) { h += '<span class="chip gr">' + c + "</span>"; });
+        h += "</div></div>";
+      }
+      if (a.tr) {
+        h += '<div class="sec"><div class="sec-t">答案句翻译</div><div class="sec-b">' + esc(a.tr) + "</div></div>";
+      }
+    }
+
+    h += '<div class="sec"><div class="sec-t">干扰项</div><div class="sec-b">' +
+      q.others.map(function (o) { return "<b>" + o[0] + "</b> — " + o[1]; }).join("<br>") + "</div></div>";
+
+    h += "</div>";
+    elAna.innerHTML = h;
+  }
+
+  /* =======================================================
+     八、事件
+     ======================================================= */
+  function bindPassage(root) {
+    root.addEventListener("click", function (ev) {
+      var t = ev.target;
+
+      // 单词优先：被词组包住的词，点的仍然是那个词
+      var w = t.closest(".w");
+      if (w) {
+        var raw = w.dataset.w;
+        var res = lookup(raw);
+        markActive(w);
+        if (res) {
+          addVocab("word", raw, res.entry);
+        } else {
+          addVocab("word", raw, { pos: "", ipa: "", cn: "（未收录）", note: "这个词没进词表，可以补进去。" });
+        }
+        return;
+      }
+
+      // 词组：点黄色区域本身（词与词之间的空档、内边距）才落到词组
+      var ph = t.closest(".ph");
+      if (ph) {
+        var key = ph.dataset.ph;
+        var r = lookupPhrase(key);
+        markActive(ph);
+        if (r) addVocab("phrase", r.key, r.entry);
+        else addVocab("phrase", key, { pos: "phrase", ipa: "", cn: "（词组释义待补）" });
+        return;
+      }
+
+      // 空位
+      var bl = t.closest(".blank");
+      if (bl) {
+        var n = +bl.dataset.blank;
+        toggleQ(n);
+        return;
+      }
+
+      // 喇叭
+      var spk = t.closest(".spk");
+      if (spk) {
+        ev.stopPropagation();
+        if (spk.dataset.sayraw) { TTS.speak(spk.dataset.sayraw, spk); return; }
+        var s = findSent(spk.dataset.say);
+        TTS.speak(cleanSay(s.s), spk);
+        return;
+      }
+
+      // 翻译按钮
+      var trb = t.closest(".trb");
+      if (trb) {
+        ev.stopPropagation();
+        var box = root.querySelector('[data-trbox="' + trb.dataset.tr + '"]');
+        if (box) { box.classList.toggle("show"); trb.classList.toggle("on"); }
+        return;
+      }
+
+      // 句子 → 右栏分析
+      var se = t.closest(".sent");
+      if (se) {
+        root.querySelectorAll(".sent.cur").forEach(function (x) { x.classList.remove("cur"); });
+        se.classList.add("cur");
+        showAnalysis(se.dataset.sent);
+      }
+    });
+  }
+
+  function cleanSay(s) {
+    return s.replace(/\{\d+\}/g, " ").replace(/\s+/g, " ").trim();
+  }
+
+  function markActive(el) {
+    var scope = el.closest(".col-body") || document;
+    scope.querySelectorAll(".w.act,.ph.act").forEach(function (x) { x.classList.remove("act"); });
+    el.classList.add("act");
+  }
+
+  function bindQuestions(root) {
+    root.addEventListener("click", function (ev) {
+      var t = ev.target;
+      var spk = t.closest(".spk");
+      if (spk) { ev.stopPropagation(); TTS.speak(spk.dataset.sayraw || "", spk); return; }
+
+      var w = t.closest(".w");
+      if (w) {
+        var raw = w.dataset.w, res = lookup(raw);
+        markActive(w);
+        if (res) addVocab("word", raw, res.entry);
+        else addVocab("word", raw, { pos: "", ipa: "", cn: "（未收录）" });
+        return;
+      }
+
+      var qb = t.closest("[data-qbtn]");
+      if (qb) { toggleQ(+qb.dataset.qbtn); return; }
+
+      var qs = t.closest("[data-qsay]");
+      if (qs) {
+        var q = C.questions.filter(function (x) { return x.n === +qs.dataset.qsay; })[0];
+        if (q) TTS.speak(C.options[q.answer], qs);
+        return;
+      }
+    });
+  }
+
+  function toggleQ(n) {
+    var card = document.querySelector('[data-q="' + n + '"]');
+    if (!card) { state.openQ[n] = !state.openQ[n]; renderQuestions(); return; }
+    state.openQ[n] = !state.openQ[n];
+    var body = card.querySelector(".qbody");
+    var btn = card.querySelector("[data-qbtn]");
+    if (state.openQ[n]) {
+      body.classList.add("show"); card.classList.add("open"); btn.textContent = "收起分析";
+      showQAnalysis(n);
+    } else {
+      body.classList.remove("show"); card.classList.remove("open"); btn.textContent = "分析";
+    }
+    // 某些环境（如无头浏览器）没有 scrollIntoView，缺了也不该中断流程
+    if (card.scrollIntoView) card.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  }
+
+  function bindVocab(root) {
+    root.addEventListener("click", function (ev) {
+      var s = ev.target.closest("[data-vsay]");
+      if (s) { TTS.speak(s.dataset.vsay, s); return; }
+      var d = ev.target.closest("[data-vdel]");
+      if (d) {
+        state.vocab = state.vocab.filter(function (v) { return v.id !== d.dataset.vdel; });
+        delete state.openV[d.dataset.vdel];   // 顺带清掉，否则已删的 id 在这里留垃圾
+        saveVocab(); renderVocab();
+        return;
+      }
+      var pc = ev.target.closest("[data-vph]");
+      if (pc) {
+        var r = lookupPhrase(pc.dataset.vph);
+        if (r) addVocab("phrase", r.key, r.entry);
+        return;
+      }
+      // 展开 / 收起整行。放在最后：上面几个按钮都在 .vbody 里，是 .vhead 的兄弟
+      var tg = ev.target.closest("[data-vtoggle]");
+      if (tg) {
+        if (window.getSelection && String(window.getSelection())) return;  // 拖选文字不误触
+        var id = tg.dataset.vtoggle;
+        state.openV[id] = !state.openV[id];
+        renderVocab();
+      }
+    });
+  }
+
+  /* =======================================================
+     九、装配
+     ======================================================= */
+  var PHRASE_IDX;
+
+  function renderPassage() {
+    elPassage.innerHTML = buildPassage();
+  }
+  function renderQuestions() {
+    document.getElementById("qList").innerHTML = buildQuestions();
+  }
+
+  function switchTab(tab) {
+    state.tab = tab;
+    document.querySelectorAll(".tab").forEach(function (b) {
+      b.classList.toggle("on", b.dataset.tab === tab);
+    });
+    var isRead = tab === "read";
+    document.getElementById("passage").hidden = !isRead;
+    document.getElementById("qList").hidden = isRead;
+    document.getElementById("col1Title").textContent = isRead ? "原文" : "题目与答案";
+    var h1 = document.getElementById("col1Hint");
+    h1.dataset.orig = isRead
+      ? '点词查词 · <span style="background:var(--phrase);padding:0 4px;border-radius:3px">黄色</span>是词组 · 🔊 0.75×英音'
+      : "点「分析」看解析 · 点选项里的词也能查";
+    document.getElementById("colAnaHint").textContent =
+      isRead ? "点句子查看 · 22 句都能点" : "点「分析」查看";
+    applyCols();   // 重新套用列显隐（会顺带刷新第一列提示）
+    elAna.innerHTML = '<div class="empty"><span class="big">🔍</span>' +
+      (isRead
+        ? '点左边<b>任意一句</b>，这里显示讲解<br>句型 · 翻译 · 骨架 · 成分 · 词组<br><br>' +
+          '带<span style="color:var(--hard)">橙色底</span>的是长难句'
+        : "点题目的「分析」按钮<br>这里显示题目解析") + "</div>";
+  }
+
+  function init() {
+    PHRASE_IDX = buildPhraseIndex(C.phrases);
+    elPassage = document.getElementById("passage");
+    elVocab = document.getElementById("vocab");
+    elAna = document.getElementById("analysis");
+
+    loadVocab();
+    renderPassage();
+    renderVocab();
+    renderQuestions();
+
+    bindPassage(elPassage);
+    bindVocab(elVocab);
+    bindVocab(elAna);   // 分析栏里的词组 chip 也要能点进生词本（闭合"点句子→看词组→收录"）
+    bindQuestions(document.getElementById("qList"));
+
+    document.querySelectorAll(".tab").forEach(function (b) {
+      b.addEventListener("click", function () { switchTab(b.dataset.tab); });
+    });
+
+    var tq = document.getElementById("tglQuiz");
+    tq.addEventListener("click", function () {
+      state.quiz = !state.quiz;
+      document.body.classList.toggle("quiz", state.quiz);
+      tq.classList.toggle("on", state.quiz);
+      tq.textContent = state.quiz ? "✓ 做题模式" : "做题模式";
+    });
+
+    var ta = document.getElementById("tglAllTr");
+    ta.addEventListener("click", function () {
+      state.allTr = !state.allTr;
+      document.body.classList.toggle("alltr", state.allTr);
+      ta.classList.toggle("on", state.allTr);
+      ta.textContent = state.allTr ? "✓ 全部翻译" : "全部翻译";
+    });
+
+    document.getElementById("btnClear").addEventListener("click", function () {
+      if (!state.vocab.length) return;
+      if (confirm("清空生词本？")) { state.vocab = []; saveVocab(); renderVocab(); }
+    });
+
+    document.getElementById("btnStop").addEventListener("click", function () { TTS.stop(); });
+
+    // 右半两栏的显示 / 隐藏
+    COL_DEFS.forEach(function (d) {
+      document.getElementById("tgl" + d[1])
+        .addEventListener("click", function () { toggleCol(d[0]); });
+    });
+    document.querySelectorAll("[data-collapse]").forEach(function (b) {
+      // 注意：不要加 + 号。键已改成 "ana"/"vocab" 字符串，+"ana" 是 NaN，
+      // cols[NaN] 不报错但按钮会静默失效
+      b.addEventListener("click", function () { toggleCol(b.dataset.collapse); });
+    });
+
+    loadUI();            // 先读回上次的列状态，再渲染
+    switchTab("read");   // switchTab 内部会调 applyCols()
+  }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+  else init();
+})();
+
+</script>
+</body>
+</html>
