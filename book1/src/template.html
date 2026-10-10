@@ -22,49 +22,50 @@
 
   <div class="tools">
     <span class="voice-warn" id="voiceWarn" hidden></span>
-    <button class="tool on" id="tglAna" title="显示 / 隐藏右上角的句子分析栏">▣ 句子列</button>
-    <button class="tool on" id="tglVocab" title="显示 / 隐藏右下角的单词栏">▣ 单词列</button>
+    <button class="tool on" id="tglAna" title="显示 / 隐藏小黑板">▣ 小黑板</button>
+    <button class="tool on" id="tglVocab" title="显示 / 隐藏右侧的历史记录列">▣ 历史</button>
     <button class="tool" id="tglQuiz">做题模式</button>
-    <button class="tool" id="tglAllTr">全部翻译</button>
     <button class="tool" id="btnStop">⏹ 停止朗读</button>
-    <button class="tool" id="btnClear">清空生词本</button>
+    <button class="tool" id="btnClear">清空历史</button>
   </div>
 </div>
 
 <!-- DOM 顺序 = col1 → colAna → colVocab。
      窄屏 grid-template-areas:none 后按 DOM 顺序流式排布，
-     这个顺序让窄屏堆叠也是「原文 → 句子分析 → 单词」的阅读顺序 -->
+     这个顺序让窄屏堆叠也是「原文 → 分析 → 历史」的阅读顺序 -->
 <div class="cols">
-  <!-- 左半，全高：原文 / 题目 切换 -->
+  <!-- 第一列：原文 / 题目 切换 -->
   <div class="col" id="col1">
     <div class="col-head">
       <span id="col1Title">原文</span>
-      <span class="hint" id="col1Hint">点词查词 · <span style="background:var(--phrase);padding:0 4px;border-radius:3px">黄色</span>是词组 · 🔊 0.75×英音</span>
+      <span class="hint" id="col1Hint">点词查词 · 点句子看讲解 · <span style="background:var(--phrase);padding:0 4px;border-radius:3px">黄色</span>是词组</span>
     </div>
     <div class="col-body">
       <div id="passage"></div>
+      <!-- 原文页 = 文章 + 题目。题目和文章一样：词可点、词组标黄、句子可讲解 -->
+      <div id="qListRead" hidden></div>
       <div id="qList" hidden></div>
     </div>
   </div>
 
-  <!-- 右上半：句子分析 -->
+  <!-- 第二列：小黑板（点词 / 点句子 / 点答题解析都显示在这里） -->
   <div class="col" id="colAna">
     <div class="col-head">
-      <span>句子分析</span>
-      <span class="hint" id="colAnaHint">点句子查看 · 22 句都能点</span>
-      <button class="collapse" data-collapse="ana" title="收起句子分析栏">✕</button>
+      <span>小黑板</span>
+      <span class="hint" id="colAnaHint">点单词或句子</span>
+      <button class="collapse" data-collapse="ana" title="收起小黑板">✕</button>
     </div>
     <div class="col-body" id="analysis"></div>
   </div>
 
-  <!-- 右下半：单词 / 词组 -->
+  <!-- 第三列：历史动作 -->
   <div class="col" id="colVocab">
     <div class="col-head">
-      <span>单词 / 词组</span>
-      <span class="hint">点词自动收录 · 点一行展开</span>
-      <button class="collapse" data-collapse="vocab" title="收起单词栏">✕</button>
+      <span>历史</span>
+      <span class="hint">点过的都记在这 · 重复点击置顶</span>
+      <button class="collapse" data-collapse="vocab" title="收起历史列">✕</button>
     </div>
-    <div class="col-body" id="vocab"></div>
+    <div class="col-body" id="history"></div>
   </div>
 </div>
 

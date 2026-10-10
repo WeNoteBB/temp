@@ -6,34 +6,31 @@
   /* =======================================================
      一、状态
      ======================================================= */
-  var LS_KEY = "pet-vocab-book1-v1";
+  var LS_KEY = "pet-hist-book1-v1";
   var state = {
     tab: "read",
     quiz: false,      // 做题模式：藏起填入的答案句
-    allTr: false,     // 全部显示翻译
-    vocab: [],        // 生词本 [{id,type,key,entry}]
+    hist: [],         // 历史动作 [{t:"w"|"s", k, ref}]，最新的在前
+    curHist: "",      // 当前在小黑板里显示的那条，用于高亮
     openQ: {},        // 已展开分析的题号
-    openV: {},        // 生词本里已展开的行，键为 v.id。
-                      // 必须放在 state 里：addVocab 每次都全量重刷 innerHTML，
-                      // 展开态若只写 DOM class，点任意一个词就会把已展开的行重置
     activeQ: null
   };
 
-  function loadVocab() {
+  function loadHist() {
     try {
       var raw = localStorage.getItem(LS_KEY);
-      if (raw) state.vocab = JSON.parse(raw) || [];
-    } catch (e) { state.vocab = []; }
+      if (raw) state.hist = JSON.parse(raw) || [];
+    } catch (e) { state.hist = []; }
   }
-  function saveVocab() {
-    try { localStorage.setItem(LS_KEY, JSON.stringify(state.vocab)); } catch (e) {}
+  function saveHist() {
+    try { localStorage.setItem(LS_KEY, JSON.stringify(state.hist)); } catch (e) {}
   }
 
   /* ---- 右半两栏的显示 / 隐藏（与生词本分开存） ---- */
   var LS_UI = "pet-ui-book1-v1";
   var cols = { ana: true, vocab: true };
   // [状态键, 顶栏按钮 id 后缀, 按钮文案]
-  var COL_DEFS = [["ana", "Ana", "句子列"], ["vocab", "Vocab", "单词列"]];
+  var COL_DEFS = [["ana", "Ana", "小黑板"], ["vocab", "Vocab", "历史"]];
 
   function loadUI() {
     try {
@@ -257,7 +254,7 @@
   /* =======================================================
      四、渲染 · 原文
      ======================================================= */
-  var elPassage, elVocab, elAna;
+  var elPassage, elHist, elAna;
 
   function esc(s) {
     return String(s).replace(/[&<>"]/g, function (c) {
@@ -313,30 +310,34 @@
   }
 
   function buildPassage() {
-    var h = "";
+    var h = "", gutter = "", n = 0;   // n 是跨段落的全局句序号，用于交替底色
     h += '<h1 class="passage-title">' + esc(C.passage.title) + "</h1>";
     h += '<div class="passage-meta">' + esc(C.meta.label) + " · " + C.passage.words + " 词 · " +
       C.passage.sentences + " 句 · 长难句 " + countHard() + " 句</div>";
+    h += '<div class="pgutter" id="pgutter"></div>';
 
     C.passage.paragraphs.forEach(function (para, pi) {
       h += '<p class="para">';
       para.forEach(function (sent, si) {
-        var cls = "sent" + (sent.hard ? " hard" : "");
-        h += '<span class="' + cls + '" data-sent="' + pi + "-" + si + '">';
+        var ref = pi + "-" + si;
+        // 句子 inline 连续排版；序号偶数给淡黄底，奇数留白
+        h += '<span class="sent' + (n % 2 === 0 ? " alt" : "") +
+          (sent.hard ? " hard" : "") + '" data-sent="' + ref + '">';
         h += '<span class="sent-txt">' + renderSentence(sent) + "</span>";
-        h += '<span class="row-btns">';
-        // 不需要新 JS：这个按钮不带 .w/.ph/.blank/.spk/.trb 任何类，
-        // 点击会自然落到 bindPassage 末尾的 .sent 分支 = 高亮 + showAnalysis
-        h += '<button class="mini" title="查看这句的讲解">析</button>';
-        h += '<button class="mini spk" data-say="' + pi + "-" + si + '" title="0.75倍速英音朗读">🔊</button>';
-        h += '<button class="mini trb" data-tr="' + pi + "-" + si + '" title="显示/隐藏翻译">译</button>';
-        h += "</span>";
-        if (sent.tr) h += '<span class="tr" data-trbox="' + pi + "-" + si + '">' + esc(sent.tr) + "</span>";
         h += "</span> ";
+        // 按钮单独收进页边容器，稍后由 layoutGutter() 按行首位置摆放
+        // 「析」必须带 data-ana：它在页边栏里、不在句子内部，
+        // 光靠 t.closest(".sent") 找不到归属，点了会毫无反应
+        gutter += '<span class="sbtns" data-for="' + ref + '">' +
+          '<button class="mini" data-ana="' + ref + '" title="查看这句的讲解">析</button>' +
+          '<button class="mini spk" data-say="' + ref + '" title="0.75倍速英音朗读">🔊</button>' +
+          "</span>";
+        n++;
       });
       h += "</p>";
     });
-    return h;
+    return h.replace('<div class="pgutter" id="pgutter"></div>',
+      '<div class="pgutter" id="pgutter">' + gutter + "</div>");
   }
 
   function countHard() {
@@ -347,69 +348,111 @@
     return n;
   }
 
+  /* ---- 页边按钮定位 ----
+     句子是连续排版的，按钮得挂到右侧页边、对齐到各自那句的第一行。
+     纯 CSS 做不到：句子是 inline，绝对定位子元素的包含块是「首尾行片段的并集」，
+     左/右边界会落在最长那行的末尾而不是容器右缘。所以用 Range 量出第一行的
+     真实顶边，再逐个摆。同一行起了两句时，后一句往下让位，避免叠在一起。 */
+  function firstLineTop(el) {
+    var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+    var t = w.nextNode();
+    var box = el.getBoundingClientRect();
+    if (!t) return box.top;
+    var r = document.createRange();
+    r.setStart(t, 0);
+    r.setEnd(t, Math.min(1, t.length));
+    var rect = r.getBoundingClientRect();
+    return rect.height ? rect.top : box.top;
+  }
+
+  function layoutGutter() {
+    var gut = document.getElementById("pgutter");
+    var box = document.getElementById("passage");
+    if (!gut || !box || box.hidden) return;
+    if (!box.getBoundingClientRect().height) return;   // 不可见时量出来全是 0
+    var boxTop = box.getBoundingClientRect().top;
+    var prevBottom = -1e9;
+    [].slice.call(gut.children).forEach(function (g) {
+      var sent = box.querySelector('.sent[data-sent="' + g.dataset.for + '"]');
+      if (!sent) { g.style.display = "none"; return; }
+      g.style.display = "";
+      var top = firstLineTop(sent) - boxTop;
+      if (top < prevBottom + 2) top = prevBottom + 2;   // 让位，不重叠
+      g.style.top = Math.round(top) + "px";
+      prevBottom = top + (g.offsetHeight || 22);
+    });
+  }
+
+  var gutterTimer = null;
+  function scheduleGutter() {
+    if (gutterTimer) clearTimeout(gutterTimer);
+    gutterTimer = setTimeout(layoutGutter, 60);        // resize 时防抖
+  }
+
   /* =======================================================
      五、渲染 · 生词本
      ======================================================= */
-  function vocabKeyOf(type, key) { return type + ":" + key; }
+  /* ---- 历史动作列 ----
+     只存「类型 + 键」，词条内容到展示时再查表，所以历史数据很小。
+     句子存 ref（段-句），标签由前 4 个词 + 省略号现算。 */
+  function histKey(it) { return it.t + ":" + (it.t === "w" ? it.k : it.ref); }
 
-  function addVocab(type, key, entry) {
-    var id = vocabKeyOf(type, key);
-    state.vocab = state.vocab.filter(function (v) { return v.id !== id; });
-    state.vocab.unshift({ id: id, type: type, key: key, entry: entry });
-    if (state.vocab.length > 200) state.vocab.length = 200;
-    saveVocab();
-    renderVocab();
+  function pushHistory(t, k, ref) {
+    var it = { t: t, k: k || "", ref: ref || "" };
+    var id = histKey(it);
+    state.hist = state.hist.filter(function (x) { return histKey(x) !== id; });
+    state.hist.unshift(it);
+    if (state.hist.length > 300) state.hist.length = 300;
+    saveHist();
+    renderHistory();
   }
 
-  function renderVocab() {
-    if (!state.vocab.length) {
-      elVocab.innerHTML =
-        '<div class="empty"><span class="big">📖</span>' +
-        "点左边的<b>单词</b>查词<br>点<b>黄色词组</b>看搭配<br><br>" +
-        "查过的会攒在这里，<br>这一课学完就是一份复习清单。" +
+  // 句子在历史里只显示前 4 个词，后面省略号
+  function sentLabel(ref) {
+    var s = anaData(ref);
+    if (!s) return ref;
+    var ws = String(s.s).replace(/\{\d+\}/g, " ").match(/[A-Za-z’'\-]+/g) || [];
+    var head = ws.slice(0, 4).join(" ");
+    return ws.length > 4 ? head + " …" : head;
+  }
+
+  function renderHistory() {
+    if (!state.hist.length) {
+      elHist.innerHTML =
+        '<div class="empty"><span class="big">🕘</span>' +
+        "点<b>单词</b>或<b>句子</b>，这里会记一行<br><br>" +
+        "同一个再点一次就置顶。" +
         "</div>";
       return;
     }
     var h = "";
-    state.vocab.forEach(function (v) {
-      var e = v.entry;
-      var isPh = v.type === "phrase";
-      var open = !!state.openV[v.id];
-      h += '<div class="vcard' + (isPh ? " phrase" : "") + (open ? " open" : "") + '">';
-      h += '<button class="vhead" type="button" aria-expanded="' + (open ? "true" : "false") +
-        '" data-vtoggle="' + esc(v.id) + '">';
-      h += '<span class="vline">';
-      h += '<span class="vw" title="' + esc(v.key) + '">' + esc(v.key) + "</span>";
-      h += '<span class="vipa">' + esc(e.ipa || "") + "</span>";
-      h += '<span class="vpos">' + esc(e.pos || "") + "</span>";
-      h += '<span class="vcn" title="' + esc(stripTags(e.cn || "")) + '">' + (e.cn || "") + "</span>";
-      h += '<span class="vcar">▸</span>';
-      h += "</span></button>";
-
-      h += '<div class="vbody">';
-      // 单行会被省略号截断，这里给出完整信息兜底
-      h += '<div class="vfull">' + esc(v.key) +
-        (e.ipa ? ' <span>' + esc(e.ipa) + "</span>" : "") + "</div>";
-      if (e.note) h += '<div class="vnote">' + e.note + "</div>";
-      if (!isPh) {
-        var rel = phrasesWith(v.key);
-        if (rel.length) {
-          h += '<div class="vph">包含它的词组：';
-          rel.slice(0, 4).forEach(function (p) {
-            h += '<button class="vphchip" data-vph="' + esc(p) + '">' + esc(p) + "</button>";
-          });
-          h += "</div>";
-        }
+    state.hist.forEach(function (it) {
+      var isW = it.t === "w";
+      var id = histKey(it);
+      // 行本身是 div，内部两个 button 平级 —— button 不能嵌套 button
+      h += '<div class="hitem ' + (isW ? "w" : "s") +
+        (state.curHist === id ? " cur" : "") + '">';
+      h += '<button class="hopen" data-hist="' + esc(id) + '" title="重新显示在小黑板">';
+      h += '<span class="hbadge">' + (isW ? "词" : "句") + "</span>";
+      if (isW) {
+        // 只留英文 + 中文意思。音标和词性去掉了 —— 历史列砍半变窄，
+        // 而且那两项点开就在小黑板里，这里不重复占地方
+        var e = (lookup(it.k) || lookupPhrase(String(it.k).toLowerCase()) || {}).entry || {};
+        h += '<span class="hbody">';
+        h += '<span class="hlabel">' + esc(it.k) + "</span>";
+        h += '<span class="hcn">' + esc(stripTags(e.cn || "—")) + "</span>";
+        h += "</span>";
+      } else {
+        h += '<span class="hlabel">' + esc(sentLabel(it.ref)) + "</span>";
       }
-      h += '<div class="vrow">';
-      h += '<button class="vspk" data-vsay="' + esc(v.key) + '">🔊 0.75×</button>';
-      h += '<button class="vdel" data-vdel="' + esc(v.id) + '">移除</button>';
-      h += "</div></div></div>";
+      h += "</button>";
+      h += '<button class="hdel" data-histdel="' + esc(id) + '" title="从历史里删掉">✕</button>';
+      h += "</div>";
     });
-    elVocab.innerHTML = h;
+    elHist.innerHTML = h;
   }
 
-  // 词条释义里带 <b>/<code> 标签，title 属性里要去掉
+  // 词条释义里带 <b>/<code> 标签，纯文本场景（title / 历史行）要去掉
   function stripTags(s) {
     return String(s).replace(/<[^>]*>/g, "");
   }
@@ -423,12 +466,71 @@
   }
 
 
+  // 原文例句里把命中的词高亮出来
+  function highlightCtx(ctx, key) {
+    var safe = esc(ctx);
+    var k = esc(key);
+    var re = new RegExp("\\b(" + k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")\\b", "gi");
+    return safe.replace(re, "<em>$1</em>");
+  }
+
   /* =======================================================
-     六、渲染 · 句子分析
+     六、渲染 · 小黑板（点词显示词条，点句显示讲解）
      ======================================================= */
+  function showWord(key, ctx) {
+    key = String(key == null ? "" : key).trim();
+    // 判空：拿到空 key 就直接不动面板，免得渲染出一张空卡片。
+    // （点到正文的非单词区域时可能走到这里）
+    if (!key) return;
+    var r = lookup(key) || lookupPhrase(key.toLowerCase());
+    var e = (r && r.entry) || {};
+    // 词表里查不到、或者查到了但没有任何可展示内容 → 统一给"未收录"，
+    // 不要留一张什么都没有的空卡片
+    var hasContent = !!(e.cn || e.ipa || e.pos || e.note);
+    if (!hasContent) {
+      e = { pos: "", ipa: "", cn: "（未收录）", note: "这个词没进词表，可以补进去。" };
+    }
+    var h = '<div class="ana">';
+    h += '<div class="ana-h">词条' +
+      '<button class="ana-spk" data-sayraw="' + esc(key) + '">🔊 0.75×</button></div>';
+    h += '<div class="ana-sent">' + esc(key) +
+      (e.ipa ? ' <span style="font-weight:400;color:var(--accent)">' + esc(e.ipa) + "</span>" : "") +
+      "</div>";
+    h += '<div class="sec"><div class="sec-t">释义</div><div class="sec-b">' +
+      (e.pos ? '<span class="vpos">' + esc(e.pos) + "</span> " : "") + (e.cn || "") + "</div></div>";
+    if (e.note) h += '<div class="sec"><div class="sec-t">用法</div><div class="sec-b">' + e.note + "</div></div>";
+    if (ctx) h += '<div class="sec"><div class="sec-t">原文</div><div class="sec-b">' +
+      highlightCtx(ctx, key) + "</div></div>";
+    var rel = phrasesWith(key);
+    if (rel.length) {
+      h += '<div class="sec"><div class="sec-t">包含它的词组</div><div class="chips">';
+      rel.slice(0, 6).forEach(function (p) {
+        h += '<button class="chip ph2" data-word="' + esc(p) + '">' + esc(p) + "</button>";
+      });
+      h += "</div></div>";
+    }
+    h += "</div>";
+    elAna.innerHTML = h;
+    state.curHist = "w:" + key;
+    renderHistory();
+  }
+
   function findSent(ref) {
     var p = ref.split("-");
     return C.passage.paragraphs[+p[0]][+p[1]];
+  }
+
+  // 统一的 ref 解析：正文句子用 "段-句"，选项用 "opt:A"。
+  // 两种都返回 {s, tr, ana, hard}，好让小黑板、历史、高亮走同一套代码
+  function anaData(ref) {
+    ref = String(ref || "");
+    if (ref.indexOf("opt:") === 0) {
+      var L = ref.slice(4);
+      var oa = (C.optionsAna || {})[L];
+      if (!oa || !C.options[L]) return null;
+      return { s: C.options[L], tr: oa.tr, ana: oa, hard: false };
+    }
+    return findSent(ref) || null;
   }
 
   // 该句实际包含的词组。直接复用正文黄标那套 tokenize + markPhrases，
@@ -448,22 +550,227 @@
     return String(x).toLowerCase().replace(/\s+/g, " ").trim();
   };
 
+  /* ---- 句型 → 句子里的对应片段 ----
+     ana.parts 每张成分卡片的描述里都有 <code>真实英文片段</code>，
+     所以「点句型 → 标红对应部分」可以按标签 + 描述文本匹配出来，
+     不用给 22 句手工再标一遍对应关系。
+     主句型（主谓宾/主系表/…）是固定搭配，另给一张同义词表。 */
+  var PAT_SYN = {
+    "主谓宾": ["主语", "谓语", "宾语"],
+    "主系表": ["主语", "系动词", "表语"],
+    "主谓双宾": ["主语", "谓语", "间接宾语", "直接宾语"],
+    "主谓": ["主语", "谓语"],
+    "倒装引语": ["倒装", "谓语 + 主语"],
+    // 下面这些光靠"包含"匹配不上，得指名道姓
+    "with 复合结构": ["伴随状语", "with 复合", "with 结构"],
+    "as…as 比较句": ["比较状语从句", "比较从句", "as...as", "as…as"],
+    "并列句": ["转折分句", "并列分句"],
+    "引语后置": ["谓语 + 主语"],
+    "不定式作目的状语": ["目的状语"],
+    "不定式作表语": ["表语"],
+    "不定式作同位语": ["同位语"],
+    "介词宾语从句": ["介词宾语从句", "介词宾语"],
+    "定语从句嵌套": ["定语从句"],
+    "限制性定语从句": ["定语从句"],
+    "非限制性定语从句": ["定语从句"],
+    "代词指代": ["代词", "指代"],
+    "被动语态": ["被动语态", "被动"],
+    "turn out to be": ["表语", "turn out"]
+  };
+
+  var anaParts = null;      // 当前小黑板里那句的成分数据
+  var anaRawHTML = "";      // .ana-sent 的原始 HTML，清除标记时用来还原
+
+  function partsForPatWith(parts, pat) {
+    if (!parts) return [];
+    var keys = PAT_SYN[pat] || [pat];
+    var hit = [];
+    parts.forEach(function (p, i) {
+      var label = String(p[0]), desc = String(p[1]);
+      var m = keys.some(function (k) {
+        // 三个方向都要试：
+        // ① 标签里有句型名  ② 句型名里有标签（「不定式作目的状语」↔「目的状语」）
+        // ③ 描述里提到过句型名
+        return label.indexOf(k) >= 0 || k.indexOf(label) >= 0 || desc.indexOf(k) >= 0;
+      });
+      if (m) hit.push(i);
+    });
+    return hit;
+  }
+  function partsForPat(pat) { return partsForPatWith(anaParts, pat); }
+
+  // 取描述开头的英文片段，遇到中文（含全角括号）就停。
+  // 用来兜住那些没有包 <code> 的成分，比如「主语 | Kate Marshall」
+  function englishHead(s) {
+    var t = stripTags(s);
+    var m = t.match(/^[A-Za-z][A-Za-z0-9 ,'’\-–—.]*/);
+    return m ? m[0].replace(/[\s,.\-–—]+$/, "").trim() : "";
+  }
+
+  // 从命中的成分卡片里取出原文片段。
+  // 优先用 <code> 里的；没有 <code> 的退回取描述开头的英文。
+  // 最后必须确认片段真的出现在原句里，否则标不到、白白塞进去。
+  function snippetsOf(idxs) {
+    var out = [], seen = {};
+    var hay = anaRawHTML.toLowerCase();
+    var inSent = function (t) { return hay.indexOf(esc(t).toLowerCase()) >= 0; };
+
+    idxs.forEach(function (i) {
+      var desc = String(anaParts[i][1]);
+      var found = [], m, re = /<code>([\s\S]*?)<\/code>/g;
+      while ((m = re.exec(desc)) !== null) found.push(stripTags(m[1]).trim());
+      if (!found.length) {
+        var h = englishHead(desc);
+        if (h) found.push(h);
+      }
+      found.forEach(function (t) {
+        t = String(t).trim();
+        if (!t) return;
+        var use = t;
+        // <code> 里常带编辑性插入，如 "(that) Dad was right"、"(and) said"，
+        // 这些在原文里没有字面匹配。去掉括号部分再找一次。
+        if (!inSent(use)) {
+          var stripped = use.replace(/\([^)]*\)/g, "").replace(/\s+/g, " ").trim();
+          if (stripped && inSent(stripped)) use = stripped;
+        }
+        if (!inSent(use)) return;      // 还是找不到，跳过，别塞进去
+        if (seen[use]) return;
+        seen[use] = 1;
+        out.push(use);
+      });
+    });
+    return out;
+  }
+
+  function clearPatMark() {
+    var box = elAna.querySelector(".ana-sent");
+    if (box) box.innerHTML = anaRawHTML;
+    elAna.querySelectorAll(".chip.pat.on").forEach(function (c) { c.classList.remove("on"); });
+  }
+
+  function markPat(pat, chip) {
+    var box = elAna.querySelector(".ana-sent");
+    if (!box) return;
+    clearPatMark();                       // 先清掉上一次的标记，再重新标
+    if (!anaParts) return;
+    var snips = snippetsOf(partsForPat(pat));
+    if (!snips.length) return;
+    if (chip) chip.classList.add("on");
+
+    // .ana-sent 里只有一段纯文本（没有子元素），所以直接在字符串上算位置、
+    // 再重新拼 HTML。比拿正则在 HTML 上做替换安全得多 ——
+    // 后者可能把短片段匹配进 class 名、或把已经包好的标签再包一层
+    var text = box.textContent, low = text.toLowerCase();
+    snips.sort(function (a, b) { return b.length - a.length; });   // 长片段优先
+    var marks = [];
+    snips.forEach(function (sn) {
+      var i = low.indexOf(sn.toLowerCase());
+      while (i >= 0) {
+        var j = i + sn.length;
+        var clash = marks.some(function (m) { return i < m[1] && j > m[0]; });
+        if (!clash) { marks.push([i, j]); break; }
+        i = low.indexOf(sn.toLowerCase(), i + 1);     // 被占了，往后找下一个
+      }
+    });
+    if (!marks.length) return;
+
+    marks.sort(function (a, b) { return a[0] - b[0]; });
+    var out = "", pos = 0;
+    marks.forEach(function (m) {
+      out += esc(text.slice(pos, m[0]));
+      out += '<span class="hl">' + esc(text.slice(m[0], m[1])) + "</span>";
+      pos = m[1];
+    });
+    out += esc(text.slice(pos));
+    box.innerHTML = out;
+
+    // 1.1 → 1.0 缩放凸显。transform 对纯 inline 无效，
+    // 所以动画期间挂上 .reveal 变 inline-block，播完摘掉、恢复正常换行
+    box.querySelectorAll(".hl").forEach(function (sp) {
+      sp.classList.add("reveal");
+      setTimeout(function () { sp.classList.remove("reveal"); }, 520);
+    });
+  }
+
+  /* ---- 答题解析 ----
+     把某条选项「作为答案」和「作为干扰项」的解析合在一处。
+     按需求，这个动作不写进历史列。 */
+  function showQExp(L) {
+    var ansQ = null;
+    C.questions.forEach(function (q) { if (q.answer === L) ansQ = q; });
+    var asTrap = [];
+    C.questions.forEach(function (q) {
+      (q.others || []).forEach(function (o) {
+        if (o[0] === L) asTrap.push({ n: q.n, why: o[1] });
+      });
+    });
+
+    var h = '<div class="ana">';
+    h += '<div class="ana-top">';
+    h += '<div class="ana-h">答题解析 · 选项 ' + L +
+      '<button class="ana-spk" data-sayraw="' + esc(C.options[L]) + '">🔊 0.75×</button></div>';
+    h += '<div class="ana-sent">' + esc(C.options[L]) + "</div>";
+    h += "</div>";
+
+    if (ansQ) {
+      h += '<div class="sec"><div class="sec-t">它是第 ' + ansQ.n + ' 题的答案</div>' +
+        '<div class="sec-b">' + ansQ.why + "</div></div>";
+      h += '<div class="sec"><div class="sec-t">线索词 / 衔接</div><div class="chips">';
+      (ansQ.clues || []).forEach(function (c) { h += '<span class="chip cl">' + c + "</span>"; });
+      h += "</div></div>";
+    } else {
+      h += '<div class="sec"><div class="sec-t">它不填任何空</div>' +
+        '<div class="sec-b">这句是<b>干扰项</b>——五个空都轮不到它。</div></div>';
+    }
+
+    if (asTrap.length) {
+      h += '<div class="sec"><div class="sec-t">' +
+        (ansQ ? "别的题里它也出来搅局" : "它在这些题里被当成干扰项") +
+        '</div><div class="sec-b">';
+      asTrap.forEach(function (t) {
+        h += '<div class="traprow"><b>第 ' + t.n + ' 题</b> — ' + t.why + "</div>";
+      });
+      h += "</div></div>";
+    }
+
+    if (ansQ && ansQ.tip) {
+      h += '<div class="sec"><div class="sec-t">做题方法</div><div class="sec-b">' + ansQ.tip + "</div></div>";
+    }
+    h += "</div>";
+    elAna.innerHTML = h;
+    state.curHist = "";        // 答题解析不进历史，也不高亮任何历史行
+    renderHistory();
+  }
+
   // 面板宽而矮（1080p 下约 490px 高），板块按重要性递减排，
   // 保证不滚动就能看到最核心的句型 / 翻译 / 骨架
   function showAnalysis(ref) {
-    var s = findSent(ref);
+    var s = anaData(ref);
+    if (!s) return;                                  // ref 对不上任何句子，别硬渲染
+    anaParts = s.ana && s.ana.parts ? s.ana.parts : null;
+    anaRawHTML = esc(s.s.replace(/\{\d+\}/g, "____"));
     var h = '<div class="ana">';
-    h += '<div class="ana-h">句子分析</div>';
-    h += '<div class="ana-sent">' + esc(s.s.replace(/\{\d+\}/g, "____")) + "</div>";
+    // 标题 + 原句一起吸顶：面板内容长，滚到下面时原句不能跑掉
+    h += '<div class="ana-top">';
+    // 喇叭放在面板顶部：窄屏下页边按钮栏被隐藏，这里是唯一的朗读入口
+    h += '<div class="ana-h">句子分析' +
+      '<button class="ana-spk" data-say="' + esc(ref) + '">🔊 0.75×</button></div>';
+    h += '<div class="ana-sent">' + anaRawHTML + "</div>";
+    h += "</div>";
 
     if (s.ana) {
       var a = s.ana;
 
-      // 句型 —— 最上层的结论，最先给
+      // 句型 —— 最上层的结论，最先给。可点的会在原句里标红对应成分
       if (a.pat && a.pat.length) {
-        h += '<div class="sec"><div class="sec-t">句型</div><div class="chips">';
+        h += '<div class="sec"><div class="sec-t">句型' +
+          '<span style="font-weight:400;color:var(--ink-3);font-size:11.5px">点一下，原句里标出对应部分</span>' +
+          "</div><div class=\"chips\">";
         a.pat.forEach(function (p, i) {
-          h += '<span class="chip pat' + (i === 0 ? " pat0" : "") + '">' + p + "</span>";
+          var has = partsForPatWith(a.parts, p).length > 0;
+          h += '<button class="chip pat' + (i === 0 ? " pat0" : "") +
+            (has ? "" : " static") + '" data-pat="' + esc(p) + '"' +
+            (has ? "" : ' title="这句里没有可直接定位的成分"') + ">" + p + "</button>";
         });
         h += "</div></div>";
       }
@@ -475,11 +782,20 @@
         h += '<div class="sec"><div class="sec-t">句子骨架</div><div class="sec-b">' + a.frame + "</div></div>";
       }
       if (a.parts && a.parts.length) {
-        h += '<div class="sec"><div class="sec-t">成分拆解</div><table class="struct">';
-        a.parts.forEach(function (p) {
-          h += "<tr><td>" + p[0] + "</td><td>" + p[1] + "</td></tr>";
+        // 每项一张圆角卡片：上面成分名、下面内容。底色依次加深（浅灰 → 深灰），
+        // 深到一定程度自动换浅色文字，保证对比度
+        var np = a.parts.length;
+        h += '<div class="sec"><div class="sec-t">成分拆解</div><div class="parts">';
+        a.parts.forEach(function (p, i) {
+          var t = np > 1 ? i / (np - 1) : 0;
+          var l = Math.round(95 - t * 44);            // 95% → 51%
+          var fg = l > 72 ? "#1e2430" : "#ffffff";
+          h += '<div class="part" style="background:hsl(220 13% ' + l + '%);color:' + fg + '">';
+          h += '<span class="pname">' + p[0] + "</span>";
+          h += '<span class="pbody">' + p[1] + "</span>";
+          h += "</div>";
         });
-        h += "</table></div>";
+        h += "</div></div>";
       }
       if (a.clauses && a.clauses.length) {
         h += '<div class="sec"><div class="sec-t">从句 / 语法点</div><div class="chips">';
@@ -496,7 +812,7 @@
       if (derived.length || extra.length) {
         h += '<div class="sec"><div class="sec-t">本句词组</div><div class="chips">';
         derived.forEach(function (d) {
-          h += '<button class="chip ph2" data-vph="' + esc(d.key) + '" title="点一下收进生词本">' +
+          h += '<button class="chip ph2" data-word="' + esc(d.key) + '" title="点一下看释义">' +
             esc(d.label) + "</button>";
         });
         extra.forEach(function (m) {
@@ -521,12 +837,17 @@
     }
     h += "</div>";
     elAna.innerHTML = h;
+    state.curHist = "s:" + ref;
+    renderHistory();
   }
 
   /* =======================================================
      七、渲染 · 题目
      ======================================================= */
-  function buildQuestions() {
+  // mode="pool"   只出选项池 A–H（原文页用；每题的分析由「答题解析」按钮给）
+  // mode="full"   选项池 + 16–20 五道题卡（题目分析页用）
+  function buildQuestions(mode) {
+    var withAnalysis = mode === "full";
     var h = "";
 
     // 选项池
@@ -541,14 +862,33 @@
       h += '<div class="opt' + (used ? " used" : "") + '" data-opt="' + L + '">';
       h += '<span class="ol">' + L + "</span>";
       h += '<span class="otxt">' + renderSentence({ s: C.options[L] }) + "</span>";
-      h += '<button class="mini spk" data-sayraw="' + esc(C.options[L]) + '" title="朗读">🔊</button>';
+      // 三个动作：句子分析（结构讲解）/ 朗读 / 答题解析（作为答案或干扰项）
+      h += '<span class="oacts">';
+      h += '<button class="obtn" data-ana="opt:' + L + '" title="这句的句子结构讲解">句子分析</button>';
+      h += '<button class="obtn" data-sayraw="' + esc(C.options[L]) + '" title="0.75 倍速英音朗读">🔊</button>';
+      h += '<button class="obtn" data-qexp="' + L + '" title="它作为答案或干扰项的答题解析">答题解析</button>';
+      h += "</span>";
       h += '<span class="tag">' + (used ? "→ 第 " + used + " 空" : "干扰项") + "</span>";
       h += "</div>";
     });
     h += "</div>";
 
+    if (!withAnalysis) return h;   // 原文页只要选项池，下面的题卡和解析都不要
+
     // 逐题
     C.questions.forEach(function (q) {
+      if (!withAnalysis) {
+        // 精简版：只有题号 + 题干，点了跳到题目分析页。
+        // 注意用 data-qmini 而不是 data-q —— 否则 toggleQ 的
+        // querySelector('[data-q]') 会命中这份（文档顺序在前）
+        h += '<div class="qcard qmini" data-qmini="' + q.n + '">';
+        h += '<div class="qhead"><span class="qnum">' + q.n + "</span>";
+        h += '<span class="qtxt">' + esc(q.prompt) + "</span></div>";
+        h += '<div class="qbtns"><button class="btn" data-gotoq="' + q.n + '">去题目分析页看解析 →</button></div>';
+        h += "</div>";
+        return;
+      }
+
       var open = !!state.openQ[q.n];
       h += '<div class="qcard' + (open ? " open" : "") + '" data-q="' + q.n + '">';
       h += '<div class="qhead"><span class="qnum">' + q.n + "</span>";
@@ -618,21 +958,73 @@
   /* =======================================================
      八、事件
      ======================================================= */
+  // 取该词/词组所在句子的原文，存进生词本一起显示
+  function ctxOf(el, root) {
+    var sent = el.closest ? el.closest(".sent") : null;
+    var box = sent ? sent.querySelector(".sent-txt") : null;
+    if (!box && root && root.classList && root.classList.contains("qcard")) box = root;
+    return box ? box.textContent.trim().replace(/\s+/g, " ") : "";
+  }
+
+  // 高亮当前句：连同它在页边的那组按钮
+  function selectSent(ref) {
+    document.querySelectorAll(".sent.cur,.opt.cur").forEach(function (x) { x.classList.remove("cur"); });
+    // 正文句子是 .sent，选项是 .opt，两种都要能高亮
+    var se = ref.indexOf("opt:") === 0
+      ? document.querySelector('.opt[data-opt="' + ref.slice(4) + '"]')
+      : document.querySelector('.sent[data-sent="' + ref + '"]');
+    if (se) se.classList.add("cur");
+    document.querySelectorAll(".sbtns.cur").forEach(function (x) { x.classList.remove("cur"); });
+    var g = document.querySelector('.sbtns[data-for="' + ref + '"]');
+    if (g) g.classList.add("cur");
+  }
+
   function bindPassage(root) {
     root.addEventListener("click", function (ev) {
       var t = ev.target;
+
+      // 喇叭（页边按钮 / 小黑板顶部）
+      var spk = t.closest("[data-say]");
+      if (spk) {
+        ev.stopPropagation();
+        var ss = anaData(spk.dataset.say);
+        if (ss) TTS.speak(cleanSay(ss.s), spk);
+        return;
+      }
+      var spkRaw = t.closest("[data-sayraw]");
+      if (spkRaw) { ev.stopPropagation(); TTS.speak(spkRaw.dataset.sayraw, spkRaw); return; }
+
+      // 选项的「答题解析」：不写进历史
+      var qe = t.closest("[data-qexp]");
+      if (qe) { showQExp(qe.dataset.qexp); return; }
+
+      // 句子分析（页边的「析」/ 选项的「句子分析」）
+      var ab = t.closest("[data-ana]");
+      if (ab) {
+        var aref = ab.dataset.ana;
+        selectSent(aref);
+        showAnalysis(aref);
+        pushHistory("s", "", aref);
+        return;
+      }
+
+      // 小黑板里的句型 chip → 在原句里标出对应成分
+      var pc = t.closest("[data-pat]");
+      if (pc) {
+        if (pc.classList.contains("static")) return;      // 这句里定位不到，不响应
+        var on = pc.classList.contains("on");
+        clearPatMark();
+        if (!on) markPat(pc.dataset.pat, pc);             // 再点一次 = 取消标记
+        return;
+      }
 
       // 单词优先：被词组包住的词，点的仍然是那个词
       var w = t.closest(".w");
       if (w) {
         var raw = w.dataset.w;
-        var res = lookup(raw);
         markActive(w);
-        if (res) {
-          addVocab("word", raw, res.entry);
-        } else {
-          addVocab("word", raw, { pos: "", ipa: "", cn: "（未收录）", note: "这个词没进词表，可以补进去。" });
-        }
+        showWord(raw, ctxOf(w, t.closest(".qcard")));
+        pushHistory("w", raw);
         return;
       }
 
@@ -640,47 +1032,64 @@
       var ph = t.closest(".ph");
       if (ph) {
         var key = ph.dataset.ph;
-        var r = lookupPhrase(key);
         markActive(ph);
-        if (r) addVocab("phrase", r.key, r.entry);
-        else addVocab("phrase", key, { pos: "phrase", ipa: "", cn: "（词组释义待补）" });
+        showWord(key, ctxOf(ph, t.closest(".qcard")));
+        pushHistory("w", key);
+        return;
+      }
+
+      // 小黑板里「包含它的词组」的 chip
+      var wd = t.closest("[data-word]");
+      if (wd) {
+        showWord(wd.dataset.word, "");
+        pushHistory("w", wd.dataset.word);
         return;
       }
 
       // 空位
       var bl = t.closest(".blank");
-      if (bl) {
-        var n = +bl.dataset.blank;
-        toggleQ(n);
-        return;
-      }
+      if (bl) { toggleQ(+bl.dataset.blank); return; }
 
-      // 喇叭
-      var spk = t.closest(".spk");
-      if (spk) {
-        ev.stopPropagation();
-        if (spk.dataset.sayraw) { TTS.speak(spk.dataset.sayraw, spk); return; }
-        var s = findSent(spk.dataset.say);
-        TTS.speak(cleanSay(s.s), spk);
-        return;
-      }
-
-      // 翻译按钮
-      var trb = t.closest(".trb");
-      if (trb) {
-        ev.stopPropagation();
-        var box = root.querySelector('[data-trbox="' + trb.dataset.tr + '"]');
-        if (box) { box.classList.toggle("show"); trb.classList.toggle("on"); }
-        return;
-      }
-
-      // 句子 → 右栏分析
+      // 句子 → 小黑板
       var se = t.closest(".sent");
       if (se) {
-        root.querySelectorAll(".sent.cur").forEach(function (x) { x.classList.remove("cur"); });
-        se.classList.add("cur");
+        selectSent(se.dataset.sent);
         showAnalysis(se.dataset.sent);
+        pushHistory("s", "", se.dataset.sent);
+        return;
       }
+
+      // 选项整句 → 小黑板（选项也当句子讲）
+      var op = t.closest(".opt");
+      if (op && C.optionsAna && C.optionsAna[op.dataset.opt]) {
+        var oref = "opt:" + op.dataset.opt;
+        selectSent(oref);
+        showAnalysis(oref);
+        pushHistory("s", "", oref);
+      }
+    });
+  }
+
+  // 历史列
+  function bindHistory(root) {
+    root.addEventListener("click", function (ev) {
+      var d = ev.target.closest("[data-histdel]");
+      if (d) {
+        var did = d.dataset.histdel;
+        state.hist = state.hist.filter(function (x) { return histKey(x) !== did; });
+        if (state.curHist === did) state.curHist = "";
+        saveHist(); renderHistory();
+        return;
+      }
+      var op = ev.target.closest("[data-hist]");
+      if (!op) return;
+      var id = op.dataset.hist;
+      var it = state.hist.filter(function (x) { return histKey(x) === id; })[0];
+      if (!it) return;
+      // 重新显示在小黑板，并把它提到最上面
+      if (it.t === "w") showWord(it.k, "");
+      else { selectSent(it.ref); showAnalysis(it.ref); }
+      pushHistory(it.t, it.k, it.ref);
     });
   }
 
@@ -694,18 +1103,17 @@
     el.classList.add("act");
   }
 
+  // 只处理题目卡片自己的东西。点词、点选项句子、喇叭这些
+  // 统一交给 bindPassage（也绑在同样的容器上），避免两套逻辑各写一遍
   function bindQuestions(root) {
     root.addEventListener("click", function (ev) {
       var t = ev.target;
-      var spk = t.closest(".spk");
-      if (spk) { ev.stopPropagation(); TTS.speak(spk.dataset.sayraw || "", spk); return; }
-
-      var w = t.closest(".w");
-      if (w) {
-        var raw = w.dataset.w, res = lookup(raw);
-        markActive(w);
-        if (res) addVocab("word", raw, res.entry);
-        else addVocab("word", raw, { pos: "", ipa: "", cn: "（未收录）" });
+      var gq = t.closest("[data-gotoq]");
+      if (gq) {
+        var gn = +gq.dataset.gotoq;
+        state.openQ[gn] = false;      // 置否，好让 toggleQ 这一次一定是展开
+        switchTab("quiz");
+        toggleQ(gn);
         return;
       }
 
@@ -737,34 +1145,6 @@
     if (card.scrollIntoView) card.scrollIntoView({ block: "nearest", behavior: "smooth" });
   }
 
-  function bindVocab(root) {
-    root.addEventListener("click", function (ev) {
-      var s = ev.target.closest("[data-vsay]");
-      if (s) { TTS.speak(s.dataset.vsay, s); return; }
-      var d = ev.target.closest("[data-vdel]");
-      if (d) {
-        state.vocab = state.vocab.filter(function (v) { return v.id !== d.dataset.vdel; });
-        delete state.openV[d.dataset.vdel];   // 顺带清掉，否则已删的 id 在这里留垃圾
-        saveVocab(); renderVocab();
-        return;
-      }
-      var pc = ev.target.closest("[data-vph]");
-      if (pc) {
-        var r = lookupPhrase(pc.dataset.vph);
-        if (r) addVocab("phrase", r.key, r.entry);
-        return;
-      }
-      // 展开 / 收起整行。放在最后：上面几个按钮都在 .vbody 里，是 .vhead 的兄弟
-      var tg = ev.target.closest("[data-vtoggle]");
-      if (tg) {
-        if (window.getSelection && String(window.getSelection())) return;  // 拖选文字不误触
-        var id = tg.dataset.vtoggle;
-        state.openV[id] = !state.openV[id];
-        renderVocab();
-      }
-    });
-  }
-
   /* =======================================================
      九、装配
      ======================================================= */
@@ -774,7 +1154,10 @@
     elPassage.innerHTML = buildPassage();
   }
   function renderQuestions() {
-    document.getElementById("qList").innerHTML = buildQuestions();
+    document.getElementById("qList").innerHTML = buildQuestions("full");
+    // 原文页那份只要选项池：每题的分析改从选项行的「答题解析」看
+    document.getElementById("qListRead").innerHTML =
+      '<div class="qsec-h">题目 · Questions 16–20</div>' + buildQuestions("pool");
   }
 
   function switchTab(tab) {
@@ -784,37 +1167,45 @@
     });
     var isRead = tab === "read";
     document.getElementById("passage").hidden = !isRead;
+    document.getElementById("qListRead").hidden = !isRead;
     document.getElementById("qList").hidden = isRead;
-    document.getElementById("col1Title").textContent = isRead ? "原文" : "题目与答案";
+    document.getElementById("col1Title").textContent = isRead ? "原文 + 题目" : "题目与答案";
     var h1 = document.getElementById("col1Hint");
     h1.dataset.orig = isRead
-      ? '点词查词 · <span style="background:var(--phrase);padding:0 4px;border-radius:3px">黄色</span>是词组 · 🔊 0.75×英音'
+      ? '点词查词 · 点句子看讲解 · <span style="background:var(--phrase);padding:0 4px;border-radius:3px">黄色</span>是词组'
       : "点「分析」看解析 · 点选项里的词也能查";
     document.getElementById("colAnaHint").textContent =
-      isRead ? "点句子查看 · 22 句都能点" : "点「分析」查看";
+      isRead ? "点单词或句子" : "点「分析」看题目解析";
     applyCols();   // 重新套用列显隐（会顺带刷新第一列提示）
     elAna.innerHTML = '<div class="empty"><span class="big">🔍</span>' +
       (isRead
-        ? '点左边<b>任意一句</b>，这里显示讲解<br>句型 · 翻译 · 骨架 · 成分 · 词组<br><br>' +
-          '带<span style="color:var(--hard)">橙色底</span>的是长难句'
+        ? '点左边<b>任意一个单词</b>查词<br>点<b>任意一句</b>看讲解'
         : "点题目的「分析」按钮<br>这里显示题目解析") + "</div>";
+    state.curHist = "";
+    renderHistory();
+    if (isRead) layoutGutter();     // 原文重新可见后，量一次页边位置
   }
 
   function init() {
     PHRASE_IDX = buildPhraseIndex(C.phrases);
     elPassage = document.getElementById("passage");
-    elVocab = document.getElementById("vocab");
+    elHist = document.getElementById("history");
     elAna = document.getElementById("analysis");
 
-    loadVocab();
+    loadHist();
     renderPassage();
-    renderVocab();
+    renderHistory();
     renderQuestions();
 
+    // bindPassage 同时挂在正文和小黑板上：喇叭、词、句子用的是同一套 data 属性
     bindPassage(elPassage);
-    bindVocab(elVocab);
-    bindVocab(elAna);   // 分析栏里的词组 chip 也要能点进生词本（闭合"点句子→看词组→收录"）
+    bindPassage(elAna);
+    bindHistory(elHist);
+    // 点词 / 点选项句子 / 喇叭 统一走 bindPassage，两个题目容器都要绑
+    bindPassage(document.getElementById("qList"));
+    bindPassage(document.getElementById("qListRead"));
     bindQuestions(document.getElementById("qList"));
+    bindQuestions(document.getElementById("qListRead"));
 
     document.querySelectorAll(".tab").forEach(function (b) {
       b.addEventListener("click", function () { switchTab(b.dataset.tab); });
@@ -828,18 +1219,32 @@
       tq.textContent = state.quiz ? "✓ 做题模式" : "做题模式";
     });
 
-    var ta = document.getElementById("tglAllTr");
-    ta.addEventListener("click", function () {
-      state.allTr = !state.allTr;
-      document.body.classList.toggle("alltr", state.allTr);
-      ta.classList.toggle("on", state.allTr);
-      ta.textContent = state.allTr ? "✓ 全部翻译" : "全部翻译";
+    document.getElementById("btnClear").addEventListener("click", function () {
+      if (!state.hist.length) return;
+      if (confirm("清空历史记录？")) {
+        state.hist = []; state.curHist = ""; saveHist(); renderHistory();
+      }
     });
 
-    document.getElementById("btnClear").addEventListener("click", function () {
-      if (!state.vocab.length) return;
-      if (confirm("清空生词本？")) { state.vocab = []; saveVocab(); renderVocab(); }
+    // 鼠标停到页边的「析」上，把对应那句染成粉色；移开恢复原底色
+    function peek(ref, on) {
+      var se = document.querySelector('.sent[data-sent="' + ref + '"]');
+      if (se) se.classList.toggle("peek", on);
+    }
+    elPassage.addEventListener("mouseover", function (ev) {
+      var ab = ev.target.closest && ev.target.closest("[data-ana]");
+      if (ab) peek(ab.dataset.ana, true);
     });
+    elPassage.addEventListener("mouseout", function (ev) {
+      var ab = ev.target.closest && ev.target.closest("[data-ana]");
+      if (ab) peek(ab.dataset.ana, false);
+    });
+
+    // 页边按钮的位置依赖正文实际排版，窗口尺寸变了要重新量
+    window.addEventListener("resize", scheduleGutter);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(layoutGutter).catch(function () {});
+    }
 
     document.getElementById("btnStop").addEventListener("click", function () { TTS.stop(); });
 

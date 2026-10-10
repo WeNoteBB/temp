@@ -36,8 +36,11 @@ C.phrases.forEach(p => {
   if (!C.glossary[k]) console.log("  ⚠ 词组无词条：" + p);
 });
 
-/* ---- 3. 词条覆盖率 ---- */
-const uniq = [...new Set(allWords)];
+/* ---- 3. 词条覆盖率 ----
+   必须把选项 A–H 也算进来：选项里的词同样可以点，漏了就是"未收录"。
+   之前只扫原文，所以 jewellery / figure 这些只在选项里出现的词没被发现。 */
+const optionWords = Object.values(C.options).flatMap(o => words(o));
+const uniq = [...new Set(allWords.concat(optionWords))];
 const dedouble = s => /([bdfglmnprt])\1$/.test(s) ? s.slice(0, -1) : null;
 function hit(w) {
   const cands = [w];

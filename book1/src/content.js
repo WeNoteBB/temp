@@ -761,6 +761,36 @@ window.PET_CONTENT = {
     "marshall": { pos: "n.", ipa: "/ˈmɑːʃl/", cn: "马歇尔（姓氏）" },
     "dad": { pos: "n.", ipa: "/dæd/", cn: "爸爸", note: "口语用词，相当于 father。作称呼时首字母大写，如 Dad。" },
 
+    /* ---- 只出现在选项 A–H 里的词（选项同样可以点，所以一个都不能缺） ---- */
+    "out": { pos: "adv.", ipa: "/aʊt/", cn: "出来；出去；不在家", note: "turn out 结果是；find out 查明。" },
+    "figure": { pos: "n.", ipa: "/ˈfɪɡə/", cn: "人像，雕像；数字；身材", note: "文中是「小马雕像」的意思，不是「数字」。figure out 是「弄明白」。" },
+    "horse": { pos: "n.", ipa: "/hɔːs/", cn: "马" },
+    "luckily": { pos: "adv.", ipa: "/ˈlʌkɪli/", cn: "幸运的是", note: "形容词 lucky + ly。放句首时后面加逗号。" },
+    "way": { pos: "n.", ipa: "/weɪ/", cn: "方法，方式；路", note: "That way 这样一来；in this way 用这种方法。" },
+    "sure": { pos: "adj.", ipa: "/ʃʊə/", cn: "确信的；一定的", note: "make sure 确保。be sure of/about sth 对…有把握。" },
+    "didn't": { pos: "缩写", ipa: "/ˈdɪdnt/", cn: "did not 的缩写", note: "didn't 后面永远跟动词原形。" },
+    "miss": { pos: "v.", ipa: "/mɪs/", cn: "错过；漏掉；想念", note: "文中是「漏掉」：didn't miss anything 什么都没漏。" },
+    "anything": { pos: "pron.", ipa: "/ˈeniθɪŋ/", cn: "任何东西（用于否定句和疑问句）", note: "形容词修饰时要后置：anything interesting。" },
+    "fact": { pos: "n.", ipa: "/fækt/", cn: "事实", note: "in fact 事实上；as a matter of fact 其实。" },
+    "whole": { pos: "adj.", ipa: "/həʊl/", cn: "全部的，整个的", note: "前面必须加 the 或物主代词：<b>the</b> whole area ✓ / whole the area ✗" },
+    "cover": { pos: "v.", ipa: "/ˈkʌvə/", cn: "覆盖，盖住", note: "be covered in/with 被…覆盖着，表状态。" },
+    "covered": { pos: "v.", ipa: "/ˈkʌvəd/", cn: "覆盖（cover 的过去分词）" },
+    "grass": { pos: "n.", ipa: "/ɡrɑːs/", cn: "草，草地", note: "不可数名词，没有复数。" },
+    "bit": { pos: "n.", ipa: "/bɪt/", cn: "一点，少量", note: "a bit 有点儿；a bit of + 不可数名词。" },
+    "sad": { pos: "adj.", ipa: "/sæd/", cn: "难过的，悲伤的", note: "比较级 sadder，最高级 saddest（双写 d）。" },
+    "see": { pos: "v.", ipa: "/siː/", cn: "看见；明白", note: "过去式 saw，过去分词 seen。" },
+    "some": { pos: "det.", ipa: "/sʌm/", cn: "一些；某个", note: "肯定句用 some；否定句和疑问句一般用 any。" },
+    "news": { pos: "n.", ipa: "/njuːz/", cn: "消息，新闻", note: "<b>不可数名词</b>，看起来像复数但不是——谓语用单数：The news is good." },
+    "probably": { pos: "adv.", ipa: "/ˈprɒbəbli/", cn: "大概，很可能", note: "形容词 probable + ly。位置在实义动词前、be 动词后。" },
+    "thing": { pos: "n.", ipa: "/θɪŋ/", cn: "东西，事情" },
+    "things": { pos: "n.", ipa: "/θɪŋz/", cn: "东西（thing 的复数）", note: "things like... = 像…之类的东西。" },
+    "like": { pos: "prep./v.", ipa: "/laɪk/", cn: "像，如同；喜欢", note: "文中 things like gold jewellery 的 like 是介词「像」。" },
+    "gold": { pos: "n./adj.", ipa: "/ɡəʊld/", cn: "黄金；金的" },
+    "jewellery": { pos: "n.", ipa: "/ˈdʒuːəlri/", cn: "珠宝，首饰", note: "<b>不可数名词</b>，没有复数。英式拼写 jewellery，美式 jewelry。" },
+    "new": { pos: "adj.", ipa: "/njuː/", cn: "新的", note: "a new experience 一次新的经历。" },
+    "experience": { pos: "n.", ipa: "/ɪkˈspɪəriəns/", cn: "经历（可数）；经验（不可数）", note: "an experience 一次经历；work experience 工作经验（不加 a）。" },
+    "too": { pos: "adv.", ipa: "/tuː/", cn: "也；太", note: "表「也」时用在<b>肯定句</b>末尾；否定句用 either。" },
+
     /* ---- 缩写 / 缩略形式 ---- */
     "wasn't": { pos: "缩写", ipa: "/ˈwɒznt/", cn: "was not 的缩写（不是）" },
     "weren't": { pos: "缩写", ipa: "/wɜːnt/", cn: "were not 的缩写" },
@@ -782,6 +812,129 @@ window.PET_CONTENT = {
     F: "Some people were a bit disappointed by that news.",
     G: "They probably imagined it was things like gold jewellery.",
     H: "It was a new experience for me, too."
+  },
+
+  /* ============================================================
+     选项 A–H 的句子分析
+     选项跟正文一样可以点词、点词组、看讲解，所以这 8 句也要有 ana。
+     字段与正文的句子完全一致（pat / frame / parts / clauses / gram / tip / tr）。
+     parts 里第三项尽量用 <code> 包住，好让「点句型→标红」能定位到；
+     没有 <code> 的会退回取描述开头的英文。
+     ============================================================ */
+  optionsAna: {
+    A: {
+      pat: ["主系表", "turn out to be"],
+      frame: "主干：<b>It turned out to be a figure</b>（原来它是个雕像）",
+      parts: [
+        ["主语", "It —— 指 Kate 发现的那块「形状奇怪的石头」"],
+        ["谓语", "<code>turned out</code> —— 结果是，原来是，带「出乎意料」的语气"],
+        ["表语", "<code>to be a small figure of a horse</code> —— 不定式作表语"],
+        ["定语", "<code>of a horse</code> —— 修饰 figure，说明雕的是什么"]
+      ],
+      clauses: ["turn out to be 结构", "不定式作表语"],
+      gram: ["turn out to be", "figure 的一词多义", "不定式作表语"],
+      tip: "<b>figure</b> 在这里不是「数字」，是<b>「人像、雕像」</b>——这个多义词正是第 20 题的题眼：只有雕像才说得上 someone had made it。<b>turn out</b> 表示「结果发现是」，暗示和原先以为的不一样。",
+      tr: "原来它是一匹小马的雕像。"
+    },
+    B: {
+      pat: ["主谓宾"],
+      frame: "主干：<b>No-one made that mistake</b>（没有人犯那个错误）",
+      parts: [
+        ["主语", "No-one —— 没有人，作主语时谓语用单数"],
+        ["谓语", "<code>made</code> —— make 的过去式"],
+        ["宾语", "<code>that mistake</code> —— make a mistake 犯错误"],
+        ["状语", "<code>luckily</code> —— 幸运的是，评注性状语，放句尾"]
+      ],
+      clauses: ["评注性状语 luckily"],
+      gram: ["make a mistake", "No-one 作主语用单数", "评注性状语"],
+      tip: "<b>that mistake</b> 必须有指代对象——可全文没有提到过任何「错误」。这句接不上任何一个空，是纯粹的干扰项。",
+      tr: "幸好没有人犯那个错误。"
+    },
+    C: {
+      pat: ["主谓宾", "宾语从句"],
+      frame: "主干：<b>everyone made sure (that)...</b>（每个人都确保……）",
+      parts: [
+        ["状语", "<code>That way</code> —— 这样一来，回指前文讲过的一种做法"],
+        ["主语", "everyone —— 作主语时谓语用单数"],
+        ["谓语", "<code>made sure</code> —— 确保"],
+        ["宾语从句", "<code>they didn't miss anything</code> —— 省略了 that；anything 用于否定句"]
+      ],
+      clauses: ["make sure (that) 宾语从句", "宾语从句省略 that"],
+      gram: ["That way 回指前文", "make sure (that)", "anything 用于否定句"],
+      tip: "<b>That way</b> 是个「回指」信号——它前面必须已经讲过一种做法。所以这句只能接在「怎么挖」的描写之后，这是第 18 题的关键。",
+      tr: "这样一来，每个人都能确保自己不会漏掉任何东西。"
+    },
+    D: {
+      pat: ["主系表", "被动语态"],
+      frame: "主干：<b>the whole area was covered in grass</b>（整片地还覆盖着草）",
+      parts: [
+        ["状语", "<code>In fact</code> —— 其实，表解释说明，用来补充或纠正上文"],
+        ["主语", "<code>the whole area</code> —— whole 前面必须加 the"],
+        ["系动词", "was"],
+        ["表语", "<code>covered in grass</code> —— 过去分词短语作表语，表被动的状态"],
+        ["状语", "<code>actually still</code> —— 两个副词都修饰后面的表语"]
+      ],
+      clauses: ["be covered in/with 表状态"],
+      gram: ["be covered in", "the whole + 名词", "In fact 的逻辑衔接"],
+      tip: "<b>In fact</b> 后面接的一定是用来解释上文的句子。这里的 <b>grass</b> 正是下文 <code>remove it all</code> 里那个 <b>it</b> 的指代对象——这是第 16 题的全部依据。",
+      tr: "其实，整片区域当时还长满了草。"
+    },
+    E: {
+      pat: ["主系表", "形式主语"],
+      frame: "主干：<b>It was a bit sad to see it disappear</b>（看着它消失有点难过）",
+      parts: [
+        ["形式主语", "It —— 真正的主语是后面的不定式，这里只是占位"],
+        ["系动词 + 表语", "<code>was a bit sad</code> —— a bit 修饰形容词，语气比 very 弱"],
+        ["真正主语", "<code>to see it disappear</code> —— 不定式后置，才是句子真正的主语"]
+      ],
+      clauses: ["It 作形式主语", "不定式作真正主语", "see sth do 结构"],
+      gram: ["形式主语 it", "see sth do（不加 to）", "a bit 修饰形容词"],
+      tip: "这句有<b>两个 it</b>：第一个是形式主语（真正主语是 to see...），第二个才是实义代词。两个 it 都没有明确的指代对象——这正是判断它为干扰项的依据。",
+      tr: "看着它消失，有点难过。"
+    },
+    F: {
+      // "were disappointed" 是系表结构，不是被动语态 —— 别错标成被动
+      pat: ["主系表", "that 回指"],
+      frame: "主干：<b>Some people were disappointed</b>（有些人很失望）",
+      parts: [
+        ["主语", "Some people"],
+        ["系动词 + 表语", "<code>were a bit disappointed</code> —— 系表结构，表状态"],
+        ["状语", "<code>by that news</code> —— that 回指上文刚提到的消息"]
+      ],
+      clauses: ["be disappointed by"],
+      gram: ["be disappointed by / at / with", "a bit 修饰形容词", "that 的回指"],
+      tip: "<b>by that news</b> 里的 that 是「回指」信号——它要求前面刚出现过一条消息。空后紧跟 <b>But</b> we all knew Dad was right，转折结构正好和「失望」相反，这是第 17 题的依据。",
+      tr: "有些人对这个消息有点失望。"
+    },
+    G: {
+      pat: ["主谓宾", "宾语从句"],
+      frame: "主干：<b>They imagined (that) it was things</b>（他们想象那是些东西）",
+      parts: [
+        ["主语", "They —— 指上文的 friends"],
+        ["状语", "<code>probably</code> —— 表推测，「大概」"],
+        ["谓语", "<code>imagined</code> —— imagine 后面接从句，表示「想象、猜想」"],
+        ["宾语从句", "<code>it was things like gold jewellery</code> —— 省略了 that"],
+        ["例举", "<code>like gold jewellery</code> —— like 在这里是介词「像」，表举例"]
+      ],
+      clauses: ["imagine (that) 宾语从句", "like 表举例"],
+      gram: ["imagine (that)", "they 的回指", "like 作介词表举例"],
+      tip: "<b>They</b> 回指 friends，<b>it</b> 指「我找到的东西」。后文 <b>But actually</b> 正是要纠正这个「金首饰」的想象——前后构成对比，这是第 19 题的依据。",
+      tr: "他们大概以为是什么金首饰之类的东西。"
+    },
+    H: {
+      pat: ["主系表"],
+      frame: "主干：<b>It was a new experience</b>（那是一次新经历）",
+      parts: [
+        ["主语", "It —— 指上文提到的某件事"],
+        ["系动词 + 表语", "<code>was a new experience</code> —— experience 作「经历」讲时可数"],
+        ["状语", "<code>for me</code> —— 对我来说"],
+        ["状语", "<code>too</code> —— 也，用在肯定句末尾"]
+      ],
+      clauses: ["too 用于肯定句末尾"],
+      gram: ["experience 可数 / 不可数", "too 的位置和用法"],
+      tip: "<b>too</b> 表示「也」，它要求前文已经有人经历过类似的事。全文没有任何这样的铺垫——找不到铺垫的 too，就是接不上的信号。",
+      tr: "对我来说，那也是一次新的经历。"
+    }
   },
 
   /* ============================================================

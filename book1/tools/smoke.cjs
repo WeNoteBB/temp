@@ -1,5 +1,6 @@
 /* 端到端冒烟测试：把构建好的 HTML 在 jsdom 里真跑一遍
-   注意：jsdom 是异步解析的，必须等 load 事件后才能查 DOM */
+   注意：jsdom 是异步解析的，必须等 load 事件后才能查 DOM；
+   且 jsdom 不做真实排版计算，页边按钮的「位置」测不了，只能测结构。 */
 const fs = require("fs");
 const path = require("path");
 const { JSDOM, VirtualConsole } = require("jsdom");
@@ -27,287 +28,211 @@ function run() {
   const doc = window.document;
   const CONTENT = window.PET_CONTENT;
 
-  console.log("=== 1. 首屏渲染 ===");
   const passage = doc.getElementById("passage");
-  const vocab = doc.getElementById("vocab");
   const ana = doc.getElementById("analysis");
+  const hist = doc.getElementById("history");
   const qList = doc.getElementById("qList");
-  ok(!!passage && passage.querySelectorAll(".w").length > 250,
+  const cols = doc.querySelector(".cols");
+  const gutter = doc.getElementById("pgutter");
+
+  console.log("=== 1. 首屏渲染 ===");
+  ok(passage.querySelectorAll(".w").length > 250,
     "单词 span " + passage.querySelectorAll(".w").length + " 个");
   ok(passage.querySelectorAll(".ph").length > 20,
     "词组黄标 " + passage.querySelectorAll(".ph").length + " 处");
   ok(passage.querySelectorAll(".sent").length === 22,
-    "句子 " + passage.querySelectorAll(".sent").length + " 个（应为 22）");
-  ok(passage.querySelectorAll(".blank").length === 5,
-    "空位 " + passage.querySelectorAll(".blank").length + " 个（应为 5）");
-  ok(passage.querySelectorAll(".spk").length >= 22,
-    "喇叭 " + passage.querySelectorAll(".spk").length + " 个");
-  ok(passage.querySelectorAll(".trb").length >= 22, "翻译按钮齐全");
+    "句子 " + passage.querySelectorAll(".sent").length + " 个");
+  ok(passage.querySelectorAll(".blank").length === 5, "空位 5 个");
+  ok(!passage.querySelector(".trb"), "没有行内「译」按钮了（翻译已移入分析面板）");
+  ok(!passage.querySelector(".tr"), "没有行内译文块");
+
+  console.log("\n--- 句子连续排版 + 交替底色 ---");
+  const sents = [...passage.querySelectorAll(".sent")];
+  const altCount = sents.filter(s => s.classList.contains("alt")).length;
+  ok(altCount === 11, "22 句里 " + altCount + " 句带交替底色（隔一句一个）");
+  ok(sents[0].classList.contains("alt") && !sents[1].classList.contains("alt"),
+    "第 1 句有底色、第 2 句没有");
+  ok(sents[2].classList.contains("alt"), "第 3 句又有底色（循环）");
+
+  console.log("\n--- 页边按钮栏 ---");
+  ok(!!gutter, "有页边容器 .pgutter");
+  const groups = [...gutter.querySelectorAll(".sbtns")];
+  ok(groups.length === 22, "页边按钮组 " + groups.length + " 组（每句一组）");
+  ok(groups.every(g => /^\d+-\d+$/.test(g.dataset.for)), "每组都标了归属句子");
+  ok(groups[0].querySelector("[data-say]") && groups[0].querySelector(".mini"),
+    "每组含 分析 与 🔊 两个按钮");
+  ok(groups.filter(g => g.querySelector("[data-say]")).length === 22, "22 个朗读按钮");
+  ok(!passage.querySelector(".sent .mini"), "按钮不在句子内部（不会打断连续排版）");
 
   console.log("\n=== 2. 渲染有没有丢字（逐字对比源数据）===");
   const norm = s => s.replace(/\s+/g, " ").trim();
   const lost = [];
   CONTENT.passage.paragraphs.forEach((p, pi) => p.forEach((s, si) => {
     const el = passage.querySelector('[data-sent="' + pi + "-" + si + '"] .sent-txt');
-    if (!el) { lost.push({ ref: pi + "-" + si, want: "(缺元素)", got: "" }); return; }
-    const want = norm(s.s.replace(/\{(\d+)\}/g, "$1"));   // 空位会渲染成可见的题号
+    if (!el) { lost.push(pi + "-" + si + " 缺元素"); return; }
+    const want = norm(s.s.replace(/\{(\d+)\}/g, "$1"));
     const got = norm(el.textContent);
-    if (want !== got) lost.push({ ref: pi + "-" + si, want, got });
+    if (want !== got) lost.push(pi + "-" + si + "\n        期望: " + want.slice(0, 90) + "\n        实际: " + got.slice(0, 90));
   }));
   ok(lost.length === 0, "全部 22 句与源数据逐字一致");
-  lost.slice(0, 4).forEach(l => {
-    console.log("      ✗ 差异 @" + l.ref);
-    console.log("        期望: " + l.want.slice(0, 100));
-    console.log("        实际: " + l.got.slice(0, 100));
-  });
+  lost.slice(0, 3).forEach(l => console.log("      ✗ " + l));
 
-  console.log("\n=== 3. 点单词 → 生词本 ===");
-  const w1 = passage.querySelector('.w[data-w="opportunity"]');
-  ok(!!w1, "定位到 opportunity");
-  click(w1, window);
-  const card = vocab.querySelector(".vcard");
-  ok(!!card, "生词本出现卡片");
-  ok(card && card.querySelector(".vw").textContent === "opportunity", "词形正确");
-  ok(card && /ˌɒpəˈtjuːnəti/.test(card.querySelector(".vipa").textContent),
-    "音标正确 " + (card && card.querySelector(".vipa").textContent));
-  ok(card && card.querySelector(".vpos").textContent === "n.", "词性正确");
-  ok(card && !!card.querySelector(".vspk"), "带发音喇叭");
-  ok(card && !card.querySelector(".vctx"), "不再显示原文例句（已按需求移除）");
+  console.log("\n=== 3. 点单词 → 分析面板 + 历史 ===");
+  click(passage.querySelector('.w[data-w="opportunity"]'), window);
+  ok(/词条/.test(ana.textContent), "分析面板显示词条");
+  ok(/opportunity/.test(ana.querySelector(".ana-sent").textContent), "词形正确");
+  ok(/ˌɒpəˈtjuːnəti/.test(ana.textContent), "音标正确");
+  ok(/机会/.test(ana.textContent), "中文释义正确");
+  ok(!!ana.querySelector(".ana-spk[data-sayraw]"), "面板顶部有发音喇叭");
+  ok(hist.querySelectorAll(".hitem").length === 1, "历史加了 1 行");
+  const h0 = hist.querySelector(".hitem");
+  ok(h0.classList.contains("w"), "这一行标为「词」");
+  ok(h0.querySelector(".hbadge").textContent === "词", "圆圈徽标是「词」");
+  ok(h0.querySelector(".hlabel").textContent === "opportunity", "历史里只显示单词本身");
 
-  console.log("\n=== 4. 点屈折形式（回退查词）===");
-  const wf = passage.querySelector('.w[data-w="found"]');
-  click(wf, window);
-  const c2 = vocab.querySelector(".vcard");
-  ok(c2.querySelector(".vw").textContent === "found", "显示的是原词形 found");
-  ok(/发现/.test(c2.querySelector(".vcn").textContent), "回退到 find 的释义：发现");
+  console.log("\n=== 4. 屈折形式回退查词 ===");
+  click(passage.querySelector('.w[data-w="found"]'), window);
+  ok(/发现/.test(ana.textContent), "found 回退到 find 的释义：发现");
+  ok(hist.querySelector(".hlabel").textContent === "found", "历史里记的是原词形 found");
 
-  console.log("\n=== 4b. 词组里的单词仍可单独点 ===");
+  console.log("\n=== 5. 词组里的单词仍可单独点 ===");
   const inPhrase = passage.querySelector('.ph .w[data-w="up"]');
-  ok(!!inPhrase, "dig up 里的 up 存在（被词组包住）");
   click(inPhrase, window);
-  const cUp = vocab.querySelector(".vcard");
-  ok(cUp.querySelector(".vw").textContent === "up",
-    "点到的是单词 up 而不是整个词组（实际：" + cUp.querySelector(".vw").textContent + "）");
-  const phLink = cUp.querySelector("[data-vph]");
-  ok(!!phLink, "单词卡片里有「包含它的词组」入口");
-  click(phLink, window);
-  ok(vocab.querySelector(".vcard").classList.contains("phrase"),
-    "通过入口能进到词组：" + vocab.querySelector(".vcard .vw").textContent);
+  ok(/词条/.test(ana.textContent) && /^up/.test(ana.querySelector(".ana-sent").textContent.trim()),
+    "点到的是单词 up 而不是整个词组");
+  ok(!!ana.querySelector("[data-word]"), "词条里给出「包含它的词组」入口");
+  click(ana.querySelector("[data-word]"), window);
+  ok(/dig up/.test(ana.querySelector(".ana-sent").textContent), "通过入口进到词组 dig up");
 
-  console.log("\n=== 5. 点词组 ===");
-  const p1 = passage.querySelector(".ph");
-  const pkey = p1.dataset.ph;
-  const nBefore = vocab.querySelectorAll(".vcard").length;
-  click(p1, window);
-  const cards = vocab.querySelectorAll(".vcard");
-  ok(cards.length === nBefore + 1, "生词本累积 +1（" + nBefore + " → " + cards.length + "，不替换旧的）");
-  ok(cards[0].classList.contains("phrase"), "词组卡片带 phrase 样式，key=" + pkey);
-  ok(!!cards[0].querySelector(".vcn").textContent.trim(), "词组有中文释义");
-
-  console.log("\n=== 6. 点句子 → 右栏分析 ===");
-  const hardSent = passage.querySelector(".sent.hard");
-  click(hardSent, window);
-  ok(/句子分析/.test(ana.textContent), "右栏出现句子分析");
-  ok(ana.querySelectorAll(".struct tr").length > 0,
-    "成分拆解表 " + ana.querySelectorAll(".struct tr").length + " 行");
-  ok(ana.querySelectorAll(".chip").length > 0,
-    "语法点标签 " + ana.querySelectorAll(".chip").length + " 个");
+  console.log("\n=== 6. 点句子 → 分析面板 ===");
+  const s00 = passage.querySelector('.sent[data-sent="0-0"]');
+  click(s00, window);
+  ok(/句子分析/.test(ana.textContent), "分析面板显示句子讲解");
+  ok(!!ana.querySelector(".ana-spk[data-say]"), "面板顶部有句子朗读按钮");
+  ok(ana.querySelectorAll(".part").length > 0,
+    "成分拆解卡片 " + ana.querySelectorAll(".part").length + " 张");
+  ok(ana.querySelectorAll(".part .pname").length === ana.querySelectorAll(".part").length,
+    "每张卡片都有成分名");
+  const shades = [...ana.querySelectorAll(".part")].map(p => p.style.background);
+  ok(new Set(shades).size === shades.length, "卡片底色互不相同（依次加深）");
   ok(/翻译/.test(ana.textContent), "有翻译板块");
-  ok(ana.querySelectorAll(".sec-t").length >= 3, "分析板块 " + ana.querySelectorAll(".sec-t").length + " 个");
-  ok(hardSent.classList.contains("cur"), "当前句高亮");
+  ok(s00.classList.contains("cur"), "该句高亮");
+  ok(gutter.querySelector('.sbtns[data-for="0-0"]').classList.contains("cur"),
+    "页边对应那组按钮也高亮");
 
-  console.log("\n=== 7. 翻译按钮（默认隐藏）===");
-  const trb = passage.querySelector(".trb");
-  const trbox = passage.querySelector('[data-trbox="' + trb.dataset.tr + '"]');
-  ok(!!trbox, "翻译盒子存在");
-  ok(!trbox.classList.contains("show"), "默认不显示 ✓");
-  click(trb, window);
-  ok(trbox.classList.contains("show"), "点「译」后显示");
-  click(trb, window);
-  ok(!trbox.classList.contains("show"), "再点一次收起");
-
-  console.log("\n=== 8. 切到题目分析 ===");
-  click(doc.querySelector('.tab[data-tab="quiz"]'), window);
-  ok(doc.getElementById("passage").hidden, "原文已隐藏");
-  ok(!qList.hidden, "题目已显示");
-  ok(qList.querySelectorAll(".qcard").length === 6,
-    "卡片 " + qList.querySelectorAll(".qcard").length + " 个（1 选项池 + 5 题）");
-  ok(qList.querySelectorAll(".opt").length === 8, "选项 A–H 共 8 条");
-  ok([...qList.querySelectorAll(".opt .tag")].filter(t => /→ 第/.test(t.textContent)).length === 5,
-    "5 条选项被标记为已用");
-  ok([...qList.querySelectorAll(".opt .tag")].filter(t => /干扰项/.test(t.textContent)).length === 3,
-    "3 条标记为干扰项");
-
-  console.log("\n=== 9. 展开第 16 题 ===");
-  click(qList.querySelector('[data-qbtn="16"]'), window);
-  const qcard = qList.querySelector('[data-q="16"]');
-  ok(qcard.querySelector(".qbody").classList.contains("show"), "解析已展开");
-  ok(qcard.querySelector(".letter").textContent === "D", "答案字母 = D");
-  ok(/为什么选它/.test(qcard.textContent), "有解题思路");
-  ok(/线索词/.test(qcard.textContent), "有线索词");
-  ok(/其他选项为什么不行/.test(qcard.textContent), "有干扰项分析");
-  ok(/题目分析/.test(ana.textContent), "右栏同步显示题目解析");
-  ok(ana.querySelectorAll(".struct tr").length > 0, "右栏有答案句拆解");
-
-  console.log("\n=== 10. 选项里的词也能点 ===");
-  const ow = qList.querySelector('.opt .w[data-w="jewellery"]');
-  ok(!!ow, "选项 G 里的 jewellery 存在");
-  const n0 = vocab.querySelectorAll(".vcard").length;
-  click(ow, window);
-  ok(vocab.querySelectorAll(".vcard").length === n0 + 1, "选项里的词也进同一个生词本");
-
-  console.log("\n=== 11. 全局开关 ===");
-  click(doc.getElementById("tglQuiz"), window);
-  ok(doc.body.classList.contains("quiz"), "做题模式开启（CSS 会藏起答案句）");
-  click(doc.getElementById("tglAllTr"), window);
-  ok(doc.body.classList.contains("alltr"), "全部翻译开启");
-  ok(!!window.localStorage.getItem("pet-vocab-book1-v1"), "生词本已写入 localStorage");
-
-  console.log("\n=== 12. 语音引擎状态 ===");
-  ok(true, "jsdom 无 speechSynthesis，页面已做存在性判断未崩溃（真实发音需浏览器验证）");
-
-  console.log("\n=== 13. 2:1:1 网格与列显隐 ===");
-  const cols = doc.querySelector(".cols");
-  const col1 = doc.getElementById("col1");
-  const colAna = doc.getElementById("colAna");
-  const colVocab = doc.getElementById("colVocab");
-  const bAna = doc.getElementById("tglAna");
-  const bVocab = doc.getElementById("tglVocab");
-
-  ok(!!col1 && !!colAna && !!colVocab, "三个列节点都在（col1 / colAna / colVocab）");
-  ok(cols.firstElementChild === col1, "DOM 首位是第一列（窄屏堆叠顺序依赖它）");
-  ok(!cols.classList.contains("hide-ana") && !cols.classList.contains("hide-vocab"),
-    "默认两栏全显示");
-  ok(bAna.classList.contains("on") && bVocab.classList.contains("on"), "两个顶栏开关默认选中");
-  ok(/句子列/.test(bAna.title) && /单词列/.test(bVocab.title),
-    "按钮提示正确：" + bAna.title + " / " + bVocab.title);
-
-  click(bVocab, window);
-  ok(cols.classList.contains("hide-vocab") && !cols.classList.contains("hide-ana"),
-    "收起单词栏 → hide-vocab");
-  ok(!bVocab.classList.contains("on"), "开关变成未选中态");
-  ok(doc.body.contains(colVocab), "节点仍在 DOM（只是 CSS 隐藏，数据不丢）");
-  const dv = window.getComputedStyle(colVocab).display;
-  ok(dv === "none", "计算样式 display=" + dv + "（jsdom 级联支持有限，仅供参考）");
-
-  click(bAna, window);
-  ok(cols.classList.contains("hide-vocab") && cols.classList.contains("hide-ana"), "两栏都收起");
-  ok(/全屏/.test(doc.getElementById("col1Hint").textContent),
-    "第一列提示已全屏：" + doc.getElementById("col1Hint").textContent.trim());
-  // 注意：此时停在"题目分析"页，所以 passage 本就该是隐藏的，该查的是第一列本身
-  ok(!col1.hidden, "第一列还在");
-  ok(!doc.getElementById("qList").hidden, "第一列当前显示的是题目（当前在题目页）");
-
-  click(bVocab, window);
-  ok(!cols.classList.contains("hide-vocab") && cols.classList.contains("hide-ana"),
-    "只展开单词栏，句子栏仍收起");
-  ok(!/全屏/.test(doc.getElementById("col1Hint").textContent), "第一列提示恢复正常");
-
-  console.log("\n--- 列头 ✕ 按钮（守住 toggleCol 的 + 号陷阱）---");
-  const xbtn = doc.querySelector('[data-collapse="ana"]');
-  ok(!!xbtn, "句子分析栏头部有收起按钮");
-  click(xbtn, window);
-  ok(!cols.classList.contains("hide-ana"), "点 ✕ 展开句子栏（若此处失败，多半是 toggleCol 里多写了 + 号）");
-  click(xbtn, window);
-  ok(cols.classList.contains("hide-ana"), "再点一次收起");
-  const xv = doc.querySelector('[data-collapse="vocab"]');
-  click(xv, window);
-  ok(cols.classList.contains("hide-vocab"), "单词栏的 ✕ 也生效");
-
-  console.log("\n=== 14. 列状态持久化 ===");
-  const savedUI = JSON.parse(window.localStorage.getItem("pet-ui-book1-v1") || "null");
-  ok(savedUI && savedUI.vocab === false && savedUI.ana === false,
-    "列状态已存新结构：ana=" + (savedUI && savedUI.ana) + " vocab=" + (savedUI && savedUI.vocab));
-  ok(!!window.localStorage.getItem("pet-vocab-book1-v1"), "生词本存的是另一个 key，互不影响");
-
-  // 回到原文页、展开两栏，为后面的断言复位
-  click(doc.querySelector('.tab[data-tab="read"]'), window);
-  click(doc.getElementById("tglAna"), window);
-  click(doc.getElementById("tglVocab"), window);
-  ok(!cols.classList.contains("hide-ana") && !cols.classList.contains("hide-vocab"), "复位：两栏已展开");
-
-  console.log("\n=== 15. 每一句都能点讲（不只是长难句）===");
+  console.log("\n=== 7. 每一句都能点讲（不只长难句）===");
   const easy = passage.querySelector('.sent[data-sent="0-1"]');
-  ok(!!easy && !easy.classList.contains("hard"), "0-1 是普通句（不是长难句）");
+  ok(!easy.classList.contains("hard"), "0-1 是普通句");
   click(easy, window);
   ok(/句子分析/.test(ana.textContent), "普通句也出讲解");
-  ok(ana.querySelectorAll(".struct tr").length > 0,
-    "普通句也有成分拆解 " + ana.querySelectorAll(".struct tr").length + " 行");
-  ok(easy.classList.contains("cur"), "该句高亮");
-  ok(!!easy.querySelector(".row-btns .mini"), "每句都有行内按钮（析 / 🔊 / 译）");
-  const anaBtn = [...easy.querySelectorAll(".row-btns .mini")]
-    .find(b => b.textContent.trim() === "析");
-  ok(!!anaBtn, "有显式的「析」按钮");
+  ok(ana.querySelectorAll(".part").length > 0, "普通句也有成分拆解卡片");
 
-  console.log("\n=== 16. 句型字段 ===");
+  console.log("\n=== 8. 句型字段 ===");
   const MAIN_PAT = ["主谓宾", "主系表", "主谓双宾", "主谓", "倒装引语"];
-  let sentCount = 0, badPat = [];
+  let n = 0, bad = [];
   CONTENT.passage.paragraphs.forEach((p, pi) => p.forEach((s, si) => {
-    sentCount++;
+    n++;
     const pat = s.ana && s.ana.pat;
-    if (!Array.isArray(pat) || !pat.length || MAIN_PAT.indexOf(pat[0]) < 0) {
-      badPat.push(pi + "-" + si + " → " + JSON.stringify(pat));
-    }
+    if (!Array.isArray(pat) || !pat.length || MAIN_PAT.indexOf(pat[0]) < 0) bad.push(pi + "-" + si);
   }));
-  ok(sentCount === 22, "共 " + sentCount + " 句");
-  ok(badPat.length === 0, "22 句的 pat[0] 全部落在主句型白名单内");
-  badPat.slice(0, 5).forEach(b => console.log("      ✗ " + b));
+  ok(n === 22, "共 " + n + " 句");
+  ok(bad.length === 0, "22 句的主句型全部在白名单内");
+  bad.slice(0, 5).forEach(b => console.log("      ✗ " + b));
+  ok(/句型/.test(ana.textContent), "面板有「句型」板块");
+  ok(ana.querySelectorAll(".chip.pat").length > 0, "句型 chip 已渲染");
+  ok(ana.querySelector(".chip.pat").classList.contains("pat0"), "主句型带 pat0 样式");
 
-  ok(/句型/.test(ana.textContent), "右栏有「句型」板块");
-  const patChips = ana.querySelectorAll(".chip.pat");
-  ok(patChips.length > 0, "句型 chip 渲染了 " + patChips.length + " 个");
-  ok(patChips[0].classList.contains("pat0"), "主句型（第一个）带 pat0 高亮样式");
-  const curPat = CONTENT.passage.paragraphs[0][1].ana.pat;
-  ok(patChips.length === curPat.length,
-    "chip 数量与数据一致（" + patChips.length + " vs " + curPat.length + "）");
+  console.log("\n=== 9. 历史列：词 / 句区分与置顶 ===");
+  const sLabel = hist.querySelector(".hitem.s .hlabel");
+  ok(!!sLabel, "历史里有「句」类型的行");
+  const sl = sLabel.textContent;
+  ok(/…$/.test(sl), "句子标签以省略号结尾：" + sl);
+  ok(sl.replace(" …", "").split(" ").length === 4, "只取前 4 个词");
+  ok(hist.querySelector(".hitem.s .hbadge").textContent === "句", "圆圈徽标是「句」");
 
-  console.log("\n=== 17. 单词单行列表 + 点击展开 ===");
-  const wOrd = passage.querySelector('.w[data-w="museum"]');
-  click(wOrd, window);
-  let row = vocab.querySelector(".vcard");
-  ok(!row.classList.contains("open"), "新收录的行默认收起");
-  const line = row.querySelector(".vhead .vline");
-  ok(!!line, "有单行容器 .vline");
-  ok(!!line.querySelector(".vw") && !!line.querySelector(".vipa") &&
-     !!line.querySelector(".vpos") && !!line.querySelector(".vcn"),
-    "单行内同时含 单词 / 音标 / 词性 / 中文 四项");
-  ok(!!row.querySelector(".vbody"), "有展开体 .vbody（内容默认仍在，只是 CSS 隐藏）");
+  // 重复点击置顶
+  const firstW = [...hist.querySelectorAll(".hitem.w")].pop();   // 最早那条词
+  const oldKey = firstW.querySelector(".hlabel").textContent;
+  const total = hist.querySelectorAll(".hitem").length;
+  click(passage.querySelector('.w[data-w="' + oldKey + '"]'), window);
+  ok(hist.querySelectorAll(".hitem").length === total, "重复点击不新增行");
+  ok(hist.querySelector(".hitem .hlabel").textContent === oldKey, "重复点击把它提到最上面");
 
-  click(row.querySelector(".vhead"), window);
-  row = vocab.querySelector(".vcard");
-  ok(row.classList.contains("open"), "点该行 → 展开");
-  ok(row.querySelector(".vhead").getAttribute("aria-expanded") === "true", "aria-expanded 同步");
+  console.log("\n=== 10. 历史列：点回去 / 删除 / 持久化 ===");
+  const sRow = [...hist.querySelectorAll(".hitem.s")].pop();
+  click(sRow.querySelector(".hopen"), window);
+  ok(/句子分析/.test(ana.textContent), "点历史里的「句」能重新显示讲解");
+  ok(sRow.classList.contains("cur") || hist.querySelector(".hitem.cur"), "该行高亮");
 
-  // 关键：再点一个别的词会触发 renderVocab 全量重刷，展开态必须活下来
-  click(passage.querySelector('.w[data-w="team"]'), window);
-  row = vocab.querySelector(".vcard");
-  const stillOpen = [...vocab.querySelectorAll(".vcard")]
-    .filter(c => c.classList.contains("open"));
-  ok(stillOpen.length === 1,
-    "全量重刷后仍有 " + stillOpen.length + " 行保持展开（守住 state.openV）");
-  ok(/museum/.test(stillOpen[0].textContent), "保持展开的正是刚才那一行（museum）");
+  const cnt0 = hist.querySelectorAll(".hitem").length;
+  click(hist.querySelector(".hitem .hdel"), window);
+  ok(hist.querySelectorAll(".hitem").length === cnt0 - 1, "删除按钮少一行");
+  ok(!!window.localStorage.getItem("pet-hist-book1-v1"), "历史已写入 localStorage");
 
-  // 注意：上面点击 team 已触发全量重刷，变量 row 指向的是被丢弃的旧节点。
-  // 必须重新查询当前 DOM，否则点的是不存在的元素（静默无效）
-  const openRow = [...vocab.querySelectorAll(".vcard")].find(c => c.classList.contains("open"));
-  click(openRow.querySelector(".vhead"), window);
-  ok(vocab.querySelectorAll(".vcard.open").length === 0, "再点一次收起");
+  console.log("\n=== 11. 切到题目分析页 ===");
+  click(doc.querySelector('.tab[data-tab="quiz"]'), window);
+  ok(doc.getElementById("passage").hidden, "原文隐藏");
+  ok(!qList.hidden, "题目显示");
+  ok(qList.querySelectorAll(".qcard").length === 6, "选项池 + 5 道题");
+  ok(qList.querySelectorAll(".opt").length === 8, "选项 A–H 共 8 条");
+  ok(passage.querySelectorAll(".qmini").length === 0, "原文页不再有题目（已按需求移出）");
+  ok(doc.querySelectorAll("[data-q]").length === 5, "带 data-q 的题卡只有 5 个");
 
-  console.log("\n=== 18. 词组自动推导（与正文黄标零漂移）===");
-  ok(/本句词组/.test(ana.textContent), "分析栏有「本句词组」板块");
-  const derived = [...ana.querySelectorAll("[data-vph]")].map(b => b.dataset.vph);
-  const inText = [...easy.querySelectorAll(".ph")].map(p => p.dataset.ph);
-  ok(derived.length > 0, "0-1 推导出词组 " + JSON.stringify(derived));
-  ok(JSON.stringify(derived.slice().sort()) === JSON.stringify(inText.slice().sort()),
-    "推导集合 === 正文该句黄标集合（" + JSON.stringify(inText) + "）");
+  console.log("\n=== 12. 展开题目分析 ===");
+  click(qList.querySelector('[data-qbtn="16"]'), window);
+  const q16 = qList.querySelector('[data-q="16"]');
+  ok(q16.querySelector(".qbody").classList.contains("show"), "解析展开");
+  ok(q16.querySelector(".letter").textContent === "D", "答案 = D");
+  ok(/为什么选它/.test(q16.textContent), "有解题思路");
+  ok(/其他选项为什么不行/.test(q16.textContent), "有干扰项分析");
+  ok(/题目分析/.test(ana.textContent), "分析面板同步显示题目解析");
 
-  // 逐句真比对：挨个点开每一句，把推导出的词组和该句正文里的黄标词组对照
+  console.log("\n=== 13. 选项里的词也能点 ===");
+  const ow = qList.querySelector('.opt .w[data-w="jewellery"]');
+  ok(!!ow, "选项 G 里的 jewellery 存在");
+  click(ow, window);
+  ok(/ˈdʒuːəlri/.test(ana.textContent), "点选项里的词也进分析面板");
+  ok(hist.querySelector(".hlabel").textContent === "jewellery", "也进了历史");
+
+  console.log("\n=== 14. 全局开关 ===");
+  click(doc.getElementById("tglQuiz"), window);
+  ok(doc.body.classList.contains("quiz"), "做题模式开启");
+  click(doc.getElementById("tglQuiz"), window);
+  ok(!doc.body.classList.contains("quiz"), "再点关闭");
+  ok(!doc.getElementById("tglAllTr"), "「全部翻译」开关已移除（翻译进了分析面板）");
+
+  console.log("\n=== 15. 列的隐藏 / 展开 ===");
+  const colAna = doc.getElementById("colAna");
+  const colHist = doc.getElementById("colVocab");
+  const bAna = doc.getElementById("tglAna");
+  const bHist = doc.getElementById("tglVocab");
+  ok(!cols.classList.contains("hide-ana") && !cols.classList.contains("hide-vocab"), "默认三列全显示");
+  ok(cols.firstElementChild === doc.getElementById("col1"), "DOM 首位是原文列");
+  click(bHist, window);
+  ok(cols.classList.contains("hide-vocab") && !cols.classList.contains("hide-ana"), "收起历史列");
+  ok(window.getComputedStyle(colHist).display === "none", "历史列 display:none");
+  click(bAna, window);
+  ok(cols.classList.contains("hide-ana") && cols.classList.contains("hide-vocab"), "两列都收起");
+  ok(/全屏/.test(doc.getElementById("col1Hint").textContent), "第一列提示已全屏");
+  const xb = doc.querySelector('[data-collapse="ana"]');
+  click(xb, window);
+  ok(!cols.classList.contains("hide-ana"), "列头 ✕ 展开分析列");
+  ok(cols.classList.contains("hide-vocab"), "历史列此时仍收着");
+  click(doc.getElementById("tglVocab"), window);   // 只差历史列没展开，别再动分析列
+  ok(!cols.classList.contains("hide-ana") && !cols.classList.contains("hide-vocab"), "复位：三列全显示");
+  const savedUI = JSON.parse(window.localStorage.getItem("pet-ui-book1-v1") || "null");
+  ok(savedUI && savedUI.ana === true && savedUI.vocab === true,
+    "列状态已落盘且与当前一致（ana=" + (savedUI && savedUI.ana) +
+    " vocab=" + (savedUI && savedUI.vocab) + "）");
+
+  console.log("\n=== 16. 词组自动推导（与正文黄标零漂移）===");
+  click(doc.querySelector('.tab[data-tab="read"]'), window);
   let drift = [];
   for (let pi = 0; pi < CONTENT.passage.paragraphs.length; pi++) {
     for (let si = 0; si < CONTENT.passage.paragraphs[pi].length; si++) {
       const el = passage.querySelector('[data-sent="' + pi + "-" + si + '"]');
       click(el, window);
-      const fromAna = [...ana.querySelectorAll("[data-vph]")].map(b => b.dataset.vph).sort();
+      const fromAna = [...ana.querySelectorAll("[data-word]")].map(b => b.dataset.word).sort();
       const fromTxt = [...el.querySelectorAll(".ph")].map(p => p.dataset.ph).sort();
       if (JSON.stringify(fromAna) !== JSON.stringify(fromTxt)) {
         drift.push(pi + "-" + si + " 分析=" + JSON.stringify(fromAna) + " 正文=" + JSON.stringify(fromTxt));
@@ -317,14 +242,258 @@ function run() {
   ok(drift.length === 0, "22 句逐句比对：推导词组 === 正文黄标词组");
   drift.slice(0, 4).forEach(d => console.log("      ✗ " + d));
 
-  ok(!!ana.querySelector("[data-vph]"), "分析栏的词组 chip 可点");
-  click(easy, window);                                   // 回到 0-1（含 dig up）
-  const chip = ana.querySelector("[data-vph]");
-  const chipKey = chip.dataset.vph;
-  click(chip, window);
-  const top = vocab.querySelector(".vcard");
-  ok(top.querySelector(".vw").textContent === chipKey,
-    "点分析栏的词组 chip → 该词组跳到生词本首行（" + chipKey + "）");
+  console.log("\n=== 17. 清空历史 ===");
+  ok(hist.querySelectorAll(".hitem").length > 0, "清空前有 " + hist.querySelectorAll(".hitem").length + " 行");
+  window.confirm = () => true;
+  click(doc.getElementById("btnClear"), window);
+  ok(hist.querySelectorAll(".hitem").length === 0, "清空后没有行");
+  ok(/🕘/.test(hist.textContent), "显示空状态提示");
+
+  console.log("\n=== 18. 原句吸顶 ===");
+  click(passage.querySelector('.sent[data-sent="0-0"]'), window);
+  const top = ana.querySelector(".ana-top");
+  ok(!!top, "原句外面包了 .ana-top");
+  ok(!!top.querySelector(".ana-sent"), "原句在吸顶容器内");
+  ok(!!top.querySelector(".ana-h"), "标题和喇叭也在吸顶容器内");
+  ok(window.getComputedStyle(top).position === "sticky",
+    "position=" + window.getComputedStyle(top).position + "（jsdom 级联支持有限，仅供参考）");
+
+  console.log("\n=== 19. 点句型 → 原句里标红对应部分 ===");
+  // 全篇回归：58 个句型 chip 一个都不能定位不到，
+  // 否则用户点了没反应，功能就是半残的。
+  // 注意：这个循环会把分析面板重渲染 22 次，之前抓的 DOM 引用全部作废，
+  // 所以必须放在取 patChips 之前。
+  let chipTot = 0, chipDead = [];
+  for (let pi = 0; pi < CONTENT.passage.paragraphs.length; pi++) {
+    for (let si = 0; si < CONTENT.passage.paragraphs[pi].length; si++) {
+      click(passage.querySelector('[data-sent="' + pi + "-" + si + '"]'), window);
+      ana.querySelectorAll("button.chip.pat").forEach(c => {
+        chipTot++;
+        if (c.classList.contains("static")) chipDead.push(pi + "-" + si + " 「" + c.dataset.pat + "」");
+      });
+    }
+  }
+  ok(chipDead.length === 0,
+    "全篇 " + chipTot + " 个句型 chip 全部可定位（点了都有反应）");
+  chipDead.slice(0, 6).forEach(d => console.log("      ✗ 定位不到 " + d));
+
+  click(passage.querySelector('.sent[data-sent="0-0"]'), window);
+  const patChips = [...ana.querySelectorAll("button.chip.pat")];
+  ok(patChips.length > 0, "回到 0-0，句型 chip " + patChips.length + " 个，是可点的 button");
+  ok(patChips.every(c => !c.classList.contains("static")), "0-0 这句的句型都能定位到成分");
+
+  const sentBox = ana.querySelector(".ana-sent");
+  const rawText = sentBox.textContent;
+
+  const passive = patChips.find(c => c.dataset.pat === "被动语态");
+  ok(!!passive, "找到「被动语态」chip");
+  click(passive, window);
+  let hls = [...ana.querySelectorAll(".ana-sent .hl")];
+  ok(hls.length === 1, "标红了 " + hls.length + " 处");
+  ok(hls[0].textContent === "was given", "标出的正是 " + hls[0].textContent);
+  ok(passive.classList.contains("on"), "该 chip 变成选中态");
+  const sheetText = [...doc.querySelectorAll("style")].map(s => s.textContent).join("");
+  ok(/@keyframes hlpop/.test(sheetText) && /scale\(1\.1\)/.test(sheetText),
+    "样式表里有 hlpop 的 1.1→1.0 缩放关键帧");
+  ok(hls[0].classList.contains("reveal"),
+    "动画期间挂 .reveal（inline-block，否则 transform 对 inline 无效）");
+  ok(sentBox.textContent === rawText, "标红不改变原句文字（只加包裹）");
+
+  // 换一个句型：旧标记要清掉
+  const sv = patChips.find(c => c.dataset.pat === "主谓宾");
+  click(sv, window);
+  hls = [...ana.querySelectorAll(".ana-sent .hl")];
+  ok(hls.length === 3, "「主谓宾」标出 3 处（主/谓/宾），实际 " + hls.length);
+  ok(hls.map(x => x.textContent).join("|") === "Kate Marshall|was given|a very exciting opportunity",
+    "标出的是：" + hls.map(x => x.textContent).join(" / "));
+  ok(!passive.classList.contains("on"), "上一个 chip 的选中态已清除");
+  ok(sv.classList.contains("on"), "新 chip 变成选中态");
+
+  // 点自己 = 取消
+  click(sv, window);
+  ok(ana.querySelectorAll(".ana-sent .hl").length === 0, "再点一次清除标记");
+  ok(!sv.classList.contains("on"), "选中态也清掉");
+  ok(sentBox.textContent === rawText, "清除后原句完好");
+
+  // 切到别的句子，不能残留上一次的标记
+  click(passive, window);
+  ok(ana.querySelectorAll(".ana-sent .hl").length === 1, "先标上");
+  click(passage.querySelector('.sent[data-sent="1-0"]'), window);
+  ok(ana.querySelectorAll(".ana-sent .hl").length === 0, "换一句后标记不残留");
+  ok(ana.querySelectorAll(".chip.pat.on").length === 0, "chip 选中态也不残留");
+
+  console.log("\n=== 20. 历史里的词条：只留英文 + 中文 ===");
+  click(passage.querySelector('.w[data-w="ancient"]'), window);
+  const wrow = hist.querySelector(".hitem.w");
+  ok(wrow.querySelector(".hlabel").textContent === "ancient", "有英文");
+  ok(/古老的/.test(wrow.querySelector(".hcn").textContent),
+    "有中文：" + wrow.querySelector(".hcn").textContent);
+  ok(!wrow.querySelector(".hipa"), "音标已去掉");
+  ok(!wrow.querySelector(".hpos"), "词性已去掉");
+  const srow = hist.querySelector(".hitem.s");
+  ok(!srow.querySelector(".hcn"), "句行不套用词条的排版");
+  ok(/…$/.test(srow.querySelector(".hlabel").textContent), "句行仍是前 4 词 + 省略号");
+
+  console.log("\n=== 21. 顶栏按钮文案与列标题 ===");
+  ok(/小黑板/.test(doc.getElementById("tglAna").textContent),
+    "顶栏开关已改名：" + doc.getElementById("tglAna").textContent);
+  ok(/小黑板/.test(doc.querySelector("#colAna .col-head > span").textContent),
+    "第二列标题：" + doc.querySelector("#colAna .col-head > span").textContent);
+  ok(/历史/.test(doc.getElementById("tglVocab").textContent),
+    "「历史」：" + doc.getElementById("tglVocab").textContent);
+  ok(!/分析面板/.test(doc.body.textContent), "页面上不再出现「分析面板」字样");
+
+  console.log("\n=== 22. 页边「析」按钮 ===");
+  const anaBtn = gutter.querySelector('.sbtns[data-for="3-1"] [data-ana]');
+  ok(!!anaBtn, "「析」按钮带 data-ana（没有它点击会毫无反应）");
+  ok(anaBtn.dataset.ana === "3-1", "标的归属正确");
+  const sheetTxt = [...doc.querySelectorAll("style")].map(s => s.textContent).join("");
+  ok(/\.sent\.peek/.test(sheetTxt), "样式表里有 .sent.peek 粉色高亮规则");
+
+  ana.innerHTML = "";
+  click(anaBtn, window);
+  ok(/句子分析/.test(ana.textContent), "点「析」弹出该句讲解");
+  ok(/as…as|比较/.test(ana.textContent), "内容确实是 3-1 那句（as…as 比较句）");
+  ok(passage.querySelector('.sent[data-sent="3-1"]').classList.contains("cur"), "该句高亮");
+  ok(hist.querySelector(".hitem .hlabel").textContent.indexOf("However") === 0,
+    "也进了历史：" + hist.querySelector(".hitem .hlabel").textContent);
+
+  // 悬停变粉：CSS 规则已在上面验过，这里验证 JS 会挂 / 摘这个类
+  anaBtn.dispatchEvent(new window.MouseEvent("mouseover", { bubbles: true }));
+  ok(passage.querySelector('.sent[data-sent="3-1"]').classList.contains("peek"),
+    "鼠标停到「析」上，对应句挂 .peek（变粉）");
+  anaBtn.dispatchEvent(new window.MouseEvent("mouseout", { bubbles: true }));
+  ok(!passage.querySelector('.sent[data-sent="3-1"]').classList.contains("peek"),
+    "移开恢复原背景");
+
+  console.log("\n=== 23. 原文页 = 文章 + 题目 ===");
+  click(doc.querySelector('.tab[data-tab="read"]'), window);
+  const qRead = doc.getElementById("qListRead");
+  ok(!qRead.hidden, "原文页的题目区可见");
+  ok(!passage.hidden, "文章也在（题目加在文章下面）");
+  ok(qRead.querySelectorAll(".opt").length === 8, "含 A–H 选项池");
+  ok(qRead.querySelectorAll(".qmini").length === 0,
+    "原文页不再有 16–20 的题卡（解析改从选项的「答题解析」看）");
+  ok(!qRead.querySelector("[data-qbtn]"), "原文页没有题卡「分析」按钮");
+  // 每行三个动作
+  const acts = qRead.querySelector(".opt .oacts");
+  ok(!!acts, "选项行右边有动作区");
+  ok(acts.querySelectorAll(".obtn").length === 3, "每行三个按钮");
+  ok(/句子分析/.test(acts.querySelector("[data-ana]").textContent), "第一个是「句子分析」");
+  ok(!!acts.querySelector("[data-sayraw]"), "第二个是朗读");
+  ok(/答题解析/.test(acts.querySelector("[data-qexp]").textContent), "第三个是「答题解析」");
+  ok(qRead.querySelectorAll("[data-qexp]").length === 8, "8 条选项都有答题解析按钮");
+
+  console.log("\n=== 24. 选项也按句子 / 词 / 词组分析 ===");
+  const optA = qRead.querySelector('.opt[data-opt="A"]');
+  ok(optA.querySelectorAll(".w").length > 5, "选项里的词可点（" + optA.querySelectorAll(".w").length + " 个）");
+  ok(!!optA.querySelector("[data-ana]"), "选项有「句子分析」按钮");
+  ok(!!optA.querySelector("[data-sayraw]"), "选项有朗读按钮");
+  ok(Object.keys(CONTENT.optionsAna || {}).length === 8, "8 个选项都有分析数据");
+
+  // 选项的句子分析要能被解析出来（anaData 支持 opt: 前缀）
+  click(optA.querySelector("[data-ana]"), window);
+  ok(/句子分析/.test(ana.textContent), "点选项的「析」出讲解");
+  ok(/figure/.test(ana.textContent), "内容是选项 A（figure 的一词多义）");
+  ok(ana.querySelectorAll(".part").length > 0, "选项也有成分拆解卡片");
+  ok(ana.querySelectorAll("button.chip.pat").length > 0, "选项也有可点句型");
+  ok(ana.querySelectorAll("button.chip.pat.static").length === 0, "选项 A 的句型都能定位");
+  // 全量：8 个选项的每个句型 chip 都要能定位，跟正文那条卡口一个道理
+  let oChipTot = 0, oChipDead = [];
+  ["A", "B", "C", "D", "E", "F", "G", "H"].forEach(L => {
+    click(qRead.querySelector('.opt[data-opt="' + L + '"] [data-ana]'), window);
+    ana.querySelectorAll("button.chip.pat").forEach(c => {
+      oChipTot++;
+      if (c.classList.contains("static")) oChipDead.push(L + " 「" + c.dataset.pat + "」");
+    });
+  });
+  ok(oChipDead.length === 0, "8 个选项共 " + oChipTot + " 个句型 chip 全部可定位");
+  oChipDead.forEach(d => console.log("      ✗ 定位不到 " + d));
+  click(optA.querySelector("[data-ana]"), window);
+  ok(optA.classList.contains("cur"), "选项整条高亮");
+  const oHist = hist.querySelector(".hitem.s .hlabel").textContent;
+  ok(/^It turned out/.test(oHist), "选项也以「句」的身份进历史：" + oHist);
+
+  // 词组标黄在选项里也生效
+  let optPhrase = 0;
+  qRead.querySelectorAll(".opt .ph").forEach(() => optPhrase++);
+  ok(optPhrase > 0, "选项里的词组也标黄（" + optPhrase + " 处）");
+
+  console.log("\n=== 25. 点选项整句（不只是「析」按钮）===");
+  ana.innerHTML = "";
+  const optD = qRead.querySelector('.opt[data-opt="D"]');
+  click(optD.querySelector(".otxt"), window);
+  ok(/句子分析/.test(ana.textContent), "点选项文字也出讲解");
+  ok(/In fact/.test(ana.textContent), "内容是选项 D");
+
+  console.log("\n=== 26. 词条判空 ===");
+  ana.innerHTML = '<div class="ana">占位</div>';
+  const before = ana.textContent;
+  // 直接调内部接口不现实，这里模拟：点正文里非单词区域（段落空白）
+  click(passage.querySelector(".para"), window);
+  ok(ana.textContent === before, "点到非单词区域不改变面板（不会渲染空白卡片）");
+  // 全量扫描：每个可点元素都得产出有内容的词条/讲解，不许出空卡片
+  let scanned = 0, blanks = [];
+  const probe = el => {
+    scanned++;
+    click(el, window);
+    const t = ana.textContent.replace(/\s+/g, " ").trim();
+    if (!ana.querySelector(".ana-sent") || t.length < 12) blanks.push((el.dataset.w || el.dataset.ph || "?") + " → «" + t.slice(0, 40) + "»");
+  };
+  passage.querySelectorAll(".w").forEach(probe);
+  passage.querySelectorAll(".ph").forEach(probe);
+  qRead.querySelectorAll(".w").forEach(probe);
+  ok(blanks.length === 0, "扫描 " + scanned + " 个可点元素，没有空词条");
+  blanks.slice(0, 5).forEach(b => console.log("      ✗ 空面板 " + b));
+
+  console.log("\n=== 27. 答题解析 ===");
+  click(doc.querySelector('.tab[data-tab="read"]'), window);
+  const qr = doc.getElementById("qListRead");
+
+  // A 是第 20 题的答案
+  click(qr.querySelector('.opt[data-opt="A"] [data-qexp]'), window);
+  ok(/答题解析 · 选项 A/.test(ana.textContent), "小黑板显示答题解析");
+  ok(/它是第 20 题的答案/.test(ana.textContent), "指出 A 是第 20 题的答案");
+  ok(/为什么|因为|指代|figure/.test(ana.textContent), "带上了该题的解题思路");
+  ok(/线索词/.test(ana.textContent), "有线索词板块");
+  ok(/做题方法/.test(ana.textContent), "有做题方法");
+
+  // B 是干扰项，且在多题里被提及
+  click(qr.querySelector('.opt[data-opt="B"] [data-qexp]'), window);
+  ok(/它不填任何空/.test(ana.textContent), "指出 B 不填任何空");
+  ok(/干扰项/.test(ana.textContent), "明确标为干扰项");
+  ok(/第 1[6-9] 题|第 20 题/.test(ana.textContent), "列出它在哪些题里被当成干扰项");
+
+  console.log("\n--- 答题解析不进历史 ---");
+  // 先把历史清空，否则前面几轮测试已经把 8 个选项都点进去了，
+  // 行数不变说明不了任何问题（去重后只是置顶）
+  window.confirm = () => true;
+  click(doc.getElementById("btnClear"), window);
+  ok(hist.querySelectorAll(".hitem").length === 0, "历史已清空，从零开始验");
+
+  click(qr.querySelector('.opt[data-opt="C"] [data-qexp]'), window);
+  ok(/答题解析/.test(ana.textContent), "答题解析已渲染");
+  ok(hist.querySelectorAll(".hitem").length === 0, "点答题解析不产生历史行");
+  ok(hist.querySelectorAll(".hitem.cur").length === 0, "也不高亮任何历史行");
+
+  console.log("\n--- 但句子分析仍然进历史 ---");
+  click(qr.querySelector('.opt[data-opt="C"] [data-ana]'), window);
+  ok(hist.querySelectorAll(".hitem").length === 1,
+    "句子分析照常记一行（0 → " + hist.querySelectorAll(".hitem").length + "）");
+  ok(hist.querySelector(".hitem").classList.contains("s"), "记的是「句」类型");
+
+  console.log("\n=== 28. 列宽比例 ===");
+  const css = [...doc.querySelectorAll("style")].map(s => s.textContent).join("");
+  // 注意：.cols 里 display:grid 和 grid-template-columns 之间夹着注释，
+  // 正则不能写死成相邻
+  const m = css.match(/grid-template-columns:minmax\(0,([\d.]+)fr\)\s*minmax\(0,([\d.]+)fr\)\s*minmax\(0,([\d.]+)fr\)/);
+  ok(!!m, "找到三列网格定义");
+  if (m) {
+    const [a, b, c] = [+m[1], +m[2], +m[3]];
+    ok(c === 0.86, "历史列 " + c + "fr（上一版 .43fr，正好加宽一倍）");
+    ok(Math.abs(a / b - 1 / 0.8) < 0.02,
+      "原文 : 小黑板 = " + (a / b).toFixed(3) + "，目标 1.25（即 1 : 0.8）");
+  }
 
   console.log("\n" + (fail === 0 ? "★ 全部通过" : "★ " + fail + " 项失败") +
     "  ——  通过 " + pass + " / 失败 " + fail);
