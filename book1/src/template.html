@@ -22,19 +22,23 @@
 
   <div class="tools">
     <span class="voice-warn" id="voiceWarn" hidden></span>
+
+    <label class="zoom" title="只放大原文和小黑板，历史不受影响">
+      <span id="zoomLabel">1x</span>
+      <input type="range" id="zoomRange" min="1" max="5" step="0.5" value="1">
+    </label>
+
     <button class="tool on" id="tglAna" title="显示 / 隐藏小黑板">▣ 小黑板</button>
-    <button class="tool on" id="tglVocab" title="显示 / 隐藏右侧的历史记录列">▣ 历史</button>
+    <button class="tool" id="tglVocab" title="显示 / 隐藏历史浮动面板">▣ 历史</button>
     <button class="tool" id="tglQuiz">做题模式</button>
     <button class="tool" id="btnStop">⏹ 停止朗读</button>
     <button class="tool" id="btnClear">清空历史</button>
   </div>
 </div>
 
-<!-- DOM 顺序 = col1 → colAna → colVocab。
-     窄屏 grid-template-areas:none 后按 DOM 顺序流式排布，
-     这个顺序让窄屏堆叠也是「原文 → 分析 → 历史」的阅读顺序 -->
+<!-- 两列各占一半。历史不在网格里，是右侧浮层 -->
 <div class="cols">
-  <!-- 第一列：原文 / 题目 切换 -->
+  <!-- 第一列：原文 + 题目 -->
   <div class="col" id="col1">
     <div class="col-head">
       <span id="col1Title">原文</span>
@@ -57,17 +61,17 @@
     </div>
     <div class="col-body" id="analysis"></div>
   </div>
-
-  <!-- 第三列：历史动作 -->
-  <div class="col" id="colVocab">
-    <div class="col-head">
-      <span>历史</span>
-      <span class="hint">点过的都记在这 · 重复点击置顶</span>
-      <button class="collapse" data-collapse="vocab" title="收起历史列">✕</button>
-    </div>
-    <div class="col-body" id="history"></div>
-  </div>
 </div>
+
+<!-- 历史：右侧浮层，点顶栏「历史」滑出。字体不参与缩放 -->
+<aside class="hist-float" id="histFloat" hidden>
+  <div class="hist-head">
+    <span>历史</span>
+    <span class="hist-hint">点过的都记在这 · 重复点击置顶</span>
+    <button class="hist-close" id="histClose" title="收起历史">✕</button>
+  </div>
+  <div class="hist-body" id="history"></div>
+</aside>
 
 <script>
 /*__CONTENT__*/

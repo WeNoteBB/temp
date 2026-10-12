@@ -27,10 +27,8 @@
   }
 
   /* ---- 右半两栏的显示 / 隐藏（与生词本分开存） ---- */
-  var LS_UI = "pet-ui-book1-v1";
-  var cols = { ana: true, vocab: true };
-  // [状态键, 顶栏按钮 id 后缀, 按钮文案]
-  var COL_DEFS = [["ana", "Ana", "小黑板"], ["vocab", "Vocab", "历史"]];
+  var LS_UI = "pet-ui-book1-v2";
+  var cols = { ana: true, vocab: false };   // vocab 现在指历史浮层，默认收起
 
   function loadUI() {
     try {
@@ -47,24 +45,57 @@
 
   function applyCols() {
     var box = document.querySelector(".cols");
-    if (!box) return;
-    box.classList.toggle("hide-ana", !cols.ana);
-    box.classList.toggle("hide-vocab", !cols.vocab);
-    COL_DEFS.forEach(function (d) {
-      var b = document.getElementById("tgl" + d[1]);
-      if (!b) return;
-      b.classList.toggle("on", cols[d[0]]);
-      b.textContent = (cols[d[0]] ? "▣ " : "▢ ") + d[2];
-      b.title = (cols[d[0]] ? "收起" : "展开") + d[2];
-    });
-    // 第一列提示：两栏都收起时改成"已全屏"。基准文案由 switchTab 写入 dataset.orig
+    if (box) box.classList.toggle("hide-ana", !cols.ana);
+
+    var bAna = document.getElementById("tglAna");
+    if (bAna) {
+      bAna.classList.toggle("on", cols.ana);
+      bAna.textContent = (cols.ana ? "▣ " : "▢ ") + "小黑板";
+      bAna.title = (cols.ana ? "收起" : "展开") + "小黑板";
+    }
+    var bHist = document.getElementById("tglVocab");
+    if (bHist) {
+      bHist.classList.toggle("on", cols.vocab);
+      bHist.textContent = (cols.vocab ? "▣ " : "▢ ") + "历史";
+      bHist.title = (cols.vocab ? "收起" : "展开") + "历史浮动面板";
+    }
+    // 历史不再是网格列，是右侧浮层
+    var fl = document.getElementById("histFloat");
+    if (fl) fl.hidden = !cols.vocab;
+
+    // 第一列提示：小黑板也收起时改成"已全屏"
     var hint = document.getElementById("col1Hint");
     if (hint && hint.dataset.orig) {
-      hint.innerHTML = (!cols.ana && !cols.vocab)
-        ? "已全屏 · 可从顶栏重新展开句子 / 单词栏"
+      hint.innerHTML = !cols.ana
+        ? "已全屏 · 可从顶栏重新展开小黑板"
         : hint.dataset.orig;
     }
     saveUI();
+  }
+
+  /* ---- 字号缩放 ----
+     只作用于原文和小黑板（两栏的 font-size / 盒子尺寸都乘了 --zoom）。
+     历史浮层、顶栏、页面骨架不参与。 */
+  var LS_ZOOM = "pet-zoom-book1-v1";
+
+  function applyZoom(z) {
+    z = Math.min(5, Math.max(1, Number(z) || 1));
+    document.documentElement.style.setProperty("--zoom", z);
+    var lab = document.getElementById("zoomLabel");
+    if (lab) lab.textContent = (z % 1 ? z.toFixed(1) : z) + "x";
+    var r = document.getElementById("zoomRange");
+    if (r && Number(r.value) !== z) r.value = String(z);
+    try { localStorage.setItem(LS_ZOOM, String(z)); } catch (e) {}
+    // 字号一变，整篇的行位置全变了，页边按钮必须重新量
+    gutterNowAndNextFrame();
+  }
+
+  function loadZoom() {
+    try {
+      var v = localStorage.getItem(LS_ZOOM);
+      if (v) return Number(v) || 1;
+    } catch (e) {}
+    return 1;
   }
 
   function toggleCol(key) {
@@ -358,35 +389,54 @@
     var t = w.nextNode();
     var box = el.getBoundingClientRect();
     if (!t) return box.top;
+    // 有些环境（jsdom 等）没有 Range.getBoundingClientRect，缺了就退回整块的顶边 ——
+    // 对单行句子来说两者相同，多行句子用并集的顶边也仍然是第一行
+    if (!document.createRange) return box.top;
     var r = document.createRange();
+    if (!r.getBoundingClientRect) return box.top;
     r.setStart(t, 0);
     r.setEnd(t, Math.min(1, t.length));
     var rect = r.getBoundingClientRect();
-    return rect.height ? rect.top : box.top;
+    return rect && rect.height ? rect.top : box.top;
   }
 
   function layoutGutter() {
     var gut = document.getElementById("pgutter");
     var box = document.getElementById("passage");
     if (!gut || !box || box.hidden) return;
-    if (!box.getBoundingClientRect().height) return;   // 不可见时量出来全是 0
-    var boxTop = box.getBoundingClientRect().top;
-    var prevBottom = -1e9;
-    [].slice.call(gut.children).forEach(function (g) {
+    var boxRect = box.getBoundingClientRect();
+    if (!boxRect.height) return;                       // 不可见时量出来全是 0
+
+    // 第一遍：只量，一个字节都不写 DOM。
+    // 边量边写的话，后一句的测量会受前一次写入影响 —— 缩放刚变、布局还在收敛时最容易出问题
+    var items = [].slice.call(gut.children).map(function (g) {
       var sent = box.querySelector('.sent[data-sent="' + g.dataset.for + '"]');
-      if (!sent) { g.style.display = "none"; return; }
-      g.style.display = "";
-      var top = firstLineTop(sent) - boxTop;
-      if (top < prevBottom + 2) top = prevBottom + 2;   // 让位，不重叠
-      g.style.top = Math.round(top) + "px";
-      prevBottom = top + (g.offsetHeight || 22);
+      return { g: g, top: sent ? firstLineTop(sent) - boxRect.top : null };
+    });
+
+    // 第二遍：按量好的位置统一分配，重叠的往下让位
+    var prevBottom = -1e9;
+    items.forEach(function (it) {
+      if (it.top === null) { it.g.style.display = "none"; return; }
+      var top = it.top;
+      if (top < prevBottom + 2) top = prevBottom + 2;
+      it.g.style.top = Math.round(top) + "px";
+      it.g.style.display = "";
+      prevBottom = top + (it.g.offsetHeight || 22);
     });
   }
 
   var gutterTimer = null;
   function scheduleGutter() {
     if (gutterTimer) clearTimeout(gutterTimer);
-    gutterTimer = setTimeout(layoutGutter, 60);        // resize 时防抖
+    gutterTimer = setTimeout(layoutGutter, 60);        // resize / 尺寸变化时防抖
+  }
+
+  // 紧接着再量一次：改完 --zoom 后同步那一次有可能拿到尚未收敛的布局，
+  // 补一帧再量，保证拿的是新字号下的真实排版
+  function gutterNowAndNextFrame() {
+    layoutGutter();
+    if (window.requestAnimationFrame) requestAnimationFrame(layoutGutter);
   }
 
   /* =======================================================
@@ -492,7 +542,7 @@
     }
     var h = '<div class="ana">';
     h += '<div class="ana-h">词条' +
-      '<button class="ana-spk" data-sayraw="' + esc(key) + '">🔊 0.75×</button></div>';
+      '<button class="ana-spk" data-sayraw="' + esc(key) + '">🔊</button></div>';
     h += '<div class="ana-sent">' + esc(key) +
       (e.ipa ? ' <span style="font-weight:400;color:var(--accent)">' + esc(e.ipa) + "</span>" : "") +
       "</div>";
@@ -708,7 +758,7 @@
     var h = '<div class="ana">';
     h += '<div class="ana-top">';
     h += '<div class="ana-h">答题解析 · 选项 ' + L +
-      '<button class="ana-spk" data-sayraw="' + esc(C.options[L]) + '">🔊 0.75×</button></div>';
+      '<button class="ana-spk" data-sayraw="' + esc(C.options[L]) + '">🔊</button></div>';
     h += '<div class="ana-sent">' + esc(C.options[L]) + "</div>";
     h += "</div>";
 
@@ -754,7 +804,7 @@
     h += '<div class="ana-top">';
     // 喇叭放在面板顶部：窄屏下页边按钮栏被隐藏，这里是唯一的朗读入口
     h += '<div class="ana-h">句子分析' +
-      '<button class="ana-spk" data-say="' + esc(ref) + '">🔊 0.75×</button></div>';
+      '<button class="ana-spk" data-say="' + esc(ref) + '">🔊</button></div>';
     h += '<div class="ana-sent">' + anaRawHTML + "</div>";
     h += "</div>";
 
@@ -868,7 +918,11 @@
       h += '<button class="obtn" data-sayraw="' + esc(C.options[L]) + '" title="0.75 倍速英音朗读">🔊</button>';
       h += '<button class="obtn" data-qexp="' + L + '" title="它作为答案或干扰项的答题解析">答题解析</button>';
       h += "</span>";
-      h += '<span class="tag">' + (used ? "→ 第 " + used + " 空" : "干扰项") + "</span>";
+      // 原文页不显示「→ 第 N 空」——那就是答案，等于剧透。
+      // 「干扰项」同理（说不是答案也是泄露），所以原文页两个标记都不给。
+      if (withAnalysis) {
+        h += '<span class="tag">' + (used ? "→ 第 " + used + " 空" : "干扰项") + "</span>";
+      }
       h += "</div>";
     });
     h += "</div>";
@@ -1240,27 +1294,39 @@
       if (ab) peek(ab.dataset.ana, false);
     });
 
-    // 页边按钮的位置依赖正文实际排版，窗口尺寸变了要重新量
+    // 页边按钮的位置完全依赖正文的实际排版。只要 #passage 的尺寸变了就重算 ——
+    // 不管是窗口缩放、字号缩放还是别的什么引起的，用观测器兜住最稳。
+    // .pgutter 是绝对定位、不占流，所以写它的子元素不会反过来改变 #passage 的尺寸，不会死循环。
     window.addEventListener("resize", scheduleGutter);
+    if (window.ResizeObserver) {
+      new ResizeObserver(scheduleGutter).observe(elPassage);
+    }
     if (document.fonts && document.fonts.ready) {
       document.fonts.ready.then(layoutGutter).catch(function () {});
     }
 
     document.getElementById("btnStop").addEventListener("click", function () { TTS.stop(); });
 
-    // 右半两栏的显示 / 隐藏
-    COL_DEFS.forEach(function (d) {
-      document.getElementById("tgl" + d[1])
-        .addEventListener("click", function () { toggleCol(d[0]); });
-    });
+    // 小黑板列的显隐 + 历史浮层的开关
+    document.getElementById("tglAna")
+      .addEventListener("click", function () { toggleCol("ana"); });
+    document.getElementById("tglVocab")
+      .addEventListener("click", function () { toggleCol("vocab"); });
+    document.getElementById("histClose")
+      .addEventListener("click", function () { toggleCol("vocab"); });
     document.querySelectorAll("[data-collapse]").forEach(function (b) {
-      // 注意：不要加 + 号。键已改成 "ana"/"vocab" 字符串，+"ana" 是 NaN，
+      // 注意：不要加 + 号。键是 "ana" 字符串，+"ana" 是 NaN，
       // cols[NaN] 不报错但按钮会静默失效
       b.addEventListener("click", function () { toggleCol(b.dataset.collapse); });
     });
 
+    // 字号缩放滑动条
+    var zr = document.getElementById("zoomRange");
+    zr.addEventListener("input", function () { applyZoom(zr.value); });
+
     loadUI();            // 先读回上次的列状态，再渲染
     switchTab("read");   // switchTab 内部会调 applyCols()
+    applyZoom(loadZoom());
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);

@@ -23,6 +23,7 @@
   --ins-line:#3aa864;
   --hard:#e8833a;
   --hard-bg:#fdf1e6;
+  --zoom:1;                    /* 字号缩放倍数，只作用于原文与小黑板 */
   --radius:10px;
   --shadow:0 1px 3px rgba(20,30,50,.06),0 6px 20px rgba(20,30,50,.05);
 }
@@ -58,6 +59,17 @@ button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
 .tab.on{background:var(--panel);color:var(--accent);font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.08)}
 
 .spacer{flex:1}
+/* 字号缩放滑动条 */
+.zoom{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:5px 12px;border:1px solid var(--line);border-radius:8px;background:var(--panel);
+}
+.zoom > span{
+  font-size:12.5px;font-weight:700;color:var(--accent);min-width:32px;text-align:center;
+}
+.zoom input[type=range]{
+  width:108px;accent-color:var(--accent);cursor:pointer;margin:0;
+}
 .tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .tool{
   display:inline-flex;align-items:center;gap:6px;
@@ -72,22 +84,52 @@ button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
   padding:4px 10px;border-radius:7px;
 }
 
-/* ---------- 三列：原文 / 分析 / 历史 ---------- */
+/* ---------- 两列各半：原文 / 小黑板 ----------
+   历史不占网格，是右侧浮层（.hist-float） */
 .cols{
   display:grid;
-  /* 历史列加宽一倍（.43 → .86）。左边两列按 1 : 0.8 分剩下的 2.99
-     → 原文 1.66、小黑板 1.33 */
-  grid-template-columns:minmax(0,1.66fr) minmax(0,1.33fr) minmax(0,.86fr);
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
   gap:14px;padding:14px;
   flex:1;min-height:0;
 }
-/* 收起某列后剩下的重新分配宽度，比例尽量维持 */
-.cols.hide-ana  {grid-template-columns:minmax(0,1.85fr) minmax(0,.95fr)}
-.cols.hide-vocab{grid-template-columns:minmax(0,1.3fr) minmax(0,1.04fr)}
-.cols.hide-ana.hide-vocab{grid-template-columns:minmax(0,1fr)}
+.cols.hide-ana{grid-template-columns:minmax(0,1fr)}
 /* 必须 display:none，否则被收起的列仍会占一个网格轨道 */
-.cols.hide-ana #colAna,.cols.hide-vocab #colVocab{display:none}
+.cols.hide-ana #colAna{display:none}
 
+/* ---------- 历史浮层 ---------- */
+.hist-float{
+  position:fixed;top:64px;right:14px;bottom:14px;width:330px;
+  background:var(--panel);border-radius:14px;
+  box-shadow:0 10px 40px rgba(20,30,50,.18),0 2px 8px rgba(20,30,50,.1);
+  border:1px solid var(--line);
+  display:flex;flex-direction:column;overflow:hidden;
+  z-index:40;
+  animation:slidein .22s cubic-bezier(.2,.8,.3,1);
+}
+@keyframes slidein{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+/* 必须显式写这条：上面 .hist-float 的 display:flex 是作者样式，
+   会盖掉浏览器默认样式表里的 [hidden]{display:none}，导致 hidden 属性失效、
+   面板永远关不掉。作者样式无论优先级都赢过 UA 样式表。 */
+.hist-float[hidden]{display:none}
+.hist-head{
+  display:flex;align-items:center;gap:8px;flex:none;
+  padding:11px 12px 11px 16px;border-bottom:1px solid var(--line-2);
+  font-size:12px;font-weight:700;letter-spacing:.8px;color:var(--ink-3);
+  text-transform:uppercase;
+}
+.hist-hint{font-weight:400;letter-spacing:0;text-transform:none;font-size:11.5px;margin-left:auto}
+.hist-close{
+  flex:none;width:22px;height:22px;border-radius:6px;font-size:11px;
+  color:var(--ink-3);display:flex;align-items:center;justify-content:center;
+  transition:all .12s;
+}
+.hist-close:hover{background:#fdeaea;color:#d64545}
+.hist-body{overflow-y:auto;overflow-x:hidden;padding:10px 12px 14px;flex:1}
+.hist-body::-webkit-scrollbar{width:9px}
+.hist-body::-webkit-scrollbar-thumb{background:#d6dce8;border-radius:5px}
+
+#col1{font-size:calc(17px * var(--zoom))}
+#colAna{font-size:calc(16px * var(--zoom))}
 .col{
   background:var(--panel);border-radius:var(--radius);box-shadow:var(--shadow);
   display:flex;flex-direction:column;overflow:hidden;
@@ -96,12 +138,12 @@ button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
 .col-head{
   display:flex;align-items:center;justify-content:space-between;gap:8px;
   padding:11px 16px;border-bottom:1px solid var(--line-2);
-  font-size:12px;font-weight:700;letter-spacing:.8px;color:var(--ink-3);
+  font-size:calc(12px * var(--zoom));font-weight:700;letter-spacing:.8px;color:var(--ink-3);
   text-transform:uppercase;flex:none;
 }
-.col-head .hint{font-weight:400;letter-spacing:0;text-transform:none;font-size:12px;margin-left:auto}
+.col-head .hint{font-weight:400;letter-spacing:0;text-transform:none;font-size:calc(12px * var(--zoom));margin-left:auto}
 .col-head .collapse{
-  flex:none;width:22px;height:22px;border-radius:6px;font-size:11px;line-height:1;
+  flex:none;width:calc(22px * var(--zoom));height:calc(22px * var(--zoom));border-radius:6px;font-size:calc(11px * var(--zoom));line-height:1;
   color:var(--ink-3);display:flex;align-items:center;justify-content:center;
   transition:all .12s;
 }
@@ -115,9 +157,9 @@ button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
 
 /* ---------- 原文 ---------- */
 .passage-title{
-  font-size:20px;font-weight:700;margin:2px 0 4px;letter-spacing:.2px;
+  font-size:calc(20px * var(--zoom));font-weight:700;margin:2px 0 4px;letter-spacing:.2px;
 }
-.passage-meta{font-size:12.5px;color:var(--ink-3);margin-bottom:16px}
+.passage-meta{font-size:calc(12.5px * var(--zoom));color:var(--ink-3);margin-bottom:16px}
 .para{margin:0 0 15px}
 /* 句子连续排版：inline，不换行。
    靠交替底色区分句界，靠右侧页边的悬浮按钮操作 */
@@ -136,10 +178,10 @@ button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
 .sent-txt{}
 
 /* 正文右侧留出页边，放每句的按钮 */
-#passage{position:relative;padding-right:58px}
-.pgutter{position:absolute;top:0;right:0;width:52px;pointer-events:none}
+#passage{position:relative;padding-right:calc(58px * var(--zoom))}
+.pgutter{position:absolute;top:0;right:0;width:calc(52px * var(--zoom));pointer-events:none}
 .sbtns{
-  position:absolute;right:0;width:52px;
+  position:absolute;right:0;width:calc(52px * var(--zoom));
   display:flex;gap:3px;justify-content:flex-end;
   pointer-events:auto;
 }
@@ -173,9 +215,9 @@ button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
 /* 填空题干与答案句 */
 .blank{
   display:inline-flex;align-items:center;justify-content:center;
-  min-width:34px;height:22px;padding:0 7px;margin:0 3px;
+  min-width:calc(34px * var(--zoom));height:calc(22px * var(--zoom));padding:0 7px;margin:0 3px;
   background:#eef1f6;border:1.5px dashed #b9c3d4;border-radius:6px;
-  font-size:12.5px;font-weight:700;color:var(--ink-3);vertical-align:1px;
+  font-size:calc(12.5px * var(--zoom));font-weight:700;color:var(--ink-3);vertical-align:1px;
   cursor:pointer;transition:all .15s;
 }
 .blank:hover{border-color:var(--accent);color:var(--accent)}
@@ -189,7 +231,7 @@ body.quiz .blank{background:#eef1f6;border-style:dashed;border-color:#b9c3d4;col
 
 /* 页边与面板里的小按钮 */
 .mini{
-  width:24px;height:22px;border-radius:5px;font-size:12px;line-height:1;
+  width:calc(24px * var(--zoom));height:calc(22px * var(--zoom));border-radius:5px;font-size:calc(12px * var(--zoom));line-height:1;
   display:inline-flex;align-items:center;justify-content:center;
   color:var(--ink-3);transition:all .12s;
 }
@@ -242,10 +284,10 @@ body.quiz .blank{background:#eef1f6;border-style:dashed;border-color:#b9c3d4;col
 
 /* ---------- 生词本 ---------- */
 .empty{
-  color:var(--ink-3);font-size:13.5px;text-align:center;
+  color:var(--ink-3);font-size:calc(13.5px * var(--zoom));text-align:center;
   padding:36px 16px;line-height:1.9;
 }
-.empty .big{font-size:26px;display:block;margin-bottom:8px;opacity:.5}
+.empty .big{font-size:calc(26px * var(--zoom));display:block;margin-bottom:8px;opacity:.5}
 @keyframes pop{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
 .vpos{
   background:var(--ink-3);color:#fff;border-radius:20px;
@@ -255,12 +297,12 @@ body.quiz .blank{background:#eef1f6;border-style:dashed;border-color:#b9c3d4;col
 /* ---------- 句子分析 ---------- */
 .ana{animation:pop .2s ease-out}
 .ana-h{
-  font-size:12px;font-weight:700;letter-spacing:.8px;color:var(--ink-3);
+  font-size:calc(13px * var(--zoom));font-weight:700;letter-spacing:.8px;color:var(--ink-3);
   text-transform:uppercase;margin:0 0 10px;
   display:flex;align-items:center;gap:8px;
 }
 .ana-h .ana-spk{
-  margin-left:auto;font-size:12px;color:var(--accent);letter-spacing:0;
+  font-size:calc(12px * var(--zoom));color:var(--accent);letter-spacing:0;
   text-transform:none;font-weight:600;
   border:1px solid #cfe0ff;background:#f5f9ff;border-radius:6px;padding:3px 10px;
   display:inline-flex;align-items:center;gap:5px;
@@ -274,7 +316,7 @@ body.quiz .blank{background:#eef1f6;border-style:dashed;border-color:#b9c3d4;col
 }
 /* 原句：紧凑的灰色圆角方框 + 加粗（分析栏空间小，这里要省地方） */
 .ana-sent{
-  font-size:13.5px;font-weight:700;line-height:1.6;
+  font-size:calc(15px * var(--zoom));font-weight:700;line-height:1.6;
   background:#eceef2;border-radius:10px;
   padding:8px 11px;
   word-break:break-word;
@@ -299,19 +341,19 @@ body.quiz .blank{background:#eef1f6;border-style:dashed;border-color:#b9c3d4;col
 }
 .sec{margin-bottom:14px}
 .sec-t{
-  font-size:12.5px;font-weight:700;color:var(--accent);margin-bottom:6px;
+  font-size:calc(13.5px * var(--zoom));font-weight:700;color:var(--accent);margin-bottom:6px;
   display:flex;align-items:center;gap:6px;
 }
 .sec-t::before{content:"";width:3px;height:12px;background:var(--accent);border-radius:2px}
-.sec-b{font-size:14px;line-height:1.8;color:var(--ink-2)}
+.sec-b{font-size:calc(15px * var(--zoom));line-height:1.8;color:var(--ink-2)}
 .sec-b b{color:var(--ink)}
 .sec-b code{
-  background:#eef1f6;padding:1px 6px;border-radius:4px;font-size:13px;
+  background:#eef1f6;padding:1px 6px;border-radius:4px;font-size:calc(13.5px * var(--zoom));
   font-family:"Cascadia Code",Consolas,monospace;color:#b3402f;
 }
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
 .chip{
-  font-size:12.5px;padding:3px 10px;border-radius:20px;
+  font-size:calc(13px * var(--zoom));padding:3px 10px;border-radius:20px;
   background:var(--line-2);color:var(--ink-2);border:1px solid var(--line);
 }
 .chip.cl{background:#eef3ff;border-color:#d3e0fb;color:#2b5bc4}
@@ -338,14 +380,14 @@ button.chip.ph2:hover{background:var(--phrase-hover)}
 .parts{display:flex;flex-direction:column;gap:6px;margin-top:2px}
 .part{border-radius:9px;padding:7px 11px}
 .part .pname{
-  display:block;font-size:11.5px;font-weight:700;letter-spacing:.5px;
+  display:block;font-size:calc(12.5px * var(--zoom));font-weight:700;letter-spacing:.5px;
   opacity:.78;white-space:nowrap;margin-bottom:2px;   /* 标签一行，不换行 */
 }
-.part .pbody{display:block;font-size:13.5px;line-height:1.65}
+.part .pbody{display:block;font-size:calc(15px * var(--zoom));line-height:1.65}
 .part code{
   background:rgba(128,128,128,.2);color:inherit;font-weight:600;
   padding:0 5px;border-radius:4px;
-  font-family:"Cascadia Code",Consolas,monospace;font-size:12.5px;
+  font-family:"Cascadia Code",Consolas,monospace;font-size:calc(13px * var(--zoom));
 }
 
 /* ---------- 题目 ---------- */
@@ -355,34 +397,29 @@ button.chip.ph2:hover{background:var(--phrase-hover)}
 }
 /* 原文页里那份题目：与正文分隔的开头标题 */
 .qsec-h{
-  font-size:12px;font-weight:700;letter-spacing:.8px;color:var(--ink-3);
+  font-size:calc(12px * var(--zoom));font-weight:700;letter-spacing:.8px;color:var(--ink-3);
   margin:24px 0 11px;padding-top:16px;border-top:1px solid var(--line);
 }
-/* 精简题卡：只有题号 + 题干，解析在另一页 */
-.qcard.qmini{background:#fbfcfe;padding:11px 13px}
-.qcard.qmini .qtxt{font-weight:400;font-size:14px;line-height:1.7}
-.qcard.qmini .qbtns{margin-top:9px}
-.qcard.qmini .btn{font-size:12.5px;padding:5px 11px}
 .qcard.open{border-color:#cfe0ff;box-shadow:0 2px 12px rgba(47,111,237,.09)}
 .qhead{display:flex;align-items:center;gap:10px;margin-bottom:9px}
 .qnum{
-  width:27px;height:27px;flex:none;border-radius:50%;background:var(--accent);color:#fff;
-  display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;
+  width:calc(27px * var(--zoom));height:calc(27px * var(--zoom));flex:none;border-radius:50%;background:var(--accent);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:calc(13px * var(--zoom));font-weight:700;
 }
-.qtxt{font-size:15.5px;font-weight:600;line-height:1.75;flex:1}
+.qtxt{font-size:calc(15.5px * var(--zoom));font-weight:600;line-height:1.75;flex:1}
 .qans{
   display:flex;align-items:center;gap:9px;margin-top:11px;padding:10px 12px;
   background:var(--ins-bg);border-radius:8px;border:1px solid #c9ecd5;
 }
-.qans .lbl{font-size:12px;font-weight:700;color:#1d7a45;letter-spacing:.5px;flex:none}
+.qans .lbl{font-size:calc(12px * var(--zoom));font-weight:700;color:#1d7a45;letter-spacing:.5px;flex:none}
 .qans .letter{
-  width:24px;height:24px;flex:none;border-radius:6px;background:#1d7a45;color:#fff;
-  display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;
+  width:calc(24px * var(--zoom));height:calc(24px * var(--zoom));flex:none;border-radius:6px;background:#1d7a45;color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:calc(13px * var(--zoom));font-weight:700;
 }
-.qans .atxt{flex:1;font-size:14.5px;line-height:1.7}
+.qans .atxt{flex:1;font-size:calc(14.5px * var(--zoom));line-height:1.7}
 .qbtns{display:flex;gap:8px;margin-top:11px}
 .btn{
-  padding:6px 14px;border-radius:7px;font-size:13px;border:1px solid var(--line);
+  padding:6px 14px;border-radius:7px;font-size:calc(13px * var(--zoom));border:1px solid var(--line);
   color:var(--ink-2);background:var(--panel);display:inline-flex;align-items:center;gap:6px;
   transition:all .15s;
 }
@@ -394,26 +431,26 @@ button.chip.ph2:hover{background:var(--phrase-hover)}
 .qbody.show{display:block}
 
 .opt{
-  display:flex;gap:10px;padding:9px 11px;border-radius:8px;margin-bottom:5px;
-  font-size:14.5px;line-height:1.7;border:1px solid transparent;transition:all .15s;
+  display:flex;gap:10px;flex-wrap:wrap;padding:9px 11px;border-radius:8px;margin-bottom:5px;
+  font-size:calc(14.5px * var(--zoom));line-height:1.7;border:1px solid transparent;transition:all .15s;
 }
 .opt:hover{background:#f7f9fc}
 .opt .ol{
-  width:22px;height:22px;flex:none;border-radius:5px;background:var(--line-2);color:var(--ink-2);
-  display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:700;
+  width:calc(22px * var(--zoom));height:calc(22px * var(--zoom));flex:none;border-radius:5px;background:var(--line-2);color:var(--ink-2);
+  display:flex;align-items:center;justify-content:center;font-size:calc(12.5px * var(--zoom));font-weight:700;
 }
 .opt.right{background:var(--ins-bg);border-color:#c9ecd5}
 .opt.right .ol{background:#1d7a45;color:#fff}
 .opt.used{background:#f4f6fa;border-color:var(--line)}
 .opt .otxt{flex:1;min-width:0}
 .opt .tag{
-  font-size:11.5px;padding:1px 8px;border-radius:20px;align-self:flex-start;
+  font-size:calc(11.5px * var(--zoom));padding:1px 8px;border-radius:20px;align-self:flex-start;
   background:var(--line-2);color:var(--ink-3);white-space:nowrap;flex:none;
 }
 /* 每条备选句右边的三个动作 */
 .oacts{display:flex;gap:4px;flex:none;align-self:flex-start}
 .obtn{
-  font-size:11.5px;line-height:1;padding:5px 9px;border-radius:7px;
+  font-size:calc(11.5px * var(--zoom));line-height:1;padding:5px 9px;border-radius:7px;
   border:1px solid var(--line);background:var(--panel);color:var(--ink-2);
   white-space:nowrap;transition:all .12s;
 }
@@ -431,13 +468,13 @@ button.chip.ph2:hover{background:var(--phrase-hover)}
 .qa-sec{margin-top:13px}
 .qa-sec:first-child{margin-top:0}
 .qa-t{
-  font-size:12.5px;font-weight:700;color:var(--accent);
+  font-size:calc(13.5px * var(--zoom));font-weight:700;color:var(--accent);
   margin-bottom:6px;display:flex;align-items:center;gap:6px;
 }
 .qa-t::before{content:"";width:3px;height:12px;background:var(--accent);border-radius:2px}
-.qa-b{font-size:14px;line-height:1.85;color:var(--ink-2)}
+.qa-b{font-size:calc(15px * var(--zoom));line-height:1.85;color:var(--ink-2)}
 .qa-b b{color:var(--ink)}
-.qa-b code{background:#eef1f6;padding:1px 6px;border-radius:4px;font-family:"Cascadia Code",Consolas,monospace;font-size:13px;color:#b3402f}
+.qa-b code{background:#eef1f6;padding:1px 6px;border-radius:4px;font-family:"Cascadia Code",Consolas,monospace;font-size:calc(13.5px * var(--zoom));color:#b3402f}
 
 /* 窄屏：一律单列堆叠。必须带上 hide-* 变体，否则上面的列宽规则
    （优先级更高）会盖掉这里 */
@@ -466,19 +503,23 @@ button.chip.ph2:hover{background:var(--phrase-hover)}
 
   <div class="tools">
     <span class="voice-warn" id="voiceWarn" hidden></span>
+
+    <label class="zoom" title="只放大原文和小黑板，历史不受影响">
+      <span id="zoomLabel">1x</span>
+      <input type="range" id="zoomRange" min="1" max="5" step="0.5" value="1">
+    </label>
+
     <button class="tool on" id="tglAna" title="显示 / 隐藏小黑板">▣ 小黑板</button>
-    <button class="tool on" id="tglVocab" title="显示 / 隐藏右侧的历史记录列">▣ 历史</button>
+    <button class="tool" id="tglVocab" title="显示 / 隐藏历史浮动面板">▣ 历史</button>
     <button class="tool" id="tglQuiz">做题模式</button>
     <button class="tool" id="btnStop">⏹ 停止朗读</button>
     <button class="tool" id="btnClear">清空历史</button>
   </div>
 </div>
 
-<!-- DOM 顺序 = col1 → colAna → colVocab。
-     窄屏 grid-template-areas:none 后按 DOM 顺序流式排布，
-     这个顺序让窄屏堆叠也是「原文 → 分析 → 历史」的阅读顺序 -->
+<!-- 两列各占一半。历史不在网格里，是右侧浮层 -->
 <div class="cols">
-  <!-- 第一列：原文 / 题目 切换 -->
+  <!-- 第一列：原文 + 题目 -->
   <div class="col" id="col1">
     <div class="col-head">
       <span id="col1Title">原文</span>
@@ -501,17 +542,17 @@ button.chip.ph2:hover{background:var(--phrase-hover)}
     </div>
     <div class="col-body" id="analysis"></div>
   </div>
-
-  <!-- 第三列：历史动作 -->
-  <div class="col" id="colVocab">
-    <div class="col-head">
-      <span>历史</span>
-      <span class="hint">点过的都记在这 · 重复点击置顶</span>
-      <button class="collapse" data-collapse="vocab" title="收起历史列">✕</button>
-    </div>
-    <div class="col-body" id="history"></div>
-  </div>
 </div>
+
+<!-- 历史：右侧浮层，点顶栏「历史」滑出。字体不参与缩放 -->
+<aside class="hist-float" id="histFloat" hidden>
+  <div class="hist-head">
+    <span>历史</span>
+    <span class="hist-hint">点过的都记在这 · 重复点击置顶</span>
+    <button class="hist-close" id="histClose" title="收起历史">✕</button>
+  </div>
+  <div class="hist-body" id="history"></div>
+</aside>
 
 <script>
 /* ============================================================
@@ -1607,10 +1648,8 @@ window.PET_CONTENT = {
   }
 
   /* ---- 右半两栏的显示 / 隐藏（与生词本分开存） ---- */
-  var LS_UI = "pet-ui-book1-v1";
-  var cols = { ana: true, vocab: true };
-  // [状态键, 顶栏按钮 id 后缀, 按钮文案]
-  var COL_DEFS = [["ana", "Ana", "小黑板"], ["vocab", "Vocab", "历史"]];
+  var LS_UI = "pet-ui-book1-v2";
+  var cols = { ana: true, vocab: false };   // vocab 现在指历史浮层，默认收起
 
   function loadUI() {
     try {
@@ -1627,24 +1666,57 @@ window.PET_CONTENT = {
 
   function applyCols() {
     var box = document.querySelector(".cols");
-    if (!box) return;
-    box.classList.toggle("hide-ana", !cols.ana);
-    box.classList.toggle("hide-vocab", !cols.vocab);
-    COL_DEFS.forEach(function (d) {
-      var b = document.getElementById("tgl" + d[1]);
-      if (!b) return;
-      b.classList.toggle("on", cols[d[0]]);
-      b.textContent = (cols[d[0]] ? "▣ " : "▢ ") + d[2];
-      b.title = (cols[d[0]] ? "收起" : "展开") + d[2];
-    });
-    // 第一列提示：两栏都收起时改成"已全屏"。基准文案由 switchTab 写入 dataset.orig
+    if (box) box.classList.toggle("hide-ana", !cols.ana);
+
+    var bAna = document.getElementById("tglAna");
+    if (bAna) {
+      bAna.classList.toggle("on", cols.ana);
+      bAna.textContent = (cols.ana ? "▣ " : "▢ ") + "小黑板";
+      bAna.title = (cols.ana ? "收起" : "展开") + "小黑板";
+    }
+    var bHist = document.getElementById("tglVocab");
+    if (bHist) {
+      bHist.classList.toggle("on", cols.vocab);
+      bHist.textContent = (cols.vocab ? "▣ " : "▢ ") + "历史";
+      bHist.title = (cols.vocab ? "收起" : "展开") + "历史浮动面板";
+    }
+    // 历史不再是网格列，是右侧浮层
+    var fl = document.getElementById("histFloat");
+    if (fl) fl.hidden = !cols.vocab;
+
+    // 第一列提示：小黑板也收起时改成"已全屏"
     var hint = document.getElementById("col1Hint");
     if (hint && hint.dataset.orig) {
-      hint.innerHTML = (!cols.ana && !cols.vocab)
-        ? "已全屏 · 可从顶栏重新展开句子 / 单词栏"
+      hint.innerHTML = !cols.ana
+        ? "已全屏 · 可从顶栏重新展开小黑板"
         : hint.dataset.orig;
     }
     saveUI();
+  }
+
+  /* ---- 字号缩放 ----
+     只作用于原文和小黑板（两栏的 font-size / 盒子尺寸都乘了 --zoom）。
+     历史浮层、顶栏、页面骨架不参与。 */
+  var LS_ZOOM = "pet-zoom-book1-v1";
+
+  function applyZoom(z) {
+    z = Math.min(5, Math.max(1, Number(z) || 1));
+    document.documentElement.style.setProperty("--zoom", z);
+    var lab = document.getElementById("zoomLabel");
+    if (lab) lab.textContent = (z % 1 ? z.toFixed(1) : z) + "x";
+    var r = document.getElementById("zoomRange");
+    if (r && Number(r.value) !== z) r.value = String(z);
+    try { localStorage.setItem(LS_ZOOM, String(z)); } catch (e) {}
+    // 字号一变，整篇的行位置全变了，页边按钮必须重新量
+    gutterNowAndNextFrame();
+  }
+
+  function loadZoom() {
+    try {
+      var v = localStorage.getItem(LS_ZOOM);
+      if (v) return Number(v) || 1;
+    } catch (e) {}
+    return 1;
   }
 
   function toggleCol(key) {
@@ -1938,35 +2010,54 @@ window.PET_CONTENT = {
     var t = w.nextNode();
     var box = el.getBoundingClientRect();
     if (!t) return box.top;
+    // 有些环境（jsdom 等）没有 Range.getBoundingClientRect，缺了就退回整块的顶边 ——
+    // 对单行句子来说两者相同，多行句子用并集的顶边也仍然是第一行
+    if (!document.createRange) return box.top;
     var r = document.createRange();
+    if (!r.getBoundingClientRect) return box.top;
     r.setStart(t, 0);
     r.setEnd(t, Math.min(1, t.length));
     var rect = r.getBoundingClientRect();
-    return rect.height ? rect.top : box.top;
+    return rect && rect.height ? rect.top : box.top;
   }
 
   function layoutGutter() {
     var gut = document.getElementById("pgutter");
     var box = document.getElementById("passage");
     if (!gut || !box || box.hidden) return;
-    if (!box.getBoundingClientRect().height) return;   // 不可见时量出来全是 0
-    var boxTop = box.getBoundingClientRect().top;
-    var prevBottom = -1e9;
-    [].slice.call(gut.children).forEach(function (g) {
+    var boxRect = box.getBoundingClientRect();
+    if (!boxRect.height) return;                       // 不可见时量出来全是 0
+
+    // 第一遍：只量，一个字节都不写 DOM。
+    // 边量边写的话，后一句的测量会受前一次写入影响 —— 缩放刚变、布局还在收敛时最容易出问题
+    var items = [].slice.call(gut.children).map(function (g) {
       var sent = box.querySelector('.sent[data-sent="' + g.dataset.for + '"]');
-      if (!sent) { g.style.display = "none"; return; }
-      g.style.display = "";
-      var top = firstLineTop(sent) - boxTop;
-      if (top < prevBottom + 2) top = prevBottom + 2;   // 让位，不重叠
-      g.style.top = Math.round(top) + "px";
-      prevBottom = top + (g.offsetHeight || 22);
+      return { g: g, top: sent ? firstLineTop(sent) - boxRect.top : null };
+    });
+
+    // 第二遍：按量好的位置统一分配，重叠的往下让位
+    var prevBottom = -1e9;
+    items.forEach(function (it) {
+      if (it.top === null) { it.g.style.display = "none"; return; }
+      var top = it.top;
+      if (top < prevBottom + 2) top = prevBottom + 2;
+      it.g.style.top = Math.round(top) + "px";
+      it.g.style.display = "";
+      prevBottom = top + (it.g.offsetHeight || 22);
     });
   }
 
   var gutterTimer = null;
   function scheduleGutter() {
     if (gutterTimer) clearTimeout(gutterTimer);
-    gutterTimer = setTimeout(layoutGutter, 60);        // resize 时防抖
+    gutterTimer = setTimeout(layoutGutter, 60);        // resize / 尺寸变化时防抖
+  }
+
+  // 紧接着再量一次：改完 --zoom 后同步那一次有可能拿到尚未收敛的布局，
+  // 补一帧再量，保证拿的是新字号下的真实排版
+  function gutterNowAndNextFrame() {
+    layoutGutter();
+    if (window.requestAnimationFrame) requestAnimationFrame(layoutGutter);
   }
 
   /* =======================================================
@@ -2072,7 +2163,7 @@ window.PET_CONTENT = {
     }
     var h = '<div class="ana">';
     h += '<div class="ana-h">词条' +
-      '<button class="ana-spk" data-sayraw="' + esc(key) + '">🔊 0.75×</button></div>';
+      '<button class="ana-spk" data-sayraw="' + esc(key) + '">🔊</button></div>';
     h += '<div class="ana-sent">' + esc(key) +
       (e.ipa ? ' <span style="font-weight:400;color:var(--accent)">' + esc(e.ipa) + "</span>" : "") +
       "</div>";
@@ -2288,7 +2379,7 @@ window.PET_CONTENT = {
     var h = '<div class="ana">';
     h += '<div class="ana-top">';
     h += '<div class="ana-h">答题解析 · 选项 ' + L +
-      '<button class="ana-spk" data-sayraw="' + esc(C.options[L]) + '">🔊 0.75×</button></div>';
+      '<button class="ana-spk" data-sayraw="' + esc(C.options[L]) + '">🔊</button></div>';
     h += '<div class="ana-sent">' + esc(C.options[L]) + "</div>";
     h += "</div>";
 
@@ -2334,7 +2425,7 @@ window.PET_CONTENT = {
     h += '<div class="ana-top">';
     // 喇叭放在面板顶部：窄屏下页边按钮栏被隐藏，这里是唯一的朗读入口
     h += '<div class="ana-h">句子分析' +
-      '<button class="ana-spk" data-say="' + esc(ref) + '">🔊 0.75×</button></div>';
+      '<button class="ana-spk" data-say="' + esc(ref) + '">🔊</button></div>';
     h += '<div class="ana-sent">' + anaRawHTML + "</div>";
     h += "</div>";
 
@@ -2448,7 +2539,11 @@ window.PET_CONTENT = {
       h += '<button class="obtn" data-sayraw="' + esc(C.options[L]) + '" title="0.75 倍速英音朗读">🔊</button>';
       h += '<button class="obtn" data-qexp="' + L + '" title="它作为答案或干扰项的答题解析">答题解析</button>';
       h += "</span>";
-      h += '<span class="tag">' + (used ? "→ 第 " + used + " 空" : "干扰项") + "</span>";
+      // 原文页不显示「→ 第 N 空」——那就是答案，等于剧透。
+      // 「干扰项」同理（说不是答案也是泄露），所以原文页两个标记都不给。
+      if (withAnalysis) {
+        h += '<span class="tag">' + (used ? "→ 第 " + used + " 空" : "干扰项") + "</span>";
+      }
       h += "</div>";
     });
     h += "</div>";
@@ -2820,27 +2915,39 @@ window.PET_CONTENT = {
       if (ab) peek(ab.dataset.ana, false);
     });
 
-    // 页边按钮的位置依赖正文实际排版，窗口尺寸变了要重新量
+    // 页边按钮的位置完全依赖正文的实际排版。只要 #passage 的尺寸变了就重算 ——
+    // 不管是窗口缩放、字号缩放还是别的什么引起的，用观测器兜住最稳。
+    // .pgutter 是绝对定位、不占流，所以写它的子元素不会反过来改变 #passage 的尺寸，不会死循环。
     window.addEventListener("resize", scheduleGutter);
+    if (window.ResizeObserver) {
+      new ResizeObserver(scheduleGutter).observe(elPassage);
+    }
     if (document.fonts && document.fonts.ready) {
       document.fonts.ready.then(layoutGutter).catch(function () {});
     }
 
     document.getElementById("btnStop").addEventListener("click", function () { TTS.stop(); });
 
-    // 右半两栏的显示 / 隐藏
-    COL_DEFS.forEach(function (d) {
-      document.getElementById("tgl" + d[1])
-        .addEventListener("click", function () { toggleCol(d[0]); });
-    });
+    // 小黑板列的显隐 + 历史浮层的开关
+    document.getElementById("tglAna")
+      .addEventListener("click", function () { toggleCol("ana"); });
+    document.getElementById("tglVocab")
+      .addEventListener("click", function () { toggleCol("vocab"); });
+    document.getElementById("histClose")
+      .addEventListener("click", function () { toggleCol("vocab"); });
     document.querySelectorAll("[data-collapse]").forEach(function (b) {
-      // 注意：不要加 + 号。键已改成 "ana"/"vocab" 字符串，+"ana" 是 NaN，
+      // 注意：不要加 + 号。键是 "ana" 字符串，+"ana" 是 NaN，
       // cols[NaN] 不报错但按钮会静默失效
       b.addEventListener("click", function () { toggleCol(b.dataset.collapse); });
     });
 
+    // 字号缩放滑动条
+    var zr = document.getElementById("zoomRange");
+    zr.addEventListener("input", function () { applyZoom(zr.value); });
+
     loadUI();            // 先读回上次的列状态，再渲染
     switchTab("read");   // switchTab 内部会调 applyCols()
+    applyZoom(loadZoom());
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);

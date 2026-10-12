@@ -201,29 +201,44 @@ function run() {
   ok(!doc.body.classList.contains("quiz"), "再点关闭");
   ok(!doc.getElementById("tglAllTr"), "「全部翻译」开关已移除（翻译进了分析面板）");
 
-  console.log("\n=== 15. 列的隐藏 / 展开 ===");
+  console.log("\n=== 15. 小黑板列的显隐 ===");
   const colAna = doc.getElementById("colAna");
-  const colHist = doc.getElementById("colVocab");
   const bAna = doc.getElementById("tglAna");
-  const bHist = doc.getElementById("tglVocab");
-  ok(!cols.classList.contains("hide-ana") && !cols.classList.contains("hide-vocab"), "默认三列全显示");
+  ok(!cols.classList.contains("hide-ana"), "默认识别小黑板显示");
   ok(cols.firstElementChild === doc.getElementById("col1"), "DOM 首位是原文列");
-  click(bHist, window);
-  ok(cols.classList.contains("hide-vocab") && !cols.classList.contains("hide-ana"), "收起历史列");
-  ok(window.getComputedStyle(colHist).display === "none", "历史列 display:none");
   click(bAna, window);
-  ok(cols.classList.contains("hide-ana") && cols.classList.contains("hide-vocab"), "两列都收起");
+  ok(cols.classList.contains("hide-ana"), "收起小黑板 → hide-ana");
   ok(/全屏/.test(doc.getElementById("col1Hint").textContent), "第一列提示已全屏");
-  const xb = doc.querySelector('[data-collapse="ana"]');
-  click(xb, window);
-  ok(!cols.classList.contains("hide-ana"), "列头 ✕ 展开分析列");
-  ok(cols.classList.contains("hide-vocab"), "历史列此时仍收着");
-  click(doc.getElementById("tglVocab"), window);   // 只差历史列没展开，别再动分析列
-  ok(!cols.classList.contains("hide-ana") && !cols.classList.contains("hide-vocab"), "复位：三列全显示");
-  const savedUI = JSON.parse(window.localStorage.getItem("pet-ui-book1-v1") || "null");
-  ok(savedUI && savedUI.ana === true && savedUI.vocab === true,
-    "列状态已落盘且与当前一致（ana=" + (savedUI && savedUI.ana) +
-    " vocab=" + (savedUI && savedUI.vocab) + "）");
+  ok(window.getComputedStyle(colAna).display === "none", "小黑板 display:none");
+  click(doc.querySelector('[data-collapse="ana"]'), window);
+  ok(!cols.classList.contains("hide-ana"), "列头 ✕ 展开小黑板");
+  ok(!/全屏/.test(doc.getElementById("col1Hint").textContent), "第一列提示恢复正常");
+
+  console.log("\n=== 15b. 历史浮动面板 ===");
+  const fl = doc.getElementById("histFloat");
+  const bHist = doc.getElementById("tglVocab");
+  ok(!!fl, "有历史浮层节点");
+  ok(fl.hidden === true, "默认是收起的（hidden）");
+  ok(window.getComputedStyle(fl).display === "none",
+    "默认 display=none —— 这条守住 .hist-float[hidden] 那条规则，" +
+    "少了它 display:flex 会盖掉浏览器的 [hidden]{display:none}，面板永远关不掉");
+  ok(!bHist.classList.contains("on"), "顶栏开关默认未选中");
+
+  click(bHist, window);
+  ok(fl.hidden === false, "点顶栏「历史」弹出浮层");
+  ok(bHist.classList.contains("on"), "开关变选中");
+  click(bHist, window);
+  ok(fl.hidden === true, "再点一次收回");
+
+  // 浮层自带的关闭按钮（用户报的 bug 就是这里关不掉）
+  click(bHist, window);
+  ok(fl.hidden === false, "重新打开");
+  click(doc.getElementById("histClose"), window);
+  ok(fl.hidden === true, "点浮层自己的 ✕ 能关掉");
+
+  const savedUI = JSON.parse(window.localStorage.getItem("pet-ui-book1-v2") || "null");
+  ok(savedUI && savedUI.vocab === false && savedUI.ana === true,
+    "状态已落盘（ana=" + (savedUI && savedUI.ana) + " vocab=" + (savedUI && savedUI.vocab) + "）");
 
   console.log("\n=== 16. 词组自动推导（与正文黄标零漂移）===");
   click(doc.querySelector('.tab[data-tab="read"]'), window);
@@ -383,6 +398,18 @@ function run() {
   ok(!!acts.querySelector("[data-sayraw]"), "第二个是朗读");
   ok(/答题解析/.test(acts.querySelector("[data-qexp]").textContent), "第三个是「答题解析」");
   ok(qRead.querySelectorAll("[data-qexp]").length === 8, "8 条选项都有答题解析按钮");
+  // 「→ 第 N 空」等于把答案写在题面上，「干扰项」也在暗示哪个不是答案，两个都不给
+  ok(qRead.querySelectorAll(".opt .tag").length === 0, "原文页选项不显示答案标记（不剧透）");
+  ok(qList.querySelectorAll(".opt .tag").length === 8,
+    "题目分析页仍然显示标记（" + qList.querySelectorAll(".opt .tag").length + " 条）");
+
+  console.log("\n--- 喇叭靠拢「词条」---");
+  click(passage.querySelector('.w[data-w="ancient"]'), window);
+  const spkBtn = ana.querySelector(".ana-h .ana-spk");
+  ok(!!spkBtn, "词条卡片顶部有喇叭");
+  ok(window.getComputedStyle(spkBtn).marginLeft !== "auto",
+    "喇叭不再被推到右边（margin-left:auto 已去掉），紧跟在「词条」后面");
+  ok(spkBtn.textContent.trim() === "🔊", "喇叭按钮上不显示速度字样：" + spkBtn.textContent.trim());
 
   console.log("\n=== 24. 选项也按句子 / 词 / 词组分析 ===");
   const optA = qRead.querySelector('.opt[data-opt="A"]');
@@ -482,18 +509,98 @@ function run() {
     "句子分析照常记一行（0 → " + hist.querySelectorAll(".hitem").length + "）");
   ok(hist.querySelector(".hitem").classList.contains("s"), "记的是「句」类型");
 
-  console.log("\n=== 28. 列宽比例 ===");
+  console.log("\n=== 28. 两列各占一半 ===");
   const css = [...doc.querySelectorAll("style")].map(s => s.textContent).join("");
-  // 注意：.cols 里 display:grid 和 grid-template-columns 之间夹着注释，
-  // 正则不能写死成相邻
-  const m = css.match(/grid-template-columns:minmax\(0,([\d.]+)fr\)\s*minmax\(0,([\d.]+)fr\)\s*minmax\(0,([\d.]+)fr\)/);
-  ok(!!m, "找到三列网格定义");
+  // 注意：.cols 里 display:grid 和 grid-template-columns 之间夹着注释，正则不能写死成相邻
+  const m = css.match(/grid-template-columns:minmax\(0,([\d.]+)fr\)\s*minmax\(0,([\d.]+)fr\);[\s\S]{0,200}?hide-ana/);
+  ok(!!m, "找到两列网格定义");
   if (m) {
-    const [a, b, c] = [+m[1], +m[2], +m[3]];
-    ok(c === 0.86, "历史列 " + c + "fr（上一版 .43fr，正好加宽一倍）");
-    ok(Math.abs(a / b - 1 / 0.8) < 0.02,
-      "原文 : 小黑板 = " + (a / b).toFixed(3) + "，目标 1.25（即 1 : 0.8）");
+    ok(+m[1] === 1 && +m[2] === 1, "原文 : 小黑板 = " + m[1] + " : " + m[2] + "（各占一半）");
   }
+  ok(!/grid-template-columns:[^;]*1\.66fr/.test(css), "旧的 1.66/1.33/.86 三列定义已移除");
+  ok(doc.querySelector("#histFloat").parentElement === doc.body,
+    "历史浮层不在 .cols 网格里（挪出去才腾得出空间给两列各半）");
+
+  console.log("\n=== 29. 字号缩放滑动条 ===");
+  const zr = doc.getElementById("zoomRange");
+  const zlab = doc.getElementById("zoomLabel");
+  ok(!!zr && !!zlab, "顶栏有滑动条和读数");
+  ok(zr.min === "1" && zr.max === "5", "范围 1x–5x");
+  ok(zr.value === "1", "默认 1x");
+  ok(window.getComputedStyle(doc.documentElement).getPropertyValue("--zoom").trim() === "1",
+    "--zoom 初始为 1");
+
+  zr.value = "3";
+  zr.dispatchEvent(new window.Event("input", { bubbles: true }));
+  const rootStyle = doc.documentElement.style.getPropertyValue("--zoom");
+  ok(rootStyle === "3", "拖到 3x 后 --zoom=" + rootStyle);
+  ok(/3x/.test(zlab.textContent), "读数变成 " + zlab.textContent);
+  ok(window.localStorage.getItem("pet-zoom-book1-v1") === "3", "缩放值已落盘");
+
+  // 缩回 1x：这是用户报的 bug 场景（放大再缩小后页边按钮错位）
+  zr.value = "1";
+  zr.dispatchEvent(new window.Event("input", { bubbles: true }));
+  ok(doc.documentElement.style.getPropertyValue("--zoom") === "1", "缩回 1x");
+
+  // 页边按钮的定位逻辑要真跑起来才算验到。
+  // jsdom 不做排版、所有 rect 都是 0，layoutGutter 会直接早退，
+  // 所以这里造一组假的 rect：每句比上一句低 30px，正文容器高 1000px。
+  const realRect = window.Element.prototype.getBoundingClientRect;
+  window.Element.prototype.getBoundingClientRect = function () {
+    if (this.id === "passage") {
+      return { top: 0, height: 1000, bottom: 1000, left: 0, right: 800, width: 800, x: 0, y: 0 };
+    }
+    if (this.classList && this.classList.contains("sent")) {
+      const p = this.dataset.sent.split("-");
+      const n = CONTENT.passage.paragraphs.slice(0, +p[0]).reduce((a, q) => a + q.length, 0) + (+p[1]);
+      return { top: n * 30, height: 20, bottom: n * 30 + 20, left: 0, right: 0, width: 0, x: 0, y: 0 };
+    }
+    return realRect.call(this);
+  };
+
+  // 触发一次重算（applyZoom 内部会调 layoutGutter）
+  zr.value = "2";
+  zr.dispatchEvent(new window.Event("input", { bubbles: true }));
+  zr.value = "1";
+  zr.dispatchEvent(new window.Event("input", { bubbles: true }));
+
+  const tops = [...gutter.querySelectorAll(".sbtns")]
+    .map(g => parseFloat(g.style.top)).filter(v => !isNaN(v));
+  ok(tops.length === 22, "缩放来回后，22 组页边按钮都拿到了 top（实际 " + tops.length + "）");
+  ok(tops[0] === 0 && tops[1] === 30,
+    "位置跟着句子走：第 1 组 top=" + tops[0] + "，第 2 组 top=" + tops[1]);
+  let mono = true;
+  for (let i = 1; i < tops.length; i++) if (tops[i] < tops[i - 1]) mono = false;
+  ok(mono, "top 单调递增，放大再缩小后不会上下错乱");
+  let gapOK = true;
+  for (let i = 1; i < tops.length; i++) if (tops[i] - tops[i - 1] < 2) gapOK = false;
+  ok(gapOK, "相邻按钮至少隔 2px，没有叠在一起");
+
+  // 重叠时后一组要往下让位：把所有句子压到同一行，看第二组是否被推开
+  window.Element.prototype.getBoundingClientRect = function () {
+    if (this.id === "passage") {
+      return { top: 0, height: 1000, bottom: 1000, left: 0, right: 800, width: 800, x: 0, y: 0 };
+    }
+    if (this.classList && this.classList.contains("sent")) {
+      return { top: 0, height: 20, bottom: 20, left: 0, right: 0, width: 0, x: 0, y: 0 };
+    }
+    return realRect.call(this);
+  };
+  zr.value = "1.5";
+  zr.dispatchEvent(new window.Event("input", { bubbles: true }));
+  const flat = [...gutter.querySelectorAll(".sbtns")].map(g => parseFloat(g.style.top));
+  ok(flat[1] > flat[0], "句子都在同一行时，后一组自动下移让位（" + flat[0] + " → " + flat[1] + "）");
+
+  window.Element.prototype.getBoundingClientRect = realRect;   // 还原，别影响后面的断言
+
+  // 缩放只作用于两栏：历史浮层不能跟着变大
+  ok(/\.hist-float\{[^}]*font-size:calc\([^)]*var\(--zoom\)/.test(css) === false,
+    "历史浮层里没有 calc(...var(--zoom))");
+  ok(/#col1\{font-size:calc\(17px \* var\(--zoom\)\)\}/.test(css), "原文列基准字号随缩放走（17px 起）");
+  ok(/#colAna\{font-size:calc\(16px \* var\(--zoom\)\)\}/.test(css), "小黑板基准字号随缩放走（16px 起）");
+  ok(/\.mini\{[^}]*width:calc\(24px \* var\(--zoom\)\)/.test(css), "页边「析」按钮尺寸一起缩放");
+  ok(/#passage\{position:relative;padding-right:calc\(58px \* var\(--zoom\)\)\}/.test(css),
+    "页边宽度一起缩放，放大后按钮才放得进");
 
   console.log("\n" + (fail === 0 ? "★ 全部通过" : "★ " + fail + " 项失败") +
     "  ——  通过 " + pass + " / 失败 " + fail);
