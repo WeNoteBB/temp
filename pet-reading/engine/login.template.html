@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>登录 · <!--SITE--></title>
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#eef1f6">
+<!-- 防闪烁脚本，本体在 build.mjs 的 THEME_HEAD 里（三页共用一份） -->
+<!--THEME_HEAD-->
+<link rel="stylesheet" href="engine/style.css?v=<!--V:style.css-->">
+<script src="engine/store.js?v=<!--V:store.js-->"></script>
+<!-- 这个页面**不加载 app.js**：app.js 开头就无条件读 window.PET_CONTENT，
+     这里没有内容数据，一加载就崩。登录页也不需要引擎。 -->
+</head>
+<body class="login-body">
+
+<button class="theme-fab" id="tglTheme" type="button" title="主题：跟随系统">◐ 跟随</button>
+
+<main class="login-wrap">
+  <div class="login-card">
+    <h1 class="login-title"><!--SITE--></h1>
+    <p class="login-sub">用手机号登录后开始精读</p>
+
+    <form id="loginForm" novalidate>
+      <label class="login-label" for="phone">手机号</label>
+      <div class="login-row">
+        <span class="login-cc">+86</span>
+        <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel"
+               maxlength="11" placeholder="11 位手机号" aria-describedby="loginErr">
+      </div>
+      <p class="login-err" id="loginErr" role="alert" hidden></p>
+      <button class="login-btn" id="loginBtn" type="submit">登录</button>
+    </form>
+
+    <p class="login-note" id="loginNote">登录状态只保存在这台设备上。换设备需重新登录。</p>
+  </div>
+
+  <p class="login-foot">
+    <a id="backLink" href="index.html">← 返回目录</a>
+  </p>
+</main>
+
+<script>
+(function () {
+  "use strict";
+  var S = window.PETStore;
+  var form = document.getElementById("loginForm");
+  var input = document.getElementById("phone");
+  var errEl = document.getElementById("loginErr");
+  var btn = document.getElementById("loginBtn");
+  var note = document.getElementById("loginNote");
+
+  /* next 必须过 safeNext：它是地址栏里来的，直接跳等于开放重定向。
+     登录页自己不做门禁（做了就成环），所以这里只挑「登录完去哪儿」。 */
+  var next = S.safeNext(new URLSearchParams(location.search).get("next"));
+  var back = document.getElementById("backLink");
+  if (back) back.href = next;
+
+  function showErr(msg) {
+    errEl.textContent = msg || "";
+    errEl.hidden = !msg;
+    input.classList.toggle("bad", !!msg);
+    if (msg) input.focus();
+  }
+
+  input.addEventListener("input", function () {
+    /* 只留数字：手机键盘之外还能粘贴、还能用输入法打中文，
+       不洗一遍就会出现「看着是 11 位、校验却不过」 */
+    var v = input.value.replace(/\D/g, "").slice(0, 11);
+    if (v !== input.value) input.value = v;
+    if (!errEl.hidden) showErr("");
+  });
+
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    btn.disabled = true;
+    S.login(input.value).then(function (r) {
+      if (!r.ok) { btn.disabled = false; showErr(r.err); return; }
+      /* 存不住也照样放行（门禁在存储不可用时是开的）——
+         停在这里的话，用户会看到一个「登不上去的登录页」，再也出不去。 */
+      if (r.persisted === false) {
+        note.textContent = "当前浏览器禁止保存数据（无痕模式？），这次登录只在本次会话有效。";
+        note.classList.add("warn");
+      }
+      location.replace(next);
+    }).catch(function () {
+      btn.disabled = false;
+      showErr("登录失败，请重试");
+    });
+  });
+
+  /* 已经登录过就别再让人填一遍 —— 自动放行。
+     想换号码走文章页顶栏的「退出」，那条路会先清登录态再回到这里。 */
+  S.getUser().then(function (u) {
+    if (u && u.phone) location.replace(next);
+  });
+
+  /* 主题：与文章页同款三态按钮，顺序和键名都归 store.js 管 */
+  var LABEL = { auto: "◐ 跟随", light: "☀ 亮", dark: "☾ 暗" };
+  var TIP = { auto: "主题：跟随系统", light: "主题：亮色", dark: "主题：暗色" };
+  var tb = document.getElementById("tglTheme");
+  function paintBtn(t) {
+    tb.textContent = LABEL[t] || LABEL.auto;
+    tb.title = TIP[t] || TIP.auto;
+    tb.classList.toggle("on", t !== "auto");
+  }
+  S.getTheme().then(paintBtn);
+  tb.addEventListener("click", function () { S.nextTheme().then(paintBtn); });
+
+  input.focus();
+})();
+</script>
+</body>
+</html>

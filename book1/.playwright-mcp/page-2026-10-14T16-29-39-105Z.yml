@@ -1,0 +1,17 @@
+- generic [ref=f15e2]:
+  - banner [ref=f15e3]:
+    - generic [ref=f15e4]:
+      - heading "PET 精读" [level=1] [ref=f15e5]
+      - paragraph [ref=f15e6]: 剑桥PET 官方模考题精讲讲练 23-24 · 共 1 篇
+    - generic [ref=f15e7]:
+      - generic [ref=f15e8]: 138****8000
+      - button "退出" [ref=f15e9] [cursor=pointer]
+  - generic [ref=f15e10]:
+    - heading "剑桥PET 官方模考题精讲讲练 23-24" [level=2] [ref=f15e11]
+    - list [ref=f15e12]:
+      - listitem [ref=f15e13]:
+        - link "Digging into the past Exam Practice Test 1 · Reading Part 4 319 词 · 22 句" [ref=f15e14] [cursor=pointer]:
+          - /url: t1-p4-digging-into-the-past.html
+          - generic [ref=f15e15]: Digging into the past
+          - generic [ref=f15e16]: Exam Practice Test 1 · Reading Part 4
+          - generic [ref=f15e17]: 319 词 · 22 句

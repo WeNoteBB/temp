@@ -1,0 +1,297 @@
+- generic [active] [ref=f9e1]:
+  - generic [ref=f9e2]:
+    - generic [ref=f9e3]:
+      - text: PET 精读
+      - generic [ref=f9e4]:
+        - generic [ref=f9e5]: 138****8000
+        - button "退出" [ref=f9e6] [cursor=pointer]
+    - generic [ref=f9e7]:
+      - button "原文精读" [ref=f9e8] [cursor=pointer]
+      - button "题目分析" [ref=f9e9] [cursor=pointer]
+    - generic [ref=f9e10]:
+      - generic "只放大原文和小黑板，历史不受影响" [ref=f9e11]:
+        - generic [ref=f9e12]: 1x
+        - slider "1x" [ref=f9e13] [cursor=pointer]: "1"
+      - button "☾ 暗" [ref=f9e14] [cursor=pointer]
+      - button "▣ 小黑板" [ref=f9e224] [cursor=pointer]
+      - button "▣ 历史" [ref=f9e16] [cursor=pointer]
+      - button "做题模式" [ref=f9e17] [cursor=pointer]
+      - button "⏹ 停止朗读" [ref=f9e18] [cursor=pointer]
+      - button "清空历史" [ref=f9e19] [cursor=pointer]
+  - generic [ref=f9e20]:
+    - generic [ref=f9e21]:
+      - generic [ref=f9e22]:
+        - generic [ref=f9e23]: 原文 + 题目
+        - generic [ref=f9e24]: 点词查词 · 点句子看讲解 · 黄色是词组
+      - generic [ref=f9e25]:
+        - generic [ref=f9e26]:
+          - heading "Digging into the past" [level=1] [ref=f9e27]
+          - generic [ref=f9e28]: Exam Practice Test 1 · Reading Part 4 · 319 词 · 22 句 · 长难句 12 句
+          - paragraph [ref=f9e29]:
+            - generic [ref=f9e31] [cursor=pointer]:
+              - text: Last year, Kate Marshall was given
+              - generic [ref=f9e32]: a very exciting opportunity
+              - text: – to help her father, who's a
+              - generic [ref=f9e33]: history lecturer
+              - text: ", at"
+              - generic [ref=f9e34]: a historical site
+              - text: "!"
+            - generic [ref=f9e36] [cursor=pointer]:
+              - text: He was leading a team to
+              - generic [ref=f9e37]: dig up
+              - text: and explore the area.
+          - paragraph [ref=f9e38]:
+            - generic [ref=f9e40] [cursor=pointer]:
+              - text: When they arrived, though, the site
+              - generic [ref=f9e41]: wasn't quite
+              - text: what Kate had expected.
+          - paragraph [ref=f9e42]:
+            - generic [ref=f9e44] [cursor=pointer]:
+              - generic [ref=f9e45]: "16"
+              - text: So
+              - generic [ref=f9e46]: the first job
+              - text: was to remove it all and prepare the land for digging.
+            - generic [ref=f9e48] [cursor=pointer]:
+              - text: Says Kate, 'Dad hadn't warned me I'd
+              - generic [ref=f9e49]: have to
+              - text: work
+              - generic [ref=f9e50]: so hard
+              - generic [ref=f9e51]: as soon as
+              - text: we got there!'
+          - paragraph [ref=f9e52]:
+            - generic [ref=f9e54] [cursor=pointer]:
+              - text: But when the site was completely cleared, the team found
+              - generic [ref=f9e55]: pieces of
+              - text: ancient pots on the ground.
+            - generic [ref=f9e56] [cursor=pointer]: However, those weren't as exciting as everyone had thought.
+            - generic [ref=f9e59] [cursor=pointer]:
+              - text: Kate's dad told them that the important pots were still
+              - generic [ref=f9e60]: under the ground
+              - text: .
+            - generic [ref=f9e62] [cursor=pointer]:
+              - text: And because no-one had touched them
+              - generic [ref=f9e63]: for centuries
+              - text: ", the team would learn"
+              - generic [ref=f9e64]: far more
+              - text: about their history – but first they would
+              - generic [ref=f9e65]: have to
+              - generic [ref=f9e66]: dig deeper
+              - text: .
+            - generic [ref=f9e68] [cursor=pointer]:
+              - text: Says Kate, '
+              - generic [ref=f9e69]: "17"
+              - text: But we
+              - generic [ref=f9e70]: all knew
+              - text: Dad was right!'
+          - paragraph [ref=f9e71]:
+            - generic [ref=f9e73] [cursor=pointer]:
+              - text: The site was
+              - generic [ref=f9e74]: divided into
+              - text: small squares, with a leader for each square, who told everyone
+              - generic [ref=f9e75]: how to
+              - text: dig.
+            - generic [ref=f9e76] [cursor=pointer]: "'That wasn't as easy as it sounded, either,' Kate reports."
+            - generic [ref=f9e79] [cursor=pointer]:
+              - text: "'"
+              - generic [ref=f9e80]: Instead of
+              - text: just digging
+              - generic [ref=f9e81]: great big
+              - text: holes, we all
+              - generic [ref=f9e82]: had to
+              - text: dig really carefully, and remove
+              - generic [ref=f9e83]: small amounts of
+              - text: soil each time.
+            - generic [ref=f9e85] [cursor=pointer]:
+              - generic [ref=f9e86]: "18"
+              - text: So it
+              - generic [ref=f9e87]: made sense
+              - text: .'
+          - paragraph [ref=f9e88]:
+            - generic [ref=f9e90] [cursor=pointer]:
+              - text: "'My friends"
+              - generic [ref=f9e91]: at home
+              - text: were really
+              - generic [ref=f9e92]: interested in
+              - text: what I was doing,' Kate explains.
+            - generic [ref=f9e94] [cursor=pointer]:
+              - text: "'They"
+              - generic [ref=f9e95]: kept texting
+              - text: me
+              - generic [ref=f9e96]: to ask
+              - text: what I'd found.
+            - generic [ref=f9e98] [cursor=pointer]:
+              - generic [ref=f9e99]: "19"
+              - text: But actually, we were
+              - generic [ref=f9e100]: looking for
+              - text: ordinary,
+              - generic [ref=f9e101]: everyday objects
+              - text: that could
+              - generic [ref=f9e102]: tell us about
+              - text: the people who'd lived in the area centuries ago.'
+          - paragraph [ref=f9e103]:
+            - generic [ref=f9e105] [cursor=pointer]:
+              - generic [ref=f9e106]: In the end
+              - text: ", though, Kate wasn't"
+              - generic [ref=f9e107]: disappointed by
+              - text: what she found.
+            - generic [ref=f9e109] [cursor=pointer]:
+              - text: "'One day, when I was"
+              - generic [ref=f9e110]: digging away
+              - text: ", I found a stone with"
+              - generic [ref=f9e111]: a strange shape
+              - text: .
+            - generic [ref=f9e113] [cursor=pointer]:
+              - generic [ref=f9e114]: "20"
+              - text: Someone had obviously made it hundreds of
+              - generic [ref=f9e115]: years ago
+              - text: ","
+              - generic [ref=f9e116]: which meant
+              - text: it was really important.
+            - generic [ref=f9e118] [cursor=pointer]:
+              - text: So Dad
+              - generic [ref=f9e119]: cleaned it up
+              - text: ", and said it would go to the nearby museum."
+            - generic [ref=f9e121] [cursor=pointer]:
+              - text: So I was pleased that
+              - generic [ref=f9e122]: at last
+              - text: ", I'd found something interesting!'"
+        - generic [ref=f9e123]:
+          - generic [ref=f9e124]: 题目 · Questions 16–20
+          - generic [ref=f9e125]:
+            - generic [ref=f9e126]:
+              - generic [ref=f9e127]: A–H
+              - generic [ref=f9e128]: 备选句（8 选 5，多出 3 句是干扰项）
+            - generic [ref=f9e129]:
+              - generic [ref=f9e130]: A
+              - generic [ref=f9e131]:
+                - text: It
+                - generic [ref=f9e132] [cursor=pointer]: turned out
+                - text: to be a small figure of a horse.
+              - generic [ref=f9e133]:
+                - button "句子分析" [ref=f9e134] [cursor=pointer]
+                - button "🔊" [ref=f9e135] [cursor=pointer]
+                - button "答题解析" [ref=f9e136] [cursor=pointer]
+            - generic [ref=f9e137]:
+              - generic [ref=f9e138]: B
+              - generic [ref=f9e139]:
+                - text: No-one
+                - generic [ref=f9e140] [cursor=pointer]: made that mistake
+                - text: ", luckily."
+              - generic [ref=f9e141]:
+                - button "句子分析" [ref=f9e142] [cursor=pointer]
+                - button "🔊" [ref=f9e143] [cursor=pointer]
+                - button "答题解析" [ref=f9e144] [cursor=pointer]
+            - generic [ref=f9e145]:
+              - generic [ref=f9e146]: C
+              - generic [ref=f9e147]: That way, everyone made sure they didn't miss anything.
+              - generic [ref=f9e148]:
+                - button "句子分析" [ref=f9e149] [cursor=pointer]
+                - button "🔊" [ref=f9e150] [cursor=pointer]
+                - button "答题解析" [ref=f9e151] [cursor=pointer]
+            - generic [ref=f9e152]:
+              - generic [ref=f9e153]: D
+              - generic [ref=f9e154]:
+                - generic [ref=f9e155] [cursor=pointer]: In fact
+                - text: ","
+                - generic [ref=f9e156] [cursor=pointer]: the whole area
+                - text: was actually still covered in grass.
+              - generic [ref=f9e157]:
+                - button "句子分析" [ref=f9e158] [cursor=pointer]
+                - button "🔊" [ref=f9e159] [cursor=pointer]
+                - button "答题解析" [ref=f9e160] [cursor=pointer]
+            - generic [ref=f9e161]:
+              - generic [ref=f9e162]: E
+              - generic [ref=f9e163]:
+                - text: It was
+                - generic [ref=f9e164] [cursor=pointer]: a bit
+                - text: sad to see it disappear.
+              - generic [ref=f9e165]:
+                - button "句子分析" [ref=f9e166] [cursor=pointer]
+                - button "🔊" [ref=f9e167] [cursor=pointer]
+                - button "答题解析" [ref=f9e168] [cursor=pointer]
+            - generic [ref=f9e169]:
+              - generic [ref=f9e170]: F
+              - generic [ref=f9e171]:
+                - text: Some people were
+                - generic [ref=f9e172] [cursor=pointer]: a bit
+                - generic [ref=f9e173] [cursor=pointer]: disappointed by
+                - text: that news.
+              - generic [ref=f9e174]:
+                - button "句子分析" [ref=f9e175] [cursor=pointer]
+                - button "🔊" [ref=f9e176] [cursor=pointer]
+                - button "答题解析" [ref=f9e177] [cursor=pointer]
+            - generic [ref=f9e178]:
+              - generic [ref=f9e179]: G
+              - generic [ref=f9e180]:
+                - text: They probably imagined it was things like
+                - generic [ref=f9e181] [cursor=pointer]: gold jewellery
+                - text: .
+              - generic [ref=f9e182]:
+                - button "句子分析" [ref=f9e183] [cursor=pointer]
+                - button "🔊" [ref=f9e184] [cursor=pointer]
+                - button "答题解析" [ref=f9e185] [cursor=pointer]
+            - generic [ref=f9e186]:
+              - generic [ref=f9e187]: H
+              - generic [ref=f9e188]:
+                - text: It was
+                - generic [ref=f9e189] [cursor=pointer]: a new experience
+                - text: for me, too.
+              - generic [ref=f9e190]:
+                - button "句子分析" [ref=f9e191] [cursor=pointer]
+                - button "🔊" [ref=f9e192] [cursor=pointer]
+                - button "答题解析" [ref=f9e193] [cursor=pointer]
+    - generic [ref=f9e194]:
+      - generic [ref=f9e195]:
+        - generic [ref=f9e196]: 小黑板
+        - generic [ref=f9e197]: 点单词或句子
+        - button "✕" [ref=f9e198] [cursor=pointer]
+      - generic [ref=f9e225]:
+        - generic [ref=f9e226]:
+          - text: 词条
+          - button "🔊" [ref=f9e227] [cursor=pointer]
+        - generic [ref=f9e228]: historical /hɪˈstɒrɪkl/
+        - generic [ref=f9e229]:
+          - generic [ref=f9e230]: 释义
+          - generic [ref=f9e231]: adj. 历史的，与历史有关的
+        - generic [ref=f9e232]:
+          - generic [ref=f9e233]: 用法
+          - generic [ref=f9e234]: 对比 historic（有历史意义的）：a historic victory 历史性胜利。
+        - generic [ref=f9e235]:
+          - generic [ref=f9e236]: 原文
+          - generic [ref=f9e237]:
+            - text: Last year, Kate Marshall was given a very exciting opportunity – to help her father, who's a history lecturer, at a
+            - emphasis [ref=f9e238]: historical
+            - text: site!
+        - generic [ref=f9e239]:
+          - generic [ref=f9e240]: 包含它的词组
+          - button "a historical site" [ref=f9e242] [cursor=pointer]
+  - complementary [ref=f9e202]:
+    - generic [ref=f9e203]:
+      - generic [ref=f9e204]: 历史
+      - generic [ref=f9e205]: 点过的都记在这 · 按词全局收藏
+      - button "✕" [ref=f9e206] [cursor=pointer]
+    - generic [ref=f9e207]:
+      - generic [ref=f9e244] [cursor=pointer]:
+        - button "词 historical 历史的，与历史有关的" [ref=f9e245]:
+          - generic [ref=f9e246]: 词
+          - generic [ref=f9e247]:
+            - generic [ref=f9e248]: historical
+            - generic [ref=f9e249]: 历史的，与历史有关的
+        - button "☆" [ref=f9e250]
+        - button "✕" [ref=f9e251]
+      - generic [ref=f9e252] [cursor=pointer]:
+        - button "词 years 年" [ref=f9e253]:
+          - generic [ref=f9e254]: 词
+          - generic [ref=f9e255]:
+            - generic [ref=f9e256]: years
+            - generic [ref=f9e257]: 年
+        - button "★" [ref=f9e258]
+        - button "✕" [ref=f9e259]
+      - generic [ref=f9e260] [cursor=pointer]:
+        - button "词 centuries 世纪（century 的复数）" [ref=f9e261]:
+          - generic [ref=f9e262]: 词
+          - generic [ref=f9e263]:
+            - generic [ref=f9e264]: centuries
+            - generic [ref=f9e265]: 世纪（century 的复数）
+        - button "☆" [ref=f9e266]
+        - button "✕" [ref=f9e267]

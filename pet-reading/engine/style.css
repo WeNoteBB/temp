@@ -1,0 +1,845 @@
+/* ===== PET 精读自学页 ===== */
+/* 令牌分两段：上半是「表面 / 字 / 线 / 主色」这类结构性颜色，
+   下半是各语义家族（绿=对、红=删、黄=词组…）。
+   组件里一律不写色值 —— 写死一个 #fff，暗色下就是一块白斑，
+   而且以后每加一个组件都得记得配两遍。 */
+:root{
+  /* ---- 表面 ---- */
+  --bg:#f5f6f8;
+  --panel:#ffffff;
+  --sunken:#eceef2;            /* 凹陷底：小黑板顶部的原句框 */
+  --field:#eef1f6;             /* 输入 / 代码 / 空位底 */
+  --field-line:#b9c3d4;        /* 空位的虚线边 */
+  --hover:#f4f7fc;             /* 列表行悬停 */
+  --muted:#f4f6fa;             /* 淡化行：已经被用掉的选项 */
+  --tag-muted:#dfe4ee;         /* 淡化标签底 */
+  --tint-accent:#f5f9ff;       /* 极浅的蓝底 */
+  --pool-bg:#fbfcfe;           /* 备选句池那张卡 */
+
+  /* ---- 字 ---- */
+  --ink:#1e2430;
+  --ink-2:#5a6474;
+  --ink-3:#8b95a6;
+  --on-solid:#ffffff;          /* 压在饱和色块上的字：题号、徽章、主按钮 */
+
+  /* ---- 线 ---- */
+  --line:#e3e7ee;
+  --line-2:#eef1f6;
+  --border-hover:#c9d3e4;
+  --border-accent:#b9cffb;
+  --border-accent-2:#cfe0ff;
+
+  /* ---- 主色 ---- */
+  --accent:#2f6fed;
+  --accent-2:#2560d8;          /* 主色按钮悬停 */
+  --accent-soft:#e8f0ff;
+
+  /* ---- 词组 ---- */
+  --phrase:#ffe98a;
+  --phrase-hover:#ffd93d;
+  --phrase-line:rgba(180,140,0,.25);
+  --sent-alt:#fdf6da;          /* 句子交替底色里的"淡黄"那一档 */
+
+  /* ---- 句子三态：悬停 / 页边指示 / 选中 ---- */
+  --hl-hover:#dceaff;
+  --hl-peek:#ffd6e8;
+  --hl-peek-line:#f7a8c8;
+  --hl-cur:#c9ddff;
+  --hl-cur-line:#9dbcf7;
+
+  /* ---- 绿：答案、已填、正确 ---- */
+  --ok:#1d7a45;
+  --ok-bg:#eefaf1;
+  --ok-line:#c9ecd5;
+  --ok-line-2:#9fd9b6;
+  --ins-bg:#e7f6ec;
+  --ins-line:#3aa864;
+
+  /* ---- 红：删除、朗读中、句型高亮 ---- */
+  --danger:#d64545;
+  --danger-2:#b32020;
+  --danger-bg:#fdeaea;
+  --danger-bg-2:#ffd9d9;
+  --danger-soft:#ffe1e1;
+  --ring-danger:rgba(214,69,69,.22);
+  --ring-danger-2:rgba(214,69,69,.18);
+
+  /* ---- 橙：提示条 ---- */
+  --warn:#a8641a;
+  --warn-bg:#fdf3e3;
+  --warn-line:#f2ddb8;
+
+  /* ---- 紫：句型 chip ---- */
+  --pat:#5b3fd1;
+  --pat-bg:#f1eefe;
+  --pat-bg-2:#e4dcfd;
+  --pat-line:#dcd3fb;
+  --pat-line-2:#c4b5f7;
+
+  /* ---- chip 配色（cl 蓝 / ph 黄；绿和紫复用 --ok* / --pat*）---- */
+  --chip-cl-bg:#eef3ff;
+  --chip-cl-line:#d3e0fb;
+  --chip-cl-ink:#2b5bc4;
+  --chip-ph-bg:#fff8dd;
+  --chip-ph-line:#eddfa4;
+  --chip-ph-ink:#8a6a05;
+
+  /* ---- 代码 ---- */
+  --code-ink:#b3402f;
+
+  /* ---- 徽章 / 词性药丸 ---- */
+  --badge-w:#4a86e8;           /* 词：蓝 */
+  --badge-s:#e08a3c;           /* 句：橙 */
+  --pos-bg:#8b95a6;
+  --pos-ink:#ffffff;
+
+  /* ---- 成分拆解卡片的深浅梯度 ----
+     卡片底色由 JS 按序号给一个 0→1 的 --pt，具体深浅由主题决定：
+     亮色下从近白走到中灰（95% → 51%），暗色下从深灰走到中灰（23% → 40%）。
+     写在主题里而不是 JS 里，暗色才不用改 JS。 */
+  --part-lo:95%;
+  --part-span:-44%;
+  --part-ink-a:#1e2430;        /* 浅档卡片上的字 */
+  --part-ink-b:#ffffff;        /* 深档卡片上的字 */
+
+  /* ---- 滚动条与阴影 ---- */
+  --scroll:#d6dce8;
+  --scroll-2:#c2cbdb;
+  --shadow:0 1px 3px rgba(20,30,50,.06),0 6px 20px rgba(20,30,50,.05);
+  --shadow-pop:0 10px 40px rgba(20,30,50,.18),0 2px 8px rgba(20,30,50,.1);
+  --shadow-mini:0 1px 2px rgba(20,30,50,.12);
+  --shadow-tab:0 1px 2px rgba(0,0,0,.08);
+  --shadow-open:0 2px 12px rgba(47,111,237,.09);
+
+  --zoom:1;                    /* 字号缩放倍数，只作用于原文与小黑板 */
+  --radius:10px;
+}
+
+/* ---------- 黑暗模式 ----------
+   只覆写令牌，一条组件级规则都不写。
+   属性名认 [data-theme]（不是 .dark），值只有 light / dark 两种 ——
+   "跟随系统"在 JS 里就已经解析成具体值了，所以这里不需要第二套
+   @media (prefers-color-scheme)，也就不存在两套配色走岔的可能。
+   防闪烁靠 template.html <head> 里那段内联脚本抢在外链样式表之前写好属性。 */
+:root[data-theme="dark"]{
+  --bg:#12151b;
+  --panel:#1a1e26;
+  --sunken:#20252e;
+  --field:#232935;
+  --field-line:#414a5a;
+  --hover:#212734;
+  --muted:#1f242d;
+  --tag-muted:#2c3341;
+  --tint-accent:#1b2434;
+  --pool-bg:#1f2530;
+
+  --ink:#e7ebf3;
+  --ink-2:#a9b3c3;
+  --ink-3:#7d879a;
+  --on-solid:#0e131b;          /* 暗色下主色块变亮了，字就得反过来变深 */
+
+  --line:#2c323d;
+  --line-2:#232935;
+  --border-hover:#3d4757;
+  --border-accent:#2f4a7d;
+  --border-accent-2:#2a3f66;
+
+  --accent:#5b93ff;
+  --accent-2:#7aa8ff;
+  --accent-soft:#1c2a44;
+
+  --phrase:#4a3d10;
+  --phrase-hover:#64521a;
+  --phrase-line:rgba(255,205,70,.22);
+  --sent-alt:#262218;
+
+  --hl-hover:#22344f;
+  --hl-peek:#3d2233;
+  --hl-peek-line:#7a4462;
+  --hl-cur:#2a4a7a;
+  --hl-cur-line:#4a7ec0;
+
+  --ok:#5cc98d;
+  --ok-bg:#16301f;
+  --ok-line:#2f6b4a;
+  --ok-line-2:#3f8f63;
+  --ins-bg:#16301f;
+  --ins-line:#3f9d68;
+
+  --danger:#ff8080;
+  --danger-2:#ff9e9e;
+  --danger-bg:#3a1d1f;
+  --danger-bg-2:#4a2020;
+  --danger-soft:#3a1d1f;
+  --ring-danger:rgba(255,128,128,.28);
+  --ring-danger-2:rgba(255,128,128,.24);
+
+  --warn:#e0a44a;
+  --warn-bg:#33280f;
+  --warn-line:#5a4620;
+
+  --pat:#b3a0ff;
+  --pat-bg:#241f3d;
+  --pat-bg-2:#2e2750;
+  --pat-line:#3f3568;
+  --pat-line-2:#54468a;
+
+  --chip-cl-bg:#1b2740;
+  --chip-cl-line:#2d4a7a;
+  --chip-cl-ink:#93b7ff;
+  --chip-ph-bg:#33290f;
+  --chip-ph-line:#5a4a1e;
+  --chip-ph-ink:#e0bb62;
+
+  --code-ink:#ff9e8a;
+
+  --badge-w:#6ea0ff;
+  --badge-s:#e5a15c;
+  --pos-bg:#39414f;
+  --pos-ink:#d7dee9;
+
+  --part-lo:23%;
+  --part-span:17%;
+  --part-ink-a:#e7ebf3;        /* 暗色下两档都是浅字，档位只体现在底色上 */
+  --part-ink-b:#e7ebf3;
+
+  --scroll:#333b49;
+  --scroll-2:#414b5c;
+  --shadow:0 1px 3px rgba(0,0,0,.45),0 6px 20px rgba(0,0,0,.35);
+  --shadow-pop:0 10px 40px rgba(0,0,0,.6),0 2px 8px rgba(0,0,0,.45);
+  --shadow-mini:0 1px 2px rgba(0,0,0,.45);
+  --shadow-tab:0 1px 2px rgba(0,0,0,.5);
+  --shadow-open:0 2px 12px rgba(91,147,255,.16);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font:15px/1.6 -apple-system,"Segoe UI",system-ui,"Microsoft YaHei",sans-serif;
+  -webkit-font-smoothing:antialiased;
+  /* 横屏时 iOS 会自作主张放大字号，正文一放大，页边按钮的定位就全错位 */
+  -webkit-text-size-adjust:100%;text-size-adjust:100%;
+  height:100vh;
+  height:100dvh;      /* iOS Safari 的 100vh 把地址栏也算进去，底部抽屉会被顶掉一截 */
+  display:flex;flex-direction:column;overflow:hidden;
+}
+button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
+
+/* ---------- 顶栏 ---------- */
+.topbar{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  padding:10px 20px;background:var(--panel);
+  border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:50;
+}
+.brand{font-weight:700;font-size:15px;letter-spacing:.2px}
+.brand small{font-weight:400;color:var(--ink-3);margin-left:8px;letter-spacing:0}
+/* 顶栏那个脱敏手机号 + 退出。窄屏上由顶栏的 flex-wrap 自动折到第二行 */
+.who{
+  display:inline-flex;align-items:center;gap:6px;margin-left:10px;
+  font-weight:400;font-size:12.5px;letter-spacing:0;
+}
+.who-num{color:var(--ink-2);font-variant-numeric:tabular-nums}
+.who-out{
+  font-size:12px;padding:2px 8px;border-radius:6px;
+  border:1px solid var(--line);color:var(--ink-3);
+  transition:all .15s;
+}
+.who-out:hover{border-color:var(--danger);color:var(--danger);background:var(--danger-bg)}
+
+.tabs{display:flex;gap:4px;background:var(--line-2);padding:3px;border-radius:var(--radius)}
+.tab{
+  padding:6px 16px;border-radius:7px;font-size:14px;color:var(--ink-2);
+  transition:background .15s,color .15s;
+}
+.tab:hover{color:var(--ink)}
+.tab.on{background:var(--panel);color:var(--accent);font-weight:600;box-shadow:var(--shadow-tab)}
+
+.spacer{flex:1}
+/* 字号缩放滑动条 */
+.zoom{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:5px 12px;border:1px solid var(--line);border-radius:8px;background:var(--panel);
+}
+.zoom > span{
+  font-size:12.5px;font-weight:700;color:var(--accent);min-width:32px;text-align:center;
+}
+.zoom input[type=range]{
+  width:108px;accent-color:var(--accent);cursor:pointer;margin:0;
+}
+.tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.tool{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 12px;border:1px solid var(--line);border-radius:8px;
+  font-size:13px;color:var(--ink-2);background:var(--panel);
+  transition:all .15s;
+}
+.tool:hover{border-color:var(--border-hover);color:var(--ink)}
+.tool.on{background:var(--accent-soft);border-color:var(--border-accent);color:var(--accent);font-weight:600}
+.voice-warn{
+  font-size:12px;color:var(--warn);background:var(--warn-bg);border:1px solid var(--warn-line);
+  padding:4px 10px;border-radius:7px;
+}
+
+/* ---------- 两列各半：原文 / 小黑板 ----------
+   历史不占网格，是右侧浮层（.hist-float） */
+.cols{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:14px;padding:14px;
+  flex:1;min-height:0;
+}
+.cols.hide-ana{grid-template-columns:minmax(0,1fr)}
+/* 必须 display:none，否则被收起的列仍会占一个网格轨道 */
+.cols.hide-ana #colAna{display:none}
+
+/* ---------- 历史浮层 ---------- */
+.hist-float{
+  /* top 不能写死 64px：顶栏是 flex-wrap 的，窄下来会折成两三行，
+     实际高度远超 64px，浮层就会盖住顶栏。用变量，窄屏媒体查询里改它。 */
+  position:fixed;top:var(--hist-top,64px);right:14px;bottom:14px;width:330px;
+  background:var(--panel);border-radius:14px;
+  box-shadow:var(--shadow-pop);
+  border:1px solid var(--line);
+  display:flex;flex-direction:column;overflow:hidden;
+  z-index:40;
+  animation:slidein .22s cubic-bezier(.2,.8,.3,1);
+}
+@keyframes slidein{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+/* 必须显式写这条：上面 .hist-float 的 display:flex 是作者样式，
+   会盖掉浏览器默认样式表里的 [hidden]{display:none}，导致 hidden 属性失效、
+   面板永远关不掉。作者样式无论优先级都赢过 UA 样式表。 */
+.hist-float[hidden]{display:none}
+.hist-head{
+  display:flex;align-items:center;gap:8px;flex:none;
+  padding:11px 12px 11px 16px;border-bottom:1px solid var(--line-2);
+  font-size:12px;font-weight:700;letter-spacing:.8px;color:var(--ink-3);
+  text-transform:uppercase;
+}
+.hist-hint{font-weight:400;letter-spacing:0;text-transform:none;font-size:11.5px;margin-left:auto}
+.hist-close{
+  flex:none;width:22px;height:22px;border-radius:6px;font-size:11px;
+  color:var(--ink-3);display:flex;align-items:center;justify-content:center;
+  transition:all .12s;
+}
+.hist-close:hover{background:var(--danger-bg);color:var(--danger)}
+.hist-body{overflow-y:auto;overflow-x:hidden;padding:10px 12px 14px;flex:1}
+.hist-body::-webkit-scrollbar{width:9px}
+.hist-body::-webkit-scrollbar-thumb{background:var(--scroll);border-radius:5px}
+
+#col1{font-size:calc(17px * var(--zoom))}
+#colAna{font-size:calc(16px * var(--zoom))}
+.col{
+  background:var(--panel);border-radius:var(--radius);box-shadow:var(--shadow);
+  display:flex;flex-direction:column;overflow:hidden;
+  min-width:0;min-height:0;
+}
+.col-head{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  padding:11px 16px;border-bottom:1px solid var(--line-2);
+  font-size:calc(12px * var(--zoom));font-weight:700;letter-spacing:.8px;color:var(--ink-3);
+  text-transform:uppercase;flex:none;
+}
+.col-head .hint{font-weight:400;letter-spacing:0;text-transform:none;font-size:calc(12px * var(--zoom));margin-left:auto}
+.col-head .collapse{
+  flex:none;width:calc(22px * var(--zoom));height:calc(22px * var(--zoom));border-radius:6px;font-size:calc(11px * var(--zoom));line-height:1;
+  color:var(--ink-3);display:flex;align-items:center;justify-content:center;
+  transition:all .12s;
+}
+.col-head .collapse:hover{background:var(--danger-bg);color:var(--danger)}
+/* overflow-x 必须显式写 hidden：只写 overflow-y:auto 时 x 轴会计算成 auto，
+   一旦内容溢出就会冒出横向滚动条 */
+.col-body{overflow-y:auto;overflow-x:hidden;padding:16px;flex:1;scroll-behavior:smooth}
+.col-body::-webkit-scrollbar{width:9px}
+.col-body::-webkit-scrollbar-thumb{background:var(--scroll);border-radius:5px}
+.col-body::-webkit-scrollbar-thumb:hover{background:var(--scroll-2)}
+
+/* ---------- 原文 ---------- */
+.passage-title{
+  font-size:calc(20px * var(--zoom));font-weight:700;margin:2px 0 4px;letter-spacing:.2px;
+}
+.passage-meta{font-size:calc(12.5px * var(--zoom));color:var(--ink-3);margin-bottom:16px}
+.para{margin:0 0 15px}
+/* 句子连续排版：inline，不换行。
+   靠交替底色区分句界，靠右侧页边的悬浮按钮操作 */
+.sent{
+  display:inline;
+  padding:2px 3px;border-radius:5px;
+  cursor:pointer;
+  box-decoration-break:clone;-webkit-box-decoration-break:clone;
+  transition:background .15s;
+}
+.sent.alt{background:var(--sent-alt)}          /* 奇数句：淡黄 */
+.sent:hover{background:var(--hl-hover) !important}
+/* 鼠标停在页边的「析」上时，对应那句变粉，指明这个按钮管的是哪一句 */
+.sent.peek{background:var(--hl-peek) !important;box-shadow:0 0 0 1px var(--hl-peek-line)}
+.sent.cur{background:var(--hl-cur) !important;box-shadow:0 0 0 1px var(--hl-cur-line)}
+.sent-txt{}
+
+/* 正文右侧留出页边，放每句的按钮 */
+#passage{position:relative;padding-right:calc(58px * var(--zoom))}
+.pgutter{position:absolute;top:0;right:0;width:calc(52px * var(--zoom));pointer-events:none}
+.sbtns{
+  position:absolute;right:0;width:calc(52px * var(--zoom));
+  display:flex;gap:3px;justify-content:flex-end;
+  pointer-events:auto;
+}
+.sbtns .mini{background:var(--panel);box-shadow:var(--shadow-mini);opacity:.72}
+.sbtns .mini:hover{opacity:1;background:var(--accent-soft)}
+.sbtns.cur .mini{opacity:1;background:var(--accent-soft)}
+
+/* 窄屏（<1100px）放不下页边：隐藏按钮栏。
+   句子的「析 / 🔊」改从底部抽屉顶部的 🔊 调用，不会没得用。
+   1100 这个值不是随手取的：老的 1180 正好卡在 iPad Air 横屏（1180）上，
+   iPad Pro 11" 横屏（1194）反而漏掉 —— 两个最主流的横屏 iPad 走的是两套布局。 */
+@media(max-width:1099px){
+  #passage{padding-right:0}
+  .pgutter{display:none}
+}
+
+/* 单词 */
+.w{
+  border-radius:4px;padding:1px 1px;cursor:pointer;
+  transition:background .12s,color .12s;
+}
+.w:hover{background:var(--accent-soft);color:var(--accent)}
+.w.act{background:var(--accent);color:var(--on-solid)}
+
+/* 词组 */
+.ph{
+  background:var(--phrase);border-radius:4px;padding:1px 2px;cursor:pointer;
+  box-shadow:inset 0 -1px 0 var(--phrase-line);
+  transition:background .12s;
+}
+.ph:hover{background:var(--phrase-hover)}
+.ph.act{background:var(--accent);color:var(--on-solid);box-shadow:none}
+
+/* 填空题干与答案句 */
+.blank{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:calc(34px * var(--zoom));height:calc(22px * var(--zoom));padding:0 7px;margin:0 3px;
+  background:var(--field);border:1.5px dashed var(--field-line);border-radius:6px;
+  font-size:calc(12.5px * var(--zoom));font-weight:700;color:var(--ink-3);vertical-align:1px;
+  cursor:pointer;transition:all .15s;
+}
+.blank:hover{border-color:var(--accent);color:var(--accent)}
+.blank.filled{background:var(--ins-bg);border:1.5px solid var(--ins-line);color:var(--ok)}
+.blank.act{background:var(--accent);border-color:var(--accent);color:var(--on-solid)}
+body.quiz .blank{background:var(--field);border-style:dashed;border-color:var(--field-line);color:var(--ink-3)}
+
+/* 长难句不再单独上底色 —— 那会盖掉「淡黄 / 白」的交替节奏。
+   现在每句都能点、都有讲解，长难句的区分意义已经不大了。
+   hard 标记仍保留在数据里，顶栏那行「长难句 12 句」还在。 */
+
+/* 页边与面板里的小按钮 */
+.mini{
+  width:calc(24px * var(--zoom));height:calc(22px * var(--zoom));border-radius:5px;font-size:calc(12px * var(--zoom));line-height:1;
+  display:inline-flex;align-items:center;justify-content:center;
+  color:var(--ink-3);transition:all .12s;
+}
+.mini:hover{background:var(--accent-soft);color:var(--accent)}
+.mini.on{background:var(--accent);color:var(--on-solid)}
+.mini.speaking{background:var(--danger-soft);color:var(--danger)}
+
+/* ---------- 历史记录列 ---------- */
+/* 行是 div，里面两个平级 button（button 不能嵌套 button） */
+.hitem{
+  display:flex;align-items:center;gap:2px;
+  border-radius:8px;margin-bottom:2px;border:1px solid transparent;
+  transition:background .12s,border-color .12s;
+  animation:pop .18s ease-out;
+}
+.hitem:hover{background:var(--hover);border-color:var(--line)}
+.hitem.cur{background:var(--accent-soft);border-color:var(--border-accent)}
+.hopen{
+  flex:1;min-width:0;display:flex;align-items:center;gap:8px;
+  text-align:left;padding:7px 4px 7px 9px;border-radius:8px;
+}
+.hbadge{
+  flex:none;width:20px;height:20px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;color:var(--on-solid);
+}
+.hitem.w .hbadge{background:var(--badge-w)}          /* 词：蓝 */
+.hitem.s .hbadge{background:var(--badge-s)}          /* 句：橙 */
+/* 词条行：英文一行、中文一行。只留这两项，音标和词性去掉了 */
+.hbody{flex:1;min-width:0;display:flex;flex-direction:column;gap:1px}
+.hlabel{
+  flex:1;min-width:0;font-size:13.5px;line-height:1.45;color:var(--ink);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.hitem.w .hlabel{font-weight:700}
+.hitem.s .hlabel{font-weight:400;color:var(--ink-2)}
+.hcn{
+  font-size:12px;color:var(--ink-2);line-height:1.4;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.hitem.w{align-items:flex-start}
+.hitem.w .hopen{align-items:flex-start}
+.hitem.w .hbadge{margin-top:1px}
+/* 每行最右的两个动作：收藏 ☆ 和 删除 ✕。
+   平时隐形（免得一列星星太吵），悬停或已经收藏时才显形。 */
+.hfav,.hdel{
+  flex:none;font-size:12px;color:var(--ink-3);padding:4px 7px;border-radius:5px;
+  opacity:0;transition:opacity .12s,color .12s,background .12s;
+}
+.hfav.on{opacity:1;color:var(--ink-2)}
+.hfav.on:hover{background:var(--line-2)}
+.hitem:hover .hfav,.hitem:hover .hdel{opacity:1}
+.hdel:hover{background:var(--danger-bg);color:var(--danger)}
+
+/* 触摸设备上根本没有:hover —— 上面那套「悬停才显形」等于把这两个按钮
+   彻底藏起来，永远点不到。这是本来就存在的毛病（删除键在手机上一直点不着），
+   加收藏按钮时一并修掉，且新按钮必须一起进这个名单。 */
+@media(hover:none){
+  .hfav,.hdel{opacity:1}
+}
+
+/* ---------- 生词本 ---------- */
+.empty{
+  color:var(--ink-3);font-size:calc(13.5px * var(--zoom));text-align:center;
+  padding:36px 16px;line-height:1.9;
+}
+.empty .big{font-size:calc(26px * var(--zoom));display:block;margin-bottom:8px;opacity:.5}
+@keyframes pop{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
+.vpos{
+  background:var(--pos-bg);color:var(--pos-ink);border-radius:20px;
+  padding:0 7px;font-weight:700;white-space:nowrap;
+}
+
+/* ---------- 句子分析 ---------- */
+.ana{animation:pop .2s ease-out}
+.ana-h{
+  font-size:calc(13px * var(--zoom));font-weight:700;letter-spacing:.8px;color:var(--ink-3);
+  text-transform:uppercase;margin:0 0 10px;
+  display:flex;align-items:center;gap:8px;
+}
+.ana-h .ana-spk{
+  font-size:calc(12px * var(--zoom));color:var(--accent);letter-spacing:0;
+  text-transform:none;font-weight:600;
+  border:1px solid var(--border-accent-2);background:var(--tint-accent);border-radius:6px;padding:3px 10px;
+  display:inline-flex;align-items:center;gap:5px;
+}
+.ana-h .ana-spk:hover{background:var(--accent-soft)}
+/* 顶部区：原句 + 标题吸顶。小黑板内容长，滚到下面时原句不能跑掉 */
+.ana-top{
+  position:sticky;top:-16px;z-index:6;
+  background:var(--panel);
+  padding:16px 0 10px;margin:-16px 0 0;
+}
+/* 原句：紧凑的灰色圆角方框 + 加粗（分析栏空间小，这里要省地方） */
+.ana-sent{
+  font-size:calc(15px * var(--zoom));font-weight:700;line-height:1.6;
+  background:var(--sunken);border-radius:10px;
+  padding:8px 11px;
+  word-break:break-word;
+}
+/* 句型定位到的片段 */
+.ana-sent .hl{
+  background:var(--danger-bg-2);color:var(--danger-2);
+  border-radius:4px;padding:1px 3px;
+  box-shadow:0 0 0 2px var(--ring-danger);
+}
+/* 只在动画期间变成 inline-block（transform 对纯 inline 元素无效），
+   动完就摘掉这个类，文字恢复正常的换行行为 */
+.ana-sent .hl.reveal{
+  display:inline-block;
+  transform-origin:center;
+  animation:hlpop .5s cubic-bezier(.2,.8,.3,1);
+}
+@keyframes hlpop{
+  0%{transform:scale(1.1)}
+  60%{transform:scale(1.03)}
+  100%{transform:scale(1)}
+}
+.sec{margin-bottom:14px}
+.sec-t{
+  font-size:calc(13.5px * var(--zoom));font-weight:700;color:var(--accent);margin-bottom:6px;
+  display:flex;align-items:center;gap:6px;
+}
+.sec-t::before{content:"";width:3px;height:12px;background:var(--accent);border-radius:2px}
+.sec-b{font-size:calc(15px * var(--zoom));line-height:1.8;color:var(--ink-2)}
+.sec-b b{color:var(--ink)}
+.sec-b code{
+  background:var(--field);padding:1px 6px;border-radius:4px;font-size:calc(13.5px * var(--zoom));
+  font-family:"Cascadia Code",Consolas,monospace;color:var(--code-ink);
+}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.chip{
+  font-size:calc(13px * var(--zoom));padding:3px 10px;border-radius:20px;
+  background:var(--line-2);color:var(--ink-2);border:1px solid var(--line);
+}
+.chip.cl{background:var(--chip-cl-bg);border-color:var(--chip-cl-line);color:var(--chip-cl-ink)}
+.chip.ph2{background:var(--chip-ph-bg);border-color:var(--chip-ph-line);color:var(--chip-ph-ink)}
+.chip.ph3{background:transparent;border-style:dashed;color:var(--ink-3)}
+.chip.gr{background:var(--ok-bg);border-color:var(--ok-line);color:var(--ok)}
+.chip.pat{background:var(--pat-bg);border-color:var(--pat-line);color:var(--pat)}
+.chip.pat0{background:var(--pat);border-color:var(--pat);color:var(--on-solid);font-weight:700}
+/* 句型 chip 可点：点了就在上面原句里标出对应成分 */
+button.chip.pat{cursor:pointer}
+button.chip.pat:hover{background:var(--pat-bg-2);border-color:var(--pat-line-2)}
+button.chip.pat.on{
+  background:var(--danger);border-color:var(--danger);color:var(--on-solid);font-weight:700;
+  box-shadow:0 0 0 3px var(--ring-danger-2);
+}
+button.chip.pat.static{cursor:default;opacity:.75}
+button.chip.pat.static:hover{background:var(--pat-bg);border-color:var(--pat-line)}
+button.chip{cursor:pointer;transition:filter .12s}
+button.chip:hover{filter:brightness(.94)}
+button.chip.ph2:hover{background:var(--phrase-hover)}
+
+/* 成分拆解：一项一张圆角卡片，成分名在上、内容在下。
+   底色由 JS 按序号从浅灰递深，文字颜色也随之切换 */
+.parts{display:flex;flex-direction:column;gap:6px;margin-top:2px}
+.part{
+  border-radius:9px;padding:7px 11px;
+  background:hsl(220 13% calc(var(--part-lo) + var(--part-span) * var(--pt, 0)));
+}
+.part .pname{
+  display:block;font-size:calc(12.5px * var(--zoom));font-weight:700;letter-spacing:.5px;
+  opacity:.78;white-space:nowrap;margin-bottom:2px;   /* 标签一行，不换行 */
+}
+.part .pbody{display:block;font-size:calc(15px * var(--zoom));line-height:1.65}
+.part code{
+  background:rgba(128,128,128,.2);color:inherit;font-weight:600;
+  padding:0 5px;border-radius:4px;
+  font-family:"Cascadia Code",Consolas,monospace;font-size:calc(13px * var(--zoom));
+}
+
+/* ---------- 题目 ---------- */
+.qcard{
+  border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:12px;
+  transition:border-color .15s,box-shadow .15s;
+}
+/* 原文页里那份题目：与正文分隔的开头标题 */
+.qsec-h{
+  font-size:calc(12px * var(--zoom));font-weight:700;letter-spacing:.8px;color:var(--ink-3);
+  margin:24px 0 11px;padding-top:16px;border-top:1px solid var(--line);
+}
+.qcard.open{border-color:var(--border-accent-2);box-shadow:var(--shadow-open)}
+.qhead{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.qnum{
+  width:calc(27px * var(--zoom));height:calc(27px * var(--zoom));flex:none;border-radius:50%;background:var(--accent);color:var(--on-solid);
+  display:flex;align-items:center;justify-content:center;font-size:calc(13px * var(--zoom));font-weight:700;
+}
+.qtxt{font-size:calc(15.5px * var(--zoom));font-weight:600;line-height:1.75;flex:1}
+.qans{
+  display:flex;align-items:center;gap:9px;margin-top:11px;padding:10px 12px;
+  background:var(--ins-bg);border-radius:8px;border:1px solid var(--ok-line);
+}
+.qans .lbl{font-size:calc(12px * var(--zoom));font-weight:700;color:var(--ok);letter-spacing:.5px;flex:none}
+.qans .letter{
+  width:calc(24px * var(--zoom));height:calc(24px * var(--zoom));flex:none;border-radius:6px;background:var(--ok);color:var(--on-solid);
+  display:flex;align-items:center;justify-content:center;font-size:calc(13px * var(--zoom));font-weight:700;
+}
+.qans .atxt{flex:1;font-size:calc(14.5px * var(--zoom));line-height:1.7}
+.qbtns{display:flex;gap:8px;margin-top:11px}
+.btn{
+  padding:6px 14px;border-radius:7px;font-size:calc(13px * var(--zoom));border:1px solid var(--line);
+  color:var(--ink-2);background:var(--panel);display:inline-flex;align-items:center;gap:6px;
+  transition:all .15s;
+}
+.btn:hover{border-color:var(--border-hover);color:var(--ink)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--on-solid);font-weight:600}
+.btn.pri:hover{background:var(--accent-2);color:var(--on-solid)}
+.btn.on{background:var(--accent-soft);border-color:var(--border-accent);color:var(--accent);font-weight:600}
+.qbody{display:none;margin-top:13px;padding-top:13px;border-top:1px dashed var(--line)}
+.qbody.show{display:block}
+
+.opt{
+  display:flex;gap:10px;flex-wrap:wrap;padding:9px 11px;border-radius:8px;margin-bottom:5px;
+  font-size:calc(14.5px * var(--zoom));line-height:1.7;border:1px solid transparent;transition:all .15s;
+}
+.opt:hover{background:var(--hover)}
+.opt .ol{
+  width:calc(22px * var(--zoom));height:calc(22px * var(--zoom));flex:none;border-radius:5px;background:var(--line-2);color:var(--ink-2);
+  display:flex;align-items:center;justify-content:center;font-size:calc(12.5px * var(--zoom));font-weight:700;
+}
+.opt.right{background:var(--ins-bg);border-color:var(--ok-line)}
+.opt.right .ol{background:var(--ok);color:var(--on-solid)}
+.opt.used{background:var(--muted);border-color:var(--line)}
+.opt .otxt{flex:1;min-width:0}
+.opt .tag{
+  font-size:calc(11.5px * var(--zoom));padding:1px 8px;border-radius:20px;align-self:flex-start;
+  background:var(--line-2);color:var(--ink-3);white-space:nowrap;flex:none;
+}
+/* 每条备选句右边的三个动作 */
+.oacts{display:flex;gap:4px;flex:none;align-self:flex-start}
+.obtn{
+  font-size:calc(11.5px * var(--zoom));line-height:1;padding:5px 9px;border-radius:7px;
+  border:1px solid var(--line);background:var(--panel);color:var(--ink-2);
+  white-space:nowrap;transition:all .12s;
+}
+.obtn:hover{border-color:var(--border-accent);background:var(--accent-soft);color:var(--accent)}
+.obtn[data-ana]{border-color:var(--pat-line);color:var(--pat)}
+.obtn[data-ana]:hover{background:var(--pat-bg);border-color:var(--pat-line-2)}
+.obtn[data-qexp]{border-color:var(--ok-line);color:var(--ok)}
+.obtn[data-qexp]:hover{background:var(--ok-bg);border-color:var(--ok-line-2)}
+.opt.cur{border-color:var(--accent);background:var(--accent-soft)}
+.traprow{padding:5px 0;border-bottom:1px dashed var(--line-2);line-height:1.7}
+.traprow:last-child{border-bottom:none}
+.opt.right .tag{background:var(--ok);color:var(--on-solid)}
+.opt.used .tag{background:var(--tag-muted);color:var(--ink-2)}
+
+.qa-sec{margin-top:13px}
+.qa-sec:first-child{margin-top:0}
+.qa-t{
+  font-size:calc(13.5px * var(--zoom));font-weight:700;color:var(--accent);
+  margin-bottom:6px;display:flex;align-items:center;gap:6px;
+}
+.qa-t::before{content:"";width:3px;height:12px;background:var(--accent);border-radius:2px}
+.qa-b{font-size:calc(15px * var(--zoom));line-height:1.85;color:var(--ink-2)}
+.qa-b b{color:var(--ink)}
+.qa-b code{background:var(--field);padding:1px 6px;border-radius:4px;font-family:"Cascadia Code",Consolas,monospace;font-size:calc(13.5px * var(--zoom));color:var(--code-ink)}
+
+/* ============================================================
+   窄屏（手机 / 竖屏 iPad）：正文单列，小黑板改成底部抽屉
+   ============================================================
+   关键设计：**复用同一份 #colAna DOM，只换表现**。
+   不新增面板、不改 JS 的显隐逻辑 —— .hide-ana 那套照旧管用，
+   只是「收起」从 display:none 变成了「滑到屏幕外面去」。
+   （必须是滑出去而不是 display:none，否则"升起来"这个动作没有动画，
+     手机上会显得很生硬。position:fixed 不占流，藏在屏幕外不影响正文。）
+
+   断点 1100 的来历见前面 .pgutter 那段注释。
+   必须带上 hide-* 变体，否则上面的列宽规则（优先级更高）会盖掉这里。 */
+@media(max-width:1099px){
+  body{overflow:auto;height:auto;min-height:100vh;min-height:100dvh}
+  .cols,.cols.hide-ana,.cols.hide-vocab,.cols.hide-ana.hide-vocab{
+    grid-template-columns:1fr;flex:none;gap:12px;
+  }
+  /* 手机上正文该有多长就多长，整页滚 —— 不再把正文锁在一个 78vh 的小窗口里 */
+  .col{max-height:none;min-height:0}
+  .col-body{max-height:none}
+
+  /* ---- 顶栏：压成一行横向滚动 ----
+     六个工具按钮 + 页签在 375px 上折成四五行，会把屏幕上半截吃掉。
+     改成一行、放不下就横滑，是手机上更常见的做法。 */
+  .topbar{
+    flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;
+    gap:10px;padding:8px 12px;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  }
+  .topbar::-webkit-scrollbar{display:none}
+  .topbar > *{flex:none}
+  .spacer{display:none}
+  .brand small{display:none}    /* 出处标注，手机上让位给按钮 */
+
+  /* ---- 小黑板 = 底部抽屉 ---- */
+  #colAna{
+    position:fixed;left:0;right:0;bottom:0;z-index:60;
+    height:62vh;height:62dvh;
+    border-radius:16px 16px 0 0;
+    box-shadow:0 -6px 30px rgba(0,0,0,.22);
+    /* 全面屏底部那条横条会压住最后一行字 */
+    padding-bottom:env(safe-area-inset-bottom);
+    transform:translateY(100%);
+    transition:transform .22s cubic-bezier(.2,.8,.3,1);
+  }
+  /* 收起时也要保持 display:flex —— 见上面那段注释 */
+  .cols.hide-ana #colAna{display:flex}
+  .cols:not(.hide-ana) #colAna{transform:translateY(0)}
+  /* 抽屉顶上的小横杠，一眼看出这是能从下面拉起来的东西 */
+  #colAna .col-head{position:relative;padding-top:15px}
+  #colAna .col-head::before{
+    content:"";position:absolute;top:7px;left:50%;transform:translateX(-50%);
+    width:38px;height:4px;border-radius:2px;background:var(--line);
+  }
+
+  /* ---- 历史浮层：手机上要满宽 ----
+     原来写死 330px，375px 的屏上右边会超出 40 多像素；
+     而且 top:64px 是按单行顶栏算的，顶栏一折行就被盖住。 */
+  .hist-float{
+    top:auto;left:14px;right:14px;bottom:14px;width:auto;
+    max-height:72vh;
+    z-index:70;    /* 要盖在抽屉（60）和遮罩（55）上面 */
+  }
+}
+
+/* 抽屉升起时压住正文的那层灰。宽屏下彻底不存在（连占位都没有）。
+   pointer-events 与 opacity 一起切 —— 只看 opacity 的话，透明的那层还会吃掉点击。 */
+.scrim{display:none}
+@media(max-width:1099px){
+  .scrim{
+    display:block;position:fixed;inset:0;z-index:55;
+    background:rgba(0,0,0,.38);touch-action:none;
+    opacity:0;pointer-events:none;transition:opacity .22s;
+  }
+  .cols:not(.hide-ana) ~ .scrim{opacity:1;pointer-events:auto}
+}
+
+/* ============================================================
+   登录页
+   ============================================================
+   登录页只加载 style.css + store.js，不加载 app.js。
+   所以这里的每条规则都必须自足 —— 不能指望页面里还有别的样式。
+   色值一律走令牌，暗色因此自动成立，不需要在这里再写一遍暗色。 */
+.login-body{
+  margin:0;min-height:100vh;min-height:100dvh;
+  background:var(--bg);color:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  padding:24px 16px calc(24px + env(safe-area-inset-bottom));
+  -webkit-text-size-adjust:100%;
+}
+.login-wrap{width:100%;max-width:380px}
+.login-card{
+  background:var(--panel);border:1px solid var(--line);
+  border-radius:16px;padding:28px 24px 22px;box-shadow:var(--shadow);
+}
+.login-title{margin:0;font-size:20px;line-height:1.4;letter-spacing:.3px}
+.login-sub{margin:6px 0 22px;color:var(--ink-2);font-size:13.5px}
+
+.login-label{display:block;font-size:13px;color:var(--ink-2);margin-bottom:6px}
+.login-row{
+  display:flex;align-items:center;gap:0;
+  border:1px solid var(--border-hover);border-radius:10px;
+  background:var(--field);overflow:hidden;
+  transition:border-color .15s,box-shadow .15s;
+}
+/* 输入框聚焦时整行一起亮 —— 光给 <input> 描边的话，边框在 .login-row 上，看不出来 */
+.login-row:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.login-cc{
+  flex:none;padding:0 10px 0 13px;color:var(--ink-3);font-size:15px;
+  border-right:1px solid var(--line);
+}
+#phone{
+  flex:1;min-width:0;border:0;outline:0;background:transparent;color:var(--ink);
+  font-size:17px;letter-spacing:1px;padding:13px 13px;
+  font-family:inherit;
+}
+#phone::placeholder{color:var(--ink-3);letter-spacing:0;font-size:15px}
+#phone.bad{color:var(--danger)}
+
+.login-err{
+  margin:10px 0 0;font-size:13px;color:var(--danger);
+  background:var(--danger-bg);border:1px solid var(--danger-bg-2);
+  border-radius:8px;padding:8px 10px;
+}
+.login-btn{
+  width:100%;margin-top:16px;padding:13px;border:0;border-radius:10px;
+  background:var(--accent);color:var(--on-solid);
+  font-size:16px;font-weight:600;font-family:inherit;cursor:pointer;
+  transition:background .15s;
+}
+.login-btn:hover{background:var(--accent-2)}
+.login-btn:disabled{opacity:.6;cursor:default}
+
+.login-note{margin:16px 0 0;font-size:12.5px;line-height:1.7;color:var(--ink-3)}
+.login-note.warn{color:var(--warn);background:var(--warn-bg);
+  border:1px solid var(--warn-line);border-radius:8px;padding:8px 10px;margin-top:14px}
+.login-foot{margin:18px 0 0;text-align:center;font-size:13.5px}
+.login-foot a{color:var(--ink-2);text-decoration:none}
+.login-foot a:hover{color:var(--accent)}
+
+/* 登录页的主题开关：顶到右上角，不与卡片抢视线 */
+.theme-fab{
+  position:fixed;top:calc(14px + env(safe-area-inset-top));right:14px;z-index:10;
+  background:var(--panel);border:1px solid var(--line);border-radius:999px;
+  color:var(--ink-2);font-size:12.5px;font-family:inherit;
+  padding:7px 13px;cursor:pointer;box-shadow:var(--shadow);
+}
+.theme-fab:hover{border-color:var(--border-hover);color:var(--ink)}
+.theme-fab.on{color:var(--accent);border-color:var(--border-accent)}

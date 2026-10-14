@@ -1,0 +1,17 @@
+{
+  "name": "pet-reading",
+  "version": "1.0.0",
+  "description": "PET 精读 · 多文章引擎",
+  "scripts": {
+    "build": "node build.mjs",
+    "verify": "node tools/verify.mjs",
+    "smoke": "node tools/smoke.mjs",
+    "test:store": "node tools/test-store.mjs",
+    "check": "node tools/verify.mjs && node build.mjs && node tools/smoke.mjs && node tools/test-store.mjs"
+  },
+  "type": "module",
+  "private": "true",
+  "devDependencies": {
+    "jsdom": "^30.1.2"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "site": {
+    "title": "PET 精读",
+    "tagline": "剑桥PET 官方模考题精讲讲练 23-24"
+  },
+  "books": [
+    {
+      "id": "pet-23-24",
+      "title": "剑桥PET 官方模考题精讲讲练 23-24",
+      "articles": [
+        "t1-p4-digging-into-the-past"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+- generic [ref=f6e1]:
+  - button "◐ 跟随" [ref=f6e2] [cursor=pointer]
+  - main [ref=f6e3]:
+    - generic [ref=f6e4]:
+      - heading "PET 精读" [level=1] [ref=f6e5]
+      - paragraph [ref=f6e6]: 用手机号登录后开始精读
+      - generic [ref=f6e7]:
+        - generic [ref=f6e8]: 手机号
+        - generic [ref=f6e9]:
+          - generic [ref=f6e10]: "+86"
+          - textbox "手机号" [active] [ref=f6e11]:
+            - /placeholder: 11 位手机号
+        - button "登录" [ref=f6e12] [cursor=pointer]
+      - paragraph [ref=f6e13]: 登录状态只保存在这台设备上。换设备需重新登录。
+    - paragraph [ref=f6e14]:
+      - link "← 返回目录" [ref=f6e15] [cursor=pointer]:
+        - /url: t1-p4-digging-into-the-past.html

@@ -1,0 +1,17 @@
+- generic [ref=f5e1]:
+  - button "◐ 跟随" [ref=f5e2] [cursor=pointer]
+  - main [ref=f5e3]:
+    - generic [ref=f5e4]:
+      - heading [level=1]
+      - paragraph [ref=f5e5]: 用手机号登录后开始精读
+      - generic [ref=f5e6]:
+        - generic [ref=f5e7]: 手机号
+        - generic [ref=f5e8]:
+          - generic [ref=f5e9]: "+86"
+          - textbox "手机号" [active] [ref=f5e10]:
+            - /placeholder: 11 位手机号
+        - button "登录" [ref=f5e11] [cursor=pointer]
+      - paragraph [ref=f5e12]: 登录状态只保存在这台设备上。换设备需重新登录。
+    - paragraph [ref=f5e13]:
+      - link "← 返回目录" [ref=f5e14] [cursor=pointer]:
+        - /url: index.html
