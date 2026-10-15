@@ -1,0 +1,23 @@
+{
+  "_说明": "复制成 config.json 再改。这个文件里有授权码，别提交到 git、别发给别人。",
+
+  "host": "smtp.qq.com",
+  "smtpPort": 465,
+  "secure": true,
+
+  "user": "你的邮箱@qq.com",
+  "pass": "邮箱的 SMTP 授权码（不是登录密码！）",
+  "from": "你的邮箱@qq.com",
+  "to": "收件邮箱，可以和你自己一样",
+
+  "port": 8787,
+  "token": "",
+
+  "_常见邮箱的填法": {
+    "QQ邮箱": { "host": "smtp.qq.com", "smtpPort": 465, "secure": true, "备注": "设置→账户→开启SMTP服务→生成授权码" },
+    "163邮箱": { "host": "smtp.163.com", "smtpPort": 465, "secure": true, "备注": "设置→POP3/SMTP/IMAP→开启→新增授权码" },
+    "Gmail": { "host": "smtp.gmail.com", "smtpPort": 465, "secure": true, "备注": "需要开两步验证后生成「应用专用密码」" },
+    "Outlook": { "host": "smtp-mail.outlook.com", "smtpPort": 587, "secure": false, "备注": "587 走 STARTTLS，所以 secure 填 false" },
+    "企业邮箱": { "host": "问你的IT", "smtpPort": 465, "secure": true, "备注": "一般和 QQ/163 一样" }
+  }
+}

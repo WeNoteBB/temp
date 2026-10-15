@@ -1,0 +1,12 @@
+{
+  "name": "pet-reading-mail-server",
+  "private": true,
+  "description": "PET 精读 · 发信服务：托管页面 + 用 SMTP 把历史记录发到邮箱",
+  "main": "mail-server.cjs",
+  "scripts": {
+    "start": "node mail-server.cjs"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.0"
+  }
+}

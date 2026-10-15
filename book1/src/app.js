@@ -1200,6 +1200,203 @@
   }
 
   /* =======================================================
+     八点五、导出并发送到邮箱
+
+     页面本身发不了信（静态页面没有 SMTP 凭据）。这里只做两件事：
+       1. 判断自己是不是被 server/mail-server.cjs 托管的
+       2. 是的话，把历史记录整理成 Word 文档 POST 给那个服务
+
+     双击本地打开（file://）时接口探测会失败，按钮保持禁用。
+     磁盘上的 HTML 里没有任何密钥 —— 口令由服务端在托管时注入。
+     ======================================================= */
+  var MAIL_TOKEN = "__MAIL_TOKEN__";   // 服务端托管时会替换掉；本地打开时保持原样
+  var serverMode = false;
+
+  function mailMsg(text, kind) {
+    var el = document.getElementById("mailMsg");
+    if (!el) return;
+    if (!text) { el.hidden = true; return; }
+    el.hidden = false;
+    el.textContent = text;
+    el.className = "mail-msg" + (kind ? " " + kind : "");
+  }
+
+  // 探测是否由服务器托管 —— 据此决定发送按钮能不能点。
+  // 窗口重新获得焦点时也探一次：服务可能是在页面打开之后才启动的。
+  function detectMailServer() {
+    var btn = document.getElementById("btnMail");
+    if (!btn) return;
+    if (typeof fetch !== "function") return;    // 老浏览器 / jsdom：按钮保持禁用，不许崩
+    fetch("api/health").then(function (r) {
+      return r.ok ? r.json() : null;
+    }).then(function (j) {
+      if (!j || !j.ok) return;
+      serverMode = true;
+      btn.disabled = false;
+      btn.classList.add("on");
+      btn.title = "发送到 " + j.to;
+    }).catch(function () {
+      // file:// 下 fetch 会直接 reject，按钮保持禁用
+      serverMode = false;
+      btn.disabled = true;
+      btn.classList.remove("on");
+    });
+  }
+
+  function histGroups() {
+    var words = [], phrases = [], sents = [];
+    state.hist.forEach(function (it) {
+      if (it.t === "w") {
+        var e = (lookup(it.k) || lookupPhrase(String(it.k).toLowerCase()) || {}).entry;
+        if (!e) return;
+        (/\s/.test(it.k) ? phrases : words).push({ k: it.k, e: e });
+      } else {
+        var d = anaData(it.ref);
+        if (d) sents.push({ ref: it.ref, d: d });
+      }
+    });
+    return { words: words, phrases: phrases, sents: sents };
+  }
+
+  function esc2(s) {
+    return String(s == null ? "" : s)
+      .replace(/[&<>"]/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+      });
+  }
+
+  function two(n) { return (n < 10 ? "0" : "") + n; }
+  function stamp() {
+    var d = new Date();
+    return d.getFullYear() + "-" + two(d.getMonth() + 1) + "-" + two(d.getDate()) +
+      " " + two(d.getHours()) + ":" + two(d.getMinutes());
+  }
+
+  // 分级详略：词给音标+词性+中文，词组给释义，句子给原句+翻译+句型
+  function buildExportHtml() {
+    var g = histGroups();
+    var h = "";
+    h += '<h1>PET 精读 · ' + esc2(C.passage.title) + "</h1>";
+    h += '<div class="meta">' + esc2(C.meta.label) + " ｜ 导出时间 " + stamp() +
+      " ｜ 单词 " + g.words.length + " · 词组 " + g.phrases.length + " · 句子 " + g.sents.length + "</div>";
+
+    if (g.words.length) {
+      h += "<h2>一、单词</h2>";
+      g.words.forEach(function (w, i) {
+        h += '<p class="item"><span class="no">' + (i + 1) + ".</span> " +
+          '<span class="en">' + esc2(w.k) + "</span> " +
+          (w.e.ipa ? '<span class="ipa">' + esc2(w.e.ipa) + "</span> " : "") +
+          (w.e.pos ? '<span class="pos">' + esc2(w.e.pos) + "</span> " : "") +
+          '<span class="cn">' + stripTags(w.e.cn || "") + "</span></p>";
+      });
+    }
+    if (g.phrases.length) {
+      h += "<h2>二、词组</h2>";
+      g.phrases.forEach(function (w, i) {
+        h += '<p class="item"><span class="no">' + (i + 1) + ".</span> " +
+          '<span class="en">' + esc2(w.k) + "</span> " +
+          (w.e.ipa ? '<span class="ipa">' + esc2(w.e.ipa) + "</span> " : "") +
+          '<span class="cn">' + stripTags(w.e.cn || "") + "</span></p>";
+      });
+    }
+    if (g.sents.length) {
+      h += "<h2>三、句子</h2>";
+      g.sents.forEach(function (s, i) {
+        var a = s.d.ana || {};
+        h += '<p class="item"><span class="no">' + (i + 1) + ".</span> " +
+          '<span class="sent">' + esc2(String(s.d.s).replace(/\{\d+\}/g, "____")) + "</span></p>";
+        if (s.d.tr) h += '<p class="sub">翻译：' + esc2(s.d.tr) + "</p>";
+        if (a.pat && a.pat.length) h += '<p class="sub">句型：' + esc2(a.pat.join(" · ")) + "</p>";
+        if (a.frame) h += '<p class="sub">骨架：' + stripTags(a.frame) + "</p>";
+      });
+    }
+    if (!g.words.length && !g.phrases.length && !g.sents.length) {
+      h += '<p class="item">（历史记录是空的 —— 先在页面上点几个单词或句子）</p>';
+    }
+    return h;
+  }
+
+  var DOC_CSS =
+    "@page{size:A4;margin:2cm}" +
+    'body{font-family:"Microsoft YaHei","Segoe UI",sans-serif;font-size:11pt;line-height:1.75;color:#1e2430}' +
+    "h1{font-size:19pt;margin:0 0 6pt}" +
+    "h2{font-size:13pt;margin:20pt 0 9pt;border-bottom:1px solid #ccd;padding-bottom:4pt}" +
+    ".meta{color:#888;font-size:9pt;margin-bottom:16pt}" +
+    ".item{margin:0 0 7pt}" +
+    ".no{color:#999}" +
+    ".en{font-weight:bold}" +
+    ".ipa{color:#2f6fed;font-family:Consolas,monospace}" +
+    ".pos{color:#666}" +
+    ".cn{color:#333}" +
+    ".sent{font-weight:bold}" +
+    ".sub{color:#555;font-size:10pt;margin:0 0 3pt 16pt}";
+
+  // Word 能打开的 HTML（.doc 就是套了 Word 头的 HTML，不用任何库）
+  function wordDoc(inner) {
+    return '<html xmlns:o="urn:schemas-microsoft-com:office:office" ' +
+      'xmlns:w="urn:schemas-microsoft-com:office:word" ' +
+      'xmlns="http://www.w3.org/TR/REC-html40"><head><meta charset="utf-8">' +
+      "<title>PET 精读</title>" +
+      "<!--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View>" +
+      "<w:Zoom>100</w:Zoom></w:WordDocument></xml><![endif]-->" +
+      "<style>" + DOC_CSS + "</style></head><body>" + inner + "</body></html>";
+  }
+
+  // 中文字符串要先按 UTF-8 转字节再 base64，直接 btoa 会炸
+  function b64utf8(str) {
+    var bytes = new TextEncoder().encode(str), bin = "";
+    for (var i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+
+  function doSend() {
+    if (!serverMode || typeof fetch !== "function") return;
+    var g = histGroups();
+    if (!g.words.length && !g.phrases.length && !g.sents.length) {
+      mailMsg("历史记录是空的", "err");
+      return;
+    }
+    var btn = document.getElementById("btnMail");
+    btn.disabled = true;
+    mailMsg("正在发送…");
+
+    var slug = String(C.passage.title).replace(/[^A-Za-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    var payload = {
+      token: MAIL_TOKEN,
+      subject: "PET 精读 · " + C.passage.title +
+        "（" + g.words.length + " 词 / " + g.phrases.length + " 词组 / " + g.sents.length + " 句）",
+      filename: "PET精读-" + slug + "-" + stamp().replace(/[: ]/g, "").slice(0, 13) + ".doc",
+      content: b64utf8(wordDoc(buildExportHtml())),
+      body: "附件是本次精读导出的学习记录。\n\n" +
+        "单词 " + g.words.length + " 个：" + g.words.map(function (w) { return w.k; }).join("、") + "\n" +
+        (g.phrases.length ? "词组 " + g.phrases.length + " 个：" + g.phrases.map(function (w) { return w.k; }).join("、") + "\n" : "") +
+        "句子 " + g.sents.length + " 句。\n\n" +
+        "—— 来自 PET 精读页"
+    };
+
+    fetch("api/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (j) {
+        return { ok: r.ok, j: j };
+      });
+    }).then(function (r) {
+      btn.disabled = false;
+      if (r.ok && r.j.ok) {
+        mailMsg("已发送 ✓", "ok");
+        setTimeout(function () { mailMsg(""); }, 6000);
+      } else {
+        mailMsg("发送失败：" + (r.j.error || "未知错误"), "err");
+      }
+    }).catch(function (e) {
+      btn.disabled = false;
+      mailMsg("连不上发信服务：" + e.message, "err");
+    });
+  }
+
+  /* =======================================================
      九、装配
      ======================================================= */
   var PHRASE_IDX;
@@ -1323,6 +1520,11 @@
     // 字号缩放滑动条
     var zr = document.getElementById("zoomRange");
     zr.addEventListener("input", function () { applyZoom(zr.value); });
+
+    // 发送到邮箱
+    document.getElementById("btnMail").addEventListener("click", doSend);
+    detectMailServer();
+    window.addEventListener("focus", detectMailServer);
 
     loadUI();            // 先读回上次的列状态，再渲染
     switchTab("read");   // switchTab 内部会调 applyCols()

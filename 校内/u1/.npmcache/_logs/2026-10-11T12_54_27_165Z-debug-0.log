@@ -1,0 +1,118 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.11.0
+2 info using node@v24.14.1
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\89300\Desktop\pet\校内\u1\.npmrc
+5 silly config load:file:C:\Users\89300\.npmrc
+6 silly config load:file:C:\Users\89300\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install @napi-rs/canvas
+8 verbose argv "install" "@napi-rs/canvas" "--cache" "C:\\Users\\89300\\Desktop\\pet\\校内\\u1\\.npmcache"
+9 verbose logfile logs-max:10 dir:C:\Users\89300\Desktop\pet\校内\u1\.npmcache\_logs\2026-10-11T12_54_27_165Z-
+10 verbose logfile C:\Users\89300\Desktop\pet\校内\u1\.npmcache\_logs\2026-10-11T12_54_27_165Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 silly idealTree buildDeps
+14 silly fetch manifest @napi-rs/canvas@*
+15 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas 1486ms (cache revalidated)
+17 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas set size:623737 disposed:false
+18 silly placeDep ROOT @napi-rs/canvas@1.0.11 OK for: u1@1.0.0 want: *
+19 silly fetch manifest @napi-rs/canvas-darwin-x64@1.0.11
+20 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-darwin-x64 cache-miss
+21 silly fetch manifest @napi-rs/canvas-darwin-arm64@1.0.11
+22 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-darwin-arm64 cache-miss
+23 silly fetch manifest @napi-rs/canvas-android-arm64@1.0.11
+24 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-android-arm64 cache-miss
+25 silly fetch manifest @napi-rs/canvas-linux-x64-gnu@1.0.11
+26 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-linux-x64-gnu cache-miss
+27 silly fetch manifest @napi-rs/canvas-linux-x64-musl@1.0.11
+28 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-linux-x64-musl cache-miss
+29 silly fetch manifest @napi-rs/canvas-win32-x64-msvc@1.0.11
+30 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-win32-x64-msvc cache-miss
+31 silly fetch manifest @napi-rs/canvas-linux-arm64-gnu@1.0.11
+32 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-linux-arm64-gnu cache-miss
+33 silly fetch manifest @napi-rs/canvas-linux-arm64-musl@1.0.11
+34 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-linux-arm64-musl cache-miss
+35 silly fetch manifest @napi-rs/canvas-win32-arm64-msvc@1.0.11
+36 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-win32-arm64-msvc cache-miss
+37 silly fetch manifest @napi-rs/canvas-linux-riscv64-gnu@1.0.11
+38 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-linux-riscv64-gnu cache-miss
+39 silly fetch manifest @napi-rs/canvas-linux-arm-gnueabihf@1.0.11
+40 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-linux-arm-gnueabihf cache-miss
+41 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-android-arm64 766ms (cache revalidated)
+42 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-android-arm64 set size:260336 disposed:false
+43 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-win32-arm64-msvc 819ms (cache miss)
+44 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-win32-arm64-msvc set size:undefined disposed:false
+45 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-darwin-arm64 931ms (cache revalidated)
+46 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-darwin-arm64 set size:259389 disposed:false
+47 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-linux-riscv64-gnu 1193ms (cache revalidated)
+48 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-linux-riscv64-gnu set size:100547 disposed:false
+49 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-linux-arm-gnueabihf 1639ms (cache revalidated)
+50 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-linux-arm-gnueabihf set size:264675 disposed:false
+51 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-linux-arm64-gnu 1688ms (cache revalidated)
+52 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-linux-arm64-gnu set size:264576 disposed:false
+53 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-linux-x64-musl 1908ms (cache revalidated)
+54 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-linux-x64-musl set size:263430 disposed:false
+55 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-darwin-x64 1967ms (cache revalidated)
+56 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-darwin-x64 set size:257555 disposed:false
+57 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-linux-arm64-musl 3463ms (cache revalidated)
+58 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-linux-arm64-musl set size:247916 disposed:false
+59 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-linux-x64-gnu 6198ms (cache revalidated)
+60 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-linux-x64-gnu set size:262720 disposed:false
+61 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-win32-x64-msvc 7160ms (cache revalidated)
+62 silly packumentCache full:https://registry.npmjs.org/@napi-rs%2fcanvas-win32-x64-msvc set size:260652 disposed:false
+63 silly placeDep ROOT @napi-rs/canvas-android-arm64@1.0.11 OK for: @napi-rs/canvas@1.0.11 want: 1.0.11
+64 silly placeDep ROOT @napi-rs/canvas-darwin-arm64@1.0.11 OK for: @napi-rs/canvas@1.0.11 want: 1.0.11
+65 silly placeDep ROOT @napi-rs/canvas-darwin-x64@1.0.11 OK for: @napi-rs/canvas@1.0.11 want: 1.0.11
+66 silly placeDep ROOT @napi-rs/canvas-linux-arm-gnueabihf@1.0.11 OK for: @napi-rs/canvas@1.0.11 want: 1.0.11
+67 silly placeDep ROOT @napi-rs/canvas-linux-arm64-gnu@1.0.11 OK for: @napi-rs/canvas@1.0.11 want: 1.0.11
+68 silly placeDep ROOT @napi-rs/canvas-linux-arm64-musl@1.0.11 OK for: @napi-rs/canvas@1.0.11 want: 1.0.11
+69 silly placeDep ROOT @napi-rs/canvas-linux-riscv64-gnu@1.0.11 OK for: @napi-rs/canvas@1.0.11 want: 1.0.11
+70 silly placeDep ROOT @napi-rs/canvas-linux-x64-gnu@1.0.11 OK for: @napi-rs/canvas@1.0.11 want: 1.0.11
+71 silly placeDep ROOT @napi-rs/canvas-linux-x64-musl@1.0.11 OK for: @napi-rs/canvas@1.0.11 want: 1.0.11
+72 silly placeDep ROOT @napi-rs/canvas-win32-arm64-msvc@1.0.11 OK for: @napi-rs/canvas@1.0.11 want: 1.0.11
+73 silly placeDep ROOT @napi-rs/canvas-win32-x64-msvc@1.0.11 OK for: @napi-rs/canvas@1.0.11 want: 1.0.11
+74 silly reify mark retired [ 'C:\\Users\\89300\\Desktop\\pet\\校内\\u1\\node_modules\\ms' ]
+75 silly reify mark retired [ 'C:\\Users\\89300\\Desktop\\pet\\校内\\u1\\node_modules\\debug' ]
+76 silly reify mark retired [ 'C:\\Users\\89300\\Desktop\\pet\\校内\\u1\\node_modules\\node-ensure' ]
+77 silly reify mark retired [ 'C:\\Users\\89300\\Desktop\\pet\\校内\\u1\\node_modules\\pdf-parse' ]
+78 silly reify moves {
+78 silly reify   'C:\\Users\\89300\\Desktop\\pet\\校内\\u1\\node_modules\\ms': 'C:\\Users\\89300\\Desktop\\pet\\校内\\u1\\node_modules\\.ms-0KMDu4Kt',
+78 silly reify   'C:\\Users\\89300\\Desktop\\pet\\校内\\u1\\node_modules\\debug': 'C:\\Users\\89300\\Desktop\\pet\\校内\\u1\\node_modules\\.debug-uFS2oXMM',
+78 silly reify   'C:\\Users\\89300\\Desktop\\pet\\校内\\u1\\node_modules\\node-ensure': 'C:\\Users\\89300\\Desktop\\pet\\校内\\u1\\node_modules\\.node-ensure-zVg1BZ3U',
+78 silly reify   'C:\\Users\\89300\\Desktop\\pet\\校内\\u1\\node_modules\\pdf-parse': 'C:\\Users\\89300\\Desktop\\pet\\校内\\u1\\node_modules\\.pdf-parse-FHFKMeLX'
+78 silly reify }
+79 silly audit bulk request {
+79 silly audit   '@napi-rs/canvas': [ '1.0.11' ],
+79 silly audit   '@napi-rs/canvas-android-arm64': [ '1.0.11' ],
+79 silly audit   '@napi-rs/canvas-darwin-arm64': [ '1.0.11' ],
+79 silly audit   '@napi-rs/canvas-darwin-x64': [ '1.0.11' ],
+79 silly audit   '@napi-rs/canvas-linux-arm-gnueabihf': [ '1.0.11' ],
+79 silly audit   '@napi-rs/canvas-linux-arm64-gnu': [ '1.0.11' ],
+79 silly audit   '@napi-rs/canvas-linux-arm64-musl': [ '1.0.11' ],
+79 silly audit   '@napi-rs/canvas-linux-riscv64-gnu': [ '1.0.11' ],
+79 silly audit   '@napi-rs/canvas-linux-x64-gnu': [ '1.0.11' ],
+79 silly audit   '@napi-rs/canvas-linux-x64-musl': [ '1.0.11' ],
+79 silly audit   '@napi-rs/canvas-win32-arm64-msvc': [ '1.0.11' ],
+79 silly audit   '@napi-rs/canvas-win32-x64-msvc': [ '1.0.11' ]
+79 silly audit }
+80 http cache @napi-rs/canvas-win32-x64-msvc@https://registry.npmjs.org/@napi-rs/canvas-win32-x64-msvc/-/canvas-win32-x64-msvc-1.0.11.tgz 0ms (cache hit)
+81 http cache @napi-rs/canvas@https://registry.npmjs.org/@napi-rs/canvas/-/canvas-1.0.11.tgz 0ms (cache hit)
+82 silly tarball no local data for @napi-rs/canvas-win32-x64-msvc@https://registry.npmjs.org/@napi-rs/canvas-win32-x64-msvc/-/canvas-win32-x64-msvc-1.0.11.tgz. Extracting by manifest.
+83 silly tarball no local data for @napi-rs/canvas@https://registry.npmjs.org/@napi-rs/canvas/-/canvas-1.0.11.tgz. Extracting by manifest.
+84 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 1953ms
+85 silly audit report {}
+86 http fetch GET 200 https://registry.npmjs.org/@napi-rs/canvas/-/canvas-1.0.11.tgz 30348ms (cache miss)
+87 http fetch GET 200 https://registry.npmjs.org/@napi-rs/canvas-win32-x64-msvc/-/canvas-win32-x64-msvc-1.0.11.tgz 43393ms (cache miss)
+88 silly ADD node_modules/@napi-rs/canvas-win32-x64-msvc
+89 silly ADD node_modules/@napi-rs/canvas
+90 silly REMOVE node_modules/pdf-parse
+91 silly REMOVE node_modules/node-ensure
+92 silly REMOVE node_modules/debug
+93 silly REMOVE node_modules/ms
+94 verbose cwd C:\Users\89300\Desktop\pet\校内\u1
+95 verbose os Windows_NT 10.0.26200
+96 verbose node v24.14.1
+97 verbose npm  v11.11.0
+98 verbose exit 0
+99 info ok

@@ -12,18 +12,41 @@ const vc = new VirtualConsole();
 vc.on("jsdomError", e => console.log("[jsdomError] " + (e.detail ? (e.detail.stack || e.detail) : e.message)));
 vc.on("error", (...a) => console.log("[error] " + a.join(" ")));
 
+// 可控的假 fetch：jsdom 没有 fetch，而「发送到邮箱」整条链都靠它。
+// mode 先设成 off，模拟 file:// 打开（请求失败）→ 按钮应保持禁用；
+// 测试中途翻成 on 并触发 focus，页面会重新探测 → 按钮启用。
+const mailStub = { mode: "off", captured: null };
+if (typeof globalThis.TextEncoder === "undefined") {
+  globalThis.TextEncoder = require("util").TextEncoder;
+}
+
 const dom = new JSDOM(html, {
   runScripts: "dangerously",
   url: "http://localhost/",
   pretendToBeVisual: true,
-  virtualConsole: vc
+  virtualConsole: vc,
+  beforeParse(w) {
+    w.TextEncoder = globalThis.TextEncoder;
+    w.fetch = function (url, opt) {
+      if (mailStub.mode !== "on") return Promise.reject(new TypeError("Failed to fetch"));
+      if (/health/.test(url)) {
+        return Promise.resolve({ ok: true, json: () => Promise.resolve({ ok: true, to: "a***@qq.com" }) });
+      }
+      if (/send/.test(url)) {
+        mailStub.captured = JSON.parse(opt.body);
+        return Promise.resolve({ ok: true, json: () => Promise.resolve({ ok: true, messageId: "test-id" }) });
+      }
+      return Promise.reject(new Error("意外的 URL: " + url));
+    };
+  }
 });
 
 let pass = 0, fail = 0;
+const sleep = ms => new Promise(r => setTimeout(r, ms));
 const ok = (c, m) => { c ? (pass++, console.log("  ✓ " + m)) : (fail++, console.log("  ✗ " + m)); };
 const click = (el, window) => el.dispatchEvent(new window.MouseEvent("click", { bubbles: true }));
 
-function run() {
+async function run() {
   const { window } = dom;
   const doc = window.document;
   const CONTENT = window.PET_CONTENT;
@@ -601,6 +624,75 @@ function run() {
   ok(/\.mini\{[^}]*width:calc\(24px \* var\(--zoom\)\)/.test(css), "页边「析」按钮尺寸一起缩放");
   ok(/#passage\{position:relative;padding-right:calc\(58px \* var\(--zoom\)\)\}/.test(css),
     "页边宽度一起缩放，放大后按钮才放得进");
+
+  console.log("\n=== 30. 发送到邮箱 ===");
+  const btnMail = doc.getElementById("btnMail");
+  const mailMsgEl = doc.getElementById("mailMsg");
+  ok(!!btnMail, "顶栏有发送按钮");
+  ok(!!mailMsgEl, "有状态提示区");
+
+  // 此时 fetch 是 reject 的（模拟 file:// 打开），按钮必须保持禁用
+  await sleep(20);
+  ok(btnMail.disabled === true, "探测失败时按钮禁用（本地双击打开就是这种情况）");
+
+  // 服务起来之后再探一次：把 stub 翻成可用，触发 focus
+  mailStub.mode = "on";
+  window.dispatchEvent(new window.Event("focus"));
+  await sleep(30);
+  ok(btnMail.disabled === false, "探测到服务后按钮启用");
+  ok(/a\*\*\*@qq\.com/.test(btnMail.title), "按钮提示里带上收件人：" + btnMail.title);
+
+  // 备一点历史：一个单词、一个词组、一句话
+  click(passage.querySelector('.w[data-w="ancient"]'), window);
+  click(passage.querySelector('.ph'), window);
+  click(passage.querySelector('.sent[data-sent="0-0"]'), window);
+  const nHist = hist.querySelectorAll(".hitem").length;
+  ok(nHist >= 3, "历史里有 " + nHist + " 条，够导出了");
+
+  click(btnMail, window);
+  await sleep(60);
+  ok(!!mailStub.captured, "点发送后向服务端 POST 了内容");
+
+  const cap = mailStub.captured || {};
+  ok(/PET 精读/.test(cap.subject || ""), "邮件主题：" + cap.subject);
+  ok(/词/.test(cap.subject || "") && /句/.test(cap.subject || ""), "主题里带统计数字");
+  ok(/\.doc$/.test(cap.filename || ""), "附件名是 .doc：" + cap.filename);
+  ok(typeof cap.content === "string" && cap.content.length > 100, "附件内容是 base64 字符串");
+
+  // 解码附件，检查 Word 文档内容和中文有没有乱码
+  const decoded = Buffer.from(cap.content || "", "base64").toString("utf8");
+  ok(/xmlns:w="urn:schemas-microsoft-com:office:word"/.test(decoded),
+    "是 Word 能打开的格式（带 Word 命名空间）");
+  ok(/<h1>PET 精读/.test(decoded), "标题正确");
+  ok(/一、单词/.test(decoded), "有「单词」分节");
+  ok(/二、词组/.test(decoded), "有「词组」分节");
+  ok(/三、句子/.test(decoded), "有「句子」分节");
+  ok(/ancient/.test(decoded) && /古代的/.test(decoded),
+    "单词条目含词形和中文释义，中文没乱码");
+  ok(/\/ˈeɪnʃənt\//.test(decoded), "含英式音标");
+  ok(/翻译：/.test(decoded), "句子带翻译");
+  ok(/句型：/.test(decoded), "句子带句型");
+  ok(!/<script/i.test(decoded), "导出内容里没有脚本（不会被当成脚本执行）");
+
+  // 正文里有一份纯文本摘要
+  ok(/ancient/.test(cap.body || "") && /来自 PET 精读页/.test(cap.body || ""),
+    "邮件正文含纯文本摘要");
+
+  ok(/已发送/.test(mailMsgEl.textContent), "界面上给了成功提示：" + mailMsgEl.textContent.trim());
+  ok(btnMail.disabled === false, "发送完成后按钮重新可用（能再发一次）");
+
+  console.log("\n--- 发送失败的提示 ---");
+  const realFetch = window.fetch;
+  window.fetch = function (url, opt) {
+    if (/health/.test(url)) return Promise.resolve({ ok: true, json: () => Promise.resolve({ ok: true, to: "a***@qq.com" }) });
+    return Promise.resolve({ ok: false, json: () => Promise.resolve({ error: "邮箱认证失败（测试用）" }) });
+  };
+  click(btnMail, window);
+  await sleep(40);
+  ok(/发送失败/.test(mailMsgEl.textContent) && /认证失败/.test(mailMsgEl.textContent),
+    "服务端报错会显示到界面上：" + mailMsgEl.textContent.trim());
+  ok(btnMail.disabled === false, "失败后按钮也恢复可用，能重试");
+  window.fetch = realFetch;
 
   console.log("\n" + (fail === 0 ? "★ 全部通过" : "★ " + fail + " 项失败") +
     "  ——  通过 " + pass + " / 失败 " + fail);

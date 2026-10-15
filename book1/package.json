@@ -1,0 +1,13 @@
+{
+  "name": "pet-reading-part4",
+  "private": true,
+  "description": "PET Reading Part 4 精读页 —— 测试用依赖",
+  "scripts": {
+    "build": "node build.mjs",
+    "verify": "node tools/verify.cjs",
+    "test": "node tools/smoke.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "^29.1.1"
+  }
+}
