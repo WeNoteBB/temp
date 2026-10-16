@@ -45,7 +45,7 @@ function lookup(g, w) {
   return c.find(x => g[x]) || null;
 }
 
-const MAIN_PAT = ["主谓宾", "主系表", "主谓双宾", "主谓", "倒装引语"];
+const MAIN_PAT = ["主谓宾", "主系表", "主谓双宾", "主谓", "倒装引语", "省略句"];
 const ANA_FIELDS = ["pat", "frame", "parts", "clauses", "gram", "tip"];
 
 /* ---------- 校验框架 ---------- */
@@ -69,6 +69,35 @@ function verifyArticle(slug) {
   ["title", "label", "note"].forEach(k => { if (!A[k]) err(`${slug}：缺 ${k}`); });
   if (!A.passage || !Array.isArray(A.passage.paragraphs)) { err(slug + "：缺 passage.paragraphs"); return null; }
 
+  /* --- 段落角色（可选）：有就必须与段落一一对应，角色在白名单内 ---
+     角色块上还可以带三种正文内联交互（Reading Part 1 的答题方式）：
+       · plain：这一块不逐词查词（短文本「一行一个解析」就够）
+       · pick：[题号…] → 在这块下面渲染「我的答案」横排
+       · optsInline：把这题的选项整行列出来（题号取 b.n） */
+  if (A.passage.blocks) {
+    if (!Array.isArray(A.passage.blocks) || A.passage.blocks.length !== A.passage.paragraphs.length) {
+      err(`${slug}：passage.blocks 长度（${(A.passage.blocks || []).length}）与段落数（${A.passage.paragraphs.length}）对不上`);
+    } else {
+      A.passage.blocks.forEach((b, i) => {
+        if (!b || typeof b !== "object" || ["h", "i", "o", "q"].indexOf(b.r) < 0) {
+          err(`${slug}：第 ${i} 段的 blocks 角色不合法（应为 h / i / o / q）`);
+          return;
+        }
+        if (b.plain !== undefined && b.plain !== true) err(`${slug}：第 ${i} 段的 blocks.plain 只能是 true（或省略）`);
+        if (b.pick !== undefined) {
+          if (!Array.isArray(b.pick) || !b.pick.length) err(`${slug}：第 ${i} 段的 blocks.pick 应为非空题号数组`);
+          else b.pick.forEach(n => {
+            if (!(A.questions || []).some(q => q && q.n === n)) err(`${slug}：第 ${i} 段 blocks.pick 引用了不存在的题号 ${n}`);
+          });
+        }
+        if (b.optsInline !== undefined) {
+          if (b.optsInline !== true) err(`${slug}：第 ${i} 段的 blocks.optsInline 只能是 true（或省略）`);
+          else if (!(A.questions || []).some(q => q && String(q.n) === String(b.n))) err(`${slug}：第 ${i} 段 optsInline 的题号「${b.n}」没有对应题目`);
+        }
+      });
+    }
+  }
+
   /* --- 句子与词数 --- */
   const sents = [];
   A.passage.paragraphs.forEach((p, pi) => p.forEach((s, si) => sents.push({ ref: pi + "-" + si, ...s })));
@@ -86,6 +115,19 @@ function verifyArticle(slug) {
     else if (MAIN_PAT.indexOf(pat[0]) < 0) err(`${slug} ${s.ref}：主句型「${pat[0]}」不在白名单`);
   });
 
+  /* --- 句内二选一（③ 式）：pickQ + «选项» 标记 ---
+     标记数量必须 = 该题选项数、成对闭合，且刚好把每个选项原文包一遍。 */
+  sents.filter(s => s.pickQ !== undefined).forEach(s => {
+    const q = (A.questions || []).filter(x => x && x.n === s.pickQ)[0];
+    if (!q) { err(`${slug} ${s.ref}：pickQ ${s.pickQ} 没有对应题目`); return; }
+    const opens = (String(s.s).match(/«/g) || []).length;
+    const closes = (String(s.s).match(/»/g) || []).length;
+    const optCount = Object.keys(q.opts || {}).length;
+    if (opens !== closes) err(`${slug} ${s.ref}：«» 标记不成对`);
+    if (opens !== optCount) err(`${slug} ${s.ref}：«» 标记 ${opens} 个，与选项数 ${optCount} 对不上`);
+    if (!String(s.s).includes("«") && optCount) err(`${slug} ${s.ref}：标了 pickQ 但没有 «» 标记`);
+  });
+
   /* --- 选项分析同样要有 ana --- */
   Object.keys(A.options || {}).forEach(L => {
     const oa = A.optionsAna && A.optionsAna[L];
@@ -94,10 +136,17 @@ function verifyArticle(slug) {
     if (oa.tr === undefined) warn(`${slug}：选项 ${L} 的 optionsAna 缺 tr`);
   });
 
-  /* --- 词组：必须在原文或选项里逐词出现 --- */
+  /* --- 题型判定：共享选项池（Part 4/5/6）还是每题自带选项（Part 1） --- */
+  const qs = A.questions || [];
+  const hasPool = Object.keys(A.options || {}).length > 0;
+  const optTexts = hasPool
+    ? Object.values(A.options || {})
+    : qs.flatMap(q => Object.values((q && q.opts) || {}));
+
+  /* --- 词组：必须在原文或题目选项里逐词出现 --- */
   const corpus = [
     " " + allWords.join(" ") + " ",
-    ...Object.values(A.options || {}).map(o => " " + words(o).join(" ") + " ")
+    ...optTexts.map(o => " " + words(o).join(" ") + " ")
   ];
   (A.phrases || []).forEach(p => {
     const k = p.toLowerCase().replace(/\s+/g, " ");
@@ -105,8 +154,8 @@ function verifyArticle(slug) {
     if (!g[k]) err(`${slug}：词组「${p}」没有词条，点开是空的`);
   });
 
-  /* --- 词形覆盖率 100%（原文 + 选项，一个都不能漏） --- */
-  const optionWords = Object.values(A.options || {}).flatMap(o => words(o));
+  /* --- 词形覆盖率 100%（原文 + 题目选项，一个都不能漏） --- */
+  const optionWords = optTexts.flatMap(o => words(o));
   const uniq = [...new Set(allWords.concat(optionWords))];
   const missing = uniq.filter(w => !lookup(g, w));
   if (missing.length) {
@@ -116,34 +165,76 @@ function verifyArticle(slug) {
 
   /* --- 空位与答案 --- */
   const found = [...new Set(sents.flatMap(s => slots(s.s)))].sort((a, b) => a - b);
-  const qs = A.questions || [];
   const qns = qs.map(q => q.n).sort((a, b) => a - b);
-  if (found.join() !== qns.join()) err(`${slug}：原文空位 [${found}] 与题目 [${qns}] 对不上`);
-  if (qs.length !== 5) warn(`${slug}：题目 ${qs.length} 道（Part 4 应为 5 道）`);
+  /* 警告"应为 5 道"只对共享选项池的题型有意义（Part 1 式里训练题可以有几十道） */
 
-  const used = new Set();
-  qs.forEach(q => {
-    if (used.has(q.answer)) err(`${slug}：选项 ${q.answer} 被两题同时选为答案`);
-    used.add(q.answer);
-    if (!A.options || !A.options[q.answer]) err(`${slug}：第 ${q.n} 题答案 ${q.answer} 不在 options 里`);
-    ["why", "clues", "tip", "prompt"].forEach(f => { if (!q[f]) err(`${slug}：第 ${q.n} 题缺 ${f}`); });
-    const others = q.others || [];
-    if (others.length < 3) warn(`${slug}：第 ${q.n} 题的 others 只有 ${others.length} 条（建议 3–7 条）`);
-    others.forEach(o => {
-      if (!Array.isArray(o) || o.length !== 2) err(`${slug}：第 ${q.n} 题的 others 有条目不是 [字母, 说明]`);
-      else if (!A.options || !A.options[o[0]]) err(`${slug}：第 ${q.n} 题的 others 提到不存在的选项 ${o[0]}`);
-      else if (o[0] === q.answer) err(`${slug}：第 ${q.n} 题的 others 里出现了它自己的答案 ${o[0]}`);
+  if (hasPool) {
+    /* ---- Part 4/5/6 式：原文有空位，答案从共享池里取 ---- */
+    if (qs.length !== 5) warn(`${slug}：题目 ${qs.length} 道（应为 5 道）`);
+    if (found.join() !== qns.join()) err(`${slug}：原文空位 [${found}] 与题目 [${qns}] 对不上`);
+
+    const used = new Set();
+    qs.forEach(q => {
+      if (used.has(q.answer)) err(`${slug}：选项 ${q.answer} 被两题同时选为答案`);
+      used.add(q.answer);
+      if (!A.options[q.answer]) err(`${slug}：第 ${q.n} 题答案 ${q.answer} 不在 options 里`);
+      ["why", "clues", "tip", "prompt"].forEach(f => { if (!q[f]) err(`${slug}：第 ${q.n} 题缺 ${f}`); });
+      const others = q.others || [];
+      if (others.length < 3) warn(`${slug}：第 ${q.n} 题的 others 只有 ${others.length} 条（建议 3–7 条）`);
+      others.forEach(o => {
+        if (!Array.isArray(o) || o.length !== 2) err(`${slug}：第 ${q.n} 题的 others 有条目不是 [字母, 说明]`);
+        else if (!A.options[o[0]]) err(`${slug}：第 ${q.n} 题的 others 提到不存在的选项 ${o[0]}`);
+        else if (o[0] === q.answer) err(`${slug}：第 ${q.n} 题的 others 里出现了它自己的答案 ${o[0]}`);
+      });
     });
-  });
-  const distractors = Object.keys(A.options || {}).filter(L => !used.has(L));
-  if (distractors.length !== 3) err(`${slug}：干扰项 ${distractors.length} 个（应为 3 个）→ ${distractors.join(",")}`);
+    const distractors = Object.keys(A.options).filter(L => !used.has(L));
+    if (distractors.length !== 3) err(`${slug}：干扰项 ${distractors.length} 个（应为 3 个）→ ${distractors.join(",")}`);
 
-  /* 功能不变量：干扰项必须在某一题的 others 里出现过。
-     引擎在「答题解析」里靠 others 汇总「它为什么哪个空都不填」，
-     一次都没出现的干扰项点开就是空面板。 */
-  const mentioned = new Set(qs.flatMap(q => (q.others || []).map(o => o[0])));
-  distractors.filter(L => !mentioned.has(L)).forEach(L =>
-    err(`${slug}：干扰项 ${L} 在任何一题的 others 里都没出现，点它的「答题解析」会是空的`));
+    /* 功能不变量：干扰项必须在某一题的 others 里出现过。
+       引擎在「答题解析」里靠 others 汇总「它为什么哪个空都不填」，
+       一次都没出现的干扰项点开就是空面板。 */
+    const mentioned = new Set(qs.flatMap(q => (q.others || []).map(o => o[0])));
+    distractors.filter(L => !mentioned.has(L)).forEach(L =>
+      err(`${slug}：干扰项 ${L} 在任何一题的 others 里都没出现，点它的「答题解析」会是空的`));
+  } else {
+    /* ---- Part 1 式：五段短文各自成题，每题自带 opts（A–C） ---- */
+    if (found.length) err(`${slug}：Part 1 式文章的原文不该有空位（发现 [${found}]）`);
+    qs.forEach(q => {
+      ["why", "clues", "tip", "prompt", "ana"].forEach(f => {
+        if (!q[f]) err(`${slug}：第 ${q.n} 题缺 ${f}`);
+      });
+      const opts = q.opts || {};
+      if (Object.keys(opts).length < 2) err(`${slug}：第 ${q.n} 题缺 opts（每题至少 2 个选项）`);
+      if (!opts[q.answer]) err(`${slug}：第 ${q.n} 题答案 ${q.answer} 不在它的 opts 里`);
+      const others = q.others || [];
+      const wrongCount = Object.keys(opts).length - 1;
+      if (others.length < wrongCount) err(`${slug}：第 ${q.n} 题的 others 只有 ${others.length} 条（${wrongCount} 个错选项每个都要解释）`);
+      others.forEach(o => {
+        if (!Array.isArray(o) || o.length !== 2) err(`${slug}：第 ${q.n} 题的 others 有条目不是 [字母, 说明]`);
+        else if (!opts[o[0]]) err(`${slug}：第 ${q.n} 题的 others 提到不存在的选项 ${o[0]}`);
+        else if (o[0] === q.answer) err(`${slug}：第 ${q.n} 题的 others 里出现了它自己的答案 ${o[0]}`);
+      });
+      /* 选项句子分析（可选）：写了的必须是 {parts, gram, tr} 这种能上小黑板的结构 */
+      if (q.optsAna !== undefined) {
+        Object.keys(q.optsAna).forEach(L => {
+          if (!opts[L]) { err(`${slug}：第 ${q.n} 题 optsAna 里的 ${L} 不在 opts 里`); return; }
+          const oa = q.optsAna[L] || {};
+          ["parts", "gram", "tr"].forEach(f => {
+            if (!oa[f]) err(`${slug}：第 ${q.n} 题 ${L} 的 optsAna 缺 ${f}`);
+          });
+        });
+      }
+    });
+    /* 正文里要整行列选项的题（optsInline）：每个选项都必须有句子分析，
+       否则点「析」是空面板 —— 这正是「选项都要有句子分析」那条需求 */
+    ((A.passage.blocks || [])).filter(b => b && b.optsInline).forEach(b => {
+      const q = qs.filter(x => String(x.n) === String(b.n))[0];
+      if (!q) return;                       // 上一段已报过题号不存在
+      Object.keys(q.opts || {}).forEach(L => {
+        if (!(q.optsAna || {})[L]) err(`${slug}：第 ${q.n} 题（正文 optsInline）的选项 ${L} 缺 optsAna 句子分析`);
+      });
+    });
+  }
 
   /* --- 手打 ana.phrases 与正文实际词组的漂移 --- */
   const phraseSet = new Set((A.phrases || []).map(p => p.toLowerCase().replace(/\s+/g, " ")));
@@ -232,13 +323,22 @@ function isThemeAgnostic(lit) {
 }
 
 function verifyEngine() {
-  const need = ["app.js", "store.js", "style.css", "template.html", "login.template.html"];
+  const need = ["app.js", "store.js", "home.js", "mlist.js", "words.js", "style.css", "template.html"];
   need.forEach(f => { if (!fs.existsSync(P("engine", f))) err("engine/" + f + " 不存在"); });
 
   /* --- store.js 不许依赖内容数据 ---
-     它要给登录页用，而登录页没有 PET_CONTENT。 */
+      它要给首页 / 错题页 / 词书页用，那些页面都没有 PET_CONTENT。 */
   const store = fs.existsSync(P("engine", "store.js")) ? read(P("engine", "store.js")) : "";
-  if (/PET_CONTENT/.test(stripComments(store))) err("engine/store.js 依赖了 PET_CONTENT（登录页会崩）");
+  if (/PET_CONTENT/.test(stripComments(store))) err("engine/store.js 依赖了 PET_CONTENT（首页/错题页会崩）");
+
+  /* --- 数据库口令 / 生产地址不许进引擎文件 ---
+     前端是要发布的静态文件，任何密钥把它当普通文本看就等于泄露。
+     接口地址走同源 /api，口令只活在 server/.env 里（不进 git）。 */
+  ["engine/store.js", "engine/app.js", "engine/home.js", "engine/mlist.js", "engine/words.js",
+   "engine/template.html"].forEach(f => {
+    const src = stripComments(read(P(f)));
+    if (/wysnaa|8\.138\.161\.122/.test(src)) err(f + " 里出现了数据库口令或生产服务器地址");
+  });
 
   /* --- 分词器契约 ---
      引擎渲染、内容校验、骨架生成三处必须逐字一致，否则「校验通过但页面渲染错位」。 */
@@ -255,14 +355,21 @@ function verifyEngine() {
   }
 
   /* --- 断点契约：JS 判宽窄用的值必须与 CSS 的 @media 一致 ---
-     差 1px 就会出现「JS 以为在窄屏、CSS 按宽屏排」这种最难查的错位。 */
+     差 1px 就会出现「JS 以为在窄屏、CSS 按宽屏排」这种最难查的错位。
+     目前只有一个档位（「改一处必须改两处」，两个文件互相对账）：
+       1099 —— 抽屉断点：小黑板是列还是底部抽屉（app.js isNarrow）
+     页边按钮列（析/🔊）从 2026-10-16 起所有宽度都显示，没有自己的断点。 */
+  const BPS = ["1099"];
+  const app = read(P("engine", "app.js"));
   const css = fs.existsSync(P("engine", "style.css")) ? read(P("engine", "style.css")) : "";
-  const jsBp = (read(P("engine", "app.js")).match(/matchMedia\("\(max-width:(\d+)px\)"\)/) || [])[1];
+  const jsBps = [...app.matchAll(/matchMedia\("\(max-width:(\d+)px\)"\)/g)].map(m => m[1]);
   const cssBp = [...css.matchAll(/@media\s*\(max-width:\s*(\d+)px\)/g)].map(m => m[1]);
-  if (!jsBp) err("engine/app.js 里找不到 max-width 断点");
-  else if (cssBp.some(b => b !== jsBp)) {
-    err(`断点不一致：app.js 用 ${jsBp}px，style.css 里还有 ${[...new Set(cssBp)].join("/")}px`);
-  }
+  BPS.forEach(b => {
+    if (!cssBp.includes(b)) err(`style.css 里没有 max-width:${b}px 的断点（app.js 还等着它）`);
+    if (!jsBps.includes(b)) err(`engine/app.js 里没有 max-width:${b}px 的 matchMedia（CSS 还等着它）`);
+  });
+  [...new Set(cssBp)].forEach(b => { if (!BPS.includes(b)) err(`style.css 里出现了没登记的断点 ${b}px`); });
+  [...new Set(jsBps)].forEach(b => { if (!BPS.includes(b)) err(`engine/app.js 里出现了没登记的断点 ${b}px`); });
 
   /* --- 主题键名：store.js 与 build.mjs 的防闪烁脚本必须同名 ---
      不同名的表现是「切换能用，但每次刷新都闪一下」——不会报错，只是难看。 */
@@ -273,7 +380,7 @@ function verifyEngine() {
   if (!themeHead) err("build.mjs 里找不到 THEME_HEAD");
   else if (!themeHead.includes(THEME_KEY)) err(`build.mjs 的 THEME_HEAD 里没有主题键 ${THEME_KEY}`);
   /* 三个模板都必须用占位符，不能各写一份内联脚本 */
-  ["template.html", "login.template.html"].forEach(f => {
+  ["template.html"].forEach(f => {
     const t = read(P("engine", f));
     if (!t.includes("<!--THEME_HEAD-->")) err(`engine/${f} 少了 <!--THEME_HEAD--> 占位符`);
     if (/localStorage\.getItem\("pet:theme/.test(t)) err(`engine/${f} 里又内联了一份防闪烁脚本`);
@@ -339,7 +446,7 @@ function verifyEngine() {
   else if (!/--bg\s*:/.test(dark)) err("暗色块没有覆写 --bg（等于没换底色）");
 
   /* --- 每个模板引用的引擎文件都被 build.mjs 的扫描覆盖 --- */
-  ["template.html", "login.template.html"].forEach(f => {
+  ["template.html"].forEach(f => {
     const t = read(P("engine", f));
     [...t.matchAll(/<!--V:([A-Za-z0-9_.-]+)-->/g)].forEach(m => {
       if (!fs.existsSync(P("engine", m[1]))) err(`engine/${f} 引用了不存在的 engine/${m[1]}`);

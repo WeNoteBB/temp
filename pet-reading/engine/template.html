@@ -20,6 +20,7 @@
 <body>
 
 <div class="topbar">
+  <a class="tool" id="btnHome" href="index.html" title="回到首页">← 首页</a>
   <div class="brand">PET 精读<small><!--LABEL--></small><span class="who" id="who" hidden></span></div>
 
   <div class="tabs">
@@ -47,11 +48,24 @@
 </div>
 
 <!-- 两列各占一半。历史不在网格里，是右侧浮层。
-     窄屏（<1100px）由 CSS 把右列改成从底部升起的抽屉，DOM 一份不动 -->
+     窄屏（<1100px）由 CSS 把右列改成从底部升起的抽屉，DOM 一份不动。
+     目录列（tocCol）默认收起：点第一列头上那个「☰ 目录」开合 ——
+     宽屏时它占最左边一列，窄屏时（<1100px）变成从左侧滑出的浮层。
+     开合状态不持久化：每次进来都按「默认收起」来（需求就是这么定的）。 -->
 <div class="cols">
+  <!-- 目录列：整本书的题目列表，点哪篇跳哪篇 -->
+  <aside class="col toc-col" id="tocCol">
+    <div class="col-head">
+      <span>目录</span>
+      <button class="collapse" id="tocClose" type="button" title="收起目录">✕</button>
+    </div>
+    <div class="col-body" id="tocBody"></div>
+  </aside>
+
   <!-- 第一列：原文 + 题目 -->
   <div class="col" id="col1">
     <div class="col-head">
+      <button class="toc-btn" id="tglToc" type="button" title="显示 / 隐藏目录">☰ 目录</button>
       <span id="col1Title">原文</span>
       <span class="hint" id="col1Hint">点词查词 · 点句子看讲解 · <span style="background:var(--phrase);padding:0 4px;border-radius:3px">黄色</span>是词组</span>
     </div>
@@ -88,7 +102,7 @@
   <div class="hist-body" id="history"></div>
 </aside>
 
-<script>window.PET_CONTENT = <!--CONTENT-->;</script>
+<script>window.PET_CONTENT = <!--CONTENT-->;window.PET_TOC = <!--TOC-->;</script>
 <script src="engine/app.js?v=<!--V:app.js-->"></script>
 </body>
 </html>

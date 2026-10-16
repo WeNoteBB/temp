@@ -243,6 +243,11 @@ button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
   font-weight:400;font-size:12.5px;letter-spacing:0;
 }
 .who-num{color:var(--ink-2);font-variant-numeric:tabular-nums}
+/* 等级色点（颜色由 store.mountWho 从用户数据里内联写进来） */
+.who-lv{
+  display:inline-block;width:8px;height:8px;border-radius:50%;
+  background:var(--ink-3);margin-right:5px;vertical-align:1px;
+}
 .who-out{
   font-size:12px;padding:2px 8px;border-radius:6px;
   border:1px solid var(--line);color:var(--ink-3);
@@ -275,7 +280,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
   display:inline-flex;align-items:center;gap:6px;
   padding:6px 12px;border:1px solid var(--line);border-radius:8px;
   font-size:13px;color:var(--ink-2);background:var(--panel);
-  transition:all .15s;
+  transition:all .15s;text-decoration:none;cursor:pointer;
 }
 .tool:hover{border-color:var(--border-hover);color:var(--ink)}
 .tool.on{background:var(--accent-soft);border-color:var(--border-accent);color:var(--accent);font-weight:600}
@@ -295,6 +300,52 @@ button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
 .cols.hide-ana{grid-template-columns:minmax(0,1fr)}
 /* 必须 display:none，否则被收起的列仍会占一个网格轨道 */
 .cols.hide-ana #colAna{display:none}
+
+/* ---------- 目录列（左边那列题目表） ----------
+   宽屏：真占一列（216px），开合只切 .cols.toc-open + .toc-col 的 display。
+   窄屏（<1100px）：变成为从左侧滑出的浮层（见下面的媒体查询），
+   和底部抽屉同一套路 —— 复用同一份 DOM，只换表现。 */
+.toc-btn{
+  flex:none;padding:4px 10px;border-radius:7px;border:1px solid var(--line);
+  font-size:calc(12px * var(--zoom));color:var(--ink-2);background:var(--panel);
+  font-weight:600;letter-spacing:0;text-transform:none;transition:all .12s;
+}
+.toc-btn:hover{border-color:var(--border-accent);color:var(--accent)}
+.toc-btn.on{background:var(--accent-soft);border-color:var(--border-accent);color:var(--accent)}
+/* ⚠ 选择器必须带 .cols 前缀：这个 aside 同时有 .col 类，而 .col{display:flex}
+   写在下面、同优先级 —— 不带前缀的 .toc-col{display:none} 会被它盖掉，
+   表现就是「宽屏一进来目录列就摊开着」（真浏览器里抓到过，jsdom 看不见）。 */
+.cols .toc-col{display:none}
+.cols.toc-open{grid-template-columns:216px minmax(0,1fr) minmax(0,1fr)}
+.cols.toc-open.hide-ana{grid-template-columns:216px minmax(0,1fr)}
+.cols.toc-open .toc-col{display:flex}
+.toc-book{
+  font-size:11.5px;font-weight:700;letter-spacing:.6px;color:var(--ink-3);
+  margin:12px 4px 6px;
+}
+.toc-book:first-child{margin-top:0}
+.toc-item{
+  display:block;padding:8px 10px;border-radius:9px;margin-bottom:3px;
+  border:1px solid transparent;text-decoration:none;color:inherit;
+  transition:background .12s,border-color .12s;
+}
+.toc-item:hover{background:var(--hover);border-color:var(--line)}
+.toc-item.on{background:var(--accent-soft);border-color:var(--border-accent)}
+.toc-t{display:block;font-size:13.5px;font-weight:600;line-height:1.4}
+.toc-item.on .toc-t{color:var(--accent)}
+.toc-m{display:block;font-size:11.5px;color:var(--ink-3);margin-top:2px;line-height:1.4}
+/* 窄屏时目录列变浮层：固定定位从左边滑出（display 常驻，靠 transform 收放，
+   否则就没有滑动动画）。开合仍由 .cols.toc-open 管。
+   同样要带 .cols 前缀才盖得住 .col{display:flex}（见上面那条注释）。 */
+@media(max-width:1099px){
+  .cols .toc-col{
+    position:fixed;left:0;top:0;bottom:0;width:min(78vw,300px);z-index:66;
+    border-radius:0 14px 14px 0;box-shadow:var(--shadow-pop);
+    display:flex;transform:translateX(-102%);
+    transition:transform .22s cubic-bezier(.2,.8,.3,1);
+  }
+  .cols.toc-open .toc-col{transform:translateX(0)}
+}
 
 /* ---------- 历史浮层 ---------- */
 .hist-float{
@@ -379,6 +430,39 @@ button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
 .sent.cur{background:var(--hl-cur) !important;box-shadow:0 0 0 1px var(--hl-cur-line)}
 .sent-txt{}
 
+/* ---------- 段落角色（Reading Part 1 的排版体系） ----------
+   一眼分清：h=标题/指令（加粗）、i=提示/说明（斜体浅色）、
+   o=选项清单（强调色）、q=题目/原文文本块（编号徽章 + 左侧标线）。
+   普通段落（没有 blocks 数据的文章，如 t1-p4）不带角色类，样式完全不受影响。 */
+.para.r-h{font-weight:700;margin-top:18px}
+.para.r-i{font-style:italic;color:var(--ink-2);margin:7px 0 5px}
+.para.r-o{color:var(--accent);padding-left:8px;margin:4px 0}
+.para.r-q{
+  margin:12px 0;padding:8px 12px 8px 14px;
+  border-left:3px solid var(--accent-soft);border-radius:4px 10px 10px 4px;
+}
+/* 角色段落里关掉「隔句淡黄底」——那是给长文散文区分句子用的；
+   碎片化内容靠 斜体/加粗/强调色/编号徽章 分级，再叠底色只会更花。
+   hover / 点句高亮（.cur/.peek）不受影响，照样有反馈。 */
+.para.r-h .sent.alt,.para.r-i .sent.alt,.para.r-o .sent.alt,.para.r-q .sent.alt{background:none}
+/* 短文块左上角的题号徽章（对应试卷上的 1、2、3…） */
+.pbadge{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:calc(22px * var(--zoom));height:calc(22px * var(--zoom));padding:0 5px;
+  border-radius:7px;margin-right:8px;vertical-align:1px;
+  background:var(--accent-soft);color:var(--accent);
+  font-style:normal;font-weight:700;font-size:calc(13px * var(--zoom));
+}
+/* 选项清单行首的字母徽章（A B C… / a b c…）——让人一眼看出这是选项，
+   不是句子里的话。壳上仍带 .w（词数对账按词形算），但 .plain 里不响应点击。 */
+.opletter{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:calc(20px * var(--zoom));height:calc(20px * var(--zoom));padding:0 3px;
+  border-radius:6px;margin-right:5px;vertical-align:0;
+  background:var(--accent-soft);color:var(--accent);
+  font-weight:700;font-size:calc(12.5px * var(--zoom));
+}
+
 /* 正文右侧留出页边，放每句的按钮 */
 #passage{position:relative;padding-right:calc(58px * var(--zoom))}
 .pgutter{position:absolute;top:0;right:0;width:calc(52px * var(--zoom));pointer-events:none}
@@ -391,14 +475,10 @@ button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
 .sbtns .mini:hover{opacity:1;background:var(--accent-soft)}
 .sbtns.cur .mini{opacity:1;background:var(--accent-soft)}
 
-/* 窄屏（<1100px）放不下页边：隐藏按钮栏。
-   句子的「析 / 🔊」改从底部抽屉顶部的 🔊 调用，不会没得用。
-   1100 这个值不是随手取的：老的 1180 正好卡在 iPad Air 横屏（1180）上，
-   iPad Pro 11" 横屏（1194）反而漏掉 —— 两个最主流的横屏 iPad 走的是两套布局。 */
-@media(max-width:1099px){
-  #passage{padding-right:0}
-  .pgutter{display:none}
-}
+/* 页边按钮列（每句的「析 / 🔊」）**所有宽度都显示** ——
+    2026-10-16 起不再按宽度隐藏：学生反复反馈手机/平板上「按钮没了」，
+    而底部抽屉只是另一条路（点句子出讲解），替代不了每句都有按钮这件事。
+    ⚠ 别再按宽度藏它：藏过三版（1100 → 767 → 743），每次都换来「按钮丢了」。 */
 
 /* 单词 */
 .w{
@@ -416,6 +496,14 @@ button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
 }
 .ph:hover{background:var(--phrase-hover)}
 .ph.act{background:var(--accent);color:var(--on-solid);box-shadow:none}
+
+/* ---------- plain 区块（Reading Part 1 短文本 / 选项清单） ----------
+   「一行一个解析」就够：词与词组的样式照旧，但不再逐词响应点击/悬浮，
+   点整行仍是句子分析。 */
+.para.plain .w{cursor:inherit}
+.para.plain .w:hover{background:none;color:inherit}
+.para.plain .ph{cursor:inherit}
+.para.plain .ph:hover{background:var(--phrase)}
 
 /* 填空题干与答案句 */
 .blank{
@@ -497,6 +585,11 @@ body.quiz .blank{background:var(--field);border-style:dashed;border-color:var(--
 @media(hover:none){
   .hfav,.hdel{opacity:1}
 }
+
+/* 第二道保险：store.js 按 maxTouchPoints 给 <html> 挂 .touch。
+   iPad 接了妙控键盘 / 触控板时 hover 媒体查询可能判成 hover:hover，
+   光靠上面那条学生在 iPad 上还是会「丢按钮」—— 这个类兜住那种情况。 */
+html.touch .hfav,html.touch .hdel{opacity:1}
 
 /* ---------- 生词本 ---------- */
 .empty{
@@ -625,6 +718,8 @@ button.chip.ph2:hover{background:var(--phrase-hover)}
   width:calc(27px * var(--zoom));height:calc(27px * var(--zoom));flex:none;border-radius:50%;background:var(--accent);color:var(--on-solid);
   display:flex;align-items:center;justify-content:center;font-size:calc(13px * var(--zoom));font-weight:700;
 }
+/* 带 tag 的题卡（训练题显示 ①-2 这种）：从圆钮放宽成小胶囊，别折行 */
+.qnum.wide{width:auto;min-width:calc(27px * var(--zoom));border-radius:9px;padding:0 9px;white-space:nowrap}
 .qtxt{font-size:calc(15.5px * var(--zoom));font-weight:600;line-height:1.75;flex:1}
 .qans{
   display:flex;align-items:center;gap:9px;margin-top:11px;padding:10px 12px;
@@ -695,6 +790,125 @@ button.chip.ph2:hover{background:var(--phrase-hover)}
 .qa-b b{color:var(--ink)}
 .qa-b code{background:var(--field);padding:1px 6px;border-radius:4px;font-family:"Cascadia Code",Consolas,monospace;font-size:calc(13.5px * var(--zoom));color:var(--code-ink)}
 
+/* ---------- 我的答案（每题一排 A–H） ----------
+   选完立刻判对错：整行淡绿 / 淡红，行尾一句话说明。
+   答错的会报进错题本（app.js 的 answerQ → store.addMistake）。 */
+.arow{
+  display:flex;align-items:center;gap:5px;flex-wrap:wrap;
+  margin-top:11px;padding:9px 11px;border-radius:8px;
+  background:var(--field);border:1px solid var(--line);
+}
+.arow.ok{background:var(--ins-bg);border-color:var(--ok-line)}
+.arow.bad{background:var(--danger-bg);border-color:var(--danger-bg-2)}
+.a-lbl{font-size:calc(12px * var(--zoom));color:var(--ink-3);font-weight:700;margin-right:3px}
+.ansb{
+  width:calc(26px * var(--zoom));height:calc(26px * var(--zoom));border-radius:7px;
+  border:1px solid var(--line);background:var(--panel);color:var(--ink-2);
+  font-size:calc(12.5px * var(--zoom));font-weight:700;
+  display:inline-flex;align-items:center;justify-content:center;
+  transition:all .12s;
+}
+.ansb:hover{border-color:var(--border-accent);color:var(--accent)}
+.ansb.on{background:var(--accent);border-color:var(--accent);color:var(--on-solid)}
+.arow.ok .ansb.on{background:var(--ok);border-color:var(--ok)}
+.arow.bad .ansb.on{background:var(--danger);border-color:var(--danger)}
+.a-res{font-size:calc(12.5px * var(--zoom));font-weight:600;margin-left:4px}
+.arow.ok .a-res{color:var(--ok)}
+.arow.bad .a-res{color:var(--danger)}
+/* 没选过答案时这行是空的 —— 空行别占地方 */
+.arow:empty{display:none}
+
+/* ---------- Part 1 式的整行选项（每题自带选项时，选项直接列在卡里） ---------- */
+.opts{display:flex;flex-direction:column;gap:7px;margin-top:11px}
+.optrow{
+  display:flex;align-items:flex-start;justify-content:flex-start;gap:10px;
+  width:auto;height:auto;min-height:0;border-radius:10px;
+  padding:9px 12px;text-align:left;
+  color:var(--ink);font-size:calc(14px * var(--zoom));line-height:1.7;font-weight:400;
+}
+.optrow:hover{background:var(--accent-soft);color:var(--ink);border-color:var(--border-accent)}
+.optrow .ol{
+  flex:none;width:calc(22px * var(--zoom));height:calc(22px * var(--zoom));border-radius:50%;
+  background:var(--line-2);color:var(--ink-2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:calc(12.5px * var(--zoom));font-weight:700;margin-top:1px;
+}
+.optrow .otxt{flex:1;min-width:0}
+.optrow.on{border-color:var(--accent);background:var(--accent-soft);color:var(--ink)}
+.optrow.on .ol{background:var(--accent);color:var(--on-solid)}
+.optrow.right{border-color:var(--ok-line);background:var(--ins-bg)}
+.optrow.right .ol{background:var(--ok);color:var(--on-solid)}
+.optrow.wrongpick{border-color:var(--danger-bg-2);background:var(--danger-bg)}
+.optrow.wrongpick .ol{background:var(--danger);color:var(--on-solid)}
+
+/* ---------- 正文内联作答（Reading Part 1：答案横排 / ③ 式二选一 / 考试题选项行） ----------
+   都在 #passage 里就地作答，颜色规则和卡片里一致：
+   选中 = 主题色底；答对 = 绿；答错 = 红。 */
+/* 「我的答案」横排：跟在每道题目下面，胶囊上带选项字母 + 选项原文 */
+.pickrow{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-top:9px}
+.pickrow .pn{
+  flex:none;font-weight:700;font-size:calc(12.5px * var(--zoom));color:var(--ink-3);
+  min-width:calc(13px * var(--zoom));
+}
+.pickchip{
+  width:auto;height:auto;min-height:0;border-radius:9px;padding:5px 11px;
+  font-size:calc(13px * var(--zoom));font-weight:400;line-height:1.55;text-align:left;
+  color:var(--ink-2);
+}
+.pickchip b{font-weight:700;margin-right:2px}
+.pickchip.on{background:var(--accent);border-color:var(--accent);color:var(--on-solid)}
+.pickchip.on b{color:inherit}
+.pickchip.right{background:var(--ins-bg);border-color:var(--ok-line);color:var(--ink)}
+.pickchip.right b{color:var(--ok)}
+.pickchip.wrongpick{background:var(--danger-bg);border-color:var(--danger-bg-2);color:var(--ink)}
+.pickchip.wrongpick b{color:var(--danger)}
+.pickrow .mini-ana{border-color:var(--ok-line);color:var(--ok);padding:4px 11px;font-size:calc(12.5px * var(--zoom))}
+.pickrow .mini-ana:hover{background:var(--ok-bg)}
+
+/* ③ 式内联二选一：句子里的备选词本身就是按钮（mustn't / don't need to） */
+.pickword{
+  display:inline;width:auto;height:auto;padding:0 7px;margin:0 1px;border-radius:7px;
+  border:1.5px dashed var(--field-line);background:var(--panel);color:inherit;
+  font:inherit;line-height:inherit;cursor:pointer;transition:all .12s;
+}
+.pickword:hover{border-style:solid;border-color:var(--border-accent);color:var(--accent)}
+.pickword.on{background:var(--accent);border-color:var(--accent);border-style:solid;color:var(--on-solid)}
+.pickword.right{background:var(--ins-bg);border-color:var(--ok-line);border-style:solid;color:var(--ok)}
+.pickword.wrongpick{background:var(--danger-bg);border-color:var(--danger-bg-2);border-style:solid;color:var(--danger)}
+
+/* 考试题在正文里的整行选项（做法同 Part 4 选项池：点整行 = 选它；
+   行内还有「析 / 🔊」，每个选项都有句子分析） */
+.optline{
+  display:flex;align-items:flex-start;gap:9px;
+  width:auto;height:auto;min-height:0;
+  margin:7px 0;padding:8px 11px;border-radius:10px;
+  border:1px solid var(--line);background:var(--panel);color:var(--ink);
+  font-size:calc(14px * var(--zoom));line-height:1.7;
+  cursor:pointer;transition:background .12s,border-color .12s;
+}
+.optline:hover{background:var(--accent-soft);border-color:var(--border-accent)}
+.optline .ol{
+  flex:none;width:calc(22px * var(--zoom));height:calc(22px * var(--zoom));border-radius:50%;
+  background:var(--line-2);color:var(--ink-2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:calc(12.5px * var(--zoom));font-weight:700;margin-top:1px;
+}
+.optline .otxt{flex:1;min-width:0}
+.optline .obtn{
+  flex:none;width:calc(25px * var(--zoom));height:calc(25px * var(--zoom));
+  border-radius:7px;border:1px solid var(--line);background:var(--panel);
+  color:var(--ink-3);font-size:calc(11.5px * var(--zoom));font-weight:700;
+  display:inline-flex;align-items:center;justify-content:center;cursor:pointer;
+}
+.optline .obtn:hover{border-color:var(--border-accent);color:var(--accent);background:var(--accent-soft)}
+.optline.on{border-color:var(--accent);background:var(--accent-soft);color:var(--ink)}
+.optline.on .ol{background:var(--accent);color:var(--on-solid)}
+.optline.right{border-color:var(--ok-line);background:var(--ins-bg)}
+.optline.right .ol{background:var(--ok);color:var(--on-solid)}
+.optline.wrongpick{border-color:var(--danger-bg-2);background:var(--danger-bg)}
+.optline.wrongpick .ol{background:var(--danger);color:var(--on-solid)}
+.optline.cur{box-shadow:0 0 0 2px var(--accent-soft)}
+
 /* ============================================================
    窄屏（手机 / 竖屏 iPad）：正文单列，小黑板改成底部抽屉
    ============================================================
@@ -708,7 +922,10 @@ button.chip.ph2:hover{background:var(--phrase-hover)}
    必须带上 hide-* 变体，否则上面的列宽规则（优先级更高）会盖掉这里。 */
 @media(max-width:1099px){
   body{overflow:auto;height:auto;min-height:100vh;min-height:100dvh}
-  .cols,.cols.hide-ana,.cols.hide-vocab,.cols.hide-ana.hide-vocab{
+  /* 目录列在这个断点变成固定定位的浮层（见「目录列」那节），不占网格 ——
+     所以这里把 toc-open 的组合也钉成单列，免得宽屏那套 216px 轨道漏进来。 */
+  .cols,.cols.hide-ana,.cols.hide-vocab,.cols.hide-ana.hide-vocab,
+  .cols.toc-open,.cols.toc-open.hide-ana{
     grid-template-columns:1fr;flex:none;gap:12px;
   }
   /* 手机上正文该有多长就多长，整页滚 —— 不再把正文锁在一个 78vh 的小窗口里 */
@@ -772,74 +989,204 @@ button.chip.ph2:hover{background:var(--phrase-hover)}
 }
 
 /* ============================================================
-   登录页
+   首页（个性化主页）+ 登录 / 注册弹框 + 列表页（错题 / 词书）
    ============================================================
-   登录页只加载 style.css + store.js，不加载 app.js。
-   所以这里的每条规则都必须自足 —— 不能指望页面里还有别的样式。
-   色值一律走令牌，暗色因此自动成立，不需要在这里再写一遍暗色。 */
-.login-body{
-  margin:0;min-height:100vh;min-height:100dvh;
-  background:var(--bg);color:var(--ink);
-  display:flex;align-items:center;justify-content:center;
-  padding:24px 16px calc(24px + env(safe-area-inset-bottom));
-  -webkit-text-size-adjust:100%;
-}
-.login-wrap{width:100%;max-width:380px}
-.login-card{
-  background:var(--panel);border:1px solid var(--line);
-  border-radius:16px;padding:28px 24px 22px;box-shadow:var(--shadow);
-}
-.login-title{margin:0;font-size:20px;line-height:1.4;letter-spacing:.3px}
-.login-sub{margin:6px 0 22px;color:var(--ink-2);font-size:13.5px}
+   这些页面只加载 style.css + store.js +（home.js / mlist.js / words.js），
+   不加载 app.js。所以这里的每条规则都必须自足。
+   色值一律走令牌，暗色因此自动成立，不需要在这里再写一遍暗色。
+   等级颜色不走令牌 —— 它是服务端数据（pet_user_level 表），
+   由 JS 内联写到圆圈背景上（写令牌反而没法按等级变）。 */
 
-.login-label{display:block;font-size:13px;color:var(--ink-2);margin-bottom:6px}
-.login-row{
-  display:flex;align-items:center;gap:0;
+.home-body,.page-body{
+  height:auto;min-height:100vh;min-height:100dvh;
+  display:block;overflow:visible;                  /* 盖掉文章页那套满屏不滚的 flex */
+  padding:0 16px calc(48px + env(safe-area-inset-bottom));
+}
+.home-wrap{max-width:880px;margin:0 auto}
+.page-wrap{max-width:760px;margin:0 auto}
+
+/* ---------- 首页顶栏：用户圆圈 + 站名 + 主题 ---------- */
+.home-top{display:flex;align-items:center;gap:14px;padding:22px 0 6px}
+.avatar{
+  width:46px;height:46px;border-radius:50%;flex:none;
+  display:flex;align-items:center;justify-content:center;
+  font-size:19px;font-weight:700;color:var(--on-solid);line-height:1;
+  border:2px solid var(--line);background:var(--field);
+  overflow:hidden;transition:transform .12s,box-shadow .12s,border-color .12s;
+}
+.avatar:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+.avatar.off{border-color:var(--line)}                    /* 没登录：灰 */
+.avatar.on{border-color:var(--panel);box-shadow:var(--shadow)}   /* 登录：底色=等级色（内联） */
+.avatar-t{pointer-events:none}
+.home-brand{flex:1;min-width:0}
+.home-brand h1{margin:0;font-size:22px;letter-spacing:.3px}
+.home-brand p{margin:4px 0 0;font-size:13px;color:var(--ink-3)}
+
+/* 未登录提示块 */
+.home-ask{
+  background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:28px 22px;text-align:center;margin:26px 0 0;box-shadow:var(--shadow);
+}
+.ask-big{font-size:20px;font-weight:700}
+.ask-sub{margin:8px 0 18px;color:var(--ink-2);font-size:13.5px}
+
+/* ---------- 入口磁贴（圆角方形图标） ---------- */
+.home-main{margin-top:26px}
+.home-main.locked .tiles{opacity:.45}          /* 没登录：淡化但还能点（点了先弹登录） */
+.home-main.locked .tile{filter:grayscale(.35)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:12px}
+.tile{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;
+  padding:16px 8px 14px;background:var(--panel);border:1px solid var(--line);
+  border-radius:14px;text-decoration:none;color:inherit;
+  transition:border-color .15s,box-shadow .15s,transform .15s;
+}
+.tile:hover{border-color:var(--border-accent);box-shadow:var(--shadow);transform:translateY(-1px)}
+.tile-ico{
+  width:46px;height:46px;border-radius:12px;background:var(--tint-accent);
+  display:flex;align-items:center;justify-content:center;font-size:22px;
+}
+.tile-lab{font-size:13px;font-weight:600;color:var(--ink-2);text-align:center;line-height:1.35}
+.tile.soon .tile-ico{background:var(--line-2)}
+.tile.soon .tile-lab{color:var(--ink-3)}
+.home-hr{border:0;border-top:1px solid var(--line);margin:28px 0 20px}   /* 「横线划开」两个部分 */
+.home-sec-t{margin:0 0 12px;font-size:14px;color:var(--ink-2);font-weight:700;letter-spacing:.5px}
+
+/* ---------- 头像菜单（登录后点圆圈） ---------- */
+.umenu{
+  position:fixed;top:80px;left:16px;z-index:120;width:224px;
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  box-shadow:var(--shadow-pop);padding:14px;
+  animation:umpop .16s ease-out;
+}
+.umenu-name{font-weight:700;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.umenu-lv{margin-top:6px;font-size:12.5px;color:var(--ink-2)}
+.umenu-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-left:5px;vertical-align:-1px;background:var(--ink-3)}
+.umenu-out{
+  margin-top:12px;width:100%;padding:9px;border-radius:8px;
+  border:1px solid var(--line);color:var(--ink-2);font-size:13px;
+  transition:all .12s;
+}
+.umenu-out:hover{border-color:var(--danger);color:var(--danger);background:var(--danger-bg)}
+
+/* ---------- 登录 / 注册弹框 ---------- */
+.um{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:18px}
+/* 必须显式写：上面的 display:flex 是作者样式，会盖掉 UA 的 [hidden]{display:none} */
+.um[hidden]{display:none}
+.um-mask{position:absolute;inset:0;background:rgba(0,0,0,.45)}
+.um-card{
+  position:relative;width:100%;max-width:380px;max-height:92vh;overflow-y:auto;
+  background:var(--panel);border:1px solid var(--line);border-radius:16px;
+  padding:24px 22px 18px;box-shadow:var(--shadow-pop);
+  animation:umpop .18s ease-out;
+}
+@keyframes umpop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.um-x{
+  position:absolute;top:10px;right:10px;width:26px;height:26px;border-radius:8px;
+  color:var(--ink-3);font-size:12px;display:flex;align-items:center;justify-content:center;
+  transition:all .12s;
+}
+.um-x:hover{background:var(--danger-bg);color:var(--danger)}
+.um-title{margin:0 0 14px;font-size:19px;letter-spacing:.2px}
+.um-tabs{display:flex;gap:4px;background:var(--line-2);padding:3px;border-radius:9px;margin-bottom:16px}
+.um-tab{flex:1;padding:7px;border-radius:7px;font-size:13.5px;color:var(--ink-2);transition:background .15s,color .15s}
+.um-tab.on{background:var(--panel);color:var(--accent);font-weight:600;box-shadow:var(--shadow-tab)}
+.um-label{display:block;font-size:13px;color:var(--ink-2);margin:12px 0 6px}
+.um-row{
+  display:flex;align-items:center;
   border:1px solid var(--border-hover);border-radius:10px;
   background:var(--field);overflow:hidden;
   transition:border-color .15s,box-shadow .15s;
 }
-/* 输入框聚焦时整行一起亮 —— 光给 <input> 描边的话，边框在 .login-row 上，看不出来 */
-.login-row:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
-.login-cc{
-  flex:none;padding:0 10px 0 13px;color:var(--ink-3);font-size:15px;
-  border-right:1px solid var(--line);
-}
-#phone{
+.um-row:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.um-cc{flex:none;padding:0 10px 0 13px;color:var(--ink-3);font-size:15px;border-right:1px solid var(--line)}
+.um-row input{
   flex:1;min-width:0;border:0;outline:0;background:transparent;color:var(--ink);
-  font-size:17px;letter-spacing:1px;padding:13px 13px;
-  font-family:inherit;
+  font-size:16px;letter-spacing:.5px;padding:12px;font-family:inherit;
 }
-#phone::placeholder{color:var(--ink-3);letter-spacing:0;font-size:15px}
-#phone.bad{color:var(--danger)}
-
-.login-err{
-  margin:10px 0 0;font-size:13px;color:var(--danger);
+.um-row input::placeholder{color:var(--ink-3);letter-spacing:0;font-size:14px}
+.um-err{
+  margin:12px 0 0;font-size:13px;color:var(--danger);
   background:var(--danger-bg);border:1px solid var(--danger-bg-2);
   border-radius:8px;padding:8px 10px;
 }
-.login-btn{
-  width:100%;margin-top:16px;padding:13px;border:0;border-radius:10px;
+.um-btn{
+  width:100%;margin-top:16px;padding:12px;border:0;border-radius:10px;
   background:var(--accent);color:var(--on-solid);
-  font-size:16px;font-weight:600;font-family:inherit;cursor:pointer;
+  font-size:15.5px;font-weight:600;font-family:inherit;cursor:pointer;
   transition:background .15s;
 }
-.login-btn:hover{background:var(--accent-2)}
-.login-btn:disabled{opacity:.6;cursor:default}
+.um-btn:hover{background:var(--accent-2)}
+.um-btn:disabled{opacity:.6;cursor:default}
+.um-note{margin:14px 0 0;font-size:12px;line-height:1.7;color:var(--ink-3)}
 
-.login-note{margin:16px 0 0;font-size:12.5px;line-height:1.7;color:var(--ink-3)}
-.login-note.warn{color:var(--warn);background:var(--warn-bg);
-  border:1px solid var(--warn-line);border-radius:8px;padding:8px 10px;margin-top:14px}
-.login-foot{margin:18px 0 0;text-align:center;font-size:13.5px}
-.login-foot a{color:var(--ink-2);text-decoration:none}
-.login-foot a:hover{color:var(--accent)}
-
-/* 登录页的主题开关：顶到右上角，不与卡片抢视线 */
-.theme-fab{
-  position:fixed;top:calc(14px + env(safe-area-inset-top));right:14px;z-index:10;
-  background:var(--panel);border:1px solid var(--line);border-radius:999px;
-  color:var(--ink-2);font-size:12.5px;font-family:inherit;
-  padding:7px 13px;cursor:pointer;box-shadow:var(--shadow);
+/* ---------- 轻提示 ---------- */
+.toast{
+  position:fixed;left:50%;bottom:calc(34px + env(safe-area-inset-bottom));
+  transform:translate(-50%,10px);z-index:300;
+  background:var(--ink);color:var(--bg);font-size:13.5px;
+  padding:10px 18px;border-radius:999px;max-width:86vw;text-align:center;
+  opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;
 }
-.theme-fab:hover{border-color:var(--border-hover);color:var(--ink)}
-.theme-fab.on{color:var(--accent);border-color:var(--border-accent)}
+.toast.show{opacity:.96;transform:translate(-50%,0)}
+
+/* ---------- 固定内容页（错题记录 / 我的词书） ---------- */
+.page-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:20px 0 0}
+.page-back{color:var(--ink-2);text-decoration:none;font-size:14px;flex:none}
+.page-back:hover{color:var(--accent)}
+.page-title{margin:0;font-size:20px;flex:1;min-width:0}
+.page-sub{color:var(--ink-3);font-size:13px;margin:10px 0 16px}
+.listbox{
+  background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:6px 14px;box-shadow:var(--shadow);min-height:140px;
+}
+.list-empty{color:var(--ink-3);text-align:center;padding:44px 16px;line-height:2;font-size:13.5px}
+.list-empty .big{display:block;font-size:26px;margin-bottom:8px;opacity:.6}
+.list-cta{margin-top:16px}
+.list-h{font-size:14px;color:var(--ink-2);margin:22px 0 8px}
+.list-h:first-child{margin-top:14px}
+.mrow{display:flex;align-items:center;gap:12px;padding:13px 2px;border-bottom:1px solid var(--line-2)}
+.mrow:last-child{border-bottom:none}
+.mrow-main{flex:1;min-width:0}
+.mrow-t{font-weight:600;font-size:15px}
+.mrow-m{margin-top:4px;font-size:12.5px;color:var(--ink-2)}
+.mrow .btn{flex:none;text-decoration:none}
+.wrow{display:flex;gap:10px;align-items:baseline;padding:10px 2px;border-bottom:1px solid var(--line-2)}
+.wrow:last-child{border-bottom:none}
+.wkey{font-weight:700;font-size:15px;flex:none;min-width:112px}
+.wcn{color:var(--ink-2);font-size:13.5px;flex:1;min-width:0}
+.wrow.s{display:block}
+.wrow.s .wkey{display:block;min-width:0;font-weight:400;font-size:14px;line-height:1.65}
+.wrow.s .wcn{display:block;margin-top:3px;color:var(--ink-3)}
+
+/* ---------- 词书条目：点一条展开详情（音标/词性/例句/搭配；句子是翻译+分析） ---------- */
+.wentry{border-bottom:1px solid var(--line-2)}
+.wentry:last-child{border-bottom:none}
+.wentry .wrow{width:100%;text-align:left;border-bottom:none;position:relative;font-family:inherit;color:inherit}
+.wrow .wcaret{flex:none;color:var(--ink-3);font-size:11px;transition:transform .15s;margin-left:2px}
+.wrow.s .wcaret{position:absolute;right:0;top:12px}
+.wrow[aria-expanded="true"] .wcaret{transform:rotate(90deg);color:var(--accent)}
+.wdetail{padding:0 2px 14px}
+.wdetail[hidden]{display:none}   /* 别只靠 UA 的 [hidden]：上面的作者样式会把它盖掉 */
+.wd-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:2px 0}
+.wd-word{font-weight:700;font-size:17px}
+.wd-sent{font-weight:400;font-size:14px;line-height:1.7}
+.wd-ipa{color:var(--accent);font-size:13.5px}
+.wd-spk{
+  width:26px;height:26px;border-radius:8px;flex:none;font-size:13px;color:var(--ink-2);
+  display:inline-flex;align-items:center;justify-content:center;transition:all .12s;
+}
+.wd-spk:hover{background:var(--accent-soft);color:var(--accent)}
+.wd-sec{display:flex;gap:10px;margin-top:9px;font-size:13.5px}
+.wd-t{flex:none;width:34px;color:var(--ink-3);font-size:12.5px;padding-top:1px}
+.wd-b{flex:1;min-width:0;line-height:1.75;overflow-wrap:anywhere}
+.wd-b .chip{margin:2px 4px 2px 0}
+.wd-ex{display:flex;gap:6px;align-items:flex-start}
+.wd-ex > span{flex:1;min-width:0}
+.wd-ex .wd-spk{margin-top:-3px}
+.wd-extr{color:var(--ink-3);margin-top:2px}
+.wd-part{display:flex;gap:8px;margin-bottom:3px}
+.wd-partk{flex:none;color:var(--ink-3)}
+.wd-ul{margin:0;padding-left:18px}
+.wd-ul li{margin-bottom:3px}
+.wd-none{color:var(--ink-3)}

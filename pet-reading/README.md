@@ -6,10 +6,10 @@
 现在改 `engine/style.css` 重跑一次构建，全站生效。
 
 ```
-一次访问的下载量（gzip 后，实测）
-  首篇：引擎 37.6KB（app.js 21.6 + style.css 11.0 + store.js 5.0）+ 内容 24.6KB ≈ 62KB
+一次访问的下载量（gzip 后，实测；数字随版本浮动，比例不变）
+  首篇：引擎（app.js 21.6 + style.css 11.0 + store.js 5.0 左右）+ 内容 24.6KB ≈ 60KB 上下
   之后每篇：只下内容 24.6KB（引擎已在浏览器缓存里，且带 ?v= 永久缓存）
-  目录页 1.6KB · 登录页 2.5KB
+  固定页面：首页 / 错题页 / 词书页 各自 1–3KB，外加共用的 store.js（已缓存）
 ```
 
 ---
@@ -18,14 +18,17 @@
 
 ```
 pet-reading/
-├── engine/                     ← 引擎：所有文章共用，改一次全站生效
-│   ├── app.js                      交互逻辑（唯读内容，不写死任何一篇的数据）
-│   ├── store.js                    登录态 / 收藏 / 主题的存取层 —— **接后端时只改这个文件**
+├── engine/                     ← 引擎：所有页面共用，改一次全站生效
+│   ├── app.js                      文章页交互逻辑（唯读内容，不写死任何一篇的数据）
+│   ├── store.js                    唯一数据层：登录态 / 收藏 / 错题 / 学到哪儿 / 主题
+│   ├── home.js                     首页：用户圆圈 + 登录/注册弹框 + 入口磁贴
+│   ├── mlist.js                    错题记录页（mistakes.html 的脚本）
+│   ├── words.js                    我的词书页（words.html 的脚本）
 │   ├── style.css                   样式（亮暗两套配色都在这，走语义令牌）
-│   ├── template.html               文章页骨架，带 <!--占位符-->
-│   └── login.template.html         登录页骨架（不加载 app.js，见下）
+│   └── template.html               文章页骨架，带 <!--占位符-->（左边目录列也在这）
 ├── articles/                   ← 内容：一篇一个 JSON，日常只动这里
-│   └── t1-p4-digging-into-the-past.json
+│   ├── t1-p1-messages-and-notices.json     Part 1 式：训练①②③④⑤ + 真题（39 段 83 句 29 题，带段落角色）
+│   └── t1-p4-digging-into-the-past.json    Part 4 式：长文 + A–H 共享选项池
 ├── data/
 │   ├── manifest.json               站点标题 + 书本分组 + 文章顺序（唯一真相源）
 │   └── glossary.core.json          跨篇共享词库，由 tools/promote.mjs 生成
@@ -37,6 +40,11 @@ pet-reading/
 │   ├── test-store.mjs              store.js 单测（含存储不可用的降级）
 │   ├── promote.mjs                 重复词条上浮到共享词库
 │   └── migrate-legacy.mjs          旧单文件 HTML → articles/*.json（一次性，已完成使命）
+├── server/                     ← 收藏后端（Node + express + mysql2，完整文档在 server/README.md）
+│   ├── server.mjs                  HTTP 入口（/api/login、/api/favs…）
+│   ├── db.mjs                      全部 SQL 都在这一个文件
+│   ├── test.mjs                    后端单测（假 db，不需要数据库）
+│   └── selftest.mjs                真库自检（部署机上跑）
 ├── build.mjs                   ← 批量构建 → dist/
 └── dist/                       ← 部署这个目录（.gitignore 里）
 ```
@@ -96,12 +104,20 @@ node build.mjs --only <slug>     # 只重建这一篇（增量构建本来也只
 | `note` | 备注。目前引擎不显示，留档用 |
 | `passage.words` / `.sentences` | 声明值，`verify` 会拿实际数跟它比 |
 | `passage.paragraphs` | `段落[] → 句[]`，每句 `{ s, hard, tr, ana }` |
+| `passage.blocks` | 可选：段落角色数组（与段落等长）：`r` = `h`标题/`i`提示斜体/`o`选项强调色/`q`题目文本块；`n` = 题号徽章（如 `"1"`）。Reading Part 1 的排版体系，普通散文文章（t1-p4）不写这个字段 |
+| `blocks[].plain` | 可选 `true`：这块不逐词查词（点整行看讲解）；角色 `o` 自动生效。Part 1 的短文本/选项清单用 |
+| `blocks[].pick` | 可选：题号数组，渲染成「我的答案」横排（点选即作答、单选变底色）；多题时自动带行号（取 `tag` 尾号） |
+| `blocks[].optsInline` | 可选 `true`：把这题（题号取 `n`）的选项整行列进正文（点行作答；行内「析/🔊」；选项句子分析取 `q.optsAna`） |
+| 句子的 `pickQ` + 文本里的 `«…»` | 句内二选一的渲染标记：`«备选词»` 渲染成按钮，挂在 `pickQ` 题上；`«»` 不算文字（对账/朗读自动剥掉） |
+| 顶层 `inlineQuiz` | 可选 `true`：答题全在正文页（隐藏「题目分析」tab）；t1-p1 用 |
 | `ana` | `{ pat, frame, parts, clauses, gram, tip, phrases }` |
 | `phrases` | 词组数组，**原文里必须字面出现**（正文或选项里都行） |
 | `glossary` | 词条表：`词 → { pos, ipa, cn, note }` |
-| `options` | `A`–`H` 八个选项 |
-| `optionsAna` | 每个选项一份 `ana`（无 `phrases`） |
-| `questions` | 5 题：`{ n, prompt, answer, why, clues, others, tip, ana }` |
+| `options` | Part 4 式：`A`–`H` 八个共享选项；**Part 1 式留空 `{}`** |
+| `optionsAna` | 每个选项一份 `ana`（无 `phrases`）；Part 1 式留空 |
+| `questions` | 5 题：`{ n, prompt, answer, why, clues, others, tip, ana }`；**Part 1 式每题加 `opts:{A,B,C}`**（`answer` 取其中的字母，正文没有空位；训练题 n 从 101 起、用 `tag` 显示「①-1」这种编号，真题仍是 1–5） |
+| `questions[].optsAna` | 可选：每题选项的句子分析 `{ 字母: { parts, gram, tr } }`；**写了 `optsInline` 的题必须有**（verify 强制），「析」按钮的数据源 |
+| `phrases` / `glossary` | Part 1 式的词组、词形覆盖同样算上 `opts` 里的词 |
 
 空位在正文里写成 `{16}`，引擎渲染成绿色小圆标。
 
@@ -113,8 +129,9 @@ node build.mjs --only <slug>     # 只重建这一篇（增量构建本来也只
 |---|---|---|
 | `npm run verify` | ①内容：词数/句数对账、每句每选项都有 `ana`、词组字面存在且有词条、100% 词形覆盖、空位与题号对得上、答案唯一、干扰项齐全、**同一词在不同篇里释义不打架**。②引擎：分词正则三处逐字一致、断点两处一致、模板占位符齐全、`:root` 外无彩色字面量、暗色令牌齐全、hover 藏起来的控件都在常显名单里、`<!--V:x-->` 引用的文件都存在 | 秒级 |
 | `npm run build` | 合并共享词库、算引擎哈希、生成全部固定页面、**清理孤儿 HTML**（manifest 里删掉的篇目，dist 里的产物连 `.gz` 一起删）、预压缩 | 秒级 |
-| `npm run smoke` | 真在 jsdom 里跑一遍引擎：**193 条断言**（每篇）+ 登录页 + 目录页，含逐字比对防丢字、点词/点句/点词组/点空格的交互、历史记录、**收藏、门禁、主题切换、存储不可用时放行** | 数秒 |
-| `node tools/test-store.mjs` | `store.js` 单测 72 条：手机号校验、收藏去重、`isFav` 一致性、主题读写、`safeNext` 拒外站、**假一个会抛异常的 localStorage 断言 `available` 返回 false 而不是抛出去** | 毫秒 |
+| `npm run smoke` | 真在 jsdom 里跑一遍引擎：**456 条断言**（每篇 + 首页 + 错题页 + 词书页 + 门禁），两种题型（Part 4 共享选项池 / Part 1 每题自带选项）都跑；Part 1 的正文内联作答（答案横排/句内二选一/整行选项/解析按钮/隐藏 tab）全链路断言；含逐字比对防丢字、点词/点句/点词组/点空格的交互、历史记录、目录列开合、**做题与错题登记、学到哪儿、收藏、词书点开详情、首页按钮、题号徽章、门禁、主题切换、存储不可用时放行** | 数秒 |
+| `node tools/test-store.mjs` | `store.js` 单测 **144 条**：注册/登录（含假后端的密码校验分支）、**14 天过期**、手机号校验、收藏去重、**补写队列（离线排队 / 联网推送 / 400 条目丢弃）**、**拉取合并（跨设备星标、本机已删的不复活）**、**错题登记与列表**、**学到哪儿（按手机号分账）**、主题读写、`safeNext` 拒外站、**假一个会抛异常的 localStorage 断言 `available` 返回 false 而不是抛出去** | 毫秒 |
+| `cd server && npm test` | 后端单测 **94 条**：sha256 已知向量、scrypt 散列/校验、昵称/密码/手机号/slug 校验、全部路由的成功与 400 分支、**db 抛异常 → 500 且不透传内部细节**。`selftest.mjs` 打真库，在部署机上跑 | 毫秒 |
 
 `npm run check` = 四个连跑（verify → build → smoke → test-store），提交前跑这个。
 
@@ -155,88 +172,127 @@ node tools/promote.mjs --write      # 真的写
 
 ## 登录、门禁与收藏
 
-### 三个页面
+### 页面一览
 
 | 页面 | 由谁生成 | 加载什么 |
 |---|---|---|
 | `dist/<slug>.html` | `engine/template.html` + 该篇 JSON | `style.css` + `store.js` + `app.js` |
-| `dist/index.html` | `build.mjs` 里的 `renderIndex()`（手写模板，没有 `PET_CONTENT`） | `style.css` + `store.js` |
-| `dist/login.html` | `engine/login.template.html` | `style.css` + `store.js` |
+| `dist/index.html` | `build.mjs` 里的 `renderIndex()`（手写模板，没有 `PET_CONTENT`） | `style.css` + `store.js` + `home.js` |
+| `dist/mistakes.html` | `build.mjs` 里的 `renderMistakes()`（共用 `renderListPage()` 骨架） | `style.css` + `store.js` + `mlist.js` |
+| `dist/words.html` | `build.mjs` 里的 `renderWords()`（同上） | `style.css` + `store.js` + `words.js` |
 
-登录页**不加载 `app.js`**：`app.js` 开头无条件读 `window.PET_CONTENT`，那页没有内容数据，一加载就崩。
+**没有单独的登录/注册页** —— 首页左上角那个圆圈（`avatar`）点开是弹框，逻辑全在 `engine/home.js`。
+固定页面**不加载 `app.js`**：`app.js` 开头无条件读 `window.PET_CONTENT`，那些页没有内容数据，一加载就崩。
 加新固定页面时，往 `build.mjs` 的 `PAGES` 注册表里加一条就行，孤儿清理会自动豁免它 ——
 别再往清理循环里堆 `if (f === "xxx.html") return;` 那种特例。
 
+### 登录 / 注册（2026-10 改版）
+
+- 首页**公开**：没登录显示「请先登录哦」+ 入口淡化锁住（点了弹登录框）；
+  登录后加载个性化首页，「PET 阅读理解」跳到上次学到的那篇。
+- 注册要**手机号 + 昵称 + 密码**；密码在服务端按 scrypt 散列入库（`user.pass_hash`），
+  登录时校验。老的软登录用户（库里没密码）走「注册」会补设昵称和密码。
+- **登录状态保持 14 天**（`store.js` 的 `LOGIN_DAYS`，过期当作未登录并顺手清掉）。
+  前端缓存 `{phone, nickname, level, color, ts}`；等级色（1 蓝 → 18 金）来自
+  数据库 `pet_user_level` 表，首页圆圈按它上色。
+- ⚠ 除注册/登录要密码外，其余接口仍按手机号认人（**软认证**）——
+  这是学生工具的刻意取舍，不是忘了做 token。懂技术的能绕过，别拿它当安全边界。
+
 ### 门禁是**软**门禁，这点必须先说清
 
-未登录访问文章页或目录页 → 跳登录页 → 登完回原页。
-但这是**纯客户端**的：懂技术的人改一下 localStorage 就绕过去了。
+未登录访问文章页 / 错题页 / 词书页 → 回首页并自动弹登录框（`index.html?login=1&next=…`）→ 登完回原页。
+但这是**纯客户端**的：懂技术的人改一下 localStorage 就绕过去了（密码只保护「登录这动作」本身）。
 
-> 它现在的作用是**让学生走一遍登录流程、把手机号留下来**，不是防住谁。
-> 真正的门禁要等后端。
+> 它现在的作用是**让学生走一遍注册流程、把手机号留下来**，不是防住谁。
 
-### ⚠ 强制登录带来的三个后果
+### ⚠ 门禁带来的三个后果
 
-1. **搜索引擎收录不到。** 200 篇内容不再公开可索引。
-2. **微信/QQ 里转发链接，对方打不开正文**，会落到登录页。
+1. **搜索引擎收录不到。** 内容不再公开可索引。
+2. **微信/QQ 里转发链接，对方打不开正文**，会落到首页登录框。
    以后要做传播，得改成「试读 N 篇」。
-3. **`file://` 双击打开彻底失效。** 本地打开会跳登录页，而 `file://` 下 localStorage 不可靠，
-   登录永远存不住。因此门禁做成了**存储不可用时放行**（`store.available() === false` → 直接放行），
+3. **`file://` 双击打开半残。** 本地打开跳首页（能看），但 `file://` 下 localStorage 不可靠，
+   登录永远存不住，学习记录也不会留下。因此门禁做成了**存储不可用时放行**
+   （`store.available() === false` → 直接放行），
    否则「存不住 → 跳回来 → 又跳过去」会变成无限跳转。
    **这条防御不能删**，删了本地和隐私模式就成死循环了（`smoke` 里有断言拦它）。
 
-### `store.js`：留给后端的那个缝
+### `store.js`：唯一的数据层
 
-**所有登录态 / 收藏 / 主题的读写都走 `engine/store.js`，从第一天起就是 `async`。**
-将来接后端，只把这个文件里的函数体换成 `fetch`，页面代码一行不动 —— 这就是「预留后端」的全部秘密：
-把异步性前置，而不是等接后端时再回来改所有调用点。
+**所有登录态 / 收藏 / 错题 / 阅读进度 / 主题的读写都走 `engine/store.js`，从第一天起就是 `async`。**
+收藏接后端时也只改了这个文件（`fetch` + 补写队列 + 拉取合并），页面代码基本没动 ——
+这就是「把异步性前置」的回报。接口地址默认同源 `/api`，本地联调起
+`server/`（它顺带伺服 dist/）即可，也支持 `window.PET_API_BASE` 指到别处。
 
 ```js
 window.PETStore = {
   available,   // () → boolean          存储能不能用（隐私模式 / file:// 会是 false）
-  guard,       // async () → Promise    门禁：未登录就跳登录页；存储不可用时**放行**
-  getUser,     // async () → { phone, ts } | null
-  login,       // async (phone) → { ok, phone, persisted } | { ok:false, err }
+  guard,       // async () → Promise    门禁：未登录就回首页弹登录框；存储不可用时**放行**
+  getUser,     // async () → { phone, nickname, level, color, ts } | null（过期即 null）
+  login,       // async (phone, password) → { ok, user, persisted } | { ok:false, err }
+  register,    // async (phone, nickname, password) → { ok, user, completed } | { ok:false, err }
+  refreshProfile, // async () → user     拉最新昵称/等级/颜色写回缓存；离线返回缓存、不登出
   logout,      // async ()
   maskPhone,   // (phone) → "138****8000"
   safeNext,    // (raw) → string        只放行站内相对路径，防开放重定向
-  mountWho,    // (el) → Promise        顶栏脱敏手机号 + 退出（文章页与目录页共用这一份实现）
-  addFav,      // async (item) → { ok, added }   ← 现在是往 localStorage 追加，同时天然成为补写数据库的 outbox
+  mountWho,    // (el) → Promise        顶栏昵称（或脱敏手机号）+ 等级色点 + 退出
+  mountTheme,  // (el) → void           固定页面的三态主题按钮（文章页有自己的那份）
+  addFav,      // async (item) → { ok, added }   本地立即生效 + 进补写队列，网络的事后台慢慢来
   isFav,       // async (id) → boolean
-  listFav,     // async () → [item]
+  listFav,     // async () → [item]     联网时拉服务器收藏合并进本地
+  syncFavs,    // async () → void       把补写队列推一遍（平时自动触发；测试/调试用）
   favId,       // (item) → string
+  addMistake,  // async ({slug,q,chosen,correct}) → { ok }   错题登记（直连后端，失败静默）
+  listMistakes,// async () → [item]     错题列表（每次现拉）
+  getLastRead, // async () → { slug, ref, ts } | null    学到哪儿了（本机先记着）
+  setLastRead, // async (slug, ref)      ref 传空 = 保留同一篇上次的位置
   getTheme, setTheme, nextTheme, paintTheme
 };
 ```
 
-`guard()` 是门禁本体，**文章页和目录页调的是同一个它**，不是两处长得像的实现。
-`mountWho()` 同理 —— 「手机号带到每个页面」是一个实现被两处调用。
+`guard()` 是门禁本体，**文章页和两个列表页调的是同一个它**，不是两处长得像的实现。
+`mountWho()` 同理 —— 「登录的人带到每个页面」是一个实现被多处调用。
 
-`store.js` **不依赖 `PET_CONTENT`**（`verify` 有一条断言拦着），所以登录页和目录页也能安全加载它。
+`store.js` **不依赖 `PET_CONTENT`**（`verify` 有一条断言拦着），所以首页和列表页也能安全加载它。
 
 ### 收藏
 
-没有独立的收藏面板。**每个词/句进入历史浮层后，那一行右侧有个 ☆**，点一下收藏、再点取消。
+文章页里没有独立的收藏面板 —— **每个词/句进入历史浮层后，那一行右侧有个 ☆**，点一下收藏、再点取消；
+收藏汇到**「我的词书」页**（`words.html`，首页磁贴进）。
 
 - 收藏的 key 用 `lookup()` 解析后的**词典原形**，不是用户点到的那串字母。
   点 `centuries` 收藏的是 `century`，否则同一个词的不同形式会各存一条。
-- 单词/词组是**全局按词**的（同一个词在任何一篇里都是同一条）；句子按篇（`ref` 只在它那一篇里有意义）。
-- 条目形状：`{ type:"w"|"ph"|"s", key, ref, slug, cn, ts }`，
-  `id = type === "s" ? "s:" + slug + "@" + ref : type + ":" + key`。
-- **接口已留好**（`addFav` / `isFav`），真实存储（数据库表）之后补。现在写进 `pet:fav:v1` 的这份数据
-  同时也是将来补写数据库的 outbox。
+- 单词/词组是**全局按词**的（同一个词在任何一篇里都是同一条）；
+  句子的身份是**句子文本**（服务端按 `sha256(句子)` 去重，`s:句子文本` 就是它的 id）——
+  换设备、刷新后同一句还能对上。
+- 条目形状：单词 `{ type:"w", key:"century", cn:"世纪", pos, ipa, ex, exTr, ph, title }`；
+  句子 `{ type:"s", key:"<完整句子>", cn:"<翻译>", ana, title, ref, slug }`。
+  `id = type + ":" + key`。
+- **本地即时 + 后台补写**：点星先写本地 `pet:fav:v1`（不等网络），同时往补写队列
+  `pet:fav:q:v1` 记一条；联网后自动推给 server/ 的后端，落进
+  `pet_word/pet_sentence` + `user_word/user_sentence`（详见「收藏后端」一节）。
+- `listFav()` 联网时会拉服务器收藏合并进本地 —— 跨设备恢复星标就靠它。
+- **词书排序**：单词按**词表 `pet_word.created_at`**（收录时间，最新在前），句子按收藏时间（最新在前）。
+- **词书页点一条展开详情**：单词给 音标 / 词性 / 释义 / 例句（连翻译）/ 搭配 + 🔊；
+  句子给 原文 / 翻译 / 句子分析 + 🔊。数据由 `/api/favs` 带全
+  （`db.mjs` 的 `listFavs` 会连 `pet_sentence` 取例句翻译）；
+  老词缺的字段跑 `server/backfill.mjs` 补（见 server/README.md）。
 
 ### 存储键
 
 | 键 | 内容 | 范围 |
 |---|---|---|
-| `pet:user:v1` | `{ phone, ts }` | 跨篇共享 |
-| `pet:fav:v1` | 收藏条目数组 | 跨篇共享 |
+| `pet:user:v1` | `{ phone, nickname, level, color, ts }` —— 保持 14 天，过期即未登录 | 跨篇共享 |
+| `pet:fav:v1` | 收藏条目数组（界面真相；`sy:1` = 已入库） | 跨篇共享 |
+| `pet:fav:q:v1` | 待补写队列（断网时攒下的增删，联网后自动推送） | 跨篇共享 |
+| `pet:lastread:v1` | `{ [手机号]: { slug, ref, ts } }` —— 学到哪篇哪句（将来换 Redis） | 跨篇共享 |
 | `pet:theme:v1` | `"auto"` / `"light"` / `"dark"` | 跨篇共享 |
 | `pet:ui:v2` | `{ ana, vocab }` —— 注意 `ana` 存的是**用户偏好**（`userAna`），不是当前显隐 | 跨篇共享 |
 | `pet:zoom:v1` | 字号倍数 | 跨篇共享 |
+| `pet:hist:v1:<slug>` | 该篇的点词/点句历史 | 按篇隔离 |
+| `pet:ans:v1:<slug>` | 该篇做过的答案 `{ 题号: 选项字母 }`（错题登记后刷新还看得见） | 按篇隔离 |
 
 跨篇的键一律不带 slug。所有读写都包了 try/catch —— 隐私模式下 localStorage 会直接抛异常。
+「学到哪儿」以后换 Redis 时只改 `store.js` 的 `getLastRead / setLastRead` 两个函数内部，调用方不动。
 
 **`userAna` 与 `cols.ana` 是两回事**，别合并：`cols.ana` 是「这一刻显不显示」，
 `userAna` 是「用户在宽屏上的偏好」。窄屏进来时抽屉必须收起（`cols.ana = false`），
@@ -244,65 +300,129 @@ window.PETStore = {
 
 ---
 
+## 收藏后端（server/）
+
+页面仍是纯静态的；注册/登录/收藏/错题的持久化交给一个很小的 Node 服务（express + mysql2），
+部署在同一台 ECS 上，nginx 把 `/api/` 反代到 `127.0.0.1:3001`。
+完整文档在 `server/README.md`，这里只记要点：
+
+- **迁移（migrate.mjs）**：建 `pet_user_level`（18 行等级颜色，1 蓝 → 18 金）、
+  给 `user` 加 `nickname / pass_hash / user_level` 三列、建 `pet_mistake` 错题表。
+  幂等，可反复跑；`deploy-api.sh` 发版时会自动跑一遍（失败只告警不拦发布）。
+- **注册/登录**：`POST /api/register`（手机号+昵称+密码，密码 scrypt 散列入库）、
+  `POST /api/login`（校验密码）、`GET /api/me`（拉昵称/等级/颜色）。
+  老的软登录用户（库里没密码）走「注册」会补设昵称密码。
+- **落库逻辑**：收藏时 `pet_word/pet_sentence` 没有就补一条（句子按
+  `sha256(trim(句子))` 去重），再写 `user_word/user_sentence` 关联行；
+  取消收藏只删关联行，公共词句库不动。收藏接口仍按手机号认人（软认证）。
+- **错题**：`POST /api/mistakes` 登记（用户+篇+题号唯一，重复错计数 +1）、
+  `GET /api/mistakes` 列出；错题页（`mistakes.html`）每次打开现拉。
+- **字段带全**：收藏单词时把内容里现有的一切都带上 —— 音标、词性、**点它时所在
+  的例句原句**（连同翻译和分析）、含这个词的搭配；例句同时进 `pet_sentence`，
+  `sentence_hash` 直接可关联。`mnemonic` 内容里没有，留空等补全流程。
+- **旧数据补全**：`cd server && node --env-file=.env backfill.mjs`（预览）/
+  `--write`（真写）—— 拿内容库把 `pet_word` 缺着的音标/词性/例句/搭配补齐，
+  只填空字段、幂等，详见 `server/README.md`。
+- **level 写 `PET`**（`user_word/user_sentence` 的 level 字段），
+  `source_type=2`（文章）。两者都可用环境变量覆盖，见 `server/.env.example`。
+- **哈希在服务端算**：页面跑在 `http://` 下没有 `crypto.subtle`，客户端算不了
+  SHA-256 —— 客户端传原文，这是刻意的。
+- **离线兜底**：没有网络（或后端挂了）收藏照常能点，条目躺在
+  `pet:fav:q:v1` 队列里，下次联网自动补写。被后端 400 拒绝的条目会被丢弃
+  （否则会堵住整个队列），控制台里有记录。
+  （错题登记不做离线队列：报不上先算了，别打断做题。）
+- **部署**：`bash deploy-api.sh --setup <IP>`（首次：**旁装 Node 22 到 `/opt/node-v22`**
+  —— 不碰系统 node；systemd 单元 `pet-api`；nginx `/api/` 反代）→ 填一次
+  `/opt/pet-api/.env` 的 DB_PASS → `bash deploy-api.sh <IP>`（每次发版，顺带跑迁移）。
+  细节见 `server/README.md`。
+- **验证**：`cd server && npm test`（单测）→ 服务器上
+  `/opt/node-v22/bin/node --env-file=.env selftest.mjs`（真库全链路）→
+  `curl http://<IP>/api/health`。
+- **状态（2026-10-16）**：后端 + 静态站都已部署验收 —— 静态站在 `/var/www/html`
+  （nginx 默认站根，和 `/api/` 同一个 vhost；`deploy.sh` 已改成发这里，HTML 配了 no-cache）；
+  公网 `/api/health` 可达，端到端含中文往返，真浏览器多宽度验收全过。
+  **2026-10-16 改版**（注册/登录/等级色/错题/学到哪儿）的迁移要先在服务器上跑
+  `node --env-file=.env migrate.mjs`（或直接走 `deploy-api.sh`，它会顺带跑），
+  前端要重新 `node build.mjs` 后发布 `dist/`。
+
+---
+
 ## 主题与三端适配
 
 ### 主题
 
-三态循环：跟随系统 → 亮 → 暗（文章页顶栏、登录页右上角各有一个按钮）。
+三态循环：跟随系统 → 亮 → 暗（文章页顶栏、首页/错题页/词书页各有一个按钮，
+`store.js` 的 `mountTheme()` 一份实现）。
 
 - **配色一律走语义令牌**，暗色只覆写 `:root[data-theme="dark"]` 里的令牌值，**绝不逐条覆写组件**。
   否则以后每加一个组件都要记得配两遍。`verify` 有一条断言禁止 `:root` 之外出现彩色字面量。
 - **防闪烁**：主题属性只能由 JS 写，而外链 CSS 会阻塞渲染，JS 跑完前会闪一帧亮色。
   所以 `<head>` 里、样式表**之前**有一段极小内联脚本先读 `pet:theme:v1` 并写 `data-theme`。
-  这段脚本三页共用一份定义（`build.mjs` 的 `THEME_HEAD`，经 `<!--THEME_HEAD-->` 注入）——
+  这段脚本所有页面共用一份定义（`build.mjs` 的 `THEME_HEAD`，经 `<!--THEME_HEAD-->` 注入）——
   各写一遍的话，改个键名就得改三处，漏掉的那页会闪。
 - `auto` 在启动时就被解析成具体值写死，CSS 里不再维护一套 `@media (prefers-color-scheme)`。
 
-### 断点
+### 断点（两个档位，各自与 `app.js` 对账）
 
-| 区间 | 布局 | 页边「析/🔊」按钮 |
+| 断点 | 区间 | 管什么 |
 |---|---|---|
-| `≥1100px` | 两列（正文 + 小黑板） | 保留 |
-| `<1100px` | 单列正文 + 小黑板变**底部抽屉** | 隐藏（抽屉顶部自带 🔊） |
+| **1100** | `≥1100px` 两列（正文 + 小黑板）/ `<1100px` 单列 + 小黑板变**底部抽屉**、目录列变左侧浮层 | 布局（`app.js isNarrow()`） |
 
-> 断点从 1180 改到 1100，是因为 1180 正好卡在 iPad Air 横屏上，
-> 而 **iPad Pro 11" 横屏是 1194px**，反而不命中两列布局。
+> 1100 的来历：1180 正好卡在 iPad Air 横屏上，而 **iPad Pro 11" 横屏是 1194px** —— 改到 1100 后两种横屏 iPad 都是两列。
+> **页边「析 / 🔊」按钮 2026-10-16 起所有宽度都显示**，不再按宽度隐藏：
+> 之前手机/平板上会藏掉，指望学生点句子开抽屉 —— 但学生反复反馈「按钮丢了」，
+> 他们要的就是每句都有按钮；抽屉保留（点句子照样出讲解），是另一条路，不是替代品。
+> 断点数字写死在 `verify.mjs` 的 `BPS` 名单里：`style.css` 和 `app.js` 任何一边对不上都算构建错误。
 
 抽屉**复用同一份 `#colAna` DOM**，只用 CSS 换表现（`transform:translateY(100%)` 收起），
 不新增面板。用 `transform` 而不是 `display:none`，否则滑动动画会没有。
 `.cols` 上的显隐逻辑（`applyCols()` 切 class）完全不动。
+目录列（`#tocCol`）同一套路：宽屏真占一列（`.cols.toc-open`），窄屏 `position:fixed` 从左边滑出。
 
 **跨越断点时要重算列状态**（`app.js` 里监听 `matchMedia` 的 change）：
 竖屏进来抽屉是收起的，横过来到 ≥1100 就成了第二列，不恢复的话小黑板是空的、页面上也没提示，
 学生会以为讲解丢了。规则是**宽屏一律以 `userAna` 为准，窄屏一律收起**，
 两边都是按规则算出来的，绝不把「屏幕窄」这个处境写进偏好里。
+（页边按钮现在全宽度都摆，resize 时自会重新量位置。）
 
-**触摸设备**：`@media(hover:none)` 把靠 `:hover` 显形的控件（`.hfav` / `.hdel`）改成常显。
-不写这条的话，手机上那两个按钮**永远看不见也点不到**。`verify` 会检查每个藏起来的 hover 控件
-都进了这个常显名单，加了新按钮别忘了。
+**触摸设备**：两道保险。①`@media(hover:none)` 把靠 `:hover` 显形的控件（`.hfav` / `.hdel`）改成常显；
+② `store.js` 按 `navigator.maxTouchPoints` 给 `<html>` 挂 `.touch`，CSS 里同样常显 ——
+**iPad 接了妙控键盘/触控板时 hover 媒体查询可能判不出来**，光靠①会「丢按钮」（学生报过）。
+`verify` 会检查每个藏起来的 hover 控件都进了①的常显名单，加了新按钮别忘了。
 
 ### 人工浏览器清单（jsdom 测不到的，改样式后必须过一遍）
 
 jsdom 有两条硬限制：**没有 `matchMedia`**，且 **`getComputedStyle` 完全忽略 `@media` 规则**。
 所以下面这些机器验证不了，只能人眼看：
 
-1. **五个宽度 × 亮/暗两主题**逐档看：375 / 768 / 1024 / 1194 / 1440。
-   暗色要覆盖正文、词组黄底、句子交替底色、三态高亮、题目区、选项对错、小黑板各区块、历史浮层、登录页。
+1. **五个宽度 × 亮/暗两主题**逐档看：375 / 744 / 820 / 1194 / 1440。
+   暗色要覆盖正文、词组黄底、句子交替底色、三态高亮、题目区、选项对错、小黑板各区块、
+   历史浮层、首页磁贴、登录弹框、错题/词书页。
 2. **手机上点句子 → 抽屉升起、讲解可见、🔊 可用**；抽屉收起时应该在视口下方（不能压住正文）。
-3. **页边按钮在 ≥1100px 下仍精确对齐**（源文档 §6.3 点名要人工确认的那条）。
+3. **页边按钮在所有宽度（含手机 375）都显示**且精确对齐。
    量法：所有 `.sbtns` 的左边缘应当**只有一个值**；与句子首行的垂直偏移应在几个像素内。
    ⚠ 别拿 `.sent` 的右边缘去减 —— `.sent` 是 `display:inline`，
    一行的并集盒子在段末短句处会缩进去，量出来是个假的大间隙。
-4. 未登录打开文章 → 跳登录页 → 登录 → 回到原页 → 顶栏显示脱敏号码。
-5. 点词进历史 → 行内 ☆ **在触摸设备上**可见可点 → 收藏成功、★ 点亮。
+4. 未登录打开文章 → 回首页并弹登录框 → 登录 → 回到原页 → 顶栏显示昵称 + 等级色点。
+5. 点词进历史 → 行内 ☆ **在 iPad 上**可见可点（带键鼠壳也要可见）→ 收藏成功、★ 点亮；
+   刷新页面星标还在（本地表）；后端活着时换一台设备登录同手机号也能恢复
+   （服务器拉取合并）。断网时先点几颗星，恢复网络后过一会儿看数据库
+   `user_word / user_sentence` 里有没有补上。
 6. **隐私模式打开，确认门禁放行而不是无限跳转。**
-7. iPad 上**旋转屏幕**：竖→横，小黑板应当按偏好恢复；横→竖，抽屉应当收起。
+7. iPad 上**旋转屏幕**：竖→横，小黑板应当按偏好恢复；横→竖，抽屉应当收起；
+   竖屏下页边「析/🔊」应当还在。
+8. 首页：注册一个新号 → 圆圈按等级上色、磁贴解锁；退出 → 回到「请先登录哦」；
+   点「PET 阅读理解」→ 进上次学到的那篇的那一行（高亮）。
+9. 文章页做题：选错一题 → 行变红 + 解析自动展开 → 「错题记录」里能看到 → 「去订正」跳回那道题。
 
 ---
 
 ## 部署
 
-发布 `dist/` 整个目录即可，全是静态文件，不需要 Node 进程。
+前端：发布 `dist/` 整个目录即可，全是静态文件（`bash deploy.sh <IP>`）。
+后端：`bash deploy-api.sh [--setup] <IP>` —— 服务装在 `/opt/pet-api`，
+systemd 单元 `pet-api`，只监听 `127.0.0.1:3001`，由 nginx 的 `/api/` 反代进去。
+两者互不干扰：前端挂了不影响已读页面，后端挂了收藏自动降级为本地队列。
 
 ```nginx
 server {
@@ -332,10 +452,9 @@ server {
 **分发方式**：`dist/` 里的 HTML 用的是相对路径、普通 `<script>`（不是 ES module），
 所以整目录拷走放到任何静态服务器上都能跑。
 
-⚠ **但不能双击本地打开（file://）了** —— 加了登录门禁之后，
-本地打开会跳登录页，而 `file://` 下 localStorage 不可靠、登录存不住。
-门禁做成了「存储不可用时放行」，所以本地打开**能进**，只是每次都要重新登录。
-要给学生当文件发，得走 `http://`（哪怕是本机起个小服务）。
+⚠ **双击本地打开（file://）是半残状态** —— 加了登录门禁之后，
+本地打开跳首页，`file://` 下 localStorage 不可靠：**文章能读**（门禁放行），但登录保不住、
+收藏和历史也留不下。要正经用，得走 `http://`（哪怕是本机起个小服务）。
 
 ---
 
@@ -358,10 +477,12 @@ server {
 3. **`passage.title` 不要用**，标题是顶层 `C.title`。
    写错不会报错，只会在页面上顶一个大字 `undefined`。`smoke` 里有断言拦它。
 
-4. **页边按钮在 <1100px 会被隐藏**（`.pgutter{display:none}`）。
-   窄屏没有「析/🔊」按钮，靠点正文里的句子/单词出讲解（抽屉顶部自带 🔊）。
-   这两个值（CSS 的 `@media` 与 `app.js` 的 `isNarrow()`）**必须一致**，
-   `verify` 会拿两边对账 —— 改一个忘另一个，抽屉和列状态就会各说各话。
+4. **页边按钮（每句的「析/🔊」）在所有宽度都显示，别再按宽度藏。**
+   2026-10 前后藏过三版（1100 → 767 → 743），每次都换来「手机/iPad 上按钮丢了」的反馈 ——
+   藏掉之后学生并不会自觉去点句子开抽屉，只会觉得坏了。抽屉保留（点句子照样出讲解），
+   但它是「另一条路」，不是替代品。
+   剩下的宽度断点（1100，抽屉/两列）在 CSS 与 `app.js isNarrow()` 之间**必须一致**，
+   `verify` 会拿两边对账。
 
 5. **`:root` 之外不许写彩色字面量。** 颜色一律走语义令牌，暗色只覆写令牌。
    直接写 `#fff` 的地方，暗色主题下就是一块白斑。`verify` 有断言拦着（中性灰会被放行）。
@@ -379,12 +500,26 @@ server {
 8. **词组内部的空格也是 `.w`**（靠它撑出连续黄底，全篇 49 个）。
    引擎里靠 `String(w.dataset.w).trim() !== ""` 把它放行给词组分支，
    否则会往历史里写一条 `data-w=" "` 的空白垃圾行。
+9. **收藏句子的身份 = 句子文本**（不是 `slug + ref`）。服务端按
+   `sha256(trim(句子))` 去重，本地 id 是 `s:<文本>` —— 两端必须用同一条
+   「trim」规则，否则同一句话在手机和电脑上会各收一条。
+   哈希只在服务端算：页面在 `http://` 下没有 `crypto.subtle`。
+10. **数据库口令、生产地址不许出现在 `engine/` 下的任何文件里** —— 那是要发布的
+    静态文件，等于公开。接口地址走同源 `/api`，口令只活在 `server/.env`（不进 git）。
+    `verify` 有断言拦（`wysnaa` / `8.138.161.122` 之类）。
+11. **`pet:user:v1` 有 14 天寿命。** `getUser()` 读的时候顺手判过期（过期清掉、返回 null）。
+    任何绕过 `getUser()` 直接读 `pet:user:v1` 的新代码，都要自己记得这条 —— 
+    测试里种一个 `ts: 1` 的假用户会被当场判过期（`smoke` 的 `FAKE_USER` 用 `Date.now()`）。
+12. **密码只在「注册/登录」这一处校验**（服务端 scrypt）。其它接口仍按手机号认人 ——
+    这是刻意的软认证（见「登录 / 注册」一节），加真 token 是另一个工程，
+    别在改别的功能时「顺手」发明半套认证。
 
 ---
 
 ## 换书 / 加书
 
-`data/manifest.json` 里加一个 `books[]` 条目即可，首页会自动多出一个分组：
+`data/manifest.json` 里加一个 `books[]` 条目即可（文章页左边的目录列、首页的
+「PET 阅读理解」入口都自动跟着走）：
 
 ```json
 { "id": "pet-25", "title": "PET 官方模考题 25", "articles": ["t2-p2-xxx"] }

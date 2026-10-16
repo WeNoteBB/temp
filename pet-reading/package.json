@@ -7,6 +7,8 @@
     "verify": "node tools/verify.mjs",
     "smoke": "node tools/smoke.mjs",
     "test:store": "node tools/test-store.mjs",
+    "server": "node server/server.mjs",
+    "test:server": "node server/test.mjs",
     "check": "node tools/verify.mjs && node build.mjs && node tools/smoke.mjs && node tools/test-store.mjs"
   },
   "type": "module",

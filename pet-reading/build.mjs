@@ -47,10 +47,11 @@ const manifest = readJSON(P("data", "manifest.json"));
 
 /* ---------- 页面注册表 ----------
    dist/ 顶层所有 .html 都归这里管：构建时逐个重写，孤儿清理时整批豁免。
-   以前 index.html 是写在清理循环里的一个字符串特例，加第二个页面就得再堆一处。 */
+   登录/注册没有独立页面了 —— 首页左上角圆圈点开弹框（engine/home.js）。 */
 const PAGES = [
   { out: "index.html", render: () => renderIndex(manifest, present) },
-  { out: "login.html", render: () => renderLogin(manifest) }
+  { out: "mistakes.html", render: () => renderMistakes(manifest, present) },
+  { out: "words.html", render: () => renderWords(manifest, present) }
 ];
 const PAGE_OUTS = new Set(PAGES.map(p => p.out));
 
@@ -63,8 +64,8 @@ const escHTML = s => String(s)
 const inlineJSON = o => JSON.stringify(o).replace(/</g, "\\u003c");
 
 /* 防闪烁脚本：必须在 <head> 里、外链样式表之前同步跑完，
-   否则会先按亮色渲染一帧再跳到暗色。三个页面都要它，所以只留一份定义 ——
-   各写一遍的话，主题键名一改就得改三处，漏掉的那页会闪。
+   否则会先按亮色渲染一帧再跳到暗色。文章页 + 所有固定页面都要它，
+   所以只留一份定义 —— 各写一遍的话，主题键名一改就得改三处，漏掉的那页会闪。
    ⚠ 里面的 "pet:theme:v1" 必须与 engine/store.js 的 K_THEME 一致。 */
 const THEME_HEAD = `<script>(function(){var t=null;try{t=JSON.parse(localStorage.getItem("pet:theme:v1")||"null")}catch(e){t=null}
 if(t!=="light"&&t!=="dark")t=(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light";
@@ -117,7 +118,34 @@ function render(article) {
   h = subst(h, "DESC", escHTML(article.label + " · " + article.title));
   h = subst(h, "LABEL", escHTML(article.label));
   h = subst(h, "CONTENT", inlineJSON(content));
+  /* 目录列的数据：整本书的篇目，每篇都注入一份（页面顶部「☰ 目录」按钮用） */
+  h = subst(h, "TOC", inlineJSON(tocData(manifest, present)));
   return fillCommon(h);
+}
+
+/* 目录数据（文章页的目录列 / 首页的阅读理解入口 / 错题页的篇名映射共用一个形状）：
+   { books:[{ title, articles:[{slug, title, label}] }] } —— 只收 present（文件真在的） */
+function tocData(man, slugs) {
+  return {
+    books: man.books.map(b => ({
+      title: b.title,
+      articles: b.articles.filter(s => slugs.includes(s)).map(s => {
+        const a = readJSON(P("articles", s + ".json"));
+        return { slug: s, title: a.title, label: a.label };
+      })
+    })).filter(b => b.articles.length)
+  };
+}
+
+/* 页面直接引用的引擎资产版本号（与模板里 `<!--V:文件-->` 同一张表）。
+   文件不存在时明确报错并置非零退出码 —— 别让页面带着 ?v=undefined 发出去。 */
+function assetV(name) {
+  if (!(name in V)) {
+    console.error("✗ 页面引用了 engine/ 下没有的文件：" + name);
+    process.exitCode = 1;
+    return "0";
+  }
+  return V[name];
 }
 
 /* ---------- 收集文章 ---------- */
@@ -227,94 +255,165 @@ if (missing.length) {
 }
 
 /* ============================================================
-   目录页
-   ============================================================ */
+   首页（个性化主页）
+   ============================================================
+   没登录：显示「请先登录哦」+ 淡化锁住的入口（file:// 等存不住登录态的场景
+   仍可直接点进去预览 —— 门禁在存储不可用时是放行的）。
+   登录：入口可用，「PET 阅读理解」跳到上次学到的那篇（engine/home.js 里查）。
+   登录/注册 = 左上角圆圈点开的弹框，不再有独立登录页。 */
 function renderIndex(man, slugs) {
-  const arts = slugs.map(s => {
-    const a = readJSON(P("articles", s + ".json"));
-    return { slug: s, title: a.title, label: a.label, words: a.passage.words, sentences: a.passage.sentences };
-  });
-  let h = "";
-  man.books.forEach(b => {
-    const mine = arts.filter(a => b.articles.includes(a.slug));
-    if (!mine.length) return;
-    h += '<section class="book"><h2>' + escHTML(b.title) + '</h2><ul>';
-    mine.forEach(a => {
-      h += '<li><a href="' + escHTML(a.slug) + '.html">' +
-        '<span class="t">' + escHTML(a.title) + '</span>' +
-        '<span class="m">' + escHTML(a.label) + '</span>' +
-        '<span class="n">' + a.words + ' 词 · ' + a.sentences + ' 句</span>' +
-        '</a></li>';
-    });
-    h += '</ul></section>';
-  });
-
-  /* 目录页是手写模板，不进 engine/template.html（它没有 PET_CONTENT，结构也不同）。
-     但它**共用 style.css**，所以样式一律写令牌 —— 写死 #fff 的话，
-     学生一进目录页就是一片白，明明文章页已经是暗的。 */
+  const toc = inlineJSON(tocData(man, slugs));
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>${escHTML(man.site.title)}</title>
+<meta name="description" content="${escHTML(man.site.tagline || "")}">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#eef1f6">
 ${THEME_HEAD}
-<link rel="stylesheet" href="engine/style.css?v=${V["style.css"]}">
-<script src="engine/store.js?v=${V["store.js"]}"></script>
-<script>PETStore.guard().catch(function(){});</script>
-<style>
-  body{background:var(--bg);margin:0;padding:0 16px 64px;
-       font:16px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
-       color:var(--ink);-webkit-text-size-adjust:100%}
-  .wrap{max-width:880px;margin:0 auto}
-  header.site{padding:40px 0 20px}
-  header.site h1{margin:0;font-size:30px;letter-spacing:.5px}
-  header.site p{margin:6px 0 0;color:var(--ink-2);font-size:14px}
-  .book{margin:28px 0 0}
-  .book h2{font-size:15px;color:var(--ink-2);font-weight:600;margin:0 0 10px;
-           padding-bottom:8px;border-bottom:1px solid var(--line)}
-  .book ul{list-style:none;margin:0;padding:0;
-           display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
-  .book a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:10px;
-          padding:14px 16px;text-decoration:none;color:inherit;
-          transition:border-color .15s,box-shadow .15s,transform .15s}
-  .book a:hover{border-color:var(--border-accent);box-shadow:var(--shadow);transform:translateY(-1px)}
-  .book .t{display:block;font-weight:600;font-size:16px}
-  .book .m{display:block;color:var(--ink-2);font-size:12.5px;margin-top:3px}
-  .book .n{display:block;color:var(--ink-3);font-size:12px;margin-top:6px}
-  /* 手机号角标：沿用文章页 .who 的类名（store.mountWho 造的 DOM），
-     这里只补目录页自己的排版位置 */
-  header.site{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 12px}
-  header.site .site-txt{flex:1;min-width:0}
-  #who{margin-left:auto;align-self:center}
-</style>
+<link rel="stylesheet" href="engine/style.css?v=${assetV("style.css")}">
+<script src="engine/store.js?v=${assetV("store.js")}"></script>
 </head>
-<body>
-<div class="wrap">
-  <header class="site">
-    <div class="site-txt">
+<body class="home-body">
+
+<div class="home-wrap">
+  <header class="home-top">
+    <!-- 用户圆圈：没登录是灰的、点开登录弹框；登录后按等级上色（1=蓝 … 18=金） -->
+    <button class="avatar off" id="avatar" type="button" title="登录 / 注册" aria-haspopup="menu">
+      <span class="avatar-t" id="avatarT">👤</span>
+    </button>
+    <div class="home-brand">
       <h1>${escHTML(man.site.title)}</h1>
-      <p>${escHTML(man.site.tagline || "")} · 共 ${arts.length} 篇</p>
+      <p>${escHTML(man.site.tagline || "")}</p>
     </div>
-    <span class="who" id="who" hidden></span>
+    <button class="tool" id="tglTheme" type="button" title="主题：跟随系统">◐ 跟随</button>
   </header>
-  ${h}
+
+  <div class="home-ask" id="homeAsk" hidden>
+    <div class="ask-big">请先登录哦</div>
+    <p class="ask-sub">登录后加载你的个性化首页：词书、阅读理解、错题记录都在这。</p>
+    <button class="btn pri" id="askLogin" type="button">登录 / 注册</button>
+  </div>
+
+  <main class="home-main" id="homeMain">
+    <section class="tiles" id="tilesMain" aria-label="学习入口">
+      <a class="tile" data-go="words" href="words.html"><span class="tile-ico">📖</span><span class="tile-lab">我的词书</span></a>
+      <a class="tile" data-go="read" id="tileRead" href="#"><span class="tile-ico">📕</span><span class="tile-lab">PET 阅读理解</span></a>
+      <a class="tile soon" data-go="speak" href="#"><span class="tile-ico">🗣</span><span class="tile-lab">PET 口语</span></a>
+      <a class="tile soon" data-go="listen" href="#"><span class="tile-ico">🎧</span><span class="tile-lab">PET 听力</span></a>
+      <a class="tile soon" data-go="write" href="#"><span class="tile-ico">✍</span><span class="tile-lab">PET 写作</span></a>
+      <a class="tile" data-go="mistakes" href="mistakes.html"><span class="tile-ico">📝</span><span class="tile-lab">错题记录</span></a>
+    </section>
+
+    <hr class="home-hr">
+
+    <h2 class="home-sec-t">今天的作业</h2>
+    <section class="tiles" aria-label="今天的作业">
+      <a class="tile soon" data-go="hw-words" href="#"><span class="tile-ico">🔁</span><span class="tile-lab">今天要复习的词书</span></a>
+      <a class="tile soon" data-go="hw-math" href="#"><span class="tile-ico">➗</span><span class="tile-lab">数学补习</span></a>
+      <a class="tile soon" data-go="hw-cn" href="#"><span class="tile-ico">🉐</span><span class="tile-lab">语文补习</span></a>
+    </section>
+  </main>
 </div>
-<script>
-  /* 只做两件事：显示脱敏手机号、能退出。目录页不加载 app.js
-     （那会为了一个角标把整个引擎拖进来）。 */
-  (function () { window.PETStore.mountWho(document.getElementById("who")); })();
-</script>
+
+<!-- 头像菜单：登录后点圆圈弹它 -->
+<div class="umenu" id="uMenu" hidden>
+  <div class="umenu-name" id="uName">—</div>
+  <div class="umenu-lv">等级 <b id="uLv">1</b> <i class="umenu-dot" id="uDot"></i></div>
+  <button class="umenu-out" id="uOut" type="button">退出登录</button>
+</div>
+
+<!-- 登录 / 注册弹框 -->
+<div class="um" id="uModal" hidden>
+  <div class="um-mask" data-um="close"></div>
+  <div class="um-card" role="dialog" aria-modal="true" aria-labelledby="umTitle">
+    <button class="um-x" type="button" data-um="close" title="关闭">✕</button>
+    <h2 class="um-title" id="umTitle">登录 PET 精读</h2>
+    <div class="um-tabs">
+      <button class="um-tab on" type="button" data-mode="login">登录</button>
+      <button class="um-tab" type="button" data-mode="reg">注册</button>
+    </div>
+    <form id="umForm" novalidate>
+      <label class="um-label" for="umPhone">手机号</label>
+      <div class="um-row">
+        <span class="um-cc">+86</span>
+        <input id="umPhone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="11" placeholder="11 位手机号">
+      </div>
+      <div id="umReg" hidden>
+        <label class="um-label" for="umNick">昵称</label>
+        <div class="um-row">
+          <input id="umNick" name="nickname" type="text" maxlength="16" autocomplete="nickname" placeholder="怎么称呼你（1–16 个字）">
+        </div>
+      </div>
+      <label class="um-label" for="umPass">密码</label>
+      <div class="um-row">
+        <input id="umPass" name="password" type="password" autocomplete="current-password" maxlength="64" placeholder="6–64 位">
+      </div>
+      <p class="um-err" id="umErr" role="alert" hidden></p>
+      <button class="um-btn" id="umBtn" type="submit">登录</button>
+    </form>
+    <p class="um-note">登录状态在本设备保持 14 天。忘记密码请联系老师重置。</p>
+  </div>
+</div>
+
+<script>window.PET_TOC = ${toc};</script>
+<script src="engine/home.js?v=${assetV("home.js")}"></script>
 </body>
 </html>`;
 }
 
 /* ============================================================
-   登录页
+   固定内容页（错题记录 / 我的词书）：同一副骨架，两个列表页共用。
+   都过门禁、都显示昵称角标、都有主题按钮。
    ============================================================ */
-function renderLogin(man) {
-  /* 站点名在模板里出现两次（<title> 与 <h1>），必须全局替换 */
-  return fillCommon(subst(read(P("engine", "login.template.html")), "SITE", escHTML(man.site.title)));
+function renderListPage(man, toc, opts) {
+  return `<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>${escHTML(opts.title)} · ${escHTML(man.site.title)}</title>
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#eef1f6">
+${THEME_HEAD}
+<link rel="stylesheet" href="engine/style.css?v=${assetV("style.css")}">
+<script src="engine/store.js?v=${assetV("store.js")}"></script>
+<!-- 门禁：和文章页同一道（存储不可用时放行，见 store.js） -->
+<script>PETStore.guard().catch(function(){});</script>
+</head>
+<body class="page-body">
+<div class="page-wrap">
+  <header class="page-top">
+    <a class="page-back" href="index.html">← 首页</a>
+    <h1 class="page-title">${escHTML(opts.title)}</h1>
+    <span class="who" id="who" hidden></span>
+    <button class="tool" id="tglTheme" type="button" title="主题：跟随系统">◐ 跟随</button>
+  </header>
+  <p class="page-sub">${escHTML(opts.sub)}</p>
+  <div class="listbox" id="listBox"><div class="list-empty">加载中…</div></div>
+</div>
+<script>window.PET_TOC = ${toc};</script>
+<script src="engine/${opts.script}?v=${assetV(opts.script)}"></script>
+</body>
+</html>`;
+}
+
+function renderMistakes(man, slugs) {
+  const toc = inlineJSON(tocData(man, slugs));
+  return renderListPage(man, toc, {
+    title: "错题记录",
+    sub: "阅读理解里做错过的题都在这。点「去订正」回到那道题看看解析。",
+    script: "mlist.js"
+  });
+}
+
+function renderWords(man, slugs) {
+  const toc = inlineJSON(tocData(man, slugs));
+  return renderListPage(man, toc, {
+    title: "我的词书",
+    sub: "在文章里按 ☆ 收藏过的单词和句子都会汇到这里。点任意一条，看音标、例句和句子分析。",
+    script: "words.js"
+  });
 }

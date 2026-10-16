@@ -48,7 +48,12 @@
       ✓ 全部通过
       ✓ 构建完成
       ★ 全部通过 —— 通过 193 / 失败 0
-      ✓ store.js 单测通过：72 条断言
+      ✓ store.js 单测通过：108 条断言
+
+  收藏后端（server/）第一次用要单独装依赖、单独测：
+
+      cd server && npm install && npm test
+  → ✓ server 单测通过：35 条断言
 
   这就是当前的基线。**如果不是全绿，先别改代码**，
   说明环境有问题（多半是 Node 版本太老）。
@@ -116,8 +121,25 @@
     cd dist && python3 -m http.server 8899
     浏览器开 http://localhost:8899/
 
-    ⚠ 会先跳到登录页（门禁），随便填个手机号就能进。
-      本地预览必须起 http 服务，不能双击 html 打开。
+    ⚠ 首页左上角圆圈点开注册/登录（手机号 + 昵称 + 密码，注册要连后端）。
+      本地预览必须起 http 服务，不能双击 html 打开（file:// 存不住登录态）。
+      纯看文章不想注册：file:// 打开也行，门禁在存储不可用时放行。
+
+  【后端：收藏 / 注册登录 / 错题落库（server/）】
+
+    cd server && cp .env.example .env && vi .env   # 填 DB_PASS，然后：
+    npm install
+    npm run migrate              # 建表/加列（幂等；第一次必跑）
+    npm run start:env            # 起服务（顺带伺服 dist/，开 http://127.0.0.1:3001）
+    npm run selftest             # 真库全链路自检（注册→登录→收藏→错题）
+
+    部署到服务器：
+      bash deploy-api.sh --setup <IP>              # 第一次：装 Node、systemd、nginx /api/ 反代
+      ssh root@<IP> 'vi /opt/pet-api/.env'         # 填 DB_PASS（不进 git）
+      bash deploy-api.sh <IP>                      # 每次发版（会自动跑一遍 migrate）
+
+    没部署也不影响看文章：收藏自动降级成「只存本机 + 联网后补写」，
+    注册/登录的弹框会提示「连不上服务器」。
 
   【改完提交】
 
@@ -141,8 +163,12 @@
 
   docs/transcripts/      上次会话的记录，想回顾讨论看这里的 .md。
 
-  engine/store.js        唯一的数据层（登录态 / 收藏 / 主题）。
-                         **接后端时只改这一个文件**，页面代码一行不动。
+  engine/store.js        唯一的数据层（登录态 / 收藏 / 错题 / 学到哪儿 / 主题）。
+                         收藏=本地即时+补写队列，接口走同源 /api；
+                         登录态保持 14 天，过期即未登录。
+  engine/home.js         首页：用户圆圈 + 注册/登录弹框 + 入口磁贴。
+  server/                注册/登录/收藏/错题的落库服务（Express + mysql2），
+                         表结构走 migrate.mjs，说明在 server/README.md。
 
 
 
@@ -170,9 +196,10 @@
   生成后必须人工过一眼 —— 切错了后面全歪。
 
   【门禁是软门禁】
-  纯客户端的，懂技术的人改一下 localStorage 就绕过了。
-  它现在的目的是让学生走一遍登录流程、把手机号留下来，不是防人。
-  真正的门禁要等后端。
+  密码只在「注册/登录」这一处校验（服务端 scrypt）；进了站之后，
+  其余接口还是按手机号认人 —— 纯客户端的那道门，懂技术的人改一下
+  localStorage 就绕过了。它现在的目的是让学生注册留号、走一遍流程，不是防人。
+  真正的 token 体系要做时另开一轮，别在改别的功能时「顺手」发明半套。
 
 
 

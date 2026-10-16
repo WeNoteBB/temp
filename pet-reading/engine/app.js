@@ -20,7 +20,8 @@
     curHist: "",      // 当前在小黑板里显示的那条，用于高亮
     openQ: {},        // 已展开分析的题号
     activeQ: null,
-    favIds: {}        // 已收藏的 id 集合。renderHistory 是同步的，收藏态得先在内存里备好
+    favIds: {},       // 已收藏的 id 集合。renderHistory 是同步的，收藏态得先在内存里备好
+    ans: {}           // 做过的答案 {题号: 选项字母}，按篇存 —— 刷新后还看得见自己选过什么
   };
 
   function loadHist() {
@@ -31,6 +32,25 @@
   }
   function saveHist() {
     try { localStorage.setItem(LS_KEY, JSON.stringify(state.hist)); } catch (e) {}
+  }
+
+  /* ---- 做题答案（按篇隔离，和历史上限同一套路） ----
+     顺手把脏数据洗掉：只留「选项里真有的字母」，不然换个版本答案键对不上会渲染出鬼。 */
+  var LS_ANS = "pet:ans:v1:" + SLUG;
+  function loadAns() {
+    try {
+      var o = JSON.parse(localStorage.getItem(LS_ANS) || "null");
+      if (!o || typeof o !== "object") return;
+      var out = {};
+      Object.keys(o).forEach(function (k) {
+        var v = String(o[k] || "");
+        if (C.options && C.options[v]) out[k] = v;
+      });
+      state.ans = out;
+    } catch (e) { state.ans = {}; }
+  }
+  function saveAns() {
+    try { localStorage.setItem(LS_ANS, JSON.stringify(state.ans)); } catch (e) {}
   }
 
   /* ---- 右半两栏的显示 / 隐藏（与生词本分开存） ---- */
@@ -60,18 +80,19 @@
   }
 
   /* 窄屏 = 小黑板是底部抽屉的那套布局。断点与 style.css 的 @media 必须一致：
-     那边是 max-width:1099px，这边就不能写 1100。 */
+     那边是 max-width:1099px，这边就不能写 1100。
+     （页边「析 / 🔊」按钮从 2026-10-16 起**所有宽度都显示**，不再有第二个断点 ——
+      学生反复反馈手机/平板上「按钮没了」，那个按宽度藏的设计已取消。） */
   function isNarrow() {
     try { return window.matchMedia("(max-width:1099px)").matches; } catch (e) { return false; }
   }
 
-  /* 手机上点词 / 点句，抽屉得自己升起来 —— 不升的话点了没反应，学生以为坏了 */
-  function openAnaOnNarrow() {
-    if (!isNarrow()) return;
-    /* 历史浮层和抽屉在窄屏上是抢同一块地盘的，浮层 z-index 更高。
-       不先把它收掉，学生点一个词 → 抽屉是升起来了，但被历史盖得严严实实，
-       看着就是「点了没反应」。两个都只动 cols，不动 userAna。 */
-    if (cols.vocab) { cols.vocab = false; applyCols(); }
+  /* 点词 / 点句 / 点答题解析时，保证小黑板看得见 ——
+     隐藏着的话点了好像没反应，学生以为坏了。
+     窄屏：抽屉升起来（顺手收掉抢地盘的历史浮层）；
+     宽屏：被用户收起的列也帮它打开。都只动 cols，不动 userAna 偏好。 */
+  function ensureAnaShown() {
+    if (isNarrow() && cols.vocab) { cols.vocab = false; applyCols(); }
     if (!cols.ana) { cols.ana = true; applyCols(); }
   }
 
@@ -329,8 +350,38 @@
   }
 
   // 把一句原文渲染成 HTML（词 / 词组 / 空位）
+  /* 句子渲染。特殊形态一：sent.pickQ + 文本里的 «选项» 标记 →
+     标记渲染成单选按钮（Reading Part 1 第③题那种「mustn't / don't need to」二选一）；
+     其余部分走普通分词渲染。 */
   function renderSentence(sent) {
-    var tokens = tokenize(sent.s);
+    var src = String(sent.s);
+    if (sent.pickQ && src.indexOf("«") >= 0) {
+      var qn = sent.pickQ;
+      var q = C.questions.filter(function (x) { return x.n === qn; })[0];
+      var letters = q ? Object.keys(q.opts || {}) : [];
+      var picked = String(state.ans[qn] || "");
+      var segs = src.split(/[«»]/);
+      var out = "";
+      for (var i = 0; i < segs.length; i++) {
+        if (i % 2 === 1) {
+          var L = letters[(i - 1) / 2] || "A";
+          var cls = "pickword ansb";
+          if (picked === L) cls += " on";
+          if (picked && L === q.answer) cls += " right";
+          if (picked && picked === L && picked !== q.answer) cls += " wrongpick";
+          out += '<button type="button" class="' + cls + '" data-ansb="' + qn + ":" + L + '">' +
+            esc(segs[i]) + "</button>";
+        } else {
+          out += renderTokens(segs[i]);
+        }
+      }
+      return out;
+    }
+    return renderTokens(src);
+  }
+
+  function renderTokens(src) {
+    var tokens = tokenize(src);
     var groups = markPhrases(tokens, PHRASE_IDX);
 
     // tokenIndex -> 词组信息
@@ -384,14 +435,87 @@
       C.passage.sentences + " 句 · 长难句 " + countHard() + " 句</div>";
     h += '<div class="pgutter" id="pgutter"></div>';
 
+    var byN = function (qn) { return C.questions.filter(function (x) { return x.n === qn; })[0]; };
+    /* 行内「我的答案」横排：字母 + 选项原文的小胶囊，点一下就是作答；
+       行尾一个「解析」按钮（打开这道题的完整解析）。 */
+    function pickRowsHtml(nums) {
+      var out = "";
+      nums.forEach(function (qn) {
+        var q = byN(qn);
+        if (!q) return;
+        var picked = String(state.ans[qn] || "");
+        out += '<span class="pickrow" data-pickq="' + qn + '">';
+        if (nums.length > 1) {
+          var lbl = String(q.tag || qn).split("-").pop() || String(qn);
+          out += '<span class="pn">' + esc(lbl) + "</span>";
+        }
+        Object.keys(q.opts || {}).forEach(function (L) {
+          var cls = "ansb pickchip";
+          if (picked === L) cls += " on";
+          if (picked && L === q.answer) cls += " right";
+          if (picked && picked === L && picked !== q.answer) cls += " wrongpick";
+          out += '<button type="button" class="' + cls + '" data-ansb="' + qn + ":" + L + '">' +
+            "<b>" + esc(L) + "</b> " + esc(q.opts[L]) + "</button>";
+        });
+        out += '<button type="button" class="btn mini-ana" data-qexp2="' + qn + '">解析</button>';
+        out += "</span>";
+      });
+      return out;
+    }
+    /* 考试题的整行选项（A/B/C）：点整行 = 选它；行内还有「析 / 🔊」两个小按钮
+       （每个选项都有句子分析，做法同 Reading Part 4 的选项池）。 */
+    function optLinesHtml(qn) {
+      var q = byN(qn);
+      if (!q) return "";
+      var picked = String(state.ans[qn] || "");
+      var out = "";
+      Object.keys(q.opts || {}).forEach(function (L) {
+        var cls = "optline ansb";
+        if (picked === L) cls += " on";
+        if (picked && L === q.answer) cls += " right";
+        if (picked && picked === L && picked !== q.answer) cls += " wrongpick";
+        out += '<span class="' + cls + '" data-ansb="' + qn + ":" + L + '">' +
+          '<span class="ol">' + esc(L) + "</span>" +
+          '<span class="otxt">' + renderSentence({ s: q.opts[L] }) + "</span>" +
+          '<button type="button" class="obtn" data-ana="qo:' + qn + ":" + L + '" title="这个选项的句子分析">析</button>' +
+          '<button type="button" class="obtn" data-sayraw="' + esc(q.opts[L]) + '" title="朗读这个选项">🔊</button>' +
+        "</span>";
+      });
+      out += '<span class="pickrow"><button type="button" class="btn mini-ana" data-qexp2="' + qn + '">看本题解析</button></span>';
+      return out;
+    }
+
     C.passage.paragraphs.forEach(function (para, pi) {
-      h += '<p class="para">';
+      /* 段落角色（可选，Reading Part 1 用的排版体系）：
+         h=标题/指令（加粗）· i=提示/说明（斜体浅色）· o=选项清单（强调色，行首字母做徽章；
+         清单内的词不逐词可点）· q=题目/原文文本块（编号徽章 + 左侧标线）。
+         没有 blocks 数据的文章（如 t1-p4）不带角色类，样式完全不受影响。 */
+      var bm = (C.passage.blocks && C.passage.blocks[pi]) || {};
+      var role = typeof bm.r === "string" ? bm.r.replace(/[^a-z]/g, "") : "";
+      var plain = role === "o" || bm.plain === true;
+      h += '<p class="para' + (role ? " r-" + role : "") + (plain ? " plain" : "") + '">';
+      if (bm.n) h += '<span class="pbadge">' + esc(bm.n) + "</span>";
       para.forEach(function (sent, si) {
         var ref = pi + "-" + si;
         // 句子 inline 连续排版；序号偶数给淡黄底，奇数留白
         h += '<span class="sent' + (n % 2 === 0 ? " alt" : "") +
           (sent.hard ? " hard" : "") + '" data-sent="' + ref + '">';
-        h += '<span class="sent-txt">' + renderSentence(sent) + "</span>";
+        var inner;
+        if (role === "o") {
+          /* 选项清单行：「A advertisement」——行首字母拎出来做选项徽章。
+             字母壳上仍带 .w（词数对账按词形算），但 .plain 里不响应点击。 */
+          var mm = String(sent.s).match(/^([A-Ea-e])[\s.、:：]+/);
+          if (mm) {
+            /* 徽章后面要留一个空格：.sent-txt 的 textContent 仍与原文逐字一致 */
+            inner = '<span class="opletter w" data-w="' + esc(mm[1]) + '">' + esc(mm[1]) + "</span> " +
+              renderSentence({ s: String(sent.s).slice(mm[0].length) });
+          } else {
+            inner = renderSentence(sent);
+          }
+        } else {
+          inner = renderSentence(sent);
+        }
+        h += '<span class="sent-txt">' + inner + "</span>";
         h += "</span> ";
         // 按钮单独收进页边容器，稍后由 layoutGutter() 按行首位置摆放
         // 「析」必须带 data-ana：它在页边栏里、不在句子内部，
@@ -402,6 +526,11 @@
           "</span>";
         n++;
       });
+      /* 行内交互（角色体系专用）：
+         · pick：[题目号…] → 我的答案横排 + 解析按钮
+         · optsInline：把这题的选项整行列出来（A/B/C，单选 + 每个选项的句子分析） */
+      if (bm.pick && bm.pick.length) h += pickRowsHtml(bm.pick);
+      if (bm.optsInline && bm.n) h += optLinesHtml(Number(bm.n));
       h += "</p>";
     });
     return h.replace('<div class="pgutter" id="pgutter"></div>',
@@ -469,11 +598,21 @@
     gutterTimer = setTimeout(layoutGutter, 60);        // resize / 尺寸变化时防抖
   }
 
-  // 紧接着再量一次：改完 --zoom 后同步那一次有可能拿到尚未收敛的布局，
-  // 补一帧再量，保证拿的是新字号下的真实排版
+  /* 紧接着再量一次：改完 --zoom 后同步那一次有可能拿到尚未收敛的布局，
+     补一帧再量，保证拿的是新字号下的真实排版 */
   function gutterNowAndNextFrame() {
     layoutGutter();
     if (window.requestAnimationFrame) requestAnimationFrame(layoutGutter);
+  }
+
+  /* 历史浮层挂在顶栏正下方：顶栏高度会变（登录角标出现、窄一点就折行），
+     写死 64px 会出现「顶栏盖住浮层头顶的 ✕」——2026-10-16 学生反馈的正是这个。
+     真实测量顶栏高度写进 --hist-top；ResizeObserver 盯着它变化（没有就 resize 兜底）。 */
+  function layoutHistTop() {
+    var tb = document.querySelector(".topbar");
+    if (!tb) return;
+    var h = Math.round(tb.getBoundingClientRect().height);
+    if (h > 0) document.documentElement.style.setProperty("--hist-top", (h + 8) + "px");
   }
 
   /* =======================================================
@@ -492,6 +631,13 @@
     if (state.hist.length > 300) state.hist.length = 300;
     saveHist();
     renderHistory();
+    noteLastRead(ref);
+  }
+
+  /* 「学到哪儿了」：点了哪句就记哪句（ref 空的时候 store 会保留旧的 ref）。
+     现在是本机记录，以后换 Redis 也只改 store.js 内部（见那里注释）。 */
+  function noteLastRead(ref) {
+    if (store && store.setLastRead) store.setLastRead(SLUG, ref || "");
   }
 
   // 句子在历史里只显示前 4 个词，后面省略号
@@ -558,16 +704,73 @@
     return String(raw == null ? "" : raw).toLowerCase();
   }
 
+  /* 在内容里找第一句包含某个形式的话（例句的兜底来源：历史里没有 ref 时用，
+     比如从小黑板「包含它的词组」chip 点进来的）。返回形状与 anaData 一致。 */
+  function firstSentWith(form) {
+    var f = String(form || "").trim();
+    if (!f) return null;
+    var re;
+    try {
+      re = new RegExp("\\b" + f.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\b", "i");
+    } catch (err) { return null; }
+    var ps = (C.passage && C.passage.paragraphs) || [];
+    for (var i = 0; i < ps.length; i++) {
+      for (var j = 0; j < ps[i].length; j++) {
+        if (re.test(String(ps[i][j].s))) return ps[i][j];
+      }
+    }
+    var ks = Object.keys(C.options || {});
+    for (var k = 0; k < ks.length; k++) {
+      if (re.test(String(C.options[ks[k]]))) {
+        var oa = (C.optionsAna || {})[ks[k]] || {};
+        return { s: C.options[ks[k]], tr: oa.tr, ana: oa };
+      }
+    }
+    return null;
+  }
+
   /* 收藏条目的唯一标识由 store.js 定（favId），这里不另写一套 ——
-     两处各写一遍迟早会走岔，而走岔的表现是「星星亮了但收藏表里没有」。 */
+     两处各写一遍迟早会走岔，而走岔的表现是「星星亮了但收藏表里没有」。
+     句子的 key 是「完整句子文本」：后端按它的 sha256 去重（pet_sentence.hash），
+     本地也按同一把钥匙找星星，换设备/刷新后能对上同一句。
+     翻译和分析一并带上 —— 句子收藏要入库，库里就存这三样。
+     单词把内容里现有的一切都带上：音标/词性、例句（点它时所在的原句）、
+     含它的搭配 —— 这些全是 pet_word 的字段，不带上就白丢了。 */
   function favOf(it) {
     var item;
     if (it.t === "s") {
-      item = { type: "s", ref: it.ref, slug: SLUG, cn: sentLabel(it.ref) };
+      var d = anaData(it.ref) || {};
+      item = {
+        type: "s",
+        key: String(d.s || "").trim(),
+        ref: it.ref,
+        slug: SLUG,
+        cn: stripTags(d.tr || ""),
+        ana: d.ana || null,
+        title: C.title || ""
+      };
     } else {
       var key = resolveFavKey(it.k);
       var e = (C.glossary && C.glossary[key]) || {};
-      item = { type: "w", key: key, slug: SLUG, cn: stripTags(e.cn || "") };
+      var so = anaData(it.ref) || firstSentWith(it.k) || firstSentWith(key);
+      /* 含这个词的搭配；词典原形和点到的形式都试一遍，去重 */
+      var phs = [];
+      [key, String(it.k).toLowerCase()].forEach(function (w0) {
+        phrasesWith(w0).forEach(function (p) { if (phs.indexOf(p) < 0) phs.push(p); });
+      });
+      item = {
+        type: "w",
+        key: key,
+        slug: SLUG,
+        cn: stripTags(e.cn || ""),
+        pos: e.pos || "",
+        ipa: e.ipa || "",
+        ex: so ? String(so.s).trim() : "",
+        exTr: (so && so.tr) ? stripTags(so.tr) : "",
+        exAna: (so && so.ana && Object.keys(so.ana).length) ? so.ana : null,
+        ph: phs.join("\n"),
+        title: C.title || ""
+      };
     }
     return { id: store ? store.favId(item) : "", item: item };
   }
@@ -612,7 +815,7 @@
     // 判空：拿到空 key 就直接不动面板，免得渲染出一张空卡片。
     // （点到正文的非单词区域时可能走到这里）
     if (!key) return;
-    openAnaOnNarrow();      // 手机上把底部抽屉升起来，否则点了像没反应
+    ensureAnaShown();      // 小黑板收着的话先帮它展开，否则点了像没反应
     var r = lookup(key) || lookupPhrase(key.toLowerCase());
     var e = (r && r.entry) || {};
     // 词表里查不到、或者查到了但没有任何可展示内容 → 统一给"未收录"，
@@ -660,6 +863,15 @@
       var oa = (C.optionsAna || {})[L];
       if (!oa || !C.options[L]) return null;
       return { s: C.options[L], tr: oa.tr, ana: oa, hard: false };
+    }
+    if (ref.indexOf("qo:") === 0) {
+      /* Reading Part 1 用的第三种：正文里的题目选项 "qo:题号:字母"。
+         分析数据存在 q.optsAna[字母] 里（同 Part 4 选项池的做法）。 */
+      var qs = ref.slice(3).split(":");
+      var qq = C.questions.filter(function (x) { return String(x.n) === qs[0]; })[0];
+      if (!qq || !qq.opts || !qq.opts[qs[1]]) return null;
+      var qa = (qq.optsAna || {})[qs[1]];
+      return { s: qq.opts[qs[1]], tr: qa ? qa.tr : "", ana: qa || null, hard: false };
     }
     return findSent(ref) || null;
   }
@@ -868,6 +1080,7 @@
       h += '<div class="sec"><div class="sec-t">做题方法</div><div class="sec-b">' + ansQ.tip + "</div></div>";
     }
     h += "</div>";
+    ensureAnaShown();          // 答题解析也走「收着就先展开」的规则
     elAna.innerHTML = h;
     state.curHist = "";        // 答题解析不进历史，也不高亮任何历史行
     renderHistory();
@@ -878,9 +1091,10 @@
   function showAnalysis(ref) {
     var s = anaData(ref);
     if (!s) return;                                  // ref 对不上任何句子，别硬渲染
-    openAnaOnNarrow();      // 手机上把底部抽屉升起来
+    ensureAnaShown();      // 小黑板收着的话先帮它展开
     anaParts = s.ana && s.ana.parts ? s.ana.parts : null;
-    anaRawHTML = esc(s.s.replace(/\{\d+\}/g, "____"));
+    /* «…» 是「句内二选一」的渲染标记，不是文字，展示前剥掉 */
+    anaRawHTML = esc(s.s.replace(/\{\d+\}/g, "____").replace(/[«»]/g, ""));
     var h = '<div class="ana">';
     // 标题 + 原句一起吸顶：面板内容长，滚到下面时原句不能跑掉
     h += '<div class="ana-top">';
@@ -979,16 +1193,26 @@
   /* =======================================================
      七、渲染 · 题目
      ======================================================= */
+  /* 题型差异只在这里判断：Part 4/5/6 = 共享选项池 C.options（A–H）；
+     Part 1 = 每题自己带 q.opts（A–C）。取字母、取答案文本都走下面这几个函数。 */
+  function poolOn() { return Object.keys(C.options || {}).length > 0; }
+  function qLetters(q) { return poolOn() ? Object.keys(C.options) : Object.keys((q && q.opts) || {}); }
+  function qAnswerText(q) {
+    var t = poolOn() ? (C.options || {})[q.answer] : (((q && q.opts) || {})[q.answer] || "");
+    return t || "";
+  }
+
   // mode="pool"   只出选项池 A–H（原文页用；每题的分析由「答题解析」按钮给）
-  // mode="full"   选项池 + 16–20 五道题卡（题目分析页用）
+  // mode="full"   选项池 + 五道题卡（题目分析页用）
   function buildQuestions(mode) {
     var withAnalysis = mode === "full";
     var h = "";
 
-    // 选项池
+    // 选项池（Part 1 没有池子，整段跳过）
     var usedMap = {};
     C.questions.forEach(function (q) { if (q.answer) usedMap[q.answer] = q.n; });
 
+    if (poolOn()) {
     h += '<div class="qcard" style="background:var(--pool-bg)">';
     h += '<div class="qhead"><span class="qnum" style="background:var(--ink-3)">A–H</span>' +
       '<span class="qtxt">备选句（8 选 5，多出 3 句是干扰项）</span></div>';
@@ -1011,8 +1235,9 @@
       h += "</div>";
     });
     h += "</div>";
+    }   // end if (poolOn())
 
-    if (!withAnalysis) return h;   // 原文页只要选项池，下面的题卡和解析都不要
+    if (!withAnalysis) return h;   // 原文页只要选项池（Part 1 这里返回空串）
 
     // 逐题
     C.questions.forEach(function (q) {
@@ -1030,8 +1255,44 @@
 
       var open = !!state.openQ[q.n];
       h += '<div class="qcard' + (open ? " open" : "") + '" data-q="' + q.n + '">';
-      h += '<div class="qhead"><span class="qnum">' + q.n + "</span>";
+      h += '<div class="qhead"><span class="qnum' + (q.tag ? " wide" : "") + '">' + esc(q.tag || q.n) + "</span>";
       h += '<span class="qtxt">' + esc(q.prompt) + "</span></div>";
+
+      /* 我的答案。两种题型两种界面：
+         · 共享选项池（Part 4/5/6）：一排字母小圆钮，选项句在上面池子里；
+         · 每题自带选项（Part 1）：把选项一行行列出来（带字母圆标），
+           点整行即作答 —— 学生一眼看清「这题有哪些选项」。
+         选完立刻判对错；错了进错题本（store.addMistake）。选过的从 state.ans 恢复。 */
+      var picked = String(state.ans[q.n] || "");
+      var qOpts = (q && q.opts) || {};
+      if (!poolOn() && Object.keys(qOpts).length) {
+        h += '<div class="opts">';
+        Object.keys(qOpts).forEach(function (L) {
+          var ocls = "optrow ansb";
+          if (picked === L) ocls += " on";
+          if (picked && L === q.answer) ocls += " right";
+          if (picked && picked === L && picked !== q.answer) ocls += " wrongpick";
+          h += '<button type="button" class="' + ocls + '" data-ansb="' + q.n + ":" + L + '">' +
+            '<span class="ol">' + esc(L) + "</span>" +
+            '<span class="otxt">' + renderSentence({ s: qOpts[L] }) + "</span>" +
+            "</button>";
+        });
+        h += "</div>";
+      }
+      h += '<div class="arow' + (picked ? (picked === q.answer ? " ok" : " bad") : "") +
+        '" data-arow="' + q.n + '">';
+      if (poolOn()) {
+        h += '<span class="a-lbl">我的答案</span>';
+        qLetters(q).forEach(function (L) {
+          h += '<button class="ansb' + (picked === L ? " on" : "") + '" type="button" ' +
+            'data-ansb="' + q.n + ":" + L + '" title="选 ' + L + '">' + L + "</button>";
+        });
+      }
+      if (picked) {
+        h += '<span class="a-res">' + (picked === q.answer
+          ? "✓ 答对了" : "✗ 答错了 · 正确答案 " + q.answer) + "</span>";
+      }
+      h += "</div>";
 
       h += '<div class="qbtns">';
       h += '<button class="btn pri" data-qbtn="' + q.n + '">' + (open ? "收起分析" : "分析") + "</button>";
@@ -1039,9 +1300,13 @@
       h += "</div>";
 
       h += '<div class="qbody' + (open ? " show" : "") + '">';
+      var ansText = qAnswerText(q);
       h += '<div class="qans"><span class="lbl">答案</span><span class="letter">' + q.answer + "</span>" +
-        '<span class="atxt">' + renderSentence({ s: C.options[q.answer] }) + "</span>" +
-        '<button class="mini spk" data-sayraw="' + esc(C.options[q.answer]) + '">🔊</button></div>';
+        (ansText
+          ? '<span class="atxt">' + renderSentence({ s: ansText }) + "</span>" +
+            '<button class="mini spk" data-sayraw="' + esc(ansText) + '">🔊</button>'
+          : "") +
+        "</div>";
 
       h += '<div class="qa-sec"><div class="qa-t">为什么选它</div><div class="qa-b">' + q.why + "</div></div>";
       h += '<div class="qa-sec"><div class="qa-t">线索词 / 衔接</div><div class="chips">';
@@ -1062,11 +1327,12 @@
     var q = C.questions.filter(function (x) { return x.n === n; })[0];
     if (!q) return;
     var h = '<div class="ana">';
-    h += '<div class="ana-h">第 ' + n + ' 题 · 题目分析</div>';
+    h += '<div class="ana-h">' + (q.tag ? esc(q.tag) : "第 " + n + " 题") + " · 题目分析</div>";
     h += '<div class="ana-sent">' + esc(q.prompt) + "</div>";
 
+    var aText = qAnswerText(q);
     h += '<div class="sec"><div class="sec-t">正确答案</div><div class="sec-b">' +
-      '<b>' + q.answer + "</b> — " + esc(C.options[q.answer]) + "</div></div>";
+      "<b>" + q.answer + "</b>" + (aText ? " — " + esc(aText) : "") + "</div></div>";
 
     h += '<div class="sec"><div class="sec-t">解题思路</div><div class="sec-b">' + q.why + "</div></div>";
 
@@ -1092,6 +1358,7 @@
 
     h += "</div>";
     elAna.innerHTML = h;
+    ensureAnaShown();   // 小黑板收起时自动展开：点「解析」就该立刻看到
   }
 
   /* =======================================================
@@ -1105,13 +1372,25 @@
     return box ? box.textContent.trim().replace(/\s+/g, " ") : "";
   }
 
+  /* 点到的词/词组所在句子的 ref（正文 "段-句"，选项 "opt:A"；没有就空）。
+     收藏时用它反查原句的原文/翻译/分析 —— 比拿渲染后的文本去硬匹配可靠。 */
+  function refOf(el) {
+    var se = el.closest ? el.closest("[data-sent]") : null;
+    if (se) return se.dataset.sent;
+    var op = el.closest ? el.closest("[data-opt]") : null;
+    if (op) return "opt:" + op.dataset.opt;
+    return "";
+  }
+
   // 高亮当前句：连同它在页边的那组按钮
   function selectSent(ref) {
-    document.querySelectorAll(".sent.cur,.opt.cur").forEach(function (x) { x.classList.remove("cur"); });
-    // 正文句子是 .sent，选项是 .opt，两种都要能高亮
+    document.querySelectorAll(".sent.cur,.opt.cur,.optline.cur").forEach(function (x) { x.classList.remove("cur"); });
+    // 正文句子是 .sent，选项是 .opt，正文里的题目选项行是 .optline，三种都要能高亮
     var se = ref.indexOf("opt:") === 0
       ? document.querySelector('.opt[data-opt="' + ref.slice(4) + '"]')
-      : document.querySelector('.sent[data-sent="' + ref + '"]');
+      : ref.indexOf("qo:") === 0
+        ? document.querySelector('.optline[data-ansb="' + ref.slice(3) + '"]')
+        : document.querySelector('.sent[data-sent="' + ref + '"]');
     if (se) se.classList.add("cur");
     document.querySelectorAll(".sbtns.cur").forEach(function (x) { x.classList.remove("cur"); });
     var g = document.querySelector('.sbtns[data-for="' + ref + '"]');
@@ -1131,7 +1410,13 @@
         return;
       }
       var spkRaw = t.closest("[data-sayraw]");
-      if (spkRaw) { ev.stopPropagation(); TTS.speak(spkRaw.dataset.sayraw, spkRaw); return; }
+      if (spkRaw) {
+        ev.stopPropagation();
+        TTS.speak(spkRaw.dataset.sayraw, spkRaw);
+        /* 选项行里的 🔊 只朗读，不能顺带把题答了 —— 掐掉 bindQuestions 的同容器监听 */
+        if (ev.stopImmediatePropagation) ev.stopImmediatePropagation();
+        return;
+      }
 
       // 选项的「答题解析」：不写进历史
       var qe = t.closest("[data-qexp]");
@@ -1144,6 +1429,9 @@
         selectSent(aref);
         showAnalysis(aref);
         pushHistory("s", "", aref);
+        /* 选项整行是可点的答题按钮：行内「析」只管看分析，
+           不能顺带把题答了 —— 掐掉同一容器上 bindQuestions 的监听 */
+        if (ev.stopImmediatePropagation) ev.stopImmediatePropagation();
         return;
       }
 
@@ -1162,20 +1450,28 @@
       // 必须放行给下面的 .ph 分支 —— 否则会往历史里写一条 data-w=" " 的垃圾记录。
       var w = t.closest(".w");
       if (w && String(w.dataset.w).trim() !== "") {
+        /* 角色「o」选项清单 / 标了 plain 的区块（Part 1 的短文本）：
+           「一行一个解析」就够，清单里的词不逐词查词（点整行仍是句子分析）。 */
+        if (w.closest(".para.plain")) return;
         var raw = w.dataset.w;
         markActive(w);
         showWord(raw, ctxOf(w, t.closest(".qcard")));
-        pushHistory("w", raw);
+        pushHistory("w", raw, refOf(w));
+        /* 选项整行是可点的答题按钮，里面嵌着单词 span：点单词是「查词」，
+           不该顺带把这道题答了 —— 掐掉同一容器上 bindQuestions 的监听 */
+        if (ev.stopImmediatePropagation) ev.stopImmediatePropagation();
         return;
       }
 
       // 词组：点黄色区域本身（词与词之间的空档、内边距）才落到词组
       var ph = t.closest(".ph");
       if (ph) {
+        if (ph.closest(".para.plain")) return;   // plain 区块：词组黄标照旧，但不响应点击
         var key = ph.dataset.ph;
         markActive(ph);
         showWord(key, ctxOf(ph, t.closest(".qcard")));
-        pushHistory("w", key);
+        pushHistory("w", key, refOf(ph));
+        if (ev.stopImmediatePropagation) ev.stopImmediatePropagation();
         return;
       }
 
@@ -1253,7 +1549,7 @@
   }
 
   function cleanSay(s) {
-    return s.replace(/\{\d+\}/g, " ").replace(/\s+/g, " ").trim();
+    return s.replace(/\{\d+\}/g, " ").replace(/[«»]/g, "").replace(/\s+/g, " ").trim();
   }
 
   function markActive(el) {
@@ -1276,16 +1572,64 @@
         return;
       }
 
+      var ab = t.closest("[data-ansb]");
+      if (ab) {
+        var seg = String(ab.dataset.ansb).split(":");
+        answerQ(parseInt(seg[0], 10), seg[1]);
+        return;
+      }
+
+      /* 正文里的「解析」小按钮（跟在答案横排 / 选项行后面）：打开这道题的完整解析 */
+      var qx = t.closest("[data-qexp2]");
+      if (qx) { showQAnalysis(parseInt(qx.dataset.qexp2, 10)); return; }
+
       var qb = t.closest("[data-qbtn]");
       if (qb) { toggleQ(+qb.dataset.qbtn); return; }
 
       var qs = t.closest("[data-qsay]");
       if (qs) {
         var q = C.questions.filter(function (x) { return x.n === +qs.dataset.qsay; })[0];
-        if (q) TTS.speak(C.options[q.answer], qs);
+        if (q) TTS.speak(qAnswerText(q), qs);
         return;
       }
     });
+  }
+
+  /* 学生选了一个答案：本地立即判定 + 更新那一行的样子；
+     错了就报给后端进错题本（同一题又选错一次会再报，后端按「用户+文章+题号」合并计数）。
+     答错顺手把分析打开 —— 做题是为了学会，不是为了记账。 */
+  function answerQ(n, L) {
+    var q = C.questions.filter(function (x) { return x.n === n; })[0];
+    if (!q || qLetters(q).indexOf(L) < 0) return;
+    var prev = state.ans[String(n)] || "";
+    state.ans[String(n)] = L;
+    saveAns();
+    var wrong = L !== q.answer;
+    if (wrong && prev !== L && store && store.addMistake) {
+      store.addMistake({ slug: SLUG, q: n, chosen: L, correct: q.answer });
+    }
+    /* 正文里的「我的答案」横排、整行选项、卡片里的按钮都带 data-ansb，
+       全页按同一个题号统一更新：选中的 .on；正确答案 .right；选错的 .wrongpick。 */
+    document.querySelectorAll("[data-ansb]").forEach(function (b) {
+      var seg = String(b.dataset.ansb).split(":");
+      if (seg[0] !== String(n)) return;
+      var BL = seg[1];
+      b.classList.toggle("on", BL === L);
+      b.classList.toggle("right", BL === q.answer);
+      b.classList.toggle("wrongpick", BL === L && wrong);
+    });
+    var card = document.querySelector('[data-q="' + n + '"]');
+    if (card) {
+      var row = card.querySelector('.arow[data-arow="' + n + '"]');
+      if (row) {
+        row.classList.toggle("ok", !wrong);
+        row.classList.toggle("bad", wrong);
+        var res = row.querySelector(".a-res");
+        if (!res) { res = document.createElement("span"); res.className = "a-res"; row.appendChild(res); }
+        res.textContent = wrong ? "✗ 答错了 · 正确答案 " + q.answer : "✓ 答对了";
+      }
+    }
+    if (wrong && !state.openQ[n]) toggleQ(n);
   }
 
   function toggleQ(n) {
@@ -1309,14 +1653,79 @@
      ======================================================= */
   var PHRASE_IDX;
 
+  /* ---- 目录列 ----
+     数据是 build.mjs 注入的 window.PET_TOC（整本书的篇目），当前篇高亮。
+     开合状态不持久化：每次进来都默认收起（需求如此），点「☰ 目录」开 / 再点收。 */
+  function renderToc() {
+    var box = document.getElementById("tocBody");
+    var data = window.PET_TOC;
+    if (!box || !data || !data.books) return;
+    var h = "";
+    data.books.forEach(function (b) {
+      var arts = b.articles || [];
+      if (!arts.length) return;
+      h += '<div class="toc-book">' + esc(b.title) + "</div>";
+      arts.forEach(function (a) {
+        var on = a.slug === SLUG;
+        h += '<a class="toc-item' + (on ? " on" : "") + '" href="' + esc(a.slug) + '.html"' +
+          (on ? ' aria-current="page"' : "") + ">";
+        h += '<span class="toc-t">' + esc(a.title) + "</span>";
+        h += '<span class="toc-m">' + esc(a.label || "") + "</span>";
+        h += "</a>";
+      });
+    });
+    box.innerHTML = h;
+  }
+
+  function toggleToc(open) {
+    var colsEl = document.querySelector(".cols");
+    var btn = document.getElementById("tglToc");
+    if (!colsEl) return;
+    var next = (open == null) ? !colsEl.classList.contains("toc-open") : !!open;
+    colsEl.classList.toggle("toc-open", next);
+    if (btn) btn.classList.toggle("on", next);
+  }
+
+  /* ?q=16 深链（错题页「去订正」用）：跳到题目分析页并把那道题的解析展开 */
+  function deepLinkQuestion(n) {
+    var has = C.questions.some(function (x) { return x.n === n; });
+    if (!has) return;
+    state.openQ[n] = false;   // 置否，好让 toggleQ 这一次一定是展开
+    switchTab("quiz");
+    toggleQ(n);
+  }
+
+  /* 上次读到哪一行就滚到哪一行（本机先记着，以后换 Redis —— 见 store.js） */
+  function restoreLastRead() {
+    if (!store || !store.getLastRead) return;
+    store.getLastRead().then(function (lr) {
+      if (!lr || lr.slug !== SLUG || !lr.ref) return;
+      var isOpt = lr.ref.indexOf("opt:") === 0;
+      var el = isOpt
+        ? document.querySelector('.opt[data-opt="' + lr.ref.slice(4) + '"]')
+        : document.querySelector('.sent[data-sent="' + lr.ref + '"]');
+      if (!el) return;
+      selectSent(lr.ref);
+      var scroll = function () {
+        if (!el.scrollIntoView) return;         // jsdom 环境：没有这个方法，跳过
+        try { el.scrollIntoView({ block: "center" }); } catch (e) {}
+      };
+      /* 等一帧再滚：这时排版才算完 */
+      if (window.requestAnimationFrame) requestAnimationFrame(scroll); else scroll();
+    }).catch(function () {});
+  }
+
   function renderPassage() {
     elPassage.innerHTML = buildPassage();
   }
   function renderQuestions() {
     document.getElementById("qList").innerHTML = buildQuestions("full");
-    // 原文页那份只要选项池：每题的分析改从选项行的「答题解析」看
-    document.getElementById("qListRead").innerHTML =
-      '<div class="qsec-h">题目 · Questions 16–20</div>' + buildQuestions("pool");
+    /* 原文页那份：Part 4/5/6 给共享选项池（每题分析走选项行的「答题解析」）；
+       Part 1 没有池子，题目就在「题目与答案」页，这里不放。 */
+    var ns = (C.questions || []).map(function (x) { return x.n; });
+    document.getElementById("qListRead").innerHTML = (poolOn() && ns.length)
+      ? '<div class="qsec-h">题目 · Questions ' + ns[0] + "–" + ns[ns.length - 1] + "</div>" + buildQuestions("pool")
+      : "";
   }
 
   function switchTab(tab) {
@@ -1352,9 +1761,11 @@
     elAna = document.getElementById("analysis");
 
     loadHist();
+    loadAns();
     renderPassage();
     renderHistory();
     renderQuestions();
+    renderToc();
 
     // bindPassage 同时挂在正文和小黑板上：喇叭、词、句子用的是同一套 data 属性
     bindPassage(elPassage);
@@ -1365,10 +1776,20 @@
     bindPassage(document.getElementById("qListRead"));
     bindQuestions(document.getElementById("qList"));
     bindQuestions(document.getElementById("qListRead"));
+    /* 正文里也有答题交互（答案横排 / 整行选项 / 「解析」按钮），
+       bindQuestions 再挂一份到 #passage —— 事件处理各自认 data 属性，互不干扰 */
+    bindQuestions(elPassage);
 
     document.querySelectorAll(".tab").forEach(function (b) {
       b.addEventListener("click", function () { switchTab(b.dataset.tab); });
     });
+
+    /* Part 1 式的文章（inlineQuiz）：题目就长在正文里，答题、解析都在正文完成，
+       「题目分析」这一栏就没有必要了，收起来。其他文章维持原样。 */
+    if (C.inlineQuiz) {
+      var qtab = document.querySelector('.tab[data-tab="quiz"]');
+      if (qtab) qtab.hidden = true;
+    }
 
     var tq = document.getElementById("tglQuiz");
     tq.addEventListener("click", function () {
@@ -1407,6 +1828,15 @@
       new ResizeObserver(scheduleGutter).observe(elPassage);
     }
 
+    /* 历史浮层挂顶栏正下方：顶栏高度一有变化（角标挂上、折行）就重算 --hist-top，
+       否则浮层头顶会被顶栏盖住（✕ 点不到）。没有 ResizeObserver 就靠 resize。 */
+    layoutHistTop();
+    window.addEventListener("resize", layoutHistTop);
+    var tbEl = document.querySelector(".topbar");
+    if (tbEl && window.ResizeObserver) {
+      new ResizeObserver(layoutHistTop).observe(tbEl);
+    }
+
     /* 跨越 1100 断点时要重算列状态 —— 这件事 CSS 替不了，
        因为 cols.ana 是个 JS 状态，CSS 只负责把它画成列还是画成抽屉。
        竖屏进来时抽屉是收起的（cols.ana=false），横过来到 ≥1100 就成了第二列：
@@ -1428,6 +1858,17 @@
     }
 
     document.getElementById("btnStop").addEventListener("click", function () { TTS.stop(); });
+
+    // 目录列：开合两个按钮 + 列内链接（点当前篇就只收列，不跳转）
+    var tglToc = document.getElementById("tglToc");
+    if (tglToc) tglToc.addEventListener("click", function () { toggleToc(); });
+    var tocClose = document.getElementById("tocClose");
+    if (tocClose) tocClose.addEventListener("click", function () { toggleToc(false); });
+    var tocBody = document.getElementById("tocBody");
+    if (tocBody) tocBody.addEventListener("click", function (ev) {
+      var a = ev.target.closest && ev.target.closest("a.toc-item");
+      if (a && a.classList.contains("on")) { ev.preventDefault(); toggleToc(false); }
+    });
 
     // 小黑板列的显隐 + 历史浮层的开关
     document.getElementById("tglAna")
@@ -1502,14 +1943,14 @@
 
   /* ---- 启动 ----
      顺序是「先过门禁 → 再写手机号 → 才渲染」，不能反：
-     反了的话学生看到正文闪一下又被弹去登录页。 */
+     反了的话学生看到正文闪一下又被弹去首页登录框。 */
   async function boot() {
     var st = window.PETStore;
     /* store.js 没加载成功也照常渲染 —— 宁可少一道门，
        也不能因为一个脚本没到就把整页锁死。 */
     if (st && st.guard) {
       try {
-        if (await st.guard() === "denied") return;   // 已经在跳登录页了，别再渲染一遍
+        if (await st.guard() === "denied") return;   // 已经在跳首页登录弹框了，别再渲染一遍
         await renderWho();
       } catch (e) { /* 门禁自己出岔子 → 放行 */ }
     }
@@ -1517,6 +1958,18 @@
        等第一行历史画出来再去补星星，就会先闪一片空心 ☆ 再逐个点亮。 */
     try { await refreshFavs(); } catch (e) { state.favIds = {}; }
     init();
+
+    /* 记一笔「当前学到哪篇」（ref 传空 = 保留这篇上次记的句子位置） */
+    noteLastRead("");
+
+    /* 错题页「去订正」跳过来：?q=16 → 打开那道题的分析 */
+    try {
+      var qn = parseInt(new URLSearchParams(window.location.search).get("q") || "", 10);
+      if (qn) deepLinkQuestion(qn);
+    } catch (e) {}
+
+    /* 上次读到哪一行 → 滚回那一行 */
+    restoreLastRead();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
