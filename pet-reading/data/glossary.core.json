@@ -31,6 +31,11 @@
     "ipa": "/ˈɑːftə/",
     "cn": "在…之后"
   },
+  "afternoon": {
+    "pos": "n.",
+    "ipa": "/ˌɑːftəˈnuːn/",
+    "cn": "下午"
+  },
   "again": {
     "pos": "adv.",
     "ipa": "/əˈɡen/",
@@ -61,6 +66,11 @@
     "pos": "art.",
     "ipa": "/ən/",
     "cn": "一个（元音前用）"
+  },
+  "ancient": {
+    "pos": "adj.",
+    "ipa": "/ˈeɪnʃənt/",
+    "cn": "古代的，古老的"
   },
   "and": {
     "pos": "conj.",
@@ -181,6 +191,12 @@
     "ipa": "/best/",
     "cn": "最好的"
   },
+  "better": {
+    "pos": "adj.",
+    "ipa": "/ˈbetə/",
+    "cn": "更好的；更好地",
+    "note": "good / well 的比较级。"
+  },
   "big": {
     "pos": "adj.",
     "ipa": "/bɪɡ/",
@@ -248,6 +264,12 @@
     "ipa": "/ˈkændɪdət/",
     "cn": "考生，候选人"
   },
+  "case": {
+    "pos": "n.",
+    "ipa": "/keɪs/",
+    "cn": "情况；盒子",
+    "note": "just in case 以防万一"
+  },
   "check": {
     "pos": "v.",
     "ipa": "/tʃek/",
@@ -262,6 +284,18 @@
     "pos": "v.",
     "ipa": "/tʃuːz/",
     "cn": "选择（chose / chosen）"
+  },
+  "city": {
+    "pos": "n.",
+    "ipa": "/ˈsɪti/",
+    "cn": "城市",
+    "note": "复数 cities。"
+  },
+  "class": {
+    "pos": "n.",
+    "ipa": "/klɑːs/",
+    "cn": "课；班级",
+    "note": "special classes 特别课程。"
   },
   "clear": {
     "pos": "v./adj.",
@@ -305,6 +339,12 @@
     "ipa": "/ˈkʊdnt/",
     "cn": "could not 的缩写"
   },
+  "country": {
+    "pos": "n.",
+    "ipa": "/ˈkʌntri/",
+    "cn": "国家",
+    "note": "复数 countries。"
+  },
   "d": {
     "pos": "字母",
     "ipa": "",
@@ -315,6 +355,11 @@
     "ipa": "/dæd/",
     "cn": "爸爸",
     "note": "口语用词，相当于 father。作称呼时首字母大写，如 Dad。"
+  },
+  "danger": {
+    "pos": "n.",
+    "ipa": "/ˈdeɪndʒə/",
+    "cn": "危险"
   },
   "day": {
     "pos": "n.",
@@ -360,6 +405,11 @@
     "cn": "做，干",
     "note": "过去式 did，过去分词 done。do 和 make 都译“做”：do 偏“做事”，make 偏“做出实物”。"
   },
+  "doesn't": {
+    "pos": "助动词",
+    "ipa": "/ˈdʌznt/",
+    "cn": "不（= does not）"
+  },
   "doing": {
     "pos": "v.",
     "ipa": "/ˈduːɪŋ/",
@@ -391,11 +441,22 @@
     "cn": "每个",
     "note": "each 强调个体，every 强调全体。each 可作代词，every 不行。"
   },
+  "early": {
+    "pos": "adv./adj.",
+    "ipa": "/ˈɜːli/",
+    "cn": "早（地）"
+  },
   "easy": {
     "pos": "adj.",
     "ipa": "/ˈiːzi/",
     "cn": "容易的",
     "note": "比较级 easier，最高级 easiest。"
+  },
+  "encourage": {
+    "pos": "v.",
+    "ipa": "/ɪnˈkʌrɪdʒ/",
+    "cn": "鼓励",
+    "note": "encourage sb to do sth 鼓励某人做某事"
   },
   "end": {
     "pos": "n.",
@@ -441,10 +502,22 @@
     "ipa": "/ɪkˈsaɪtɪd/",
     "cn": "兴奋的"
   },
+  "exciting": {
+    "pos": "adj.",
+    "ipa": "/ɪkˈsaɪtɪŋ/",
+    "cn": "令人兴奋的",
+    "note": "修饰物。修饰人的感受用 excited：I'm excited."
+  },
   "expected": {
     "pos": "v.",
     "ipa": "/ɪkˈspektɪd/",
     "cn": "预料（expect 的过去式/过去分词）"
+  },
+  "experience": {
+    "pos": "n.",
+    "ipa": "/ɪkˈspɪəriəns/",
+    "cn": "经历（可数）；经验（不可数）",
+    "note": "an experience 一次经历；work experience 工作经验（不加 a）。"
   },
   "explain": {
     "pos": "v.",
@@ -478,6 +551,11 @@
     "ipa": "/fɑː/",
     "cn": "远；……得多",
     "note": "修饰比较级表示“…得多”：far more, far better。"
+  },
+  "feeling": {
+    "pos": "n.",
+    "ipa": "/ˈfiːlɪŋ/",
+    "cn": "感觉，情感"
   },
   "find": {
     "pos": "v.",
@@ -557,11 +635,22 @@
     "ipa": "/fʌn/",
     "cn": "乐趣；有趣的"
   },
+  "gap": {
+    "pos": "n.",
+    "ipa": "/ɡæp/",
+    "cn": "缺口；空格",
+    "note": "fill in the gap 填空。"
+  },
   "get": {
     "pos": "v.",
     "ipa": "/ɡet/",
     "cn": "得到，到达，变得",
     "note": "过去式 got，过去分词 got（英式）/ gotten（美式）。"
+  },
+  "gist": {
+    "pos": "n.",
+    "ipa": "/dʒɪst/",
+    "cn": "大意，主旨"
   },
   "give": {
     "pos": "v.",
@@ -608,6 +697,11 @@
     "ipa": "/ˈhædnt/",
     "cn": "had not 的缩写"
   },
+  "hand": {
+    "pos": "n.",
+    "ipa": "/hænd/",
+    "cn": "手"
+  },
   "has": {
     "pos": "v.",
     "ipa": "/hæz/",
@@ -641,6 +735,16 @@
     "ipa": "/hɜː/",
     "cn": "她（宾格）；她的"
   },
+  "here": {
+    "pos": "adv.",
+    "ipa": "/hɪə/",
+    "cn": "这里"
+  },
+  "hi": {
+    "pos": "interj.",
+    "ipa": "/haɪ/",
+    "cn": "嗨；你好"
+  },
   "him": {
     "pos": "pron.",
     "ipa": "/hɪm/",
@@ -650,6 +754,11 @@
     "pos": "pron.",
     "ipa": "/hɪz/",
     "cn": "他的"
+  },
+  "history": {
+    "pos": "n.",
+    "ipa": "/ˈhɪstri/",
+    "cn": "历史"
   },
   "home": {
     "pos": "n.",
@@ -696,6 +805,11 @@
     "ipa": "/aɪl/",
     "cn": "我将（= I will）"
   },
+  "i'm": {
+    "pos": "缩写",
+    "ipa": "/aɪm/",
+    "cn": "I am 的缩写"
+  },
   "i've": {
     "pos": "contr.",
     "ipa": "/aɪv/",
@@ -727,17 +841,34 @@
     "ipa": "/ɪnˈkluːd/",
     "cn": "包含，包括"
   },
+  "information": {
+    "pos": "n.",
+    "ipa": "/ˌɪnfəˈmeɪʃn/",
+    "cn": "信息（不可数）"
+  },
   "instead": {
     "pos": "adv.",
     "ipa": "/ɪnˈsted/",
     "cn": "代替，反而",
     "note": "instead 单独用；instead of 后面要跟名词或动名词。"
   },
+  "instead of": {
+    "pos": "词组",
+    "ipa": "/ɪnˈsted əv/",
+    "cn": "而不是；代替",
+    "note": "instead of + 名词/动名词（不能跟动词原形）；instead 单独用时放句末。"
+  },
   "interested": {
     "pos": "adj.",
     "ipa": "/ˈɪntrəstɪd/",
     "cn": "感兴趣的",
     "note": "修饰<b>人</b>。be interested in sth/doing。"
+  },
+  "interesting": {
+    "pos": "adj.",
+    "ipa": "/ˈɪntrəstɪŋ/",
+    "cn": "有趣的",
+    "note": "修饰<b>物</b>。形容词修饰 something/anything 时要后置：something interesting。"
   },
   "into": {
     "pos": "prep.",
@@ -771,6 +902,11 @@
     "pos": "n.",
     "ipa": "/ˈaɪtəm/",
     "cn": "物品；一件东西"
+  },
+  "its": {
+    "pos": "det.",
+    "ipa": "/ɪts/",
+    "cn": "它的"
   },
   "just": {
     "pos": "adv.",
@@ -815,6 +951,11 @@
     "ipa": "/lɑːst/",
     "cn": "上一个的；最后的"
   },
+  "late": {
+    "pos": "adj./adv.",
+    "ipa": "/leɪt/",
+    "cn": "迟到的；晚"
+  },
   "later": {
     "pos": "adv.",
     "ipa": "/ˈleɪtə/",
@@ -826,6 +967,12 @@
     "cn": "带领；通向；引导",
     "note": "过去式/过去分词 led（不是 leaded）。"
   },
+  "learn": {
+    "pos": "v.",
+    "ipa": "/lɜːn/",
+    "cn": "学习，了解到",
+    "note": "过去式 learned 或 learnt 都可以。"
+  },
   "leave": {
     "pos": "v.",
     "ipa": "/liːv/",
@@ -835,6 +982,12 @@
     "pos": "v.",
     "ipa": "/left/",
     "cn": "留下；离开（leave 的过去式）"
+  },
+  "let": {
+    "pos": "v.",
+    "ipa": "/let/",
+    "cn": "让",
+    "note": "let sb do sth 让某人做某事"
   },
   "like": {
     "pos": "prep./v.",
@@ -869,6 +1022,12 @@
     "ipa": "/ˈlʊkɪŋ/",
     "cn": "看，找（look 的现在分词）"
   },
+  "lot": {
+    "pos": "n.",
+    "ipa": "/lɒt/",
+    "cn": "许多",
+    "note": "a lot 很多"
+  },
   "made": {
     "pos": "v.",
     "ipa": "/meɪd/",
@@ -879,6 +1038,17 @@
     "ipa": "/meɪk/",
     "cn": "做，制造，使得",
     "note": "过去式/过去分词 made。make sb do sth（不加 to）。"
+  },
+  "manage": {
+    "pos": "v.",
+    "ipa": "/ˈmænɪdʒ/",
+    "cn": "设法做到",
+    "note": "manage to do sth 设法做成某事"
+  },
+  "many": {
+    "pos": "det.",
+    "ipa": "/ˈmeni/",
+    "cn": "许多的（接可数名词）"
   },
   "match": {
     "pos": "n.",
@@ -933,6 +1103,11 @@
     "ipa": "/mʌm/",
     "cn": "妈妈（英式）"
   },
+  "museum": {
+    "pos": "n.",
+    "ipa": "/mjuˈziːəm/",
+    "cn": "博物馆"
+  },
   "my": {
     "pos": "pron.",
     "ipa": "/maɪ/",
@@ -947,6 +1122,11 @@
     "pos": "adj.",
     "ipa": "/ˌnɪəˈbaɪ/",
     "cn": "附近的；adv. 在附近"
+  },
+  "need": {
+    "pos": "v./n.",
+    "ipa": "/niːd/",
+    "cn": "需要"
   },
   "nervous": {
     "pos": "adj.",
@@ -979,6 +1159,12 @@
     "pos": "adv.",
     "ipa": "/naʊ/",
     "cn": "现在"
+  },
+  "number": {
+    "pos": "n.",
+    "ipa": "/ˈnʌmbə/",
+    "cn": "数量；号码",
+    "note": "a number of 许多"
   },
   "of": {
     "pos": "prep.",
@@ -1043,6 +1229,18 @@
     "ipa": "/aʊt/",
     "cn": "出来；出去；不在家",
     "note": "turn out 结果是；find out 查明。"
+  },
+  "own": {
+    "pos": "adj.",
+    "ipa": "/əʊn/",
+    "cn": "自己的",
+    "note": "their own 他们自己的。"
+  },
+  "pairs": {
+    "pos": "n.",
+    "ipa": "/peəz/",
+    "cn": "一对（pair 的复数）",
+    "note": "in pairs 两人一组"
   },
   "parent": {
     "pos": "n.",
@@ -1144,6 +1342,12 @@
     "ipa": "/ˈriːsntli/",
     "cn": "最近"
   },
+  "recommend": {
+    "pos": "v.",
+    "ipa": "/ˌrekəˈmend/",
+    "cn": "推荐，建议",
+    "note": "recommend (that) sb (should) do sth"
+  },
   "remember": {
     "pos": "v.",
     "ipa": "/rɪˈmembə/",
@@ -1170,6 +1374,11 @@
     "pos": "n.",
     "ipa": "/rəʊd/",
     "cn": "道路"
+  },
+  "room": {
+    "pos": "n.",
+    "ipa": "/ruːm/",
+    "cn": "房间"
   },
   "sad": {
     "pos": "adj.",
@@ -1300,6 +1509,11 @@
     "ipa": "/ˈsaʊndɪd/",
     "cn": "听起来（sound 的过去式）"
   },
+  "spend": {
+    "pos": "v.",
+    "ipa": "/spend/",
+    "cn": "花费（时间、钱）"
+  },
   "sport": {
     "pos": "n.",
     "ipa": "/spɔːt/",
@@ -1316,17 +1530,37 @@
     "ipa": "/stɪl/",
     "cn": "仍然，还"
   },
+  "student": {
+    "pos": "n.",
+    "ipa": "/ˈstjuːdnt/",
+    "cn": "学生"
+  },
+  "study": {
+    "pos": "v.",
+    "ipa": "/ˈstʌdi/",
+    "cn": "学习；研究"
+  },
   "sure": {
     "pos": "adj.",
     "ipa": "/ʃʊə/",
     "cn": "确信的；一定的",
     "note": "make sure 确保。be sure of/about sth 对…有把握。"
   },
+  "table": {
+    "pos": "n.",
+    "ipa": "/ˈteɪbl/",
+    "cn": "表格；桌子"
+  },
   "take": {
     "pos": "v.",
     "ipa": "/teɪk/",
     "cn": "拿；带走",
     "note": "take back 取回/归还"
+  },
+  "talk": {
+    "pos": "v.",
+    "ipa": "/tɔːk/",
+    "cn": "说话；交谈"
   },
   "teacher": {
     "pos": "n.",
@@ -1375,6 +1609,11 @@
     "pos": "pron.",
     "ipa": "/ðem/",
     "cn": "他们（宾格）"
+  },
+  "then": {
+    "pos": "adv.",
+    "ipa": "/ðen/",
+    "cn": "然后，那时"
   },
   "there": {
     "pos": "adv.",
@@ -1435,6 +1674,11 @@
     "cn": "到，向；[不定式符号]",
     "note": "作不定式符号时后面跟动词原形；作介词时后面跟名词或动名词。"
   },
+  "together": {
+    "pos": "adv.",
+    "ipa": "/təˈɡeðə/",
+    "cn": "一起"
+  },
   "told": {
     "pos": "v.",
     "ipa": "/təʊld/",
@@ -1461,10 +1705,21 @@
     "ipa": "/ˈtreɪnɪŋ/",
     "cn": "训练"
   },
+  "travel": {
+    "pos": "v./n.",
+    "ipa": "/ˈtrævl/",
+    "cn": "旅行"
+  },
   "tried": {
     "pos": "v.",
     "ipa": "/traɪd/",
     "cn": "试过（try 的过去式）"
+  },
+  "try": {
+    "pos": "v.",
+    "ipa": "/traɪ/",
+    "cn": "尝试",
+    "note": "try to do 试图做"
   },
   "turn": {
     "pos": "v.",
@@ -1472,11 +1727,21 @@
     "cn": "转，变成",
     "note": "turn out 结果是；turn on/off 开关。"
   },
+  "type": {
+    "pos": "n.",
+    "ipa": "/taɪp/",
+    "cn": "类型；种类"
+  },
   "under": {
     "pos": "prep.",
     "ipa": "/ˈʌndə/",
     "cn": "在……下面",
     "note": "under 强调正下方；below 只表示位置更低。"
+  },
+  "unless": {
+    "pos": "conj.",
+    "ipa": "/ənˈles/",
+    "cn": "除非"
   },
   "up": {
     "pos": "adv.",
@@ -1511,6 +1776,12 @@
     "ipa": "/ˈvɪzɪt/",
     "cn": "参观，拜访"
   },
+  "wait": {
+    "pos": "v.",
+    "ipa": "/weɪt/",
+    "cn": "等待",
+    "note": "wait for sb/sth 等待…。"
+  },
   "walk": {
     "pos": "v./n.",
     "ipa": "/wɔːk/",
@@ -1542,6 +1813,11 @@
     "ipa": "/wɒtʃ/",
     "cn": "观看；手表"
   },
+  "water": {
+    "pos": "n.",
+    "ipa": "/ˈwɔːtə/",
+    "cn": "水"
+  },
   "way": {
     "pos": "n.",
     "ipa": "/weɪ/",
@@ -1552,6 +1828,11 @@
     "pos": "pron.",
     "ipa": "/wiː/",
     "cn": "我们"
+  },
+  "we'll": {
+    "pos": "contr.",
+    "ipa": "/wiːl/",
+    "cn": "我们将（= we will）"
   },
   "went": {
     "pos": "v.",
@@ -1630,6 +1911,11 @@
     "ipa": "/wɪˈðɪn/",
     "cn": "在…以内"
   },
+  "without": {
+    "pos": "prep.",
+    "ipa": "/wɪˈðaʊt/",
+    "cn": "没有，不带"
+  },
   "word": {
     "pos": "n.",
     "ipa": "/wɜːd/",
@@ -1657,6 +1943,12 @@
     "ipa": "/raɪt/",
     "cn": "写（wrote / written）"
   },
+  "writer": {
+    "pos": "n.",
+    "ipa": "/ˈraɪtə/",
+    "cn": "作者；写的人",
+    "note": "writer's purpose 写作目的"
+  },
   "year": {
     "pos": "n.",
     "ipa": "/jɪə/",
@@ -1666,5 +1958,15 @@
     "pos": "pron.",
     "ipa": "/juː/",
     "cn": "你；你们"
+  },
+  "you've": {
+    "pos": "contr.",
+    "ipa": "/juːv/",
+    "cn": "你已经（= you have）"
+  },
+  "your": {
+    "pos": "det.",
+    "ipa": "/jɔː/",
+    "cn": "你的"
   }
 }

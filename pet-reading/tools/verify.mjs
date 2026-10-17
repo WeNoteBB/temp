@@ -185,6 +185,22 @@ function verifyArticle(slug) {
     else if (String(s.s).indexOf(s.ul) < 0) err(`${slug} ${s.ref}：ul「${s.ul}」在该句原文里找不到，标不上`);
   });
 
+  /* --- 笔记（书上批注，Part 6 式）：每条都要能在词表里查到（点了/收藏才有内容） --- */
+  sents.forEach(s => {
+    const notes = s.ana && s.ana.note;
+    if (notes === undefined) return;
+    if (!Array.isArray(notes) || !notes.length) { err(`${slug} ${s.ref}：ana.note 应为非空数组`); return; }
+    notes.forEach((it, i) => {
+      const k = typeof it === "string" ? it : (it && it.k);
+      if (typeof k !== "string" || !k.trim()) { err(`${slug} ${s.ref}：ana.note 第 ${i} 条缺 k`); return; }
+      if (!g[k] && !lookup(g, k)) err(`${slug} ${s.ref}：ana.note「${k}」在词表里查不到（笔记点开会是空卡片）`);
+      if (typeof it === "object") {
+        if (it.t !== undefined && (typeof it.t !== "string" || !it.t.trim())) err(`${slug} ${s.ref}：ana.note「${k}」的 t 应为非空字符串`);
+        if (it.cn !== undefined && (typeof it.cn !== "string" || !it.cn.trim())) err(`${slug} ${s.ref}：ana.note「${k}」的 cn 应为非空字符串`);
+      }
+    });
+  });
+
   /* --- 选项分析同样要有 ana --- */
   Object.keys(A.options || {}).forEach(L => {
     const oa = A.optionsAna && A.optionsAna[L];
@@ -254,44 +270,56 @@ function verifyArticle(slug) {
     distractors.filter(L => !mentioned.has(L)).forEach(L =>
       err(`${slug}：干扰项 ${L} 在任何一题的 others 里都没出现，点它的「答题解析」会是空的`));
   } else {
-    /* ---- Part 1 式：五段短文各自成题，每题自带 opts（A–C） ----
-       Part 5 式（同一篇里训练题自带选项、真题在正文里挖空）复用这条分支：
-       允许正文出现 {n} 空位，但空位必须恰好等于真题题号（n<100），
-       训练题（n≥100）一律不许用 {n} 写法（那会让词数对账和题号表达变乱）。 */
-    const examQns = qs.filter(q => q.n < 100).map(q => q.n).sort((a, b) => a - b);
-    if (found.length) {
-      if (!examQns.length) {
-        err(`${slug}：原文出现空位 [${found}]，但文章里没有真题（n<100）题目`);
-      } else if (found.join() !== examQns.join()) {
-        err(`${slug}：原文空位 [${found}] 应恰好等于真题题号 [${examQns}]`);
-      }
-      const trainSlots = found.filter(n => n >= 100);
-      if (trainSlots.length) err(`${slug}：训练题不许用 {n} 空位（发现 [${trainSlots}]），请写成省略号 …………`);
-    }
+    /* ---- 每题自带选项（Part 1/3/5 式）与开放填空（Part 6 式）共用这条分支 ----
+       空位规则：正文里的 {n} 必须有对应题目；开放填空（没有 opts 的题）必须有 {n} 空位
+       （输入框就画在那儿）。带选项的题（Part 5 真题）也可以把空位挖在正文里。 */
+    found.forEach(n => {
+      if (!qs.some(q => q.n === n)) err(`${slug}：正文空位 {${n}} 没有对应题目`);
+    });
     qs.forEach(q => {
       ["why", "clues", "tip", "prompt", "ana"].forEach(f => {
         if (!q[f]) err(`${slug}：第 ${q.n} 题缺 ${f}`);
       });
+      if (q.gap !== undefined && !String(q.gap).trim()) {
+        err(`${slug}：第 ${q.n} 题的 gap 应为非空字符串（书上印的编号，如 1 / 27）`);
+      }
       const opts = q.opts || {};
-      if (Object.keys(opts).length < 2) err(`${slug}：第 ${q.n} 题缺 opts（每题至少 2 个选项）`);
-      if (!opts[q.answer]) err(`${slug}：第 ${q.n} 题答案 ${q.answer} 不在它的 opts 里`);
-      const others = q.others || [];
-      const wrongCount = Object.keys(opts).length - 1;
-      if (others.length < wrongCount) err(`${slug}：第 ${q.n} 题的 others 只有 ${others.length} 条（${wrongCount} 个错选项每个都要解释）`);
-      others.forEach(o => {
-        if (!Array.isArray(o) || o.length !== 2) err(`${slug}：第 ${q.n} 题的 others 有条目不是 [字母, 说明]`);
-        else if (!opts[o[0]]) err(`${slug}：第 ${q.n} 题的 others 提到不存在的选项 ${o[0]}`);
-        else if (o[0] === q.answer) err(`${slug}：第 ${q.n} 题的 others 里出现了它自己的答案 ${o[0]}`);
-      });
-      /* 选项句子分析（可选）：写了的必须是 {parts, gram, tr} 这种能上小黑板的结构 */
-      if (q.optsAna !== undefined) {
-        Object.keys(q.optsAna).forEach(L => {
-          if (!opts[L]) { err(`${slug}：第 ${q.n} 题 optsAna 里的 ${L} 不在 opts 里`); return; }
-          const oa = q.optsAna[L] || {};
-          ["parts", "gram", "tr"].forEach(f => {
-            if (!oa[f]) err(`${slug}：第 ${q.n} 题 ${L} 的 optsAna 缺 ${f}`);
-          });
+      const isCloze = Object.keys(opts).length === 0;
+      if (isCloze) {
+        /* 开放填空：学生自己写一个词，没有选项 */
+        const ans = String(q.answer || "").trim();
+        if (!/^[A-Za-z][A-Za-z'’-]*$/.test(ans)) {
+          err(`${slug}：第 ${q.n} 题是开放填空，answer 应是「一个单词」（现在是「${q.answer}」）`);
+        }
+        if (found.indexOf(q.n) < 0) err(`${slug}：第 ${q.n} 题是开放填空，但正文里没有 {${q.n}} 空位`);
+        (q.others || []).forEach(o => {
+          if (!Array.isArray(o) || o.length !== 2 || typeof o[0] !== "string" || !String(o[0]).trim()) {
+            err(`${slug}：第 ${q.n} 题的 others 有条目不是 [词, 说明]`);
+          } else if (String(o[0]).trim().toLowerCase() === ans.toLowerCase()) {
+            err(`${slug}：第 ${q.n} 题的 others 里出现了它自己的答案「${o[0]}」`);
+          }
         });
+      } else {
+        if (Object.keys(opts).length < 2) err(`${slug}：第 ${q.n} 题缺 opts（每题至少 2 个选项）`);
+        if (!opts[q.answer]) err(`${slug}：第 ${q.n} 题答案 ${q.answer} 不在它的 opts 里`);
+        const others = q.others || [];
+        const wrongCount = Object.keys(opts).length - 1;
+        if (others.length < wrongCount) err(`${slug}：第 ${q.n} 题的 others 只有 ${others.length} 条（${wrongCount} 个错选项每个都要解释）`);
+        others.forEach(o => {
+          if (!Array.isArray(o) || o.length !== 2) err(`${slug}：第 ${q.n} 题的 others 有条目不是 [字母, 说明]`);
+          else if (!opts[o[0]]) err(`${slug}：第 ${q.n} 题的 others 提到不存在的选项 ${o[0]}`);
+          else if (o[0] === q.answer) err(`${slug}：第 ${q.n} 题的 others 里出现了它自己的答案 ${o[0]}`);
+        });
+        /* 选项句子分析（可选）：写了的必须是 {parts, gram, tr} 这种能上小黑板的结构 */
+        if (q.optsAna !== undefined) {
+          Object.keys(q.optsAna).forEach(L => {
+            if (!opts[L]) { err(`${slug}：第 ${q.n} 题 optsAna 里的 ${L} 不在 opts 里`); return; }
+            const oa = q.optsAna[L] || {};
+            ["parts", "gram", "tr"].forEach(f => {
+              if (!oa[f]) err(`${slug}：第 ${q.n} 题 ${L} 的 optsAna 缺 ${f}`);
+            });
+          });
+        }
       }
     });
     /* 正文里要整行列选项的题（optsInline）或排成 2×2 盒子的题（optsGrid）：

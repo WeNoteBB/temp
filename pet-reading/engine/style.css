@@ -977,9 +977,34 @@ button.chip.ph2:hover{background:var(--phrase-hover)}
 .ttable .sent.alt{background:transparent}
 .ttable .pickrow{margin-top:0}
 .ttable .pn{color:var(--ink-3)}
-/* 连续边框盒合成一个（Reading Part 5 真题短文的那个大框） */
+/* 连续边框盒合成一个（Reading Part 5/6 真题短文的那种大框）：
+   只有第一个留上边框、最后一个留下边框，中间相接处四条线都不画 */
 .para.framed + .para.framed{margin-top:0;border-top:0;border-radius:0}
-.para.framed + .para.framed + .para.framed{border-radius:0 0 6px 6px}
+.para.framed:has(+ .para.framed){margin-bottom:0;border-bottom:0;border-bottom-left-radius:0;border-bottom-right-radius:0}
+/* 开放填空（Reading Part 6 式）：正文里的答题输入框，长得像书上的点线空格 */
+.clozegap{display:inline-block;margin:0 3px}
+.gapin{
+  width:calc(96px * var(--zoom));max-width:34vw;min-width:54px;
+  padding:0 8px 1px;border:0;border-bottom:2px dotted var(--border-accent);
+  border-radius:5px 5px 0 0;background:var(--field);
+  font:inherit;font-size:inherit;color:inherit;text-align:center;
+}
+.gapin:focus{outline:none;border-bottom:2px solid var(--accent);border-bottom-left-radius:0;border-bottom-right-radius:0;background:var(--accent-soft)}
+.gapin.ok{background:var(--ins-bg);border-bottom:2px solid var(--ok-line);color:var(--ok)}
+.gapin.bad{background:var(--danger-bg);border-bottom:2px solid var(--danger);color:var(--danger)}
+.gaprow{display:flex;align-items:center;gap:8px;color:var(--ink-3);font-size:calc(13px * var(--zoom))}
+/* 笔记（书上批注）：一行一个词组/句型，右侧 ☆ 直接收藏 */
+.notes{display:flex;flex-direction:column;gap:6px}
+.noterow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.nkey{font-weight:700}
+.ncn{color:var(--ink-2);font-size:calc(13px * var(--zoom));line-height:1.6}
+.npos{color:var(--ink-3);font-size:calc(12px * var(--zoom))}
+.nfav{
+  margin-left:auto;flex:none;font-size:15px;color:var(--ink-3);
+  padding:2px 8px;border-radius:6px;transition:color .12s,background .12s;
+}
+.nfav:hover{background:var(--line-2)}
+.nfav.on{color:var(--accent)}
 /* 边框盒（书上的练习方框）与灰底盒（第 ⑤ 题那种灰底 MCQ 盒） */
 .para.framed{border:1px solid var(--line);border-radius:6px;padding:12px 14px}
 .para.r-q.framed{border-left:1px solid var(--line);border-radius:6px}

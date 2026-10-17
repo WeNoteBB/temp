@@ -1,0 +1,3753 @@
+{
+  "slug": "t1-p6-museum-email",
+  "book": "剑桥PET 官方模考题精讲讲练",
+  "label": "Reading Part 6",
+  "title": "Training Test 1",
+  "note": "答案为逐题对照书后 P187 官方答案核对一致；训练①②③的答案与解析同 P187；「析」里的「笔记」来自带手写批注的 PET Trainers 版（书 P26–P27）",
+  "inlineQuiz": true,
+  "options": {},
+  "passage": {
+    "words": 448,
+    "sentences": 46,
+    "paragraphs": [
+      [
+        {
+          "s": "Training Test 1 · Reading Part 6",
+          "hard": false,
+          "tr": "训练测试 1 · 阅读第 6 部分。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题行：<b>Training Test 1 · Reading Part 6</b>（训练测试 1 · 阅读第 6 部分）",
+            "parts": [
+              [
+                "标题",
+                "Training Test 1 —— 训练测试编号"
+              ],
+              [
+                "标题",
+                "Reading Part 6 —— 阅读第 6 部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式省略句"
+            ],
+            "tip": "这一部分考的是：一篇挖了六个空的短文，每个空自己写一个词——没有选项可挑，全看搭配和上下文。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "In this part you:",
+          "hard": false,
+          "tr": "在这一部分里，你要：",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>In this part you:</b>（这一部分里你要做的事）",
+            "parts": [
+              [
+                "介词短语",
+                "In this part —— 在这一部分里"
+              ],
+              [
+                "主语",
+                "you —— 你（指考生）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "In this part you: 是阅读各部分的固定开场白"
+            ],
+            "tip": "下面列的是两项任务：读什么、写什么。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "read — a text which has six gaps in it",
+          "hard": false,
+          "tr": "读——一篇挖了六个空的短文。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>read a text</b>（读一篇短文）",
+            "parts": [
+              [
+                "谓语",
+                "read —— 祈使句：读"
+              ],
+              [
+                "宾语",
+                "<code>a text</code> —— 一篇短文"
+              ],
+              [
+                "定语从句",
+                "<code>which has six gaps in it</code> —— 里面有六个空的"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "which 引导定语从句修饰 a text"
+            ],
+            "tip": "六个空就是 27–32 题（真题页）。"
+          }
+        },
+        {
+          "s": "write — one word to fill in each gap",
+          "hard": false,
+          "tr": "写——为每个空填上一个词。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>write one word</b>（写一个词）",
+            "parts": [
+              [
+                "谓语",
+                "write —— 祈使句：写"
+              ],
+              [
+                "宾语",
+                "<code>one word</code> —— 一个词"
+              ],
+              [
+                "目的状语",
+                "<code>to fill in each gap</code> —— 用来填每一个空"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "one word to do sth：一个用来做某事的词（不定式作定语）"
+            ],
+            "tip": "只能写一个词——多写了就算错，哪怕意思对。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "FOCUS: READING FOR GIST",
+          "hard": false,
+          "tr": "重点：抓大意（先读全文再填）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>FOCUS: READING FOR GIST</b>（重点：抓大意）",
+            "parts": [
+              [
+                "名词短语",
+                "READING —— 阅读"
+              ],
+              [
+                "介词短语",
+                "FOR GIST —— 为抓大意"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "gist = 大意、要点（读全文先弄懂「在讲什么」）"
+            ],
+            "tip": "第①题专门练这个：不填空，只问「这是什么类型的文章、讲什么、为什么写」。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "① Without trying to fill in any gaps, read the text below and answer these questions.",
+          "hard": false,
+          "tr": "① 先别管填空，读下面的文字，回答这些问题。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>read the text below and answer these questions</b>（读下面文字并回答问题）",
+            "parts": [
+              [
+                "条件状语",
+                "<code>Without trying to fill in any gaps</code> —— 不去（尝试）填空"
+              ],
+              [
+                "谓语 1",
+                "read —— 读"
+              ],
+              [
+                "宾语 1",
+                "<code>the text below</code> —— 下面的文字"
+              ],
+              [
+                "谓语 2",
+                "answer —— 回答"
+              ],
+              [
+                "宾语 2",
+                "<code>these questions</code> —— 这些问题"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "without doing：不做某事（这里 = 别急着填空）",
+              "below：在下面（后置定语）"
+            ],
+            "tip": "做题方法：第一遍先不填，快速读一遍抓大意——这是第 6 部分的第一条策略。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "What text type is it?",
+          "hard": false,
+          "tr": "这是什么类型的文字？",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "特殊疑问句：<b>What text type is it?</b>（它是什么类型的文本？）",
+            "parts": [
+              [
+                "表语",
+                "<code>What text type</code> —— 什么类型的文本"
+              ],
+              [
+                "系动词",
+                "is —— 是"
+              ],
+              [
+                "主语",
+                "it —— 它"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "text type = 文本类型（article / report / advertisement…）"
+            ],
+            "tip": "看三条就能判断：谁写的、写给谁、想干嘛。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "What is the writer's purpose?",
+          "hard": false,
+          "tr": "作者写这段话的目的是什么？",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "特殊疑问句：<b>What is the writer's purpose?</b>（作者的目的是什么？）",
+            "parts": [
+              [
+                "表语",
+                "<code>What</code> —— 什么"
+              ],
+              [
+                "系动词",
+                "is —— 是"
+              ],
+              [
+                "主语",
+                "<code>the writer's purpose</code> —— 作者的目"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "writer's purpose = 写作意图（后面选项常用 to do 开头）"
+            ],
+            "tip": "目的题的选项都是 to do…；把三个都套进去想想哪个最像全文在干的事。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "What is it about?",
+          "hard": false,
+          "tr": "它讲的是什么？",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "特殊疑问句：<b>What is it about?</b>（它是关于什么的？）",
+            "parts": [
+              [
+                "表语",
+                "<code>What</code> —— 什么"
+              ],
+              [
+                "系动词",
+                "is —— 是"
+              ],
+              [
+                "主语",
+                "it —— 它"
+              ],
+              [
+                "状语",
+                "<code>about</code> —— 关于"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "be about sth：讲的是…、关于…"
+            ],
+            "tip": "主旨题抓两头：首句和尾句，加上高频出现的词。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "② In pairs, fill in gaps 1–4 using one word for each.",
+          "hard": false,
+          "tr": "② 两人一组，每个空填一个词，把第 1–4 空补全。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>fill in gaps 1–4</b>（补全第 1–4 空）",
+            "parts": [
+              [
+                "状语",
+                "<code>In pairs</code> —— 两人一组地"
+              ],
+              [
+                "谓语",
+                "fill in —— 填写"
+              ],
+              [
+                "宾语",
+                "<code>gaps 1–4</code> —— 第 1 到 4 空"
+              ],
+              [
+                "方式状语",
+                "<code>using one word for each</code> —— 每空用一个词"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "fill in a gap：填空",
+              "in pairs：两人一组（课堂活动提示）"
+            ],
+            "tip": "和真题一样：一空一个词。填完对照右边的「N 解析」键看讲解。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "For many young people, spending time as an exchange student abroad can be the {104} exciting experience of their lives.",
+          "hard": false,
+          "tr": "对很多年轻人来说，作为交换生在国外待一段时间，可能是他们一生中最激动人心的经历。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>spending time … can be the most exciting experience</b>（动名词作主语 + 最高级表语）",
+            "parts": [
+              [
+                "状语",
+                "<code>For many young people</code> —— 对很多年轻人来说"
+              ],
+              [
+                "主语",
+                "<code>spending time as an exchange student abroad</code> —— 在国外当交换生度过时光"
+              ],
+              [
+                "系动词",
+                "<code>can be</code> —— 可能是"
+              ],
+              [
+                "表语",
+                "<code>the most exciting experience of their lives</code> —— 他们一生中最激动人心的经历"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "动名词短语作主语（spending…），谓语用单数",
+              "the most + 形容词最高级：一生中最…的"
+            ],
+            "tip": "第 1 空（104）：the …… exciting experience of their lives → 最高级 the <b>most</b> exciting。"
+          }
+        },
+        {
+          "s": "In {105} to being lots of fun, it helps teenagers learn about a different way of life as they get used {106} the customs in another country.",
+          "hard": false,
+          "tr": "除了乐趣多多，它还帮助青少年了解另一种生活方式，因为他们会逐渐习惯另一个国家的风俗。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>In addition to …, it helps teenagers …</b>（介词短语开头 + as 时间状语从句）",
+            "parts": [
+              [
+                "介词短语",
+                "<code>In addition to being lots of fun</code> —— 除了很有趣（之外）"
+              ],
+              [
+                "主语",
+                "it —— 指当交换生这件事"
+              ],
+              [
+                "谓语",
+                "<code>helps</code> —— 帮助"
+              ],
+              [
+                "宾语",
+                "<code>teenagers</code> —— 青少年们"
+              ],
+              [
+                "宾补",
+                "<code>learn about a different way of life</code> —— 了解另一种生活方式"
+              ],
+              [
+                "时间状语从句",
+                "<code>as they get used to the customs in another country</code> —— 当他们逐渐习惯另一个国家的风俗时"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "in addition to sth/doing sth：除…之外（还）",
+              "get used to sth/doing sth：习惯于…（to 是介词，后接名词或动名词）"
+            ],
+            "tip": "第 2 空（105）= <b>addition</b>（in addition to 固定搭配）；第 3 空（106）= <b>to</b>（get used to）。"
+          }
+        },
+        {
+          "s": "They also become more confident when they realise that they can handle most problems on {107} own.",
+          "hard": false,
+          "tr": "当他们意识到大多数问题自己就能处理时，也会变得更自信。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>They become more confident</b> + when 时间状语从句",
+            "parts": [
+              [
+                "主语",
+                "They —— 他们（指青少年）"
+              ],
+              [
+                "系表",
+                "<code>also become more confident</code> —— 也变得更有自信"
+              ],
+              [
+                "时间状语从句",
+                "<code>when they realise that they can handle most problems on their own</code> —— 当他们意识到大多数问题能自己处理时"
+              ],
+              [
+                "宾语从句",
+                "<code>that they can handle most problems on their own</code> —— 他们能独自处理大多数问题"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "become + 形容词：变得…（比较级 more confident）",
+              "on one's own：独自、靠自己"
+            ],
+            "tip": "第 4 空（107）= <b>their</b>（on their own 靠他们自己；own 前用物主代词）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "VOCABULARY: LINKING EXPRESSIONS",
+          "hard": false,
+          "tr": "词汇：连接词语。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>VOCABULARY: LINKING EXPRESSIONS</b>（词汇：连接表达）",
+            "parts": [
+              [
+                "名词",
+                "VOCABULARY —— 词汇"
+              ],
+              [
+                "名词短语",
+                "LINKING EXPRESSIONS —— 连接用语"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "linking expressions = 表示因果、条件、转折、目的、替代的连接词"
+            ],
+            "tip": "本页的 as / so、as long as、apart from、in case、in order to、instead of 都是考试高频连接语。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "③ Choose the correct linking words.",
+          "hard": false,
+          "tr": "③ 选出正确的连接词。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>Choose the correct linking words.</b>（选出正确的连接词）",
+            "parts": [
+              [
+                "谓语",
+                "Choose —— 祈使句：选"
+              ],
+              [
+                "宾语",
+                "<code>the correct linking words</code> —— 正确的连接词"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "linking words 常用一组一对（as / so、long / far…）来考"
+            ],
+            "tip": "点句子里的斜杠两边就能作答；句尾「解析」给整句讲解。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "1 Thomas went to bed very early «as» / «so» he was feeling sleepy.",
+          "hard": false,
+          "tr": "1 Thomas 很早去睡了，因为他觉得困了。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "原因状语从句：<b>Thomas went to bed very early</b> + <b>as he was feeling sleepy</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Thomas</code> —— 托马斯"
+              ],
+              [
+                "谓语",
+                "<code>went to bed</code> —— 上床睡觉（过去式）"
+              ],
+              [
+                "状语",
+                "<code>very early</code> —— 很早"
+              ],
+              [
+                "原因状语从句",
+                "<code>as he was feeling sleepy</code> —— 因为他困了"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "as 引导原因状语从句：因为、由于",
+              "so 表结果：所以（句意会反过来）"
+            ],
+            "tip": "as = 因为：他「因为困」才早睡；so 会把因果弄反（早睡所以困 ✗）。",
+            "note": [
+              {
+                "k": "as",
+                "cn": "由于，因为（连词）"
+              }
+            ]
+          },
+          "pickQ": 108
+        }
+      ],
+      [
+        {
+          "s": "2 OK, I'll lend you some money as «long» / «far» as you can pay me back.",
+          "hard": false,
+          "tr": "2 好吧，只要你能够还我钱，我就借给你一些钱。",
+          "ana": {
+            "pat": [
+              "主谓双宾"
+            ],
+            "frame": "条件状语从句：<b>as long as you can pay me back</b> + 主句",
+            "parts": [
+              [
+                "状语",
+                "OK —— 好吧"
+              ],
+              [
+                "主语",
+                "I —— 我"
+              ],
+              [
+                "谓语",
+                "<code>'ll lend</code> —— 将借给"
+              ],
+              [
+                "间接宾语",
+                "<code>you</code> —— 你"
+              ],
+              [
+                "直接宾语",
+                "<code>some money</code> —— 一些钱"
+              ],
+              [
+                "条件状语从句",
+                "<code>as long as you can pay me back</code> —— 只要你能把钱还我"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "as long as = 只要（提出条件）",
+              "as far as = 就…而言；远达",
+              "pay sb back：还钱给某人"
+            ],
+            "tip": "lend sb sth：借给某人某物；条件用 as long as（只要）；as far as 多用于 as far as I know。",
+            "note": [
+              {
+                "k": "as long as",
+                "cn": "只要"
+              }
+            ]
+          },
+          "pickQ": 109
+        }
+      ],
+      [
+        {
+          "s": "3 There was nothing in the room «except» / «apart» from a table and chairs.",
+          "hard": false,
+          "tr": "3 房间里除了一张桌子和几把椅子，什么都没有。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "there be 句型：<b>There was nothing in the room except a table and chairs.</b>",
+            "parts": [
+              [
+                "主语 + 谓语",
+                "<code>There was</code> —— 有（there be 结构）"
+              ],
+              [
+                "主语",
+                "<code>nothing</code> —— 没有东西"
+              ],
+              [
+                "状语",
+                "<code>in the room</code> —— 在房间里"
+              ],
+              [
+                "补充",
+                "<code>except a table and chairs</code> —— 除了一张桌子和几把椅子（之外）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "apart from = except = 除了…之外",
+              "本题的空后带着 from —— 只有 apart 能接"
+            ],
+            "tip": "句子里 already 有 from：构成 apart from（除了…）；except 不能加 from，这一空选 apart。",
+            "note": [
+              {
+                "k": "apart from",
+                "cn": "除了…（之外）"
+              }
+            ]
+          },
+          "pickQ": 110
+        }
+      ],
+      [
+        {
+          "s": "4 You'd better give me your number in «fact» / «case» I need to call you.",
+          "hard": false,
+          "tr": "4 你最好把电话号码给我，以防我需要给你打电话。",
+          "ana": {
+            "pat": [
+              "主谓双宾"
+            ],
+            "frame": "主干：<b>You'd better give me your number</b> + in case 从句",
+            "parts": [
+              [
+                "主语",
+                "You —— 你"
+              ],
+              [
+                "谓语",
+                "<code>'d better give</code> —— 最好给（had better + 动词原形）"
+              ],
+              [
+                "间接宾语",
+                "me —— 我"
+              ],
+              [
+                "直接宾语",
+                "<code>your number</code> —— 你的电话号码"
+              ],
+              [
+                "目的/条件从句",
+                "<code>in case I need to call you</code> —— 以防我需要给你打电话"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "in case + 从句：以防（万一）；不能换 in fact",
+              "in fact = 事实上（后面跟对前文的说明）"
+            ],
+            "tip": "in case 表「以防」；in fact 是「事实上」，放进去句子意思就断了。",
+            "note": [
+              {
+                "k": "in case",
+                "cn": "以防万一"
+              },
+              {
+                "k": "in fact",
+                "cn": "事实上"
+              }
+            ]
+          },
+          "pickQ": 111
+        }
+      ],
+      [
+        {
+          "s": "5 Turn off the tap when you brush your teeth in «future» / «order» to save water.",
+          "hard": false,
+          "tr": "5 刷牙时把水龙头关掉，好省水。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "时间状语从句 + 主句 + 目的状语：<b>in order to save water</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Turn off</code> —— 关掉（祈使句）"
+              ],
+              [
+                "宾语",
+                "<code>the tap</code> —— 水龙头"
+              ],
+              [
+                "时间状语从句",
+                "<code>when you brush your teeth</code> —— 在你刷牙时"
+              ],
+              [
+                "目的状语",
+                "<code>in order to save water</code> —— 为了省水"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "in order to do sth：为了做某事（表目的）",
+              "in future：今后（时间状语，单独用）"
+            ],
+            "tip": "空后面是 to save water：in order to（为了）表目的；in future（今后）不接 to。",
+            "note": [
+              {
+                "k": "in order to",
+                "cn": "为了（做某事）"
+              }
+            ]
+          },
+          "pickQ": 112
+        }
+      ],
+      [
+        {
+          "s": "6 Let's go now «instead» / «in front of» waiting here all afternoon.",
+          "hard": false,
+          "tr": "6 我们现在就走吧，别在这儿等一整个下午了。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "祈使句：<b>Let's go now instead of waiting here all afternoon.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Let's go</code> —— 我们走吧（let us go）"
+              ],
+              [
+                "时间状语",
+                "now —— 现在"
+              ],
+              [
+                "补充",
+                "<code>instead of waiting here all afternoon</code> —— 而不是在这儿等一整个下午"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "instead of sth/doing sth：而不是…（后面接动名词）",
+              "in front of：在…前面（方位）"
+            ],
+            "tip": "instead of waiting（而不是等）语义通顺；in front of waiting 变成「在一堆等待的前面」，不通。",
+            "note": [
+              {
+                "k": "instead of",
+                "cn": "代替，作为替代"
+              }
+            ]
+          },
+          "pickQ": 113
+        }
+      ],
+      [
+        {
+          "s": "B1 Preliminary candidates often make mistakes with linking words.",
+          "hard": false,
+          "tr": "B1 Preliminary 的考生常在连接词上出错。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>candidates make mistakes with linking words</b>（考生在连接词上犯错）",
+            "parts": [
+              [
+                "主语",
+                "<code>B1 Preliminary candidates</code> —— B1 Preliminary（PET）的考生们"
+              ],
+              [
+                "谓语",
+                "<code>make mistakes</code> —— 犯错"
+              ],
+              [
+                "方面状语",
+                "<code>with linking words</code> —— 在连接词上"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "make mistakes with sth：在某方面出错"
+            ],
+            "tip": "下面的改错题就是这一行：as/so、unless、wherever、too、because、Despite 都是连接词。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "④ Find and correct the mistakes in these sentences.",
+          "hard": false,
+          "tr": "④ 找出这些句子里的错误并改正。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>Find and correct the mistakes</b>（找出并改正错误）",
+            "parts": [
+              [
+                "谓语 1",
+                "Find —— 祈使句：找出"
+              ],
+              [
+                "谓语 2",
+                "correct —— 改正"
+              ],
+              [
+                "宾语",
+                "<code>the mistakes</code> —— 错误"
+              ],
+              [
+                "范围状语",
+                "<code>in these sentences</code> —— 在这些句子里"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "find and correct：先找错、再订正"
+            ],
+            "tip": "红线下划的就是错的词；点句尾「析」看官方订正。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "1 Sienna's bike is much newer and better that mine.",
+          "hard": false,
+          "tr": "1 Sienna 的自行车比我的新得多、也好得多。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "比较句：<b>Sienna's bike is much newer and better than mine.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Sienna's bike</code> —— Sienna 的自行车"
+              ],
+              [
+                "系表",
+                "<code>is much newer and better</code> —— 新得多、好得多"
+              ],
+              [
+                "错误点",
+                "<code>that mine</code> —— 应为 <b>than mine</b>"
+              ],
+              [
+                "比较对象",
+                "<code>mine</code> —— 我的（车）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "比较级 + than：比…更…",
+              "much 修饰比较级：…得多",
+              "mine = my bike（名词性物主代词）"
+            ],
+            "tip": "订正：that → <b>than</b>。比较句里的连接词是 than；that 不能连接比较。"
+          },
+          "ul": "that mine"
+        }
+      ],
+      [
+        {
+          "s": "2 We'll go for a picnic unless it doesn't rain.",
+          "hard": false,
+          "tr": "2 如果不下雨，我们就去野餐。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "条件状语从句：<b>if it doesn't rain</b> + 主句",
+            "parts": [
+              [
+                "主语 + 谓语",
+                "<code>We'll go</code> —— 我们要去"
+              ],
+              [
+                "宾语",
+                "<code>for a picnic</code> —— 去野餐"
+              ],
+              [
+                "错误点",
+                "<code>unless it doesn't rain</code> —— 双重否定，应把 unless 改成 <b>if</b>"
+              ],
+              [
+                "条件从句",
+                "<code>if it doesn't rain</code> —— 如果不下雨"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "unless = if … not（本身已含否定）",
+              "unless it doesn't rain 等于「除非不下雨」→ 意思反了"
+            ],
+            "tip": "订正：unless → <b>if</b>（if it doesn't rain 如果不下雨）；也可以说 unless it rains（除非下雨）。"
+          },
+          "ul": "unless"
+        }
+      ],
+      [
+        {
+          "s": "3 I know I can always talk to my friend Lucy wherever I've got a problem.",
+          "hard": false,
+          "tr": "3 我知道一有问题，随时都能找我的朋友 Lucy 聊。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>I know (that) I can talk to Lucy whenever I've got a problem.</b>",
+            "parts": [
+              [
+                "主句",
+                "<code>I know</code> —— 我知道"
+              ],
+              [
+                "宾语从句",
+                "<code>I can always talk to my friend Lucy</code> —— 我总能找我的朋友 Lucy 聊"
+              ],
+              [
+                "错误点",
+                "<code>wherever</code> —— 应为 <b>whenever</b>"
+              ],
+              [
+                "时间状语从句",
+                "<code>whenever I've got a problem</code> —— 每当我有问题时"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "whenever = 每当…（时间）",
+              "wherever = 无论哪里（地点）"
+            ],
+            "tip": "订正：wherever → <b>whenever</b>。有问题时聊天——是时间不是地点。"
+          },
+          "ul": "wherever"
+        }
+      ],
+      [
+        {
+          "s": "4 Alfie bought some bread and too some apples.",
+          "hard": false,
+          "tr": "4 Alfie 买了一些面包，还买了一些苹果。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>Alfie bought some bread and also some apples.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Alfie</code> —— 阿尔菲"
+              ],
+              [
+                "谓语",
+                "<code>bought</code> —— 买了（buy 的过去式）"
+              ],
+              [
+                "宾语 1",
+                "<code>some bread</code> —— 一些面包"
+              ],
+              [
+                "错误点",
+                "<code>too</code> —— 应为 <b>also</b>"
+              ],
+              [
+                "宾语 2",
+                "<code>some apples</code> —— 一些苹果"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "also 放句中（动词前后）：…and also some apples",
+              "too 常放句末或前面加逗号（I like apples, too.），放两个宾语中间不合语法"
+            ],
+            "tip": "订正：too → <b>also</b>（也可以写成 …and some apples, too. 但不动别的词的话就是 also）。"
+          },
+          "ul": "too"
+        }
+      ],
+      [
+        {
+          "s": "5 I was late for school because the traffic.",
+          "hard": false,
+          "tr": "5 我上学迟到了，因为交通（堵）。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "原因状语：<b>because of the traffic</b>",
+            "parts": [
+              [
+                "主语",
+                "I —— 我"
+              ],
+              [
+                "系表",
+                "<code>was late for school</code> —— 上学迟到"
+              ],
+              [
+                "错误点",
+                "<code>because</code> —— 后面跟的是名词短语，应改成 <b>because of</b>"
+              ],
+              [
+                "原因状语",
+                "<code>because of the traffic</code> —— 因为交通（拥堵）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "because + 句子；because of + 名词/名词短语",
+              "the traffic 是名词短语 → 必须用 because of"
+            ],
+            "tip": "订正：because → <b>because of</b>（because the traffic was heavy 才用 because）。"
+          },
+          "ul": "because"
+        }
+      ],
+      [
+        {
+          "s": "6 Despite the train was full, I managed to find a seat.",
+          "hard": false,
+          "tr": "6 尽管火车很挤，我还是找到了一个座位。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "让步状语从句：<b>Although the train was full</b> + 主句",
+            "parts": [
+              [
+                "主语 + 谓语",
+                "<code>I managed</code> —— 我设法"
+              ],
+              [
+                "宾语",
+                "<code>to find a seat</code> —— 找到一个座位"
+              ],
+              [
+                "错误点",
+                "<code>Despite</code> —— 后面跟的是句子，应改成 <b>Although</b>"
+              ],
+              [
+                "让步从句",
+                "<code>Despite the train was full</code> —— 尽管火车满了（结构错）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "despite + 名词/动名词（despite the full train = despite the train being full）",
+              "although + 句子：尽管…",
+              "manage to do sth：设法做成某事"
+            ],
+            "tip": "订正：Despite → <b>Although</b>（或 Despite the train being full）。"
+          },
+          "ul": "Despite"
+        }
+      ],
+      [
+        {
+          "s": "Exam Practice Test 1 · Reading Part 6",
+          "hard": false,
+          "tr": "真题测试 1 · 阅读第 6 部分。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题行：<b>Exam Practice Test 1 · Reading Part 6</b>（真题测试 1 · 阅读第 6 部分）",
+            "parts": [
+              [
+                "标题",
+                "Exam Practice Test 1 —— 真题测试编号"
+              ],
+              [
+                "标题",
+                "Reading Part 6 —— 阅读第 6 部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式省略句"
+            ],
+            "tip": "真题版：27–32 做在真实的邮件文本上，答案统一在书后 P187。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Questions 27–32",
+          "hard": false,
+          "tr": "第 27–32 题。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>Questions 27–32</b>（第 27–32 题）",
+            "parts": [
+              [
+                "名词短语",
+                "Questions —— 题目"
+              ],
+              [
+                "编号",
+                "27–32 —— 第 27 到第 32 题"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "六个空 = 六道题；一空一题"
+            ],
+            "tip": "先通读邮件抓大意，再逐空填；不确定的空先跳过，填完回头补。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "For each question, write the correct word. Write one word for each gap.",
+          "hard": false,
+          "tr": "为每道题写出正确的词。每个空只写一个词。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>write the correct word</b>（写出正确的词）",
+            "parts": [
+              [
+                "状语",
+                "<code>For each question</code> —— 对每道题"
+              ],
+              [
+                "谓语",
+                "write —— 祈使句：写"
+              ],
+              [
+                "宾语",
+                "<code>the correct word</code> —— 正确的词"
+              ],
+              [
+                "补充",
+                "<code>Write one word for each gap.</code> —— 每个空只写一个词"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "write one word for each gap：一个空只写一个词"
+            ],
+            "tip": "填的时候先想搭配（动词+介词、固定短语），再看时态和单复数。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Hi Anna,",
+          "hard": false,
+          "tr": "你好，Anna，",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "邮件抬头：<b>Hi Anna,</b>（你好，Anna，）",
+            "parts": [
+              [
+                "称呼",
+                "<code>Hi Anna,</code> —— 嗨，Anna（邮件开头）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "邮件/信件开头的称呼，后面用逗号"
+            ],
+            "tip": "写信先看称呼——这是一封写给朋友 Anna 的邮件。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "I've just been to the museum in our city.",
+          "hard": false,
+          "tr": "我刚去了我们市里的博物馆。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "主干：<b>I've just been to the museum</b>（现在完成时 + just）",
+            "parts": [
+              [
+                "主语",
+                "I —— 我"
+              ],
+              [
+                "谓语",
+                "<code>'ve just been to</code> —— 刚去过（have been to）"
+              ],
+              [
+                "宾语",
+                "<code>the museum in our city</code> —— 我们市里的博物馆"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "have been to + 地点：去过某地（人回来了）",
+              "just 放助动词后：刚刚"
+            ],
+            "tip": "开篇交代去博物馆——全篇围绕这次参观展开。"
+          }
+        },
+        {
+          "s": "That was my first visit, believe it or {27}!",
+          "hard": false,
+          "tr": "那是我第一次去，信不信由你！",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>That was my first visit</b> + 插入语 believe it or not",
+            "parts": [
+              [
+                "主语",
+                "<code>That</code> —— 那（指去博物馆这件事）"
+              ],
+              [
+                "系表",
+                "<code>was my first visit</code> —— 是我的第一次参观"
+              ],
+              [
+                "插入语",
+                "<code>believe it or not</code> —— 信不信由你"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "believe it or not：固定短语「信不信由你」（插入语）",
+              "my first visit：我的第一次参观"
+            ],
+            "tip": "第 27 空 = <b>not</b>：believe it or not 是固定说法，先想短语再填。",
+            "note": [
+              {
+                "k": "believe it or not",
+                "cn": "信不信由你"
+              }
+            ]
+          }
+        },
+        {
+          "s": "I wanted to collect some information for our class history project.",
+          "hard": false,
+          "tr": "我想为我们的班级历史项目收集一些资料。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>I wanted to collect some information</b>（want to do + for 短语）",
+            "parts": [
+              [
+                "主语",
+                "I —— 我"
+              ],
+              [
+                "谓语",
+                "<code>wanted to collect</code> —— 想收集"
+              ],
+              [
+                "宾语",
+                "<code>some information</code> —— 一些资料"
+              ],
+              [
+                "目的状语",
+                "<code>for our class history project</code> —— 为我们的班级历史项目"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "want to do sth：想做某事",
+              "information 不可数：some information（不能加 s）"
+            ],
+            "tip": "这句交代了「为什么去博物馆」——project 一词后面还会再出现。",
+            "note": [
+              {
+                "k": "collect",
+                "cn": "收集"
+              }
+            ]
+          }
+        },
+        {
+          "s": "We have to hand it {28} soon, don't we?",
+          "hard": false,
+          "tr": "我们很快得把它交上去，对吧？",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>We have to hand it in soon</b> + 反意疑问 don't we?",
+            "parts": [
+              [
+                "主语",
+                "We —— 我们"
+              ],
+              [
+                "谓语",
+                "<code>have to hand</code> —— 得交（have to do）"
+              ],
+              [
+                "宾语",
+                "<code>it</code> —— 它（指项目作业）"
+              ],
+              [
+                "补语",
+                "<code>in</code> —— 交上去（hand in）"
+              ],
+              [
+                "反意疑问",
+                "<code>don't we?</code> —— 对吧？（前句肯定→尾问否定）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "hand in：上交、提交（hand it in：代词放中间）",
+              "have to：不得不（客观上必须）"
+            ],
+            "tip": "第 28 空 = <b>in</b>：hand it in（交上去）。don't we 是接下来的 32 题同款「反意疑问」。",
+            "note": [
+              {
+                "k": "hand in",
+                "cn": "提交，上交"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "I went to the Ancient History section, {29} the museum keeps all its ancient Egyptian stuff.",
+          "hard": false,
+          "tr": "我去了古代史展区，博物馆把所有的古埃及藏品都放在那里。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "主干：<b>I went to the Ancient History section</b> + where 定语从句",
+            "parts": [
+              [
+                "主语",
+                "I —— 我"
+              ],
+              [
+                "谓语",
+                "<code>went to</code> —— 去了（go 的过去式）"
+              ],
+              [
+                "宾语",
+                "<code>the Ancient History section</code> —— 古代史展区"
+              ],
+              [
+                "定语从句",
+                "<code>where the museum keeps all its ancient Egyptian stuff</code> —— 博物馆把所有古埃及藏品存放在那里"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "逗号 + where：非限制性定语从句，说明「在那个展区」",
+              "section：区域、展区；stuff：「东西」（口语，不可数）"
+            ],
+            "tip": "第 29 空 = <b>where</b>：先看逗号——非限制性定语从句，先行词是地点，用 where。",
+            "note": [
+              {
+                "k": "ancient history section",
+                "t": "Ancient History section",
+                "cn": "远古的历史区"
+              },
+              {
+                "k": "ancient egyptian stuff",
+                "t": "ancient Egyptian stuff",
+                "cn": "古埃及的东西"
+              }
+            ]
+          }
+        },
+        {
+          "s": "It was really interesting!",
+          "hard": false,
+          "tr": "真的特别有意思！",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>It was really interesting!</b>（主系表）",
+            "parts": [
+              [
+                "主语",
+                "It —— 指这次参观"
+              ],
+              [
+                "系表",
+                "<code>was really interesting</code> —— 真的很有意思"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "主语 it 指前面提到的那件事"
+            ],
+            "tip": "一句感叹，说明作者很喜欢这个展区。"
+          }
+        },
+        {
+          "s": "There were some amazing statues of various animals, so I drew some pictures of them and then {30} some research about them online when I got home.",
+          "hard": false,
+          "tr": "那儿有一些各种动物的精美雕像，所以我画了几张它们的速写，回家后又上网查了查它们的资料。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "并列句：<b>There were some amazing statues</b> + so 结果句（drew…and did…）",
+            "parts": [
+              [
+                "主干",
+                "<code>There were some amazing statues of various animals</code> —— 有一些各式动物的精美雕像"
+              ],
+              [
+                "结果",
+                "<code>so I drew some pictures of them</code> —— 所以我画了它们的一些画"
+              ],
+              [
+                "并列谓语",
+                "<code>and then did some research about them online</code> —— 然后上网对它们做了些研究"
+              ],
+              [
+                "时间状语从句",
+                "<code>when I got home</code> —— 当我到家时"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "there were = 有（复数过去式）",
+              "do research：做研究（research 前用 do）",
+              "draw a picture of sth：画某物的画"
+            ],
+            "tip": "第 30 空 = <b>did</b>：do some research「做研究」，且与 drew 并列、都要用过去时。",
+            "note": [
+              {
+                "k": "statues",
+                "cn": "雕像"
+              },
+              {
+                "k": "various",
+                "cn": "各种各样的"
+              },
+              {
+                "k": "research",
+                "cn": "研究"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "I've still got some work to do on my project, so I'll need to go back to the museum again some time soon.",
+          "hard": false,
+          "tr": "我的项目还有些活儿要干，所以不久后还得再去一次博物馆。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "并列句：<b>I've still got some work to do</b> + so 结果句",
+            "parts": [
+              [
+                "主语",
+                "I —— 我"
+              ],
+              [
+                "谓语",
+                "<code>'ve still got</code> —— 还有（have got = have）"
+              ],
+              [
+                "宾语",
+                "<code>some work to do on my project</code> —— 项目上要做的一些活儿"
+              ],
+              [
+                "结果从句",
+                "<code>so I'll need to go back to the museum again some time soon</code> —— 所以我不久后还得再去一次博物馆"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "have got = have（英式口语）",
+              "work 不可数：some work to do",
+              "go back to + 地点：回到某地"
+            ],
+            "tip": "some time soon：不久后的某天——第 31 题就藏在这句话后面的 In fact 里。",
+            "note": [
+              {
+                "k": "some time",
+                "cn": "某个时间"
+              }
+            ]
+          }
+        },
+        {
+          "s": "In fact, {31} don't we go together?",
+          "hard": false,
+          "tr": "其实，我们何不一起去呢？",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "建议句：<b>Why don't we go together?</b>",
+            "parts": [
+              [
+                "状语",
+                "<code>In fact</code> —— 其实（引出提议）"
+              ],
+              [
+                "疑 问词",
+                "<code>Why</code> —— 为什么（why don't we 提建议）"
+              ],
+              [
+                "谓语",
+                "<code>don't we go</code> —— 我们…去（否定疑问）"
+              ],
+              [
+                "状语",
+                "<code>together</code> —— 一起"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "Why don't we do sth?：我们何不…呢？（提建议）",
+              "In fact：其实、事实上"
+            ],
+            "tip": "第 31 空 = <b>why</b>：don't we 开头就是 why don't we…?（建议句型）。",
+            "note": [
+              {
+                "k": "why don't we",
+                "cn": "我们何不…呢？（提建议）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "I don't think you've been there before, {32} you?",
+          "hard": false,
+          "tr": "我觉得你以前没去过那儿，对吧？",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>I don't think you've been there before, have you?</b>（宾语从句 + 反意疑问）",
+            "parts": [
+              [
+                "主语",
+                "I —— 我"
+              ],
+              [
+                "谓语",
+                "<code>don't think</code> —— 认为…不（否定前移）"
+              ],
+              [
+                "宾语从句",
+                "<code>you've been there before</code> —— 你以前去过那儿"
+              ],
+              [
+                "反意疑问",
+                "<code>have you?</code> —— 对吧？"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "I don't think + 从句：否定前移（否定的是从句）",
+              "反意疑问句：前面否定 → 尾问用肯定；助动词与从句一致（'ve → have）"
+            ],
+            "tip": "第 32 空 = <b>have</b>：you've been 的助动词是 have；前句否定 → 尾问用肯定 have you?",
+            "note": [
+              {
+                "k": "tag question",
+                "cn": "反意疑问句（前句否定时尾问用肯定）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "I'm sure you'll find something that you could use for your project.",
+          "hard": false,
+          "tr": "我相信你一定能找到些对你的项目有用的东西。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>I'm sure (that) you'll find something</b> + that 定语从句",
+            "parts": [
+              [
+                "主语",
+                "I —— 我"
+              ],
+              [
+                "系表",
+                "<code>'m sure</code> —— 确信"
+              ],
+              [
+                "宾语从句",
+                "<code>you'll find something</code> —— 你会找到某些东西"
+              ],
+              [
+                "定语从句",
+                "<code>that you could use for your project</code> —— 你能用在项目上的"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "be sure (that) + 从句：确信…",
+              "something that…：that 引导定语从句（something 是先行词）",
+              "could 表示「能够」（委婉）"
+            ],
+            "tip": "结尾呼应 project——首尾都在讲这个项目，主旨题有据可依。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "See you soon!",
+          "hard": false,
+          "tr": "回见！",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "邮件结束语：<b>See you soon!</b>（回头见！）",
+            "parts": [
+              [
+                "谓语",
+                "<code>See</code> —— 见（祈使句）"
+              ],
+              [
+                "宾语",
+                "you —— 你"
+              ],
+              [
+                "状语",
+                "<code>soon</code> —— 很快"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "See you soon!：邮件/口语结束语（回见！）"
+            ],
+            "tip": "结束语与开头的 Hi 呼应——邮件结构：称呼 → 正文 → 结束语 → 署名。"
+          }
+        },
+        {
+          "s": "Sally",
+          "hard": false,
+          "tr": "Sally（署名）",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "署名：<b>Sally</b>（写信人名字）",
+            "parts": [
+              [
+                "署名",
+                "Sally —— 莎莉（写信人）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "邮件最后一行是署名"
+            ],
+            "tip": "写信人是 Sally，收信人是 Anna——第①类题（谁发的邮件）也靠这个。"
+          }
+        }
+      ]
+    ],
+    "blocks": [
+      {
+        "r": "h",
+        "head": {
+          "l": "Training Test 1",
+          "r": "Reading Part 6"
+        },
+        "badge": "答案见 P187"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "pick": [
+          101
+        ]
+      },
+      {
+        "r": "q",
+        "pick": [
+          102
+        ]
+      },
+      {
+        "r": "q",
+        "pick": [
+          103
+        ]
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "p"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "h",
+        "head": {
+          "l": "Exam Practice Test 1",
+          "r": "Reading Part 6"
+        },
+        "badge": "答案见 P187"
+      },
+      {
+        "r": "h",
+        "tip": "在第 6 部分，首先快速阅读全文，找出文章大意。有时可能不止一个单词适用于一个空格，但是你只能填入一个单词。"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "p",
+        "frame": true
+      },
+      {
+        "r": "p",
+        "frame": true
+      },
+      {
+        "r": "p",
+        "frame": true
+      },
+      {
+        "r": "p",
+        "frame": true
+      },
+      {
+        "r": "p",
+        "frame": true
+      }
+    ]
+  },
+  "phrases": [
+    "some time",
+    "ancient history section",
+    "ancient egyptian stuff",
+    "apart from",
+    "in fact"
+  ],
+  "glossary": {
+    "a": {
+      "pos": "art.",
+      "ipa": "/ə/",
+      "cn": "一个（不定冠词）",
+      "note": "用在辅音音素开头的词前；元音音素前用 an。a university /an hour。"
+    },
+    "about": {
+      "pos": "prep.",
+      "ipa": "/əˈbaʊt/",
+      "cn": "关于；大约"
+    },
+    "abroad": {
+      "pos": "adv.",
+      "ipa": "/əˈbrɔːd/",
+      "cn": "在国外；到国外",
+      "note": "go/study abroad 出国——abroad 前不加 to。"
+    },
+    "advertisement": {
+      "pos": "n.",
+      "ipa": "/ədˈvɜːtɪsmənt/",
+      "cn": "广告"
+    },
+    "again": {
+      "pos": "adv.",
+      "ipa": "/əˈɡen/",
+      "cn": "再一次"
+    },
+    "alfie": {
+      "pos": "n.",
+      "ipa": "/ˈælfi/",
+      "cn": "Alfie（男子名）"
+    },
+    "all": {
+      "pos": "det./pron.",
+      "ipa": "/ɔːl/",
+      "cn": "全部，所有",
+      "note": "作同位语时位置：实义动词前，be 动词后。"
+    },
+    "also": {
+      "pos": "adv.",
+      "ipa": "/ˈɔːlsəʊ/",
+      "cn": "也，还"
+    },
+    "always": {
+      "pos": "adv.",
+      "ipa": "/ˈɔːlweɪz/",
+      "cn": "总是；一直"
+    },
+    "amazing": {
+      "pos": "adj.",
+      "ipa": "/əˈmeɪzɪŋ/",
+      "cn": "令人惊叹的；很棒的"
+    },
+    "an": {
+      "pos": "art.",
+      "ipa": "/ən/",
+      "cn": "一个（元音前用）"
+    },
+    "ancient egyptian stuff": {
+      "pos": "词组",
+      "ipa": "/ˈeɪnʃənt ɪˈdʒɪpʃn stʌf/",
+      "cn": "古埃及的东西",
+      "note": "stuff 口语里指「东西、玩意儿」（不可数）。"
+    },
+    "ancient history section": {
+      "pos": "词组",
+      "ipa": "/ˈeɪnʃənt ˈhɪstri ˈsekʃn/",
+      "cn": "古代史展区",
+      "note": "section 指博物馆/商场里的「展区、区域」。"
+    },
+    "and": {
+      "pos": "conj.",
+      "ipa": "/ænd/",
+      "cn": "和，并且"
+    },
+    "animal": {
+      "pos": "n.",
+      "ipa": "/ˈænɪml/",
+      "cn": "动物"
+    },
+    "anna": {
+      "pos": "n.",
+      "ipa": "/ˈænə/",
+      "cn": "Anna（女子名）"
+    },
+    "another": {
+      "pos": "det.",
+      "ipa": "/əˈnʌðə/",
+      "cn": "另一个；再一个"
+    },
+    "answer": {
+      "pos": "n./v.",
+      "ipa": "/ˈɑːnsə/",
+      "cn": "答案；回答"
+    },
+    "any": {
+      "pos": "det.",
+      "ipa": "/ˈeni/",
+      "cn": "任何；一些"
+    },
+    "apart": {
+      "pos": "adv.",
+      "ipa": "/əˈpɑːt/",
+      "cn": "分开；隔开",
+      "note": "apart from = 除了…之外。"
+    },
+    "apart from": {
+      "pos": "词组",
+      "ipa": "/əˈpɑːt frəm/",
+      "cn": "除了…（之外）",
+      "note": "= except；Nothing except / apart from a table and chairs."
+    },
+    "apple": {
+      "pos": "n.",
+      "ipa": "/ˈæpl/",
+      "cn": "苹果"
+    },
+    "article": {
+      "pos": "n.",
+      "ipa": "/ˈɑːtɪkl/",
+      "cn": "文章；报道"
+    },
+    "as": {
+      "pos": "conj./prep.",
+      "ipa": "/æz/",
+      "cn": "如同；作为；当……时",
+      "note": "as...as 和…一样；as soon as 一…就。"
+    },
+    "as long as": {
+      "pos": "词组",
+      "ipa": "/əz ˈlɒŋ əz/",
+      "cn": "只要",
+      "note": "表示条件：As long as you pay me back, I'll lend you the money."
+    },
+    "b": {
+      "pos": "字母",
+      "ipa": "",
+      "cn": "选项 B 的记号"
+    },
+    "back": {
+      "pos": "adv./n.",
+      "ipa": "/bæk/",
+      "cn": "回；向后；背部",
+      "note": "switch/phone back on 重新开机；give sth back 归还"
+    },
+    "be": {
+      "pos": "v.",
+      "ipa": "/biː/",
+      "cn": "是，成为",
+      "note": "原形 be，现在式 am/is/are，过去式 was/were，过去分词 been。"
+    },
+    "because": {
+      "pos": "conj.",
+      "ipa": "/bɪˈkɒz/",
+      "cn": "因为",
+      "note": "because 后接从句；because of 后接名词。"
+    },
+    "become": {
+      "pos": "v.",
+      "ipa": "/bɪˈkʌm/",
+      "cn": "变成；成为",
+      "note": "become + 形容词/名词：become more confident。"
+    },
+    "been": {
+      "pos": "v.",
+      "ipa": "/biːn/",
+      "cn": "是（be 的过去分词）",
+      "note": "have been off school 一直没上学"
+    },
+    "before": {
+      "pos": "prep./conj.",
+      "ipa": "/bɪˈfɔː/",
+      "cn": "在…之前"
+    },
+    "believe": {
+      "pos": "v.",
+      "ipa": "/bɪˈliːv/",
+      "cn": "相信",
+      "note": "believe it or not 信不信由你。"
+    },
+    "believe it or not": {
+      "pos": "词组",
+      "ipa": "/bɪˈliːv ɪt ɔː ˈnɒt/",
+      "cn": "信不信由你",
+      "note": "插入语：用来引出让人吃惊的话。"
+    },
+    "below": {
+      "pos": "adv./prep.",
+      "ipa": "/bɪˈləʊ/",
+      "cn": "在下面；下面"
+    },
+    "best": {
+      "pos": "adj./adv.",
+      "ipa": "/best/",
+      "cn": "最好的"
+    },
+    "bike": {
+      "pos": "n.",
+      "ipa": "/baɪk/",
+      "cn": "自行车"
+    },
+    "bought": {
+      "pos": "v.",
+      "ipa": "/bɔːt/",
+      "cn": "买（buy 的过去式/过去分词）"
+    },
+    "bread": {
+      "pos": "n.",
+      "ipa": "/bred/",
+      "cn": "面包（不可数）"
+    },
+    "brush": {
+      "pos": "v.",
+      "ipa": "/brʌʃ/",
+      "cn": "刷；梳",
+      "note": "brush your teeth 刷牙。"
+    },
+    "call": {
+      "pos": "v.",
+      "ipa": "/kɔːl/",
+      "cn": "打电话给；叫",
+      "note": "call sb 给某人打电话。"
+    },
+    "can": {
+      "pos": "modal",
+      "ipa": "/kæn/",
+      "cn": "能；可以"
+    },
+    "candidate": {
+      "pos": "n.",
+      "ipa": "/ˈkændɪdət/",
+      "cn": "考生，候选人"
+    },
+    "chair": {
+      "pos": "n.",
+      "ipa": "/tʃeə/",
+      "cn": "椅子"
+    },
+    "choose": {
+      "pos": "v.",
+      "ipa": "/tʃuːz/",
+      "cn": "选择（chose / chosen）"
+    },
+    "collect": {
+      "pos": "v.",
+      "ipa": "/kəˈlekt/",
+      "cn": "收集；采集",
+      "note": "collect information 收集资料。"
+    },
+    "confident": {
+      "pos": "adj.",
+      "ipa": "/ˈkɒnfɪdənt/",
+      "cn": "自信的",
+      "note": "be confident 有自信；比较级 more confident。"
+    },
+    "correct": {
+      "pos": "adj./v.",
+      "ipa": "/kəˈrekt/",
+      "cn": "正确的；改正"
+    },
+    "could": {
+      "pos": "modal",
+      "ipa": "/kʊd/",
+      "cn": "能够；可能（can 的过去式）",
+      "note": "情态动词后面永远跟动词原形。"
+    },
+    "custom": {
+      "pos": "n.",
+      "ipa": "/ˈkʌstəm/",
+      "cn": "风俗；习俗"
+    },
+    "despite": {
+      "pos": "prep.",
+      "ipa": "/dɪˈspaɪt/",
+      "cn": "尽管",
+      "note": "despite + 名词/动名词（despite the rain）；+ 句子要用 although。"
+    },
+    "different": {
+      "pos": "adj.",
+      "ipa": "/ˈdɪfrənt/",
+      "cn": "不同的"
+    },
+    "do": {
+      "pos": "v.",
+      "ipa": "/duː/",
+      "cn": "做，干",
+      "note": "过去式 did，过去分词 done。do 和 make 都译“做”：do 偏“做事”，make 偏“做出实物”。"
+    },
+    "don't": {
+      "pos": "助动词",
+      "ipa": "/dəʊnt/",
+      "cn": "不（= do not）"
+    },
+    "drew": {
+      "pos": "v.",
+      "ipa": "/druː/",
+      "cn": "画（draw 的过去式）"
+    },
+    "each": {
+      "pos": "det.",
+      "ipa": "/iːtʃ/",
+      "cn": "每个",
+      "note": "each 强调个体，every 强调全体。each 可作代词，every 不行。"
+    },
+    "egyptian": {
+      "pos": "adj.",
+      "ipa": "/ɪˈdʒɪpʃn/",
+      "cn": "埃及的",
+      "note": "Ancient Egyptian 古埃及的。"
+    },
+    "exam": {
+      "pos": "n.",
+      "ipa": "/ɪɡˈzæm/",
+      "cn": "考试"
+    },
+    "except": {
+      "pos": "prep.",
+      "ipa": "/ɪkˈsept/",
+      "cn": "除…之外",
+      "note": "except 后面不接 from；except for 才带 for。"
+    },
+    "exchange": {
+      "pos": "n./v.",
+      "ipa": "/ɪksˈtʃeɪndʒ/",
+      "cn": "交换",
+      "note": "exchange student 交换生。"
+    },
+    "expression": {
+      "pos": "n.",
+      "ipa": "/ɪkˈspreʃn/",
+      "cn": "表达；用语",
+      "note": "linking expressions 连接用语。"
+    },
+    "fact": {
+      "pos": "n.",
+      "ipa": "/fækt/",
+      "cn": "事实",
+      "note": "in fact 事实上；as a matter of fact 其实。"
+    },
+    "far": {
+      "pos": "adv./adj.",
+      "ipa": "/fɑː/",
+      "cn": "远；……得多",
+      "note": "修饰比较级表示“…得多”：far more, far better。"
+    },
+    "fill": {
+      "pos": "v.",
+      "ipa": "/fɪl/",
+      "cn": "填满；装满",
+      "note": "fill in a gap 填空。"
+    },
+    "find": {
+      "pos": "v.",
+      "ipa": "/faɪnd/",
+      "cn": "找到，发现",
+      "note": "过去式/过去分词都是 found。find out 查明。"
+    },
+    "first": {
+      "pos": "adv./adj.",
+      "ipa": "/fɜːst/",
+      "cn": "首先；第一的"
+    },
+    "focus": {
+      "pos": "n./v.",
+      "ipa": "/ˈfəʊkəs/",
+      "cn": "重点；聚焦"
+    },
+    "for": {
+      "pos": "prep.",
+      "ipa": "/fɔː/",
+      "cn": "为了；给；持续（一段时间）",
+      "note": "for + 一段时间，常与完成时连用：for centuries 几个世纪以来。"
+    },
+    "friend": {
+      "pos": "n.",
+      "ipa": "/frend/",
+      "cn": "朋友"
+    },
+    "from": {
+      "pos": "prep.",
+      "ipa": "/frɒm/",
+      "cn": "从；来自"
+    },
+    "front": {
+      "pos": "n.",
+      "ipa": "/frʌnt/",
+      "cn": "前面",
+      "note": "in front of 在…的前面（方位）。"
+    },
+    "full": {
+      "pos": "adj.",
+      "ipa": "/fʊl/",
+      "cn": "满的；装满的"
+    },
+    "fun": {
+      "pos": "n./adj.",
+      "ipa": "/fʌn/",
+      "cn": "乐趣；有趣的"
+    },
+    "future": {
+      "pos": "n.",
+      "ipa": "/ˈfjuːtʃə/",
+      "cn": "未来；将来",
+      "note": "in future 今后（= from now on）。"
+    },
+    "get": {
+      "pos": "v.",
+      "ipa": "/ɡet/",
+      "cn": "得到，到达，变得",
+      "note": "过去式 got，过去分词 got（英式）/ gotten（美式）。"
+    },
+    "give": {
+      "pos": "v.",
+      "ipa": "/ɡɪv/",
+      "cn": "给，给予",
+      "note": "过去式 gave，过去分词 given。give sb sth = give sth to sb。"
+    },
+    "go": {
+      "pos": "v.",
+      "ipa": "/ɡəʊ/",
+      "cn": "去，走",
+      "note": "过去式 went，过去分词 gone。"
+    },
+    "got": {
+      "pos": "v.",
+      "ipa": "/ɡɒt/",
+      "cn": "得到，到达（get 的过去式/过去分词）"
+    },
+    "hand in": {
+      "pos": "词组",
+      "ipa": "/hænd ˈɪn/",
+      "cn": "上交；提交",
+      "note": "hand sth in = hand in sth；代词要放中间：hand it in。"
+    },
+    "handle": {
+      "pos": "v.",
+      "ipa": "/ˈhændl/",
+      "cn": "处理；应付",
+      "note": "handle problems 处理问题。"
+    },
+    "has": {
+      "pos": "v.",
+      "ipa": "/hæz/",
+      "cn": "有（have 的第三人称单数）"
+    },
+    "have": {
+      "pos": "v.",
+      "ipa": "/hæv/",
+      "cn": "有；已经",
+      "note": "have + 过去分词构成现在完成时。"
+    },
+    "he": {
+      "pos": "pron.",
+      "ipa": "/hiː/",
+      "cn": "他"
+    },
+    "help": {
+      "pos": "v.",
+      "ipa": "/help/",
+      "cn": "帮助",
+      "note": "help sb (to) do sth，to 可省略。"
+    },
+    "home": {
+      "pos": "n.",
+      "ipa": "/həʊm/",
+      "cn": "家",
+      "note": "at home 在家（不加 the）；go home 回家（不加 to）。"
+    },
+    "i": {
+      "pos": "pron.",
+      "ipa": "/aɪ/",
+      "cn": "我",
+      "note": "英语里 I 永远大写，不管在句子哪个位置。"
+    },
+    "i'll": {
+      "pos": "contr.",
+      "ipa": "/aɪl/",
+      "cn": "我将（= I will）"
+    },
+    "i've": {
+      "pos": "contr.",
+      "ipa": "/aɪv/",
+      "cn": "我已经（= I have）"
+    },
+    "in": {
+      "pos": "prep.",
+      "ipa": "/ɪn/",
+      "cn": "在……里；在（某段时间）"
+    },
+    "in case": {
+      "pos": "词组",
+      "ipa": "/ɪn ˈkeɪs/",
+      "cn": "以防万一",
+      "note": "in case + 从句（以防…会发生）；in case of + 名词。"
+    },
+    "in fact": {
+      "pos": "词组",
+      "ipa": "/ɪn ˈfækt/",
+      "cn": "事实上，其实",
+      "note": "用来补充或纠正前面的说法，是重要的逻辑衔接词。"
+    },
+    "in order to": {
+      "pos": "词组",
+      "ipa": "/ɪn ˈɔːdə tə/",
+      "cn": "为了（做某事）",
+      "note": "in order to do sth 表目的（比单用 to 更正式）。"
+    },
+    "instead": {
+      "pos": "adv.",
+      "ipa": "/ɪnˈsted/",
+      "cn": "代替，反而",
+      "note": "instead 单独用；instead of 后面要跟名词或动名词。"
+    },
+    "is": {
+      "pos": "v.",
+      "ipa": "/ɪz/",
+      "cn": "是（be 的第三人称单数）"
+    },
+    "it": {
+      "pos": "pron.",
+      "ipa": "/ɪt/",
+      "cn": "它",
+      "note": "五选句填空里，it 常常是判断答案的关键——一定要找到它指代什么。"
+    },
+    "just": {
+      "pos": "adv.",
+      "ipa": "/dʒʌst/",
+      "cn": "仅仅；刚刚；正好"
+    },
+    "keep": {
+      "pos": "v.",
+      "ipa": "/kiːp/",
+      "cn": "保持，持续",
+      "note": "keep doing sth 一直做；keep sb doing 让某人一直做。"
+    },
+    "know": {
+      "pos": "v.",
+      "ipa": "/nəʊ/",
+      "cn": "知道，认识",
+      "note": "过去式 knew /njuː/，过去分词 known。"
+    },
+    "lend": {
+      "pos": "v.",
+      "ipa": "/lend/",
+      "cn": "借出；借给",
+      "note": "lend sb sth 借给某人某物；对比 borrow 借入。"
+    },
+    "life": {
+      "pos": "n.",
+      "ipa": "/laɪf/",
+      "cn": "生活；生命",
+      "note": "复数 lives。"
+    },
+    "link": {
+      "pos": "v.",
+      "ipa": "/lɪŋk/",
+      "cn": "连接；联系",
+      "note": "linking words 连接词。"
+    },
+    "lives": {
+      "pos": "n.",
+      "ipa": "/laɪvz/",
+      "cn": "生活（life 的复数）",
+      "note": "of their lives 他们一生中。"
+    },
+    "long": {
+      "pos": "adj./adv.",
+      "ipa": "/lɒŋ/",
+      "cn": "长的；长久地"
+    },
+    "lucy": {
+      "pos": "n.",
+      "ipa": "/ˈluːsi/",
+      "cn": "Lucy（女子名）"
+    },
+    "make": {
+      "pos": "v.",
+      "ipa": "/meɪk/",
+      "cn": "做，制造，使得",
+      "note": "过去式/过去分词 made。make sb do sth（不加 to）。"
+    },
+    "me": {
+      "pos": "pron.",
+      "ipa": "/miː/",
+      "cn": "我（宾格）"
+    },
+    "mine": {
+      "pos": "pron.",
+      "ipa": "/maɪn/",
+      "cn": "我的（东西）",
+      "note": "= my bike / my things（名词性物主代词）。"
+    },
+    "mistake": {
+      "pos": "n./v.",
+      "ipa": "/mɪˈsteɪk/",
+      "cn": "错误；弄错",
+      "note": "make a mistake / make mistakes 犯错（用 make，不用 do）。"
+    },
+    "money": {
+      "pos": "n.",
+      "ipa": "/ˈmʌni/",
+      "cn": "钱（不可数）"
+    },
+    "more": {
+      "pos": "adv./det.",
+      "ipa": "/mɔː/",
+      "cn": "更多；更……",
+      "note": "many/much 的比较级。far more = 多得多的。"
+    },
+    "most": {
+      "pos": "adv./det.",
+      "ipa": "/məʊst/",
+      "cn": "最；最多；大多数",
+      "note": "the most exciting 最激动人心的（最高级）。"
+    },
+    "much": {
+      "pos": "adv./det.",
+      "ipa": "/mʌtʃ/",
+      "cn": "多，很"
+    },
+    "my": {
+      "pos": "pron.",
+      "ipa": "/maɪ/",
+      "cn": "我的"
+    },
+    "new": {
+      "pos": "adj.",
+      "ipa": "/njuː/",
+      "cn": "新的",
+      "note": "a new experience 一次新的经历。"
+    },
+    "news": {
+      "pos": "n.",
+      "ipa": "/njuːz/",
+      "cn": "消息，新闻",
+      "note": "<b>不可数名词</b>，看起来像复数但不是——谓语用单数：The news is good."
+    },
+    "nothing": {
+      "pos": "pron.",
+      "ipa": "/ˈnʌθɪŋ/",
+      "cn": "没有什么"
+    },
+    "now": {
+      "pos": "adv.",
+      "ipa": "/naʊ/",
+      "cn": "现在"
+    },
+    "of": {
+      "pos": "prep.",
+      "ipa": "/ɒv/",
+      "cn": "……的",
+      "note": "A of B 译成中文要倒过来：the name of the book = 这本书的名字。"
+    },
+    "off": {
+      "pos": "adv.",
+      "ipa": "/ɒf/",
+      "cn": "关掉；离开",
+      "note": "be off 关机；关着的"
+    },
+    "often": {
+      "pos": "adv.",
+      "ipa": "/ˈɒfn/",
+      "cn": "经常"
+    },
+    "ok": {
+      "pos": "int./adj.",
+      "ipa": "/ˌəʊ ˈkeɪ/",
+      "cn": "好；行（OK）",
+      "note": "口语：行、好吧。"
+    },
+    "on": {
+      "pos": "prep.",
+      "ipa": "/ɒn/",
+      "cn": "在……上；在（某一天）"
+    },
+    "one": {
+      "pos": "num./pron.",
+      "ipa": "/wʌn/",
+      "cn": "一；一个"
+    },
+    "online": {
+      "pos": "adv./adj.",
+      "ipa": "/ˌɒnˈlaɪn/",
+      "cn": "在线（的）；在网上"
+    },
+    "or": {
+      "pos": "conj.",
+      "ipa": "/ɔː/",
+      "cn": "或者"
+    },
+    "order": {
+      "pos": "n./v.",
+      "ipa": "/ˈɔːdə/",
+      "cn": "顺序；命令；点（菜）",
+      "note": "in order to do sth 为了做某事。"
+    },
+    "other": {
+      "pos": "adj.",
+      "ipa": "/ˈʌðə/",
+      "cn": "别的；另外的"
+    },
+    "our": {
+      "pos": "det.",
+      "ipa": "/ˈaʊə/",
+      "cn": "我们的"
+    },
+    "part": {
+      "pos": "n.",
+      "ipa": "/pɑːt/",
+      "cn": "部分",
+      "note": "take part in 参加"
+    },
+    "particular": {
+      "pos": "adj.",
+      "ipa": "/pəˈtɪkjələ/",
+      "cn": "特定的；特别的",
+      "note": "a particular country 某个特定的国家。"
+    },
+    "pay": {
+      "pos": "v.",
+      "ipa": "/peɪ/",
+      "cn": "支付；付钱",
+      "note": "pay sb back 把钱还给某人。"
+    },
+    "people": {
+      "pos": "n.",
+      "ipa": "/ˈpiːpl/",
+      "cn": "人们，人",
+      "note": "本身是复数，不能加 s。一个人是 a person。"
+    },
+    "picnic": {
+      "pos": "n.",
+      "ipa": "/ˈpɪknɪk/",
+      "cn": "野餐",
+      "note": "go for a picnic 去野餐。"
+    },
+    "picture": {
+      "pos": "n.",
+      "ipa": "/ˈpɪktʃə/",
+      "cn": "图画；照片",
+      "note": "draw a picture of sth 画某物的画。"
+    },
+    "practice": {
+      "pos": "n.",
+      "ipa": "/ˈpræktɪs/",
+      "cn": "练习；实践"
+    },
+    "preliminary": {
+      "pos": "n./adj.",
+      "ipa": "/prɪˈlɪmɪnəri/",
+      "cn": "预备的",
+      "note": "B1 Preliminary 剑桥 B1 考试（即 PET）"
+    },
+    "problem": {
+      "pos": "n.",
+      "ipa": "/ˈprɒbləm/",
+      "cn": "问题"
+    },
+    "project": {
+      "pos": "n.",
+      "ipa": "/ˈprɒdʒekt/",
+      "cn": "项目；课题",
+      "note": "class history project 班级历史课题。"
+    },
+    "purpose": {
+      "pos": "n.",
+      "ipa": "/ˈpɜːpəs/",
+      "cn": "目的；意图"
+    },
+    "question": {
+      "pos": "n.",
+      "ipa": "/ˈkwestʃən/",
+      "cn": "问题；题目"
+    },
+    "rain": {
+      "pos": "v./n.",
+      "ipa": "/reɪn/",
+      "cn": "下雨；雨"
+    },
+    "read": {
+      "pos": "v.",
+      "ipa": "/riːd/",
+      "cn": "读；阅读"
+    },
+    "realise": {
+      "pos": "v.",
+      "ipa": "/ˈriːəlaɪz/",
+      "cn": "意识到"
+    },
+    "really": {
+      "pos": "adv.",
+      "ipa": "/ˈriːəli/",
+      "cn": "真正地，确实"
+    },
+    "report": {
+      "pos": "v./n.",
+      "ipa": "/rɪˈpɔːt/",
+      "cn": "报道，说；报告"
+    },
+    "research": {
+      "pos": "n./v.",
+      "ipa": "/rɪˈsɜːtʃ/",
+      "cn": "研究；调查",
+      "note": "do (some) research 做研究——动词用 do，不用 make。"
+    },
+    "sally": {
+      "pos": "n.",
+      "ipa": "/ˈsæli/",
+      "cn": "Sally（女子名）"
+    },
+    "save": {
+      "pos": "v.",
+      "ipa": "/seɪv/",
+      "cn": "节省；救",
+      "note": "save water 省水。"
+    },
+    "school": {
+      "pos": "n.",
+      "ipa": "/skuːl/",
+      "cn": "学校"
+    },
+    "seat": {
+      "pos": "n.",
+      "ipa": "/siːt/",
+      "cn": "座位",
+      "note": "find a seat 找到座位。"
+    },
+    "section": {
+      "pos": "n.",
+      "ipa": "/ˈsekʃn/",
+      "cn": "区域；部分；（博物馆的）展区"
+    },
+    "see": {
+      "pos": "v.",
+      "ipa": "/siː/",
+      "cn": "看见；明白",
+      "note": "过去式 saw，过去分词 seen。"
+    },
+    "sentence": {
+      "pos": "n.",
+      "ipa": "/ˈsentəns/",
+      "cn": "句子"
+    },
+    "sienna": {
+      "pos": "n.",
+      "ipa": "/siˈenə/",
+      "cn": "Sienna（女子名）"
+    },
+    "six": {
+      "pos": "num.",
+      "ipa": "/sɪks/",
+      "cn": "六"
+    },
+    "sleepy": {
+      "pos": "adj.",
+      "ipa": "/ˈsliːpi/",
+      "cn": "困倦的；想睡的"
+    },
+    "so": {
+      "pos": "conj./adv.",
+      "ipa": "/səʊ/",
+      "cn": "所以；这么，如此"
+    },
+    "some": {
+      "pos": "det.",
+      "ipa": "/sʌm/",
+      "cn": "一些；某个",
+      "note": "肯定句用 some；否定句和疑问句一般用 any。"
+    },
+    "some time": {
+      "pos": "词组",
+      "ipa": "/sʌm ˈtaɪm/",
+      "cn": "某个时候",
+      "note": "分开写 = 某天/一段时间；sometimes 是「有时」，别混。"
+    },
+    "something": {
+      "pos": "pron.",
+      "ipa": "/ˈsʌmθɪŋ/",
+      "cn": "某事，某物",
+      "note": "形容词修饰它时要后置：something interesting。"
+    },
+    "soon": {
+      "pos": "adv.",
+      "ipa": "/suːn/",
+      "cn": "不久，很快"
+    },
+    "statue": {
+      "pos": "n.",
+      "ipa": "/ˈstætʃuː/",
+      "cn": "雕像"
+    },
+    "still": {
+      "pos": "adv.",
+      "ipa": "/stɪl/",
+      "cn": "仍然，还"
+    },
+    "stuff": {
+      "pos": "n.",
+      "ipa": "/stʌf/",
+      "cn": "东西；玩意儿（口语，不可数）"
+    },
+    "sure": {
+      "pos": "adj.",
+      "ipa": "/ʃʊə/",
+      "cn": "确信的；一定的",
+      "note": "make sure 确保。be sure of/about sth 对…有把握。"
+    },
+    "tag question": {
+      "pos": "句型",
+      "ipa": "/tæɡ ˈkwestʃən/",
+      "cn": "反意疑问句",
+      "note": "前面否定 → 尾问用肯定：You haven't been there before, have you?"
+    },
+    "tap": {
+      "pos": "n.",
+      "ipa": "/tæp/",
+      "cn": "水龙头",
+      "note": "turn off the tap 关上水龙头。"
+    },
+    "teenager": {
+      "pos": "n.",
+      "ipa": "/ˈtiːneɪdʒə/",
+      "cn": "青少年（13–19 岁）"
+    },
+    "teeth": {
+      "pos": "n.",
+      "ipa": "/tiːθ/",
+      "cn": "牙齿（tooth 的复数）",
+      "note": "brush your teeth 刷牙。"
+    },
+    "test": {
+      "pos": "n./v.",
+      "ipa": "/test/",
+      "cn": "测试；考试"
+    },
+    "text": {
+      "pos": "v./n.",
+      "ipa": "/tekst/",
+      "cn": "发短信；文本，短信"
+    },
+    "that": {
+      "pos": "pron./conj.",
+      "ipa": "/ðæt/",
+      "cn": "那个；引导从句",
+      "note": "引导宾语从句时常可省略；引导定语从句时作主语不能省。"
+    },
+    "the": {
+      "pos": "art.",
+      "ipa": "/ðə/",
+      "cn": "这，那（定冠词）",
+      "note": "表示特指、或前文已提到过的人或物。第二次提到时一般用 the。"
+    },
+    "their": {
+      "pos": "pron.",
+      "ipa": "/ðeə/",
+      "cn": "他们的"
+    },
+    "them": {
+      "pos": "pron.",
+      "ipa": "/ðem/",
+      "cn": "他们（宾格）"
+    },
+    "there": {
+      "pos": "adv.",
+      "ipa": "/ðeə/",
+      "cn": "那里"
+    },
+    "these": {
+      "pos": "det./pron.",
+      "ipa": "/ðiːz/",
+      "cn": "这些"
+    },
+    "they": {
+      "pos": "pron.",
+      "ipa": "/ðeɪ/",
+      "cn": "他们，它们"
+    },
+    "think": {
+      "pos": "v.",
+      "ipa": "/θɪŋk/",
+      "cn": "想，认为",
+      "note": "过去式/过去分词 thought /θɔːt/。"
+    },
+    "this": {
+      "pos": "det./pron.",
+      "ipa": "/ðɪs/",
+      "cn": "这个"
+    },
+    "thomas": {
+      "pos": "n.",
+      "ipa": "/ˈtɒməs/",
+      "cn": "Thomas（男子名）"
+    },
+    "time": {
+      "pos": "n.",
+      "ipa": "/taɪm/",
+      "cn": "时间（不可数）；次，回（可数）",
+      "note": "each time 每次；three times 三次。"
+    },
+    "to": {
+      "pos": "prep.",
+      "ipa": "/tuː/",
+      "cn": "到，向；[不定式符号]",
+      "note": "作不定式符号时后面跟动词原形；作介词时后面跟名词或动名词。"
+    },
+    "too": {
+      "pos": "adv.",
+      "ipa": "/tuː/",
+      "cn": "也；太",
+      "note": "表「也」时用在<b>肯定句</b>末尾；否定句用 either。"
+    },
+    "traffic": {
+      "pos": "n.",
+      "ipa": "/ˈtræfɪk/",
+      "cn": "交通；路上行驶的车辆",
+      "note": "because of the traffic 因为交通（拥堵）。"
+    },
+    "train": {
+      "pos": "n.",
+      "ipa": "/treɪn/",
+      "cn": "火车",
+      "note": "作动词是「训练、培训」。"
+    },
+    "training": {
+      "pos": "n.",
+      "ipa": "/ˈtreɪnɪŋ/",
+      "cn": "训练"
+    },
+    "turn": {
+      "pos": "v.",
+      "ipa": "/tɜːn/",
+      "cn": "转，变成",
+      "note": "turn out 结果是；turn on/off 开关。"
+    },
+    "use": {
+      "pos": "n./v.",
+      "ipa": "/juːs/",
+      "cn": "使用",
+      "note": "for customers' use 供顾客使用"
+    },
+    "us": {
+      "pos": "pron.",
+      "ipa": "/ʌs/",
+      "cn": "我们（宾格）"
+    },
+    "various": {
+      "pos": "adj.",
+      "ipa": "/ˈveəriəs/",
+      "cn": "各种各样的",
+      "note": "various animals 各种各样的动物。"
+    },
+    "very": {
+      "pos": "adv.",
+      "ipa": "/ˈveri/",
+      "cn": "非常，很",
+      "note": "very 修饰形容词和副词；不能直接修饰动词（不能说 I very like it）。"
+    },
+    "visit": {
+      "pos": "v./n.",
+      "ipa": "/ˈvɪzɪt/",
+      "cn": "参观，拜访"
+    },
+    "vocabulary": {
+      "pos": "n.",
+      "ipa": "/vəˈkæbjələri/",
+      "cn": "词汇"
+    },
+    "want": {
+      "pos": "v.",
+      "ipa": "/wɒnt/",
+      "cn": "想要"
+    },
+    "warn": {
+      "pos": "v.",
+      "ipa": "/wɔːn/",
+      "cn": "警告；提醒",
+      "note": "warn sb of/about sth；warn sb (not) to do sth 提醒/警告某人（别）做某事。"
+    },
+    "was": {
+      "pos": "v.",
+      "ipa": "/wɒz/",
+      "cn": "是（be 的过去式，用于 I / he / she / it 及单数）"
+    },
+    "way": {
+      "pos": "n.",
+      "ipa": "/weɪ/",
+      "cn": "方法，方式；路",
+      "note": "That way 这样一来；in this way 用这种方法。"
+    },
+    "we": {
+      "pos": "pron.",
+      "ipa": "/wiː/",
+      "cn": "我们"
+    },
+    "went": {
+      "pos": "v.",
+      "ipa": "/went/",
+      "cn": "去（go 的过去式）"
+    },
+    "were": {
+      "pos": "v.",
+      "ipa": "/wɜː/",
+      "cn": "是（be 的过去式，用于 we / you / they 及复数）"
+    },
+    "what": {
+      "pos": "pron.",
+      "ipa": "/wɒt/",
+      "cn": "什么；……的东西",
+      "note": "引导名词性从句时 = the thing that，不能换成 that。"
+    },
+    "when": {
+      "pos": "conj.",
+      "ipa": "/wen/",
+      "cn": "当……的时候",
+      "note": "引导时间状语从句。"
+    },
+    "wherever": {
+      "pos": "conj.",
+      "ipa": "/weərˈevə/",
+      "cn": "无论哪里",
+      "note": "指地点；「每当」要说 whenever。"
+    },
+    "which": {
+      "pos": "pron.",
+      "ipa": "/wɪtʃ/",
+      "cn": "哪一个；这（指代前文）",
+      "note": "引导非限制性定语从句时可指代<b>整句话</b>，前面要有逗号。"
+    },
+    "why don't we": {
+      "pos": "句型",
+      "ipa": "/waɪ dəʊnt wi/",
+      "cn": "我们何不…呢？（提建议）",
+      "note": "Why don't we do sth? 用来提议：Why don't we go together?"
+    },
+    "with": {
+      "pos": "prep.",
+      "ipa": "/wɪð/",
+      "cn": "和……一起；带有",
+      "note": "with + 名词 + 修饰语可作伴随状语，中文常要拆成独立小句。"
+    },
+    "word": {
+      "pos": "n.",
+      "ipa": "/wɜːd/",
+      "cn": "单词；话"
+    },
+    "work": {
+      "pos": "v./n.",
+      "ipa": "/wɜːk/",
+      "cn": "工作；起作用",
+      "note": "作名词不可数。works 表示“作品”或“工厂”。"
+    },
+    "write": {
+      "pos": "v.",
+      "ipa": "/raɪt/",
+      "cn": "写（wrote / written）"
+    },
+    "you": {
+      "pos": "pron.",
+      "ipa": "/juː/",
+      "cn": "你；你们"
+    },
+    "you'd": {
+      "pos": "contr.",
+      "ipa": "/juːd/",
+      "cn": "你…（= you would / you had）",
+      "note": "you'd better = you had better 你最好。"
+    },
+    "you'll": {
+      "pos": "contr.",
+      "ipa": "/juːl/",
+      "cn": "你将会（= you will）"
+    },
+    "young": {
+      "pos": "adj.",
+      "ipa": "/jʌŋ/",
+      "cn": "年轻的"
+    }
+  },
+  "questions": [
+    {
+      "n": 101,
+      "tag": "①-1",
+      "prompt": "训练①-1 —— 第 2 题那段文字是什么类型？",
+      "answer": "b",
+      "opts": {
+        "a": "a news report",
+        "b": "an article",
+        "c": "an advertisement"
+      },
+      "why": "官方答案：<b>b an article</b>。这段文字用一般现在时客观地介绍「当交换生」这件事，没有新闻事件、也没有推销。",
+      "clues": [
+        "全篇讲一类现象（很多年轻人…），不是某件新闻",
+        "没有价格、联系方式、催促行动——不是广告"
+      ],
+      "others": [
+        [
+          "a",
+          "<b>news report</b> 要有一件具体新闻：谁、何时、何地、发生了什么。这段没有事件。"
+        ],
+        [
+          "c",
+          "<b>advertisement</b> 会推销东西（课程/产品）并催你行动，这段只是在介绍。"
+        ]
+      ],
+      "tip": "做题方法：类型题看「有没有事件、有没有推销」——都没有就是 article。",
+      "ana": {
+        "parts": [
+          [
+            "主语",
+            "<code>the text</code> —— 这段文字"
+          ],
+          [
+            "系表",
+            "<code>is an article</code> —— 是一篇文章"
+          ]
+        ],
+        "gram": [
+          "text type：文章类型（article / report / advertisement / email…）"
+        ],
+        "tr": "这段文字是一篇文章。"
+      }
+    },
+    {
+      "n": 102,
+      "tag": "①-2",
+      "prompt": "训练①-2 —— 作者写这段话的目的是什么？",
+      "answer": "a",
+      "opts": {
+        "a": "to encourage young people to study abroad",
+        "b": "to recommend a particular country",
+        "c": "to warn of the dangers of travelling"
+      },
+      "why": "官方答案：<b>a to encourage young people to study abroad</b>。全段都在讲当交换生的好处（fun、了解另一种生活方式、变得更自信）——是在鼓励。",
+      "clues": [
+        "helps teenagers learn about a different way of life",
+        "they also become more confident —— 好处一串"
+      ],
+      "others": [
+        [
+          "b",
+          "<b>to recommend a particular country</b>：全段只字未提哪个国家，谈不上推荐。"
+        ],
+        [
+          "c",
+          "<b>to warn of the dangers of travelling</b>：一个反面词都没有，全是好处，方向相反。"
+        ]
+      ],
+      "tip": "目的题：看文章在「夸」还是在「劝退」——本段全是好处，所以是鼓励。",
+      "ana": {
+        "parts": [
+          [
+            "目的",
+            "<code>to encourage young people to study abroad</code> —— 鼓励年轻人去国外学习"
+          ]
+        ],
+        "gram": [
+          "encourage sb to do sth：鼓励某人做某事",
+          "选项都是 to do 形式（目的）"
+        ],
+        "tr": "作者想鼓励年轻人去国外学习。"
+      }
+    },
+    {
+      "n": 103,
+      "tag": "①-3",
+      "prompt": "训练①-3 —— 这段话主要讲什么？",
+      "answer": "c",
+      "opts": {
+        "a": "the best way to travel",
+        "b": "the customs of other countries",
+        "c": "teenagers studying abroad"
+      },
+      "why": "官方答案：<b>c teenagers studying abroad</b>。首句就是 spending time as an exchange student abroad，全段围绕「青少年在国外做交换生」展开。",
+      "clues": [
+        "For many young people… as an exchange student abroad",
+        "it helps teenagers learn… they become more confident"
+      ],
+      "others": [
+        [
+          "a",
+          "<b>the best way to travel</b>：没有比较哪种旅行方式，主题是「当交换生」不是「怎么旅行」。"
+        ],
+        [
+          "b",
+          "<b>the customs of other countries</b>：风俗只是顺带提到（get used to the customs），不是主题。"
+        ]
+      ],
+      "tip": "主旨题：首句 + 反复出现的词（young people、exchange student、teenagers）合起来就是答案。",
+      "ana": {
+        "parts": [
+          [
+            "主题",
+            "<code>teenagers studying abroad</code> —— 青少年在国外学习"
+          ]
+        ],
+        "gram": [
+          "主旨题抓首句和高频词"
+        ],
+        "tr": "这段话主要讲青少年去国外学习（当交换生）这件事。"
+      }
+    },
+    {
+      "n": 104,
+      "tag": "②-1",
+      "prompt": "训练②-1 ——「…can be the … exciting experience of their lives」第 1 空填什么？",
+      "answer": "most",
+      "why": "官方答案：<b>most</b>。the most exciting experience of their lives「他们一生中最激动人心的经历」——范围是「一生」，用最高级。",
+      "clues": [
+        "the …… exciting experience",
+        "of their lives（一生的范围）→ 最高级"
+      ],
+      "others": [
+        [
+          "more",
+          "<b>more</b> exciting 是比较级（比…更），后面要有 than；这里说的是「一生中最…」→ the most。"
+        ],
+        [
+          "much",
+          "<b>much</b> 只能修饰比较级（much more exciting），不能直接接 exciting。"
+        ]
+      ],
+      "tip": "看到「the …… + 形容词 + 名词」先想最高级：the most exciting。",
+      "ana": {
+        "parts": [
+          [
+            "表语",
+            "<code>the most exciting experience of their lives</code> —— 一生中最激动人心的经历"
+          ]
+        ],
+        "gram": [
+          "the most + 多音节形容词：最高级",
+          "of their lives：在…范围之内"
+        ],
+        "tr": "（当交换生）可能是他们一生中最激动人心的经历。"
+      },
+      "gap": "1"
+    },
+    {
+      "n": 105,
+      "tag": "②-2",
+      "prompt": "训练②-2 ——「In … to being lots of fun」第 2 空填什么？",
+      "answer": "addition",
+      "why": "官方答案：<b>addition</b>。in addition to sth/doing sth =「除…之外（还）」，固定搭配。",
+      "clues": [
+        "In …… to being lots of fun（后面是动名词）",
+        "in addition to = besides（除了…还）"
+      ],
+      "others": [
+        [
+          "fact",
+          "in <b>fact</b> 是「事实上」，后面跟句子，不接 to doing / 名词短语。"
+        ],
+        [
+          "order",
+          "in <b>order</b> to 表目的（为了），后面接动词原形，不能是 being。"
+        ]
+      ],
+      "tip": "这两个干扰项就是第 ③ 题要练的 in fact / in order to——搭配题先把短语补全再选。",
+      "ana": {
+        "parts": [
+          [
+            "介词短语",
+            "<code>In addition to being lots of fun</code> —— 除了很有趣（之外）"
+          ]
+        ],
+        "gram": [
+          "in addition to + 名词/动名词：除…之外（还）",
+          "to 是介词 → 后面用 being"
+        ],
+        "tr": "除了乐趣多多，它还…"
+      },
+      "gap": "2"
+    },
+    {
+      "n": 106,
+      "tag": "②-3",
+      "prompt": "训练②-3 ——「…as they get used … the customs…」第 3 空填什么？",
+      "answer": "to",
+      "why": "官方答案：<b>to</b>。get used to sth/doing sth =「习惯于…」，to 是介词。",
+      "clues": [
+        "get used …… the customs（后面是名词）",
+        "be/get used to + 名词：习惯于"
+      ],
+      "others": [
+        [
+          "for",
+          "get used <b>for</b> 不成搭配；for 表用途，放进来说不通。"
+        ],
+        [
+          "with",
+          "get used <b>with</b> 也不成立——固定搭配只有 get used to。"
+        ]
+      ],
+      "tip": "和 be interested in 一样：这类「形容词/动词 + 固定介词」的搭配，背整块。",
+      "ana": {
+        "parts": [
+          [
+            "谓语",
+            "<code>get used to</code> —— 习惯于"
+          ],
+          [
+            "宾语",
+            "<code>the customs in another country</code> —— 另一个国家的风俗"
+          ]
+        ],
+        "gram": [
+          "get/be used to sth/doing sth：习惯于（to 是介词）",
+          "别混：used to do sth 是「过去常常做」"
+        ],
+        "tr": "（他们）逐渐习惯另一个国家的风俗。"
+      },
+      "gap": "3"
+    },
+    {
+      "n": 107,
+      "tag": "②-4",
+      "prompt": "训练②-4 ——「…handle most problems on … own」第 4 空填什么？",
+      "answer": "their",
+      "why": "官方答案：<b>their</b>。on one's own =「独自、靠自己」；主语是 they，物主代词用 their。",
+      "clues": [
+        "on …… own（own 前面缺物主代词）",
+        "主语 they → their"
+      ],
+      "others": [
+        [
+          "there",
+          "<b>there</b> 是「那里」，不是物主代词：on there own ✗ 不成短语。"
+        ],
+        [
+          "they",
+          "<b>they</b> 是主格；own 前面要的是物主代词：on they own ✗。"
+        ]
+      ],
+      "tip": "on one's own = by oneself（独自）；one's 要跟着主语换：I → my、they → their。",
+      "ana": {
+        "parts": [
+          [
+            "状语",
+            "<code>on their own</code> —— 靠他们自己"
+          ]
+        ],
+        "gram": [
+          "on one's own：独自、靠自己（= by oneself）",
+          "物主代词要和主语一致：they → their"
+        ],
+        "tr": "他们能独自处理大多数问题。"
+      },
+      "gap": "4"
+    },
+    {
+      "n": 108,
+      "tag": "③-1",
+      "prompt": "训练③-1 ——「Thomas went to bed very early …… he was feeling sleepy.」选哪个？",
+      "answer": "a",
+      "opts": {
+        "a": "as",
+        "b": "so"
+      },
+      "why": "官方答案：<b>as</b>（因为）。他「因为困」才早早去睡——as 引导原因状语从句。",
+      "clues": [
+        "as = 因为、由于",
+        "so = 所以（表结果，因果会反过来）"
+      ],
+      "others": [
+        [
+          "b",
+          "<b>so</b> 表结果：早睡「所以」困——逻辑反了；困是原因不是结果。"
+        ]
+      ],
+      "tip": "因果题：先问「哪个是原因」——困 → 早睡，原因在后半句，用 as。",
+      "ana": {
+        "parts": [
+          [
+            "主句",
+            "<code>Thomas went to bed very early</code> —— Thomas 很早去睡了"
+          ],
+          [
+            "原因从句",
+            "<code>as he was feeling sleepy</code> —— 因为他觉得困"
+          ]
+        ],
+        "gram": [
+          "as 引导原因状语从句：因为、由于",
+          "so 表结果：所以"
+        ],
+        "tr": "Thomas 很早去睡了，因为他觉得困。"
+      }
+    },
+    {
+      "n": 109,
+      "tag": "③-2",
+      "prompt": "训练③-2 ——「I'll lend you some money as …… as you can pay me back.」选哪个？",
+      "answer": "a",
+      "opts": {
+        "a": "long",
+        "b": "far"
+      },
+      "why": "官方答案：<b>long</b>：as long as =「只要」（条件）。",
+      "clues": [
+        "as …… as 中间选词，构成固定短语",
+        "「只要你还得起」→ as long as"
+      ],
+      "others": [
+        [
+          "b",
+          "<b>as far as</b> 是「就…而言；远达」（as far as I know / as far as the eye can see），不表条件。"
+        ]
+      ],
+      "tip": "as long as 是条件；as far as 是范围/距离。考条件就选 long。",
+      "ana": {
+        "parts": [
+          [
+            "条件从句",
+            "<code>as long as you can pay me back</code> —— 只要你能把钱还我"
+          ],
+          [
+            "主句",
+            "<code>I'll lend you some money</code> —— 我就借给你一些钱"
+          ]
+        ],
+        "gram": [
+          "as long as = 只要（提出条件）",
+          "lend sb sth：借给某人某物"
+        ],
+        "tr": "只要你把钱还我，我就借给你一些钱。"
+      }
+    },
+    {
+      "n": 110,
+      "tag": "③-3",
+      "prompt": "训练③-3 ——「There was nothing in the room …… from a table and chairs.」选哪个？",
+      "answer": "b",
+      "opts": {
+        "a": "except",
+        "b": "apart"
+      },
+      "why": "官方答案：<b>apart</b>（apart from = 除了…之外）。空后面跟着 from，只有 apart 能组成固定短语。",
+      "clues": [
+        "空后是 from —— 要凑成 apart from",
+        "apart from = except = 除了…之外"
+      ],
+      "others": [
+        [
+          "a",
+          "<b>except</b> 意思也对（除了），但 except 后面不接 from—— except from ✗；这空考的是短语 apart from。"
+        ]
+      ],
+      "tip": "看到空后有 from 就锁定 apart；except 要用也是 except for（表「除…之外美中不足」）。",
+      "ana": {
+        "parts": [
+          [
+            "主干",
+            "<code>There was nothing in the room</code> —— 房间里什么都没有"
+          ],
+          [
+            "补充",
+            "<code>apart from a table and chairs</code> —— 除了一张桌子和几把椅子"
+          ]
+        ],
+        "gram": [
+          "apart from = except：除了…之外",
+          "except for 才带 for"
+        ],
+        "tr": "房间里除了一张桌子和几把椅子，什么都没有。"
+      }
+    },
+    {
+      "n": 111,
+      "tag": "③-4",
+      "prompt": "训练③-4 ——「…your number in …… I need to call you.」选哪个？",
+      "answer": "b",
+      "opts": {
+        "a": "fact",
+        "b": "case"
+      },
+      "why": "官方答案：<b>case</b>：in case I need to call you =「以防我需要给你打电话」。",
+      "clues": [
+        "in case = 以防万一（后面跟从句）",
+        "in fact = 事实上（转折/补充说明）"
+      ],
+      "others": [
+        [
+          "a",
+          "<b>in fact</b> 是「事实上」，放在这里句子意思断裂——「事实」没法当「以防」用。"
+        ]
+      ],
+      "tip": "in case 后面跟句子（以防…）；in fact 后面也跟句子，但意思完全不同——看逻辑选。",
+      "ana": {
+        "parts": [
+          [
+            "主句",
+            "<code>You'd better give me your number</code> —— 你最好把电话给我"
+          ],
+          [
+            "目的从句",
+            "<code>in case I need to call you</code> —— 以防我需要给你打电话"
+          ]
+        ],
+        "gram": [
+          "in case + 从句：以防（万一）",
+          "in fact：事实上"
+        ],
+        "tr": "你最好把电话号码给我，以防我需要给你打电话。"
+      }
+    },
+    {
+      "n": 112,
+      "tag": "③-5",
+      "prompt": "训练③-5 ——「…brush your teeth in …… to save water.」选哪个？",
+      "answer": "b",
+      "opts": {
+        "a": "future",
+        "b": "order"
+      },
+      "why": "官方答案：<b>order</b>：in order to save water =「为了省水」（表目的）。",
+      "clues": [
+        "空后是 to save water（表目的）",
+        "in order to do sth = 为了做某事"
+      ],
+      "others": [
+        [
+          "a",
+          "<b>in future</b> 是「今后」（时间状语），后面不接 to——in future to save ✗。"
+        ]
+      ],
+      "tip": "看到 to do 在前面等着的，多半是 in order to（目的）；in future 单独用。",
+      "ana": {
+        "parts": [
+          [
+            "目的状语",
+            "<code>in order to save water</code> —— 为了省水"
+          ],
+          [
+            "主句",
+            "<code>Turn off the tap when you brush your teeth</code> —— 刷牙时把水龙头关掉"
+          ]
+        ],
+        "gram": [
+          "in order to do sth：为了做某事（表目的）",
+          "in future：今后（= from now on）"
+        ],
+        "tr": "刷牙时把水龙头关掉，好省水。"
+      }
+    },
+    {
+      "n": 113,
+      "tag": "③-6",
+      "prompt": "训练③-6 ——「Let's go now …… waiting here all afternoon.」选哪个？",
+      "answer": "a",
+      "opts": {
+        "a": "instead",
+        "b": "in front of"
+      },
+      "why": "官方答案：<b>instead</b>：instead of waiting =「而不是在这儿等」。",
+      "clues": [
+        "instead of + 动名词：而不是…",
+        "in front of 是方位：「在…前面」"
+      ],
+      "others": [
+        [
+          "b",
+          "<b>in front of waiting</b> 变成「在一堆等待的前面」——意思不通。"
+        ]
+      ],
+      "tip": "instead of doing sth（而不是做）；in front of 只指位置。",
+      "ana": {
+        "parts": [
+          [
+            "主句",
+            "<code>Let's go now</code> —— 我们现在走吧"
+          ],
+          [
+            "补充",
+            "<code>instead of waiting here all afternoon</code> —— 而不是在这儿等一整个下午"
+          ]
+        ],
+        "gram": [
+          "instead of sth/doing sth：而不是…（后接动名词）",
+          "in front of：在…前面"
+        ],
+        "tr": "我们现在就走吧，别在这儿等一整个下午了。"
+      }
+    },
+    {
+      "n": 27,
+      "prompt": "第 27 题 ——「That was my first visit, believe it or ……!」填一个词。",
+      "answer": "not",
+      "why": "官方解析：<b>not</b>——believe it or not 是固定短语「信不信由你」。",
+      "clues": [
+        "believe it or ……：固定短语缺一截",
+        "or 后面接 not 构成「信不信」"
+      ],
+      "others": [
+        [
+          "no",
+          "believe it or <b>no</b> ✗——固定说法是 believe it or not，不能换 no。"
+        ],
+        [
+          "nor",
+          "<b>nor</b> 要和 neither 搭配（neither…nor）；和 believe it or 不成短语。"
+        ]
+      ],
+      "tip": "做填空先想短语：believe it or not / hand in / why don't we——本页几乎每空都是固定搭配。",
+      "ana": {
+        "parts": [
+          [
+            "插入语",
+            "<code>believe it or not</code> —— 信不信由你"
+          ]
+        ],
+        "gram": [
+          "believe it or not：固定短语（插入语）"
+        ],
+        "tr": "那是我第一次去，信不信由你！"
+      }
+    },
+    {
+      "n": 28,
+      "prompt": "第 28 题 ——「We have to hand it …… soon, don't we?」填一个词。",
+      "answer": "in",
+      "why": "官方解析：<b>in</b>——hand in 是动词短语「上交、提交」（hand in homework）；代词 it 夹在中间：hand it in。",
+      "clues": [
+        "hand it …… soon：hand in 是动词短语",
+        "代词放中间：hand it in"
+      ],
+      "others": [
+        [
+          "off",
+          "hand <b>off</b> ✗——没有这个短语（hand out 是「分发」，也不合句意）。"
+        ],
+        [
+          "on",
+          "hand <b>on</b> 是「往下传递」，不是「交给老师」——不合作业语境。"
+        ]
+      ],
+      "tip": "动词短语题：先想 hand 家族（hand in 交、hand out 发、hand on 传），再按句意挑。",
+      "ana": {
+        "parts": [
+          [
+            "谓语",
+            "<code>have to hand it in</code> —— 得把它交上去"
+          ],
+          [
+            "状语",
+            "<code>soon</code> —— 很快"
+          ]
+        ],
+        "gram": [
+          "hand in sth / hand sth in：上交、提交（代词只能放中间）"
+        ],
+        "tr": "我们很快得把它交上去，对吧？"
+      }
+    },
+    {
+      "n": 29,
+      "prompt": "第 29 题 ——「I went to the Ancient History section, …… the museum keeps all its ancient Egyptian stuff.」填一个词。",
+      "answer": "where",
+      "why": "官方解析：<b>where</b>——逗号后是非限制性定语从句，先行词是地点（section），用关系副词 where。",
+      "clues": [
+        "逗号 + 从句 → 非限制性定语从句",
+        "先行词 section 是地点 → where"
+      ],
+      "others": [
+        [
+          "which",
+          "<b>which</b> 是关系代词，后面从句要缺主/宾语；这里 the museum keeps all its stuff 主谓宾齐全，缺的是地点状语。"
+        ],
+        [
+          "that",
+          "<b>that</b> 不能引导非限制性定语从句（逗号后面不能用 that）。"
+        ]
+      ],
+      "tip": "定语从句先看先行词：地点 → where；再看从句缺什么：完整 → 用关系副词。",
+      "ana": {
+        "parts": [
+          [
+            "主句",
+            "<code>I went to the Ancient History section</code> —— 我去了古代史展区"
+          ],
+          [
+            "定语从句",
+            "<code>where the museum keeps all its ancient Egyptian stuff</code> —— 博物馆把所有古埃及藏品存放在那儿"
+          ]
+        ],
+        "gram": [
+          "非限制性定语从句：逗号 + which/who/where（不能用 that）",
+          "先行词地点 + 从句完整 → where"
+        ],
+        "tr": "我去了古代史展区，博物馆把所有的古埃及藏品都放在那里。"
+      }
+    },
+    {
+      "n": 30,
+      "prompt": "第 30 题 ——「…so I drew some pictures of them and then …… some research about them online…」填一个词。",
+      "answer": "did",
+      "why": "官方解析：<b>did</b>——do some research（做研究）；and 连接两个并列谓语，前一个是 drew（过去时），后一个也要过去时。",
+      "clues": [
+        "drew some pictures and then …… some research",
+        "do research = 做研究（用 do）"
+      ],
+      "others": [
+        [
+          "made",
+          "make <b>research</b> ✗——英语说 do research（研究用 do，不用 make）。"
+        ],
+        [
+          "took",
+          "take <b>research</b> ✗ 不成搭配。"
+        ]
+      ],
+      "tip": "先定短语（do research），再定时态（drew → did）——两关都过才算数。",
+      "ana": {
+        "parts": [
+          [
+            "谓语 1",
+            "<code>drew some pictures of them</code> —— 画了它们的一些画"
+          ],
+          [
+            "谓语 2",
+            "<code>(and then) did some research about them</code> —— 然后查了它们的资料"
+          ]
+        ],
+        "gram": [
+          "do research / do some research：做研究",
+          "并列谓语时态一致：drew → did"
+        ],
+        "tr": "我画了它们的一些画，回家后又上网查了它们的资料。"
+      }
+    },
+    {
+      "n": 31,
+      "prompt": "第 31 题 ——「In fact, …… don't we go together?」填一个词。",
+      "answer": "why",
+      "why": "官方解析：<b>why</b>——why don't we go together? 是提建议的句型（咱们一起去吧？）。",
+      "clues": [
+        "…… don't we go together：don't we 开头",
+        "提建议的固定句型 why don't we…?"
+      ],
+      "others": [
+        [
+          "how",
+          "<b>How don't we</b> ✗。要说 How about going together?（how about + doing）才对——结构不同。"
+        ],
+        [
+          "what",
+          "<b>What don't we</b> ✗。What about going together? 才对。"
+        ],
+        [
+          "shall",
+          "Shall we go together? 意思没错，但空后面是 <b>don't</b> we，shall 配不了 don't——结构对不上。"
+        ]
+      ],
+      "tip": "看到 don't we 三个字，先想 why don't we…?（建议）；how/what 要配 about + doing。",
+      "ana": {
+        "parts": [
+          [
+            "状语",
+            "<code>In fact</code> —— 其实"
+          ],
+          [
+            "建议句",
+            "<code>Why don't we go together?</code> —— 我们何不一起去呢？"
+          ]
+        ],
+        "gram": [
+          "Why don't we do sth?：提建议",
+          "How/What about doing sth?：另一种建议说法"
+        ],
+        "tr": "其实，我们何不一起去呢？"
+      }
+    },
+    {
+      "n": 32,
+      "prompt": "第 32 题 ——「I don't think you've been there before, …… you?」填一个词。",
+      "answer": "have",
+      "why": "官方解析：<b>have</b>——反意疑问句：前面否定（don't think…before），尾问用肯定；助动词跟从句一致（you've been → have）。",
+      "clues": [
+        "you've been there before, …… you?",
+        "前句否定 → 尾问肯定；'ve → have"
+      ],
+      "others": [
+        [
+          "haven't",
+          "前句已经是否定（don't think you've been…），尾问再来 <b>haven't</b> 就双重否定了，不合反意疑问的规则。"
+        ],
+        [
+          "are",
+          "<b>are you?</b> 的助动词和 you've been 的时态对不上——尾问要重复句中的助动词。"
+        ],
+        [
+          "did",
+          "虽然中文是「去过」，但句子里用的是 you'<b>ve</b> been（现在完成），尾问要用 have，不是 did。"
+        ]
+      ],
+      "tip": "反意疑问三件套：①前面否定→尾问肯定（反之亦然）；②尾问的主语用代词；③助动词抄前面的。",
+      "ana": {
+        "parts": [
+          [
+            "主句",
+            "<code>I don't think (that) you've been there before</code> —— 我觉得你以前没去过那儿"
+          ],
+          [
+            "反意疑问",
+            "<code>have you?</code> —— 对吧？"
+          ]
+        ],
+        "gram": [
+          "反意疑问句：前肯定 → 后用否定；前否定 → 后用肯定",
+          "否定前移：I don't think + 肯定意义的从句"
+        ],
+        "tr": "我觉得你以前没去过那儿，对吧？"
+      }
+    }
+  ]
+}

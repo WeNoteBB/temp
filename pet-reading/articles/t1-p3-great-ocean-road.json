@@ -3650,12 +3650,6 @@
       "cn": "承诺，答应",
       "note": "promise to do sth 答应做某事"
     },
-    "recommend": {
-      "pos": "v.",
-      "ipa": "/ˌrekəˈmend/",
-      "cn": "推荐，建议",
-      "note": "recommend (that) sb (should) do sth"
-    },
     "offer": {
       "pos": "v.",
       "ipa": "/ˈɒfə/",
@@ -3673,12 +3667,6 @@
       "ipa": "/rɪˈfjuːz/",
       "cn": "拒绝",
       "note": "refuse to do sth 拒绝做某事"
-    },
-    "encourage": {
-      "pos": "v.",
-      "ipa": "/ɪnˈkʌrɪdʒ/",
-      "cn": "鼓励",
-      "note": "encourage sb to do sth 鼓励某人做某事"
     },
     "persuade": {
       "pos": "v.",
@@ -3707,11 +3695,6 @@
       "pos": "n.",
       "ipa": "/ˌʌndəˈstændɪŋ/",
       "cn": "理解"
-    },
-    "gist": {
-      "pos": "n.",
-      "ipa": "/dʒɪst/",
-      "cn": "大意，主旨"
     },
     "multiple": {
       "pos": "adj.",
@@ -3757,11 +3740,6 @@
       "ipa": "/ˈʌðəz/",
       "cn": "其他人（other 的复数）"
     },
-    "water": {
-      "pos": "n.",
-      "ipa": "/ˈwɔːtə/",
-      "cn": "水"
-    },
     "jessica": {
       "pos": "n.",
       "ipa": "/ˈdʒesɪkə/",
@@ -3802,11 +3780,6 @@
       "pos": "n.",
       "ipa": "/bɔɪ/",
       "cn": "男孩"
-    },
-    "late": {
-      "pos": "adj./adv.",
-      "ipa": "/leɪt/",
-      "cn": "迟到的；晚"
     },
     "tuesday": {
       "pos": "n.",
@@ -3924,12 +3897,6 @@
       "ipa": "/ˈlɪtrətʃə/",
       "cn": "文学"
     },
-    "let": {
-      "pos": "v.",
-      "ipa": "/let/",
-      "cn": "让",
-      "note": "let sb do sth 让某人做某事"
-    },
     "stay": {
       "pos": "v.",
       "ipa": "/steɪ/",
@@ -3972,11 +3939,6 @@
       "ipa": "/wɜːθ/",
       "cn": "值得",
       "note": "be worth doing sth 值得做某事"
-    },
-    "spend": {
-      "pos": "v.",
-      "ipa": "/spend/",
-      "cn": "花费（时间、钱）"
     },
     "admire": {
       "pos": "v.",
@@ -4023,11 +3985,6 @@
       "ipa": "/dɑːk/",
       "cn": "黑暗；黑暗的",
       "note": "before dark 天黑前"
-    },
-    "then": {
-      "pos": "adv.",
-      "ipa": "/ðen/",
-      "cn": "然后，那时"
     },
     "suddenly": {
       "pos": "adv.",
@@ -4076,12 +4033,6 @@
       "cn": "设置；一套",
       "note": "set out 出发"
     },
-    "case": {
-      "pos": "n.",
-      "ipa": "/keɪs/",
-      "cn": "情况；盒子",
-      "note": "just in case 以防万一"
-    },
     "speaker": {
       "pos": "n.",
       "ipa": "/ˈspiːkə/",
@@ -4117,12 +4068,6 @@
       "ipa": "/rɪˈɡret/",
       "cn": "后悔",
       "note": "regret doing sth 后悔做过某事"
-    },
-    "pairs": {
-      "pos": "n.",
-      "ipa": "/peəz/",
-      "cn": "一对（pair 的复数）",
-      "note": "in pairs 两人一组"
     },
     "incorrect": {
       "pos": "adj.",
@@ -4195,12 +4140,6 @@
       "pos": "n.",
       "ipa": "/ˈwebsaɪt/",
       "cn": "网站"
-    },
-    "number": {
-      "pos": "n.",
-      "ipa": "/ˈnʌmbə/",
-      "cn": "数量；号码",
-      "note": "a number of 许多"
     },
     "sharp": {
       "pos": "adj.",
@@ -4295,12 +4234,6 @@
       "pos": "conj./n.",
       "ipa": "/waɪl/",
       "cn": "一会儿；当…时"
-    },
-    "manage": {
-      "pos": "v.",
-      "ipa": "/ˈmænɪdʒ/",
-      "cn": "设法做到",
-      "note": "manage to do sth 设法做成某事"
     },
     "pull": {
       "pos": "v.",
@@ -4502,11 +4435,6 @@
       "cn": "醒着的",
       "note": "keep sb awake 让某人睡不着"
     },
-    "together": {
-      "pos": "adv.",
-      "ipa": "/təˈɡeðə/",
-      "cn": "一起"
-    },
     "food": {
       "pos": "n.",
       "ipa": "/fuːd/",
@@ -4551,11 +4479,6 @@
       "pos": "n.",
       "ipa": "/blɒɡ/",
       "cn": "博客"
-    },
-    "travel": {
-      "pos": "v./n.",
-      "ipa": "/ˈtrævl/",
-      "cn": "旅行"
     },
     "guide": {
       "pos": "n.",
@@ -4726,12 +4649,6 @@
       "ipa": "/ˈɡrændæd/",
       "cn": "爷爷，外公"
     },
-    "lot": {
-      "pos": "n.",
-      "ipa": "/lɒt/",
-      "cn": "许多",
-      "note": "a lot 很多"
-    },
     "properly": {
       "pos": "adv.",
       "ipa": "/ˈprɒpəli/",
@@ -4752,11 +4669,6 @@
       "ipa": "/ɪmˈprest/",
       "cn": "印象深刻的",
       "note": "be impressed 印象深刻"
-    },
-    "i'm": {
-      "pos": "缩写",
-      "ipa": "/aɪm/",
-      "cn": "I am 的缩写"
     },
     "surprised": {
       "pos": "adj.",
@@ -4830,20 +4742,10 @@
       "ipa": "/ˈherɪtɪdʒ/",
       "cn": "遗产"
     },
-    "feeling": {
-      "pos": "n.",
-      "ipa": "/ˈfiːlɪŋ/",
-      "cn": "感觉，情感"
-    },
     "multiple-choice": {
       "pos": "adj.",
       "ipa": "/ˌmʌltɪpl ˈtʃɔɪs/",
       "cn": "多选一的（四选一）"
-    },
-    "without": {
-      "pos": "prep.",
-      "ipa": "/wɪˈðaʊt/",
-      "cn": "没有，不带"
     },
     "change": {
       "pos": "v./n.",

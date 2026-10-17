@@ -284,7 +284,18 @@ async function testArticle(slug) {
     `[${slug}] 单词 span ${realW.length} 个 === 声明 ${C.passage.words} 词 − 内联选项词 ${pickW} 个（另有词组内空格 ${gapW} 个）`);
   ok(passage.querySelectorAll(".ph").length > 0, `[${slug}] 词组黄标 ${passage.querySelectorAll(".ph").length} 处`);
   ok(passage.querySelectorAll(".sent").length === N, `[${slug}] 句子 ${N} 个`);
-  if (optLetters.length) {
+  const clozeQs0 = (C.questions || []).filter(q => C.inlineQuiz && !Object.keys(q.opts || {}).length);
+  const gapInputs0 = [...passage.querySelectorAll(".gapin")];
+  if (clozeQs0.length) {
+    /* Part 6 式：开放填空 —— 正文里是输入框，不画绿色小圆标 */
+    ok(gapInputs0.length === clozeQs0.length,
+      `[${slug}] 开放填空输入框 ${gapInputs0.length} 个 === ${clozeQs0.length} 道题`);
+    const labelsOK = gapInputs0.every(i => {
+      const qq = clozeQs0.find(x => String(x.n) === i.dataset.gap);
+      return qq && i.placeholder === String(qq.gap != null ? qq.gap : qq.n);
+    });
+    ok(labelsOK, `[${slug}] 每个输入框的编号与题目对得上（书上的 (1)…/(27)…）`);
+  } else if (optLetters.length) {
     ok(passage.querySelectorAll(".blank").length === (C.questions || []).length,
       `[${slug}] 空位 ${passage.querySelectorAll(".blank").length} 个 === 题目 ${(C.questions || []).length} 道`);
   } else if (sents.flatMap(s => toks(s.s)).some(t => t.slot)) {
@@ -367,12 +378,15 @@ async function testArticle(slug) {
 
   /* ---------- 4. 逐字比对，防丢字 ---------- */
   const norm = s => s.replace(/\s+/g, " ").trim();
+  /* 开放填空（没有 opts 的题，Part 6 式）在正文里渲染成输入框、没有可见编号 —— 数据侧也去掉 */
+  const clozeNs = new Set(((C.questions || [])
+    .filter(q => C.inlineQuiz && !Object.keys(q.opts || {}).length)).map(q => q.n));
   const lost = [];
   C.passage.paragraphs.forEach((p, pi) => p.forEach((s, si) => {
     const el = passage.querySelector(`[data-sent="${pi}-${si}"] .sent-txt`);
     if (!el) { lost.push(`${pi}-${si} 缺元素`); return; }
     /* «…» 是「句内二选一」的渲染标记（题④③ 那种），不属于文字本身 */
-    const want = norm(s.s.replace(/\{(\d+)\}/g, "$1").replace(/[«»]/g, ""));
+    const want = norm(s.s.replace(/\{(\d+)\}/g, (m, n) => clozeNs.has(+n) ? " " : n).replace(/[«»]/g, ""));
     const got = norm(el.textContent);
     if (want !== got) lost.push(`${pi}-${si}\n        期望: ${want.slice(0, 80)}\n        实际: ${got.slice(0, 80)}`);
   }));
@@ -761,8 +775,8 @@ async function testArticle(slug) {
     const pickQn = new Set();
     C.passage.paragraphs.forEach(p => p.forEach(s => { if (s.pickQ) pickQn.add(s.pickQ); }));
     ok(rows.length > 0, `[${slug}] 正文里有答案横排 ${rows.length} 排`);
-    ok(passage.querySelectorAll("[data-qexp2]").length === rows.length + optsInlineN + optsGridN + pickQn.size,
-      `[${slug}] 每道题都有「解析」按钮（横排 ${rows.length} + 整行选项 ${optsInlineN} + 选项盒 ${optsGridN} + ③式 ${pickQn.size}）`);
+    ok(passage.querySelectorAll("[data-qexp2]").length === rows.length + optsInlineN + optsGridN + pickQn.size + clozeQs0.length,
+      `[${slug}] 每道题都有「解析」按钮（横排 ${rows.length} + 整行选项 ${optsInlineN} + 选项盒 ${optsGridN} + ③式 ${pickQn.size} + 开放填空 ${clozeQs0.length}）`);
     /* 每排横排的胶囊数 === 该题选项数（两篇通用的结构断言） */
     const rowCountsOK = rows.every(r => {
       const qq = (C.questions || []).find(x => String(x.n) === r.dataset.pickq);
@@ -1014,6 +1028,85 @@ async function testArticle(slug) {
       ok(rowOK, `[${slug}] 真题 ${examQ.length} 排作答（每题一排便签 + 解析按钮）`);
       const pn = passage.querySelector('.pickrow[data-pickq="' + examQ[0].n + '"] .pn');
       ok(pn && pn.textContent.trim() === String(examQ[0].n), `[${slug}] 真题作答排带题号（${examQ[0].n}）`);
+    }
+  }
+
+  /* ---------- 15e. Reading Part 6 的开放填空（输入框判分 / 解析按钮 / 落盘） ---------- */
+  if (clozeQs0.length) {
+    const q0 = clozeQs0[0];
+    const inp = passage.querySelector('.gapin[data-gap="' + q0.n + '"]');
+    ok(!!inp, `[${slug}] 第 ${q0.n} 题（开放填空）正文里有输入框`);
+    if (inp) {
+      inp.value = " " + String(q0.answer).toUpperCase() + " ";
+      inp.dispatchEvent(new window.Event("change", { bubbles: true }));
+      await tick();
+      ok(inp.classList.contains("ok"), `[${slug}] 填对（大小写/空格不敏感）→ 输入框变绿`);
+      const saved = JSON.parse(window.localStorage.getItem("pet:ans:v1:" + slug) || "{}");
+      ok(saved[q0.n] === String(q0.answer).toUpperCase(), `[${slug}] 填的答案落盘（刷新后还看得见）`);
+    }
+    const q1 = clozeQs0[1];
+    if (q1) {
+      const inp1 = passage.querySelector('.gapin[data-gap="' + q1.n + '"]');
+      ok(!!passage.querySelector('[data-qexp2="' + q1.n + '"]'), `[${slug}] 第 ${q1.n} 题有「解析」按钮`);
+      inp1.value = "zzz";
+      inp1.dispatchEvent(new window.Event("change", { bubbles: true }));
+      await tick();
+      ok(inp1.classList.contains("bad"), `[${slug}] 填错 → 输入框变红`);
+      ok(/题目分析/.test(ana.textContent) && ana.textContent.indexOf(String(q1.answer)) >= 0,
+        `[${slug}] 填错自动展开解析（含正确答案 ${q1.answer}）`);
+      const cardInp = qList.querySelector('.gapin[data-gap="' + q1.n + '"]');
+      ok(cardInp && cardInp.value === "zzz", `[${slug}] 题卡里的同一格同步显示`);
+    }
+    const allOK = clozeQs0.every(qq => !!passage.querySelector('.gapin[data-gap="' + qq.n + '"]'));
+    ok(allOK, `[${slug}] ${clozeQs0.length} 道开放填空全都有输入框`);
+  }
+
+  /* ---------- 15f. 笔记（书上批注）：点开词条 + ☆ 直接收藏 ---------- */
+  {
+    let host = null, hostRef = "";
+    C.passage.paragraphs.forEach((p, pi) => p.forEach((s, si) => {
+      if (!host && s.ana && Array.isArray(s.ana.note) && s.ana.note.length) { host = s; hostRef = pi + "-" + si; }
+    }));
+    if (host) {
+      const noteN = C.passage.paragraphs.flat()
+        .reduce((a, s) => a + (((s.ana && s.ana.note) || []).length), 0);
+      ok(noteN > 0, `[${slug}] 笔记条目共 ${noteN} 条`);
+      click(passage.querySelector('[data-sent="' + hostRef + '"]'));
+      await tick();
+      const rows = [...ana.querySelectorAll(".noterow")];
+      ok(rows.length === host.ana.note.length, `[${slug}] 这句的「笔记」列出 ${rows.length} 条 === 数据 ${host.ana.note.length} 条`);
+      /* 优先拿一个多词的（词组/句型）来测收藏 */
+      const pick = host.ana.note
+        .map(it => typeof it === "string" ? it : it.k)
+        .find(k => /\s/.test(k)) || (typeof host.ana.note[0] === "string" ? host.ana.note[0] : host.ana.note[0].k);
+      const keyBtn = ana.querySelector('.nkey[data-note="' + pick + '"]');
+      ok(!!keyBtn, `[${slug}] 笔记里有「${pick}」`);
+      const h0 = hist.querySelectorAll(".hitem").length;
+      click(keyBtn);
+      await tick();
+      ok(/词条/.test(ana.textContent), `[${slug}] 点笔记里的「${pick}」→ 小黑板出词条`);
+      ok(hist.querySelectorAll(".hitem").length === h0 + 1,
+        `[${slug}] 笔记里的词组也进历史（历史行里有 ☆）`);
+      /* 回到这一句，测笔记行里的 ☆ 直接收藏 */
+      click(passage.querySelector('[data-sent="' + hostRef + '"]'));
+      await tick();
+      const favBtn = ana.querySelector('.nfav[data-notefav="' + pick + '"]');
+      ok(!!favBtn, `[${slug}] 笔记行有 ☆ 收藏按钮`);
+      if (favBtn) {
+        const favsBefore = JSON.parse(window.localStorage.getItem("pet:fav:v1") || "[]").length;
+        click(favBtn);
+        await tick();
+        const favsAfter = JSON.parse(window.localStorage.getItem("pet:fav:v1") || "[]");
+        ok(favBtn.classList.contains("on") && favBtn.textContent === "★",
+          `[${slug}] 点 ☆ → 收藏成功（★）`);
+        ok(favsAfter.length === favsBefore + 1 &&
+           favsAfter.some(x => x.type === "w" && String(x.cn || "").length > 0),
+          `[${slug}] 收藏表里多了一条带释义的词组（${pick}）`);
+        click(favBtn);
+        await tick();
+        ok(!favBtn.classList.contains("on") && favBtn.textContent === "☆",
+          `[${slug}] 再点一次 → 取消收藏`);
+      }
     }
   }
 

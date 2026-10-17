@@ -1184,12 +1184,6 @@
       "cn": "终于",
       "note": "带有“盼了很久”的感情色彩，常和 finally 互换，但 at last 更强调等待之久。"
     },
-    "instead of": {
-      "pos": "phr.",
-      "ipa": "/ɪnˈsted əv/",
-      "cn": "而不是，代替",
-      "note": "<b>后面必须跟名词或动名词 doing</b>，不能跟动词原形。例：instead of <b>going</b> ✓ / instead of go ✗"
-    },
     "made sense": {
       "pos": "phr.",
       "ipa": "/ˌmeɪd ˈsens/",
@@ -1405,11 +1399,6 @@
       "ipa": "/ˈfɑːðə/",
       "cn": "父亲，爸爸"
     },
-    "history": {
-      "pos": "n.",
-      "ipa": "/ˈhɪstri/",
-      "cn": "历史"
-    },
     "lecturer": {
       "pos": "n.",
       "ipa": "/ˈlektʃərə/",
@@ -1556,38 +1545,16 @@
       "cn": "数百，成百上千",
       "note": "hundreds of years 数百年。"
     },
-    "museum": {
-      "pos": "n.",
-      "ipa": "/mjuˈziːəm/",
-      "cn": "博物馆"
-    },
-    "exciting": {
-      "pos": "adj.",
-      "ipa": "/ɪkˈsaɪtɪŋ/",
-      "cn": "令人兴奋的",
-      "note": "修饰物。修饰人的感受用 excited：I'm excited."
-    },
     "historical": {
       "pos": "adj.",
       "ipa": "/hɪˈstɒrɪkl/",
       "cn": "历史的，与历史有关的",
       "note": "对比 historic（有历史意义的）：a historic victory 历史性胜利。"
     },
-    "ancient": {
-      "pos": "adj.",
-      "ipa": "/ˈeɪnʃənt/",
-      "cn": "古代的，古老的"
-    },
     "important": {
       "pos": "adj.",
       "ipa": "/ɪmˈpɔːtnt/",
       "cn": "重要的"
-    },
-    "interesting": {
-      "pos": "adj.",
-      "ipa": "/ˈɪntrəstɪŋ/",
-      "cn": "有趣的",
-      "note": "修饰<b>物</b>。形容词修饰 something/anything 时要后置：something interesting。"
     },
     "ordinary": {
       "pos": "adj.",
@@ -1691,12 +1658,6 @@
       "pos": "v.",
       "ipa": "/tʌtʃt/",
       "cn": "触碰（touch 的过去式/过去分词）"
-    },
-    "learn": {
-      "pos": "v.",
-      "ipa": "/lɜːn/",
-      "cn": "学习，了解到",
-      "note": "过去式 learned 或 learnt 都可以。"
     },
     "divide": {
       "pos": "v.",
@@ -1861,12 +1822,6 @@
       "ipa": "/ˈdʒuːəlri/",
       "cn": "珠宝，首饰",
       "note": "<b>不可数名词</b>，没有复数。英式拼写 jewellery，美式 jewelry。"
-    },
-    "experience": {
-      "pos": "n.",
-      "ipa": "/ɪkˈspɪəriəns/",
-      "cn": "经历（可数）；经验（不可数）",
-      "note": "an experience 一次经历；work experience 工作经验（不加 a）。"
     },
     "who's": {
       "pos": "缩写",

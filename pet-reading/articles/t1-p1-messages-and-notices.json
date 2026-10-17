@@ -2784,11 +2784,6 @@
       "ipa": "/fɪlm/",
       "cn": "电影"
     },
-    "here": {
-      "pos": "adv.",
-      "ipa": "/hɪə/",
-      "cn": "这里"
-    },
     "hire": {
       "pos": "v./n.",
       "ipa": "/ˈhaɪə/",
@@ -2804,11 +2799,6 @@
       "pos": "n.",
       "ipa": "/ˈhɒskɪnz/",
       "cn": "Hoskins（姓）"
-    },
-    "its": {
-      "pos": "det.",
-      "ipa": "/ɪts/",
-      "cn": "它的"
     },
     "lent": {
       "pos": "v.",
@@ -2844,11 +2834,6 @@
       "pos": "modal",
       "ipa": "/mʌst/",
       "cn": "必须"
-    },
-    "need": {
-      "pos": "v./n.",
-      "ipa": "/niːd/",
-      "cn": "需要"
     },
     "nicola": {
       "pos": "n.",
@@ -2922,11 +2907,6 @@
       "ipa": "/stɑːf/",
       "cn": "全体员工（集合名词）"
     },
-    "student": {
-      "pos": "n.",
-      "ipa": "/ˈstjuːdnt/",
-      "cn": "学生"
-    },
     "suitable": {
       "pos": "adj.",
       "ipa": "/ˈsuːtəbl/",
@@ -2968,25 +2948,10 @@
       "ipa": "/təˈnaɪt/",
       "cn": "今晚"
     },
-    "unless": {
-      "pos": "conj.",
-      "ipa": "/ənˈles/",
-      "cn": "除非"
-    },
     "whitham": {
       "pos": "n.",
       "ipa": "/ˈwɪtəm/",
       "cn": "Whitham（姓）"
-    },
-    "you've": {
-      "pos": "contr.",
-      "ipa": "/juːv/",
-      "cn": "你已经（= you have）"
-    },
-    "your": {
-      "pos": "det.",
-      "ipa": "/jɔː/",
-      "cn": "你的"
     },
     "make sure": {
       "pos": "词组",
@@ -3037,11 +3002,6 @@
       "pos": "n./v.",
       "ipa": "/ˈiːmeɪl/",
       "cn": "电子邮件"
-    },
-    "type": {
-      "pos": "n.",
-      "ipa": "/taɪp/",
-      "cn": "类型；种类"
     },
     "function": {
       "pos": "n.",
@@ -3096,11 +3056,6 @@
       "ipa": "/ˈtæblət/",
       "cn": "药片；（也指平板电脑）"
     },
-    "danger": {
-      "pos": "n.",
-      "ipa": "/ˈdeɪndʒə/",
-      "cn": "危险"
-    },
     "thin": {
       "pos": "adj.",
       "ipa": "/θɪn/",
@@ -3137,17 +3092,6 @@
       "ipa": "/kənˈdɪʃn/",
       "cn": "状况；成色"
     },
-    "information": {
-      "pos": "n.",
-      "ipa": "/ˌɪnfəˈmeɪʃn/",
-      "cn": "信息（不可数）"
-    },
-    "try": {
-      "pos": "v.",
-      "ipa": "/traɪ/",
-      "cn": "尝试",
-      "note": "try to do 试图做"
-    },
     "sell": {
       "pos": "v.",
       "ipa": "/sel/",
@@ -3157,11 +3101,6 @@
       "pos": "modal",
       "ipa": "/ˈmʌsnt/",
       "cn": "不许；禁止（= must not）"
-    },
-    "talk": {
-      "pos": "v.",
-      "ipa": "/tɔːk/",
-      "cn": "说话；交谈"
     },
     "wear": {
       "pos": "v.",
@@ -3184,11 +3123,6 @@
       "cn": "休息；（v. 打破）",
       "note": "have a break 休息一下"
     },
-    "early": {
-      "pos": "adv./adj.",
-      "ipa": "/ˈɜːli/",
-      "cn": "早（地）"
-    },
     "pupil": {
       "pos": "n.",
       "ipa": "/ˈpjuːpl/",
@@ -3200,11 +3134,6 @@
       "cn": "噪音",
       "note": "make a noise 发出声响"
     },
-    "room": {
-      "pos": "n.",
-      "ipa": "/ruːm/",
-      "cn": "房间"
-    },
     "polite": {
       "pos": "adj.",
       "ipa": "/pəˈlaɪt/",
@@ -3215,11 +3144,6 @@
       "ipa": "/bɔːl/",
       "cn": "球"
     },
-    "hand": {
-      "pos": "n.",
-      "ipa": "/hænd/",
-      "cn": "手"
-    },
     "goalkeeper": {
       "pos": "n.",
       "ipa": "/ˈɡəʊlkiːpə/",
@@ -3229,12 +3153,6 @@
       "pos": "adj.",
       "ipa": "/ˈnesəsəri/",
       "cn": "必要的"
-    },
-    "writer": {
-      "pos": "n.",
-      "ipa": "/ˈraɪtə/",
-      "cn": "作者；写的人",
-      "note": "writer's purpose 写作目的"
     },
     "send": {
       "pos": "v.",
@@ -3261,20 +3179,10 @@
       "ipa": "/dʒeɪk/",
       "cn": "Jake（人名）"
     },
-    "hi": {
-      "pos": "interj.",
-      "ipa": "/haɪ/",
-      "cn": "嗨；你好"
-    },
     "shopping": {
       "pos": "n.",
       "ipa": "/ˈʃɒpɪŋ/",
       "cn": "购物"
-    },
-    "afternoon": {
-      "pos": "n.",
-      "ipa": "/ˌɑːftəˈnuːn/",
-      "cn": "下午"
     },
     "shall": {
       "pos": "modal",
@@ -3340,11 +3248,6 @@
       "pos": "adj.",
       "ipa": "/ɡʊd/",
       "cn": "好的"
-    },
-    "doesn't": {
-      "pos": "助动词",
-      "ipa": "/ˈdʌznt/",
-      "cn": "不（= does not）"
     },
     "can't": {
       "pos": "contr.",

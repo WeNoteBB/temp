@@ -1505,12 +1505,6 @@
     "a great place to visit"
   ],
   "glossary": {
-    "gap": {
-      "pos": "n.",
-      "ipa": "/ɡæp/",
-      "cn": "缺口；空格",
-      "note": "fill in the gap 填空。"
-    },
     "adjective": {
       "pos": "n.",
       "ipa": "/ˈædʒɪktɪv/",
@@ -1526,11 +1520,6 @@
       "pos": "n.",
       "ipa": "/ˌprepəˈzɪʃn/",
       "cn": "介词"
-    },
-    "table": {
-      "pos": "n.",
-      "ipa": "/ˈteɪbl/",
-      "cn": "表格；桌子"
     },
     "crazy": {
       "pos": "adj.",
@@ -1601,11 +1590,6 @@
       "ipa": "/ˈfreɪzl/",
       "cn": "短语的",
       "note": "phrasal verb 动词短语。"
-    },
-    "study": {
-      "pos": "v.",
-      "ipa": "/ˈstʌdi/",
-      "cn": "学习；研究"
     },
     "biology": {
       "pos": "n.",
@@ -1708,11 +1692,6 @@
       "ipa": "/ˌtiː ˈviː/",
       "cn": "电视（television 的缩写）"
     },
-    "we'll": {
-      "pos": "contr.",
-      "ipa": "/wiːl/",
-      "cn": "我们将（= we will）"
-    },
     "rabbit": {
       "pos": "n.",
       "ipa": "/ˈræbɪt/",
@@ -1728,23 +1707,6 @@
       "pos": "n.",
       "ipa": "/rɪˈzʌlt/",
       "cn": "结果；成绩"
-    },
-    "better": {
-      "pos": "adj.",
-      "ipa": "/ˈbetə/",
-      "cn": "更好的；更好地",
-      "note": "good / well 的比较级。"
-    },
-    "many": {
-      "pos": "det.",
-      "ipa": "/ˈmeni/",
-      "cn": "许多的（接可数名词）"
-    },
-    "city": {
-      "pos": "n.",
-      "ipa": "/ˈsɪti/",
-      "cn": "城市",
-      "note": "复数 cities。"
     },
     "wonderful": {
       "pos": "adj.",
@@ -1796,12 +1758,6 @@
       "ipa": "/ˈɑːtɪst/",
       "cn": "艺术家"
     },
-    "country": {
-      "pos": "n.",
-      "ipa": "/ˈkʌntri/",
-      "cn": "国家",
-      "note": "复数 countries。"
-    },
     "create": {
       "pos": "v.",
       "ipa": "/kriˈeɪt/",
@@ -1832,22 +1788,10 @@
       "ipa": "/ˌɪndɪˈvɪdʒuəl/",
       "cn": "单个的；个别的"
     },
-    "own": {
-      "pos": "adj.",
-      "ipa": "/əʊn/",
-      "cn": "自己的",
-      "note": "their own 他们自己的。"
-    },
     "special": {
       "pos": "adj.",
       "ipa": "/ˈspeʃl/",
       "cn": "特别的；专门的"
-    },
-    "class": {
-      "pos": "n.",
-      "ipa": "/klɑːs/",
-      "cn": "课；班级",
-      "note": "special classes 特别课程。"
     },
     "everything": {
       "pos": "pron.",
@@ -1910,12 +1854,6 @@
       "ipa": "/pʊt/",
       "cn": "放；放置",
       "note": "put off doing sth 拖延。"
-    },
-    "wait": {
-      "pos": "v.",
-      "ipa": "/weɪt/",
-      "cn": "等待",
-      "note": "wait for sb/sth 等待…。"
     },
     "delay": {
       "pos": "v.",

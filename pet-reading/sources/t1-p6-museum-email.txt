@@ -1,0 +1,54 @@
+title: Training Test 1
+label: Reading Part 6
+
+# 素材来源
+PDF: 剑桥PET 官方模考题精讲讲练 _27-28.pdf（书内页码 P26–P27 = 该 PDF 第 1–2 页）
+答案: 书后 P187 Teacher's Notes & Keys（Test 1 Reading Part 6；逐题核对一致）
+带笔记版: PET Trainers精讲精练带笔记_27-28.pdf（同两页的手写批注版）；
+  另外整本带笔记 PDF（PET Trainers精讲精练带笔记.pdf，221 页）里 P26 也有批注，
+  本次两页的批注都整理进了对应句子的「析 → 笔记（书上批注）」。
+图片: 本页无图片资产（Part 6 两页没有照片/插图）。
+转写注意: 训练②与真题都用 {n} 空位（引擎渲染成输入框）；训练空显示书上的 (1)–(4)（question.gap）。
+
+# 原文（真题邮件，书 P27）
+Hi Anna,
+I've just been to the museum in our city. That was my first visit, believe it or {27}! I wanted to collect some information for our class history project. We have to hand it {28} soon, don't we?
+I went to the Ancient History section, {29} the museum keeps all its ancient Egyptian stuff. It was really interesting! There were some amazing statues of various animals, so I drew some pictures of them and then {30} some research about them online when I got home.
+I've still got some work to do on my project, so I'll need to go back to the museum again some time soon. In fact, {31} don't we go together? I don't think you've been there before, {32} you? I'm sure you'll find something that you could use for your project.
+See you soon!
+Sally
+
+# 训练部分（书 P26，答案见 P187）
+① 大意三题：text type b（an article）/ writer's purpose a（to encourage young people to study abroad）/ topic c（teenagers studying abroad）
+② 填空（一空一词）：1 most / 2 addition / 3 to / 4 their
+   （in addition to 除…之外；get used to 习惯于；on their own 靠他们自己）
+③ 连接词：1 as / 2 long / 3 apart / 4 case / 5 order / 6 instead
+   （as 因为；as long as 只要；apart from 除了…；in case 以防万一；in order to 为了；instead of 而不是）
+④ 改错：1 that→than / 2 unless→if / 3 wherever→whenever / 4 too→also /
+   5 because→because of / 6 Despite→Although
+
+# 笔记（手写批注，整理进「析 → 笔记（书上批注）」）
+P26（训练页）:
+  ③-1 as 由于，因为 / ③-2 as long as 只要 / ③-3 apart from 除了… /
+  ③-4 in case 以防万一；in fact 事实上 / ③-5 in order to do sth 为了去做某事 /
+  ③-6 instead of 代替，作为替代；② 的四个空（most/addition/to/their）写的就是答案
+P27（真题页）:
+  believe it or not 信不信由你 / collect 收集 / hand in 提交，上交 /
+  Ancient History section 远古的历史区 / ancient Egyptian stuff 古埃及的东西 /
+  statues 雕像 / various 各种各样的 / research 研究 / some time 某个时间 /
+  空里填的答案：27 not / 28 in / 29 where / 30 did / 31 why / 32 have
+
+# 真题（书 P27，答案见 P187 官方解析）
+27 not（believe it or not 固定短语）
+28 in（hand in 动词短语；代词放中间：hand it in）
+29 where（逗号 + 非限制性定语从句；先行词是地点 section）
+30 did（do some research 做研究；与 drew 并列，过去时）
+31 why（why don't we…? 提建议）
+32 have（反意疑问句：前句否定 → 尾问肯定；助动词抄 've）
+
+# 数据备注（给以后的自己）
+- 开放填空：问题没有 opts → 引擎把正文的 {n} 渲染成输入框（判分忽略大小写/首尾空格），
+  答错自动展开解析并记错题；段尾一排「N 解析」按钮（编号取 q.gap）。
+- 笔记：句子上写 ana.note = [{ k 词表键, cn 显示中文, t 显示名(可选) }]；
+  小黑板「笔记（书上批注）」每行可点（开词条）+ ☆ 直接收藏（词组/句型都行）。
+- 「instead of」与 p4 的定义已统一（走共享词库）。

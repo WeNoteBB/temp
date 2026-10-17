@@ -444,8 +444,31 @@
     }
     return html;
   }
+  /* 开放填空（Reading Part 6 式：没有选项、自己写一个词）：
+     正文里的 {n} 渲染成一个小输入框，编号用 q.gap（书上的「(1)」「27」）。 */
+  function isClozeQ(q) {
+    return !!(q && C.inlineQuiz && !(q.opts && Object.keys(q.opts).length));
+  }
+  function gapLabel(q) {
+    return (q && q.gap != null && String(q.gap) !== "") ? String(q.gap) : String(q ? q.n : "");
+  }
+  function gapRight(q, val) {
+    var v = String(val == null ? "" : val).trim().toLowerCase();
+    return v !== "" && v === String((q && q.answer) || "").trim().toLowerCase();
+  }
+  /* 一个填空输入框（正文和小黑板题卡共用同一份 HTML，answered 状态从 state.ans 恢复） */
+  function gapInputHtml(q) {
+    var val = String(state.ans[q.n] == null ? "" : state.ans[q.n]);
+    var cls = "gapin" + (val ? (gapRight(q, val) ? " ok" : " bad") : "");
+    var lbl = gapLabel(q);
+    return '<span class="clozegap"><input type="text" class="' + cls + '" data-gap="' + esc(q.n) + '"' +
+      ' value="' + esc(val) + '" placeholder="' + esc(lbl) + '"' +
+      ' size="' + Math.max(2, lbl.length + 2) + '" autocomplete="off" autocapitalize="off"' +
+      ' autocorrect="off" spellcheck="false" title="填一个词"></span>';
+  }
   function renderBlank(n) {
     var q = C.questions.filter(function (x) { return String(x.n) === String(n); })[0];
+    if (isClozeQ(q) && q.answer) return gapInputHtml(q);
     var filled = q && q.answer;
     var cls = "blank" + (filled ? " filled" : "");
     return '<span class="' + cls + '" data-blank="' + n + '">' + n + "</span>";
@@ -636,6 +659,25 @@
         h += '<span class="pickrow">';
         pkQ.forEach(function (qn) {
           h += '<button type="button" class="btn mini-ana" data-qexp2="' + qn + '">解析</button>';
+        });
+        h += "</span>";
+      }
+      /* 开放填空（Part 6 式）：段里的 {n} 渲染成输入框，段尾给一排「N 解析」按钮
+         （编号取 q.gap —— 训练题显示书上的 (1)–(4)，真题显示 27–32） */
+      var clzQ = [];
+      para.forEach(function (sent) {
+        var mm, re = /\{(\d+)\}/g, str = String(sent.s);
+        while ((mm = re.exec(str)) !== null) {
+          var qn = +mm[1];
+          var qq = byN(qn);
+          if (qq && isClozeQ(qq) && qq.answer && clzQ.indexOf(qn) < 0) clzQ.push(qn);
+        }
+      });
+      if (clzQ.length) {
+        h += '<span class="pickrow">';
+        clzQ.forEach(function (qn) {
+          h += '<button type="button" class="btn mini-ana" data-qexp2="' + qn + '">' +
+            esc(gapLabel(byN(qn))) + " 解析</button>";
         });
         h += "</span>";
       }
@@ -1313,6 +1355,33 @@
         h += "</div></div>";
       }
 
+      /* 笔记（书上批注）：词组/句型点开看词条、点 ☆ 直接收藏 */
+      if (a.note && a.note.length) {
+        h += '<div class="sec"><div class="sec-t">笔记（书上批注）' +
+          '<span style="font-weight:400;color:var(--ink-3);font-size:11.5px">点词组看释义 · 点 ☆ 收藏</span>' +
+          "</div><div class=\"notes\">";
+        a.note.forEach(function (item) {
+          var nk = typeof item === "string" ? item : String((item && item.k) || "");
+          if (!nk) return;
+          var disp = (item && typeof item === "object" && item.t) ? String(item.t) : nk;
+          var r = lookup(nk) || lookupPhrase(nk.toLowerCase());
+          var e = (r && r.entry) || {};
+          var f = favOf({ t: "w", k: nk, ref: ref });
+          var on = !!(f.id && state.favIds[f.id]);
+          var cnTxt = (item && typeof item === "object" && item.cn) ? item.cn : (e.cn || "");
+          h += '<div class="noterow">';
+          h += '<button class="chip ph2 nkey" data-note="' + esc(nk) + '" data-noteref="' + esc(ref) +
+            '" title="点一下看词条">' + esc(disp) + "</button>";
+          h += '<span class="ncn">' + esc(stripTags(cnTxt)) + "</span>";
+          if (e.pos) h += '<span class="npos">' + esc(e.pos) + "</span>";
+          h += '<button class="nfav' + (on ? " on" : "") + '" data-notefav="' + esc(nk) +
+            '" data-noteref="' + esc(ref) + '" title="' +
+            (on ? "取消收藏" : "收藏这个" + (e.pos === "句型" ? "句型" : "词组")) + '">' +
+            (on ? "★" : "☆") + "</button>";
+          h += "</div>";
+        });
+        h += "</div></div>";
+      }
       if (a.gram && a.gram.length) {
         h += '<div class="sec"><div class="sec-t">考点</div><div class="chips">';
         a.gram.forEach(function (c) { h += '<span class="chip gr">' + c + "</span>"; });
@@ -1422,7 +1491,12 @@
         });
         h += "</div>";
       }
-      h += '<div class="arow' + (picked ? (picked === q.answer ? " ok" : " bad") : "") +
+      /* 开放填空（Part 6 式）：题卡里也给一个同样的输入框（与正文里的那个同步） */
+      if (!poolOn() && !Object.keys(qOpts).length && isClozeQ(q) && q.answer) {
+        h += '<div class="opts"><span class="gaprow">填一个词：' + gapInputHtml(q) + "</span></div>";
+      }
+      var okPick = picked ? (isClozeQ(q) ? gapRight(q, picked) : picked === q.answer) : false;
+      h += '<div class="arow' + (picked ? (okPick ? " ok" : " bad") : "") +
         '" data-arow="' + q.n + '">';
       if (poolOn()) {
         h += '<span class="a-lbl">我的答案</span>';
@@ -1432,7 +1506,7 @@
         });
       }
       if (picked) {
-        h += '<span class="a-res">' + (picked === q.answer
+        h += '<span class="a-res">' + (okPick
           ? "✓ 答对了" : "✗ 答错了 · 正确答案 " + q.answer) + "</span>";
       }
       h += "</div>";
@@ -1547,6 +1621,9 @@
     root.addEventListener("click", function (ev) {
       var t = ev.target;
 
+      /* 开放填空输入框（Part 6 式）：点它只是聚焦输入，键入/回车才判分，不该弹句子分析 */
+      if (t.closest && t.closest(".clozegap")) return;
+
       // 喇叭（页边按钮 / 小黑板顶部）
       var spk = t.closest("[data-say]");
       if (spk) {
@@ -1588,6 +1665,38 @@
         var on = pc.classList.contains("on");
         clearPatMark();
         if (!on) markPat(pc.dataset.pat, pc);             // 再点一次 = 取消标记
+        return;
+      }
+
+      // 笔记行里的 ☆：直接收藏/取消收藏这个词组或句型（历史行里也会同步）
+      var nfv = t.closest("[data-notefav]");
+      if (nfv) {
+        var nfk = nfv.dataset.notefav;
+        var nff = favOf({ t: "w", k: nfk, ref: nfv.dataset.noteref || "" });
+        if (store && nff.id) {
+          store.addFav(nff.item).then(function (r) {
+            r = r || {};
+            if (!r.ok) return;
+            if (r.added) state.favIds[nff.id] = 1; else delete state.favIds[nff.id];
+            nfv.classList.toggle("on", !!r.added);
+            nfv.textContent = r.added ? "★" : "☆";
+            nfv.title = r.added ? "取消收藏" : "收藏";
+            /* 历史里已经有同一行的话，把星星也同步过来 */
+            var hit = state.hist.some(function (x) { return histKey(x) === ("w:" + nfk); });
+            if (hit) renderHistory();
+          });
+        }
+        return;
+      }
+      // 笔记行的词条名：点开词条（进历史，历史行里也有 ☆）
+      var ntm = t.closest("[data-note]");
+      if (ntm) {
+        var noteKey = ntm.dataset.note;
+        var nref2 = ntm.dataset.noteref || "";
+        var nd = nref2 ? anaData(nref2) : null;
+        var nctx = nd ? String(nd.s).replace(/\{\d+\}/g, "……").replace(/[«»]/g, "") : "";
+        showWord(noteKey, nctx);
+        pushHistory("w", noteKey, nref2);
         return;
       }
 
@@ -1659,6 +1768,20 @@
         selectSent(oref);
         showAnalysis(oref);
         pushHistory("s", "", oref);
+      }
+    });
+
+    /* 开放填空（Part 6 式）的输入框：失焦/回车时判分。
+       change 事件要回车或失焦才发；keydown 里把回车转成 blur，移动端顺手收键盘。 */
+    root.addEventListener("change", function (ev) {
+      var g = ev.target;
+      if (g && g.classList && g.classList.contains("gapin")) commitGap(g);
+    });
+    root.addEventListener("keydown", function (ev) {
+      var g = ev.target;
+      if (ev.key === "Enter" && g && g.classList && g.classList.contains("gapin")) {
+        ev.preventDefault();
+        g.blur();
       }
     });
   }
@@ -1786,6 +1909,40 @@
       }
     }
     if (wrong && !state.openQ[n]) toggleQ(n);
+  }
+
+  /* 开放填空（Part 6 式）判定：输入词与答案一致（忽略大小写/首尾空格）→ 绿；
+     不一致 → 红 + 报错题本 + 自动展开解析。同一个题在题卡里可能有第二个输入框，一起同步。 */
+  function commitGap(inp) {
+    var n = +inp.dataset.gap;
+    var q = C.questions.filter(function (x) { return x.n === n; })[0];
+    if (!q || !isClozeQ(q)) return;
+    var val = String(inp.value || "").trim();
+    var prev = String(state.ans[String(n)] == null ? "" : state.ans[String(n)]);
+    if (val) state.ans[String(n)] = val; else delete state.ans[String(n)];
+    saveAns();
+    var right = gapRight(q, val);
+    document.querySelectorAll('.gapin[data-gap="' + n + '"]').forEach(function (x) {
+      x.value = val;
+      x.classList.toggle("ok", right);
+      x.classList.toggle("bad", !!val && !right);
+    });
+    var card = document.querySelector('[data-q="' + n + '"]');
+    if (card) {
+      var row = card.querySelector('.arow[data-arow="' + n + '"]');
+      if (row) {
+        row.classList.toggle("ok", right);
+        row.classList.toggle("bad", !!val && !right);
+        var res = row.querySelector(".a-res");
+        if (!res) { res = document.createElement("span"); res.className = "a-res"; row.appendChild(res); }
+        res.textContent = !val ? "" : (right ? "✓ 答对了" : "✗ 答错了 · 正确答案 " + q.answer);
+      }
+    }
+    if (val && !right && prev.trim().toLowerCase() !== val.toLowerCase() &&
+        store && store.addMistake) {
+      store.addMistake({ slug: SLUG, q: n, chosen: val.slice(0, 40), correct: String(q.answer || "") });
+    }
+    if (val && !right) showQAnalysis(n);   // 答错顺手把解析打开
   }
 
   function toggleQ(n) {
