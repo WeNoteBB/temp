@@ -287,6 +287,13 @@ async function testArticle(slug) {
   if (optLetters.length) {
     ok(passage.querySelectorAll(".blank").length === (C.questions || []).length,
       `[${slug}] 空位 ${passage.querySelectorAll(".blank").length} 个 === 题目 ${(C.questions || []).length} 道`);
+  } else if (sents.flatMap(s => toks(s.s)).some(t => t.slot)) {
+    /* Part 5 式：真题在正文里挖空（{n} 渲染成绿色小圆标），训练题不挖空 */
+    const slots = [...new Set(sents.flatMap(s => toks(s.s)).filter(t => t.slot).map(t => t.slot))].sort((a, b) => a - b);
+    const examNs = (C.questions || []).map(q => q.n).filter(n => n < 100).sort((a, b) => a - b);
+    const blanks = [...passage.querySelectorAll(".blank")].map(b => +b.dataset.blank).sort((a, b) => a - b);
+    ok(blanks.join() === examNs.join() && slots.join() === examNs.join(),
+      `[${slug}] 真题空位 [${blanks}] === 真题题号 [${examNs}]`);
   } else {
     ok(passage.querySelectorAll(".blank").length === 0,
       `[${slug}] Part 1 式：原文没有空位（${passage.querySelectorAll(".blank").length} 个）`);
@@ -308,11 +315,33 @@ async function testArticle(slug) {
 
   /* ---------- 3. 页边按钮 ---------- */
   ok(!!gutter, `[${slug}] 有页边容器 .pgutter`);
+  /* h/i 角色（标题 / 题目要求 / 提示）整段处理：一个「译 + 🔊」，不给逐句「析」。
+     没有 blocks 的文章（t1-p4）就是逐句一组，与以前一致。 */
+  const hiIdx = [];
+  ((C.passage && C.passage.blocks) || []).forEach((b, i) => {
+    if (b && (b.r === "h" || b.r === "i") && (C.passage.paragraphs[i] || []).length) hiIdx.push(i);
+  });
+  const hiSentCount = hiIdx.reduce((a, i) => a + (C.passage.paragraphs[i] || []).length, 0);
+  /* 表格块（blocks.table）的行不挂页边按钮：它们没有自己的「析 / 🔊」 */
+  const tblIdx = [];
+  ((C.passage && C.passage.blocks) || []).forEach((b, i) => { if (b && b.table) tblIdx.push(i); });
+  const tblSentCount = tblIdx.reduce((a, i) => a + (C.passage.paragraphs[i] || []).length, 0);
+  const wantGroups = N - hiSentCount + hiIdx.length - tblSentCount;
   const groups = [...gutter.querySelectorAll(".sbtns")];
-  ok(groups.length === N, `[${slug}] 页边按钮组 ${groups.length} 组（每句一组）`);
-  ok(groups.every(g => /^\d+-\d+$/.test(g.dataset.for)), `[${slug}] 每组都标了归属句子`);
-  ok(groups.filter(g => g.querySelector("[data-say]")).length === N, `[${slug}] ${N} 个朗读按钮`);
+  ok(groups.length === wantGroups,
+    `[${slug}] 页边按钮组 ${groups.length} 组（内容句每句一组，标题/要求整段一组 ×${hiIdx.length}）`);
+  ok(groups.every(g => /^\d+-\d+$/.test(g.dataset.for) || /^blk:\d+$/.test(g.dataset.for)),
+    `[${slug}] 每组都标了归属`);
+  ok(groups.filter(g => g.querySelector("[data-say]")).length === wantGroups, `[${slug}] ${wantGroups} 个朗读按钮`);
   ok(!passage.querySelector(".sent .mini"), `[${slug}] 按钮不在句子内部（不打断连续排版）`);
+  if (hiIdx.length) {
+    const blkGroups = groups.filter(g => g.dataset.for.indexOf("blk:") === 0);
+    ok(blkGroups.length === hiIdx.length, `[${slug}] 标题/题目要求/提示整段一组（${blkGroups.length} 组）`);
+    ok(blkGroups.every(g => g.querySelector("[data-ana]") && g.querySelector("[data-say]")),
+      `[${slug}] 整段组里是「译 + 🔊」`);
+    ok(hiIdx.every(pi => !gutter.querySelector('.sbtns[data-for^="' + pi + '-"]')),
+      `[${slug}] 这类段落里没有逐句「析」`);
+  }
 
   /* ---------- 3b. 目录列（左边那列题目表） ---------- */
   const tocCol = doc.getElementById("tocCol");
@@ -408,7 +437,16 @@ async function testArticle(slug) {
   }
 
   /* ---------- 8. 点句子 ---------- */
-  const s0 = passage.querySelector('.sent[data-sent="0-0"]');
+  /* h/i 段落（标题/题目要求/提示）是「整段翻译」，挑一个内容句来验证逐句拆解 */
+  const sentByRefOf = el => { const p = el.dataset.sent.split("-").map(Number); return (C.passage.paragraphs[p[0]] || [])[p[1]]; };
+  const isHiSent = el => { const b = (C.passage.blocks || [])[+el.dataset.sent.split("-")[0]] || {}; return b.r === "h" || b.r === "i"; };
+  const contentSents = [...passage.querySelectorAll(".sent")].filter(el => !isHiSent(el));
+  /* 要挑「能标红」的句子做后续断言：成分要有、且主句型不是省略句 */
+  const s0 = contentSents.find(el => {
+    const s = sentByRefOf(el);
+    return s && s.ana && s.ana.parts && s.ana.parts.length && s.ana.pat && s.ana.pat[0] !== "省略句";
+  }) || contentSents.find(el => { const s = sentByRefOf(el); return s && s.ana && s.ana.parts && s.ana.parts.length; }) ||
+    contentSents[0] || passage.querySelector(".sent");
   click(s0);
   ok(/句子分析/.test(ana.textContent), `[${slug}] 点句子 → 小黑板出讲解`);
   ok(ana.querySelectorAll(".part").length > 0, `[${slug}] 成分拆解卡片 ${ana.querySelectorAll(".part").length} 张`);
@@ -425,21 +463,36 @@ async function testArticle(slug) {
     `[${slug}] 卡片字色走令牌（暗色才不必改 JS）`);
   ok(/翻译/.test(ana.textContent), `[${slug}] 有翻译板块`);
   ok(s0.classList.contains("cur"), `[${slug}] 该句高亮`);
-  ok(gutter.querySelector('.sbtns[data-for="0-0"]').classList.contains("cur"),
+  ok(gutter.querySelector('.sbtns[data-for="' + s0.dataset.sent + '"]').classList.contains("cur"),
     `[${slug}] 页边对应那组按钮也高亮`);
+
+  /* 标题 / 题目要求 / 提示：点句子 → 整段翻译和解析（不做逐句拆解） */
+  if (hiIdx.length) {
+    const hiPara = passage.querySelector('.para[data-blk="' + hiIdx[0] + '"]');
+    click(hiPara.querySelector(".sent"));
+    ok(/整句翻译/.test(ana.textContent) && /翻译/.test(ana.textContent) && /解析/.test(ana.textContent),
+      `[${slug}] 点标题/要求 → 整段翻译和解析`);
+    ok(!/成分拆解/.test(ana.textContent), `[${slug}] 整段处理不出成分拆解`);
+    ok(hiPara.classList.contains("cur"), `[${slug}] 整段高亮`);
+    ok(gutter.querySelector('.sbtns[data-for="blk:' + hiIdx[0] + '"]').classList.contains("cur"),
+      `[${slug}] 页边整段组也高亮`);
+    click(gutter.querySelector('.sbtns[data-for="blk:' + hiIdx[0] + '"] [data-ana]'));
+    ok(/整句翻译/.test(ana.textContent), `[${slug}] 页边「译」→ 也是整段翻译`);
+  }
 
   /* ---------- 9. 每一句都能点讲（不只长难句） ---------- */
   if (N > 1) {
     /* 挑一句「普通句」来验证。注意启示：段落。拆分后 0-1 可能不存在或者是个碎片 ——
-       优先 0-1，找不到就依次找非省略句、再退到任意一句。 */
+       优先 0-1，找不到就依次找非省略句、再退到任意一句。
+       h/i 段落整段处理（点句子出整段翻译），不在这条链里。 */
     const sentByRef = el => {
       const p = el.dataset.sent.split("-").map(Number);
       return (C.passage.paragraphs[p[0]] || [])[p[1]];
     };
     const allSent = [...passage.querySelectorAll(".sent")];
-    const easy = allSent.find(el => el.dataset.sent === "0-1") ||
-      allSent.find(el => { const s = sentByRef(el); return s && s.ana && s.ana.pat && s.ana.pat[0] !== "省略句"; }) ||
-      allSent[0];
+    const easy = allSent.find(el => el.dataset.sent === "0-1" && !isHiSent(el)) ||
+      allSent.find(el => { const s = sentByRef(el); return s && s.ana && s.ana.pat && s.ana.pat[0] !== "省略句" && !isHiSent(el); }) ||
+      allSent.find(el => !isHiSent(el)) || allSent[0];
     if (easy) {
       click(easy);
       ok(/句子分析/.test(ana.textContent), `[${slug}] 普通句也出讲解`);
@@ -461,6 +514,9 @@ async function testArticle(slug) {
 
   let chipTot = 0; const chipDead = [];
   for (let pi = 0; pi < C.passage.paragraphs.length; pi++) {
+    /* h/i 整段处理：没有逐句句型 chip（点句子出的是整段翻译） */
+    const bm10 = (C.passage.blocks || [])[pi] || {};
+    if (bm10.r === "h" || bm10.r === "i") continue;
     for (let si = 0; si < C.passage.paragraphs[pi].length; si++) {
       click(passage.querySelector(`[data-sent="${pi}-${si}"]`));
       ana.querySelectorAll("button.chip.pat").forEach(c => {
@@ -488,7 +544,7 @@ async function testArticle(slug) {
     ok(box.textContent === rawText, `[${slug}] 标红不改变原句文字（只加包裹）`);
     const sheet = [...doc.querySelectorAll("style")].map(s => s.textContent).join("");
     ok(/@keyframes hlpop/.test(sheet), `[${slug}] 样式表里有 hlpop 缩放关键帧`);
-    ok(hls[0].classList.contains("reveal"), `[${slug}] 动画期间挂 .reveal（inline-block）`);
+    if (hls.length) ok(hls[0].classList.contains("reveal"), `[${slug}] 动画期间挂 .reveal（inline-block）`);
     click(liveChip);
     ok(ana.querySelectorAll(".ana-sent .hl").length === 0, `[${slug}] 再点一次清除标记`);
     ok(!liveChip.classList.contains("on"), `[${slug}] 选中态也清掉`);
@@ -507,6 +563,9 @@ async function testArticle(slug) {
   /* ---------- 12. 词组推导零漂移 ---------- */
   let drift = [];
   for (let pi = 0; pi < C.passage.paragraphs.length; pi++) {
+    /* h/i 整段处理：面板给的是整段翻译，没有词条推导（短语仍可单独点，见空面板全量扫描） */
+    const bm12 = (C.passage.blocks || [])[pi] || {};
+    if (bm12.r === "h" || bm12.r === "i") continue;
     for (let si = 0; si < C.passage.paragraphs[pi].length; si++) {
       const el = passage.querySelector(`[data-sent="${pi}-${si}"]`);
       click(el);
@@ -590,11 +649,12 @@ async function testArticle(slug) {
 
   /* ---------- 13c. 学到哪儿了（本机记录；以后换 Redis） ---------- */
   const LR = "pet:lastread:v1";
-  /* 挑一句结构上确实存在的第二句（段落结构会变，别写死 ref） */
+  /* 挑一句结构上确实存在的第二句（段落结构会变，别写死 ref）；
+     h/i 整段处理的段落跳过 —— 点那里存的是 blk: 引用 */
   const lrSent = [...passage.querySelectorAll(".sent")].find(el => {
     const p = el.dataset.sent.split("-").map(Number);
-    return p[1] === 1 && (C.passage.paragraphs[p[0]] || []).length >= 2;
-  }) || passage.querySelector(".sent");
+    return p[1] === 1 && (C.passage.paragraphs[p[0]] || []).length >= 2 && !isHiSent(el);
+  }) || contentSents[contentSents.length - 1] || passage.querySelector(".sent");
   click(lrSent);
   await tick();
   const lrAll = JSON.parse(window.localStorage.getItem(LR) || "null");
@@ -678,10 +738,13 @@ async function testArticle(slug) {
     click(doc.querySelector('.tab[data-tab="read"]'));
     await tick();
 
-    /* 选项清单行首的字母徽章 */
-    const badges = [...passage.querySelectorAll(".para.r-o .opletter")];
-    ok(badges.length >= 5 && badges.every(b => b.textContent.trim().length === 1),
-      `[${slug}] 选项清单行首有单字母徽章（${badges.length} 个）`);
+    /* 选项清单行首的字母徽章（角色 o 的块才有） */
+    const oBlockN = ((C.passage.blocks || []).filter(b => b && b.r === "o")).length;
+    if (oBlockN) {
+      const badges = [...passage.querySelectorAll(".para.r-o .opletter")];
+      ok(badges.length >= 5 && badges.every(b => b.textContent.trim().length === 1),
+        `[${slug}] 选项清单行首有单字母徽章（${badges.length} 个）`);
+    }
 
     /* plain 区块：点词不查词（「一行一个解析」就够），点整行才出讲解 */
     const plainW = passage.querySelector(".para.plain .w");
@@ -694,37 +757,59 @@ async function testArticle(slug) {
     /* 「我的答案」横排：跟题目、可单选、判对错、与卡片同步 */
     const rows = [...passage.querySelectorAll(".pickrow[data-pickq]")];
     const optsInlineN = (C.passage.blocks || []).filter(b => b && b.optsInline).length;
+    const optsGridN = (C.passage.blocks || []).filter(b => b && b.optsGrid).length;
+    const pickQn = new Set();
+    C.passage.paragraphs.forEach(p => p.forEach(s => { if (s.pickQ) pickQn.add(s.pickQ); }));
     ok(rows.length > 0, `[${slug}] 正文里有答案横排 ${rows.length} 排`);
-    ok(passage.querySelectorAll("[data-qexp2]").length === rows.length + optsInlineN,
-      `[${slug}] 每排答案都带「解析」按钮（共 ${passage.querySelectorAll("[data-qexp2]").length} 个）`);
-    const row101 = passage.querySelector('.pickrow[data-pickq="101"]');
-    if (row101) {
-      const chipB = row101.querySelector('[data-ansb="101:B"]');
-      click(chipB);
+    ok(passage.querySelectorAll("[data-qexp2]").length === rows.length + optsInlineN + optsGridN + pickQn.size,
+      `[${slug}] 每道题都有「解析」按钮（横排 ${rows.length} + 整行选项 ${optsInlineN} + 选项盒 ${optsGridN} + ③式 ${pickQn.size}）`);
+    /* 每排横排的胶囊数 === 该题选项数（两篇通用的结构断言） */
+    const rowCountsOK = rows.every(r => {
+      const qq = (C.questions || []).find(x => String(x.n) === r.dataset.pickq);
+      return qq && r.querySelectorAll(".pickchip").length === Object.keys(qq.opts || {}).length;
+    });
+    ok(rowCountsOK, `[${slug}] 每排「我的答案」的胶囊数 === 该题选项数`);
+    /* 拿第一篇的第一题做「错→红、对→绿、卡片同步」的链路测试（字母都从数据里取） */
+    const q0i = (C.questions || [])[0];
+    const row1 = q0i && passage.querySelector('.pickrow[data-pickq="' + q0i.n + '"]');
+    if (row1) {
+      const wrongL = Object.keys(q0i.opts).find(L => L !== q0i.answer);
+      const chipW = row1.querySelector('[data-ansb="' + q0i.n + ":" + wrongL + '"]');
+      click(chipW);
       await tick();
-      ok(chipB.classList.contains("on") && chipB.classList.contains("wrongpick"),
+      ok(chipW.classList.contains("on") && chipW.classList.contains("wrongpick"),
         `[${slug}] 点横排里的错选项 → 选中且变红`);
-      const chipC = row101.querySelector('[data-ansb="101:C"]');
-      click(chipC);
+      const chipR = row1.querySelector('[data-ansb="' + q0i.n + ":" + q0i.answer + '"]');
+      click(chipR);
       await tick();
-      ok(chipC.classList.contains("right") && !chipB.classList.contains("on"),
+      ok(chipR.classList.contains("right") && !chipW.classList.contains("on"),
         `[${slug}] 改选正确选项 → 变绿，单选不并存`);
-      const card101 = qList.querySelector('[data-ansb="101:C"]');
-      ok(card101 && card101.classList.contains("right"),
+      const cardR = qList.querySelector('[data-ansb="' + q0i.n + ":" + q0i.answer + '"]');
+      ok(cardR && cardR.classList.contains("right"),
         `[${slug}] 卡片里的同一题同步变绿`);
     }
-    /* ② 答案区的行号 1–5 */
-    const pn106 = passage.querySelector('.pickrow[data-pickq="106"] .pn');
-    ok(pn106 && pn106.textContent.trim() === "1", `[${slug}] ② 答案区带行号（1 起）`);
+    /* 成排答案区（pick 数组长度 >1 的块）自带行号，取 tag 的尾号 */
+    const multi = ((C.passage.blocks || []).find(b => b && b.pick && b.pick.length > 1)) || null;
+    if (multi) {
+      const firstQ = (C.questions || []).find(x => x.n === multi.pick[0]);
+      const want = String(firstQ && firstQ.tag || multi.pick[0]).split("-").pop();
+      const prow = passage.querySelector('.pickrow[data-pickq="' + multi.pick[0] + '"]');
+      const pn = prow && prow.querySelector(".pn");
+      ok(pn && pn.textContent.trim() === want, `[${slug}] 成排答案区带行号（${want} 起）`);
+    }
 
-    /* ③ 式内联二选一：句子里的备选词本身就是按钮 */
+    /* ③ 式内联二选一：句子里的备选词本身就是按钮（没有 «» 标记的文章就没有） */
     const pws = [...passage.querySelectorAll(".pickword")];
     const pickPairs = C.passage.paragraphs.flat().reduce((a, s) =>
       a + (String(s.s).match(/«/g) || []).length, 0);
-    ok(pws.length > 0 && pws.length === pickPairs,
-      `[${slug}] ③ 式备选词按钮 ${pws.length} 个 === «» 标记 ${pickPairs} 个`);
-    const pwA = passage.querySelector('[data-ansb="111:A"]');
-    const pwB = passage.querySelector('[data-ansb="111:B"]');
+    if (pickPairs) {
+      ok(pws.length > 0 && pws.length === pickPairs,
+        `[${slug}] ③ 式备选词按钮 ${pws.length} 个 === «» 标记 ${pickPairs} 个`);
+    } else {
+      ok(pws.length === 0, `[${slug}] 没有 «» 标记时也没有备选词按钮`);
+    }
+    const pwA = passage.querySelector('.pickword[data-ansb="111:A"]');
+    const pwB = passage.querySelector('.pickword[data-ansb="111:B"]');
     if (pwA && pwB) {
       click(pwB);
       await tick();
@@ -735,42 +820,201 @@ async function testArticle(slug) {
       ok(pwA.classList.contains("on") && pwA.classList.contains("right") && !pwB.classList.contains("on"),
         `[${slug}] ③ 改选左边（正确）→ 切换且变绿`);
     }
+    /* ③ 每题也要有「答题解析」按钮（数据驱动：拿第一个带 pickQ 的题测） */
+    const pickQFirst = [...pickQn][0];
+    if (pickQFirst != null) {
+      const qexpBtn = passage.querySelector('[data-qexp2="' + pickQFirst + '"]');
+      ok(!!qexpBtn, `[${slug}] ③ 每题都有「解析」按钮`);
+      if (qexpBtn) {
+        click(qexpBtn);
+        ok(/题目分析/.test(ana.textContent) && /正确答案/.test(ana.textContent),
+          `[${slug}] ③ 的「解析」→ 打开这道题的答题解析`);
+      }
+    }
 
-    /* ④ 每题下面都列着 must / have to / mustn't / don't have to */
-    const row115 = passage.querySelector('.pickrow[data-pickq="115"]');
-    ok(row115 && /must/.test(row115.textContent) && /have to/.test(row115.textContent),
-      `[${slug}] ④ 每题下面列着单词选项`);
+    /* ④ 式单词选项（每题一排固定单词表）——现在做成通用断言：
+       带 pick 的题，其横排胶囊里必须逐个列出该题的选项文本 */
+    const singleRows = rows.filter(r => r.querySelectorAll(".pickchip").length >= 2);
+    if (singleRows.length) {
+      const okChips = singleRows.every(r => {
+        const qq = (C.questions || []).find(x => String(x.n) === r.dataset.pickq);
+        return Object.values(qq.opts || {}).every(t => r.textContent.includes(t));
+      });
+      ok(okChips, `[${slug}] 每题下面列着该题的选项（${singleRows.length} 排）`);
+    }
 
     /* 考试题：正文里的整行选项（点行=作答；行内「析」=这个选项的句子分析） */
     const lines = [...passage.querySelectorAll(".optline")];
-    ok(lines.length > 0 && lines.length % 3 === 0, `[${slug}] 考试题选项整行 ${lines.length} 条`);
-    const lineC1 = passage.querySelector('.optline[data-ansb="1:C"]');
-    const lineA1 = passage.querySelector('.optline[data-ansb="1:A"]');
-    if (lineC1 && lineA1) {
-      click(lineC1);
+    const inlineQs = (C.passage.blocks || []).filter(b => b && b.optsInline)
+      .map(b => (C.questions || []).find(q => String(q.n) === String(b.n))).filter(Boolean);
+    const wantLines = inlineQs.reduce((a, q) => a + Object.keys(q.opts || {}).length, 0);
+    ok(lines.length === wantLines, `[${slug}] 考试题选项整行 ${lines.length} 条 === 声明 ${wantLines} 条`);
+    const qL = inlineQs[0];
+    if (qL) {
+      const wrongL = Object.keys(qL.opts).find(L => L !== qL.answer);
+      const lineW = passage.querySelector('.optline[data-ansb="' + qL.n + ":" + wrongL + '"]');
+      const lineR = passage.querySelector('.optline[data-ansb="' + qL.n + ":" + qL.answer + '"]');
+      click(lineW);
       await tick();
-      ok(lineC1.classList.contains("on") && lineC1.classList.contains("wrongpick"),
+      ok(lineW.classList.contains("on") && lineW.classList.contains("wrongpick"),
         `[${slug}] 考试题点整行错选项 → 选中且变红`);
-      click(lineA1);
+      click(lineR);
       await tick();
-      ok(lineA1.classList.contains("right") && !lineC1.classList.contains("on"),
+      ok(lineR.classList.contains("right") && !lineW.classList.contains("on"),
         `[${slug}] 改选正确选项 → 变绿`);
-      click(lineC1.querySelector("[data-ana]"));
+      click(lineW.querySelector("[data-ana]"));
       ok(/句子分析/.test(ana.textContent),
         `[${slug}] 选项行里的「析」→ 这个选项的句子分析`);
-      const lineB1 = passage.querySelector('.optline[data-ansb="1:B"]');
-      const lw = lineB1 && lineB1.querySelector(".w");
+      const lw = lineW.querySelector(".w");
       if (lw) {
         click(lw);
         ok(/词条/.test(ana.textContent), `[${slug}] 点选项里的词 → 查词`);
-        ok(!lineB1.classList.contains("on"), `[${slug}] 点选项里的词不顺带作答`);
+        ok(!lineW.classList.contains("on"), `[${slug}] 点选项里的词不顺带作答`);
       }
     }
 
     /* 正文里的「解析」按钮 → 完整题目分析（每道题都有答案+解析） */
-    click(passage.querySelector('[data-qexp2="1"]'));
+    click(passage.querySelector("[data-qexp2]"));
     ok(/题目分析/.test(ana.textContent) && /解题思路/.test(ana.textContent),
       `[${slug}] 正文里的「解析」→ 完整题目分析`);
+  }
+
+  /* ---------- 15c. Reading Part 3 的排版件（有才测：扉页标题 / 插图 / 徽章 / Tip / 下划线 / 选项盒） ---------- */
+  {
+    const B = C.passage.blocks || [];
+    const headN = B.filter(b => b && b.head).length;
+    if (headN) {
+      const blk = [...passage.querySelectorAll(".bh-blk")];
+      const ttl = [...passage.querySelectorAll(".bh-ttl")];
+      ok(blk.length === headN && ttl.length === headN,
+        `[${slug}] 扉页式大标题 ${headN} 个（黑底书名 + 下划线）`);
+      ok(blk.every(e => e.textContent.trim().length > 0) && ttl.every(e => e.textContent.trim().length > 0),
+        `[${slug}] 大标题两半文字都非空`);
+    }
+    const imgN = B.filter(b => b && b.img).length;
+    if (imgN) {
+      const imgs = [...passage.querySelectorAll(".blkimg img")];
+      ok(imgs.length === imgN, `[${slug}] 页内插图 ${imgs.length} 张 === 声明 ${imgN} 张`);
+      ok(imgs.every(i => i.getAttribute("src") && i.getAttribute("alt")),
+        `[${slug}] 每张插图都有 src 和 alt`);
+    }
+    const badgeN = B.filter(b => b && b.badge).length;
+    if (badgeN) {
+      const ads = [...passage.querySelectorAll(".ansbadge")];
+      ok(ads.length === badgeN && ads.every(e => /答案见/.test(e.textContent)),
+        `[${slug}] 页内小徽章 ${ads.length} 个`);
+    }
+    const tipN = B.filter(b => b && b.tip).length;
+    if (tipN) {
+      const tips = [...passage.querySelectorAll(".tipbox")];
+      ok(tips.length === tipN && tips.every(e => /Tip/.test(e.textContent)),
+        `[${slug}] Tip 提示框 ${tips.length} 个`);
+    }
+    const ulN = C.passage.paragraphs.flat().filter(s => s.ul).length;
+    if (ulN) {
+      const sentWithU = [...passage.querySelectorAll(".sent")].filter(s => s.querySelector("u.ul-fix")).length;
+      ok(sentWithU === ulN, `[${slug}] 改错句下划线：${sentWithU} 句 === 声明 ${ulN} 句`);
+      let uOK = true, uBad = "";
+      C.passage.paragraphs.forEach((p, pi) => p.forEach((s, si) => {
+        if (!s.ul) return;
+        const el = passage.querySelector(`[data-sent="${pi}-${si}"] .sent-txt`);
+        const us = el ? [...el.querySelectorAll("u.ul-fix")].map(u => u.textContent).join("") : "";
+        if (us !== s.ul) { uOK = false; uBad = pi + "-" + si; }
+      }));
+      ok(uOK, `[${slug}] 下划线的文字与 ul 数据逐字一致${uOK ? "" : "（" + uBad + "）"}`);
+    }
+    const gridB = B.find(b => b && b.optsGrid);
+    if (gridB) {
+      const gq = (C.questions || []).find(q => String(q.n) === String(gridB.n));
+      const boxes = [...passage.querySelectorAll(".gopt")];
+      ok(gq && boxes.length === Object.keys(gq.opts).length,
+        `[${slug}] 选项盒 ${boxes.length} 个 === 该题选项数`);
+      const wrongL = Object.keys(gq.opts).find(L => L !== gq.answer);
+      const boxW = passage.querySelector('.gopt[data-ansb="' + gq.n + ":" + wrongL + '"]');
+      const boxR = passage.querySelector('.gopt[data-ansb="' + gq.n + ":" + gq.answer + '"]');
+      if (boxW && boxR) {
+        click(boxW);
+        await tick();
+        ok(boxW.classList.contains("on") && boxW.classList.contains("wrongpick"),
+          `[${slug}] 点选项盒（错）→ 选中且变红`);
+        click(boxR);
+        await tick();
+        ok(boxR.classList.contains("right") && !boxW.classList.contains("on"),
+          `[${slug}] 改选正确选项盒 → 变绿且单选`);
+        click(boxW.querySelector("[data-ana]"));
+        ok(/句子分析/.test(ana.textContent), `[${slug}] 选项盒里的「析」→ 句子分析`);
+      }
+      ok(!!passage.querySelector('[data-qexp2="' + gq.n + '"]'), `[${slug}] 选项盒后面有「看本题解析」`);
+    }
+  }
+
+  /* ---------- 15d. Reading Part 5 的排版件（有才测：真表格 / Remember / 边框盒 / 真题空位与作答排） ---------- */
+  {
+    const B = C.passage.blocks || [];
+    /* 真表格：行数、表头、每行 .sent、行内作答胶囊、不挂页边按钮 */
+    const tableB = B.find(b => b && b.table);
+    if (tableB) {
+      const ti = B.indexOf(tableB);
+      const tb = passage.querySelector("table.ttable");
+      ok(!!tb, `[${slug}] 表格块渲染成真表格`);
+      const ths = tb ? [...tb.querySelectorAll("th")].map(x => x.textContent.trim()) : [];
+      ok(ths.join("|") === tableB.table.head.join("|"),
+        `[${slug}] 表头文字与数据一致（${ths.join(" / ")}）`);
+      const rows = tb ? [...tb.querySelectorAll("tr")].length - (ths.length ? 1 : 0) : 0;
+      const dataRows = (C.passage.paragraphs[ti] || []).length;
+      ok(rows === dataRows, `[${slug}] 表格行数 ${rows} === 数据行数 ${dataRows}`);
+      const cellSents = tb ? [...tb.querySelectorAll(".sent[data-sent]")].length : 0;
+      ok(cellSents === dataRows, `[${slug}] 表格每行的文本都是 .sent（照常点词）`);
+      const chips = tb ? [...tb.querySelectorAll(".pickchip")] : [];
+      const wantChips = tableB.pick.reduce((a, n) => {
+        const qq = (C.questions || []).find(x => x.n === n);
+        return a + Object.keys((qq && qq.opts) || {}).length;
+      }, 0);
+      ok(chips.length === wantChips, `[${slug}] 表格里的作答胶囊 ${chips.length} 个 === 题号选项总数 ${wantChips}`);
+      if (chips[0]) {
+        click(chips[0]);
+        await tick();
+        ok(chips[0].classList.contains("on"), `[${slug}] 表格里点胶囊能作答（变选中的样子）`);
+      }
+      const rowBtn = tableB.pick.some((n, ri) => gutter.querySelector('.sbtns[data-for^="' + ti + "-" + ri + '"]'));
+      ok(!rowBtn, `[${slug}] 表格行不挂页边按钮`);
+    }
+    /* Remember 灰底小框 */
+    const rmbB = B.find(b => b && b.rmb);
+    if (rmbB) {
+      const box = passage.querySelector(".rmbbox");
+      ok(!!box && /Remember/.test(box.textContent), `[${slug}] Remember 灰底小框渲染出来了`);
+      ok(box && box.querySelector(".rmbtxt") && box.querySelector(".rmbtxt").textContent === rmbB.rmb,
+        `[${slug}] Remember 的文字与数据逐字一致`);
+    }
+    /* 连续边框盒：个数对得上 */
+    const framedN = B.filter(b => b && b.frame).length;
+    if (framedN) {
+      const framed = [...passage.querySelectorAll(".para.framed")];
+      ok(framed.length === framedN, `[${slug}] 边框盒 ${framed.length} 个 === 声明 ${framedN} 个`);
+    }
+    /* 真题空位：点一下能看这道题的解析（inlineQuiz 的文章没有题目分析 tab） */
+    const gaps = [...passage.querySelectorAll(".blank")];
+    if (gaps.length && C.inlineQuiz) {
+      click(gaps[0]);
+      await tick();
+      ok(/题目分析/.test(ana.textContent), `[${slug}] 点真题空位 → 打开该题解析`);
+      const gapRow = passage.querySelector('.pickrow[data-pickq="' + gaps[0].dataset.blank + '"]');
+      ok(!!gapRow, `[${slug}] 空位 ${gaps[0].dataset.blank} 对应的作答排就在同一页`);
+    }
+    /* 真题六排作答：每排带题号 + 4 个胶囊 + 解析按钮 */
+    const examQ = (C.questions || []).filter(x => x.n < 100);
+    const examRowBlock = B.find(b => b && b.pick && b.pick.length > 1 && b.pick.every(n => n < 100));
+    if (examRowBlock) {
+      const rowOK = examQ.every(qq => {
+        const row = passage.querySelector('.pickrow[data-pickq="' + qq.n + '"]');
+        return row && row.querySelectorAll(".pickchip").length === Object.keys(qq.opts || {}).length &&
+          !!row.querySelector('[data-qexp2="' + qq.n + '"]');
+      });
+      ok(rowOK, `[${slug}] 真题 ${examQ.length} 排作答（每题一排便签 + 解析按钮）`);
+      const pn = passage.querySelector('.pickrow[data-pickq="' + examQ[0].n + '"] .pn');
+      ok(pn && pn.textContent.trim() === String(examQ[0].n), `[${slug}] 真题作答排带题号（${examQ[0].n}）`);
+    }
   }
 
   /* ---------- 16. 答题解析 ---------- */
@@ -870,7 +1114,7 @@ async function testArticle(slug) {
   zr.value = "1"; zr.dispatchEvent(new window.Event("input", { bubbles: true }));
 
   const tops = [...gutter.querySelectorAll(".sbtns")].map(g => parseFloat(g.style.top)).filter(v => !isNaN(v));
-  ok(tops.length === N, `[${slug}] 缩放来回后 ${N} 组页边按钮都拿到 top（实际 ${tops.length}）`);
+  ok(tops.length === wantGroups, `[${slug}] 缩放来回后 ${wantGroups} 组页边按钮都拿到 top（实际 ${tops.length}）`);
   ok(tops[0] === 0 && tops[1] === 30, `[${slug}] 位置跟着句子走（第 1 组 ${tops[0]}，第 2 组 ${tops[1]}）`);
   let mono = true;
   for (let i = 1; i < tops.length; i++) if (tops[i] < tops[i - 1]) mono = false;

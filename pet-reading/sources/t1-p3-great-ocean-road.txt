@@ -1,0 +1,33 @@
+title: Training Test 1
+label: Reading Part 3
+
+# 素材来源
+PDF: 剑桥PET 官方模考题精讲讲练 _18-21.pdf（书内页码 P17–P20 = 该 PDF 第 1–4 页）
+答案: 书后 P184 Teacher's Notes & Keys（用全书 PDF 第 185 页核对）
+图片: 从 PDF 的整页高清扫描（每页一张 5035×6658 的位图）里裁出
+  · assets/img/t1-p3-ocean-road.jpg  原书 P19 大洋路照片（裁自 PDF 第 3 页 x440,y1305 2209×1537）
+  · assets/img/t1-p3-hikers.png      原书 P18 登山者插图（裁自 PDF 第 2 页 x2790,y737 1930×1485）
+
+# 原文（真题文章，书 P19）
+Our Great Ocean Road adventure / by Donna Waverley
+My family and I recently went to Australia, to see my grandparents. But before we visited them, we went sightseeing along the Great Ocean Road, on the Australian coast.
+Dad had intended to drive, but even though he was used to driving miles without getting exhausted, he then read on the website that the road wouldn't be an easy drive, with a number of sharp bends. Anyway, we thought he deserved to enjoy the fantastic views too, which he couldn't do as our driver. So instead, we persuaded him to book discount bus tickets and off we went.
+Our first stop was where wild kangaroos lived – and Dad and I were taking a walk when a big one appeared! For a moment, it seemed to consider coming towards us, which made me slightly nervous – but then it went off along the road, stopping to check if we were following. Although it was with us a while, I was so excited I didn't even manage to pull out my camera. Then it looked back once more, and went off into the bushes.
+That wasn't the only wildlife we saw. I thought it unlikely we'd see Australia's famous koala bears during our short visit, as I'd heard they were rare – but we weren't disappointed at our next stop. In fact, we discovered there were roughly six million in that area! Sadly, some gum trees they were in had very few leaves left, which people told us was because of the koalas, although I'd read that lack of water is actually the problem. Still, I guess they looked cute, and were easy to find – we just followed the tourists looking up into the trees!
+Dad had booked a campsite for the night, with ready-made tents – for an adventure! I wasn't sure about that, but they were actually luxury tents, within walking distance of some famous rocks and other places we hoped to visit. However, Dad also said the sounds of wild creatures would help us sleep. That sounded worrying – until the 'wild creatures' turned out to be frogs! So I was embarrassed by my fears – and kept awake by the frogs! But we had fun making meals together – we'd brought food, as we knew there'd be nowhere to eat.
+In fact, this whole trip was fantastic!
+
+# 训练部分（书 P17–P18，答案见 P184）
+① 用框里 8 个动词的正确形式补全：1 warned / 2 recommend / 3 apologised / 4 explained / 5 promised / 6 invited / 7 offered / 8 blamed
+② 改错（不换动词）：1 suggested going（或 suggested (that) we (should) go）/ 2 explained to the teacher / 3 recommend (that) you wash / 4 refused to say / 5 reminded me to check（或 that I should check）/ 6 offered to help me / 7 encouraged us to read / 8 persuade my parents to let me
+③ 每句意图（目的）：1 to make a suggestion / 2 to give an explanation / 3 to make a recommendation / 4 to refuse to do something / 5 to remind someone to do something / 6 to offer to do something for someone / 7 to encourage others to do something / 8 to persuade someone to do something
+④ 大意题：1 c（a story）/ 2 b（climbing down a mountain）/ 3 a（a little worried）/ 4 b（to admit she had made a mistake）
+⑤ 拆题：1 regretted / 2 从 it started to snow 往后看 / 3 B
+⑥ 两人活动：把错误选项和证明它错的原文配对（口语活动，无书面答案）
+
+# 真题（书 P19–P20，答案见 P184）
+11 D（read on the website that the road wouldn't be an easy drive, with a number of sharp bends）
+12 A（seemed to consider coming towards us, which made me slightly nervous）
+13 C（I'd heard they were rare → roughly six million in that area）
+14 B（luxury tents, within walking distance of some famous rocks and other places we hoped to visit）
+15 D（wild creatures → frogs / embarrassed by my fears, so I feel silly now）

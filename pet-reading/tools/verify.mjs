@@ -73,14 +73,18 @@ function verifyArticle(slug) {
      角色块上还可以带三种正文内联交互（Reading Part 1 的答题方式）：
        · plain：这一块不逐词查词（短文本「一行一个解析」就够）
        · pick：[题号…] → 在这块下面渲染「我的答案」横排
-       · optsInline：把这题的选项整行列出来（题号取 b.n） */
+       · optsInline：把这题的选项整行列出来（题号取 b.n）
+     Reading Part 3 新增的附表级装饰：
+       · img / tip / badge：浮动图 / Tip 提示框 / 页内小徽章（答案见 P184）
+       · head {l,r}：扉页式大标题，首句文本必须逐字等于 "l · r"
+       · frame / shade / center / optsGrid：边框盒 / 灰底盒 / 居中 / 2×2 选项盒 */
   if (A.passage.blocks) {
     if (!Array.isArray(A.passage.blocks) || A.passage.blocks.length !== A.passage.paragraphs.length) {
       err(`${slug}：passage.blocks 长度（${(A.passage.blocks || []).length}）与段落数（${A.passage.paragraphs.length}）对不上`);
     } else {
       A.passage.blocks.forEach((b, i) => {
-        if (!b || typeof b !== "object" || ["h", "i", "o", "q"].indexOf(b.r) < 0) {
-          err(`${slug}：第 ${i} 段的 blocks 角色不合法（应为 h / i / o / q）`);
+        if (!b || typeof b !== "object" || ["h", "i", "o", "q", "p"].indexOf(b.r) < 0) {
+          err(`${slug}：第 ${i} 段的 blocks 角色不合法（应为 h / i / o / q / p）`);
           return;
         }
         if (b.plain !== undefined && b.plain !== true) err(`${slug}：第 ${i} 段的 blocks.plain 只能是 true（或省略）`);
@@ -90,9 +94,56 @@ function verifyArticle(slug) {
             if (!(A.questions || []).some(q => q && q.n === n)) err(`${slug}：第 ${i} 段 blocks.pick 引用了不存在的题号 ${n}`);
           });
         }
-        if (b.optsInline !== undefined) {
-          if (b.optsInline !== true) err(`${slug}：第 ${i} 段的 blocks.optsInline 只能是 true（或省略）`);
-          else if (!(A.questions || []).some(q => q && String(q.n) === String(b.n))) err(`${slug}：第 ${i} 段 optsInline 的题号「${b.n}」没有对应题目`);
+        if (b.optsInline !== undefined && b.optsInline !== true) err(`${slug}：第 ${i} 段的 blocks.optsInline 只能是 true（或省略）`);
+        if (b.optsInline || b.optsGrid) {
+          if (!(A.questions || []).some(q => q && String(q.n) === String(b.n))) err(`${slug}：第 ${i} 段 ${b.optsGrid ? "optsGrid" : "optsInline"} 的题号「${b.n}」没有对应题目`);
+        }
+        if (b.optsGrid !== undefined && b.optsGrid !== true) err(`${slug}：第 ${i} 段的 blocks.optsGrid 只能是 true（或省略）`);
+        ["frame", "shade", "center"].forEach(k => {
+          if (b[k] !== undefined && b[k] !== true) err(`${slug}：第 ${i} 段的 blocks.${k} 只能是 true（或省略）`);
+        });
+        if (b.img !== undefined) {
+          const im = b.img || {};
+          if (typeof im.src !== "string" || !im.src || typeof im.alt !== "string" || !im.alt) {
+            err(`${slug}：第 ${i} 段的 blocks.img 需要 { src, alt }`);
+          } else if (!fs.existsSync(P(im.src))) {
+            err(`${slug}：第 ${i} 段的 img.src「${im.src}」在仓库里找不到（应在 assets/ 下）`);
+          }
+          if (im.side !== undefined && im.side !== "left") err(`${slug}：第 ${i} 段的 img.side 只能省略或 "left"`);
+          if (im.w !== undefined && !(typeof im.w === "number" && im.w > 40)) err(`${slug}：第 ${i} 段的 img.w 应是大于 40 的数字`);
+        }
+        if (b.tip !== undefined && (typeof b.tip !== "string" || !b.tip.trim())) err(`${slug}：第 ${i} 段的 blocks.tip 应为非空字符串`);
+        if (b.badge !== undefined && (typeof b.badge !== "string" || !b.badge.trim())) err(`${slug}：第 ${i} 段的 blocks.badge 应为非空字符串`);
+        /* 真表格（Reading Part 5 第①题）：head 是表头文字，行与 blocks.pick 一一对应 */
+        if (b.table !== undefined) {
+          const tb = b.table || {};
+          const rows = (A.passage.paragraphs[i] || []).length;
+          if (!Array.isArray(tb.head) || !tb.head.length || tb.head.some(x => typeof x !== "string" || !x.trim())) {
+            err(`${slug}：第 ${i} 段的 blocks.table.head 应为非空字符串数组`);
+          }
+          if (!Array.isArray(b.pick) || b.pick.length !== rows) {
+            err(`${slug}：第 ${i} 段 table 的行数（${rows}）与 blocks.pick 的题号数（${(b.pick || []).length}）对不上，行与题要一一对应`);
+          }
+        }
+        /* Remember 灰底小框（只有装饰，没有交互） */
+        if (b.rmb !== undefined && (typeof b.rmb !== "string" || !b.rmb.trim())) {
+          err(`${slug}：第 ${i} 段的 blocks.rmb 应为非空字符串`);
+        }
+        if (b.head !== undefined) {
+          const hd = b.head || {};
+          if (typeof hd.l !== "string" || !hd.l || typeof hd.r !== "string" || !hd.r) {
+            err(`${slug}：第 ${i} 段的 blocks.head 需要 { l, r } 两个非空字符串`);
+          } else {
+            const want = hd.l + " · " + hd.r;
+            const got = (((A.passage.paragraphs[i] || [])[0] || {}).s) || "";
+            if (got !== want) err(`${slug}：第 ${i} 段是 head 块，首句文本应逐字等于「${want}」（现在是「${got}」）`);
+          }
+        }
+        /* h/i 段是「整段翻译」处理的：每句的 tr 都要有，缺了整段翻译就缺口 */
+        if (b.r === "h" || b.r === "i") {
+          (A.passage.paragraphs[i] || []).forEach((s, si) => {
+            if (!s.tr) err(`${slug}：第 ${i} 段（整段处理的 ${b.r}）第 ${si} 句缺 tr，整段翻译会缺口`);
+          });
         }
       });
     }
@@ -126,6 +177,12 @@ function verifyArticle(slug) {
     if (opens !== closes) err(`${slug} ${s.ref}：«» 标记不成对`);
     if (opens !== optCount) err(`${slug} ${s.ref}：«» 标记 ${opens} 个，与选项数 ${optCount} 对不上`);
     if (!String(s.s).includes("«") && optCount) err(`${slug} ${s.ref}：标了 pickQ 但没有 «» 标记`);
+  });
+
+  /* --- 改错题的下划线（Part 3 ② 式）：ul 必须逐字出现在该句原文里 --- */
+  sents.filter(s => s.ul !== undefined).forEach(s => {
+    if (typeof s.ul !== "string" || !s.ul.trim()) err(`${slug} ${s.ref}：ul 应为「要下划的原文片段」字符串`);
+    else if (String(s.s).indexOf(s.ul) < 0) err(`${slug} ${s.ref}：ul「${s.ul}」在该句原文里找不到，标不上`);
   });
 
   /* --- 选项分析同样要有 ana --- */
@@ -197,8 +254,20 @@ function verifyArticle(slug) {
     distractors.filter(L => !mentioned.has(L)).forEach(L =>
       err(`${slug}：干扰项 ${L} 在任何一题的 others 里都没出现，点它的「答题解析」会是空的`));
   } else {
-    /* ---- Part 1 式：五段短文各自成题，每题自带 opts（A–C） ---- */
-    if (found.length) err(`${slug}：Part 1 式文章的原文不该有空位（发现 [${found}]）`);
+    /* ---- Part 1 式：五段短文各自成题，每题自带 opts（A–C） ----
+       Part 5 式（同一篇里训练题自带选项、真题在正文里挖空）复用这条分支：
+       允许正文出现 {n} 空位，但空位必须恰好等于真题题号（n<100），
+       训练题（n≥100）一律不许用 {n} 写法（那会让词数对账和题号表达变乱）。 */
+    const examQns = qs.filter(q => q.n < 100).map(q => q.n).sort((a, b) => a - b);
+    if (found.length) {
+      if (!examQns.length) {
+        err(`${slug}：原文出现空位 [${found}]，但文章里没有真题（n<100）题目`);
+      } else if (found.join() !== examQns.join()) {
+        err(`${slug}：原文空位 [${found}] 应恰好等于真题题号 [${examQns}]`);
+      }
+      const trainSlots = found.filter(n => n >= 100);
+      if (trainSlots.length) err(`${slug}：训练题不许用 {n} 空位（发现 [${trainSlots}]），请写成省略号 …………`);
+    }
     qs.forEach(q => {
       ["why", "clues", "tip", "prompt", "ana"].forEach(f => {
         if (!q[f]) err(`${slug}：第 ${q.n} 题缺 ${f}`);
@@ -225,13 +294,13 @@ function verifyArticle(slug) {
         });
       }
     });
-    /* 正文里要整行列选项的题（optsInline）：每个选项都必须有句子分析，
-       否则点「析」是空面板 —— 这正是「选项都要有句子分析」那条需求 */
-    ((A.passage.blocks || [])).filter(b => b && b.optsInline).forEach(b => {
+    /* 正文里要整行列选项的题（optsInline）或排成 2×2 盒子的题（optsGrid）：
+       每个选项都必须有句子分析，否则点「析」是空面板 */
+    ((A.passage.blocks || [])).filter(b => b && (b.optsInline || b.optsGrid)).forEach(b => {
       const q = qs.filter(x => String(x.n) === String(b.n))[0];
       if (!q) return;                       // 上一段已报过题号不存在
       Object.keys(q.opts || {}).forEach(L => {
-        if (!(q.optsAna || {})[L]) err(`${slug}：第 ${q.n} 题（正文 optsInline）的选项 ${L} 缺 optsAna 句子分析`);
+        if (!(q.optsAna || {})[L]) err(`${slug}：第 ${q.n} 题（正文 ${b.optsGrid ? "optsGrid" : "optsInline"}）的选项 ${L} 缺 optsAna 句子分析`);
       });
     });
   }

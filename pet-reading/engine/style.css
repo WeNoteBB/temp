@@ -428,6 +428,9 @@ button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
 /* 鼠标停在页边的「析」上时，对应那句变粉，指明这个按钮管的是哪一句 */
 .sent.peek{background:var(--hl-peek) !important;box-shadow:0 0 0 1px var(--hl-peek-line)}
 .sent.cur{background:var(--hl-cur) !important;box-shadow:0 0 0 1px var(--hl-cur-line)}
+/* 整段处理（标题/题目要求/提示）：点句子或悬浮页边「译」时，整段给反馈 */
+.para.peek{background:var(--hl-peek) !important;box-shadow:0 0 0 1px var(--hl-peek-line);border-radius:8px}
+.para.cur{background:var(--hl-cur) !important;box-shadow:0 0 0 1px var(--hl-cur-line);border-radius:8px}
 .sent-txt{}
 
 /* ---------- 段落角色（Reading Part 1 的排版体系） ----------
@@ -908,6 +911,118 @@ button.chip.ph2:hover{background:var(--phrase-hover)}
 .optline.wrongpick{border-color:var(--danger-bg-2);background:var(--danger-bg)}
 .optline.wrongpick .ol{background:var(--danger);color:var(--on-solid)}
 .optline.cur{box-shadow:0 0 0 2px var(--accent-soft)}
+
+/* ---------- Reading Part 3 的排版件 ----------
+   书本还原用：扉页式大标题 / 页内插图 / 答案徽章 / Tip 提示框 /
+   边框盒 / 灰底盒 / 居中小节 / 2×2 选项盒 / 改错下划线。
+   颜色一律走令牌（暗色只换令牌，这里一行都不动）。 */
+/* 扉页式大标题：黑底书名 + 下划线的 Part 名（「Training Test 1 · Reading Part 3」） */
+.bh-blk{
+  display:inline-block;padding:1px 10px;border-radius:3px;
+  background:var(--ink);color:var(--bg);
+}
+.bh-ttl{border-bottom:2px solid var(--ink);padding:0 2px 1px}
+/* 页内插图（从原书扫描里裁出来的图）：默认浮在右侧，文字绕排。
+   side="left" 是文字绕在图片右边（Great Ocean Road 那张照片）。
+   宽度 = --imgw（数据给），窄屏最多占一半，不挤压出横向滚动条。 */
+.blkimg{
+  float:right;display:block;width:var(--imgw,260px);max-width:48%;
+  margin:0 0 10px 16px;
+}
+.blkimg[data-side="left"]{float:left;margin:0 18px 10px 0}
+.blkimg img{display:block;width:100%;height:auto;border-radius:6px}
+/* 「答案见 P184」这类页内小徽章：跟在标题文字后面，行内排得下就同一行 */
+.ansbadge{
+  display:inline-block;margin-left:12px;vertical-align:3px;
+  padding:2px 10px;border-radius:10px;
+  background:var(--sunken);color:var(--ink-2);
+  font-size:calc(12px * var(--zoom));font-weight:400;font-style:normal;
+}
+/* Tip 提示框（中文小贴士）：黑圆标 + 灰底文字，浮在段落右上角 */
+.tipbox{
+  float:right;display:flex;align-items:flex-start;gap:7px;
+  width:var(--imgw,290px);max-width:46%;margin:0 0 10px 16px;
+}
+.tipico{
+  flex:none;width:calc(34px * var(--zoom));height:calc(34px * var(--zoom));border-radius:50%;
+  background:var(--ink);color:var(--bg);
+  display:flex;align-items:center;justify-content:center;
+  font-size:calc(12px * var(--zoom));font-weight:700;font-style:normal;
+}
+.tiptxt{
+  flex:1;min-width:0;padding:7px 10px;border-radius:8px;
+  background:var(--sunken);color:var(--ink-2);
+  font-size:calc(13px * var(--zoom));font-style:normal;line-height:1.6;
+}
+/* Remember 灰底小框（书里的黑标签 + 灰底说明，Reading Part 5 用） */
+/* .rmbwrap 把那一段变成 BFC：浮框被留在自己的那一带，不会挤压「真题抬头」等后续内容 */
+.para.rmbwrap{display:flow-root}
+.rmbbox{
+  float:right;width:var(--imgw,320px);max-width:46%;margin:0 0 10px 16px;
+  border:1px solid var(--line);border-radius:8px;overflow:hidden;
+}
+.rmbico{
+  display:block;padding:6px 12px;background:var(--ink);color:var(--bg);
+  font-weight:700;font-size:calc(13px * var(--zoom));
+}
+.rmbtxt{
+  display:block;padding:9px 12px;background:var(--sunken);color:var(--ink-2);
+  font-size:calc(13px * var(--zoom));line-height:1.7;
+}
+/* 真表格（Reading Part 5 第①题的介词表）：行文本仍是 .sent，照常点词 */
+.ttable{width:100%;border-collapse:collapse;margin:8px 0;font-size:calc(14px * var(--zoom))}
+.ttable th,.ttable td{border:1px solid var(--line);padding:8px 12px;text-align:left;vertical-align:middle}
+.ttable th{background:var(--sunken);font-weight:700}
+.ttable .sent{display:inline}
+.ttable .sent.alt{background:transparent}
+.ttable .pickrow{margin-top:0}
+.ttable .pn{color:var(--ink-3)}
+/* 连续边框盒合成一个（Reading Part 5 真题短文的那个大框） */
+.para.framed + .para.framed{margin-top:0;border-top:0;border-radius:0}
+.para.framed + .para.framed + .para.framed{border-radius:0 0 6px 6px}
+/* 边框盒（书上的练习方框）与灰底盒（第 ⑤ 题那种灰底 MCQ 盒） */
+.para.framed{border:1px solid var(--line);border-radius:6px;padding:12px 14px}
+.para.r-q.framed{border-left:1px solid var(--line);border-radius:6px}
+.para.shaded{background:var(--sunken);border-radius:6px;padding:10px 12px}
+.para.r-q.shaded{border-left-color:var(--line-2)}
+.para.center{text-align:center}
+/* 2×2 选项盒（第 15 题的博客卡片）：点整盒 = 选它，盒内右下角「析 / 🔊」 */
+.optgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:8px;width:100%}
+.gopt{
+  display:flex;flex-direction:column;align-items:flex-start;gap:7px;
+  width:auto;height:auto;min-height:0;   /* 盖掉 .ansb 的 26×26 小圆钮尺寸 */
+  padding:11px 12px;border-radius:10px;
+  border:1px solid var(--line);background:var(--panel);color:var(--ink);
+  font-size:calc(14px * var(--zoom));line-height:1.7;
+  cursor:pointer;transition:background .12s,border-color .12s;
+}
+.gopt:hover{background:var(--accent-soft);border-color:var(--border-accent)}
+.gopt .ol{
+  flex:none;width:calc(22px * var(--zoom));height:calc(22px * var(--zoom));border-radius:50%;
+  background:var(--line-2);color:var(--ink-2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:calc(12.5px * var(--zoom));font-weight:700;
+}
+.gopt .otxt{min-width:0;text-align:center;flex:1;width:100%}
+.gopt .oacts{display:flex;gap:6px;justify-content:flex-end;width:100%}
+.gopt .obtn{
+  flex:none;width:calc(25px * var(--zoom));height:calc(25px * var(--zoom));
+  border-radius:7px;border:1px solid var(--line);background:var(--panel);
+  color:var(--ink-3);font-size:calc(11.5px * var(--zoom));font-weight:700;
+  display:inline-flex;align-items:center;justify-content:center;cursor:pointer;
+}
+.gopt .obtn:hover{border-color:var(--border-accent);color:var(--accent);background:var(--accent-soft)}
+.gopt.on{border-color:var(--accent);background:var(--accent-soft)}
+.gopt.on .ol{background:var(--accent);color:var(--on-solid)}
+.gopt.right{border-color:var(--ok-line);background:var(--ins-bg)}
+.gopt.right .ol{background:var(--ok);color:var(--on-solid)}
+.gopt.wrongpick{border-color:var(--danger-bg-2);background:var(--danger-bg)}
+.gopt.wrongpick .ol{background:var(--danger);color:var(--on-solid)}
+/* 改错题的下划线（② 式）：只标出「要改的那一段」，不打断排版 */
+.ul-fix{
+  text-decoration:underline;text-decoration-thickness:1.5px;
+  text-underline-offset:3px;text-decoration-color:var(--danger);
+}
 
 /* ============================================================
    窄屏（手机 / 竖屏 iPad）：正文单列，小黑板改成底部抽屉

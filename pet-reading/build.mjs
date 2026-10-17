@@ -171,6 +171,24 @@ for (const a of assets) {
   }
 }
 
+/* ---------- 内容资产（图片等）：assets/** → dist/assets/** ----------
+   书籍还原用的插图（从 PDF 扫描里裁的原图）放这里。逐字节对比，
+   没变不重写；HTML 里一律用相对路径引用（assets/img/xxx.jpg），
+   整目录拷走放任何静态服务器都能跑。 */
+let assetsCopied = 0;
+function copyAssets(srcDir, outDir) {
+  if (!fs.existsSync(srcDir)) return;
+  fs.readdirSync(srcDir, { withFileTypes: true }).forEach(e => {
+    const s = path.join(srcDir, e.name), o = path.join(outDir, e.name);
+    if (e.isDirectory()) { if (!fs.existsSync(o)) fs.mkdirSync(o, { recursive: true }); copyAssets(s, o); }
+    else {
+      const a = fs.readFileSync(s), b = fs.existsSync(o) ? fs.readFileSync(o) : null;
+      if (!b || !a.equals(b)) { fs.writeFileSync(o, a); assetsCopied++; }
+    }
+  });
+}
+copyAssets(P("assets"), path.join(DIST, "assets"));
+
 /* ---------- 逐篇构建 ---------- */
 let built = 0, skipped = 0;
 
@@ -243,7 +261,8 @@ try { walk(DIST); } catch (e) { console.error("! 预压缩失败（不影响访�
 
 console.log("✓ 构建完成：新出 " + built + " 篇，跳过 " + skipped + " 篇" +
   (removed ? "，清理 " + removed + " 个孤儿" : "") +
-  "  ·  " + PAGES.length + " 个固定页面");
+  "  ·  " + PAGES.length + " 个固定页面" +
+  (assetsCopied ? "  ·  更新 " + assetsCopied + " 个资产文件" : ""));
 console.log("  引擎 " + assets.map(a => a.name + " v=" + a.hash).join("  "));
 console.log("  预压缩 " + gzipped + " 个文件" + (gzipped ? "，共省 " + Math.round(gzSaved / 1024) + "KB" : ""));
 console.log("  共 " + flat.length + " 篇  →  dist/");

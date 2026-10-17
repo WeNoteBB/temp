@@ -1,0 +1,2911 @@
+{
+  "slug": "t1-p5-ice-sculptures",
+  "book": "剑桥PET 官方模考题精讲讲练",
+  "label": "Reading Part 5",
+  "title": "Training Test 1",
+  "note": "答案为逐题对照书后 P186 官方答案核对一致；训练①②③的答案与解析同 P186（2026-10-17）",
+  "inlineQuiz": true,
+  "options": {},
+  "passage": {
+    "words": 406,
+    "sentences": 38,
+    "paragraphs": [
+      [
+        {
+          "s": "Training Test 1 · Reading Part 5",
+          "hard": false,
+          "tr": "训练测试 1 · 阅读第 5 部分。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题行：<b>Training Test 1 · Reading Part 5</b>（训练测试 1 · 阅读第 5 部分）",
+            "parts": [
+              [
+                "标题",
+                "Training Test 1 —— 训练测试编号"
+              ],
+              [
+                "标题",
+                "Reading Part 5 —— 阅读第 5 部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式省略句"
+            ],
+            "tip": "这一部分考的是：读一篇挖了六个空的短文，每个空从四个词里选一个最合适的。它考的是搭配和上下文。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "In this part you:",
+          "hard": false,
+          "tr": "在这一部分里，你要：",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>In this part you:</b>（这一部分里你要做的事）",
+            "parts": [
+              [
+                "介词短语",
+                "In this part —— 在这一部分里"
+              ],
+              [
+                "主语",
+                "you —— 你（指考生）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "In this part you: 是阅读各部分的固定开场白"
+            ],
+            "tip": "下面列的是两项任务：读什么、做什么题。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "read — a text with six gaps in it",
+          "hard": false,
+          "tr": "读——一篇挖了六个空的短文。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>read a text</b>（读一篇短文）",
+            "parts": [
+              [
+                "谓语",
+                "read —— 祈使句：读"
+              ],
+              [
+                "宾语",
+                "<code>a text</code> —— 一篇短文"
+              ],
+              [
+                "定语",
+                "<code>with six gaps in it</code> —— 里面有六个空的"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "with + 名词 作后置定语：a text with six gaps"
+            ],
+            "tip": "六个空就是 21–26 题；每个空的前后单词都是线索。"
+          }
+        },
+        {
+          "s": "choose — the correct word from four options for each gap.",
+          "hard": false,
+          "tr": "选——为每个空、从四个选项里选出正确的词。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>choose the correct word</b>（选出正确的词）",
+            "parts": [
+              [
+                "谓语",
+                "choose —— 祈使句：选"
+              ],
+              [
+                "宾语",
+                "<code>the correct word</code> —— 正确的词"
+              ],
+              [
+                "来源状语",
+                "<code>from four options</code> —— 从四个选项里"
+              ],
+              [
+                "对象状语",
+                "<code>for each gap</code> —— 为每一个空"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "choose A from B：从 B 里选 A"
+            ],
+            "tip": "四个选项常常是同一类词（都是动词或都是形容词），要靠搭配和句意区分。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "GRAMMAR: ADJECTIVES AND DEPENDENT PREPOSITIONS",
+          "hard": false,
+          "tr": "语法：形容词与它固定搭配的介词。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>GRAMMAR: ADJECTIVES AND DEPENDENT PREPOSITIONS</b>（语法：形容词和它依赖的介词）",
+            "parts": [
+              [
+                "名词短语",
+                "ADJECTIVES —— 形容词"
+              ],
+              [
+                "名词短语",
+                "DEPENDENT PREPOSITIONS —— 依附于形容词的介词"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "dependent preposition = 由形容词/动词决定、必须搭配的那个介词"
+            ],
+            "tip": "同一个形容词接哪个介词是约定俗成的（interested in、keen on…），本页专门练这个。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "① Complete the table with the prepositions of, about and with.",
+          "hard": false,
+          "tr": "① 用 of、about 和 with 三个介词补全表格。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>Complete the table</b>（补全表格）",
+            "parts": [
+              [
+                "谓语",
+                "Complete —— 祈使句：补全"
+              ],
+              [
+                "宾语",
+                "<code>the table</code> —— 表格"
+              ],
+              [
+                "方式状语",
+                "<code>with the prepositions of, about and with</code> —— 用 of、about、with 三个介词"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "complete sth with sth：用…补全…"
+            ],
+            "tip": "先读一遍三行形容词，凭语感选；做完对照下面的解析把搭配记住。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "nervous, sad, worried, excited, crazy, sure",
+          "hard": false,
+          "tr": "紧张的、难过的、担心的、兴奋的、着迷的、确信的。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "形容词清单（第 1 行）：<b>nervous, sad, worried, excited, crazy, sure</b>",
+            "parts": [
+              [
+                "形容词 1",
+                "<code>nervous</code> —— 紧张不安的"
+              ],
+              [
+                "形容词 2",
+                "<code>sad</code> —— 难过的"
+              ],
+              [
+                "形容词 3",
+                "<code>worried</code> —— 担心的"
+              ],
+              [
+                "形容词 4",
+                "<code>excited</code> —— 兴奋的"
+              ],
+              [
+                "形容词 5",
+                "<code>crazy</code> —— 着迷的；疯狂的"
+              ],
+              [
+                "形容词 6",
+                "<code>sure</code> —— 确信的"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "这一行形容词主要接 about：worried/excited/crazy about…（sure 接 about/of 都行）"
+            ],
+            "tip": "记搭配时连介词一起背：be worried about、be excited about、be crazy about。"
+          }
+        },
+        {
+          "s": "frightened, fond, proud, jealous, ashamed",
+          "hard": false,
+          "tr": "害怕的、喜爱的、自豪的、嫉妒的、羞愧的。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "形容词清单（第 2 行）：<b>frightened, fond, proud, jealous, ashamed</b>",
+            "parts": [
+              [
+                "形容词 1",
+                "<code>frightened</code> —— 害怕的"
+              ],
+              [
+                "形容词 2",
+                "<code>fond</code> —— 喜爱的"
+              ],
+              [
+                "形容词 3",
+                "<code>proud</code> —— 自豪的"
+              ],
+              [
+                "形容词 4",
+                "<code>jealous</code> —— 嫉妒的"
+              ],
+              [
+                "形容词 5",
+                "<code>ashamed</code> —— 羞愧的"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "这一行形容词接 of：be frightened/fond/proud/jealous/ashamed of…"
+            ],
+            "tip": "be proud of、be fond of 是考试高频，连介词一起记。"
+          }
+        },
+        {
+          "s": "disappointed, satisfied, fed up, impatient, bored",
+          "hard": false,
+          "tr": "失望的、满意的、受够了的、不耐烦的、厌倦的。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "形容词清单（第 3 行）：<b>disappointed, satisfied, fed up, impatient, bored</b>",
+            "parts": [
+              [
+                "形容词 1",
+                "<code>disappointed</code> —— 失望的"
+              ],
+              [
+                "形容词 2",
+                "<code>satisfied</code> —— 满意的"
+              ],
+              [
+                "形容词 3",
+                "<code>fed up</code> —— 受够了的"
+              ],
+              [
+                "形容词 4",
+                "<code>impatient</code> —— 不耐烦的"
+              ],
+              [
+                "形容词 5",
+                "<code>bored</code> —— 厌倦的"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "这一行形容词接 with：be disappointed/satisfied/fed up/impatient/bored with…"
+            ],
+            "tip": "fed up with、be bored with 口语和考试都常出现。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "FOCUS: USING PREPOSITIONS AND ADVERBS AS CLUES",
+          "hard": false,
+          "tr": "重点：把介词和副词当线索。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>FOCUS: USING PREPOSITIONS AND ADVERBS AS CLUES</b>（重点：用介词和副词做线索）",
+            "parts": [
+              [
+                "动名词短语",
+                "USING PREPOSITIONS AND ADVERBS —— 使用介词和副词"
+              ],
+              [
+                "介词短语",
+                "AS CLUES —— 当作线索"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "use sth as a clue：把…当线索"
+            ],
+            "tip": "空格后面的介词/副词（out、off、with、on…）往往直接决定答案选哪个词。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "B1 Preliminary candidates often make mistakes with dependent prepositions and phrasal verbs.",
+          "hard": false,
+          "tr": "B1 Preliminary 的考生常在「形容词搭配的介词」和「动词短语」上出错。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>candidates make mistakes with …</b>（考生在…上犯错）",
+            "parts": [
+              [
+                "主语",
+                "<code>B1 Preliminary candidates</code> —— B1 Preliminary（PET）的考生们"
+              ],
+              [
+                "谓语",
+                "<code>make mistakes</code> —— 犯错"
+              ],
+              [
+                "方面状语",
+                "<code>with dependent prepositions and phrasal verbs</code> —— 在固定搭配的介词和动词短语上"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "make mistakes with sth：在某方面出错",
+              "phrasal verb = 动词短语（look after、put off…）"
+            ],
+            "tip": "官方点题：这一页的改错和选词，考的就是这两类搭配。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "② Find and correct the mistakes in these sentences.",
+          "hard": false,
+          "tr": "② 找出这些句子里的错误并改正。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>Find and correct the mistakes</b>（找出并改正错误）",
+            "parts": [
+              [
+                "谓语 1",
+                "Find —— 祈使句：找出"
+              ],
+              [
+                "谓语 2",
+                "correct —— 改正"
+              ],
+              [
+                "宾语",
+                "<code>the mistakes</code> —— 错误"
+              ],
+              [
+                "范围状语",
+                "<code>in these sentences</code> —— 在这些句子里"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "find and correct：先找错、再订正（两个动作）"
+            ],
+            "tip": "红线下划的就是出错的那一小段；改法点每句页边的「析」看解析。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "1 I've always been interested on science and I want to study biology at university.",
+          "hard": false,
+          "tr": "1 我一直对科学感兴趣，想大学学生物。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "并列句：<b>I've been interested on science</b> + <b>I want to study biology</b>",
+            "parts": [
+              [
+                "主语",
+                "I —— 我"
+              ],
+              [
+                "谓语",
+                "<code>'ve been interested</code> —— 一直感兴趣（现在完成时）"
+              ],
+              [
+                "错误点",
+                "<code>interested on</code> —— 介词用错，应为 <b>interested in</b>"
+              ],
+              [
+                "并列分句",
+                "<code>I want to study biology at university</code> —— 我想在大学学生物"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "be interested in sth 固定搭配：对…感兴趣"
+            ],
+            "tip": "订正：interested <b>in</b>。be interested in sth 是固定搭配，介词只能是 in。"
+          },
+          "ul": "interested on"
+        }
+      ],
+      [
+        {
+          "s": "2 As soon as the sun went out, the moon became very bright.",
+          "hard": false,
+          "tr": "2 太阳一下山，月亮就变得很亮。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "时间状语从句：<b>As soon as the sun went out, …</b> + 主句",
+            "parts": [
+              [
+                "时间状语从句",
+                "<code>As soon as the sun went out</code> —— 太阳一下山"
+              ],
+              [
+                "主语",
+                "<code>the moon</code> —— 月亮"
+              ],
+              [
+                "谓语 + 表语",
+                "<code>became very bright</code> —— 变得很亮"
+              ],
+              [
+                "错误点",
+                "<code>went out</code> —— 搭配用错，应为 <b>went down</b>"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "as soon as：一…就…",
+              "go down（太阳）落下；go out（火/灯）熄灭"
+            ],
+            "tip": "订正：went <b>down</b>。太阳「落下」用 go down（set 也行）；go out 指火、灯「熄灭」。"
+          },
+          "ul": "went out"
+        }
+      ],
+      [
+        {
+          "s": "3 My brother isn't very keen of doing sport, but he loves watching it!",
+          "hard": false,
+          "tr": "3 我哥哥不太喜欢运动，但他很爱看比赛！",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "并列句：<b>My brother isn't very keen of doing sport</b> + <b>he loves watching it</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>My brother</code> —— 我哥哥"
+              ],
+              [
+                "系动词",
+                "<code>isn't</code> —— 不"
+              ],
+              [
+                "表语",
+                "<code>keen of doing sport</code> —— 热衷运动（介词用错）"
+              ],
+              [
+                "错误点",
+                "<code>keen of</code> —— 应为 <b>keen on</b>"
+              ],
+              [
+                "并列分句",
+                "<code>he loves watching it</code> —— 他很爱看（运动）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "be keen on sth/doing sth：热衷于…",
+              "love doing sth：喜欢做某事"
+            ],
+            "tip": "订正：keen <b>on</b> doing sth。be keen on 是「热衷于」，介词只能是 on。这也解释了下页第 4 题选项里为什么有 keen。"
+          },
+          "ul": "keen of"
+        }
+      ],
+      [
+        {
+          "s": "4 My mum was born in a small town, but she grew in London.",
+          "hard": false,
+          "tr": "4 我妈妈出生在一个小镇，但在伦敦长大。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "并列句：<b>My mum was born in a small town</b> + <b>she grew in London</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>My mum</code> —— 我妈妈"
+              ],
+              [
+                "被动谓语",
+                "<code>was born</code> —— 出生"
+              ],
+              [
+                "地点状语",
+                "<code>in a small town</code> —— 在一个小镇"
+              ],
+              [
+                "错误点",
+                "<code>grew in</code> —— 少了 up，应为 <b>grew up</b>"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "be born in/at：出生在…",
+              "grow up：长大（人）；grow：生长（植物）"
+            ],
+            "tip": "订正：grew <b>up</b>（in London）。grow up = 长大；只说 grew 是「生长（植物）」的意思。"
+          },
+          "ul": "grew in"
+        }
+      ],
+      [
+        {
+          "s": "5 Some people are really afraid to snakes.",
+          "hard": false,
+          "tr": "5 有些人真的很怕蛇。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>Some people are afraid to snakes.</b>（主系表 + 介词短语）",
+            "parts": [
+              [
+                "主语",
+                "<code>Some people</code> —— 一些人"
+              ],
+              [
+                "系动词",
+                "<code>are</code> —— 是"
+              ],
+              [
+                "表语",
+                "<code>really afraid</code> —— 真的很害怕"
+              ],
+              [
+                "错误点",
+                "<code>afraid to</code> —— 应为 <b>afraid of</b>"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "be afraid of sth：害怕某物",
+              "afraid to do sth：不敢做某事"
+            ],
+            "tip": "订正：afraid <b>of</b>。be afraid of sth 是固定搭配；afraid to do 只能说 afraid to do sth（不敢做某事）。"
+          },
+          "ul": "afraid to"
+        }
+      ],
+      [
+        {
+          "s": "6 I don't know if I'll go swimming. It depends of what my friends want to do.",
+          "hard": false,
+          "tr": "6 我不知道会不会去游泳，这取决于我朋友们想干什么。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "两句：<b>I don't know if I'll go swimming.</b> + <b>It depends of …</b>",
+            "parts": [
+              [
+                "主句",
+                "<code>I don't know</code> —— 我不知道"
+              ],
+              [
+                "宾语从句",
+                "<code>if I'll go swimming</code> —— 我会不会去游泳"
+              ],
+              [
+                "主语",
+                "It —— 指「去不去游泳」这件事"
+              ],
+              [
+                "错误点",
+                "<code>depends of</code> —— 应为 <b>depends on</b>"
+              ],
+              [
+                "宾语从句",
+                "<code>what my friends want to do</code> —— 我朋友们想做什么"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "depend on sth：取决于…",
+              "if 引导宾语从句：是否"
+            ],
+            "tip": "订正：depends <b>on</b>。depend on sth = 取决于。下一句的从句是 depends on 的宾语。"
+          },
+          "ul": "depends of"
+        }
+      ],
+      [
+        {
+          "s": "③ Choose the best word (a, b, c or d) for each gap.",
+          "hard": false,
+          "tr": "③ 为每个空选出最好的词（a、b、c 或 d）。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>Choose the best word for each gap.</b>（为每个空选出最好的词）",
+            "parts": [
+              [
+                "谓语",
+                "Choose —— 祈使句：选"
+              ],
+              [
+                "宾语",
+                "<code>the best word (a, b, c or d)</code> —— 最好的词（a–d 四选一）"
+              ],
+              [
+                "对象状语",
+                "<code>for each gap</code> —— 为每一个空"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "(a, b, c or d) 解释了四选一的形式"
+            ],
+            "tip": "先看空前后有没有固定搭配（……… out of、……… off、be ……… of…），再定意思。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "1 In my school exam, I couldn't finish both essays because I ………… out of time.",
+          "hard": false,
+          "tr": "1 学校考试时我没能写完两篇作文，因为我时间不够了。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>I couldn't finish both essays</b> + because 原因从句",
+            "parts": [
+              [
+                "时间状语",
+                "<code>In my school exam</code> —— 在学校考试里"
+              ],
+              [
+                "主语",
+                "I —— 我"
+              ],
+              [
+                "谓语",
+                "<code>couldn't finish</code> —— 没能写完"
+              ],
+              [
+                "宾语",
+                "<code>both essays</code> —— 两篇作文"
+              ],
+              [
+                "原因从句",
+                "<code>because I ran out of time</code> —— 因为我时间用完了"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "run out of sth = 用完、耗尽（主语是人或物都行）"
+            ],
+            "tip": "搭配是关键：run out of time 时间用完；前面 both essays 也提示「两篇没写完」的原因。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "2 Evie was ………… with watching TV, so she started reading a book instead.",
+          "hard": false,
+          "tr": "2 Evie 看电视看腻了，于是改读了一本书。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>Evie was bored with watching TV</b> + so 结果从句",
+            "parts": [
+              [
+                "主语",
+                "<code>Evie</code> —— Evie"
+              ],
+              [
+                "系动词",
+                "<code>was</code> —— 是"
+              ],
+              [
+                "表语",
+                "<code>bored with watching TV</code> —— 对看电视感到厌倦"
+              ],
+              [
+                "结果从句",
+                "<code>so she started reading a book instead</code> —— 所以她改读书了"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "be bored with sth/doing sth = 对…感到厌倦",
+              "instead 表示「转而（做了别的）」"
+            ],
+            "tip": "with 后面接 -ing：be bored with doing。上下文「改读一本书」提示是「腻了」。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "3 We'll have to ………… with that problem later. I don't have time right now.",
+          "hard": false,
+          "tr": "3 那个问题我们得以后再处理，我现在没时间。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "两句：<b>We'll have to deal with that problem later.</b> + <b>I don't have time right now.</b>",
+            "parts": [
+              [
+                "主语",
+                "We —— 我们"
+              ],
+              [
+                "谓语",
+                "<code>'ll have to deal</code> —— 得处理（将来）"
+              ],
+              [
+                "宾语",
+                "<code>that problem</code> —— 那个问题"
+              ],
+              [
+                "时间状语",
+                "later —— 稍后"
+              ],
+              [
+                "补充",
+                "<code>I don't have time right now</code> —— 我现在没时间"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "deal with sth = 处理、应对（问题/人/情况）",
+              "have to do sth = 不得不做"
+            ],
+            "tip": "with 是提示词：deal with 才是「处理」；solve/fix 后面都不接 with。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "4 I've always been really ………… of small animals like rabbits.",
+          "hard": false,
+          "tr": "4 我一直特别喜欢兔子之类的小动物。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>I've always been really fond of small animals</b>",
+            "parts": [
+              [
+                "主语",
+                "I —— 我"
+              ],
+              [
+                "系动词",
+                "<code>'ve always been</code> —— 一直（现在完成时，表持续）"
+              ],
+              [
+                "表语",
+                "<code>really fond of small animals</code> —— 非常喜爱小动物"
+              ],
+              [
+                "举例",
+                "<code>like rabbits</code> —— 比如兔子"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "be fond of sth = 喜爱某物（固定搭配）",
+              "like 这里作介词：例如"
+            ],
+            "tip": "of 是提示词：be fond of；keen 接 on、friendly 接 to、happy 接 with/about，都不合。且 fond 与 like 同义呼应，句意通顺。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "5 I realised I couldn't ………… off telling my parents the bad news any longer.",
+          "hard": false,
+          "tr": "5 我意识到，坏消息不能再拖着不告诉爸妈了。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>I realised (that) I couldn't put off telling my parents the bad news any longer.</b>",
+            "parts": [
+              [
+                "主句",
+                "<code>I realised</code> —— 我意识到"
+              ],
+              [
+                "从句主语",
+                "I —— 我"
+              ],
+              [
+                "从句谓语",
+                "<code>couldn't put off</code> —— 不能再拖延"
+              ],
+              [
+                "宾语",
+                "<code>telling my parents the bad news</code> —— 告诉爸妈坏消息这件事"
+              ],
+              [
+                "时间状语",
+                "<code>any longer</code> —— 再（不）…了"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "put off doing sth = 拖延做某事",
+              "not … any longer = 不再…"
+            ],
+            "tip": "off 是提示词：put off；tell sb sth 之间不加介词。上下文的「不能再拖」也帮定位 put off。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "6 I was ………… with my exam results. They were much better than I'd expected.",
+          "hard": false,
+          "tr": "6 我对考试成绩很满意。考得比我预想的好得多。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>I was delighted with my exam results.</b> + <b>They were better than I'd expected.</b>",
+            "parts": [
+              [
+                "主语",
+                "I —— 我"
+              ],
+              [
+                "系动词",
+                "was —— 是"
+              ],
+              [
+                "表语",
+                "<code>delighted with my exam results</code> —— 对成绩很满意"
+              ],
+              [
+                "补充",
+                "<code>They were much better than I'd expected</code> —— 比预想好得多"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "be delighted with sth = 对…感到高兴/满意（搭配 with）",
+              "than I'd expected 是比较从句（= than I had expected）"
+            ],
+            "tip": "with 是提示词：be delighted with；delighted 与「比预想好得多」的喜悦语气吻合。"
+          }
+        }
+      ],
+      [],
+      [
+        {
+          "s": "Exam Practice Test 1 · Reading Part 5",
+          "hard": false,
+          "tr": "真题测试 1 · 阅读第 5 部分。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题行：<b>Exam Practice Test 1 · Reading Part 5</b>（真题测试 1 · 阅读第 5 部分）",
+            "parts": [
+              [
+                "标题",
+                "Exam Practice Test 1 —— 真题测试编号"
+              ],
+              [
+                "标题",
+                "Reading Part 5 —— 阅读第 5 部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式省略句"
+            ],
+            "tip": "真题版：21–26 做在真实的挖空短文上，答案统一在书后 P186。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Questions 21–26",
+          "hard": false,
+          "tr": "第 21–26 题。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>Questions 21–26</b>（第 21–26 题）",
+            "parts": [
+              [
+                "名词短语",
+                "Questions —— 题目"
+              ],
+              [
+                "编号",
+                "21–26 —— 第 21 到第 26 题"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "六个空 = 六道题；一空一题"
+            ],
+            "tip": "空格在正文里是绿色的数字小圆标，点它可以看解析。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "For each question, choose the correct answer.",
+          "hard": false,
+          "tr": "为每道题选出正确答案。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>choose the correct answer</b>（选出正确答案）",
+            "parts": [
+              [
+                "状语",
+                "<code>For each question</code> —— 对每一道题"
+              ],
+              [
+                "谓语",
+                "choose —— 祈使句：选"
+              ],
+              [
+                "宾语",
+                "<code>the correct answer</code> —— 正确答案"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "for each question：每题都要（各）选一个"
+            ],
+            "tip": "做法：把四个词逐个放进去读一遍，看哪个词意和语法都合适。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Many cities have parks for people to enjoy.",
+          "hard": false,
+          "tr": "很多城市都有供人们游玩的公园。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>Many cities have parks.</b>（很多城市有公园）",
+            "parts": [
+              [
+                "主语",
+                "<code>Many cities</code> —— 很多城市"
+              ],
+              [
+                "谓语",
+                "have —— 有"
+              ],
+              [
+                "宾语",
+                "<code>parks</code> —— 公园"
+              ],
+              [
+                "定语",
+                "<code>for people to enjoy</code> —— 供人们游玩的"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "for sb to do 作后置定语：给人们享用的（公园）"
+            ],
+            "tip": "开篇先讲常识（城市公园），为后面的「冰雕公园」做铺垫。"
+          }
+        },
+        {
+          "s": "And it's very {21} to find wonderful sculptures in them.",
+          "hard": false,
+          "tr": "而且在公园里见到美妙的雕塑是很（21）的事。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>it's very common to find wonderful sculptures</b>（形式主语 it，真主语是 to find…）",
+            "parts": [
+              [
+                "形式主语",
+                "it —— 指 to find wonderful sculptures"
+              ],
+              [
+                "系动词",
+                "'s —— 是"
+              ],
+              [
+                "表语",
+                "<code>very common</code> —— 很常见的（答案 common）"
+              ],
+              [
+                "真主语",
+                "<code>to find wonderful sculptures in them</code> —— 在它们（公园）里见到美妙的雕塑"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "It's + adj. + to do sth：做某事是…的",
+              "common 可以受 very 修饰"
+            ],
+            "tip": "21 题考词义：公园里有雕塑是「常见」的事 → common。usual 一般不说 very usual，familiar/general 意思不对。"
+          }
+        },
+        {
+          "s": "However, some sculptures found in Fairbanks, Alaska, aren't quite the same as in other cities.",
+          "hard": false,
+          "tr": "然而，阿拉斯加费尔班克斯的一些雕塑和别的城市不太一样。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>some sculptures aren't quite the same as in other cities.</b>（主系表 + 比较）",
+            "parts": [
+              [
+                "转折",
+                "However —— 然而"
+              ],
+              [
+                "主语",
+                "<code>some sculptures found in Fairbanks, Alaska</code> —— 在阿拉斯加费尔班克斯发现的一些雕塑"
+              ],
+              [
+                "系表",
+                "<code>aren't quite the same as in other cities</code> —— 和别的城市的不太一样"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "found in … 过去分词作后置定语（= which are found in…）",
+              "the same as … 比较结构"
+            ],
+            "tip": "However 一转，引出「不一样在哪」——它们是用冰做的、会消失。"
+          }
+        },
+        {
+          "s": "When the temperature {22} at the end of winter, they all disappear – because they're made of ice!",
+          "hard": true,
+          "tr": "冬末气温（22）的时候，它们就全都不见了——因为它们是冰做的！",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "时间状语从句 + 主句 + because 原因从句",
+            "parts": [
+              [
+                "时间状语从句",
+                "<code>When the temperature rises at the end of winter</code> —— 冬末气温上升时"
+              ],
+              [
+                "主语",
+                "<code>they</code> —— 它们"
+              ],
+              [
+                "谓语",
+                "<code>disappear</code> —— 消失"
+              ],
+              [
+                "原因从句",
+                "<code>because they're made of ice</code> —— 因为它们是用冰做的"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "rise 指「（温度/太阳/价格）上升、升起」",
+              "be made of sth：用…做成（看得出材料）"
+            ],
+            "tip": "22 题考搭配：temperature rises 气温上升；grows 指「生长/变大」，主语不用 temperature。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Fairbanks has been the home of the World Ice Art Championships for over 20 years, and artists from many different countries come to create spectacular ice sculptures.",
+          "hard": true,
+          "tr": "费尔班克斯 20 多年来一直是世界冰雕锦标赛的举办地，许多国家的艺术家都来这里创作壮观的冰雕。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "并列句：<b>Fairbanks has been the home of …</b> + <b>artists come to create …</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Fairbanks</code> —— 费尔班克斯"
+              ],
+              [
+                "系表",
+                "<code>has been the home of the World Ice Art Championships for over 20 years</code> —— 20 多年来一直是世界冰雕锦标赛的举办地"
+              ],
+              [
+                "并列分句主语",
+                "<code>artists from many different countries</code> —— 来自许多不同国家的艺术家"
+              ],
+              [
+                "并列分句谓语",
+                "<code>come to create spectacular ice sculptures</code> —— 来创作壮观的冰雕"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "the home of … = …的举办地/发源地",
+              "come to do sth：来（做某事）"
+            ],
+            "tip": "the home of… 不是「家」的字面意思，而是「发源地/举办地」。这句也解释了为什么 Fairbanks 的雕塑「不一样」。"
+          }
+        },
+        {
+          "s": "The ice is brought from a lake {23} near the sculpture park.",
+          "hard": false,
+          "tr": "这些冰是从雕塑公园附近（23）的一个湖里运来的。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "被动语态：<b>The ice is brought from a lake …</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>The ice</code> —— 冰"
+              ],
+              [
+                "谓语",
+                "<code>is brought</code> —— 被运来（被动）"
+              ],
+              [
+                "地点状语",
+                "<code>from a lake located near the sculpture park</code> —— 从雕塑公园附近的一个湖里"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "be brought from …：从…运来",
+              "located near … 过去分词作后置定语"
+            ],
+            "tip": "23 题考词义：lake located near the park「位于公园附近的湖」；arranged/contained/attached 都不对。"
+          }
+        },
+        {
+          "s": "It's said to be so clear that visitors can read a newspaper through it – even though the individual pieces are over one metre {24}!",
+          "hard": true,
+          "tr": "据说它清澈得游客透过它都能读报纸——尽管每一块冰都超过一米（24）！",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>It's said to be so clear that …</b>（so…that 结果句）",
+            "parts": [
+              [
+                "主语",
+                "It —— 指冰"
+              ],
+              [
+                "谓语",
+                "<code>'s said to be so clear</code> —— 据说清澈到（it's said to be… 据说是…）"
+              ],
+              [
+                "结果从句",
+                "<code>visitors can read a newspaper through it</code> —— 游客能透过它读报纸"
+              ],
+              [
+                "让步从句",
+                "<code>even though the individual pieces are over one metre thick</code> —— 尽管每一块都超过一米厚"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "so + adj. + that …：如此…以至于",
+              "It's said to be…：据说是…",
+              "even though 引导让步：尽管"
+            ],
+            "tip": "24 题考搭配：冰块的描述用 one metre thick「一米厚」；heavy/large/strong 都不搭配 metre。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Visitors also have the {25} to make their own ice sculptures if they wish, at special classes.",
+          "hard": false,
+          "tr": "游客如果有兴趣，还能在特别课程上（25）亲手做冰雕。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>Visitors have the opportunity to make their own ice sculptures.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Visitors</code> —— 游客们"
+              ],
+              [
+                "谓语",
+                "<code>have</code> —— 有"
+              ],
+              [
+                "宾语",
+                "<code>the opportunity</code> —— 机会（答案 opportunity）"
+              ],
+              [
+                "定语",
+                "<code>to make their own ice sculptures</code> —— 亲手制作自己的冰雕"
+              ],
+              [
+                "条件/地点",
+                "<code>if they wish, at special classes</code> —— 如果愿意的话，在特别课程上"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "have the opportunity to do sth = 有机会做某事",
+              "their own：他们自己的"
+            ],
+            "tip": "25 题考词义：have the opportunity to do「有机会做」；occasion 指场合，benefit/ability 语义不符。"
+          }
+        },
+        {
+          "s": "There's a children's play park, too, where {26} everything is made of ice, including sculptures of favourite animals.",
+          "hard": true,
+          "tr": "还有一个儿童游乐公园，那里（26）所有的东西都是用冰做的，包括孩子们最喜欢的动物雕塑。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "there be + 定语从句：<b>There's a children's play park, where …</b>",
+            "parts": [
+              [
+                "主干",
+                "<code>There's a children's play park, too</code> —— 还有一个儿童游乐公园"
+              ],
+              [
+                "主语",
+                "<code>everything</code> —— 所有一切"
+              ],
+              [
+                "谓语",
+                "<code>is made of ice</code> —— 是用冰做的"
+              ],
+              [
+                "补充",
+                "<code>including sculptures of favourite animals</code> —— 包括最喜欢的动物雕塑"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "where 引导定语从句修饰地点 play park",
+              "absolutely everything = 所有一切（语气最强的「一切」）"
+            ],
+            "tip": "26 题考搭配：absolutely everything 是固定说法；totally/completely/fully 一般不和 everything 连用。"
+          }
+        },
+        {
+          "s": "It's a great place to visit!",
+          "hard": false,
+          "tr": "这真是个值得一去的好地方！",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>It's a great place to visit!</b>",
+            "parts": [
+              [
+                "主语",
+                "It —— 指这个冰雕公园"
+              ],
+              [
+                "系表",
+                "<code>'s a great place</code> —— 是个很棒的地方"
+              ],
+              [
+                "定语",
+                "<code>to visit</code> —— 去参观的"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "a great place to do sth：做某事的好地方（不定式作定语）"
+            ],
+            "tip": "结尾给整体评价，点明「值得一看」。"
+          }
+        }
+      ],
+      []
+    ],
+    "blocks": [
+      {
+        "r": "h",
+        "head": {
+          "l": "Training Test 1",
+          "r": "Reading Part 5"
+        },
+        "badge": "答案见 P186"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "pick": [
+          101,
+          102,
+          103
+        ],
+        "table": {
+          "head": [
+            "Adjectives",
+            "Preposition"
+          ]
+        }
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "pick": [
+          104
+        ]
+      },
+      {
+        "r": "q",
+        "pick": [
+          105
+        ]
+      },
+      {
+        "r": "q",
+        "pick": [
+          106
+        ]
+      },
+      {
+        "r": "q",
+        "pick": [
+          107
+        ]
+      },
+      {
+        "r": "q",
+        "pick": [
+          108
+        ]
+      },
+      {
+        "r": "q",
+        "pick": [
+          109
+        ]
+      },
+      {
+        "r": "i",
+        "rmb": "一个动词短语可包括两个或更多部分，它的整体意义与单独部分的意义不同。（如：get on with someone 意为「和某人关系融洽」。）"
+      },
+      {
+        "r": "h",
+        "head": {
+          "l": "Exam Practice Test 1",
+          "r": "Reading Part 5"
+        },
+        "badge": "答案见 P186"
+      },
+      {
+        "r": "h",
+        "tip": "注意每个空格前后的单词。将每个选项都放入空格中试试：哪一个意思恰当并且符合句子语法呢？"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "p",
+        "frame": true,
+        "img": {
+          "src": "assets/img/t1-p5-ice-sculpture.jpg",
+          "alt": "鱼形冰雕的照片（原书 P25）",
+          "w": 330
+        }
+      },
+      {
+        "r": "p",
+        "frame": true
+      },
+      {
+        "r": "p",
+        "frame": true
+      },
+      {
+        "r": "q",
+        "pick": [
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ]
+      }
+    ]
+  },
+  "phrases": [
+    "out of time",
+    "made of ice",
+    "at the end of",
+    "have to",
+    "a great place to visit"
+  ],
+  "glossary": {
+    "gap": {
+      "pos": "n.",
+      "ipa": "/ɡæp/",
+      "cn": "缺口；空格",
+      "note": "fill in the gap 填空。"
+    },
+    "correct": {
+      "pos": "adj./v.",
+      "ipa": "/kəˈrekt/",
+      "cn": "正确的；改正"
+    },
+    "adjective": {
+      "pos": "n.",
+      "ipa": "/ˈædʒɪktɪv/",
+      "cn": "形容词"
+    },
+    "dependent": {
+      "pos": "adj.",
+      "ipa": "/dɪˈpendənt/",
+      "cn": "依赖的；依附的",
+      "note": "dependent preposition 依附于形容词/动词的介词。"
+    },
+    "preposition": {
+      "pos": "n.",
+      "ipa": "/ˌprepəˈzɪʃn/",
+      "cn": "介词"
+    },
+    "complete": {
+      "pos": "v./adj.",
+      "ipa": "/kəmˈpliːt/",
+      "cn": "使完整；完整的"
+    },
+    "table": {
+      "pos": "n.",
+      "ipa": "/ˈteɪbl/",
+      "cn": "表格；桌子"
+    },
+    "crazy": {
+      "pos": "adj.",
+      "ipa": "/ˈkreɪzi/",
+      "cn": "着迷的；疯狂的",
+      "note": "be crazy about sth 对…着迷。"
+    },
+    "frightened": {
+      "pos": "adj.",
+      "ipa": "/ˈfraɪtnd/",
+      "cn": "害怕的",
+      "note": "be frightened of sth 害怕某物。"
+    },
+    "fond": {
+      "pos": "adj.",
+      "ipa": "/fɒnd/",
+      "cn": "喜爱的",
+      "note": "be fond of sth 喜爱某物。"
+    },
+    "proud": {
+      "pos": "adj.",
+      "ipa": "/praʊd/",
+      "cn": "自豪的；骄傲的",
+      "note": "be proud of sth 为…自豪。"
+    },
+    "jealous": {
+      "pos": "adj.",
+      "ipa": "/ˈdʒeləs/",
+      "cn": "嫉妒的",
+      "note": "be jealous of sb/sth。"
+    },
+    "ashamed": {
+      "pos": "adj.",
+      "ipa": "/əˈʃeɪmd/",
+      "cn": "羞愧的",
+      "note": "be ashamed of sth 为…感到羞愧。"
+    },
+    "satisfied": {
+      "pos": "adj.",
+      "ipa": "/ˈsætɪsfaɪd/",
+      "cn": "满意的",
+      "note": "be satisfied with sth 对…满意。"
+    },
+    "fed": {
+      "pos": "v.",
+      "ipa": "/fed/",
+      "cn": "喂养（feed 的过去式）",
+      "note": "fed up with 受够了…。"
+    },
+    "impatient": {
+      "pos": "adj.",
+      "ipa": "/ɪmˈpeɪʃnt/",
+      "cn": "不耐烦的",
+      "note": "be impatient with sb/sth。"
+    },
+    "adverb": {
+      "pos": "n.",
+      "ipa": "/ˈædvɜːb/",
+      "cn": "副词"
+    },
+    "clue": {
+      "pos": "n.",
+      "ipa": "/kluː/",
+      "cn": "线索；提示"
+    },
+    "mistake": {
+      "pos": "n./v.",
+      "ipa": "/mɪˈsteɪk/",
+      "cn": "错误；弄错",
+      "note": "make a mistake 犯错（用 make，不用 do）。"
+    },
+    "phrasal": {
+      "pos": "adj.",
+      "ipa": "/ˈfreɪzl/",
+      "cn": "短语的",
+      "note": "phrasal verb 动词短语。"
+    },
+    "study": {
+      "pos": "v.",
+      "ipa": "/ˈstʌdi/",
+      "cn": "学习；研究"
+    },
+    "biology": {
+      "pos": "n.",
+      "ipa": "/baɪˈɒlədʒi/",
+      "cn": "生物学"
+    },
+    "university": {
+      "pos": "n.",
+      "ipa": "/ˌjuːnɪˈvɜːsəti/",
+      "cn": "大学"
+    },
+    "sun": {
+      "pos": "n.",
+      "ipa": "/sʌn/",
+      "cn": "太阳"
+    },
+    "moon": {
+      "pos": "n.",
+      "ipa": "/muːn/",
+      "cn": "月亮"
+    },
+    "bright": {
+      "pos": "adj.",
+      "ipa": "/braɪt/",
+      "cn": "明亮的；鲜艳的"
+    },
+    "brother": {
+      "pos": "n.",
+      "ipa": "/ˈbrʌðə/",
+      "cn": "哥哥；弟弟"
+    },
+    "keen": {
+      "pos": "adj.",
+      "ipa": "/kiːn/",
+      "cn": "热衷的；渴望的",
+      "note": "be keen on sth/doing sth 热衷于…。"
+    },
+    "love": {
+      "pos": "v.",
+      "ipa": "/lʌv/",
+      "cn": "爱；喜欢",
+      "note": "love doing sth 喜欢做某事。"
+    },
+    "born": {
+      "pos": "adj.",
+      "ipa": "/bɔːn/",
+      "cn": "出生的",
+      "note": "be born in/at 出生在…。"
+    },
+    "grew": {
+      "pos": "v.",
+      "ipa": "/ɡruː/",
+      "cn": "生长（grow 的过去式）"
+    },
+    "london": {
+      "pos": "n.",
+      "ipa": "/ˈlʌndən/",
+      "cn": "伦敦（英国首都）"
+    },
+    "afraid": {
+      "pos": "adj.",
+      "ipa": "/əˈfreɪd/",
+      "cn": "害怕的",
+      "note": "be afraid of sth 害怕某物；be afraid to do 不敢做。"
+    },
+    "snake": {
+      "pos": "n.",
+      "ipa": "/sneɪk/",
+      "cn": "蛇"
+    },
+    "swim": {
+      "pos": "v.",
+      "ipa": "/swɪm/",
+      "cn": "游泳",
+      "note": "go swimming 去游泳。"
+    },
+    "depend": {
+      "pos": "v.",
+      "ipa": "/dɪˈpend/",
+      "cn": "取决于；依靠",
+      "note": "depend on sth 取决于。"
+    },
+    "both": {
+      "pos": "det.",
+      "ipa": "/bəʊθ/",
+      "cn": "两个都；两者都"
+    },
+    "essay": {
+      "pos": "n.",
+      "ipa": "/ˈeseɪ/",
+      "cn": "（学生的）作文；短文"
+    },
+    "evie": {
+      "pos": "n.",
+      "ipa": "/ˈiːvi/",
+      "cn": "Evie（女子名）"
+    },
+    "tv": {
+      "pos": "n.",
+      "ipa": "/ˌtiː ˈviː/",
+      "cn": "电视（television 的缩写）"
+    },
+    "we'll": {
+      "pos": "contr.",
+      "ipa": "/wiːl/",
+      "cn": "我们将（= we will）"
+    },
+    "rabbit": {
+      "pos": "n.",
+      "ipa": "/ˈræbɪt/",
+      "cn": "兔子"
+    },
+    "bad": {
+      "pos": "adj.",
+      "ipa": "/bæd/",
+      "cn": "坏的；不好的",
+      "note": "比较级 worse，最高级 worst。"
+    },
+    "result": {
+      "pos": "n.",
+      "ipa": "/rɪˈzʌlt/",
+      "cn": "结果；成绩"
+    },
+    "better": {
+      "pos": "adj.",
+      "ipa": "/ˈbetə/",
+      "cn": "更好的；更好地",
+      "note": "good / well 的比较级。"
+    },
+    "many": {
+      "pos": "det.",
+      "ipa": "/ˈmeni/",
+      "cn": "许多的（接可数名词）"
+    },
+    "city": {
+      "pos": "n.",
+      "ipa": "/ˈsɪti/",
+      "cn": "城市",
+      "note": "复数 cities。"
+    },
+    "wonderful": {
+      "pos": "adj.",
+      "ipa": "/ˈwʌndəfl/",
+      "cn": "美妙的；极好的"
+    },
+    "sculpture": {
+      "pos": "n.",
+      "ipa": "/ˈskʌlptʃə/",
+      "cn": "雕塑；雕像"
+    },
+    "fairbanks": {
+      "pos": "n.",
+      "ipa": "/ˈfeəbæŋks/",
+      "cn": "费尔班克斯（美国阿拉斯加州城市）"
+    },
+    "alaska": {
+      "pos": "n.",
+      "ipa": "/əˈlæskə/",
+      "cn": "阿拉斯加（美国州名）"
+    },
+    "temperature": {
+      "pos": "n.",
+      "ipa": "/ˈtemprətʃə/",
+      "cn": "温度；气温"
+    },
+    "world": {
+      "pos": "n.",
+      "ipa": "/wɜːld/",
+      "cn": "世界"
+    },
+    "art": {
+      "pos": "n.",
+      "ipa": "/ɑːt/",
+      "cn": "艺术；美术"
+    },
+    "championship": {
+      "pos": "n.",
+      "ipa": "/ˈtʃæmpiənʃɪp/",
+      "cn": "锦标赛"
+    },
+    "over": {
+      "pos": "prep.",
+      "ipa": "/ˈəʊvə/",
+      "cn": "超过；在…上方"
+    },
+    "artist": {
+      "pos": "n.",
+      "ipa": "/ˈɑːtɪst/",
+      "cn": "艺术家"
+    },
+    "country": {
+      "pos": "n.",
+      "ipa": "/ˈkʌntri/",
+      "cn": "国家",
+      "note": "复数 countries。"
+    },
+    "come": {
+      "pos": "v.",
+      "ipa": "/kʌm/",
+      "cn": "来"
+    },
+    "create": {
+      "pos": "v.",
+      "ipa": "/kriˈeɪt/",
+      "cn": "创造；创作"
+    },
+    "spectacular": {
+      "pos": "adj.",
+      "ipa": "/spekˈtækjələ/",
+      "cn": "壮观的；令人惊叹的"
+    },
+    "visitor": {
+      "pos": "n.",
+      "ipa": "/ˈvɪzɪtə/",
+      "cn": "参观者；游客"
+    },
+    "newspaper": {
+      "pos": "n.",
+      "ipa": "/ˈnjuːzpeɪpə/",
+      "cn": "报纸"
+    },
+    "through": {
+      "pos": "prep.",
+      "ipa": "/θruː/",
+      "cn": "穿过；透过"
+    },
+    "though": {
+      "pos": "adv./conj.",
+      "ipa": "/ðəʊ/",
+      "cn": "不过，然而；虽然",
+      "note": "放句末或句中作副词= however；放句首作连词= although。"
+    },
+    "individual": {
+      "pos": "adj.",
+      "ipa": "/ˌɪndɪˈvɪdʒuəl/",
+      "cn": "单个的；个别的"
+    },
+    "own": {
+      "pos": "adj.",
+      "ipa": "/əʊn/",
+      "cn": "自己的",
+      "note": "their own 他们自己的。"
+    },
+    "special": {
+      "pos": "adj.",
+      "ipa": "/ˈspeʃl/",
+      "cn": "特别的；专门的"
+    },
+    "class": {
+      "pos": "n.",
+      "ipa": "/klɑːs/",
+      "cn": "课；班级",
+      "note": "special classes 特别课程。"
+    },
+    "everything": {
+      "pos": "pron.",
+      "ipa": "/ˈevriθɪŋ/",
+      "cn": "所有事物；一切"
+    },
+    "favourite": {
+      "pos": "adj.",
+      "ipa": "/ˈfeɪvərɪt/",
+      "cn": "最喜欢的",
+      "note": "英式拼写 favourite（美式 favorite）。"
+    },
+    "ran": {
+      "pos": "v.",
+      "ipa": "/ræn/",
+      "cn": "跑（run 的过去式）",
+      "note": "run out of 用完。"
+    },
+    "fell": {
+      "pos": "v.",
+      "ipa": "/fel/",
+      "cn": "落下；跌倒（fall 的过去式）"
+    },
+    "depressed": {
+      "pos": "adj.",
+      "ipa": "/dɪˈprest/",
+      "cn": "沮丧的；抑郁的"
+    },
+    "stressed": {
+      "pos": "adj.",
+      "ipa": "/strest/",
+      "cn": "压力大的；紧张的"
+    },
+    "solve": {
+      "pos": "v.",
+      "ipa": "/sɒlv/",
+      "cn": "解决",
+      "note": "solve the problem 直接接宾语（不接 with）。"
+    },
+    "deal": {
+      "pos": "v.",
+      "ipa": "/diːl/",
+      "cn": "处理；应对",
+      "note": "deal with sth 处理某事。"
+    },
+    "friendly": {
+      "pos": "adj.",
+      "ipa": "/ˈfrendli/",
+      "cn": "友好的",
+      "note": "be friendly to sb 对某人友好。"
+    },
+    "happy": {
+      "pos": "adj.",
+      "ipa": "/ˈhæpi/",
+      "cn": "高兴的；满意的",
+      "note": "be happy with/about sth。"
+    },
+    "put": {
+      "pos": "v.",
+      "ipa": "/pʊt/",
+      "cn": "放；放置",
+      "note": "put off doing sth 拖延。"
+    },
+    "wait": {
+      "pos": "v.",
+      "ipa": "/weɪt/",
+      "cn": "等待",
+      "note": "wait for sb/sth 等待…。"
+    },
+    "delay": {
+      "pos": "v.",
+      "ipa": "/dɪˈleɪ/",
+      "cn": "推迟；拖延",
+      "note": "delay doing sth 推迟做某事（不接 off）。"
+    },
+    "delighted": {
+      "pos": "adj.",
+      "ipa": "/dɪˈlaɪtɪd/",
+      "cn": "高兴的；满意的",
+      "note": "be delighted with sth 对…满意。"
+    },
+    "usual": {
+      "pos": "adj.",
+      "ipa": "/ˈjuːʒuəl/",
+      "cn": "通常的；惯常的",
+      "note": "as usual 像往常一样；一般不说 very usual。"
+    },
+    "general": {
+      "pos": "adj.",
+      "ipa": "/ˈdʒenrəl/",
+      "cn": "一般的；普遍的"
+    },
+    "familiar": {
+      "pos": "adj.",
+      "ipa": "/fəˈmɪliə/",
+      "cn": "熟悉的",
+      "note": "be familiar to sb / be familiar with sth。"
+    },
+    "develop": {
+      "pos": "v.",
+      "ipa": "/dɪˈveləp/",
+      "cn": "发展；开发"
+    },
+    "rise": {
+      "pos": "v.",
+      "ipa": "/raɪz/",
+      "cn": "上升；升起",
+      "note": "temperature rises 气温上升（不及物）。"
+    },
+    "grow": {
+      "pos": "v.",
+      "ipa": "/ɡrəʊ/",
+      "cn": "生长；增长",
+      "note": "grow up 长大。"
+    },
+    "build": {
+      "pos": "v.",
+      "ipa": "/bɪld/",
+      "cn": "建造；增强"
+    },
+    "locate": {
+      "pos": "v.",
+      "ipa": "/ləʊˈkeɪt/",
+      "cn": "找出…的位置",
+      "note": "be located in/near 位于…。"
+    },
+    "arrange": {
+      "pos": "v.",
+      "ipa": "/əˈreɪndʒ/",
+      "cn": "安排；排列"
+    },
+    "contain": {
+      "pos": "v.",
+      "ipa": "/kənˈteɪn/",
+      "cn": "包含；装有"
+    },
+    "attached": {
+      "pos": "adj.",
+      "ipa": "/əˈtætʃt/",
+      "cn": "附上的；系上的",
+      "note": "attach A to B 把 A 系/附到 B 上。"
+    },
+    "heavy": {
+      "pos": "adj.",
+      "ipa": "/ˈhevi/",
+      "cn": "重的"
+    },
+    "large": {
+      "pos": "adj.",
+      "ipa": "/lɑːdʒ/",
+      "cn": "大的"
+    },
+    "strong": {
+      "pos": "adj.",
+      "ipa": "/strɒŋ/",
+      "cn": "强壮的；结实的"
+    },
+    "thick": {
+      "pos": "adj.",
+      "ipa": "/θɪk/",
+      "cn": "厚的",
+      "note": "one metre thick 一米厚。"
+    },
+    "occasion": {
+      "pos": "n.",
+      "ipa": "/əˈkeɪʒn/",
+      "cn": "场合；时机",
+      "note": "a special occasion 特殊场合。"
+    },
+    "benefit": {
+      "pos": "n.",
+      "ipa": "/ˈbenɪfɪt/",
+      "cn": "好处；利益",
+      "note": "the benefit of sth …的好处。"
+    },
+    "ability": {
+      "pos": "n.",
+      "ipa": "/əˈbɪləti/",
+      "cn": "能力；才能",
+      "note": "have the ability to do sth 有能力做某事。"
+    },
+    "totally": {
+      "pos": "adv.",
+      "ipa": "/ˈtəʊtəli/",
+      "cn": "完全地",
+      "note": "常接 different / agree，不接 everything。"
+    },
+    "absolutely": {
+      "pos": "adv.",
+      "ipa": "/ˈæbsəluːtli/",
+      "cn": "完全地；绝对地",
+      "note": "absolutely everything 所有一切（固定搭配）。"
+    },
+    "fully": {
+      "pos": "adv.",
+      "ipa": "/ˈfʊli/",
+      "cn": "完全地",
+      "note": "fully understand 完全理解。"
+    },
+    "out of time": {
+      "pos": "词组",
+      "ipa": "/aʊt əv taɪm/",
+      "cn": "时间用完；来不及了",
+      "note": "run out of time 时间不够用。"
+    },
+    "made of ice": {
+      "pos": "词组",
+      "ipa": "/meɪd əv aɪs/",
+      "cn": "用冰做的",
+      "note": "be made of 用于看得出材料的东西（冰、木头…）。"
+    },
+    "at the end of": {
+      "pos": "词组",
+      "ipa": "/ət ði end əv/",
+      "cn": "在…的末尾；在…结束时"
+    },
+    "a great place to visit": {
+      "pos": "词组",
+      "ipa": "/ə ɡreɪt pleɪs tə ˈvɪzɪt/",
+      "cn": "值得一去的好地方"
+    }
+  },
+  "questions": [
+    {
+      "n": 101,
+      "tag": "①-1",
+      "prompt": "训练①-1 ——「nervous, sad, worried, excited, crazy, sure」这一行形容词该接哪个介词？",
+      "answer": "b",
+      "opts": {
+        "a": "of",
+        "b": "about",
+        "c": "with"
+      },
+      "why": "官方答案：第 1 行接 <b>about</b>。worried about、excited about、crazy about 是最常见的搭配；sure 接 about/of 都可以（这一行按 about 归）。",
+      "clues": [
+        "worried about 担心…",
+        "excited about 对…兴奋",
+        "crazy about 对…着迷"
+      ],
+      "others": [
+        [
+          "a",
+          "<b>of</b> 属于第 2 行：be frightened/fond/proud/jealous/ashamed of…（比如 fond of）。"
+        ],
+        [
+          "c",
+          "<b>with</b> 属于第 3 行：be disappointed/satisfied/fed up/impatient/bored with…（比如 bored with）。"
+        ]
+      ],
+      "tip": "做题方法：逐行读形容词，凭「最常听到的那个搭配」选；做完整张表后横着再读一遍——三行对应 of / about / with 各一次（①里每个介词只用一次）。",
+      "ana": {
+        "parts": [
+          [
+            "搭配 1",
+            "<code>worried about</code> —— 担心…"
+          ],
+          [
+            "搭配 2",
+            "<code>excited about</code> —— 对…感到兴奋"
+          ],
+          [
+            "搭配 3",
+            "<code>crazy about</code> —— 对…着迷"
+          ],
+          [
+            "答案",
+            "<b>b about</b>"
+          ]
+        ],
+        "gram": [
+          "形容词 + dependent preposition：about 这一组多表示「情绪指向的对象」",
+          "sure about/of sth：对…有把握（两可，本行按 about 归）"
+        ],
+        "tr": "第 1 行形容词（nervous、sad、worried、excited、crazy、sure）主要搭配 about。"
+      }
+    },
+    {
+      "n": 102,
+      "tag": "①-2",
+      "prompt": "训练①-2 ——「frightened, fond, proud, jealous, ashamed」这一行形容词该接哪个介词？",
+      "answer": "a",
+      "opts": {
+        "a": "of",
+        "b": "about",
+        "c": "with"
+      },
+      "why": "官方答案：第 2 行接 <b>of</b>。be proud of（为…自豪）、be fond of（喜爱）、be afraid/frightened of（害怕）、be jealous of（嫉妒）、be ashamed of（为…羞愧）都是固定搭配。",
+      "clues": [
+        "proud of 为…自豪",
+        "fond of 喜爱",
+        "ashamed of 为…羞愧"
+      ],
+      "others": [
+        [
+          "b",
+          "<b>about</b> 用在第 1 行那些情绪形容词上（worried/excited/crazy about…）。"
+        ],
+        [
+          "c",
+          "<b>with</b> 属于第 3 行（fed up/impatient/bored with…）。"
+        ]
+      ],
+      "tip": "做题方法：proud of、fond of 是高频搭配，记住这两个，这一行的答案基本就锁定了。",
+      "ana": {
+        "parts": [
+          [
+            "搭配 1",
+            "<code>frightened of</code> —— 害怕…"
+          ],
+          [
+            "搭配 2",
+            "<code>fond of</code> —— 喜爱…"
+          ],
+          [
+            "搭配 3",
+            "<code>proud of</code> —— 为…自豪"
+          ],
+          [
+            "答案",
+            "<b>a of</b>"
+          ]
+        ],
+        "gram": [
+          "be + adj. + of + 名词/动名词：of 指情绪的对象",
+          "be proud of sth / be ashamed of doing sth"
+        ],
+        "tr": "第 2 行形容词（frightened、fond、proud、jealous、ashamed）搭配 of。"
+      }
+    },
+    {
+      "n": 103,
+      "tag": "①-3",
+      "prompt": "训练①-3 ——「disappointed, satisfied, fed up, impatient, bored」这一行形容词该接哪个介词？",
+      "answer": "c",
+      "opts": {
+        "a": "of",
+        "b": "about",
+        "c": "with"
+      },
+      "why": "官方答案：第 3 行接 <b>with</b>。be disappointed with（对…失望）、be satisfied with（对…满意）、be fed up with（受够了）、be bored with（厌烦）—— 这一行讲的都是「对（某人/某物）满意不满意」。",
+      "clues": [
+        "satisfied with 对…满意",
+        "fed up with 受够了",
+        "bored with 厌烦"
+      ],
+      "others": [
+        [
+          "a",
+          "<b>of</b> 属于第 2 行（fond of、proud of…）。"
+        ],
+        [
+          "b",
+          "<b>about</b> 属于第 1 行（worried about、excited about…）。"
+        ]
+      ],
+      "tip": "做题方法：with 这一组的共同点是「对现状的感受」；fed up with、be bored with 在口语里出现频率很高。",
+      "ana": {
+        "parts": [
+          [
+            "搭配 1",
+            "<code>satisfied with</code> —— 对…满意"
+          ],
+          [
+            "搭配 2",
+            "<code>fed up with</code> —— 受够了…"
+          ],
+          [
+            "搭配 3",
+            "<code>bored with</code> —— 对…厌烦"
+          ],
+          [
+            "答案",
+            "<b>c with</b>"
+          ]
+        ],
+        "gram": [
+          "be + adj. + with + 名词/动名词：with 引出「针对的对象」",
+          "be fed up with 是口语高频搭配"
+        ],
+        "tr": "第 3 行形容词（disappointed、satisfied、fed up、impatient、bored）搭配 with。"
+      }
+    },
+    {
+      "n": 104,
+      "tag": "③-1",
+      "prompt": "训练③-1 ——「In my school exam, I couldn't finish both essays because I ………… out of time.」空格应填哪个词？",
+      "answer": "b",
+      "opts": {
+        "a": "left",
+        "b": "ran",
+        "c": "got",
+        "d": "fell"
+      },
+      "why": "看到空格后面的 <b>out of</b> 就锁定搭配 <b>run out of time</b>（时间用完、来不 及了）。句意：考试时我没能写完两篇作文，因为我时间不够了。",
+      "clues": [
+        "out of 是提示词：run out of",
+        "both essays 没写完 → 时间不够"
+      ],
+      "others": [
+        [
+          "a",
+          "<b>left</b> 是「离开/剩下」；leave out 才是「漏掉」，但要说 leave out 不能拆成 left … out of time。"
+        ],
+        [
+          "c",
+          "<b>got</b> 接 out of 是「从…出来」（get out of the car）；get out of time 不成话。"
+        ],
+        [
+          "d",
+          "<b>fell</b> 是「落下/跌倒」；fall out of 是「从…掉出来」，都不能表示时间用完。"
+        ]
+      ],
+      "tip": "做题方法：先看空格后是什么（out of），再想哪个动词和它是一家人：run out of time = 时间用光。",
+      "ana": {
+        "parts": [
+          [
+            "主语",
+            "<code>I</code> —— 我"
+          ],
+          [
+            "谓语",
+            "<code>ran out of</code> —— 用完了（run out of sth）"
+          ],
+          [
+            "宾语",
+            "<code>both essays</code> —— 两篇作文"
+          ],
+          [
+            "原因从句",
+            "<code>because I ran out of time</code> —— 因为我时间不够了"
+          ]
+        ],
+        "gram": [
+          "run out of sth：用完（主语可以是人也可是物）",
+          "out of 是固定搭配的一部分，也是本题的提示词"
+        ],
+        "tr": "考试时我没能写完两篇作文，因为我时间用完了。"
+      }
+    },
+    {
+      "n": 105,
+      "tag": "③-2",
+      "prompt": "训练③-2 ——「Evie was ………… with watching TV, so she started reading a book instead.」空格应填哪个词？",
+      "answer": "c",
+      "opts": {
+        "a": "tired",
+        "b": "depressed",
+        "c": "bored",
+        "d": "stressed"
+      },
+      "why": "搭配：<b>be bored with sth/doing sth</b> 对…感到厌倦。with 后面接 watching TV，四个选项里只有 bored 和 with 相配；句意也顺：Evie 看电视看腻了，于是改读了一本书。",
+      "clues": [
+        "with 是提示词：bored with",
+        "so she started reading a book instead（改做别的）→ 看腻了"
+      ],
+      "others": [
+        [
+          "a",
+          "<b>tired</b> 是「累的」；be tired of 才是「厌倦」，tired 后面不接 with。"
+        ],
+        [
+          "b",
+          "<b>depressed</b> 是「沮丧的、抑郁的」，程度太重，和「换本书看」的轻松语境不符。"
+        ],
+        [
+          "d",
+          "<b>stressed</b> 是「压力大的」；被电视弄出压力也说不通。"
+        ]
+      ],
+      "tip": "做题方法：这类题的 with 就是排雷器——四个词里谁的搭配里有 with，先圈它，再用句意复核。",
+      "ana": {
+        "parts": [
+          [
+            "主语",
+            "<code>Evie</code> —— Evie"
+          ],
+          [
+            "系表",
+            "<code>was bored with watching TV</code> —— 对看电视感到厌倦"
+          ],
+          [
+            "结果从句",
+            "<code>so she started reading a book instead</code> —— 所以她改读了一本书"
+          ]
+        ],
+        "gram": [
+          "be bored with sth/doing sth：对…感到厌倦（with 后接动名词）",
+          "instead 表示「转而做别的」"
+        ],
+        "tr": "Evie 看电视看腻了，于是改读了一本书。"
+      }
+    },
+    {
+      "n": 106,
+      "tag": "③-3",
+      "prompt": "训练③-3 ——「We'll have to ………… with that problem later. I don't have time right now.」空格应填哪个词？",
+      "answer": "d",
+      "opts": {
+        "a": "look",
+        "b": "solve",
+        "c": "fix",
+        "d": "deal"
+      },
+      "why": "搭配：<b>deal with sth</b> = 处理、应对（问题）。空格后面就是 with，只有 deal 能和它组成「处理问题」的短语；句意：那个问题得以后再处理，我现在没时间。",
+      "clues": [
+        "with 是提示词：deal with",
+        "problem → 处理 / 解决"
+      ],
+      "others": [
+        [
+          "a",
+          "<b>look</b> 要表示「查看」得用 look at；look with 不成搭配。"
+        ],
+        [
+          "b",
+          "<b>solve</b> 是「解决」，但它直接接宾语（solve the problem），后面不接 with。"
+        ],
+        [
+          "c",
+          "<b>fix</b> 是「修理」（fix the problem 修好问题），同样不接 with。"
+        ]
+      ],
+      "tip": "做题方法：solve / fix 是「解难题」常出现的干扰项——记住它们后面不加 with；带 with 的是 deal with。",
+      "ana": {
+        "parts": [
+          [
+            "主语",
+            "<code>We</code> —— 我们"
+          ],
+          [
+            "谓语",
+            "<code>'ll have to deal</code> —— 得处理（将来）"
+          ],
+          [
+            "宾语",
+            "<code>that problem</code> —— 那个问题"
+          ],
+          [
+            "补充",
+            "<code>I don't have time right now</code> —— 我现在没时间"
+          ]
+        ],
+        "gram": [
+          "deal with sth = 处理、应对（问题/情况/人）",
+          "have to do sth = 不得不做"
+        ],
+        "tr": "那个问题我们得以后再处理，我现在没时间。"
+      }
+    },
+    {
+      "n": 107,
+      "tag": "③-4",
+      "prompt": "训练③-4 ——「I've always been really ………… of small animals like rabbits.」空格应填哪个词？",
+      "answer": "c",
+      "opts": {
+        "a": "keen",
+        "b": "friendly",
+        "c": "fond",
+        "d": "happy"
+      },
+      "why": "搭配：<b>be fond of sth</b> = 喜爱某物。of 就是提示词；句意：我一直特别喜欢兔子之类的小动物。",
+      "clues": [
+        "of 是提示词：fond of",
+        "like rabbits 是举例，「喜欢小动物」的意思通顺"
+      ],
+      "others": [
+        [
+          "a",
+          "<b>keen</b> 是「热衷的」，搭配是 be keen <b>on</b> sth——介词不对。"
+        ],
+        [
+          "b",
+          "<b>friendly</b> 是「友好的」，be friendly <b>to</b> sb——介词也不对。"
+        ],
+        [
+          "d",
+          "<b>happy</b> 是「高兴的」，可说 happy with/about sth，但接 of 不成搭配。"
+        ]
+      ],
+      "tip": "做题方法：先按介词 of 把选项筛一遍，再验证句意；fond of 和上页改错题里 keen on 是一对好搭档，一起记。",
+      "ana": {
+        "parts": [
+          [
+            "主语",
+            "<code>I</code> —— 我"
+          ],
+          [
+            "系表",
+            "<code>'ve always been really fond of small animals</code> —— 一直很喜欢小动物"
+          ],
+          [
+            "举例",
+            "<code>like rabbits</code> —— 比如兔子"
+          ]
+        ],
+        "gram": [
+          "be fond of sth = 喜爱某物（固定搭配）",
+          "like 在此作介词「例如」"
+        ],
+        "tr": "我一直特别喜欢兔子之类的小动物。"
+      }
+    },
+    {
+      "n": 108,
+      "tag": "③-5",
+      "prompt": "训练③-5 ——「I realised I couldn't ………… off telling my parents the bad news any longer.」空格应填哪个词？",
+      "answer": "a",
+      "opts": {
+        "a": "put",
+        "b": "wait",
+        "c": "delay",
+        "d": "leave"
+      },
+      "why": "搭配：<b>put off doing sth</b> = 拖延做某事。后面是 off + telling，put off 正好是「拖延」；句意：我意识到不能再拖着不告诉爸妈坏消息了。",
+      "clues": [
+        "off 是提示词：put off",
+        "any longer + telling（动名词）→ 一直拖"
+      ],
+      "others": [
+        [
+          "b",
+          "<b>wait</b> 是「等待」，wait off 不成搭配（等待用 wait for）。"
+        ],
+        [
+          "c",
+          "<b>delay</b> 也是「推迟」，但它直接接宾语（delay doing sth），不带 off。"
+        ],
+        [
+          "d",
+          "<b>leave</b> 是「离开/留下」；leave off 是「停止」，和「拖着不说」不合。"
+        ]
+      ],
+      "tip": "做题方法：off 开头的固定搭配先想 put off（拖延）；delay 是近义干扰项，注意它不接 off。",
+      "ana": {
+        "parts": [
+          [
+            "主句",
+            "<code>I realised</code> —— 我意识到"
+          ],
+          [
+            "从句谓语",
+            "<code>couldn't put off</code> —— 不能再拖延"
+          ],
+          [
+            "从句宾语",
+            "<code>telling my parents the bad news</code> —— 告诉爸妈坏消息这件事"
+          ],
+          [
+            "时间状语",
+            "<code>any longer</code> —— 再（不）…了"
+          ]
+        ],
+        "gram": [
+          "put off doing sth = 拖延做某事（off 后接动名词）",
+          "not … any longer = 不再…"
+        ],
+        "tr": "我意识到，坏消息不能再拖着不告诉爸妈了。"
+      }
+    },
+    {
+      "n": 109,
+      "tag": "③-6",
+      "prompt": "训练③-6 ——「I was ………… with my exam results. They were much better than I'd expected.」空格应填哪个词？",
+      "answer": "d",
+      "opts": {
+        "a": "proud",
+        "b": "excited",
+        "c": "amazed",
+        "d": "delighted"
+      },
+      "why": "搭配：<b>be delighted with sth</b> = 对…感到高兴/满意。with 是提示词；句意：我对考试成绩很满意（高兴），考得比预想的好得多。",
+      "clues": [
+        "with 是提示词：delighted with",
+        "much better than I'd expected → 高兴"
+      ],
+      "others": [
+        [
+          "a",
+          "<b>proud</b> 是「自豪的」，搭配多为 be proud <b>of</b> sth。"
+        ],
+        [
+          "b",
+          "<b>excited</b> 是「兴奋的」，常见搭配 be excited <b>about</b> sth。"
+        ],
+        [
+          "c",
+          "<b>amazed</b> 是「惊讶的」，搭配多为 be amazed <b>at/by</b> sth。"
+        ]
+      ],
+      "tip": "做题方法：with 一出，先把 of/about/at/by 的选项划掉；delighted 和 satisfied 一样，都是 with 家族。",
+      "ana": {
+        "parts": [
+          [
+            "主语",
+            "<code>I</code> —— 我"
+          ],
+          [
+            "系表",
+            "<code>was delighted with my exam results</code> —— 对考试成绩很满意"
+          ],
+          [
+            "补充",
+            "<code>They were much better than I'd expected</code> —— 比预想的好得多"
+          ]
+        ],
+        "gram": [
+          "be delighted with sth = 对…高兴/满意",
+          "than I'd expected 是比较从句（= than I had expected）"
+        ],
+        "tr": "我对考试成绩很满意，考得比我预想的好得多。"
+      }
+    },
+    {
+      "n": 21,
+      "prompt": "第 21 题 ——「And it's very … to find wonderful sculptures in them.」空格应填哪个词？",
+      "answer": "C",
+      "opts": {
+        "A": "usual",
+        "B": "general",
+        "C": "common",
+        "D": "familiar"
+      },
+      "why": "官方解析：<b>Very common.</b>「在公园里见到美妙的雕塑是很常见的事」。usual 一般不与 very 连用（×very usual），general 和 familiar 的意思都放不进这句话。",
+      "clues": [
+        "it's very …… to find：说的是「常见程度」",
+        "common = 常见的、普遍的"
+      ],
+      "others": [
+        [
+          "A",
+          "<b>usual</b> 是「惯常的、平时的」（as usual 像往常一样）；不讲 very usual，而且不说「雕塑是很 usual 的」。"
+        ],
+        [
+          "B",
+          "<b>general</b> 是「一般的、普遍的」，指「总体而言」，不用来描述「某件事常见」。"
+        ],
+        [
+          "D",
+          "<b>familiar</b> 是「熟悉的」，常用 be familiar to/with；雕塑对谁熟悉？句意不通。"
+        ]
+      ],
+      "tip": "做题方法：这类形容词题看两点——能不能受 very 修饰、意思是否恰好是「常见」。common 两关都过。",
+      "ana": {
+        "parts": [
+          [
+            "形式主语",
+            "<code>it</code> —— 指后面的不定式"
+          ],
+          [
+            "系表",
+            "<code>'s very common</code> —— 是很常见的"
+          ],
+          [
+            "真主语",
+            "<code>to find wonderful sculptures in them</code> —— 在公园里见到美妙的雕塑"
+          ]
+        ],
+        "gram": [
+          "It's + adj. + to do sth：做某事是…的",
+          "very common 是自然搭配（very usual ✗）"
+        ],
+        "tr": "而且在公园里见到美妙的雕塑是很常见的事。"
+      }
+    },
+    {
+      "n": 22,
+      "prompt": "第 22 题 ——「When the temperature … at the end of winter, they all disappear –」空格应填哪个词？",
+      "answer": "B",
+      "opts": {
+        "A": "develops",
+        "B": "rises",
+        "C": "grows",
+        "D": "builds"
+      },
+      "why": "官方解析：<b>Temperature rises</b>——气温「上升」，反义就是 falls/drops（下降）。冬末气温一升，冰雕就全化了、消失了。",
+      "clues": [
+        "the temperature ……：描述气温的变化",
+        "they all disappear：冰化了 → 气温上升"
+      ],
+      "others": [
+        [
+          "A",
+          "<b>develops</b> 是「发展、开发」（develop a habit）——温度不会「发展」。"
+        ],
+        [
+          "C",
+          "<b>grows</b> 是「生长、增长」，多指植物长大或数量变大；说温度 grow 不合习惯。"
+        ],
+        [
+          "D",
+          "<b>builds</b> 是「建造、增强」（build a house / build confidence）——都不能描述气温。"
+        ]
+      ],
+      "tip": "做题方法：temperature 只跟 rise/fall/drop 这几个动词走；记住这组「温度动词」。",
+      "ana": {
+        "parts": [
+          [
+            "时间状语从句",
+            "<code>When the temperature rises at the end of winter</code> —— 冬末气温上升时"
+          ],
+          [
+            "主句",
+            "<code>they all disappear</code> —— 它们都消失"
+          ],
+          [
+            "原因从句",
+            "<code>because they're made of ice</code> —— 因为是冰做的"
+          ]
+        ],
+        "gram": [
+          "rise 表示「（气温/太阳/价格）上升」，不及物；rasie 才是「举起」他动",
+          "temperature rises 是固定搭配"
+        ],
+        "tr": "冬末气温上升的时候，它们就全都不见了——因为它们是冰做的。"
+      }
+    },
+    {
+      "n": 23,
+      "prompt": "第 23 题 ——「The ice is brought from a lake … near the sculpture park.」空格应填哪个词？",
+      "answer": "A",
+      "opts": {
+        "A": "located",
+        "B": "arranged",
+        "C": "contained",
+        "D": "attached"
+      },
+      "why": "官方解析：<b>The lake is located near the park</b>——说的是湖的「位置」。located = 位于…的（be located in/near…）。",
+      "clues": [
+        "a lake …… near the park：描述地点/位置",
+        "located = 坐落在（位置）"
+      ],
+      "others": [
+        [
+          "B",
+          "<b>arranged</b> 是「安排、排列」（arrange a meeting / flowers）——不能说明湖的位置。"
+        ],
+        [
+          "C",
+          "<b>contained</b> 是「包含、装有」；湖包含什么？句意不通（后面说的是湖在哪）。"
+        ],
+        [
+          "D",
+          "<b>attached</b> 是「附上、系上」（attach a file）——湖不会「附在」公园上。"
+        ]
+      ],
+      "tip": "做题方法：看到 near / in 等地点信息，就想 be located ——这是描述位置的专用词。",
+      "ana": {
+        "parts": [
+          [
+            "主语",
+            "<code>The ice</code> —— 冰"
+          ],
+          [
+            "谓语",
+            "<code>is brought</code> —— 被运来"
+          ],
+          [
+            "地点状语",
+            "<code>from a lake located near the sculpture park</code> —— 从一座位于雕塑公园附近的湖"
+          ]
+        ],
+        "gram": [
+          "be located in/near …：位于…（过去分词短语作后置定语）",
+          "bring A from B：把 A 从 B 运来"
+        ],
+        "tr": "这些冰是从雕塑公园附近的一个湖里运来的。"
+      }
+    },
+    {
+      "n": 24,
+      "prompt": "第 24 题 ——「… the individual pieces are over one metre … !」空格应填哪个词？",
+      "answer": "D",
+      "opts": {
+        "A": "heavy",
+        "B": "large",
+        "C": "strong",
+        "D": "thick"
+      },
+      "why": "官方解析：<b>one metre thick</b>——描述冰块的尺寸要用「厚度」。厚度的搭配是 one metre thick；也可以说 one metre long/high/tall/wide/deep，但都不能换成 heavy / large / strong。",
+      "clues": [
+        "one metre ……：量度量描述",
+        "描述冰块：厚 = thick"
+      ],
+      "others": [
+        [
+          "A",
+          "<b>heavy</b> 是「重的」；说 weight（重量）用 one metre 来量不对口。"
+        ],
+        [
+          "B",
+          "<b>large</b> 是「大的」，笼统；具体到「一米」时，英语习惯用 thick（厚）。"
+        ],
+        [
+          "C",
+          "<b>strong</b> 是「结实的、强壮的」，不用于量度量。"
+        ]
+      ],
+      "tip": "做题方法：看到「数字 + 单位 + 形容词」就是在考尺寸表达——thick 是冰的常用词。",
+      "ana": {
+        "parts": [
+          [
+            "主语",
+            "<code>the individual pieces</code> —— 每一块冰"
+          ],
+          [
+            "系表",
+            "<code>are over one metre thick</code> —— 超过一米厚"
+          ],
+          [
+            "让步从句",
+            "<code>even though …</code> —— 尽管…"
+          ]
+        ],
+        "gram": [
+          "量度表达：数字 + 名词 + 形容词（one metre thick 一米厚）",
+          "over one metre：超过一米"
+        ],
+        "tr": "尽管每一块冰都超过一米厚，它（湖水冻的冰）还是清澈到能读报纸。"
+      }
+    },
+    {
+      "n": 25,
+      "prompt": "第 25 题 ——「Visitors also have the … to make their own ice sculptures if they wish, at special classes.」空格应填哪个词？",
+      "answer": "C",
+      "opts": {
+        "A": "occasion",
+        "B": "benefit",
+        "C": "opportunity",
+        "D": "ability"
+      },
+      "why": "官方解析：<b>have the opportunity to do sth</b>——「有机会做某事」（opportunity = chance 机会）。句意：游客如果有兴趣，还能在特别课程上亲手做冰雕。",
+      "clues": [
+        "have the …… to do sth：有一个能做某事的东西",
+        "opportunity = 机会（= chance）"
+      ],
+      "others": [
+        [
+          "A",
+          "<b>occasion</b> 是「场合、时机」（a special occasion 特殊场合），不接 to do sth 表示「机会」。"
+        ],
+        [
+          "B",
+          "<b>benefit</b> 是「好处、益处」（the benefit of…）——和 to make 搭不上。"
+        ],
+        [
+          "D",
+          "<b>ability</b> 是「能力」，have the ability to do 是「有能力做」；但游客做冰雕不是「能力」问题，而是有没有「机会」。"
+        ]
+      ],
+      "tip": "做题方法：先看句意需要「机会」还是「能力」——special classes 提供的是机会，不是能力。",
+      "ana": {
+        "parts": [
+          [
+            "主语",
+            "<code>Visitors</code> —— 游客们"
+          ],
+          [
+            "谓语",
+            "<code>have</code> —— 有"
+          ],
+          [
+            "宾语",
+            "<code>the opportunity</code> —— 机会"
+          ],
+          [
+            "定语",
+            "<code>to make their own ice sculptures</code> —— 亲手制作自己的冰雕"
+          ],
+          [
+            "条件",
+            "<code>if they wish, at special classes</code> —— 如果愿意的话，在特别课程上"
+          ]
+        ],
+        "gram": [
+          "have the opportunity to do sth = 有机会做某事",
+          "opportunity ≈ chance（机会）"
+        ],
+        "tr": "游客如果有兴趣，还能在特别课程上亲手做冰雕。"
+      }
+    },
+    {
+      "n": 26,
+      "prompt": "第 26 题 ——「… a children's play park, too, where … everything is made of ice …」空格应填哪个词？",
+      "answer": "B",
+      "opts": {
+        "A": "totally",
+        "B": "absolutely",
+        "C": "completely",
+        "D": "fully"
+      },
+      "why": "官方解析：<b>Absolutely everything</b>——这是搭配题：四个副词里只有 absolutely 能和 everything 连用，表示「所有一切、毫无例外」。",
+      "clues": [
+        "where …… everything is made of ice：强调「全部都是」",
+        "absolutely everything = 所有一切（固定说法）"
+      ],
+      "others": [
+        [
+          "A",
+          "<b>totally</b> 常说 totally different、totally agree，不和 everything 搭配。"
+        ],
+        [
+          "C",
+          "<b>completely</b> 常说 completely finished、completely different，也不接 everything。"
+        ],
+        [
+          "D",
+          "<b>fully</b> 常说 fully understand、fully aware，同样不接 everything。"
+        ]
+      ],
+      "tip": "做题方法：这是纯搭配题——背下 absolutely everything（以及 absolutely nothing）；其他三个副词后面也不接 everything/nothing。",
+      "ana": {
+        "parts": [
+          [
+            "主干",
+            "<code>There's a children's play park, too</code> —— 还有一个儿童游乐公园"
+          ],
+          [
+            "定语从句",
+            "<code>where absolutely everything is made of ice</code> —— 在那里所有一切是冰做的"
+          ],
+          [
+            "补充",
+            "<code>including sculptures of favourite animals</code> —— 包括最喜欢的动物雕塑"
+          ]
+        ],
+        "gram": [
+          "absolutely everything = 所有一切（固定搭配）",
+          "where 定语从句修饰 play park"
+        ],
+        "tr": "还有一个儿童游乐公园，那里所有的一切都是用冰做的，包括孩子们最喜欢的动物雕塑。"
+      }
+    }
+  ]
+}

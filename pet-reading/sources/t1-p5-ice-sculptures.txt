@@ -1,0 +1,41 @@
+title: Training Test 1
+label: Reading Part 5
+
+# 素材来源
+PDF: 剑桥PET 官方模考题精讲讲练 _25-26.pdf（书内页码 P24–P25 = 该 PDF 第 1–2 页）
+答案: 书后 P186 Teacher's Notes & Keys（Test 1 Reading Part 5；逐题核对一致）
+图片: 从 PDF 整页高清扫描（每页一张 ~5049×6620 的 600dpi 位图）里按像素量边界裁出
+  · assets/img/t1-p5-ice-sculpture.jpg  原书 P25 鱼形冰雕照片
+    裁自 PDF 第 2 页 x3255,y1768 1270×1988（灰度 → 1100 宽 → JPEG q88）
+    注：用户另给了一张阅读器截图（380×594），清晰度不够，改用扫描原件；同一张图。
+转写注意: 训练题空位一律写省略号 …………；真题空位写 {21}–{26}（引擎渲染成绿色数字小圆标）
+
+# 原文（真题文章，书 P25）
+Many cities have parks for people to enjoy. And it's very {21} to find wonderful sculptures in them. However, some sculptures found in Fairbanks, Alaska, aren't quite the same as in other cities. When the temperature {22} at the end of winter, they all disappear – because they're made of ice!
+Fairbanks has been the home of the World Ice Art Championships for over 20 years, and artists from many different countries come to create spectacular ice sculptures. The ice is brought from a lake {23} near the sculpture park. It's said to be so clear that visitors can read a newspaper through it – even though the individual pieces are over one metre {24}!
+Visitors also have the {25} to make their own ice sculptures if they wish, at special classes. There's a children's play park, too, where {26} everything is made of ice, including sculptures of favourite animals. It's a great place to visit!
+
+# 训练部分（书 P24，答案见 P186）
+① 介词表（附在形容词后的 dependent preposition）：
+  1 about（nervous / sad / worried / excited / crazy / sure 一组）
+  2 of（frightened / fond / proud / jealous / ashamed 一组）
+  3 with（disappointed / satisfied / fed up / impatient / bored 一组）
+② 改错：1 interested on → interested in / 2 went out → went down / 3 keen of → keen on /
+  4 grew in → grew up（+ in London）/ 5 afraid to → afraid of / 6 depends of → depends on
+③ 选词填空：1 b ran（run out of time）/ 2 c bored（bored with）/ 3 d deal（deal with）/
+  4 c fond（fond of）/ 5 a put（put off）/ 6 d delighted（delighted with）
+Remember 框（书上的灰底中文提示）：一个动词短语可包括两个或更多部分，它的整体意义与单独部分的意义不同。（如：get on with someone 意为「和某人关系融洽」。）
+
+# 真题（书 P25，答案见 P186）
+21 C common（官方：Very common. 不说 very usual；familiar / general 意思不合）
+22 B rises（官方：Temperature rises – and falls/drops）
+23 A located（官方：The lake is located near the park；arranged / contained / attached 不合）
+24 D thick（官方：one metre thick 描述尺寸；要说得出 long / high / tall / wide / deep，但不用 heavy / large / strong）
+25 C opportunity（官方：the chance – to make their own ice sculptures；occasion / benefit / ability 不合）
+26 B absolutely（官方：absolutely everything 是固定搭配；totally / completely / fully 不接 everything）
+
+# 数据备注（给以后的自己）
+- 训练题号 101–103（①）、104–109（③）；② 只有改错句，没有题（订正写在各句 ana.tip/gram 里）。
+- ① 用 blocks.table（真表格）+ pick 逐行挂题；真题 21–26 用空段 blocks.pick 渲染 6 排 A–D 胶囊。
+- 三个真题正文段落都带 frame（连续边框盒会被 CSS 合成一个外框）；照片浮在正文第 1 段右侧。
+- Remember 框用 blocks.rmb（黑标签 + 灰底）；两个 Tip 合成一个 blocks.tip（浮框与书上「并排两个」等价）。

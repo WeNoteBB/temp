@@ -1,0 +1,8 @@
+# 大体积素材不进仓库（需要时单独备份）
+/PET Trainers*.pdf
+/剑桥PET 官方模考题精讲讲练/
+/desktop.ini
+
+# 临时文件
+/pet-reading/1.png
+/pet-reading/.tmp-blk.cjs

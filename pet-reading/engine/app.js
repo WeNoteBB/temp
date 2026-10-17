@@ -377,12 +377,27 @@
       }
       return out;
     }
-    return renderTokens(src);
+    return renderTokens(src, sent.ul);
   }
 
-  function renderTokens(src) {
+  /* src 渲染成 HTML。第二个参数 mark（可选）是一段原文子串，
+     渲染时把它包进 <u class="ul-fix">（改错题的下划线，只加包裹、不动文字）。
+     定位按「字符区间」算，标点 token 被切开时会拆成三段，保证不吞字。 */
+  function renderTokens(src, mark) {
     var tokens = tokenize(src);
     var groups = markPhrases(tokens, PHRASE_IDX);
+
+    var a = -1, b = -1;
+    if (mark) { a = String(src).indexOf(mark); if (a >= 0) b = a + String(mark).length; else a = -1; }
+    var offsets = [], pos = 0;
+    tokens.forEach(function (t) {
+      offsets.push(pos);
+      pos += (t.k === "b" ? String(t.v).length + 2 : String(t.v).length);
+    });
+    var inMark = function (from, to) { return a >= 0 && to > a && from < b; };
+    var wrapU = function (html, from, to) {
+      return (a >= 0 && from >= a && to <= b) ? '<u class="ul-fix">' + html + "</u>" : html;
+    };
 
     // tokenIndex -> 词组信息
     var phAt = new Map();
@@ -393,11 +408,20 @@
     var html = "", i = 0;
     while (i < tokens.length) {
       var t = tokens[i];
+      var t0 = offsets[i], t1 = t0 + (t.k === "b" ? String(t.v).length + 2 : String(t.v).length);
       if (t.k === "p") {
-        html += esc(t.v);
+        /* 标点串可能与下划线边界相交：按边界拆成 前 / 中 / 后 三段 */
+        if (inMark(t0, t1)) {
+          var cut1 = Math.max(t0, a), cut2 = Math.min(t1, b);
+          html += esc(String(t.v).slice(0, cut1 - t0));
+          html += '<u class="ul-fix">' + esc(String(t.v).slice(cut1 - t0, cut2 - t0)) + "</u>";
+          html += esc(String(t.v).slice(cut2 - t0));
+        } else {
+          html += esc(t.v);
+        }
         i++;
       } else if (t.k === "b") {
-        html += renderBlank(t.v);
+        html += wrapU(renderBlank(t.v), t0, t1);
         i++;
       } else {
         var g = phAt.get(i);
@@ -408,11 +432,12 @@
             inner += '<span class="w" data-w="' + esc(tokens[j].v) + '">' + esc(tokens[j].v) + "</span>";
             if (j < g.to && tokens[j + 1].k === "p") inner += esc(tokens[j + 1].v);
           }
-          html += '<span class="ph" data-ph="' + esc(g.key) + '">' + inner + "</span>";
+          var gHtml = '<span class="ph" data-ph="' + esc(g.key) + '">' + inner + "</span>";
+          html += wrapU(gHtml, t0, offsets[g.to] + String(tokens[g.to].v).length);
           // 词组占用的词已全部渲染；后面的标点/空格交给主循环，别吞掉
           i = g.to + 1;
         } else {
-          html += '<span class="w" data-w="' + esc(t.v) + '">' + esc(t.v) + "</span>";
+          html += wrapU('<span class="w" data-w="' + esc(t.v) + '">' + esc(t.v) + "</span>", t0, t1);
           i++;
         }
       }
@@ -438,14 +463,14 @@
     var byN = function (qn) { return C.questions.filter(function (x) { return x.n === qn; })[0]; };
     /* 行内「我的答案」横排：字母 + 选项原文的小胶囊，点一下就是作答；
        行尾一个「解析」按钮（打开这道题的完整解析）。 */
-    function pickRowsHtml(nums) {
+    function pickRowsHtml(nums, forceLabel) {
       var out = "";
       nums.forEach(function (qn) {
         var q = byN(qn);
         if (!q) return;
         var picked = String(state.ans[qn] || "");
         out += '<span class="pickrow" data-pickq="' + qn + '">';
-        if (nums.length > 1) {
+        if (nums.length > 1 || forceLabel) {
           var lbl = String(q.tag || qn).split("-").pop() || String(qn);
           out += '<span class="pn">' + esc(lbl) + "</span>";
         }
@@ -464,23 +489,26 @@
     }
     /* 考试题的整行选项（A/B/C）：点整行 = 选它；行内还有「析 / 🔊」两个小按钮
        （每个选项都有句子分析，做法同 Reading Part 4 的选项池）。 */
-    function optLinesHtml(qn) {
+    function optLinesHtml(qn, grid) {
       var q = byN(qn);
       if (!q) return "";
       var picked = String(state.ans[qn] || "");
       var out = "";
+      if (grid) out += '<span class="optgrid">';
       Object.keys(q.opts || {}).forEach(function (L) {
-        var cls = "optline ansb";
+        var cls = (grid ? "gopt" : "optline") + " ansb";
         if (picked === L) cls += " on";
         if (picked && L === q.answer) cls += " right";
         if (picked && picked === L && picked !== q.answer) cls += " wrongpick";
+        var btns = '<button type="button" class="obtn" data-ana="qo:' + qn + ":" + L + '" title="这个选项的句子分析">析</button>' +
+          '<button type="button" class="obtn" data-sayraw="' + esc(q.opts[L]) + '" title="朗读这个选项">🔊</button>';
         out += '<span class="' + cls + '" data-ansb="' + qn + ":" + L + '">' +
           '<span class="ol">' + esc(L) + "</span>" +
           '<span class="otxt">' + renderSentence({ s: q.opts[L] }) + "</span>" +
-          '<button type="button" class="obtn" data-ana="qo:' + qn + ":" + L + '" title="这个选项的句子分析">析</button>' +
-          '<button type="button" class="obtn" data-sayraw="' + esc(q.opts[L]) + '" title="朗读这个选项">🔊</button>' +
+          (grid ? '<span class="oacts">' + btns + "</span>" : btns) +
         "</span>";
       });
+      if (grid) out += "</span>";
       out += '<span class="pickrow"><button type="button" class="btn mini-ana" data-qexp2="' + qn + '">看本题解析</button></span>';
       return out;
     }
@@ -488,23 +516,83 @@
     C.passage.paragraphs.forEach(function (para, pi) {
       /* 段落角色（可选，Reading Part 1 用的排版体系）：
          h=标题/指令（加粗）· i=提示/说明（斜体浅色）· o=选项清单（强调色，行首字母做徽章；
-         清单内的词不逐词可点）· q=题目/原文文本块（编号徽章 + 左侧标线）。
-         没有 blocks 数据的文章（如 t1-p4）不带角色类，样式完全不受影响。 */
+         清单内的词不逐词可点）· q=题目/原文文本块（编号徽章 + 左侧标线）· p=普通正文段。
+         没有 blocks 数据的文章（如 t1-p4）不带角色类，样式完全不受影响。
+         附表级装饰（Reading Part 3 用）：img 浮动图 / badge 小徽章 / tip 提示框 /
+         head 双色大标题 / frame 边框盒 / shade 灰底盒 / center 居中 / optsGrid 2×2 选项盒。 */
       var bm = (C.passage.blocks && C.passage.blocks[pi]) || {};
       var role = typeof bm.r === "string" ? bm.r.replace(/[^a-z]/g, "") : "";
       var plain = role === "o" || bm.plain === true;
-      h += '<p class="para' + (role ? " r-" + role : "") + (plain ? " plain" : "") + '">';
+      /* 标题 / 题目要求 / 提示（h/i）整段处理：页边只给一个「译 + 🔊」，
+         点开是整段翻译和解析 —— 这类文字不需要逐句拆句型。 */
+      var blockUnit = role === "h" || role === "i";
+      var cls = "para" + (role ? " r-" + role : "") + (plain ? " plain" : "") +
+        (bm.frame ? " framed" : "") + (bm.shade ? " shaded" : "") + (bm.center ? " center" : "") +
+        (bm.rmb ? " rmbwrap" : "");
+      /* 表格块必须用 div：<p> 里放 <table> 会被浏览器就地拆开 */
+      var tag = bm.table ? "div" : "p";
+      h += "<" + tag + ' class="' + cls + '"' +
+        (blockUnit ? ' data-blk="' + pi + '"' : "") + ">";
       if (bm.n) h += '<span class="pbadge">' + esc(bm.n) + "</span>";
+      /* 浮动图（PDF 里裁下来的原图）：默认靠右，img.side="left" 靠左。
+         放在段落最前面 —— 后面这句的折行就绕着它走，和书上的图文关系一致。 */
+      if (bm.img) {
+        h += '<span class="blkimg"' + (bm.img.side === "left" ? ' data-side="left"' : "") +
+          (bm.img.w ? ' style="--imgw:' + Number(bm.img.w) + 'px"' : "") + '>' +
+          '<img src="' + esc(bm.img.src) + '" alt="' + esc(bm.img.alt || "") + '" loading="lazy"></span>';
+      }
+      /* Tip 提示框（中文小贴士）：浮在段落右上，和书上的 Tip 圆标一致 */
+      if (bm.tip) {
+        h += '<span class="tipbox"><span class="tipico">Tip</span><span class="tiptxt">' +
+          esc(bm.tip) + "</span></span>";
+      }
+      /* Remember 灰底小框（书里黑标签 + 灰底说明）：浮在段落右上 */
+      if (bm.rmb) {
+        h += '<span class="rmbbox"><span class="rmbico">Remember</span><span class="rmbtxt">' +
+          esc(bm.rmb) + "</span></span>";
+      }
+      /* 真表格（Reading Part 5 第①题那种）：每行第一格是句子文本（照常可点词、
+         参与交替底色与逐字对账），第二格是该行题号的「我的答案」横排。
+         表头来自 bm.table.head；行与 blocks.pick 一一对应。表格行不挂页边按钮。 */
+      if (bm.table) {
+        h += '<table class="ttable">';
+        if (bm.table.head) {
+          h += "<tr>";
+          bm.table.head.forEach(function (c) { h += "<th>" + esc(c) + "</th>"; });
+          h += "</tr>";
+        }
+        para.forEach(function (sent, si) {
+          var tref = pi + "-" + si;
+          var tqn = (bm.pick || [])[si];
+          var tq = tqn != null ? byN(tqn) : null;
+          h += '<tr><td class="ttd">' +
+            '<span class="sent' + (n % 2 === 0 ? " alt" : "") + '" data-sent="' + tref + '">' +
+            '<span class="sent-txt">' + renderSentence(sent) + "</span></span></td>" +
+            '<td class="ttd ttpick">';
+          if (tq) h += pickRowsHtml([tqn], true);
+          h += "</td></tr>";
+          n++;
+        });
+        h += "</table>";
+        if (bm.badge) h += '<span class="ansbadge">' + esc(bm.badge) + "</span>";
+        h += "</" + tag + ">";
+        return;
+      }
       para.forEach(function (sent, si) {
         var ref = pi + "-" + si;
         // 句子 inline 连续排版；序号偶数给淡黄底，奇数留白
         h += '<span class="sent' + (n % 2 === 0 ? " alt" : "") +
           (sent.hard ? " hard" : "") + '" data-sent="' + ref + '">';
         var inner;
-        if (role === "o") {
+        if (bm.head && si === 0) {
+          /* 书本扉页式大标题：黑底书名 + 下划线部分（文本仍是完整一句，逐字对账用）。
+             两半都走 renderTokens —— 词要照常可以点、词数也要照常对得上。 */
+          inner = '<span class="bh-blk">' + renderTokens(bm.head.l) + '</span> · ' +
+            '<span class="bh-ttl">' + renderTokens(bm.head.r) + "</span>";
+        } else if (role === "o") {
           /* 选项清单行：「A advertisement」——行首字母拎出来做选项徽章。
              字母壳上仍带 .w（词数对账按词形算），但 .plain 里不响应点击。 */
-          var mm = String(sent.s).match(/^([A-Ea-e])[\s.、:：]+/);
+          var mm = String(sent.s).match(/^([A-Ha-h])[\s.、:：]+/);
           if (mm) {
             /* 徽章后面要留一个空格：.sent-txt 的 textContent 仍与原文逐字一致 */
             inner = '<span class="opletter w" data-w="' + esc(mm[1]) + '">' + esc(mm[1]) + "</span> " +
@@ -520,18 +608,38 @@
         // 按钮单独收进页边容器，稍后由 layoutGutter() 按行首位置摆放
         // 「析」必须带 data-ana：它在页边栏里、不在句子内部，
         // 光靠 t.closest(".sent") 找不到归属，点了会毫无反应
-        gutter += '<span class="sbtns" data-for="' + ref + '">' +
-          '<button class="mini" data-ana="' + ref + '" title="查看这句的讲解">析</button>' +
-          '<button class="mini spk" data-say="' + ref + '" title="0.75倍速英音朗读">🔊</button>' +
-          "</span>";
+        if (!blockUnit) {
+          gutter += '<span class="sbtns" data-for="' + ref + '">' +
+            '<button class="mini" data-ana="' + ref + '" title="查看这句的讲解">析</button>' +
+            '<button class="mini spk" data-say="' + ref + '" title="0.75倍速英音朗读">🔊</button>' +
+            "</span>";
+        } else if (si === 0) {
+          gutter += '<span class="sbtns" data-for="blk:' + pi + '">' +
+            '<button class="mini" data-ana="blk:' + pi + '" title="整段翻译和解析">译</button>' +
+            '<button class="mini spk" data-say="blk:' + pi + '" title="整段朗读">🔊</button>' +
+            "</span>";
+        }
         n++;
       });
+      /* 页内小徽章（如「答案见 P184」）：跟在标题文字后面，行内还能排下就同一行 */
+      if (bm.badge) h += '<span class="ansbadge">' + esc(bm.badge) + "</span>";
       /* 行内交互（角色体系专用）：
          · pick：[题目号…] → 我的答案横排 + 解析按钮
-         · optsInline：把这题的选项整行列出来（A/B/C，单选 + 每个选项的句子分析） */
+         · optsInline：把这题的选项整行列出来（A/B/C，单选 + 每个选项的句子分析）
+         · optsGrid：把选项排成 2×2 的盒子（Part 3 第 15 题那种博客卡片）
+         · pickQ（③ 式二选一）：没有答案横排，但每题也要有一个「解析」按钮 */
       if (bm.pick && bm.pick.length) h += pickRowsHtml(bm.pick);
-      if (bm.optsInline && bm.n) h += optLinesHtml(Number(bm.n));
-      h += "</p>";
+      if ((bm.optsInline || bm.optsGrid) && bm.n) h += optLinesHtml(Number(bm.n), bm.optsGrid === true);
+      var pkQ = [];
+      para.forEach(function (sent) { if (sent.pickQ && pkQ.indexOf(sent.pickQ) < 0) pkQ.push(sent.pickQ); });
+      if (pkQ.length && !(bm.pick && bm.pick.length)) {
+        h += '<span class="pickrow">';
+        pkQ.forEach(function (qn) {
+          h += '<button type="button" class="btn mini-ana" data-qexp2="' + qn + '">解析</button>';
+        });
+        h += "</span>";
+      }
+      h += "</" + tag + ">";
     });
     return h.replace('<div class="pgutter" id="pgutter"></div>',
       '<div class="pgutter" id="pgutter">' + gutter + "</div>");
@@ -576,7 +684,11 @@
     // 第一遍：只量，一个字节都不写 DOM。
     // 边量边写的话，后一句的测量会受前一次写入影响 —— 缩放刚变、布局还在收敛时最容易出问题
     var items = [].slice.call(gut.children).map(function (g) {
-      var sent = box.querySelector('.sent[data-sent="' + g.dataset.for + '"]');
+      var forRef = String(g.dataset.for || "");
+      var sent = forRef.indexOf("blk:") === 0
+        /* 整段（标题/要求/提示）：锚到这段的第一句 */
+        ? box.querySelector('.para[data-blk="' + forRef.slice(4) + '"] .sent')
+        : box.querySelector('.sent[data-sent="' + forRef + '"]');
       return { g: g, top: sent ? firstLineTop(sent) - boxRect.top : null };
     });
 
@@ -873,6 +985,22 @@
       var qa = (qq.optsAna || {})[qs[1]];
       return { s: qq.opts[qs[1]], tr: qa ? qa.tr : "", ana: qa || null, hard: false };
     }
+    if (ref.indexOf("blk:") === 0) {
+      /* 整段引用 "blk:段号"（标题 / 题目要求 / 提示这类 h/i 段落）：
+         不给逐句拆解，只给整段原文 + 整段翻译 + 解析（各句 tip 去重拼接）。 */
+      var bp = (C.passage.paragraphs || [])[+ref.slice(4)] || [];
+      if (!bp.length) return null;
+      var tips = [], seenT = {};
+      bp.forEach(function (x) {
+        var t = x.ana && x.ana.tip;
+        if (t && !seenT[t]) { seenT[t] = 1; tips.push(t); }
+      });
+      return {
+        s: bp.map(function (x) { return x.s; }).join(" "),
+        tr: bp.map(function (x) { return x.tr || ""; }).filter(Boolean).join(" "),
+        ana: null, tips: tips, blk: true, hard: false
+      };
+    }
     return findSent(ref) || null;
   }
 
@@ -1099,10 +1227,25 @@
     // 标题 + 原句一起吸顶：面板内容长，滚到下面时原句不能跑掉
     h += '<div class="ana-top">';
     // 喇叭放在面板顶部：窄屏下页边按钮栏被隐藏，这里是唯一的朗读入口
-    h += '<div class="ana-h">句子分析' +
+    h += '<div class="ana-h">' + (s.blk ? "整句翻译" : "句子分析") +
       '<button class="ana-spk" data-say="' + esc(ref) + '">🔊</button></div>';
     h += '<div class="ana-sent">' + anaRawHTML + "</div>";
     h += "</div>";
+
+    /* 标题 / 题目要求 / 提示（整段引用）：只要整段翻译和解析，不做逐句拆解 */
+    if (s.blk) {
+      if (s.tr) {
+        h += '<div class="sec"><div class="sec-t">翻译</div><div class="sec-b">' + esc(s.tr) + "</div></div>";
+      }
+      if (s.tips && s.tips.length) {
+        h += '<div class="sec"><div class="sec-t">解析</div><div class="sec-b">' +
+          s.tips.map(function (t) { return esc(t); }).join("<br>") + "</div></div>";
+      }
+      h += "</div>";
+      elAna.innerHTML = h;
+      ensureAnaShown();
+      return;
+    }
 
     if (s.ana) {
       var a = s.ana;
@@ -1366,7 +1509,7 @@
      ======================================================= */
   // 取该词/词组所在句子的原文，存进生词本一起显示
   function ctxOf(el, root) {
-    var sent = el.closest ? el.closest(".sent") : null;
+    var sent = el.closest ? el.closest("[data-sent]") : null;
     var box = sent ? sent.querySelector(".sent-txt") : null;
     if (!box && root && root.classList && root.classList.contains("qcard")) box = root;
     return box ? box.textContent.trim().replace(/\s+/g, " ") : "";
@@ -1384,13 +1527,16 @@
 
   // 高亮当前句：连同它在页边的那组按钮
   function selectSent(ref) {
-    document.querySelectorAll(".sent.cur,.opt.cur,.optline.cur").forEach(function (x) { x.classList.remove("cur"); });
-    // 正文句子是 .sent，选项是 .opt，正文里的题目选项行是 .optline，三种都要能高亮
+    document.querySelectorAll(".sent.cur,.opt.cur,.optline.cur,.para.cur").forEach(function (x) { x.classList.remove("cur"); });
+    // 正文句子是 .sent，选项是 .opt，正文里的题目选项行是 .optline，
+    // 标题/要求/提示整段是 .para（blk:），都要能高亮
     var se = ref.indexOf("opt:") === 0
       ? document.querySelector('.opt[data-opt="' + ref.slice(4) + '"]')
       : ref.indexOf("qo:") === 0
         ? document.querySelector('.optline[data-ansb="' + ref.slice(3) + '"]')
-        : document.querySelector('.sent[data-sent="' + ref + '"]');
+        : ref.indexOf("blk:") === 0
+          ? document.querySelector('.para[data-blk="' + ref.slice(4) + '"]')
+          : document.querySelector('.sent[data-sent="' + ref + '"]');
     if (se) se.classList.add("cur");
     document.querySelectorAll(".sbtns.cur").forEach(function (x) { x.classList.remove("cur"); });
     var g = document.querySelector('.sbtns[data-for="' + ref + '"]');
@@ -1490,6 +1636,16 @@
       // 句子 → 小黑板
       var se = t.closest(".sent");
       if (se) {
+        var paraEl = se.closest(".para");
+        /* 标题 / 题目要求 / 提示（整段处理）：点句子给整段翻译和解析，
+           不做逐句拆解 —— 这类文字只需要「整句」层面 */
+        if (paraEl && paraEl.dataset.blk !== undefined) {
+          var bref = "blk:" + paraEl.dataset.blk;
+          selectSent(bref);
+          showAnalysis(bref);
+          pushHistory("s", "", bref);
+          return;
+        }
         selectSent(se.dataset.sent);
         showAnalysis(se.dataset.sent);
         pushHistory("s", "", se.dataset.sent);
@@ -1703,7 +1859,9 @@
       var isOpt = lr.ref.indexOf("opt:") === 0;
       var el = isOpt
         ? document.querySelector('.opt[data-opt="' + lr.ref.slice(4) + '"]')
-        : document.querySelector('.sent[data-sent="' + lr.ref + '"]');
+        : lr.ref.indexOf("blk:") === 0
+          ? document.querySelector('.para[data-blk="' + lr.ref.slice(4) + '"]')
+          : document.querySelector('.sent[data-sent="' + lr.ref + '"]');
       if (!el) return;
       selectSent(lr.ref);
       var scroll = function () {
@@ -1808,7 +1966,9 @@
 
     // 鼠标停到页边的「析」上，把对应那句染成粉色；移开恢复原底色
     function peek(ref, on) {
-      var se = document.querySelector('.sent[data-sent="' + ref + '"]');
+      var se = String(ref).indexOf("blk:") === 0
+        ? document.querySelector('.para[data-blk="' + String(ref).slice(4) + '"]')
+        : document.querySelector('.sent[data-sent="' + ref + '"]');
       if (se) se.classList.toggle("peek", on);
     }
     elPassage.addEventListener("mouseover", function (ev) {

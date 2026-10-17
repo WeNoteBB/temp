@@ -8,7 +8,7 @@
 ## 这是什么
 
 **引擎与内容分离**的静态精读站。引擎全站共用，每篇文章只产出一个 JSON。
-目前 2 篇（Part 4 长文匹配 + Part 1 五段短文本三选一），目标是 200+ 篇。部署在 2 核 2G 的 nginx 上，纯静态，无 Node 进程。
+目前 4 篇（Part 4 长文匹配 + Part 1 五段短文本三选一 + Part 3 长文四选一 + Part 5 挖空四选一），目标是 200+ 篇。部署在 2 核 2G 的 nginx 上，纯静态，无 Node 进程。
 
 ## 命令
 
@@ -22,7 +22,7 @@ cd server && npm test      # 后端单测（假 db，不需要数据库；首次
 cd server && npm run migrate   # 建表/加列（幂等，需要 .env 里的数据库口令）
 ```
 
-改任何东西之后 `npm run check` 必须全绿。当前基线：**verify ✓ / smoke 286 / test-store 144**，
+改任何东西之后 `npm run check` 必须全绿。当前基线：**verify ✓（18 条跨篇警告是老账，见下）/ smoke 858 / test-store 144**，
 后端 `npm test` **94**。
 
 ## 架构要点
@@ -130,6 +130,68 @@ cd server && npm run migrate   # 建表/加列（幂等，需要 .env 里的数�
     smoke 436 → **456**，verify 契约扩展（pick/plain/optsInline/pickQ/«»/optsAna）。
     设计方法整理成文档：`book1/doc/reading-part1-设计方法.md`（各类题型 → 方法代号 A–F）。
 
+12. **标题/要求/提示整段处理 + ③ 补答题解析（2026-10-17 凌晨，用户验收后补的两条）**：
+    - h/i 角色段落（标题、训练①②③④⑤ 的要求、Remember/Focus、真题抬头，共 13 段）
+      不再逐句给「析」：页边整段一个**「译 → 🔊」**（`blk:段号` 引用），
+      点开小黑板只出**整段翻译 + 解析**（各句 `ana.tip` 去重拼接，标题「整句翻译」）；
+      点这类段落里的句子也走整段（点单词仍查词）。`selectSent/layoutGutter/peek/
+      restoreLastRead/anaData/showAnalysis` 都加了 `blk:` 分支；verify 要求 h/i 每句有 tr。
+    - ③ 式二选一每题**自动补一个「解析」按钮**（引擎看到 `pickQ` 就渲染，无需数据），
+      答题解析 = 原来就有的 why/others。smoke 456 → **476**（新增 20 条：整段组、
+      整段面板无成分拆解、③ 解析、组数公式）。
+    教训：拼 `<p class="…" data-blk>` 时把 class 的收尾引号吞了（`'">'` 被挪到
+    data-blk 之后），产物变成 `class="para r-h data-blk=" 0""` —— 冒烟测试当场抓到。
+
+**2026-10-17（Reading Part 3 · 训练①②③④⑤⑥ + 真题 11–15 全量）：**
+
+13. **`t1-p3-great-ocean-road`**（书 P17–P20）：58 段 88 句 1027 词 26 题 513 词条；
+    训练题 101–121 + 真题 11–15；答案逐题对照书后 P184。方法代号 G–L 与
+    书本还原件都写进 `book1/doc/reading-part3-设计方法.md`。
+14. **引擎新增（全是数据标记，Part 1 页面不受影响）**：
+    - 段落装饰：`head` 扉页式大标题 / `badge` 答案徽章 / `tip` 中文 Tip 框（浮右）/
+      `img` 浮动插图（`side:"left"` 浮左）/ `frame` 边框盒 / `shade` 灰底盒 /
+      `center` 居中 / `optsGrid` 2×2 选项盒（点盒作答、盒内「析/🔊」）。
+    - 新角色 `p`：普通正文段（长文散文，保留隔句淡黄底）。
+    - 句子级 `ul`：改错题红下划线，只加 `<u>` 包裹不改字（verify 校验是原文子串）。
+    - `build.mjs` 新增 `assets/**` → `dist/assets/**` 拷贝（逐字节对比，没变不重写）。
+    - ⚠ `.gopt` 必须写 `width:auto;height:auto;min-height:0` —— 全局 `.ansb` 是
+      26×26 小圆钮，不加这三行选项盒会被压成 26px（只有真浏览器看得出来）。
+    - ⚠ head 块的两半也要走 `renderTokens`，否则标题里的词没有 `.w`，
+      词数对账会少 9 个词、smoke 还会在 fallback 词上崩。
+15. **smoke 476 → 668**（Part 3 专属 190+ 条：扉页标题/插图/徽章/Tip/下划线/选项盒/
+    横排胶囊数=选项数；另外把 Part 1 时代写死的 101:B、106、115 等断言全部改成数据驱动）。
+16. **图片**：书 P19 照片、P18 插图为 PDF（纯扫描、无文字层）整页 5035×6658 位图按像素
+    量边界裁出，存 `assets/img/`；裁剪坐标记在 `sources/t1-p3-great-ocean-road.txt`。
+
+**2026-10-17 晚（Reading Part 5 · 训练①②③ + 真题 21–26）：**
+
+17. **`t1-p5-ice-sculptures`**（书 P24–P25）：30 段 38 句 406 词 15 题（词条 108 条 + 共享词库 287 条）；
+    训练题 101–109（① 介词表 3 题 + ③ 选词 6 题；② 是改错句、不设题），真题 21–26。
+    答案逐题对照书后 P186；素材与裁剪坐标在 `sources/t1-p5-ice-sculptures.txt`。
+18. **引擎新增（全是数据标记，前三篇不受影响）**：
+    - `blocks.table { head:[…] }`：真表格。行取该段落的句子（行文本渲染成 `.sent`，
+      照常点词/逐字对账），第二列渲染这一行的作答胶囊（`pick` 行与段落句一一对应）；
+      表格行不挂页边按钮。⚠ 表格块必须用 `<div>` 包 —— `<p>` 里放 `<table>` 会被浏览器拆开。
+    - `blocks.rmb`：Remember 灰底小框（黑标签 + 灰底中文）。该段自动加 `.rmbwrap`
+      （`display:flow-root`）把浮框留在自己那一带，否则会挤压后面「真题抬头」等段落。
+    - `.para.framed + .para.framed` 连续边框盒合成一个外框（真题短文）：
+      后一段去上边框、去圆角，第三段补回下圆角。
+    - `pickRowsHtml(nums, forceLabel)`：单题也强行渲染行号（表格里的 1/2/3 用它）。
+    - 真题空位沿用 `.blank`（点它 → `toggleQ` → 小黑板出这道题的解析）。
+19. **verify 契约**：`table.head` 非空字符串数组、行数 = `pick` 题号数；`rmb` 非空字符串；
+    Part 1 式分支放宽出「真题空位」：正文 `{n}` 空位必须恰好等于真题题号（`n<100`），
+    训练题不许用 `{n}` 写法（写省略号 …………）。
+20. **smoke 668 → 858**；smoke 里两处七十二变的旧写法改掉：
+    `wantGroups` 扣掉表格行（表格行不挂按钮）、空位断言按「真题题号」分支、
+    ③ 式「解析」按钮改成数据驱动（原来写死 111）。
+21. **小教训**：两个 `tip` 浮框并排会互相让位（后一个被挤到左边）——书上是并排两个 Tip，
+    数据里合成一个 `tip` 字符串即可；懒加载图片在无头截图里要先触发滚动再拍。
+22. **跑过 `tools/promote.mjs --write`**：287 条重复词条上浮进 `data/glossary.core.json`
+    （四篇各自剩下 151 / 274 / 139 / 108 条）；24 条跨篇释义打架的留在原处并报出来
+    （就是上面那 18 条 verify 警告），想彻底清零需要人工挑一个版本，属于另一件小事。
+    静态站已发布到线上（`SKIP_CHECK=1 bash deploy.sh 8.138.161.122`，HTTP 200 ✓）。
+    整个 `pet-reading/` 首次提交进 git（v2.0 分支）。
+
 **部署实况**（8.138.161.122，Ubuntu 22.04 + nginx 1.18，MySQL 在本机）：
 Node 22 旁装 `/opt/node-v22`（系统 node v12 没动），systemd 单元 `pet-api`
 只监听 127.0.0.1:3001，`sites-available/default` 里插了 `/api/` 反代
@@ -141,7 +203,9 @@ Node 22 旁装 `/opt/node-v22`（系统 node v12 没动），systemd 单元 `pet
 HTML 配了 `Cache-Control: no-cache`（改版不用让学生手动清缓存）。
 Edge 按 375/744/768/820/1194/1440 逐宽度验收：每句「析/🔊」都在、无横向溢出。
 
-`npm run check` 全绿（verify / smoke 456 / test-store 144），后端单测 94。
+`npm run check` 全绿（verify / smoke 858 / test-store 144），后端单测 94。
+verify 的 18 条跨篇警告（item / phone / remember / warn / correct / complete / in fact…）
+是 Part 1 与 Part 3 的老账，两篇各自成立、暂未统一，不影响退出码。
 
 **未做 / 待办：**
 

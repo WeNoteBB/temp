@@ -1,0 +1,6 @@
+# 本仓库在 Windows 上开发（core.autocrlf=true），但 shell 脚本要传到 Linux 上跑。
+# 不钉死的话：git 检出时转成 CRLF → scp 上去 → bash 报 "pipefail\r: invalid option"。
+*.sh text eol=lf
+
+# 其余文本文件按 git 默认策略（检出时转本地行尾）
+* text=auto

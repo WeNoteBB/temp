@@ -1,1 +1,1537 @@
-{}
+{
+  "a": {
+    "pos": "art.",
+    "ipa": "/ə/",
+    "cn": "一个（不定冠词）",
+    "note": "用在辅音音素开头的词前；元音音素前用 an。a university /an hour。"
+  },
+  "about": {
+    "pos": "prep.",
+    "ipa": "/əˈbaʊt/",
+    "cn": "关于；大约"
+  },
+  "actually": {
+    "pos": "adv.",
+    "ipa": "/ˈæktʃuəli/",
+    "cn": "实际上，其实",
+    "note": "用来纠正或补充前面的说法，是重要的逻辑信号词。"
+  },
+  "adventure": {
+    "pos": "n.",
+    "ipa": "/ədˈventʃə/",
+    "cn": "冒险（经历）"
+  },
+  "advertisement": {
+    "pos": "n.",
+    "ipa": "/ədˈvɜːtɪsmənt/",
+    "cn": "广告"
+  },
+  "after": {
+    "pos": "prep./conj.",
+    "ipa": "/ˈɑːftə/",
+    "cn": "在…之后"
+  },
+  "again": {
+    "pos": "adv.",
+    "ipa": "/əˈɡen/",
+    "cn": "再一次"
+  },
+  "all": {
+    "pos": "det./pron.",
+    "ipa": "/ɔːl/",
+    "cn": "全部，所有",
+    "note": "作同位语时位置：实义动词前，be 动词后。"
+  },
+  "also": {
+    "pos": "adv.",
+    "ipa": "/ˈɔːlsəʊ/",
+    "cn": "也，还"
+  },
+  "always": {
+    "pos": "adv.",
+    "ipa": "/ˈɔːlweɪz/",
+    "cn": "总是；一直"
+  },
+  "amazed": {
+    "pos": "adj.",
+    "ipa": "/əˈmeɪzd/",
+    "cn": "惊叹的"
+  },
+  "an": {
+    "pos": "art.",
+    "ipa": "/ən/",
+    "cn": "一个（元音前用）"
+  },
+  "and": {
+    "pos": "conj.",
+    "ipa": "/ænd/",
+    "cn": "和，并且"
+  },
+  "animal": {
+    "pos": "n.",
+    "ipa": "/ˈænɪml/",
+    "cn": "动物"
+  },
+  "answer": {
+    "pos": "n./v.",
+    "ipa": "/ˈɑːnsə/",
+    "cn": "答案；回答"
+  },
+  "any": {
+    "pos": "det.",
+    "ipa": "/ˈeni/",
+    "cn": "任何；一些"
+  },
+  "anything": {
+    "pos": "pron.",
+    "ipa": "/ˈeniθɪŋ/",
+    "cn": "任何东西（用于否定句和疑问句）",
+    "note": "形容词修饰时要后置：anything interesting。"
+  },
+  "are": {
+    "pos": "v.",
+    "ipa": "/ɑː/",
+    "cn": "是（be 的现在式，用于复数）"
+  },
+  "area": {
+    "pos": "n.",
+    "ipa": "/ˈeəriə/",
+    "cn": "地区，区域，面积"
+  },
+  "aren't": {
+    "pos": "v.",
+    "ipa": "/ɑːnt/",
+    "cn": "不是（= are not）"
+  },
+  "as": {
+    "pos": "conj./prep.",
+    "ipa": "/æz/",
+    "cn": "如同；作为；当……时",
+    "note": "as...as 和…一样；as soon as 一…就。"
+  },
+  "ask": {
+    "pos": "v.",
+    "ipa": "/ɑːsk/",
+    "cn": "问，要求",
+    "note": "ask sb sth；ask sb to do sth。"
+  },
+  "at": {
+    "pos": "prep.",
+    "ipa": "/æt/",
+    "cn": "在（某地点／某时刻）",
+    "note": "at 用于具体时刻和小地点；in 用于大地点；on 用于具体某天。"
+  },
+  "away": {
+    "pos": "adv.",
+    "ipa": "/əˈweɪ/",
+    "cn": "离开；不停地",
+    "note": "在 dig away, work away 里表示“持续不断地”。"
+  },
+  "b": {
+    "pos": "字母",
+    "ipa": "",
+    "cn": "选项 B 的记号"
+  },
+  "back": {
+    "pos": "adv./n.",
+    "ipa": "/bæk/",
+    "cn": "回；向后；背部",
+    "note": "switch/phone back on 重新开机；give sth back 归还"
+  },
+  "be": {
+    "pos": "v.",
+    "ipa": "/biː/",
+    "cn": "是，成为",
+    "note": "原形 be，现在式 am/is/are，过去式 was/were，过去分词 been。"
+  },
+  "bear": {
+    "pos": "n.",
+    "ipa": "/beə/",
+    "cn": "熊"
+  },
+  "became": {
+    "pos": "v.",
+    "ipa": "/bɪˈkeɪm/",
+    "cn": "变得（become 的过去式）"
+  },
+  "because": {
+    "pos": "conj.",
+    "ipa": "/bɪˈkɒz/",
+    "cn": "因为",
+    "note": "because 后接从句；because of 后接名词。"
+  },
+  "been": {
+    "pos": "v.",
+    "ipa": "/biːn/",
+    "cn": "是（be 的过去分词）",
+    "note": "have been off school 一直没上学"
+  },
+  "before": {
+    "pos": "prep./conj.",
+    "ipa": "/bɪˈfɔː/",
+    "cn": "在…之前"
+  },
+  "below": {
+    "pos": "adv./prep.",
+    "ipa": "/bɪˈləʊ/",
+    "cn": "在下面；下面"
+  },
+  "best": {
+    "pos": "adj./adv.",
+    "ipa": "/best/",
+    "cn": "最好的"
+  },
+  "big": {
+    "pos": "adj.",
+    "ipa": "/bɪɡ/",
+    "cn": "大的"
+  },
+  "bike": {
+    "pos": "n.",
+    "ipa": "/baɪk/",
+    "cn": "自行车"
+  },
+  "birthday": {
+    "pos": "n.",
+    "ipa": "/ˈbɜːθdeɪ/",
+    "cn": "生日"
+  },
+  "book": {
+    "pos": "n./v.",
+    "ipa": "/bʊk/",
+    "cn": "书；预订（动词）"
+  },
+  "bored": {
+    "pos": "adj.",
+    "ipa": "/bɔːd/",
+    "cn": "无聊的"
+  },
+  "brought": {
+    "pos": "v.",
+    "ipa": "/brɔːt/",
+    "cn": "带来（bring 的过去式）"
+  },
+  "but": {
+    "pos": "conj.",
+    "ipa": "/bʌt/",
+    "cn": "但是",
+    "note": "but 和 though/although 不能同时用在一个句子里。"
+  },
+  "by": {
+    "pos": "prep.",
+    "ipa": "/baɪ/",
+    "cn": "被（用于被动语态）；通过；在……旁"
+  },
+  "c": {
+    "pos": "字母",
+    "ipa": "",
+    "cn": "选项 C 的记号"
+  },
+  "can": {
+    "pos": "modal",
+    "ipa": "/kæn/",
+    "cn": "能；可以"
+  },
+  "candidate": {
+    "pos": "n.",
+    "ipa": "/ˈkændɪdət/",
+    "cn": "考生，候选人"
+  },
+  "check": {
+    "pos": "v.",
+    "ipa": "/tʃek/",
+    "cn": "核对；检查"
+  },
+  "children": {
+    "pos": "n.",
+    "ipa": "/ˈtʃɪldrən/",
+    "cn": "孩子们（child 的复数）"
+  },
+  "choose": {
+    "pos": "v.",
+    "ipa": "/tʃuːz/",
+    "cn": "选择（chose / chosen）"
+  },
+  "clear": {
+    "pos": "v./adj.",
+    "ipa": "/klɪə/",
+    "cn": "清理；清楚的，晴朗的"
+  },
+  "common": {
+    "pos": "adj.",
+    "ipa": "/ˈkɒmən/",
+    "cn": "常见的"
+  },
+  "completely": {
+    "pos": "adv.",
+    "ipa": "/kəmˈpliːtli/",
+    "cn": "完全地，彻底地"
+  },
+  "couldn't": {
+    "pos": "缩写",
+    "ipa": "/ˈkʊdnt/",
+    "cn": "could not 的缩写"
+  },
+  "d": {
+    "pos": "字母",
+    "ipa": "",
+    "cn": "选项 d 的记号"
+  },
+  "day": {
+    "pos": "n.",
+    "ipa": "/deɪ/",
+    "cn": "天，日子"
+  },
+  "decide": {
+    "pos": "v.",
+    "ipa": "/dɪˈsaɪd/",
+    "cn": "决定；判断"
+  },
+  "didn't": {
+    "pos": "缩写",
+    "ipa": "/ˈdɪdnt/",
+    "cn": "did not 的缩写",
+    "note": "didn't 后面永远跟动词原形。"
+  },
+  "different": {
+    "pos": "adj.",
+    "ipa": "/ˈdɪfrənt/",
+    "cn": "不同的"
+  },
+  "disappear": {
+    "pos": "v.",
+    "ipa": "/ˌdɪsəˈpɪə/",
+    "cn": "消失",
+    "note": "反义词 appear 出现。dis- 是否定前缀。"
+  },
+  "disappointed": {
+    "pos": "adj.",
+    "ipa": "/ˌdɪsəˈpɔɪntɪd/",
+    "cn": "失望的",
+    "note": "修饰人。be disappointed at/by/with。"
+  },
+  "do": {
+    "pos": "v.",
+    "ipa": "/duː/",
+    "cn": "做，干",
+    "note": "过去式 did，过去分词 done。do 和 make 都译“做”：do 偏“做事”，make 偏“做出实物”。"
+  },
+  "doing": {
+    "pos": "v.",
+    "ipa": "/ˈduːɪŋ/",
+    "cn": "做（do 的现在分词）"
+  },
+  "don't": {
+    "pos": "助动词",
+    "ipa": "/dəʊnt/",
+    "cn": "不（= do not）"
+  },
+  "drive": {
+    "pos": "v.",
+    "ipa": "/draɪv/",
+    "cn": "驾驶；开车送（drove / driven）"
+  },
+  "during": {
+    "pos": "prep.",
+    "ipa": "/ˈdjʊərɪŋ/",
+    "cn": "在…期间"
+  },
+  "e": {
+    "pos": "字母",
+    "ipa": "",
+    "cn": "选项 e 的记号"
+  },
+  "each": {
+    "pos": "det.",
+    "ipa": "/iːtʃ/",
+    "cn": "每个",
+    "note": "each 强调个体，every 强调全体。each 可作代词，every 不行。"
+  },
+  "easy": {
+    "pos": "adj.",
+    "ipa": "/ˈiːzi/",
+    "cn": "容易的",
+    "note": "比较级 easier，最高级 easiest。"
+  },
+  "end": {
+    "pos": "n.",
+    "ipa": "/end/",
+    "cn": "结尾，末端",
+    "note": "in the end 最后；at the end of 在…的末尾。"
+  },
+  "enjoy": {
+    "pos": "v.",
+    "ipa": "/ɪnˈdʒɔɪ/",
+    "cn": "享受，喜爱"
+  },
+  "even": {
+    "pos": "adv.",
+    "ipa": "/ˈiːvn/",
+    "cn": "甚至",
+    "note": "even though 尽管"
+  },
+  "every": {
+    "pos": "det.",
+    "ipa": "/ˈevri/",
+    "cn": "每一个"
+  },
+  "everyone": {
+    "pos": "pron.",
+    "ipa": "/ˈevriwʌn/",
+    "cn": "每个人，大家",
+    "note": "作主语时谓语用单数：Everyone knows it."
+  },
+  "exam": {
+    "pos": "n.",
+    "ipa": "/ɪɡˈzæm/",
+    "cn": "考试"
+  },
+  "example": {
+    "pos": "n.",
+    "ipa": "/ɪɡˈzɑːmpl/",
+    "cn": "例子",
+    "note": "for example 例如"
+  },
+  "excited": {
+    "pos": "adj.",
+    "ipa": "/ɪkˈsaɪtɪd/",
+    "cn": "兴奋的"
+  },
+  "expected": {
+    "pos": "v.",
+    "ipa": "/ɪkˈspektɪd/",
+    "cn": "预料（expect 的过去式/过去分词）"
+  },
+  "explore": {
+    "pos": "v.",
+    "ipa": "/ɪkˈsplɔː/",
+    "cn": "勘探，探索"
+  },
+  "fact": {
+    "pos": "n.",
+    "ipa": "/fækt/",
+    "cn": "事实",
+    "note": "in fact 事实上；as a matter of fact 其实。"
+  },
+  "family": {
+    "pos": "n.",
+    "ipa": "/ˈfæməli/",
+    "cn": "家庭；家人"
+  },
+  "famous": {
+    "pos": "adj.",
+    "ipa": "/ˈfeɪməs/",
+    "cn": "著名的"
+  },
+  "far": {
+    "pos": "adv./adj.",
+    "ipa": "/fɑː/",
+    "cn": "远；……得多",
+    "note": "修饰比较级表示“…得多”：far more, far better。"
+  },
+  "find": {
+    "pos": "v.",
+    "ipa": "/faɪnd/",
+    "cn": "找到，发现",
+    "note": "过去式/过去分词都是 found。find out 查明。"
+  },
+  "finish": {
+    "pos": "v.",
+    "ipa": "/ˈfɪnɪʃ/",
+    "cn": "完成；结束"
+  },
+  "first": {
+    "pos": "adv./adj.",
+    "ipa": "/fɜːst/",
+    "cn": "首先；第一的"
+  },
+  "five": {
+    "pos": "num.",
+    "ipa": "/faɪv/",
+    "cn": "五"
+  },
+  "fix": {
+    "pos": "v.",
+    "ipa": "/fɪks/",
+    "cn": "修理"
+  },
+  "focus": {
+    "pos": "n./v.",
+    "ipa": "/ˈfəʊkəs/",
+    "cn": "重点；聚焦"
+  },
+  "football": {
+    "pos": "n.",
+    "ipa": "/ˈfʊtbɔːl/",
+    "cn": "足球"
+  },
+  "for": {
+    "pos": "prep.",
+    "ipa": "/fɔː/",
+    "cn": "为了；给；持续（一段时间）",
+    "note": "for + 一段时间，常与完成时连用：for centuries 几个世纪以来。"
+  },
+  "found": {
+    "pos": "v.",
+    "ipa": "/faʊnd/",
+    "cn": "发现（find 的过去式/过去分词）",
+    "note": "注意：作“建立”讲时 found 是原形，过去式 founded。"
+  },
+  "four": {
+    "pos": "num.",
+    "ipa": "/fɔː/",
+    "cn": "四"
+  },
+  "friday": {
+    "pos": "n.",
+    "ipa": "/ˈfraɪdeɪ/",
+    "cn": "星期五"
+  },
+  "friend": {
+    "pos": "n.",
+    "ipa": "/frend/",
+    "cn": "朋友"
+  },
+  "friends": {
+    "pos": "n.",
+    "ipa": "/frendz/",
+    "cn": "朋友们（friend 的复数）"
+  },
+  "from": {
+    "pos": "prep.",
+    "ipa": "/frɒm/",
+    "cn": "从；来自"
+  },
+  "fun": {
+    "pos": "n./adj.",
+    "ipa": "/fʌn/",
+    "cn": "乐趣；有趣的"
+  },
+  "get": {
+    "pos": "v.",
+    "ipa": "/ɡet/",
+    "cn": "得到，到达，变得",
+    "note": "过去式 got，过去分词 got（英式）/ gotten（美式）。"
+  },
+  "give": {
+    "pos": "v.",
+    "ipa": "/ɡɪv/",
+    "cn": "给，给予",
+    "note": "过去式 gave，过去分词 given。give sb sth = give sth to sb。"
+  },
+  "given": {
+    "pos": "v.",
+    "ipa": "/ˈɡɪvn/",
+    "cn": "给（give 的过去分词）",
+    "note": "文中 was given 是被动语态，直译“被给予”，中文说“得到了“更顺。"
+  },
+  "go": {
+    "pos": "v.",
+    "ipa": "/ɡəʊ/",
+    "cn": "去，走",
+    "note": "过去式 went，过去分词 gone。"
+  },
+  "got": {
+    "pos": "v.",
+    "ipa": "/ɡɒt/",
+    "cn": "得到，到达（get 的过去式/过去分词）"
+  },
+  "grammar": {
+    "pos": "n.",
+    "ipa": "/ˈɡræmə/",
+    "cn": "语法"
+  },
+  "great": {
+    "pos": "adj.",
+    "ipa": "/ɡreɪt/",
+    "cn": "大的；伟大的；很好的",
+    "note": "口语里 great big = 好大的。"
+  },
+  "had": {
+    "pos": "v.",
+    "ipa": "/hæd/",
+    "cn": "有；已经（have 的过去式／过去分词）",
+    "note": "had + 过去分词构成过去完成时，表示“过去的过去”。"
+  },
+  "hadn't": {
+    "pos": "缩写",
+    "ipa": "/ˈhædnt/",
+    "cn": "had not 的缩写"
+  },
+  "has": {
+    "pos": "v.",
+    "ipa": "/hæz/",
+    "cn": "有（have 的第三人称单数）"
+  },
+  "have": {
+    "pos": "v.",
+    "ipa": "/hæv/",
+    "cn": "有；已经",
+    "note": "have + 过去分词构成现在完成时。"
+  },
+  "have to": {
+    "pos": "phr.",
+    "ipa": "/ˈhæv tu/",
+    "cn": "不得不，必须",
+    "note": "表示客观上的“必须”（外部原因）；must 偏主观。过去式 had to，将来式 will have to。"
+  },
+  "he": {
+    "pos": "pron.",
+    "ipa": "/hiː/",
+    "cn": "他"
+  },
+  "help": {
+    "pos": "v.",
+    "ipa": "/help/",
+    "cn": "帮助",
+    "note": "help sb (to) do sth，to 可省略。"
+  },
+  "her": {
+    "pos": "pron.",
+    "ipa": "/hɜː/",
+    "cn": "她（宾格）；她的"
+  },
+  "him": {
+    "pos": "pron.",
+    "ipa": "/hɪm/",
+    "cn": "他（宾格）"
+  },
+  "his": {
+    "pos": "pron.",
+    "ipa": "/hɪz/",
+    "cn": "他的"
+  },
+  "home": {
+    "pos": "n.",
+    "ipa": "/həʊm/",
+    "cn": "家",
+    "note": "at home 在家（不加 the）；go home 回家（不加 to）。"
+  },
+  "hope": {
+    "pos": "v.",
+    "ipa": "/həʊp/",
+    "cn": "希望"
+  },
+  "how": {
+    "pos": "adv.",
+    "ipa": "/haʊ/",
+    "cn": "如何，怎样",
+    "note": "how to do sth = 如何做某事，是“疑问词 + 不定式”结构，相当于一个名词短语。"
+  },
+  "however": {
+    "pos": "adv.",
+    "ipa": "/haʊˈevə/",
+    "cn": "然而，不过",
+    "note": "后面要加逗号。比 but 更正式，常用于书面语。"
+  },
+  "i": {
+    "pos": "pron.",
+    "ipa": "/aɪ/",
+    "cn": "我",
+    "note": "英语里 I 永远大写，不管在句子哪个位置。"
+  },
+  "i'd": {
+    "pos": "缩写",
+    "ipa": "/aɪd/",
+    "cn": "I had 或 I would 的缩写",
+    "note": "看后面接什么：I'd found = I had found；I'd go = I would go。"
+  },
+  "i'll": {
+    "pos": "contr.",
+    "ipa": "/aɪl/",
+    "cn": "我将（= I will）"
+  },
+  "i've": {
+    "pos": "contr.",
+    "ipa": "/aɪv/",
+    "cn": "我已经（= I have）"
+  },
+  "ice": {
+    "pos": "n.",
+    "ipa": "/aɪs/",
+    "cn": "冰"
+  },
+  "if": {
+    "pos": "conj.",
+    "ipa": "/ɪf/",
+    "cn": "如果；是否"
+  },
+  "in": {
+    "pos": "prep.",
+    "ipa": "/ɪn/",
+    "cn": "在……里；在（某段时间）"
+  },
+  "include": {
+    "pos": "v.",
+    "ipa": "/ɪnˈkluːd/",
+    "cn": "包含，包括"
+  },
+  "instead": {
+    "pos": "adv.",
+    "ipa": "/ɪnˈsted/",
+    "cn": "代替，反而",
+    "note": "instead 单独用；instead of 后面要跟名词或动名词。"
+  },
+  "interested": {
+    "pos": "adj.",
+    "ipa": "/ˈɪntrəstɪd/",
+    "cn": "感兴趣的",
+    "note": "修饰<b>人</b>。be interested in sth/doing。"
+  },
+  "into": {
+    "pos": "prep.",
+    "ipa": "/ˈɪntu/",
+    "cn": "进入，到……里面",
+    "note": "divide A into B 把 A 分成 B。"
+  },
+  "is": {
+    "pos": "v.",
+    "ipa": "/ɪz/",
+    "cn": "是（be 的第三人称单数）"
+  },
+  "isn't": {
+    "pos": "contr.",
+    "ipa": "/ˈɪznt/",
+    "cn": "不是（= is not）"
+  },
+  "it": {
+    "pos": "pron.",
+    "ipa": "/ɪt/",
+    "cn": "它",
+    "note": "五选句填空里，it 常常是判断答案的关键——一定要找到它指代什么。"
+  },
+  "just": {
+    "pos": "adv.",
+    "ipa": "/dʒʌst/",
+    "cn": "仅仅；刚刚；正好"
+  },
+  "keep": {
+    "pos": "v.",
+    "ipa": "/kiːp/",
+    "cn": "保持，持续",
+    "note": "keep doing sth 一直做；keep sb doing 让某人一直做。"
+  },
+  "kept": {
+    "pos": "v.",
+    "ipa": "/kept/",
+    "cn": "保持，不停（keep 的过去式／过去分词）",
+    "note": "keep doing sth 不停地做某事。"
+  },
+  "kind": {
+    "pos": "n./adj.",
+    "ipa": "/kaɪnd/",
+    "cn": "种类；友善的"
+  },
+  "knew": {
+    "pos": "v.",
+    "ipa": "/njuː/",
+    "cn": "知道（know 的过去式）"
+  },
+  "know": {
+    "pos": "v.",
+    "ipa": "/nəʊ/",
+    "cn": "知道，认识",
+    "note": "过去式 knew /njuː/，过去分词 known。"
+  },
+  "lake": {
+    "pos": "n.",
+    "ipa": "/leɪk/",
+    "cn": "湖"
+  },
+  "last": {
+    "pos": "adj.",
+    "ipa": "/lɑːst/",
+    "cn": "上一个的；最后的"
+  },
+  "later": {
+    "pos": "adv.",
+    "ipa": "/ˈleɪtə/",
+    "cn": "稍后；后来"
+  },
+  "leave": {
+    "pos": "v.",
+    "ipa": "/liːv/",
+    "cn": "离开；留下"
+  },
+  "left": {
+    "pos": "v.",
+    "ipa": "/left/",
+    "cn": "留下；离开（leave 的过去式）"
+  },
+  "like": {
+    "pos": "prep./v.",
+    "ipa": "/laɪk/",
+    "cn": "像，如同；喜欢",
+    "note": "文中 things like gold jewellery 的 like 是介词「像」。"
+  },
+  "live": {
+    "pos": "v.",
+    "ipa": "/lɪv/",
+    "cn": "居住，生活",
+    "note": "作形容词“活的、现场的”时读 /laɪv/。"
+  },
+  "lived": {
+    "pos": "v.",
+    "ipa": "/lɪvd/",
+    "cn": "居住（live 的过去式/过去分词）"
+  },
+  "long": {
+    "pos": "adj./adv.",
+    "ipa": "/lɒŋ/",
+    "cn": "长的；长久地"
+  },
+  "look": {
+    "pos": "v.",
+    "ipa": "/lʊk/",
+    "cn": "看，寻找",
+    "note": "look for 寻找（动作）；find 找到（结果）。"
+  },
+  "looking": {
+    "pos": "v.",
+    "ipa": "/ˈlʊkɪŋ/",
+    "cn": "看，找（look 的现在分词）"
+  },
+  "made": {
+    "pos": "v.",
+    "ipa": "/meɪd/",
+    "cn": "做（make 的过去式/过去分词）"
+  },
+  "make": {
+    "pos": "v.",
+    "ipa": "/meɪk/",
+    "cn": "做，制造，使得",
+    "note": "过去式/过去分词 made。make sb do sth（不加 to）。"
+  },
+  "match": {
+    "pos": "n.",
+    "ipa": "/mætʃ/",
+    "cn": "比赛；火柴"
+  },
+  "me": {
+    "pos": "pron.",
+    "ipa": "/miː/",
+    "cn": "我（宾格）"
+  },
+  "meal": {
+    "pos": "n.",
+    "ipa": "/miːl/",
+    "cn": "一餐；一顿饭"
+  },
+  "mean": {
+    "pos": "v.",
+    "ipa": "/miːn/",
+    "cn": "意味着，意思是",
+    "note": "过去式/过去分词 meant /ment/。"
+  },
+  "metre": {
+    "pos": "n.",
+    "ipa": "/ˈmiːtə/",
+    "cn": "米（长度单位）"
+  },
+  "more": {
+    "pos": "adv./det.",
+    "ipa": "/mɔː/",
+    "cn": "更多；更……",
+    "note": "many/much 的比较级。far more = 多得多的。"
+  },
+  "morning": {
+    "pos": "n.",
+    "ipa": "/ˈmɔːnɪŋ/",
+    "cn": "早晨；上午"
+  },
+  "much": {
+    "pos": "adv./det.",
+    "ipa": "/mʌtʃ/",
+    "cn": "多，很"
+  },
+  "mum": {
+    "pos": "n.",
+    "ipa": "/mʌm/",
+    "cn": "妈妈（英式）"
+  },
+  "my": {
+    "pos": "pron.",
+    "ipa": "/maɪ/",
+    "cn": "我的"
+  },
+  "near": {
+    "pos": "prep./adj.",
+    "ipa": "/nɪə/",
+    "cn": "在…附近；近的"
+  },
+  "nearby": {
+    "pos": "adj.",
+    "ipa": "/ˌnɪəˈbaɪ/",
+    "cn": "附近的；adv. 在附近"
+  },
+  "nervous": {
+    "pos": "adj.",
+    "ipa": "/ˈnɜːvəs/",
+    "cn": "紧张的"
+  },
+  "new": {
+    "pos": "adj.",
+    "ipa": "/njuː/",
+    "cn": "新的",
+    "note": "a new experience 一次新的经历。"
+  },
+  "news": {
+    "pos": "n.",
+    "ipa": "/njuːz/",
+    "cn": "消息，新闻",
+    "note": "<b>不可数名词</b>，看起来像复数但不是——谓语用单数：The news is good."
+  },
+  "next": {
+    "pos": "adj./adv.",
+    "ipa": "/nekst/",
+    "cn": "下一个（的）"
+  },
+  "not": {
+    "pos": "adv.",
+    "ipa": "/nɒt/",
+    "cn": "不；没有"
+  },
+  "now": {
+    "pos": "adv.",
+    "ipa": "/naʊ/",
+    "cn": "现在"
+  },
+  "of": {
+    "pos": "prep.",
+    "ipa": "/ɒv/",
+    "cn": "……的",
+    "note": "A of B 译成中文要倒过来：the name of the book = 这本书的名字。"
+  },
+  "off": {
+    "pos": "adv.",
+    "ipa": "/ɒf/",
+    "cn": "关掉；离开",
+    "note": "be off 关机；关着的"
+  },
+  "often": {
+    "pos": "adv.",
+    "ipa": "/ˈɒfn/",
+    "cn": "经常"
+  },
+  "on": {
+    "pos": "prep.",
+    "ipa": "/ɒn/",
+    "cn": "在……上；在（某一天）"
+  },
+  "one": {
+    "pos": "num./pron.",
+    "ipa": "/wʌn/",
+    "cn": "一；一个"
+  },
+  "only": {
+    "pos": "adv.",
+    "ipa": "/ˈəʊnli/",
+    "cn": "只；仅"
+  },
+  "opportunity": {
+    "pos": "n.",
+    "ipa": "/ˌɒpəˈtjuːnəti/",
+    "cn": "机会，时机",
+    "note": "可数名词。常搭配：a good opportunity to do sth。"
+  },
+  "option": {
+    "pos": "n.",
+    "ipa": "/ˈɒpʃn/",
+    "cn": "选项"
+  },
+  "or": {
+    "pos": "conj.",
+    "ipa": "/ɔː/",
+    "cn": "或者"
+  },
+  "other": {
+    "pos": "adj.",
+    "ipa": "/ˈʌðə/",
+    "cn": "别的；另外的"
+  },
+  "our": {
+    "pos": "det.",
+    "ipa": "/ˈaʊə/",
+    "cn": "我们的"
+  },
+  "out": {
+    "pos": "adv.",
+    "ipa": "/aʊt/",
+    "cn": "出来；出去；不在家",
+    "note": "turn out 结果是；find out 查明。"
+  },
+  "parent": {
+    "pos": "n.",
+    "ipa": "/ˈpeərənt/",
+    "cn": "父亲或母亲",
+    "note": "常用复数 parents 父母"
+  },
+  "park": {
+    "pos": "n./v.",
+    "ipa": "/pɑːk/",
+    "cn": "公园；停放（车辆）"
+  },
+  "part": {
+    "pos": "n.",
+    "ipa": "/pɑːt/",
+    "cn": "部分",
+    "note": "take part in 参加"
+  },
+  "people": {
+    "pos": "n.",
+    "ipa": "/ˈpiːpl/",
+    "cn": "人们，人",
+    "note": "本身是复数，不能加 s。一个人是 a person。"
+  },
+  "pieces": {
+    "pos": "n.",
+    "ipa": "/ˈpiːsɪz/",
+    "cn": "碎片（piece 的复数）"
+  },
+  "place": {
+    "pos": "n.",
+    "ipa": "/pleɪs/",
+    "cn": "地方"
+  },
+  "play": {
+    "pos": "v./n.",
+    "ipa": "/pleɪ/",
+    "cn": "玩；（踢）球；戏剧"
+  },
+  "practice": {
+    "pos": "n.",
+    "ipa": "/ˈpræktɪs/",
+    "cn": "练习；实践"
+  },
+  "preliminary": {
+    "pos": "n./adj.",
+    "ipa": "/prɪˈlɪmɪnəri/",
+    "cn": "预备的",
+    "note": "B1 Preliminary 剑桥 B1 考试（即 PET）"
+  },
+  "problem": {
+    "pos": "n.",
+    "ipa": "/ˈprɒbləm/",
+    "cn": "问题"
+  },
+  "question": {
+    "pos": "n.",
+    "ipa": "/ˈkwestʃən/",
+    "cn": "问题；题目"
+  },
+  "quite": {
+    "pos": "adv.",
+    "ipa": "/kwaɪt/",
+    "cn": "相当；完全",
+    "note": "not quite = 不完全、不太。quite a few = 相当多。"
+  },
+  "read": {
+    "pos": "v.",
+    "ipa": "/riːd/",
+    "cn": "读；阅读"
+  },
+  "realise": {
+    "pos": "v.",
+    "ipa": "/ˈriːəlaɪz/",
+    "cn": "意识到"
+  },
+  "really": {
+    "pos": "adv.",
+    "ipa": "/ˈriːəli/",
+    "cn": "真正地，确实"
+  },
+  "recently": {
+    "pos": "adv.",
+    "ipa": "/ˈriːsntli/",
+    "cn": "最近"
+  },
+  "remind": {
+    "pos": "v.",
+    "ipa": "/rɪˈmaɪnd/",
+    "cn": "提醒",
+    "note": "remind sb to do sth"
+  },
+  "report": {
+    "pos": "v./n.",
+    "ipa": "/rɪˈpɔːt/",
+    "cn": "报道，说；报告"
+  },
+  "right": {
+    "pos": "adj.",
+    "ipa": "/raɪt/",
+    "cn": "对的，正确的；右边的",
+    "note": "That's right. 对了。all right 好吧。"
+  },
+  "road": {
+    "pos": "n.",
+    "ipa": "/rəʊd/",
+    "cn": "道路"
+  },
+  "sad": {
+    "pos": "adj.",
+    "ipa": "/sæd/",
+    "cn": "难过的，悲伤的",
+    "note": "比较级 sadder，最高级 saddest（双写 d）。"
+  },
+  "said": {
+    "pos": "v.",
+    "ipa": "/sed/",
+    "cn": "说（say 的过去式/过去分词）",
+    "note": "发音是 /sed/，不是 /seɪd/。"
+  },
+  "same": {
+    "pos": "adj.",
+    "ipa": "/seɪm/",
+    "cn": "相同的",
+    "note": "the same as 和…一样"
+  },
+  "say": {
+    "pos": "v.",
+    "ipa": "/seɪ/",
+    "cn": "说",
+    "note": "say sth (to sb)。过去式/过去分词 said /sed/。"
+  },
+  "school": {
+    "pos": "n.",
+    "ipa": "/skuːl/",
+    "cn": "学校"
+  },
+  "science": {
+    "pos": "n.",
+    "ipa": "/ˈsaɪəns/",
+    "cn": "科学"
+  },
+  "see": {
+    "pos": "v.",
+    "ipa": "/siː/",
+    "cn": "看见；明白",
+    "note": "过去式 saw，过去分词 seen。"
+  },
+  "sentence": {
+    "pos": "n.",
+    "ipa": "/ˈsentəns/",
+    "cn": "句子"
+  },
+  "she": {
+    "pos": "pron.",
+    "ipa": "/ʃiː/",
+    "cn": "她"
+  },
+  "shop": {
+    "pos": "n./v.",
+    "ipa": "/ʃɒp/",
+    "cn": "商店；购物"
+  },
+  "short": {
+    "pos": "adj.",
+    "ipa": "/ʃɔːt/",
+    "cn": "短的"
+  },
+  "should": {
+    "pos": "modal",
+    "ipa": "/ʃʊd/",
+    "cn": "应该"
+  },
+  "show": {
+    "pos": "v./n.",
+    "ipa": "/ʃəʊ/",
+    "cn": "表示；展示；节目"
+  },
+  "six": {
+    "pos": "num.",
+    "ipa": "/sɪks/",
+    "cn": "六"
+  },
+  "size": {
+    "pos": "n.",
+    "ipa": "/saɪz/",
+    "cn": "尺码；大小"
+  },
+  "small": {
+    "pos": "adj.",
+    "ipa": "/smɔːl/",
+    "cn": "小的"
+  },
+  "so": {
+    "pos": "conj./adv.",
+    "ipa": "/səʊ/",
+    "cn": "所以；这么，如此"
+  },
+  "some": {
+    "pos": "det.",
+    "ipa": "/sʌm/",
+    "cn": "一些；某个",
+    "note": "肯定句用 some；否定句和疑问句一般用 any。"
+  },
+  "something": {
+    "pos": "pron.",
+    "ipa": "/ˈsʌmθɪŋ/",
+    "cn": "某事，某物",
+    "note": "形容词修饰它时要后置：something interesting。"
+  },
+  "soon": {
+    "pos": "adv.",
+    "ipa": "/suːn/",
+    "cn": "不久，很快"
+  },
+  "sound": {
+    "pos": "v./n.",
+    "ipa": "/saʊnd/",
+    "cn": "听起来；声音",
+    "note": "系动词，后接形容词：It sounds great."
+  },
+  "sounded": {
+    "pos": "v.",
+    "ipa": "/ˈsaʊndɪd/",
+    "cn": "听起来（sound 的过去式）"
+  },
+  "sport": {
+    "pos": "n.",
+    "ipa": "/spɔːt/",
+    "cn": "运动",
+    "note": "sports event 体育比赛"
+  },
+  "start": {
+    "pos": "v./n.",
+    "ipa": "/stɑːt/",
+    "cn": "开始"
+  },
+  "still": {
+    "pos": "adv.",
+    "ipa": "/stɪl/",
+    "cn": "仍然，还"
+  },
+  "sure": {
+    "pos": "adj.",
+    "ipa": "/ʃʊə/",
+    "cn": "确信的；一定的",
+    "note": "make sure 确保。be sure of/about sth 对…有把握。"
+  },
+  "take": {
+    "pos": "v.",
+    "ipa": "/teɪk/",
+    "cn": "拿；带走",
+    "note": "take back 取回/归还"
+  },
+  "teacher": {
+    "pos": "n.",
+    "ipa": "/ˈtiːtʃə/",
+    "cn": "老师"
+  },
+  "tell": {
+    "pos": "v.",
+    "ipa": "/tel/",
+    "cn": "告诉",
+    "note": "tell sb sth。过去式/过去分词 told。"
+  },
+  "test": {
+    "pos": "n./v.",
+    "ipa": "/test/",
+    "cn": "测试；考试"
+  },
+  "text": {
+    "pos": "v./n.",
+    "ipa": "/tekst/",
+    "cn": "发短信；文本，短信"
+  },
+  "than": {
+    "pos": "conj./prep.",
+    "ipa": "/ðæn/",
+    "cn": "比"
+  },
+  "that": {
+    "pos": "pron./conj.",
+    "ipa": "/ðæt/",
+    "cn": "那个；引导从句",
+    "note": "引导宾语从句时常可省略；引导定语从句时作主语不能省。"
+  },
+  "the": {
+    "pos": "art.",
+    "ipa": "/ðə/",
+    "cn": "这，那（定冠词）",
+    "note": "表示特指、或前文已提到过的人或物。第二次提到时一般用 the。"
+  },
+  "their": {
+    "pos": "pron.",
+    "ipa": "/ðeə/",
+    "cn": "他们的"
+  },
+  "them": {
+    "pos": "pron.",
+    "ipa": "/ðem/",
+    "cn": "他们（宾格）"
+  },
+  "there": {
+    "pos": "adv.",
+    "ipa": "/ðeə/",
+    "cn": "那里"
+  },
+  "these": {
+    "pos": "det./pron.",
+    "ipa": "/ðiːz/",
+    "cn": "这些"
+  },
+  "they": {
+    "pos": "pron.",
+    "ipa": "/ðeɪ/",
+    "cn": "他们，它们"
+  },
+  "they're": {
+    "pos": "缩写",
+    "ipa": "/ðeə/",
+    "cn": "they are 的缩写"
+  },
+  "think": {
+    "pos": "v.",
+    "ipa": "/θɪŋk/",
+    "cn": "想，认为",
+    "note": "过去式/过去分词 thought /θɔːt/。"
+  },
+  "this": {
+    "pos": "det./pron.",
+    "ipa": "/ðɪs/",
+    "cn": "这个"
+  },
+  "thought": {
+    "pos": "v.",
+    "ipa": "/θɔːt/",
+    "cn": "想，认为（think 的过去式/过去分词）"
+  },
+  "time": {
+    "pos": "n.",
+    "ipa": "/taɪm/",
+    "cn": "时间（不可数）；次，回（可数）",
+    "note": "each time 每次；three times 三次。"
+  },
+  "tired": {
+    "pos": "adj.",
+    "ipa": "/ˈtaɪəd/",
+    "cn": "累的；疲倦的"
+  },
+  "to": {
+    "pos": "prep.",
+    "ipa": "/tuː/",
+    "cn": "到，向；[不定式符号]",
+    "note": "作不定式符号时后面跟动词原形；作介词时后面跟名词或动名词。"
+  },
+  "told": {
+    "pos": "v.",
+    "ipa": "/təʊld/",
+    "cn": "告诉（tell 的过去式/过去分词）"
+  },
+  "too": {
+    "pos": "adv.",
+    "ipa": "/tuː/",
+    "cn": "也；太",
+    "note": "表「也」时用在<b>肯定句</b>末尾；否定句用 either。"
+  },
+  "touch": {
+    "pos": "v.",
+    "ipa": "/tʌtʃ/",
+    "cn": "触摸，碰"
+  },
+  "town": {
+    "pos": "n.",
+    "ipa": "/taʊn/",
+    "cn": "城镇"
+  },
+  "training": {
+    "pos": "n.",
+    "ipa": "/ˈtreɪnɪŋ/",
+    "cn": "训练"
+  },
+  "tried": {
+    "pos": "v.",
+    "ipa": "/traɪd/",
+    "cn": "试过（try 的过去式）"
+  },
+  "turn": {
+    "pos": "v.",
+    "ipa": "/tɜːn/",
+    "cn": "转，变成",
+    "note": "turn out 结果是；turn on/off 开关。"
+  },
+  "under": {
+    "pos": "prep.",
+    "ipa": "/ˈʌndə/",
+    "cn": "在……下面",
+    "note": "under 强调正下方；below 只表示位置更低。"
+  },
+  "up": {
+    "pos": "adv.",
+    "ipa": "/ʌp/",
+    "cn": "向上；起来",
+    "note": "常和动词组成短语：dig up 挖出，clean up 清理，pick up 捡起。"
+  },
+  "us": {
+    "pos": "pron.",
+    "ipa": "/ʌs/",
+    "cn": "我们（宾格）"
+  },
+  "use": {
+    "pos": "n./v.",
+    "ipa": "/juːs/",
+    "cn": "使用",
+    "note": "for customers' use 供顾客使用"
+  },
+  "verb": {
+    "pos": "n.",
+    "ipa": "/vɜːb/",
+    "cn": "动词"
+  },
+  "very": {
+    "pos": "adv.",
+    "ipa": "/ˈveri/",
+    "cn": "非常，很",
+    "note": "very 修饰形容词和副词；不能直接修饰动词（不能说 I very like it）。"
+  },
+  "visit": {
+    "pos": "v./n.",
+    "ipa": "/ˈvɪzɪt/",
+    "cn": "参观，拜访"
+  },
+  "walk": {
+    "pos": "v./n.",
+    "ipa": "/wɔːk/",
+    "cn": "走；步行"
+  },
+  "want": {
+    "pos": "v.",
+    "ipa": "/wɒnt/",
+    "cn": "想要"
+  },
+  "was": {
+    "pos": "v.",
+    "ipa": "/wɒz/",
+    "cn": "是（be 的过去式，用于 I / he / she / it 及单数）"
+  },
+  "wasn't": {
+    "pos": "缩写",
+    "ipa": "/ˈwɒznt/",
+    "cn": "was not 的缩写（不是）"
+  },
+  "watch": {
+    "pos": "v./n.",
+    "ipa": "/wɒtʃ/",
+    "cn": "观看；手表"
+  },
+  "way": {
+    "pos": "n.",
+    "ipa": "/weɪ/",
+    "cn": "方法，方式；路",
+    "note": "That way 这样一来；in this way 用这种方法。"
+  },
+  "we": {
+    "pos": "pron.",
+    "ipa": "/wiː/",
+    "cn": "我们"
+  },
+  "went": {
+    "pos": "v.",
+    "ipa": "/went/",
+    "cn": "去（go 的过去式）"
+  },
+  "were": {
+    "pos": "v.",
+    "ipa": "/wɜː/",
+    "cn": "是（be 的过去式，用于 we / you / they 及复数）"
+  },
+  "weren't": {
+    "pos": "缩写",
+    "ipa": "/wɜːnt/",
+    "cn": "were not 的缩写"
+  },
+  "what": {
+    "pos": "pron.",
+    "ipa": "/wɒt/",
+    "cn": "什么；……的东西",
+    "note": "引导名词性从句时 = the thing that，不能换成 that。"
+  },
+  "when": {
+    "pos": "conj.",
+    "ipa": "/wen/",
+    "cn": "当……的时候",
+    "note": "引导时间状语从句。"
+  },
+  "where": {
+    "pos": "adv./conj.",
+    "ipa": "/weə/",
+    "cn": "在哪里"
+  },
+  "which": {
+    "pos": "pron.",
+    "ipa": "/wɪtʃ/",
+    "cn": "哪一个；这（指代前文）",
+    "note": "引导非限制性定语从句时可指代<b>整句话</b>，前面要有逗号。"
+  },
+  "who": {
+    "pos": "pron.",
+    "ipa": "/huː/",
+    "cn": "谁；……的人（关系代词）",
+    "note": "指人。whose 表所有格，whom 作宾语。"
+  },
+  "whole": {
+    "pos": "adj.",
+    "ipa": "/həʊl/",
+    "cn": "全部的，整个的",
+    "note": "前面必须加 the 或物主代词：<b>the</b> whole area ✓ / whole the area ✗"
+  },
+  "wild": {
+    "pos": "adj.",
+    "ipa": "/waɪld/",
+    "cn": "野生的"
+  },
+  "winter": {
+    "pos": "n.",
+    "ipa": "/ˈwɪntə/",
+    "cn": "冬天"
+  },
+  "wish": {
+    "pos": "v./n.",
+    "ipa": "/wɪʃ/",
+    "cn": "希望",
+    "note": "wish + 过去完成：对过去的遗憾"
+  },
+  "with": {
+    "pos": "prep.",
+    "ipa": "/wɪð/",
+    "cn": "和……一起；带有",
+    "note": "with + 名词 + 修饰语可作伴随状语，中文常要拆成独立小句。"
+  },
+  "within": {
+    "pos": "prep.",
+    "ipa": "/wɪˈðɪn/",
+    "cn": "在…以内"
+  },
+  "word": {
+    "pos": "n.",
+    "ipa": "/wɜːd/",
+    "cn": "单词；话"
+  },
+  "work": {
+    "pos": "v./n.",
+    "ipa": "/wɜːk/",
+    "cn": "工作；起作用",
+    "note": "作名词不可数。works 表示“作品”或“工厂”。"
+  },
+  "worried": {
+    "pos": "adj.",
+    "ipa": "/ˈwʌrid/",
+    "cn": "担心的"
+  },
+  "write": {
+    "pos": "v.",
+    "ipa": "/raɪt/",
+    "cn": "写（wrote / written）"
+  },
+  "year": {
+    "pos": "n.",
+    "ipa": "/jɪə/",
+    "cn": "年"
+  },
+  "you": {
+    "pos": "pron.",
+    "ipa": "/juː/",
+    "cn": "你；你们"
+  }
+}

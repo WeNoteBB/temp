@@ -1,0 +1,7073 @@
+{
+  "slug": "t1-p3-great-ocean-road",
+  "book": "剑桥PET 官方模考题精讲讲练",
+  "label": "Reading Part 3",
+  "title": "Training Test 1",
+  "note": "答案为逐题对照书后 P184 官方答案核对一致；训练①②③④⑤的答案与解析同 P184（2026-10-17）",
+  "passage": {
+    "words": 1027,
+    "sentences": 88,
+    "paragraphs": [
+      [
+        {
+          "s": "Training Test 1 · Reading Part 3",
+          "hard": false,
+          "tr": "训练测试 1 · 阅读第 3 部分。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题行：<b>Training Test 1 · Reading Part 3</b>（训练测试 1 · 阅读第 3 部分）",
+            "parts": [
+              [
+                "标题",
+                "Training Test 1 —— 训练测试编号"
+              ],
+              [
+                "标题",
+                "Reading Part 3 —— 阅读第 3 部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式省略句"
+            ],
+            "tip": "这一部分练的是：读一篇含观点和情感的长文，做五道四选一的阅读理解题。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "In this part you:",
+          "hard": false,
+          "tr": "在这一部分里，你要：",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>In this part you:</b>（这一部分里你要做的事）",
+            "parts": [
+              [
+                "介词短语",
+                "In this part —— 在这一部分里"
+              ],
+              [
+                "主语",
+                "you —— 你（指考生）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "In this part you: 是阅读各部分的固定开场白"
+            ],
+            "tip": "下面列的是两项任务：读什么、做什么题。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "read — a long text that includes opinions and feelings.",
+          "hard": false,
+          "tr": "读——一篇包含观点和感受的长文。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>read a long text</b>（读一篇长文）",
+            "parts": [
+              [
+                "谓语",
+                "read —— 祈使句：读"
+              ],
+              [
+                "宾语",
+                "<code>a long text</code> —— 一篇长文"
+              ],
+              [
+                "定语从句",
+                "<code>that includes opinions and feelings</code> —— 包含观点和感受的"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "破折号引出解释：读什么",
+              "that 引导定语从句修饰 a long text"
+            ],
+            "tip": "关键词 opinions and feelings：Part 3 的题大多考态度和观点，而不是事实。"
+          }
+        },
+        {
+          "s": "choose — a correct answer (A, B, C or D) from five multiple-choice questions.",
+          "hard": false,
+          "tr": "选——从五道四选一的题目里选出正确答案。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>choose a correct answer</b>（选出一个正确答案）",
+            "parts": [
+              [
+                "谓语",
+                "choose —— 祈使句：选"
+              ],
+              [
+                "宾语",
+                "<code>a correct answer</code> —— 一个正确答案"
+              ],
+              [
+                "方式状语",
+                "<code>from five multiple-choice questions</code> —— 从五道四选一的题里"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "(A, B, C or D) 示意每题四个选项",
+              "multiple-choice 四选一的"
+            ],
+            "tip": "五道题、每题四选一 —— 这就是 11–15 题的样子。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "GRAMMAR: REPORTING VERBS",
+          "hard": false,
+          "tr": "语法：转述动词。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>GRAMMAR: REPORTING VERBS</b>（语法：转述动词）",
+            "parts": [
+              [
+                "标签",
+                "GRAMMAR: —— 语法板块"
+              ],
+              [
+                "内容",
+                "reporting verbs —— 转述动词（转述别人说了什么的动词：say / tell / warn / promise…）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "report 转述、报告",
+              "reporting verb 转述动词"
+            ],
+            "tip": "这一页主角：这些动词后面接什么形式（to do / 动名词 / that 从句）是考试和改错的考点。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "① Complete the sentences with the correct form of these verbs.",
+          "hard": false,
+          "tr": "① 用这些动词的正确形式补全句子。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>Complete the sentences</b>（补全句子）",
+            "parts": [
+              [
+                "谓语",
+                "Complete —— 祈使句：使…完整、补全"
+              ],
+              [
+                "宾语",
+                "<code>the sentences</code> —— 这些句子"
+              ],
+              [
+                "方式状语",
+                "<code>with the correct form of these verbs</code> —— 用这些动词的正确形式"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "complete … with … 用…补全…",
+              "the correct form 正确形式"
+            ],
+            "tip": "注意 correct form：既要选对动词，又要变成正确的时态或形式（warned、apologised…）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "apologise blame explain invite offer",
+          "hard": false,
+          "tr": "apologise 道歉 · blame 责怪 · explain 解释 · invite 邀请 · offer 主动提出",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "动词方框（第 1 行）：<b>apologise blame explain invite offer</b>",
+            "parts": [
+              [
+                "动词",
+                "apologise —— 道歉（搭配 apologise to sb for sth）"
+              ],
+              [
+                "动词",
+                "blame —— 责怪（blame sb for sth）"
+              ],
+              [
+                "动词",
+                "explain —— 解释（explain sth to sb）"
+              ],
+              [
+                "动词",
+                "invite —— 邀请（invite sb to sth）"
+              ],
+              [
+                "动词",
+                "offer —— 主动提出（offer to do sth）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "方框里都是原形，填进句子时要变形式"
+            ],
+            "tip": "先扫一遍这些动词的固定搭配，做题时一句句对号入座。"
+          }
+        },
+        {
+          "s": "promise recommend warn",
+          "hard": false,
+          "tr": "promise 承诺 · recommend 推荐 · warn 警告",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "动词方框（第 2 行）：<b>promise recommend warn</b>",
+            "parts": [
+              [
+                "动词",
+                "promise —— 承诺（promise to do sth）"
+              ],
+              [
+                "动词",
+                "recommend —— 推荐、建议（recommend (that) sb (should) do sth）"
+              ],
+              [
+                "动词",
+                "warn —— 警告、提醒（warn sb not to do sth）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "再注意这三个的句型各不相同"
+            ],
+            "tip": "recommend 不接 to do（正是下一页改错题要考的）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "1 The water was very deep, so Jessica ……………… him not to jump into it.",
+          "hard": false,
+          "tr": "1 水很深，所以 Jessica 提醒他不要跳进去。",
+          "ana": {
+            "pat": [
+              "主系表",
+              "主谓双宾"
+            ],
+            "frame": "主干：<b>The water was very deep</b> + <b>so Jessica warned him …</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>The water</code> —— 水"
+              ],
+              [
+                "系动词",
+                "<code>was</code> —— 是（过去式）"
+              ],
+              [
+                "表语",
+                "<code>very deep</code> —— 很深的"
+              ],
+              [
+                "结果分句",
+                "<code>so Jessica warned him not to jump into it</code> —— 所以 Jessica 提醒他别跳进去"
+              ],
+              [
+                "谓语",
+                "<code>warned</code> —— 提醒（warn sb not to do sth）"
+              ],
+              [
+                "宾语",
+                "<code>him</code> —— 他"
+              ],
+              [
+                "宾补",
+                "<code>not to jump into it</code> —— 不要跳进去"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "so 连接结果",
+              "warn sb not to do sth 提醒某人别做某事"
+            ],
+            "tip": "看到 not to jump 的搭配就锁定 warn；水已经「很深」，用过去式 warned。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "2 I ……………… that you buy one of these hair dryers.",
+          "hard": false,
+          "tr": "2 我建议你买一台这种吹风机。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>I recommend that you buy one of these hair dryers</b>",
+            "parts": [
+              [
+                "主语",
+                "I —— 我"
+              ],
+              [
+                "谓语",
+                "<code>recommend</code> —— 推荐、建议"
+              ],
+              [
+                "宾语从句",
+                "<code>that you buy one of these hair dryers</code> —— 你买一台这种吹风机"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "recommend that sb (should) do sth：从句用原形，should 常省略",
+              "one of these 这些当中的一台"
+            ],
+            "tip": "recommend 后面接 that 从句（不接 you to do）；说的是现在的建议，用原形 recommend。"
+          }
+        },
+        {
+          "s": "I've got one myself and it's great!",
+          "hard": false,
+          "tr": "我自己就有一台，而且它特别好用！",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "并列句：<b>I've got one myself</b> + <b>it's great</b>",
+            "parts": [
+              [
+                "主语",
+                "I —— 我"
+              ],
+              [
+                "谓语",
+                "<code>'ve got</code> —— 有（英式口语）"
+              ],
+              [
+                "宾语",
+                "one —— 一台（代指吹风机）"
+              ],
+              [
+                "同位语",
+                "myself —— 我自己"
+              ],
+              [
+                "并列分句",
+                "<code>and it's great</code> —— 而且它很棒"
+              ],
+              [
+                "主语2",
+                "it —— 它"
+              ],
+              [
+                "系动词2",
+                "'s (is)"
+              ],
+              [
+                "表语2",
+                "great —— 很棒"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "I've got = I have（英式口语）",
+              "myself 强调『我本人』"
+            ],
+            "tip": "这句是给上一句找理由：亲测好用，所以推荐。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "3 Max ……………… to me for damaging my bike when he borrowed it.",
+          "hard": false,
+          "tr": "3 Max 因为弄坏了我借给他的自行车向我道了歉。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "主干：<b>Max apologised to me</b>（Max 向我道歉）",
+            "parts": [
+              [
+                "主语",
+                "<code>Max</code> —— Max"
+              ],
+              [
+                "谓语",
+                "<code>apologised</code> —— 道歉"
+              ],
+              [
+                "对象状语",
+                "<code>to me</code> —— 向我"
+              ],
+              [
+                "原因状语",
+                "<code>for damaging my bike</code> —— 因为弄坏了我的自行车"
+              ],
+              [
+                "时间状语从句",
+                "<code>when he borrowed it</code> —— 他借车的时候"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "apologise to sb for sth 为某事向某人道歉",
+              "damage 损坏"
+            ],
+            "tip": "to me for 是 apologise 的固定搭配；车已借、事已过 → apologised。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "4 The boys ……………… that they would be late because they had an exam after school.",
+          "hard": false,
+          "tr": "4 男孩们解释说他们会迟到，因为放学后有一场考试。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>The boys explained that …</b>（男孩们解释说…）",
+            "parts": [
+              [
+                "主语",
+                "<code>The boys</code> —— 男孩们"
+              ],
+              [
+                "谓语",
+                "<code>explained</code> —— 解释"
+              ],
+              [
+                "宾语从句",
+                "<code>that they would be late</code> —— 他们会迟到"
+              ],
+              [
+                "原因状语从句",
+                "<code>because they had an exam after school</code> —— 因为放学后有考试"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "explain that… 解释（后接从句，不能说 explain sb sth）",
+              "would be 过去将来时（从过去看将来）"
+            ],
+            "tip": "后面接 that 从句的『解释』是 explain；主句是过去的事 → explained。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "5 The shop ……………… to fix my phone by Tuesday, but it still wasn't ready by Friday.",
+          "hard": false,
+          "tr": "5 商店答应周二前修好我的手机，可到了周五还没修好。",
+          "ana": {
+            "pat": [
+              "主谓宾",
+              "主系表"
+            ],
+            "frame": "主干：<b>The shop promised to fix my phone</b> + <b>but it wasn't ready</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>The shop</code> —— 商店"
+              ],
+              [
+                "谓语",
+                "<code>promised</code> —— 答应、承诺"
+              ],
+              [
+                "宾语",
+                "<code>to fix my phone</code> —— 修好我的手机"
+              ],
+              [
+                "时间状语",
+                "<code>by Tuesday</code> —— 最晚周二"
+              ],
+              [
+                "转折分句",
+                "<code>but it still wasn't ready by Friday</code> —— 但周五还没好"
+              ],
+              [
+                "主语2",
+                "it —— 它（手机）"
+              ],
+              [
+                "系动词2",
+                "wasn't (was not)"
+              ],
+              [
+                "表语2",
+                "ready —— 修好的"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "promise to do sth 答应做某事",
+              "by + 时间：到…之前（期限）"
+            ],
+            "tip": "promise to do 固定搭配；已经发生 → promised。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "6 Amelie ……………… me to her birthday party, which was really kind of her.",
+          "hard": false,
+          "tr": "6 Amelie 邀请我去她的生日派对，她真是好心。",
+          "ana": {
+            "pat": [
+              "主谓双宾"
+            ],
+            "frame": "主干：<b>Amelie invited me to her birthday party</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Amelie</code> —— Amelie"
+              ],
+              [
+                "谓语",
+                "<code>invited</code> —— 邀请"
+              ],
+              [
+                "宾语",
+                "me —— 我"
+              ],
+              [
+                "目的状语",
+                "<code>to her birthday party</code> —— 去她的生日派对"
+              ],
+              [
+                "非限制性定语从句",
+                "<code>which was really kind of her</code> —— 她这么做真是好心"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "invite sb to sth 邀请某人参加…",
+              "which 指『邀请我』这件事"
+            ],
+            "tip": "invite sb to sth；派对发生在过去 → invited。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "7 My cousin Miguel ……………… to give me a lift into town in his new car.",
+          "hard": false,
+          "tr": "7 我表哥 Miguel 主动提出开他的新车捎我进城。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>My cousin Miguel offered to give me a lift</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>My cousin Miguel</code> —— 我表哥 Miguel"
+              ],
+              [
+                "谓语",
+                "<code>offered</code> —— 主动提出"
+              ],
+              [
+                "宾语",
+                "<code>to give me a lift</code> —— 捎我一程"
+              ],
+              [
+                "方式状语",
+                "<code>into town in his new car</code> —— 开着他的新车进城"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "offer to do sth 主动提出做某事",
+              "give sb a lift 捎某人一程"
+            ],
+            "tip": "offer to do 是『主动帮忙』；事情已发生 → offered。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "8 My mum ……………… me for the mess in the kitchen, but really it was my sister's fault.",
+          "hard": false,
+          "tr": "8 妈妈因为厨房一团糟责怪我，可其实那是妹妹的错。",
+          "ana": {
+            "pat": [
+              "主谓",
+              "主系表"
+            ],
+            "frame": "主干：<b>My mum blamed me for the mess</b> + <b>but it was my sister's fault</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>My mum</code> —— 我妈妈"
+              ],
+              [
+                "谓语",
+                "<code>blamed</code> —— 责怪"
+              ],
+              [
+                "宾语",
+                "me —— 我"
+              ],
+              [
+                "原因状语",
+                "<code>for the mess in the kitchen</code> —— 因为厨房的脏乱"
+              ],
+              [
+                "转折分句",
+                "<code>but really it was my sister's fault</code> —— 但真正错在妹妹"
+              ],
+              [
+                "主语2",
+                "it"
+              ],
+              [
+                "系动词2",
+                "was"
+              ],
+              [
+                "表语2",
+                "<code>my sister's fault</code> —— 妹妹的错"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "blame sb for sth 为某事责怪某人",
+              "fault 过错"
+            ],
+            "tip": "blame sb for sth；事情已经发生 → blamed。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "B1 Preliminary candidates often make mistakes with reporting verbs.",
+          "hard": false,
+          "tr": "B1 Preliminary 的考生经常在转述动词上出错。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>candidates make mistakes with reporting verbs</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>B1 Preliminary candidates</code> —— B1 Preliminary 的考生"
+              ],
+              [
+                "状语",
+                "often —— 经常"
+              ],
+              [
+                "谓语",
+                "make —— 犯（make mistakes）"
+              ],
+              [
+                "宾语",
+                "<code>mistakes</code> —— 错误"
+              ],
+              [
+                "范围状语",
+                "<code>with reporting verbs</code> —— 在转述动词上"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "make mistakes with sth 在某事上犯错",
+              "B1 Preliminary 剑桥英语 B1 级别考试（即 PET）"
+            ],
+            "tip": "官方提示：这一页的搭配（suggest / explain / recommend…）最容易错，下一页专门练改错。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "② Correct the grammar error in each sentence, without changing the verb given.",
+          "hard": false,
+          "tr": "② 改正每句里的语法错误，但不能更换给出的动词。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>Correct the grammar error</b>（改正语法错误）",
+            "parts": [
+              [
+                "谓语",
+                "Correct —— 祈使句：改正"
+              ],
+              [
+                "宾语",
+                "<code>the grammar error</code> —— 语法错误"
+              ],
+              [
+                "范围状语",
+                "<code>in each sentence</code> —— 在每个句子里"
+              ],
+              [
+                "条件状语",
+                "<code>without changing the verb given</code> —— 不能换掉给出的动词"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "correct 改正",
+              "without doing 而不做某事",
+              "the verb given 给出的动词（后置定语）"
+            ],
+            "tip": "只改「动词+后面搭配」那一段：动词本身留着，换掉它接错的结构。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "1 My friend suggested to go to the park to play football.",
+          "hard": false,
+          "tr": "1 我朋友建议去公园踢足球。",
+          "ul": "suggested to go",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>My friend suggested going to the park</b>（改后的正确句）",
+            "parts": [
+              [
+                "主语",
+                "<code>My friend</code> —— 我朋友"
+              ],
+              [
+                "谓语",
+                "<code>suggested</code> —— 建议（suggest doing / suggest that…）"
+              ],
+              [
+                "宾语",
+                "<code>going to the park</code> —— 去公园（改后：动名词）"
+              ],
+              [
+                "目的状语",
+                "<code>to play football</code> —— 去踢足球"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "suggest doing sth（不接 suggest to do）",
+              "也可以改成 suggested (that) we (should) go"
+            ],
+            "tip": "把 suggested to go 改成 suggested going；或者用 that 从句：suggested (that) we (should) go。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "2 Zara explained the teacher that she had been off school because of illness.",
+          "hard": false,
+          "tr": "2 Zara 向老师解释说，她因为生病没来上学。",
+          "ul": "explained the teacher",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>Zara explained to the teacher that …</b>（改后：explain 后先接 to sb）",
+            "parts": [
+              [
+                "主语",
+                "<code>Zara</code> —— Zara"
+              ],
+              [
+                "谓语",
+                "<code>explained</code> —— 解释"
+              ],
+              [
+                "对象状语",
+                "<code>to the teacher</code> —— 向老师（改后补上的 to）"
+              ],
+              [
+                "宾语从句",
+                "<code>that she had been off school</code> —— 她没来上学"
+              ],
+              [
+                "原因状语",
+                "<code>because of illness</code> —— 因为生病"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "explain sth to sb（不能 explain sb sth）",
+              "be off school 没上学"
+            ],
+            "tip": "在 explained 后加 to：explained to the teacher。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "3 We recommend you to wash this item of clothing in warm water.",
+          "hard": false,
+          "tr": "3 我们建议你用温水洗这件衣服。",
+          "ul": "recommend you to wash",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>We recommend (that) you wash this item of clothing</b>",
+            "parts": [
+              [
+                "主语",
+                "We —— 我们"
+              ],
+              [
+                "谓语",
+                "<code>recommend</code> —— 建议"
+              ],
+              [
+                "宾语从句",
+                "<code>(that) you wash this item of clothing</code> —— 你洗这件衣服（从句用原形 wash）"
+              ],
+              [
+                "方式状语",
+                "<code>in warm water</code> —— 用温水"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "recommend (that) sb (should) do sth（不接 recommend sb to do）",
+              "item of clothing 一件衣服"
+            ],
+            "tip": "去掉 to，把 wash 变成从句谓语：recommend (that) you wash。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "4 The thief refused saying where he had hidden the stolen diamonds.",
+          "hard": false,
+          "tr": "4 小偷拒绝说出他把偷来的钻石藏在了哪里。",
+          "ul": "refused saying",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>The thief refused to say where …</b>（改后：refuse 后接 to do）",
+            "parts": [
+              [
+                "主语",
+                "<code>The thief</code> —— 小偷"
+              ],
+              [
+                "谓语",
+                "<code>refused</code> —— 拒绝"
+              ],
+              [
+                "宾语",
+                "<code>to say</code> —— 说出（改后：不定式）"
+              ],
+              [
+                "宾语从句",
+                "<code>where he had hidden the stolen diamonds</code> —— 他把偷来的钻石藏在了哪里"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "refuse to do sth（不接动名词）",
+              "过去完成时 had hidden：藏发生在『拒绝说』之前"
+            ],
+            "tip": "把 saying 改成 to say：refused to say。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "5 My dad reminded me I check the tyres on my bike before I went out.",
+          "hard": false,
+          "tr": "5 爸爸提醒我出门前检查自行车轮胎。",
+          "ul": "reminded me I check",
+          "ana": {
+            "pat": [
+              "主谓双宾"
+            ],
+            "frame": "主干：<b>My dad reminded me to check the tyres</b>（改后：remind sb to do）",
+            "parts": [
+              [
+                "主语",
+                "<code>My dad</code> —— 我爸爸"
+              ],
+              [
+                "谓语",
+                "<code>reminded</code> —— 提醒"
+              ],
+              [
+                "宾语",
+                "me —— 我"
+              ],
+              [
+                "宾语补足语",
+                "<code>to check the tyres</code> —— 检查轮胎（改后：不定式）"
+              ],
+              [
+                "时间状语从句",
+                "<code>before I went out</code> —— 在我出门之前"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "remind sb to do sth（也可以 reminded me that I should check）",
+              "tyre 轮胎（英式拼法）"
+            ],
+            "tip": "改成 reminded me to check；或用 that 从句：reminded me that I should check。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "6 Aisha offered helping me with my maths homework.",
+          "hard": false,
+          "tr": "6 Aisha 提出帮我做数学作业。",
+          "ul": "offered helping me",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>Aisha offered to help me</b>（改后：offer 后接 to do）",
+            "parts": [
+              [
+                "主语",
+                "<code>Aisha</code> —— Aisha"
+              ],
+              [
+                "谓语",
+                "<code>offered</code> —— 主动提出"
+              ],
+              [
+                "宾语",
+                "<code>to help me</code> —— 帮我"
+              ],
+              [
+                "方式状语",
+                "<code>with my maths homework</code> —— 做数学作业"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "offer to do sth（不接动名词）",
+              "help sb with sth 帮某人做某事"
+            ],
+            "tip": "把 helping 改成 to help：offered to help me。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "7 Our literature teacher encouraged we read more books at home.",
+          "hard": false,
+          "tr": "7 文学老师鼓励我们多在家读书。",
+          "ul": "encouraged we read",
+          "ana": {
+            "pat": [
+              "主谓双宾"
+            ],
+            "frame": "主干：<b>Our literature teacher encouraged us to read</b>（改后：encourage sb to do）",
+            "parts": [
+              [
+                "主语",
+                "<code>Our literature teacher</code> —— 我们的文学老师"
+              ],
+              [
+                "谓语",
+                "<code>encouraged</code> —— 鼓励"
+              ],
+              [
+                "宾语",
+                "<code>us</code> —— 我们（改后：宾格 us）"
+              ],
+              [
+                "宾语补足语",
+                "<code>to read more books</code> —— 多读书（改后：不定式）"
+              ],
+              [
+                "地点状语",
+                "<code>at home</code> —— 在家"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "encourage sb to do sth 鼓励某人做某事",
+              "we 是主格，做宾语要变 us"
+            ],
+            "tip": "把 we read 改成 us to read：encouraged us to read。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "8 I tried to persuade my parents letting me stay out late, but they said 'no'.",
+          "hard": false,
+          "tr": "8 我试图说服爸妈让我在外面待晚些，可他们说了『不行』。",
+          "ul": "persuade my parents letting me",
+          "ana": {
+            "pat": [
+              "主谓双宾",
+              "主谓宾"
+            ],
+            "frame": "主干：<b>I tried to persuade my parents to let me stay out late</b>",
+            "parts": [
+              [
+                "主语",
+                "I —— 我"
+              ],
+              [
+                "谓语",
+                "<code>tried</code> —— 试图（try to do）"
+              ],
+              [
+                "宾语",
+                "<code>to persuade my parents</code> —— 说服我爸妈"
+              ],
+              [
+                "宾语补足语",
+                "<code>to let me stay out late</code> —— 让我在外面待晚些（改后：不定式）"
+              ],
+              [
+                "转折分句",
+                "<code>but they said 'no'</code> —— 但他们说不行"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "persuade sb to do sth 说服某人做某事",
+              "let sb do sth 让某人做某事（不加 to）"
+            ],
+            "tip": "改成 persuade my parents to let me：persuade 的宾语后面接 to do。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "FOCUS: UNDERSTANDING PURPOSE IN EXAM QUESTIONS",
+          "hard": false,
+          "tr": "重点：看懂考题（句子）的意图。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>FOCUS: UNDERSTANDING PURPOSE IN EXAM QUESTIONS</b>（重点：理解考题的意图）",
+            "parts": [
+              [
+                "标签",
+                "FOCUS: —— 本页重点"
+              ],
+              [
+                "内容",
+                "understanding purpose in exam questions —— 理解考题里（说话人）的意图"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "purpose 意图、目的",
+              "in exam questions 在考题中"
+            ],
+            "tip": "考试题常问『某人说这句话的目的』——第 ③ 题专门练这个。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "③ Look again at the corrected sentences in Exercise 2.",
+          "hard": false,
+          "tr": "③ 再看一遍第 2 题改好的句子。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>Look again at the corrected sentences</b>（再看一遍改好的句子）",
+            "parts": [
+              [
+                "谓语",
+                "<code>Look again at</code> —— 再看一遍"
+              ],
+              [
+                "宾语",
+                "<code>the corrected sentences</code> —— 改好后的句子"
+              ],
+              [
+                "范围状语",
+                "<code>in Exercise 2</code> —— 在第 2 题里"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "corrected 改好了的（过去分词作定语）",
+              "look at 看"
+            ],
+            "tip": "先把第 2 题的八个句子改对，再判断每句『说话人想干什么』。"
+          }
+        },
+        {
+          "s": "What is the subject's purpose in each of (1–8)?",
+          "hard": false,
+          "tr": "（1–8）中每句主语（说话人）的意图是什么？",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>What is the subject's purpose</b>（主语的意图是什么）",
+            "parts": [
+              [
+                "主语",
+                "<code>What</code> —— 什么（疑问词作主语）"
+              ],
+              [
+                "系动词",
+                "is —— 是"
+              ],
+              [
+                "表语",
+                "<code>the subject's purpose</code> —— 句子的主语（=说话人）的意图"
+              ],
+              [
+                "范围状语",
+                "<code>in each of (1–8)</code> —— 在（1–8）每一句里"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "subject 主语；（这里指）说话的人",
+              "purpose 意图、目的"
+            ],
+            "tip": "所谓 purpose，就是『这句话是拿来干嘛的』：提建议？提醒？拒绝？"
+          }
+        },
+        {
+          "s": "Example  1 to make a suggestion",
+          "hard": false,
+          "tr": "示例  1 提出建议",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "示例行：<b>1 to make a suggestion</b>（第 1 句：提出建议）",
+            "parts": [
+              [
+                "例句",
+                "Example —— 示例"
+              ],
+              [
+                "答案",
+                "1 to make a suggestion —— 第 1 句的意图：提出建议"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "make a suggestion 提建议（suggest 的名词形式）"
+            ],
+            "tip": "第 1 句（My friend suggested going…）是『提建议』—— 其余 7 句照这个格式答。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "a to give an explanation",
+          "hard": false,
+          "tr": "a 作出解释",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "意图清单行：<b>to give an explanation</b>（作出解释）",
+            "parts": [
+              [
+                "选项",
+                "a —— 清单第 a 项"
+              ],
+              [
+                "内容",
+                "to give an explanation —— 作出解释（give an explanation）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "explanation 解释（explain 的名词）"
+            ],
+            "tip": "清单里的 8 个意图要分别配到第 2 题的 8 个句子上。"
+          }
+        },
+        {
+          "s": "b to encourage others to do something",
+          "hard": false,
+          "tr": "b 鼓励别人做某事",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "意图清单行：<b>to encourage others to do something</b>（鼓励别人做某事）",
+            "parts": [
+              [
+                "选项",
+                "b —— 清单第 b 项"
+              ],
+              [
+                "内容",
+                "to encourage others to do something —— 鼓励别人做某事"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "encourage sb to do sth 鼓励某人做某事"
+            ],
+            "tip": "看到 For example 里做建议的句型，先想想其余每句的『动作目的』。"
+          }
+        },
+        {
+          "s": "c to make a suggestion",
+          "hard": false,
+          "tr": "c 提出建议",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "意图清单行：<b>to make a suggestion</b>（提出建议）",
+            "parts": [
+              [
+                "选项",
+                "c —— 清单第 c 项"
+              ],
+              [
+                "内容",
+                "to make a suggestion —— 提出建议"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "suggestion 建议（suggest 的名词）"
+            ],
+            "tip": "第 1 句就是这一类（例句已经给出），其余句子不要重复选它。"
+          }
+        },
+        {
+          "s": "d to refuse to do something",
+          "hard": false,
+          "tr": "d 拒绝做某事",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "意图清单行：<b>to refuse to do something</b>（拒绝做某事）",
+            "parts": [
+              [
+                "选项",
+                "d —— 清单第 d 项"
+              ],
+              [
+                "内容",
+                "to refuse to do something —— 拒绝做某事"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "refuse to do sth 拒绝做某事"
+            ],
+            "tip": "把『我不干』类句子（refuse）配到这一项。"
+          }
+        },
+        {
+          "s": "e to offer to do something for someone",
+          "hard": false,
+          "tr": "e 主动提出为某人做某事",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "意图清单行：<b>to offer to do something for someone</b>（主动提出为某人做某事）",
+            "parts": [
+              [
+                "选项",
+                "e —— 清单第 e 项"
+              ],
+              [
+                "内容",
+                "to offer to do something for someone —— 主动提出为某人做某事"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "offer to do sth for sb 主动为某人做某事"
+            ],
+            "tip": "offer 的句子配这一项 —— 注意它和 encourage 的『对别人』不一样。"
+          }
+        },
+        {
+          "s": "f to remind someone to do something",
+          "hard": false,
+          "tr": "f 提醒某人做某事",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "意图清单行：<b>to remind someone to do something</b>（提醒某人做某事）",
+            "parts": [
+              [
+                "选项",
+                "f —— 清单第 f 项"
+              ],
+              [
+                "内容",
+                "to remind someone to do something —— 提醒某人做某事"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "remind sb to do sth 提醒某人做某事"
+            ],
+            "tip": "remind 的句子配这一项。"
+          }
+        },
+        {
+          "s": "g to persuade someone to do something",
+          "hard": false,
+          "tr": "g 说服某人做某事",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "意图清单行：<b>to persuade someone to do something</b>（说服某人做某事）",
+            "parts": [
+              [
+                "选项",
+                "g —— 清单第 g 项"
+              ],
+              [
+                "内容",
+                "to persuade someone to do something —— 说服某人做某事"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "persuade sb to do sth 说服某人做某事"
+            ],
+            "tip": "persuade 的句子配这一项。"
+          }
+        },
+        {
+          "s": "h to make a recommendation",
+          "hard": false,
+          "tr": "h 提出推荐",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "意图清单行：<b>to make a recommendation</b>（提出推荐）",
+            "parts": [
+              [
+                "选项",
+                "h —— 清单第 h 项"
+              ],
+              [
+                "内容",
+                "to make a recommendation —— 提出推荐"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "recommendation 推荐（recommend 的名词）"
+            ],
+            "tip": "recommend 的句子配『推荐』这一项 —— 别和『建议』（suggestion）混。"
+          }
+        }
+      ],
+      [],
+      [
+        {
+          "s": "FOCUS: UNDERSTANDING GIST",
+          "hard": false,
+          "tr": "重点：抓住大意。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>FOCUS: UNDERSTANDING GIST</b>（重点：抓住大意）",
+            "parts": [
+              [
+                "标签",
+                "FOCUS: —— 本页重点"
+              ],
+              [
+                "内容",
+                "understanding gist —— 理解（文章）大意"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "gist 主旨、大意"
+            ],
+            "tip": "先快读一遍、抓大意，再回答细节题 —— 这就是考场上的第一条策略。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "④ Quickly read the paragraph below and answer the questions.",
+          "hard": false,
+          "tr": "④ 快速读下面这段文字，然后回答问题。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>read the paragraph and answer the questions</b>",
+            "parts": [
+              [
+                "状语",
+                "Quickly —— 快速地"
+              ],
+              [
+                "谓语1",
+                "<code>read</code> —— 读"
+              ],
+              [
+                "宾语1",
+                "<code>the paragraph below</code> —— 下面这段"
+              ],
+              [
+                "谓语2",
+                "<code>answer</code> —— 回答"
+              ],
+              [
+                "宾语2",
+                "<code>the questions</code> —— 这些问题"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "quickly read 快速浏览",
+              "below 下面的（后置定语）"
+            ],
+            "tip": "别逐字读 —— 先扫大意，再做题。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "The four of us came down the mountain later than we had intended, but it had been well worth spending some time there, admiring the fantastic views from the peak.",
+          "hard": false,
+          "tr": "我们四个人下山比计划晚了，但之前在顶峰欣赏壮丽的景色，真值。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "主干：<b>The four of us came down the mountain later than we had intended</b> + <b>but it had been well worth spending time there</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>The four of us</code> —— 我们四个人"
+              ],
+              [
+                "谓语",
+                "<code>came down</code> —— 下来"
+              ],
+              [
+                "宾语",
+                "<code>the mountain</code> —— 山"
+              ],
+              [
+                "比较状语从句",
+                "<code>later than we had intended</code> —— 比我们原计划的晚"
+              ],
+              [
+                "转折分句",
+                "<code>but it had been well worth spending some time there</code> —— 但在那里花些时间非常值"
+              ],
+              [
+                "形式主语",
+                "it —— 代替后面的 spending…"
+              ],
+              [
+                "表语",
+                "<code>well worth</code> —— 很值得"
+              ],
+              [
+                "真正主语",
+                "<code>spending some time there, admiring the fantastic views from the peak</code> —— 在那里待一会儿、欣赏顶峰的景色"
+              ]
+            ],
+            "clauses": [
+              "比较状语从句 later than we had intended",
+              "非谓语 admiring… 作伴随状语"
+            ],
+            "gram": [
+              "come down the mountain 下山",
+              "than we had intended 比我们本打算的（比较从句）",
+              "be worth doing sth 值得做某事"
+            ],
+            "tip": "虽然下山晚了（later than we had intended），但作者觉得值（well worth）—— 这是态度信号。"
+          }
+        },
+        {
+          "s": "The track that led to the village far below was steep and icy, but it was the only way down and we had to get there before dark.",
+          "hard": false,
+          "tr": "通往山下村庄的小路又陡又滑，但那是唯一的下山路，我们必须在天黑前赶到。",
+          "ana": {
+            "pat": [
+              "主系表",
+              "主谓"
+            ],
+            "frame": "主干：<b>The track … was steep and icy</b> + <b>but it was the only way down</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>The track</code> —— 小路"
+              ],
+              [
+                "定语从句",
+                "<code>that led to the village far below</code> —— 通往山下远处村庄的"
+              ],
+              [
+                "系动词",
+                "was —— 是"
+              ],
+              [
+                "表语",
+                "<code>steep and icy</code> —— 又陡又滑"
+              ],
+              [
+                "转折分句",
+                "<code>but it was the only way down</code> —— 但它是唯一的下山路"
+              ],
+              [
+                "主语2",
+                "it"
+              ],
+              [
+                "系动词2",
+                "was"
+              ],
+              [
+                "表语2",
+                "<code>the only way down</code> —— 唯一的下山路"
+              ]
+            ],
+            "clauses": [
+              "定语从句 that led to the village far below"
+            ],
+            "gram": [
+              "lead to 通向",
+              "steep and icy 又陡又滑（冰面）",
+              "the only way down 唯一的下山路"
+            ],
+            "tip": "「唯一的路 + 天黑前赶到」是后面只能继续走的原因。"
+          }
+        },
+        {
+          "s": "Then suddenly it started to snow, and it became more difficult to follow the path.",
+          "hard": false,
+          "tr": "然后突然下起了雪，沿着小路走变得越发困难。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "主干：<b>it started to snow</b> + <b>it became more difficult to follow the path</b>",
+            "parts": [
+              [
+                "时间状语",
+                "Then suddenly —— 然后突然"
+              ],
+              [
+                "主语",
+                "it —— 天气（形式主语）"
+              ],
+              [
+                "谓语",
+                "<code>started</code> —— 开始"
+              ],
+              [
+                "宾语",
+                "<code>to snow</code> —— 下雪（开始下雪）"
+              ],
+              [
+                "并列分句",
+                "<code>and it became more difficult to follow the path</code> —— 跟着小路走变得更困难"
+              ],
+              [
+                "形式主语",
+                "it —— 代替 to follow the path"
+              ],
+              [
+                "系动词",
+                "became —— 变得"
+              ],
+              [
+                "表语",
+                "<code>more difficult</code> —— 更困难"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "it started to snow 天气方面的 it（下雪了）",
+              "it becomes difficult to do sth 做某事变得困难"
+            ],
+            "tip": "下雪 + 路更难走 —— 环境变糟的信号，为后面『后悔』埋伏笔。"
+          }
+        },
+        {
+          "s": "I hadn't mentioned our plans to local people before we set out that morning, but when I realised my phone didn't work up there I suddenly wished I had, just in case.",
+          "hard": false,
+          "tr": "那天早上出发前，我没有把我们的计划告诉当地人；当发现手机在山上没信号时，我突然希望自己当初说了，以防万一。",
+          "ana": {
+            "pat": [
+              "主谓宾",
+              "主谓"
+            ],
+            "frame": "主干：<b>I hadn't mentioned our plans to local people</b> + <b>but … I suddenly wished I had</b>",
+            "parts": [
+              [
+                "主语",
+                "I —— 我"
+              ],
+              [
+                "谓语",
+                "<code>hadn't mentioned</code> —— 没有提到（过去完成时）"
+              ],
+              [
+                "宾语",
+                "<code>our plans</code> —— 我们的计划"
+              ],
+              [
+                "对象状语",
+                "<code>to local people</code> —— 给当地人"
+              ],
+              [
+                "时间状语从句",
+                "<code>before we set out that morning</code> —— 那天早上出发前"
+              ],
+              [
+                "转折分句",
+                "<code>but … I suddenly wished I had</code> —— 但…我突然希望（当初说过）"
+              ],
+              [
+                "时间状语从句2",
+                "<code>when I realised my phone didn't work up there</code> —— 当我意识到手机在山上不能用时"
+              ],
+              [
+                "宾语从句",
+                "<code>I had</code> —— 我说过（代替 had mentioned，省略式）"
+              ]
+            ],
+            "clauses": [
+              "宾语从句 my phone didn't work up there",
+              "省略式 I had"
+            ],
+            "gram": [
+              "hadn't mentioned：过去完成时（出发前更早的动作）",
+              "set out 出发",
+              "wished I had = wished I had mentioned them",
+              "just in case 以防万一"
+            ],
+            "tip": "本段最后一句点出主旨：没能提前告诉别人 → 作者觉得自己犯了错（这就是第 4 题的答案线索）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "1 What kind of text is it from?",
+          "hard": false,
+          "tr": "1 这段文字出自哪种文本？",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>What kind of text is it from</b>（它出自什么类型的文本）",
+            "parts": [
+              [
+                "主语",
+                "<code>What kind of text</code> —— 哪种文本"
+              ],
+              [
+                "系动词",
+                "is —— 是"
+              ],
+              [
+                "表语",
+                "<code>it from</code> —— 它出自（from）—— 表语即来源"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "What kind of… 什么类型的…",
+              "be from 出自"
+            ],
+            "tip": "诀窍：用第一人称讲故事、有心理活动（I was so excited）→ 是 story，不是广告或旅游指南。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "2 What was the speaker doing?",
+          "hard": false,
+          "tr": "2 说话人当时在做什么？",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>What was the speaker doing</b>（说话人当时在做什么）",
+            "parts": [
+              [
+                "主语",
+                "<code>What</code> —— 什么"
+              ],
+              [
+                "助动词 + 谓语",
+                "<code>was … doing</code> —— 正在做"
+              ],
+              [
+                "主语2",
+                "<code>the speaker</code> —— 说话人（本文作者）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "过去进行时 What was … doing 当时正在做什么"
+            ],
+            "tip": "首句 The four of us came down the mountain 就告诉你：正在下山（climbing down a mountain）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "3 How did she feel?",
+          "hard": false,
+          "tr": "3 她当时感觉如何？",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>How did she feel</b>（她感觉怎么样）",
+            "parts": [
+              [
+                "疑问词",
+                "How —— 怎么样"
+              ],
+              [
+                "助动词 + 谓语",
+                "<code>did … feel</code> —— 感觉"
+              ],
+              [
+                "主语",
+                "she —— 她"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "How did she feel? 她感觉如何（提问感受）"
+            ],
+            "tip": "线索句：it became more difficult to follow the path + wished I had —— 有点担心（a little worried）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "4 What is the speaker's main purpose in the paragraph?",
+          "hard": false,
+          "tr": "4 说话人写这段话的主要目的是什么？",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>What is the speaker's main purpose</b>（说话人的主要目的是什么）",
+            "parts": [
+              [
+                "主语",
+                "<code>What</code> —— 什么"
+              ],
+              [
+                "系动词",
+                "is —— 是"
+              ],
+              [
+                "表语",
+                "<code>the speaker's main purpose in the paragraph</code> —— 说话人在这一段里的主要目的"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "main purpose 主要目的",
+              "in the paragraph 在这一段文字里"
+            ],
+            "tip": "最后一句 wished I had, just in case 表明懊悔 → 目的是承认自己疏忽（to admit she had made a mistake）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "FOCUS: UNDERSTANDING MULTIPLE-CHOICE QUESTIONS",
+          "hard": false,
+          "tr": "重点：看懂四选一题目。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>FOCUS: UNDERSTANDING MULTIPLE-CHOICE QUESTIONS</b>（重点：理解四选一题）",
+            "parts": [
+              [
+                "标签",
+                "FOCUS: —— 本页重点"
+              ],
+              [
+                "内容",
+                "understanding multiple-choice questions —— 看懂四选一的题目"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "multiple-choice question 四选一（选择题）"
+            ],
+            "tip": "这一页教你拆解一道四选一：先看动词、再找原文、最后定答案。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "⑤ Look at the multiple-choice question below about the paragraph in Exercise 4.",
+          "hard": false,
+          "tr": "⑤ 看下面这道关于第 4 题段落的选择题。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>Look at the multiple-choice question below</b>（看下面这道选择题）",
+            "parts": [
+              [
+                "谓语",
+                "<code>Look at</code> —— 看"
+              ],
+              [
+                "宾语",
+                "<code>the multiple-choice question below</code> —— 下面这道四选一的题"
+              ],
+              [
+                "范围状语",
+                "<code>about the paragraph in Exercise 4</code> —— 关于第 4 题那段文字的"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "look at 看",
+              "about… 关于…的"
+            ],
+            "tip": "先别急着选 —— 教材让你按 1–3 的顺序拆题。"
+          }
+        },
+        {
+          "s": "Answer questions 1–3.",
+          "hard": false,
+          "tr": "然后回答 1–3 的问题。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>Answer questions 1–3</b>（回答第 1–3 问）",
+            "parts": [
+              [
+                "谓语",
+                "Answer —— 回答"
+              ],
+              [
+                "宾语",
+                "<code>questions 1–3</code> —— 第 1 到第 3 个问题"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "answer questions 回答（不是 reply questions）"
+            ],
+            "tip": "这三个问题就是考场上拆题的标准动作。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "1 What reporting verb does it use?",
+          "hard": false,
+          "tr": "1 它用了哪个转述动词？",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>What reporting verb does it use</b>（它用了哪个转述动词）",
+            "parts": [
+              [
+                "主语",
+                "<code>What reporting verb</code> —— 哪个转述动词"
+              ],
+              [
+                "谓语",
+                "<code>does … use</code> —— 使用（助动词提前）"
+              ],
+              [
+                "宾语",
+                "it —— 它（那道题）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "reporting verb 转述动词"
+            ],
+            "tip": "答案：regretted（regret 后悔 —— 转述『后悔做过某事』这个态度的动词）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "2 Where should you look in the paragraph for the answer?",
+          "hard": false,
+          "tr": "2 应该在段落里的哪里找答案？",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "主干：<b>Where should you look</b>（你应该看哪里）",
+            "parts": [
+              [
+                "疑问词",
+                "Where —— 哪里"
+              ],
+              [
+                "谓语",
+                "<code>should … look</code> —— 应该看"
+              ],
+              [
+                "主语",
+                "you —— 你"
+              ],
+              [
+                "范围状语",
+                "<code>in the paragraph</code> —— 在段落里"
+              ],
+              [
+                "目的状语",
+                "<code>for the answer</code> —— 找答案"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "look for 寻找",
+              "should 应该"
+            ],
+            "tip": "答案：从 it started to snow 那一句往后看 —— 下雪之后的动作和感受才是考点区。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "3 Which is the best answer, A, B, C or D?",
+          "hard": false,
+          "tr": "3 哪个是最好的答案，A、B、C 还是 D？",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>Which is the best answer</b>（哪个是最好的答案）",
+            "parts": [
+              [
+                "主语",
+                "<code>Which</code> —— 哪一个"
+              ],
+              [
+                "系动词",
+                "is —— 是"
+              ],
+              [
+                "表语",
+                "<code>the best answer, A, B, C or D</code> —— 最好的答案（A/B/C/D 里挑）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "which 哪一个（在给定范围里选）"
+            ],
+            "tip": "答案：B（going climbing without telling anyone else）—— 对应 wished I had, just in case。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "When the snow began to fall, the speaker regretted",
+          "hard": false,
+          "tr": "当雪开始下时，说话人后悔……",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>the speaker regretted …</b>（说话人后悔…）",
+            "parts": [
+              [
+                "时间状语从句",
+                "<code>When the snow began to fall</code> —— 当雪开始下的时候"
+              ],
+              [
+                "主语",
+                "<code>the speaker</code> —— 说话人"
+              ],
+              [
+                "谓语",
+                "<code>regretted</code> —— 后悔（regret doing sth）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "regret doing sth 后悔做过某事",
+              "regret to do sth 遗憾要去做某事（别混）"
+            ],
+            "tip": "regret 后面缺的是『后悔的事』：四个选项都是 doing 短语，选与原文 wished I had 呼应的那个。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "⑥ Work in pairs. Match the incorrect answers (A, B, C or D) with the parts of the text that show they are wrong.",
+          "hard": false,
+          "tr": "⑥ 两人一组：把错误选项（A、B、C 或 D）和原文中能证明它们错的地方配对。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>Work in pairs. Match …</b>（两人一组，做配对）",
+            "parts": [
+              [
+                "谓语1",
+                "<code>Work in pairs</code> —— 两人一组完成"
+              ],
+              [
+                "谓语2",
+                "<code>Match</code> —— 配对"
+              ],
+              [
+                "宾语",
+                "<code>the incorrect answers (A, B, C or D)</code> —— 错误答案"
+              ],
+              [
+                "对象状语",
+                "<code>with the parts of the text</code> —— 与原文的相应部分"
+              ],
+              [
+                "定语从句",
+                "<code>that show they are wrong</code> —— 能证明它们错的"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "in pairs 两人一组",
+              "match A with B 把 A 和 B 配对",
+              "incorrect 错误（反义 correct）"
+            ],
+            "tip": "口语活动题：每个错项都能在原文里找到『对不上』的证据 —— 这正是排除法的练法。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Exam Practice Test 1 · Reading Part 3",
+          "hard": false,
+          "tr": "模拟考试 1 · 阅读第 3 部分。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题行：<b>Exam Practice Test 1 · Reading Part 3</b>（模拟考试 1 · 阅读第 3 部分）",
+            "parts": [
+              [
+                "标题",
+                "Exam Practice Test 1 —— 模拟考试 1"
+              ],
+              [
+                "标题",
+                "Reading Part 3 —— 阅读第 3 部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式省略句"
+            ],
+            "tip": "从这里开始是正式模拟题：先快速浏览全文，再做题 —— 台湾小贴士说的就是这个。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Questions 11–15",
+          "hard": false,
+          "tr": "第 11–15 题。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>Questions 11–15</b>（第 11 至 15 题）",
+            "parts": [
+              [
+                "标题",
+                "Questions 11–15 —— 本部分题目范围"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "Questions + 数字区间 题号范围"
+            ],
+            "tip": "五道题都是四选一，围绕文章里人物的态度和观点出题。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "For each question, choose the correct answer.",
+          "hard": false,
+          "tr": "每题选出一个正确答案。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>choose the correct answer</b>（选出正确答案）",
+            "parts": [
+              [
+                "范围状语",
+                "<code>For each question</code> —— 对每一道题"
+              ],
+              [
+                "谓语",
+                "choose —— 祈使句：选"
+              ],
+              [
+                "宾语",
+                "<code>the correct answer</code> —— 正确的答案"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "for each question 每一题（都要）"
+            ],
+            "tip": "逐题作答；拿不准的先排除明显与原文矛盾的选项。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Our Great Ocean Road adventure",
+          "hard": false,
+          "tr": "我们的『大洋路』之旅",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "文章标题：<b>Our Great Ocean Road adventure</b>（我们的大洋路探险）",
+            "parts": [
+              [
+                "标题",
+                "Our Great Ocean Road adventure —— 标题（偏正短语，无动词）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "Great Ocean Road 大洋路（澳大利亚著名海岸公路）",
+              "adventure 冒险（经历）"
+            ],
+            "tip": "标题没有动词 —— 报纸杂志式标题，读的时候先记住它是一篇『游记/亲身经历』。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "by Donna Waverley",
+          "hard": false,
+          "tr": "作者：Donna Waverley",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "署名行：<b>by Donna Waverley</b>（作者 Donna Waverley）",
+            "parts": [
+              [
+                "署名",
+                "by —— 作者是"
+              ],
+              [
+                "人名",
+                "Donna Waverley —— 作者名"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "by + 人名 表示作者"
+            ],
+            "tip": "记住作者名 Donna —— 题目里的 Donna's Dad、Donna says 都指这篇文章的作者。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "My family and I recently went to Australia, to see my grandparents.",
+          "hard": false,
+          "tr": "我和家人最近去了澳大利亚，去看望我的祖父母。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "主干：<b>My family and I went to Australia</b>（我和家人去了澳大利亚）",
+            "parts": [
+              [
+                "主语",
+                "<code>My family and I</code> —— 我和家人"
+              ],
+              [
+                "时间状语",
+                "recently —— 最近"
+              ],
+              [
+                "谓语",
+                "<code>went</code> —— 去（go 的过去式）"
+              ],
+              [
+                "地点状语",
+                "<code>to Australia</code> —— 去澳大利亚"
+              ],
+              [
+                "目的状语",
+                "<code>to see my grandparents</code> —— 去看望祖父母"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "recently 最近（配合过去时）",
+              "go to + 地点 去某地"
+            ],
+            "tip": "开篇交代背景：去澳大利亚看祖父母。后面的旅程都从这里展开。"
+          }
+        },
+        {
+          "s": "But before we visited them, we went sightseeing along the Great Ocean Road, on the Australian coast.",
+          "hard": false,
+          "tr": "但在拜访他们之前，我们沿着澳大利亚海岸的大洋路观光。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "主干：<b>before we visited them, we went sightseeing</b>（拜访他们之前，我们先去观光了）",
+            "parts": [
+              [
+                "转折词",
+                "But —— 但是"
+              ],
+              [
+                "时间状语从句",
+                "<code>before we visited them</code> —— 在我们拜访他们之前"
+              ],
+              [
+                "主语",
+                "we —— 我们"
+              ],
+              [
+                "谓语",
+                "<code>went sightseeing</code> —— 去观光"
+              ],
+              [
+                "地点状语",
+                "<code>along the Great Ocean Road, on the Australian coast</code> —— 沿着澳大利亚海岸的大洋路"
+              ]
+            ],
+            "clauses": [
+              "时间状语从句 before we visited them"
+            ],
+            "gram": [
+              "go sightseeing 去观光",
+              "along 沿着",
+              "on the Australian coast 在澳大利亚海岸"
+            ],
+            "tip": "关键词 Great Ocean Road 出现 —— 全文都围绕这条路。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Dad had intended to drive, but even though he was used to driving miles without getting exhausted, he then read on the website that the road wouldn't be an easy drive, with a number of sharp bends.",
+          "hard": false,
+          "tr": "爸爸原本打算开车，可虽然他习惯长途驾驶也不觉得累，后来他在网站上看到这条路并不好开——有好几个急弯。",
+          "ana": {
+            "pat": [
+              "主谓宾",
+              "主系表"
+            ],
+            "frame": "主干：<b>Dad had intended to drive</b> + <b>but … he read on the website that the road wouldn't be an easy drive</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Dad</code> —— 爸爸"
+              ],
+              [
+                "谓语",
+                "<code>had intended</code> —— 原本打算（过去完成时）"
+              ],
+              [
+                "宾语",
+                "<code>to drive</code> —— 开车"
+              ],
+              [
+                "让步状语从句",
+                "<code>even though he was used to driving miles without getting exhausted</code> —— 尽管他习惯开长途也不累"
+              ],
+              [
+                "系动词",
+                "<code>was used to</code> —— 习惯于（be used to doing）"
+              ],
+              [
+                "主语2",
+                "he —— 他"
+              ],
+              [
+                "谓语2",
+                "<code>read</code> —— 读到"
+              ],
+              [
+                "地点状语",
+                "<code>on the website</code> —— 在网站上"
+              ],
+              [
+                "宾语从句",
+                "<code>that the road wouldn't be an easy drive, with a number of sharp bends</code> —— 这条路不好开、有很多急弯"
+              ]
+            ],
+            "clauses": [
+              "让步状语从句 even though … exhausted",
+              "宾语从句 that the road wouldn't be an easy drive"
+            ],
+            "gram": [
+              "had intended to do 原本打算做（结果没做成）",
+              "be used to doing sth 习惯于做某事（to 是介词）",
+              "a number of 若干、许多",
+              "sharp bend 急弯"
+            ],
+            "tip": "两句合起来：本来能开（习惯长途），但看到『很多急弯』后就放弃自己开了 —— 第 11 题就考这个原因。"
+          }
+        },
+        {
+          "s": "Anyway, we thought he deserved to enjoy the fantastic views too, which he couldn't do as our driver.",
+          "hard": false,
+          "tr": "总之，我们觉得他也该享受一下壮丽的景色——可他当我们司机就享受不到。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>we thought he deserved to enjoy the fantastic views</b>（我们觉得他值得欣赏景色）",
+            "parts": [
+              [
+                "状语",
+                "Anyway —— 总之"
+              ],
+              [
+                "主语",
+                "we —— 我们"
+              ],
+              [
+                "谓语",
+                "<code>thought</code> —— 认为"
+              ],
+              [
+                "宾语从句",
+                "<code>he deserved to enjoy the fantastic views too</code> —— 他也该享受壮丽景色"
+              ],
+              [
+                "非限制性定语从句",
+                "<code>which he couldn't do as our driver</code> —— 而他当司机就做不到这点"
+              ]
+            ],
+            "clauses": [
+              "宾语从句 he deserved to enjoy the fantastic views",
+              "非限制性定语从句 which he couldn't do"
+            ],
+            "gram": [
+              "deserve to do sth 值得做某事",
+              "which 指『欣赏景色』这件事",
+              "as our driver 作为我们的司机"
+            ],
+            "tip": "转折点：为了让他也看风景，家里决定不让他开车。"
+          }
+        },
+        {
+          "s": "So instead, we persuaded him to book discount bus tickets and off we went.",
+          "hard": false,
+          "tr": "所以，我们说服他订了打折的巴士票——就这样出发了。",
+          "ana": {
+            "pat": [
+              "主谓双宾"
+            ],
+            "frame": "主干：<b>we persuaded him to book discount bus tickets</b>（我们说服他订了打折巴士票）",
+            "parts": [
+              [
+                "连接词",
+                "So instead —— 所以取而代之"
+              ],
+              [
+                "主语",
+                "we —— 我们"
+              ],
+              [
+                "谓语",
+                "<code>persuaded</code> —— 说服"
+              ],
+              [
+                "宾语",
+                "him —— 他"
+              ],
+              [
+                "宾语补足语",
+                "<code>to book discount bus tickets</code> —— 订打折的巴士票"
+              ],
+              [
+                "倒装句",
+                "<code>and off we went</code> —— 于是我们就出发了"
+              ]
+            ],
+            "clauses": [
+              "宾语补足语 to book discount bus tickets",
+              "倒装 off we went"
+            ],
+            "gram": [
+              "persuade sb to do sth 说服某人做某事",
+              "discount 打折的",
+              "off we went：off + 主语 + 动词 的倒装，表『出发了』"
+            ],
+            "tip": "结果：坐折扣巴士。第 11 题的选项 C（更便宜）是编的 —— 原文只说 discount，不是因为更便宜才选的。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Our first stop was where wild kangaroos lived – and Dad and I were taking a walk when a big one appeared!",
+          "hard": false,
+          "tr": "我们的第一站是野生袋鼠生活的地方——我和爸爸正散着步，一只大袋鼠出现了！",
+          "ana": {
+            "pat": [
+              "主系表",
+              "主谓"
+            ],
+            "frame": "主干：<b>Our first stop was where wild kangaroos lived</b> + <b>Dad and I were taking a walk</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Our first stop</code> —— 我们的第一站"
+              ],
+              [
+                "系动词",
+                "was —— 是"
+              ],
+              [
+                "表语从句",
+                "<code>where wild kangaroos lived</code> —— 野生袋鼠生活的地方"
+              ],
+              [
+                "并列分句",
+                "<code>and Dad and I were taking a walk</code> —— 我和爸爸正在散步"
+              ],
+              [
+                "时间状语从句",
+                "<code>when a big one appeared</code> —— 这时一只大袋鼠出现了"
+              ]
+            ],
+            "clauses": [
+              "表语从句 where wild kangaroos lived",
+              "时间状语从句 when a big one appeared"
+            ],
+            "gram": [
+              "表语从句 where wild kangaroos lived",
+              "take a walk 散步",
+              "a big one = a big kangaroo"
+            ],
+            "tip": "a big one 指大袋鼠；appeared 出现 —— 意外感从这里开始。"
+          }
+        },
+        {
+          "s": "For a moment, it seemed to consider coming towards us, which made me slightly nervous – but then it went off along the road, stopping to check if we were following.",
+          "hard": false,
+          "tr": "有那么一会儿，它似乎在考虑朝我们走来，这让我有点紧张——不过随后它沿着路走开了，还停下来看看我们有没有跟着。",
+          "ana": {
+            "pat": [
+              "主系表",
+              "主谓"
+            ],
+            "frame": "主干：<b>it seemed to consider coming towards us</b> + <b>but then it went off along the road</b>",
+            "parts": [
+              [
+                "时间状语",
+                "<code>For a moment</code> —— 有那么一会儿"
+              ],
+              [
+                "主语",
+                "<code>it</code> —— 它（袋鼠）"
+              ],
+              [
+                "谓语",
+                "<code>seemed</code> —— 似乎"
+              ],
+              [
+                "宾语",
+                "<code>to consider coming towards us</code> —— 考虑朝我们走过来"
+              ],
+              [
+                "非限制性定语从句",
+                "<code>which made me slightly nervous</code> —— 这让我有点紧张"
+              ],
+              [
+                "转折分句",
+                "<code>but then it went off along the road</code> —— 但接着它沿路走开了"
+              ],
+              [
+                "伴随状语",
+                "<code>stopping to check if we were following</code> —— 停下来看看我们是否跟着"
+              ]
+            ],
+            "clauses": [
+              "非限制性定语从句 which made me slightly nervous",
+              "宾语从句 if we were following"
+            ],
+            "gram": [
+              "seem to do 似乎做某事",
+              "slightly nervous 有点紧张",
+              "go off 走开",
+              "check if… 看看是否…"
+            ],
+            "tip": "第 12 题考点就是这句：seemed to consider coming towards us → worried that it might approach her。"
+          }
+        },
+        {
+          "s": "Although it was with us a while, I was so excited I didn't even manage to pull out my camera.",
+          "hard": false,
+          "tr": "虽然它和我们待了一会儿，但我兴奋得连相机都没能掏出来。",
+          "ana": {
+            "pat": [
+              "主谓",
+              "主系表"
+            ],
+            "frame": "主干：<b>Although it was with us a while, I was so excited</b>（虽然它陪了我们一会儿，我太激动了）",
+            "parts": [
+              [
+                "让步状语从句",
+                "<code>Although it was with us a while</code> —— 尽管它和我们待了一会儿"
+              ],
+              [
+                "主语",
+                "I —— 我"
+              ],
+              [
+                "系动词",
+                "was —— 是"
+              ],
+              [
+                "表语",
+                "<code>so excited</code> —— 太兴奋了"
+              ],
+              [
+                "结果状语从句",
+                "<code>I didn't even manage to pull out my camera</code> —— 连相机都没掏出来"
+              ]
+            ],
+            "clauses": [
+              "让步状语从句 Although it was with us a while",
+              "结果状语从句 I didn't even manage to pull out my camera"
+            ],
+            "gram": [
+              "be with us 和我们在一起",
+              "so … (that) … 太…以至于…（that 省略）",
+              "manage to do 设法做成"
+            ],
+            "tip": "第 12 题 D 项说 『忘了带相机』是错的：相机带了，只是没来得及掏（原文没说是忘了带）。"
+          }
+        },
+        {
+          "s": "Then it looked back once more, and went off into the bushes.",
+          "hard": false,
+          "tr": "然后它又回望了一次，就钻进了灌木丛。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "主干：<b>it looked back once more, and went off into the bushes</b>（它又回望一次，走进了灌木丛）",
+            "parts": [
+              [
+                "时间状语",
+                "Then —— 然后"
+              ],
+              [
+                "主语",
+                "it —— 它"
+              ],
+              [
+                "谓语1",
+                "<code>looked back</code> —— 回头看"
+              ],
+              [
+                "状语",
+                "<code>once more</code> —— 再一次"
+              ],
+              [
+                "谓语2",
+                "<code>went off</code> —— 走开"
+              ],
+              [
+                "方向状语",
+                "<code>into the bushes</code> —— 进了灌木丛"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "look back 回头看",
+              "once more 再一次",
+              "bushes 灌木丛"
+            ],
+            "tip": "袋鼠从容离开；第 12 题 C（没待多久而难过）与原文『it was with us a while』矛盾。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "That wasn't the only wildlife we saw.",
+          "hard": false,
+          "tr": "那不是我们唯一见到的野生动物。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>That wasn't the only wildlife</b>（那不是我们见到的唯一野生动物）",
+            "parts": [
+              [
+                "主语",
+                "That —— 那（指袋鼠）"
+              ],
+              [
+                "系动词",
+                "<code>wasn't</code> —— 不是"
+              ],
+              [
+                "表语",
+                "<code>the only wildlife</code> —— 唯一的野生动物"
+              ],
+              [
+                "定语从句",
+                "<code>we saw</code> —— 我们看见的"
+              ]
+            ],
+            "clauses": [
+              "定语从句 we saw"
+            ],
+            "gram": [
+              "the only 唯一的",
+              "wildlife 野生动物（集合名词）"
+            ],
+            "tip": "过渡句：接下来说别的动物（考拉）。"
+          }
+        },
+        {
+          "s": "I thought it unlikely we'd see Australia's famous koala bears during our short visit, as I'd heard they were rare – but we weren't disappointed at our next stop.",
+          "hard": false,
+          "tr": "我原以为这次短暂旅行看不到澳大利亚著名的考拉，因为我听说它们很稀有——但在下一站我们并没有失望。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>I thought it unlikely (that) we'd see … koala bears</b> + <b>but we weren't disappointed</b>",
+            "parts": [
+              [
+                "主语",
+                "I —— 我"
+              ],
+              [
+                "谓语",
+                "<code>thought</code> —— 认为"
+              ],
+              [
+                "形式宾语",
+                "it —— 代替后面的从句"
+              ],
+              [
+                "宾补",
+                "<code>unlikely</code> —— 不太可能"
+              ],
+              [
+                "宾语从句",
+                "<code>we'd see Australia's famous koala bears during our short visit</code> —— 短暂行程中能看到著名的考拉"
+              ],
+              [
+                "原因状语从句",
+                "<code>as I'd heard they were rare</code> —— 因为我听说它们很稀有"
+              ],
+              [
+                "转折分句",
+                "<code>but we weren't disappointed at our next stop</code> —— 但在下一站我们没失望"
+              ]
+            ],
+            "clauses": [
+              "宾语从句 we'd see … koala bears",
+              "原因状语从句 as I'd heard they were rare"
+            ],
+            "gram": [
+              "think it unlikely (that)… it 作形式宾语",
+              "as 引导原因",
+              "rare 稀有的",
+              "weren't disappointed 没有失望（=看到了）"
+            ],
+            "tip": "『听说稀有 → 但没失望』：第 13 题 C 项 more common than she'd expected 的出处。"
+          }
+        },
+        {
+          "s": "In fact, we discovered there were roughly six million in that area!",
+          "hard": false,
+          "tr": "事实上，我们发现那个地区大约有六百万只！",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>we discovered there were roughly six million in that area</b>（我们发现那一片大约有六百万只）",
+            "parts": [
+              [
+                "连接语",
+                "In fact —— 事实上"
+              ],
+              [
+                "主语",
+                "we —— 我们"
+              ],
+              [
+                "谓语",
+                "<code>discovered</code> —— 发现"
+              ],
+              [
+                "宾语从句",
+                "<code>there were roughly six million in that area</code> —— 那个地区大约有六百万只"
+              ]
+            ],
+            "clauses": [
+              "宾语从句 there were … in that area"
+            ],
+            "gram": [
+              "in fact 事实上",
+              "roughly 大约",
+              "six million 六百万"
+            ],
+            "tip": "数字 6,000,000 和『稀有』形成反差 —— 第 13 题的关键证据。"
+          }
+        },
+        {
+          "s": "Sadly, some gum trees they were in had very few leaves left, which people told us was because of the koalas, although I'd read that lack of water is actually the problem.",
+          "hard": false,
+          "tr": "遗憾的是，它们待过的一些桉树叶子所剩无几；人们告诉我们这是考拉造成的，不过我曾读到真正的问题是缺水。",
+          "ana": {
+            "pat": [
+              "主谓宾",
+              "主系表"
+            ],
+            "frame": "主干：<b>some gum trees had very few leaves left</b> + <b>which … was because of the koalas</b>",
+            "parts": [
+              [
+                "状语",
+                "Sadly —— 遗憾的是"
+              ],
+              [
+                "主语",
+                "<code>some gum trees they were in</code> —— 它们待过的桉树（they were in 是定语从句）"
+              ],
+              [
+                "谓语",
+                "<code>had</code> —— 有"
+              ],
+              [
+                "宾语",
+                "<code>very few leaves left</code> —— 剩下的叶子很少"
+              ],
+              [
+                "非限制性定语从句",
+                "<code>which people told us was because of the koalas</code> —— 人们说这是考拉造成的"
+              ],
+              [
+                "让步状语从句",
+                "<code>although I'd read that lack of water is actually the problem</code> —— 尽管我读到真正的原因是缺水"
+              ]
+            ],
+            "clauses": [
+              "定语从句 they were in",
+              "非限制性定语从句 which people told us was…",
+              "让步状语从句 although I'd read that…"
+            ],
+            "gram": [
+              "gum tree 桉树",
+              "have … left 剩下…",
+              "because of 因为（介词短语）",
+              "lack of water 缺水"
+            ],
+            "tip": "第 13 题 A 项『考拉导致树木受损』是『人们说的』，而作者读到的是缺水 —— 两项都出现过，要看清题目问谁的说法。"
+          }
+        },
+        {
+          "s": "Still, I guess they looked cute, and were easy to find – we just followed the tourists looking up into the trees!",
+          "hard": false,
+          "tr": "不过，我觉得它们看起来很可爱，也容易找到——我们只要跟着抬头看树的游客走就行了！",
+          "ana": {
+            "pat": [
+              "主谓",
+              "主系表"
+            ],
+            "frame": "主干：<b>they looked cute, and were easy to find</b>（它们看起来很可爱，也很容易找）",
+            "parts": [
+              [
+                "连接语",
+                "Still, I guess —— 不过我觉得"
+              ],
+              [
+                "主语",
+                "they —— 它们（考拉）"
+              ],
+              [
+                "系动词1",
+                "<code>looked</code> —— 看起来"
+              ],
+              [
+                "表语1",
+                "<code>cute</code> —— 可爱的"
+              ],
+              [
+                "系动词2",
+                "<code>were</code> —— 是"
+              ],
+              [
+                "表语2",
+                "<code>easy to find</code> —— 容易找到"
+              ],
+              [
+                "补充句",
+                "<code>we just followed the tourists looking up into the trees</code> —— 我们只要跟着抬头望树的游客就行"
+              ]
+            ],
+            "clauses": [
+              "补充说明 we just followed the tourists …"
+            ],
+            "gram": [
+              "look cute 看起来很可爱",
+              "easy to find 容易找到",
+              "follow 跟着"
+            ],
+            "tip": "第 13 题 D 项（善于躲游客）与『跟着游客就找到』直接矛盾。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Dad had booked a campsite for the night, with ready-made tents – for an adventure!",
+          "hard": false,
+          "tr": "爸爸订了一个露营地过夜，用的是现成的帐篷——说要来点『冒险』！",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>Dad had booked a campsite for the night</b>（爸爸订了过夜的露营地）",
+            "parts": [
+              [
+                "主语",
+                "<code>Dad</code> —— 爸爸"
+              ],
+              [
+                "谓语",
+                "<code>had booked</code> —— 已经订了（过去完成时）"
+              ],
+              [
+                "宾语",
+                "<code>a campsite</code> —— 一个露营地"
+              ],
+              [
+                "时间状语",
+                "<code>for the night</code> —— 过夜用"
+              ],
+              [
+                "补充说明",
+                "<code>with ready-made tents – for an adventure</code> —— 带现成的帐篷——为了『冒险』"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "campsite 露营地",
+              "ready-made 现成的",
+              "for an adventure 为了冒险"
+            ],
+            "tip": "『for an adventure』带点调侃的语气 —— 后面被青蛙吓到就更好笑了。"
+          }
+        },
+        {
+          "s": "I wasn't sure about that, but they were actually luxury tents, within walking distance of some famous rocks and other places we hoped to visit.",
+          "hard": false,
+          "tr": "我有点拿不准，可那其实是豪华帐篷，走几步就能到几个著名岩石景点，还有其他我们想去的地方。",
+          "ana": {
+            "pat": [
+              "主系表",
+              "主系表"
+            ],
+            "frame": "主干：<b>I wasn't sure about that</b> + <b>but they were actually luxury tents</b>",
+            "parts": [
+              [
+                "主语",
+                "I —— 我"
+              ],
+              [
+                "系动词",
+                "<code>wasn't</code> —— 不"
+              ],
+              [
+                "表语",
+                "<code>sure about that</code> —— 对那件事确定"
+              ],
+              [
+                "转折分句",
+                "<code>but they were actually luxury tents</code> —— 但其实是豪华帐篷"
+              ],
+              [
+                "主语2",
+                "they —— 它们（帐篷）"
+              ],
+              [
+                "系动词2",
+                "were"
+              ],
+              [
+                "表语2",
+                "<code>actually luxury tents</code> —— 实际上是豪华帐篷"
+              ],
+              [
+                "补充说明",
+                "<code>within walking distance of some famous rocks and other places we hoped to visit</code> —— 步行可达著名岩石和我们想去的地方"
+              ]
+            ],
+            "clauses": [
+              "定语从句 we hoped to visit"
+            ],
+            "gram": [
+              "be sure about sth 对某事拿得准",
+              "luxury 豪华的",
+              "within walking distance 步行可达"
+            ],
+            "tip": "第 14 题答案句：convenient for sightseeing = within walking distance of famous rocks and places。"
+          }
+        },
+        {
+          "s": "However, Dad also said the sounds of wild creatures would help us sleep.",
+          "hard": false,
+          "tr": "不过，爸爸还说野生动物的声音能帮我们入睡。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>Dad said (that) the sounds of wild creatures would help us sleep</b>",
+            "parts": [
+              [
+                "连接语",
+                "However —— 不过"
+              ],
+              [
+                "主语",
+                "<code>Dad</code> —— 爸爸"
+              ],
+              [
+                "谓语",
+                "<code>said</code> —— 说"
+              ],
+              [
+                "宾语从句",
+                "<code>the sounds of wild creatures would help us sleep</code> —— 野生动物的声音会帮我们入睡"
+              ]
+            ],
+            "clauses": [
+              "宾语从句 the sounds of wild creatures would help us sleep"
+            ],
+            "gram": [
+              "wild creatures 野生动物",
+              "help sb do sth 帮某人做某事"
+            ],
+            "tip": "wild creatures 这个词组是后面笑点的引子。"
+          }
+        },
+        {
+          "s": "That sounded worrying – until the 'wild creatures' turned out to be frogs!",
+          "hard": false,
+          "tr": "这听起来有点吓人——直到发现那些『野生动物』原来是青蛙！",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>That sounded worrying</b>（那听起来吓人）",
+            "parts": [
+              [
+                "主语",
+                "That —— 那（指上句话）"
+              ],
+              [
+                "系动词",
+                "<code>sounded</code> —— 听起来"
+              ],
+              [
+                "表语",
+                "<code>worrying</code> —— 令人担心的"
+              ],
+              [
+                "时间状语从句",
+                "<code>until the 'wild creatures' turned out to be frogs</code> —— 直到『野生动物』原来是青蛙"
+              ]
+            ],
+            "clauses": [
+              "时间状语从句 until … turned out to be frogs"
+            ],
+            "gram": [
+              "sound + adj. 听起来…",
+              "turn out to be 结果发现是…",
+              "引号 'wild creatures' 有反讽意味"
+            ],
+            "tip": "turn out to be frogs → 第 15 题 D 项『以为有危险动物，其实没有，现在觉得自己好傻』的原句。"
+          }
+        },
+        {
+          "s": "So I was embarrassed by my fears – and kept awake by the frogs!",
+          "hard": false,
+          "tr": "所以我为自己的害怕感到不好意思——还被青蛙吵得没睡着！",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>I was embarrassed by my fears – and kept awake by the frogs</b>（我被自己的恐惧弄得很不好意思——又被青蛙吵得睡不着）",
+            "parts": [
+              [
+                "连接词",
+                "So —— 所以"
+              ],
+              [
+                "主语",
+                "I —— 我"
+              ],
+              [
+                "系动词",
+                "<code>was</code> —— 是"
+              ],
+              [
+                "表语",
+                "<code>embarrassed by my fears</code> —— 被自己的恐惧弄得很尴尬"
+              ],
+              [
+                "补充",
+                "<code>kept awake by the frogs</code> —— 被青蛙吵得睡不着"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "be embarrassed by sth 因某事感到尴尬",
+              "keep sb awake 让某人睡不着"
+            ],
+            "tip": "embarrassed by my fears 再次呼应第 15 题 D（feel silly now）。"
+          }
+        },
+        {
+          "s": "But we had fun making meals together – we'd brought food, as we knew there'd be nowhere to eat.",
+          "hard": false,
+          "tr": "但一起做饭很开心——我们带了食物，因为知道那边没地方吃饭。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>we had fun making meals together</b>（一起做饭很开心）",
+            "parts": [
+              [
+                "转折词",
+                "But —— 但是"
+              ],
+              [
+                "主语",
+                "we —— 我们"
+              ],
+              [
+                "谓语",
+                "<code>had</code> —— 有（have fun）"
+              ],
+              [
+                "宾语",
+                "<code>fun</code> —— 乐趣"
+              ],
+              [
+                "补充说明",
+                "<code>making meals together</code> —— 一起做饭"
+              ],
+              [
+                "原因状语从句",
+                "<code>as we knew there'd be nowhere to eat</code> —— 因为我们知道那边没地方吃饭"
+              ]
+            ],
+            "clauses": [
+              "原因状语从句 as we knew there'd be nowhere to eat"
+            ],
+            "gram": [
+              "have fun doing sth 做某事很开心",
+              "as 因为",
+              "nowhere to eat 没地方吃饭"
+            ],
+            "tip": "虽然有小意外，整段仍然是愉快的基调 —— 为最后一句 Fantastic 铺垫。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "In fact, this whole trip was fantastic!",
+          "hard": false,
+          "tr": "事实上，这一整趟旅行太棒了！",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>this whole trip was fantastic</b>（整趟旅行棒极了）",
+            "parts": [
+              [
+                "连接语",
+                "In fact —— 事实上"
+              ],
+              [
+                "主语",
+                "<code>this whole trip</code> —— 这整趟旅行"
+              ],
+              [
+                "系动词",
+                "was —— 是"
+              ],
+              [
+                "表语",
+                "<code>fantastic</code> —— 棒极了"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "in fact 事实上",
+              "fantastic 极好的"
+            ],
+            "tip": "结尾句定调：虽然一路状况不断，但作者对整趟旅行评价极高 —— 也提示选题时要跟住作者的态度。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Donna's Dad decided not to drive the Great Ocean Road himself because",
+          "hard": false,
+          "tr": "Donna 的爸爸决定不亲自开车走大洋路，因为……",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>Donna's Dad decided not to drive …</b>（Donna 的爸爸决定不开车）",
+            "parts": [
+              [
+                "主语",
+                "<code>Donna's Dad</code> —— Donna 的爸爸"
+              ],
+              [
+                "谓语",
+                "<code>decided</code> —— 决定"
+              ],
+              [
+                "宾语",
+                "<code>not to drive the Great Ocean Road himself</code> —— 不亲自开车走大洋路"
+              ],
+              [
+                "原因（题干留白）",
+                "because —— 因为…（答案在选项里）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "decide (not) to do sth 决定（不）做某事",
+              "himself 亲自"
+            ],
+            "tip": "回原文找『不开车』的原因句：he then read on the website that the road wouldn't be an easy drive, with a number of sharp bends。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "When Donna saw a kangaroo along the route, she was",
+          "hard": false,
+          "tr": "Donna 在路上看到袋鼠时，她的感受是……",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>When Donna saw a kangaroo, she was …</b>（当 Donna 看到袋鼠时，她…）",
+            "parts": [
+              [
+                "时间状语从句",
+                "<code>When Donna saw a kangaroo along the route</code> —— 当 Donna 在路上看到袋鼠时"
+              ],
+              [
+                "主语",
+                "she —— 她"
+              ],
+              [
+                "系动词（题干留白）",
+                "was —— 是…（形容词在选项里）"
+              ]
+            ],
+            "clauses": [
+              "时间状语从句：When Donna saw a kangaroo along the route"
+            ],
+            "gram": [
+              "along the route 沿途中"
+            ],
+            "tip": "找原文里当时的心理描写：seemed to consider coming towards us, which made me slightly nervous。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Donna says that the koala bears they saw were",
+          "hard": false,
+          "tr": "Donna 说他们看到的考拉……",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>Donna says (that) the koala bears were …</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Donna</code> —— Donna"
+              ],
+              [
+                "谓语",
+                "<code>says</code> —— 说（一般现在时，转述文章内容）"
+              ],
+              [
+                "宾语从句",
+                "<code>the koala bears they saw were …</code> —— 他们看到的考拉…"
+              ]
+            ],
+            "clauses": [
+              "宾语从句 the koala bears they saw were …"
+            ],
+            "gram": [
+              "转述题：says that… 后面接选项补全"
+            ],
+            "tip": "核对四处：稀有？——『six million in that area』说明比想象的多得多（more common than she'd expected）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "What was Donna's opinion of the place where they stayed?",
+          "hard": false,
+          "tr": "Donna 对他们住的地方评价如何？",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>What was Donna's opinion of the place</b>（Donna 对那个地方的看法是什么）",
+            "parts": [
+              [
+                "主语",
+                "<code>What</code> —— 什么"
+              ],
+              [
+                "系动词",
+                "was —— 是"
+              ],
+              [
+                "表语",
+                "<code>Donna's opinion of the place where they stayed</code> —— Donna 对住处的看法"
+              ]
+            ],
+            "clauses": [
+              "定语从句 where they stayed"
+            ],
+            "gram": [
+              "opinion of sth 对…的看法",
+              "the place where they stayed 他们住的地方（定语从句）"
+            ],
+            "tip": "答案句：they were actually luxury tents, within walking distance of some famous rocks and other places we hoped to visit。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "What might Donna write in her blog during the trip?",
+          "hard": false,
+          "tr": "旅途期间，Donna 可能会在博客里写什么？",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>What might Donna write in her blog</b>（Donna 可能会在博客里写什么）",
+            "parts": [
+              [
+                "宾语",
+                "<code>What</code> —— 什么"
+              ],
+              [
+                "情态动词 + 谓语",
+                "<code>might … write</code> —— 可能写"
+              ],
+              [
+                "主语",
+                "<code>Donna</code> —— Donna"
+              ],
+              [
+                "地点状语",
+                "<code>in her blog</code> —— 在她的博客里"
+              ],
+              [
+                "时间状语",
+                "<code>during the trip</code> —— 旅途中"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "might 可能（推测）",
+              "blog 博客"
+            ],
+            "tip": "四个选项都是『可能发的博文』；选与文章情绪一致的那条（D：以为有危险动物，结果只看到青蛙，现在觉得自己好傻）。"
+          }
+        }
+      ]
+    ],
+    "blocks": [
+      {
+        "r": "h",
+        "head": {
+          "l": "Training Test 1",
+          "r": "Reading Part 3"
+        },
+        "badge": "答案见 P184"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "o",
+        "frame": true
+      },
+      {
+        "r": "q",
+        "pick": [
+          101
+        ]
+      },
+      {
+        "r": "q",
+        "pick": [
+          102
+        ]
+      },
+      {
+        "r": "q",
+        "pick": [
+          103
+        ]
+      },
+      {
+        "r": "q",
+        "pick": [
+          104
+        ]
+      },
+      {
+        "r": "q",
+        "pick": [
+          105
+        ]
+      },
+      {
+        "r": "q",
+        "pick": [
+          106
+        ]
+      },
+      {
+        "r": "q",
+        "pick": [
+          107
+        ]
+      },
+      {
+        "r": "q",
+        "pick": [
+          108
+        ]
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "o"
+      },
+      {
+        "r": "q",
+        "pick": [
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116
+        ]
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "frame": true,
+        "img": {
+          "src": "assets/img/t1-p3-hikers.png",
+          "alt": "四个登山者下山的插图（原书 P18）",
+          "w": 320
+        }
+      },
+      {
+        "r": "q",
+        "pick": [
+          117
+        ]
+      },
+      {
+        "r": "q",
+        "pick": [
+          118
+        ]
+      },
+      {
+        "r": "q",
+        "pick": [
+          119
+        ]
+      },
+      {
+        "r": "q",
+        "pick": [
+          120
+        ]
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "n": "121",
+        "shade": true,
+        "optsInline": true
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "h",
+        "head": {
+          "l": "Exam Practice Test 1",
+          "r": "Reading Part 3"
+        },
+        "badge": "答案见 P184",
+        "tip": "在阅读问题之前，先快速浏览整篇文章以了解大意。"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "h",
+        "center": true,
+        "img": {
+          "src": "assets/img/t1-p3-ocean-road.jpg",
+          "alt": "大洋路海岸线的照片（原书 P19）",
+          "side": "left",
+          "w": 360
+        }
+      },
+      {
+        "r": "h",
+        "center": true
+      },
+      {
+        "r": "p"
+      },
+      {
+        "r": "p"
+      },
+      {
+        "r": "p"
+      },
+      {
+        "r": "p"
+      },
+      {
+        "r": "p"
+      },
+      {
+        "r": "p"
+      },
+      {
+        "r": "q",
+        "n": "11",
+        "optsInline": true,
+        "tip": "记住，问题大多数是关于态度和观点的，而不是关于事实。"
+      },
+      {
+        "r": "q",
+        "n": "12",
+        "optsInline": true
+      },
+      {
+        "r": "q",
+        "n": "13",
+        "optsInline": true
+      },
+      {
+        "r": "q",
+        "n": "14",
+        "optsInline": true
+      },
+      {
+        "r": "q",
+        "n": "15",
+        "optsGrid": true
+      }
+    ]
+  },
+  "phrases": [
+    "Great Ocean Road",
+    "used to",
+    "make a suggestion",
+    "a number of",
+    "in fact",
+    "looked back",
+    "wild creatures"
+  ],
+  "glossary": {
+    "correct": {
+      "pos": "adj./v.",
+      "ipa": "/kəˈrekt/",
+      "cn": "正确的；改正"
+    },
+    "complete": {
+      "pos": "v./adj.",
+      "ipa": "/kəmˈpliːt/",
+      "cn": "使完整；完整的"
+    },
+    "explain": {
+      "pos": "v.",
+      "ipa": "/ɪkˈspleɪn/",
+      "cn": "解释",
+      "note": "explain sth to sb；后接 that 从句"
+    },
+    "invite": {
+      "pos": "v.",
+      "ipa": "/ɪnˈvaɪt/",
+      "cn": "邀请",
+      "note": "invite sb to sth 邀请某人参加…"
+    },
+    "warn": {
+      "pos": "v.",
+      "ipa": "/wɔːn/",
+      "cn": "提醒，警告",
+      "note": "warn sb not to do sth 提醒某人别做某事"
+    },
+    "deep": {
+      "pos": "adj.",
+      "ipa": "/diːp/",
+      "cn": "深的"
+    },
+    "buy": {
+      "pos": "v.",
+      "ipa": "/baɪ/",
+      "cn": "买"
+    },
+    "borrow": {
+      "pos": "v.",
+      "ipa": "/ˈbɒrəʊ/",
+      "cn": "借（入）"
+    },
+    "would": {
+      "pos": "modal",
+      "ipa": "/wʊd/",
+      "cn": "会（will 的过去式）",
+      "note": "wouldn't 的完整形式"
+    },
+    "phone": {
+      "pos": "n.",
+      "ipa": "/fəʊn/",
+      "cn": "电话，手机"
+    },
+    "party": {
+      "pos": "n.",
+      "ipa": "/ˈpɑːti/",
+      "cn": "聚会，派对"
+    },
+    "sister": {
+      "pos": "n.",
+      "ipa": "/ˈsɪstə/",
+      "cn": "姐姐；妹妹"
+    },
+    "mistake": {
+      "pos": "n./v.",
+      "ipa": "/mɪˈsteɪk/",
+      "cn": "错误；弄错",
+      "note": "make mistakes 犯错"
+    },
+    "item": {
+      "pos": "n.",
+      "ipa": "/ˈaɪtəm/",
+      "cn": "一件（物品）"
+    },
+    "dad": {
+      "pos": "n.",
+      "ipa": "/dæd/",
+      "cn": "爸爸"
+    },
+    "homework": {
+      "pos": "n.",
+      "ipa": "/ˈhəʊmwɜːk/",
+      "cn": "作业"
+    },
+    "purpose": {
+      "pos": "n.",
+      "ipa": "/ˈpɜːpəs/",
+      "cn": "目的，意图"
+    },
+    "someone": {
+      "pos": "pron.",
+      "ipa": "/ˈsʌmwʌn/",
+      "cn": "某人"
+    },
+    "though": {
+      "pos": "conj.",
+      "ipa": "/ðəʊ/",
+      "cn": "虽然",
+      "note": "even though 尽管"
+    },
+    "come": {
+      "pos": "v.",
+      "ipa": "/kʌm/",
+      "cn": "来"
+    },
+    "could": {
+      "pos": "modal",
+      "ipa": "/kʊd/",
+      "cn": "能（can 的过去式）"
+    },
+    "f": {
+      "pos": "字母",
+      "ipa": "",
+      "cn": "选项 f 的记号"
+    },
+    "g": {
+      "pos": "字母",
+      "ipa": "",
+      "cn": "选项 g 的记号"
+    },
+    "h": {
+      "pos": "字母",
+      "ipa": "",
+      "cn": "选项 h 的记号"
+    },
+    "apologise": {
+      "pos": "v.",
+      "ipa": "/əˈpɒlədʒaɪz/",
+      "cn": "道歉",
+      "note": "apologise to sb for sth 为某事向某人道歉"
+    },
+    "blame": {
+      "pos": "v.",
+      "ipa": "/bleɪm/",
+      "cn": "责怪",
+      "note": "blame sb for sth 为某事责怪某人"
+    },
+    "promise": {
+      "pos": "v./n.",
+      "ipa": "/ˈprɒmɪs/",
+      "cn": "承诺，答应",
+      "note": "promise to do sth 答应做某事"
+    },
+    "recommend": {
+      "pos": "v.",
+      "ipa": "/ˌrekəˈmend/",
+      "cn": "推荐，建议",
+      "note": "recommend (that) sb (should) do sth"
+    },
+    "offer": {
+      "pos": "v.",
+      "ipa": "/ˈɒfə/",
+      "cn": "主动提出",
+      "note": "offer to do sth 主动提出做某事"
+    },
+    "suggest": {
+      "pos": "v.",
+      "ipa": "/səˈdʒest/",
+      "cn": "建议",
+      "note": "suggest doing sth / suggest that…"
+    },
+    "refuse": {
+      "pos": "v.",
+      "ipa": "/rɪˈfjuːz/",
+      "cn": "拒绝",
+      "note": "refuse to do sth 拒绝做某事"
+    },
+    "encourage": {
+      "pos": "v.",
+      "ipa": "/ɪnˈkʌrɪdʒ/",
+      "cn": "鼓励",
+      "note": "encourage sb to do sth 鼓励某人做某事"
+    },
+    "persuade": {
+      "pos": "v.",
+      "ipa": "/pəˈsweɪd/",
+      "cn": "说服",
+      "note": "persuade sb to do sth 说服某人做某事"
+    },
+    "remember": {
+      "pos": "v.",
+      "ipa": "/rɪˈmembə/",
+      "cn": "记住",
+      "note": "不忘"
+    },
+    "reporting": {
+      "pos": "adj.",
+      "ipa": "/rɪˈpɔːtɪŋ/",
+      "cn": "转述的",
+      "note": "reporting verb 转述动词"
+    },
+    "form": {
+      "pos": "n.",
+      "ipa": "/fɔːm/",
+      "cn": "形式",
+      "note": "the correct form 正确形式"
+    },
+    "error": {
+      "pos": "n.",
+      "ipa": "/ˈerə/",
+      "cn": "错误"
+    },
+    "understanding": {
+      "pos": "n.",
+      "ipa": "/ˌʌndəˈstændɪŋ/",
+      "cn": "理解"
+    },
+    "gist": {
+      "pos": "n.",
+      "ipa": "/dʒɪst/",
+      "cn": "大意，主旨"
+    },
+    "multiple": {
+      "pos": "adj.",
+      "ipa": "/ˈmʌltɪpl/",
+      "cn": "多个的",
+      "note": "multiple-choice 多选一的（四选一）"
+    },
+    "choice": {
+      "pos": "n.",
+      "ipa": "/tʃɔɪs/",
+      "cn": "选择"
+    },
+    "subject": {
+      "pos": "n.",
+      "ipa": "/ˈsʌbdʒɪkt/",
+      "cn": "主语；（谈论的）对象"
+    },
+    "exercise": {
+      "pos": "n.",
+      "ipa": "/ˈeksəsaɪz/",
+      "cn": "练习"
+    },
+    "suggestion": {
+      "pos": "n.",
+      "ipa": "/səˈdʒestʃən/",
+      "cn": "建议",
+      "note": "make a suggestion 提建议"
+    },
+    "explanation": {
+      "pos": "n.",
+      "ipa": "/ˌekspləˈneɪʃn/",
+      "cn": "解释",
+      "note": "give an explanation 作出解释"
+    },
+    "recommendation": {
+      "pos": "n.",
+      "ipa": "/ˌrekəmenˈdeɪʃn/",
+      "cn": "推荐",
+      "note": "make a recommendation 提出推荐"
+    },
+    "others": {
+      "pos": "pron.",
+      "ipa": "/ˈʌðəz/",
+      "cn": "其他人（other 的复数）"
+    },
+    "water": {
+      "pos": "n.",
+      "ipa": "/ˈwɔːtə/",
+      "cn": "水"
+    },
+    "jessica": {
+      "pos": "n.",
+      "ipa": "/ˈdʒesɪkə/",
+      "cn": "Jessica（女子名）"
+    },
+    "jump": {
+      "pos": "v./n.",
+      "ipa": "/dʒʌmp/",
+      "cn": "跳"
+    },
+    "hair": {
+      "pos": "n.",
+      "ipa": "/heə/",
+      "cn": "头发",
+      "note": "hair dryer 吹风机"
+    },
+    "dryer": {
+      "pos": "n.",
+      "ipa": "/ˈdraɪə/",
+      "cn": "吹风机（hair dryer）"
+    },
+    "myself": {
+      "pos": "pron.",
+      "ipa": "/maɪˈself/",
+      "cn": "我自己"
+    },
+    "max": {
+      "pos": "n.",
+      "ipa": "/mæks/",
+      "cn": "Max（男子名）"
+    },
+    "damage": {
+      "pos": "v./n.",
+      "ipa": "/ˈdæmɪdʒ/",
+      "cn": "损坏"
+    },
+    "boy": {
+      "pos": "n.",
+      "ipa": "/bɔɪ/",
+      "cn": "男孩"
+    },
+    "late": {
+      "pos": "adj./adv.",
+      "ipa": "/leɪt/",
+      "cn": "迟到的；晚"
+    },
+    "tuesday": {
+      "pos": "n.",
+      "ipa": "/ˈtjuːzdeɪ/",
+      "cn": "星期二"
+    },
+    "ready": {
+      "pos": "adj.",
+      "ipa": "/ˈredi/",
+      "cn": "准备好的"
+    },
+    "amelie": {
+      "pos": "n.",
+      "ipa": "/əˈmiːli/",
+      "cn": "Amelie（女子名）"
+    },
+    "cousin": {
+      "pos": "n.",
+      "ipa": "/ˈkʌzn/",
+      "cn": "堂（表）兄弟姐妹"
+    },
+    "miguel": {
+      "pos": "n.",
+      "ipa": "/mɪˈɡel/",
+      "cn": "Miguel（男子名）"
+    },
+    "lift": {
+      "pos": "n./v.",
+      "ipa": "/lɪft/",
+      "cn": "搭车；举起",
+      "note": "give sb a lift 捎某人一程"
+    },
+    "car": {
+      "pos": "n.",
+      "ipa": "/kɑː/",
+      "cn": "汽车"
+    },
+    "mess": {
+      "pos": "n.",
+      "ipa": "/mes/",
+      "cn": "脏乱"
+    },
+    "kitchen": {
+      "pos": "n.",
+      "ipa": "/ˈkɪtʃɪn/",
+      "cn": "厨房"
+    },
+    "fault": {
+      "pos": "n.",
+      "ipa": "/fɔːlt/",
+      "cn": "过错"
+    },
+    "zara": {
+      "pos": "n.",
+      "ipa": "/ˈzɑːrə/",
+      "cn": "Zara（女子名）"
+    },
+    "illness": {
+      "pos": "n.",
+      "ipa": "/ˈɪlnəs/",
+      "cn": "疾病"
+    },
+    "wash": {
+      "pos": "v.",
+      "ipa": "/wɒʃ/",
+      "cn": "洗"
+    },
+    "clothing": {
+      "pos": "n.",
+      "ipa": "/ˈkləʊðɪŋ/",
+      "cn": "衣物"
+    },
+    "warm": {
+      "pos": "adj.",
+      "ipa": "/wɔːm/",
+      "cn": "温暖的"
+    },
+    "thief": {
+      "pos": "n.",
+      "ipa": "/θiːf/",
+      "cn": "小偷"
+    },
+    "hidden": {
+      "pos": "v.",
+      "ipa": "/ˈhɪdn/",
+      "cn": "藏（hide 的过去分词）"
+    },
+    "stolen": {
+      "pos": "v.",
+      "ipa": "/ˈstəʊlən/",
+      "cn": "偷（steal 的过去分词）"
+    },
+    "diamond": {
+      "pos": "n.",
+      "ipa": "/ˈdaɪəmənd/",
+      "cn": "钻石"
+    },
+    "tyre": {
+      "pos": "n.",
+      "ipa": "/ˈtaɪə/",
+      "cn": "轮胎"
+    },
+    "aisha": {
+      "pos": "n.",
+      "ipa": "/ˈaɪʃə/",
+      "cn": "Aisha（女子名）"
+    },
+    "maths": {
+      "pos": "n.",
+      "ipa": "/mæθs/",
+      "cn": "数学"
+    },
+    "literature": {
+      "pos": "n.",
+      "ipa": "/ˈlɪtrətʃə/",
+      "cn": "文学"
+    },
+    "let": {
+      "pos": "v.",
+      "ipa": "/let/",
+      "cn": "让",
+      "note": "let sb do sth 让某人做某事"
+    },
+    "stay": {
+      "pos": "v.",
+      "ipa": "/steɪ/",
+      "cn": "停留"
+    },
+    "no": {
+      "pos": "adv./det.",
+      "ipa": "/nəʊ/",
+      "cn": "不；没有"
+    },
+    "eat": {
+      "pos": "v.",
+      "ipa": "/iːt/",
+      "cn": "吃"
+    },
+    "down": {
+      "pos": "adv./prep.",
+      "ipa": "/daʊn/",
+      "cn": "向下"
+    },
+    "mountain": {
+      "pos": "n.",
+      "ipa": "/ˈmaʊntən/",
+      "cn": "山"
+    },
+    "intend": {
+      "pos": "v.",
+      "ipa": "/ɪnˈtend/",
+      "cn": "打算",
+      "note": "intend to do sth 打算做某事"
+    },
+    "well": {
+      "pos": "adv.",
+      "ipa": "/wel/",
+      "cn": "好；很",
+      "note": "well worth 非常值得"
+    },
+    "worth": {
+      "pos": "adj./n.",
+      "ipa": "/wɜːθ/",
+      "cn": "值得",
+      "note": "be worth doing sth 值得做某事"
+    },
+    "spend": {
+      "pos": "v.",
+      "ipa": "/spend/",
+      "cn": "花费（时间、钱）"
+    },
+    "admire": {
+      "pos": "v.",
+      "ipa": "/ədˈmaɪə/",
+      "cn": "欣赏，钦佩"
+    },
+    "fantastic": {
+      "pos": "adj.",
+      "ipa": "/fænˈtæstɪk/",
+      "cn": "极好的，壮丽的"
+    },
+    "view": {
+      "pos": "n.",
+      "ipa": "/vjuː/",
+      "cn": "景色；观点"
+    },
+    "peak": {
+      "pos": "n.",
+      "ipa": "/piːk/",
+      "cn": "山顶，顶峰"
+    },
+    "track": {
+      "pos": "n.",
+      "ipa": "/træk/",
+      "cn": "小路，小道"
+    },
+    "lead": {
+      "pos": "v.",
+      "ipa": "/liːd/",
+      "cn": "通向，引导"
+    },
+    "village": {
+      "pos": "n.",
+      "ipa": "/ˈvɪlɪdʒ/",
+      "cn": "村庄"
+    },
+    "steep": {
+      "pos": "adj.",
+      "ipa": "/stiːp/",
+      "cn": "陡的"
+    },
+    "icy": {
+      "pos": "adj.",
+      "ipa": "/ˈaɪsi/",
+      "cn": "结冰的，滑的"
+    },
+    "dark": {
+      "pos": "n./adj.",
+      "ipa": "/dɑːk/",
+      "cn": "黑暗；黑暗的",
+      "note": "before dark 天黑前"
+    },
+    "then": {
+      "pos": "adv.",
+      "ipa": "/ðen/",
+      "cn": "然后，那时"
+    },
+    "suddenly": {
+      "pos": "adv.",
+      "ipa": "/ˈsʌdənli/",
+      "cn": "突然"
+    },
+    "snow": {
+      "pos": "n./v.",
+      "ipa": "/snəʊ/",
+      "cn": "雪；下雪"
+    },
+    "difficult": {
+      "pos": "adj.",
+      "ipa": "/ˈdɪfɪkəlt/",
+      "cn": "困难的"
+    },
+    "follow": {
+      "pos": "v.",
+      "ipa": "/ˈfɒləʊ/",
+      "cn": "跟随，沿着"
+    },
+    "path": {
+      "pos": "n.",
+      "ipa": "/pɑːθ/",
+      "cn": "小路，路径"
+    },
+    "mention": {
+      "pos": "v.",
+      "ipa": "/ˈmenʃn/",
+      "cn": "提到"
+    },
+    "plan": {
+      "pos": "n./v.",
+      "ipa": "/plæn/",
+      "cn": "计划"
+    },
+    "local": {
+      "pos": "adj.",
+      "ipa": "/ˈləʊkl/",
+      "cn": "当地的",
+      "note": "local people 当地人"
+    },
+    "set": {
+      "pos": "v./n.",
+      "ipa": "/set/",
+      "cn": "设置；一套",
+      "note": "set out 出发"
+    },
+    "case": {
+      "pos": "n.",
+      "ipa": "/keɪs/",
+      "cn": "情况；盒子",
+      "note": "just in case 以防万一"
+    },
+    "speaker": {
+      "pos": "n.",
+      "ipa": "/ˈspiːkə/",
+      "cn": "说话人，发言者"
+    },
+    "did": {
+      "pos": "v.",
+      "ipa": "/dɪd/",
+      "cn": "做（do 的过去式）"
+    },
+    "feel": {
+      "pos": "v.",
+      "ipa": "/fiːl/",
+      "cn": "感觉"
+    },
+    "main": {
+      "pos": "adj.",
+      "ipa": "/meɪn/",
+      "cn": "主要的"
+    },
+    "began": {
+      "pos": "v.",
+      "ipa": "/bɪˈɡæn/",
+      "cn": "开始（begin 的过去式）"
+    },
+    "fall": {
+      "pos": "v./n.",
+      "ipa": "/fɔːl/",
+      "cn": "落下；秋天"
+    },
+    "regret": {
+      "pos": "v./n.",
+      "ipa": "/rɪˈɡret/",
+      "cn": "后悔",
+      "note": "regret doing sth 后悔做过某事"
+    },
+    "pairs": {
+      "pos": "n.",
+      "ipa": "/peəz/",
+      "cn": "一对（pair 的复数）",
+      "note": "in pairs 两人一组"
+    },
+    "incorrect": {
+      "pos": "adj.",
+      "ipa": "/ˌɪnkəˈrekt/",
+      "cn": "不正确的"
+    },
+    "wrong": {
+      "pos": "adj.",
+      "ipa": "/rɒŋ/",
+      "cn": "错误的"
+    },
+    "ocean": {
+      "pos": "n.",
+      "ipa": "/ˈəʊʃn/",
+      "cn": "海洋"
+    },
+    "donna": {
+      "pos": "n.",
+      "ipa": "/ˈdɒnə/",
+      "cn": "Donna（女子名）"
+    },
+    "waverley": {
+      "pos": "n.",
+      "ipa": "/ˈweɪvəli/",
+      "cn": "Waverley（姓氏）"
+    },
+    "australia": {
+      "pos": "n.",
+      "ipa": "/ɒˈstreɪliə/",
+      "cn": "澳大利亚"
+    },
+    "grandparent": {
+      "pos": "n.",
+      "ipa": "/ˈɡrænpeərənt/",
+      "cn": "祖父或祖母",
+      "note": "grandparents 祖父母"
+    },
+    "sightseeing": {
+      "pos": "n.",
+      "ipa": "/ˈsaɪtsiːɪŋ/",
+      "cn": "观光",
+      "note": "go sightseeing 去观光"
+    },
+    "along": {
+      "pos": "prep.",
+      "ipa": "/əˈlɒŋ/",
+      "cn": "沿着"
+    },
+    "australian": {
+      "pos": "adj./n.",
+      "ipa": "/ɒˈstreɪliən/",
+      "cn": "澳大利亚的；澳大利亚人"
+    },
+    "coast": {
+      "pos": "n.",
+      "ipa": "/kəʊst/",
+      "cn": "海岸"
+    },
+    "mile": {
+      "pos": "n.",
+      "ipa": "/maɪl/",
+      "cn": "英里"
+    },
+    "exhausted": {
+      "pos": "adj.",
+      "ipa": "/ɪɡˈzɔːstɪd/",
+      "cn": "精疲力竭的"
+    },
+    "website": {
+      "pos": "n.",
+      "ipa": "/ˈwebsaɪt/",
+      "cn": "网站"
+    },
+    "number": {
+      "pos": "n.",
+      "ipa": "/ˈnʌmbə/",
+      "cn": "数量；号码",
+      "note": "a number of 许多"
+    },
+    "sharp": {
+      "pos": "adj.",
+      "ipa": "/ʃɑːp/",
+      "cn": "急剧的；锋利的",
+      "note": "sharp bends 急弯"
+    },
+    "bend": {
+      "pos": "n./v.",
+      "ipa": "/bend/",
+      "cn": "弯道；弯曲"
+    },
+    "anyway": {
+      "pos": "adv.",
+      "ipa": "/ˈeniweɪ/",
+      "cn": "总之，不管怎样"
+    },
+    "deserve": {
+      "pos": "v.",
+      "ipa": "/dɪˈzɜːv/",
+      "cn": "值得，应得"
+    },
+    "driver": {
+      "pos": "n.",
+      "ipa": "/ˈdraɪvə/",
+      "cn": "司机，驾驶者"
+    },
+    "discount": {
+      "pos": "n./adj.",
+      "ipa": "/ˈdɪskaʊnt/",
+      "cn": "折扣；打折的"
+    },
+    "bus": {
+      "pos": "n.",
+      "ipa": "/bʌs/",
+      "cn": "公共汽车"
+    },
+    "ticket": {
+      "pos": "n.",
+      "ipa": "/ˈtɪkɪt/",
+      "cn": "票"
+    },
+    "stop": {
+      "pos": "n./v.",
+      "ipa": "/stɒp/",
+      "cn": "停靠站；停下"
+    },
+    "kangaroo": {
+      "pos": "n.",
+      "ipa": "/ˌkæŋɡəˈruː/",
+      "cn": "袋鼠"
+    },
+    "appear": {
+      "pos": "v.",
+      "ipa": "/əˈpɪə/",
+      "cn": "出现"
+    },
+    "moment": {
+      "pos": "n.",
+      "ipa": "/ˈməʊmənt/",
+      "cn": "片刻",
+      "note": "for a moment 有那么一会儿"
+    },
+    "seem": {
+      "pos": "v.",
+      "ipa": "/siːm/",
+      "cn": "似乎",
+      "note": "seem to do sth 似乎做某事"
+    },
+    "consider": {
+      "pos": "v.",
+      "ipa": "/kənˈsɪdə/",
+      "cn": "考虑",
+      "note": "consider doing sth 考虑做某事"
+    },
+    "towards": {
+      "pos": "prep.",
+      "ipa": "/təˈwɔːdz/",
+      "cn": "朝向"
+    },
+    "slightly": {
+      "pos": "adv.",
+      "ipa": "/ˈslaɪtli/",
+      "cn": "略微，有点"
+    },
+    "although": {
+      "pos": "conj.",
+      "ipa": "/ɔːlˈðəʊ/",
+      "cn": "虽然"
+    },
+    "while": {
+      "pos": "conj./n.",
+      "ipa": "/waɪl/",
+      "cn": "一会儿；当…时"
+    },
+    "manage": {
+      "pos": "v.",
+      "ipa": "/ˈmænɪdʒ/",
+      "cn": "设法做到",
+      "note": "manage to do sth 设法做成某事"
+    },
+    "pull": {
+      "pos": "v.",
+      "ipa": "/pʊl/",
+      "cn": "拉，抽出",
+      "note": "pull out 掏出来"
+    },
+    "camera": {
+      "pos": "n.",
+      "ipa": "/ˈkæmrə/",
+      "cn": "相机"
+    },
+    "once": {
+      "pos": "adv.",
+      "ipa": "/wʌns/",
+      "cn": "一次",
+      "note": "once more 再一次"
+    },
+    "bush": {
+      "pos": "n.",
+      "ipa": "/bʊʃ/",
+      "cn": "灌木丛"
+    },
+    "wildlife": {
+      "pos": "n.",
+      "ipa": "/ˈwaɪldlaɪf/",
+      "cn": "野生动物"
+    },
+    "saw": {
+      "pos": "v.",
+      "ipa": "/sɔː/",
+      "cn": "看见（see 的过去式）"
+    },
+    "unlikely": {
+      "pos": "adj.",
+      "ipa": "/ʌnˈlaɪkli/",
+      "cn": "不太可能的"
+    },
+    "we'd": {
+      "pos": "缩写",
+      "ipa": "/wiːd/",
+      "cn": "we would 的缩写"
+    },
+    "koala": {
+      "pos": "n.",
+      "ipa": "/kəʊˈɑːlə/",
+      "cn": "考拉，树袋熊"
+    },
+    "hear": {
+      "pos": "v.",
+      "ipa": "/hɪə/",
+      "cn": "听见；听说"
+    },
+    "rare": {
+      "pos": "adj.",
+      "ipa": "/reə/",
+      "cn": "稀有的"
+    },
+    "discover": {
+      "pos": "v.",
+      "ipa": "/dɪˈskʌvə/",
+      "cn": "发现"
+    },
+    "roughly": {
+      "pos": "adv.",
+      "ipa": "/ˈrʌfli/",
+      "cn": "大约，粗略地"
+    },
+    "million": {
+      "pos": "num.",
+      "ipa": "/ˈmɪljən/",
+      "cn": "百万"
+    },
+    "sadly": {
+      "pos": "adv.",
+      "ipa": "/ˈsædli/",
+      "cn": "遗憾地"
+    },
+    "gum": {
+      "pos": "n.",
+      "ipa": "/ɡʌm/",
+      "cn": "树胶；桉树（gum tree）"
+    },
+    "tree": {
+      "pos": "n.",
+      "ipa": "/triː/",
+      "cn": "树"
+    },
+    "few": {
+      "pos": "det./adj.",
+      "ipa": "/fjuː/",
+      "cn": "很少（几乎没有）"
+    },
+    "leaves": {
+      "pos": "n.",
+      "ipa": "/liːvz/",
+      "cn": "树叶（leaf 的复数）"
+    },
+    "lack": {
+      "pos": "n./v.",
+      "ipa": "/læk/",
+      "cn": "缺乏",
+      "note": "lack of water 缺水"
+    },
+    "guess": {
+      "pos": "v./n.",
+      "ipa": "/ɡes/",
+      "cn": "猜，认为"
+    },
+    "cute": {
+      "pos": "adj.",
+      "ipa": "/kjuːt/",
+      "cn": "可爱的"
+    },
+    "tourist": {
+      "pos": "n.",
+      "ipa": "/ˈtʊərɪst/",
+      "cn": "游客"
+    },
+    "campsite": {
+      "pos": "n.",
+      "ipa": "/ˈkæmpsaɪt/",
+      "cn": "露营地"
+    },
+    "night": {
+      "pos": "n.",
+      "ipa": "/naɪt/",
+      "cn": "夜晚"
+    },
+    "ready-made": {
+      "pos": "adj.",
+      "ipa": "/ˌrediˈmeɪd/",
+      "cn": "现成的"
+    },
+    "tent": {
+      "pos": "n.",
+      "ipa": "/tent/",
+      "cn": "帐篷"
+    },
+    "luxury": {
+      "pos": "adj./n.",
+      "ipa": "/ˈlʌkʃəri/",
+      "cn": "豪华的；奢华"
+    },
+    "distance": {
+      "pos": "n.",
+      "ipa": "/ˈdɪstəns/",
+      "cn": "距离",
+      "note": "within walking distance 步行可达"
+    },
+    "rock": {
+      "pos": "n.",
+      "ipa": "/rɒk/",
+      "cn": "岩石"
+    },
+    "creature": {
+      "pos": "n.",
+      "ipa": "/ˈkriːtʃə/",
+      "cn": "生物，动物"
+    },
+    "sleep": {
+      "pos": "v./n.",
+      "ipa": "/sliːp/",
+      "cn": "睡觉"
+    },
+    "worry": {
+      "pos": "v./n.",
+      "ipa": "/ˈwʌri/",
+      "cn": "担心"
+    },
+    "worrying": {
+      "pos": "adj.",
+      "ipa": "/ˈwʌriɪŋ/",
+      "cn": "令人担心的"
+    },
+    "until": {
+      "pos": "conj./prep.",
+      "ipa": "/ənˈtɪl/",
+      "cn": "直到"
+    },
+    "frog": {
+      "pos": "n.",
+      "ipa": "/frɒɡ/",
+      "cn": "青蛙"
+    },
+    "embarrassed": {
+      "pos": "adj.",
+      "ipa": "/ɪmˈbærəst/",
+      "cn": "尴尬的，不好意思的"
+    },
+    "fear": {
+      "pos": "n./v.",
+      "ipa": "/fɪə/",
+      "cn": "恐惧，害怕"
+    },
+    "awake": {
+      "pos": "adj.",
+      "ipa": "/əˈweɪk/",
+      "cn": "醒着的",
+      "note": "keep sb awake 让某人睡不着"
+    },
+    "together": {
+      "pos": "adv.",
+      "ipa": "/təˈɡeðə/",
+      "cn": "一起"
+    },
+    "food": {
+      "pos": "n.",
+      "ipa": "/fuːd/",
+      "cn": "食物"
+    },
+    "there'd": {
+      "pos": "缩写",
+      "ipa": "/ðeəd/",
+      "cn": "there would 的缩写"
+    },
+    "nowhere": {
+      "pos": "adv.",
+      "ipa": "/ˈnəʊweə/",
+      "cn": "没有地方"
+    },
+    "trip": {
+      "pos": "n.",
+      "ipa": "/trɪp/",
+      "cn": "旅行"
+    },
+    "himself": {
+      "pos": "pron.",
+      "ipa": "/hɪmˈself/",
+      "cn": "他自己"
+    },
+    "route": {
+      "pos": "n.",
+      "ipa": "/ruːt/",
+      "cn": "路线"
+    },
+    "opinion": {
+      "pos": "n.",
+      "ipa": "/əˈpɪnjən/",
+      "cn": "看法，意见"
+    },
+    "might": {
+      "pos": "modal",
+      "ipa": "/maɪt/",
+      "cn": "可能（may 的过去式）"
+    },
+    "blog": {
+      "pos": "n.",
+      "ipa": "/blɒɡ/",
+      "cn": "博客"
+    },
+    "travel": {
+      "pos": "v./n.",
+      "ipa": "/ˈtrævl/",
+      "cn": "旅行"
+    },
+    "guide": {
+      "pos": "n.",
+      "ipa": "/ɡaɪd/",
+      "cn": "指南；向导"
+    },
+    "story": {
+      "pos": "n.",
+      "ipa": "/ˈstɔːri/",
+      "cn": "故事"
+    },
+    "relax": {
+      "pos": "v.",
+      "ipa": "/rɪˈlæks/",
+      "cn": "放松"
+    },
+    "climbing": {
+      "pos": "n./v.",
+      "ipa": "/ˈklaɪmɪŋ/",
+      "cn": "攀登（climb 的 -ing 形式）"
+    },
+    "little": {
+      "pos": "adj./det.",
+      "ipa": "/ˈlɪtl/",
+      "cn": "小的；一点",
+      "note": "a little 一点"
+    },
+    "rather": {
+      "pos": "adv.",
+      "ipa": "/ˈrɑːðə/",
+      "cn": "相当，颇"
+    },
+    "angry": {
+      "pos": "adj.",
+      "ipa": "/ˈæŋɡri/",
+      "cn": "生气的"
+    },
+    "situation": {
+      "pos": "n.",
+      "ipa": "/ˌsɪtʃuˈeɪʃn/",
+      "cn": "处境，情况"
+    },
+    "admit": {
+      "pos": "v.",
+      "ipa": "/ədˈmɪt/",
+      "cn": "承认",
+      "note": "admit (doing) sth"
+    },
+    "mobile": {
+      "pos": "adj./n.",
+      "ipa": "/ˈməʊbaɪl/",
+      "cn": "移动的；手机",
+      "note": "mobile phone 手机"
+    },
+    "anyone": {
+      "pos": "pron.",
+      "ipa": "/ˈeniwʌn/",
+      "cn": "任何人"
+    },
+    "else": {
+      "pos": "adv.",
+      "ipa": "/els/",
+      "cn": "别的，其他"
+    },
+    "top": {
+      "pos": "n./adj.",
+      "ipa": "/tɒp/",
+      "cn": "顶部；顶部的"
+    },
+    "tiring": {
+      "pos": "adj.",
+      "ipa": "/ˈtaɪərɪŋ/",
+      "cn": "累人的"
+    },
+    "cheap": {
+      "pos": "adj.",
+      "ipa": "/tʃiːp/",
+      "cn": "便宜的"
+    },
+    "challenging": {
+      "pos": "adj.",
+      "ipa": "/ˈtʃælɪndʒɪŋ/",
+      "cn": "有挑战性的"
+    },
+    "approach": {
+      "pos": "v./n.",
+      "ipa": "/əˈprəʊtʃ/",
+      "cn": "靠近；方法"
+    },
+    "forgotten": {
+      "pos": "v.",
+      "ipa": "/fəˈɡɒtn/",
+      "cn": "忘记（forget 的过去分词）"
+    },
+    "responsible": {
+      "pos": "adj.",
+      "ipa": "/rɪˈspɒnsəbl/",
+      "cn": "有责任的",
+      "note": "be responsible for 是…的原因"
+    },
+    "attractive": {
+      "pos": "adj.",
+      "ipa": "/əˈtræktɪv/",
+      "cn": "有吸引力的"
+    },
+    "she'd": {
+      "pos": "缩写",
+      "ipa": "/ʃiːd/",
+      "cn": "she would 的缩写"
+    },
+    "skilled": {
+      "pos": "adj.",
+      "ipa": "/skɪld/",
+      "cn": "有技能的，熟练的"
+    },
+    "less": {
+      "pos": "adv./det.",
+      "ipa": "/les/",
+      "cn": "更少"
+    },
+    "comfortable": {
+      "pos": "adj.",
+      "ipa": "/ˈkʌmftəbl/",
+      "cn": "舒适的"
+    },
+    "convenient": {
+      "pos": "adj.",
+      "ipa": "/kənˈviːniənt/",
+      "cn": "方便的"
+    },
+    "nature": {
+      "pos": "n.",
+      "ipa": "/ˈneɪtʃə/",
+      "cn": "大自然"
+    },
+    "slept": {
+      "pos": "v.",
+      "ipa": "/slept/",
+      "cn": "睡觉（sleep 的过去式）"
+    },
+    "restaurant": {
+      "pos": "n.",
+      "ipa": "/ˈrestrɒnt/",
+      "cn": "餐厅"
+    },
+    "we're": {
+      "pos": "缩写",
+      "ipa": "/wɪə/",
+      "cn": "we are 的缩写"
+    },
+    "pretty": {
+      "pos": "adv./adj.",
+      "ipa": "/ˈprɪti/",
+      "cn": "相当；漂亮的"
+    },
+    "window": {
+      "pos": "n.",
+      "ipa": "/ˈwɪndəʊ/",
+      "cn": "窗户"
+    },
+    "grandma": {
+      "pos": "n.",
+      "ipa": "/ˈɡrænmɑː/",
+      "cn": "奶奶，外婆"
+    },
+    "grandad": {
+      "pos": "n.",
+      "ipa": "/ˈɡrændæd/",
+      "cn": "爷爷，外公"
+    },
+    "lot": {
+      "pos": "n.",
+      "ipa": "/lɒt/",
+      "cn": "许多",
+      "note": "a lot 很多"
+    },
+    "properly": {
+      "pos": "adv.",
+      "ipa": "/ˈprɒpəli/",
+      "cn": "好好地，正确地"
+    },
+    "yesterday": {
+      "pos": "adv./n.",
+      "ipa": "/ˈjestədeɪ/",
+      "cn": "昨天"
+    },
+    "huge": {
+      "pos": "adj.",
+      "ipa": "/hjuːdʒ/",
+      "cn": "巨大的"
+    },
+    "impressed": {
+      "pos": "adj.",
+      "ipa": "/ɪmˈprest/",
+      "cn": "印象深刻的",
+      "note": "be impressed 印象深刻"
+    },
+    "i'm": {
+      "pos": "缩写",
+      "ipa": "/aɪm/",
+      "cn": "I am 的缩写"
+    },
+    "surprised": {
+      "pos": "adj.",
+      "ipa": "/səˈpraɪzd/",
+      "cn": "惊讶的"
+    },
+    "known": {
+      "pos": "v.",
+      "ipa": "/nəʊn/",
+      "cn": "知道（know 的过去分词）",
+      "note": "well known 出名的"
+    },
+    "forward": {
+      "pos": "adv.",
+      "ipa": "/ˈfɔːwəd/",
+      "cn": "向前",
+      "note": "look forward to 期待"
+    },
+    "camp": {
+      "pos": "v./n.",
+      "ipa": "/kæmp/",
+      "cn": "露营；营地"
+    },
+    "haven't": {
+      "pos": "缩写",
+      "ipa": "/ˈhævnt/",
+      "cn": "have not 的缩写"
+    },
+    "seen": {
+      "pos": "v.",
+      "ipa": "/siːn/",
+      "cn": "看见（see 的过去分词）"
+    },
+    "dangerous": {
+      "pos": "adj.",
+      "ipa": "/ˈdeɪndʒərəs/",
+      "cn": "危险的"
+    },
+    "silly": {
+      "pos": "adj.",
+      "ipa": "/ˈsɪli/",
+      "cn": "傻的，好笑的"
+    },
+    "wouldn't": {
+      "pos": "缩写",
+      "ipa": "/ˈwʊdnt/",
+      "cn": "would not 的缩写"
+    },
+    "australia's": {
+      "pos": "n.",
+      "ipa": "/ɒˈstreɪliəz/",
+      "cn": "澳大利亚的（Australia 的所有格）"
+    },
+    "subject's": {
+      "pos": "n.",
+      "ipa": "/ˈsʌbdʒɪkts/",
+      "cn": "主语的（subject 的所有格）"
+    },
+    "speaker's": {
+      "pos": "n.",
+      "ipa": "/ˈspiːkəz/",
+      "cn": "说话人的（speaker 的所有格）"
+    },
+    "donna's": {
+      "pos": "n.",
+      "ipa": "/ˈdɒnəz/",
+      "cn": "Donna 的（所有格）"
+    },
+    "heritage": {
+      "pos": "n.",
+      "ipa": "/ˈherɪtɪdʒ/",
+      "cn": "遗产"
+    },
+    "feeling": {
+      "pos": "n.",
+      "ipa": "/ˈfiːlɪŋ/",
+      "cn": "感觉，情感"
+    },
+    "multiple-choice": {
+      "pos": "adj.",
+      "ipa": "/ˌmʌltɪpl ˈtʃɔɪs/",
+      "cn": "多选一的（四选一）"
+    },
+    "without": {
+      "pos": "prep.",
+      "ipa": "/wɪˈðaʊt/",
+      "cn": "没有，不带"
+    },
+    "change": {
+      "pos": "v./n.",
+      "ipa": "/tʃeɪndʒ/",
+      "cn": "改变；零钱"
+    },
+    "quickly": {
+      "pos": "adv.",
+      "ipa": "/ˈkwɪkli/",
+      "cn": "快速地"
+    },
+    "paragraph": {
+      "pos": "n.",
+      "ipa": "/ˈpærəɡrɑːf/",
+      "cn": "段落"
+    },
+    "came": {
+      "pos": "v.",
+      "ipa": "/keɪm/",
+      "cn": "来（come 的过去式）"
+    },
+    "led": {
+      "pos": "v.",
+      "ipa": "/led/",
+      "cn": "通向（lead 的过去式）"
+    },
+    "heard": {
+      "pos": "v.",
+      "ipa": "/hɜːd/",
+      "cn": "听见（hear 的过去式/过去分词）"
+    },
+    "climb": {
+      "pos": "v.",
+      "ipa": "/klaɪm/",
+      "cn": "爬，攀登"
+    },
+    "hide": {
+      "pos": "v.",
+      "ipa": "/haɪd/",
+      "cn": "藏，躲藏"
+    },
+    "great ocean road": {
+      "pos": "词组",
+      "ipa": "/ɡreɪt ˈəʊʃn rəʊd/",
+      "cn": "大洋路（澳大利亚著名海岸公路）"
+    },
+    "used to": {
+      "pos": "词组",
+      "ipa": "/juːst tə/",
+      "cn": "习惯于（be used to doing sth；注意 to 是介词）"
+    },
+    "make a suggestion": {
+      "pos": "词组",
+      "ipa": "/meɪk ə səˈdʒestʃən/",
+      "cn": "提建议"
+    },
+    "a number of": {
+      "pos": "词组",
+      "ipa": "/ə ˈnʌmbər əv/",
+      "cn": "许多，若干（后接可数名词复数）"
+    },
+    "in fact": {
+      "pos": "词组",
+      "ipa": "/ɪn fækt/",
+      "cn": "事实上，其实"
+    },
+    "looked back": {
+      "pos": "词组",
+      "ipa": "/lʊkt bæk/",
+      "cn": "回头看（look back 的过去式）"
+    },
+    "wild creatures": {
+      "pos": "词组",
+      "ipa": "/waɪld ˈkriːtʃəz/",
+      "cn": "野生动物"
+    }
+  },
+  "options": {},
+  "optionsAna": {},
+  "questions": [
+    {
+      "n": 101,
+      "tag": "①-1",
+      "prompt": "训练①-1 ——「The water was very deep, so Jessica … him not to jump into it.」空格应填哪个动词？",
+      "answer": "H",
+      "opts": {
+        "A": "apologise",
+        "B": "blame",
+        "C": "explain",
+        "D": "invite",
+        "E": "offer",
+        "F": "promise",
+        "G": "recommend",
+        "H": "warn"
+      },
+      "why": "看到 <b>him not to jump</b> 就锁定搭配 <b>warn sb not to do sth</b>（提醒某人别做某事）；事情发生在过去，用过去式 <b>warned</b>。",
+      "clues": [
+        "not to jump 搭配",
+        "was very deep 过去语境"
+      ],
+      "others": [
+        [
+          "A",
+          "apologise 是「道歉」（apologise to sb for sth）—— 句子没有道歉的理由，也没有 for 短语。"
+        ],
+        [
+          "B",
+          "blame 是「责怪」（blame sb for sth）—— 空格后是 not to jump，不是被责怪的原因。"
+        ],
+        [
+          "C",
+          "explain 是「解释」—— 接 that 从句或 explain sth to sb，不能接 sb not to do。"
+        ],
+        [
+          "D",
+          "invite 是「邀请」（invite sb to do sth）—— 是「邀请做某事」，与「劝他别做」相反。"
+        ],
+        [
+          "E",
+          "offer 是「主动提出」（offer to do sth）—— 是主动帮忙，不能接 him not to do。"
+        ],
+        [
+          "F",
+          "promise 是「承诺」（promise to do sth）—— 是自己保证，不是提醒别人。"
+        ],
+        [
+          "G",
+          "recommend 是「推荐、建议」—— 后接 that 从句或动名词，不接 sb not to do。"
+        ]
+      ],
+      "tip": "两步走：①看空格前后的搭配（not to do / that 从句 / to do…）锁定动词；②按时间定形式（过去的事用过去式）。①里 8 个动词各用一次，拿不准时用排除法。",
+      "ana": {
+        "parts": [
+          [
+            "主语",
+            "<code>Jessica</code> —— Jessica"
+          ],
+          [
+            "谓语",
+            "<code>warned</code> —— 提醒（warn sb not to do sth）"
+          ],
+          [
+            "宾语",
+            "<code>him</code> —— 他"
+          ],
+          [
+            "宾补",
+            "<code>not to jump into it</code> —— 不要跳进去"
+          ],
+          [
+            "原因分句",
+            "<code>The water was very deep</code> —— 水很深"
+          ]
+        ],
+        "gram": [
+          "warn sb not to do sth 提醒某人不要做某事",
+          "过去式 warned"
+        ],
+        "tr": "水很深，所以 Jessica 提醒他不要跳进去。"
+      }
+    },
+    {
+      "n": 102,
+      "tag": "①-2",
+      "prompt": "训练①-2 ——「I … that you buy one of these hair dryers.」空格应填哪个动词？",
+      "answer": "G",
+      "opts": {
+        "A": "apologise",
+        "B": "blame",
+        "C": "explain",
+        "D": "invite",
+        "E": "offer",
+        "F": "promise",
+        "G": "recommend",
+        "H": "warn"
+      },
+      "why": "后面是 <b>that you buy…</b>（建议对方买）——<b>recommend that sb (should) do sth</b>，从句用原形 buy；说话人现在推荐，主句用原形 <b>recommend</b>。",
+      "clues": [
+        "that you buy",
+        "I've got one myself 亲测好评"
+      ],
+      "others": [
+        [
+          "A",
+          "apologise 是「道歉」—— 后面 that 从句讲买吹风机，没有道歉的对象。"
+        ],
+        [
+          "B",
+          "blame 是「责怪」—— 没有在怪谁。"
+        ],
+        [
+          "C",
+          "explain 是「解释」—— 不接表示建议的 that you buy…。"
+        ],
+        [
+          "D",
+          "invite 是「邀请」—— 搭配是 invite sb to sth，不接 that 从句。"
+        ],
+        [
+          "E",
+          "offer 是「主动提出」—— offer 后接 to do，不接 that 从句。"
+        ],
+        [
+          "F",
+          "promise 是「承诺」—— 是主语自己答应，不是推荐对方。"
+        ],
+        [
+          "H",
+          "warn 是「警告」—— 这里是推荐好物，没有警告的内容。"
+        ]
+      ],
+      "tip": "两步走：①看空格前后的搭配（not to do / that 从句 / to do…）锁定动词；②按时间定形式（过去的事用过去式）。①里 8 个动词各用一次，拿不准时用排除法。",
+      "ana": {
+        "parts": [
+          [
+            "主语",
+            "I —— 我"
+          ],
+          [
+            "谓语",
+            "<code>recommend</code> —— 推荐、建议"
+          ],
+          [
+            "宾语从句",
+            "<code>that you buy one of these hair dryers</code> —— 你买一台这种吹风机"
+          ]
+        ],
+        "gram": [
+          "recommend that sb (should) do sth 虚拟语气，should 常省略",
+          "用原形 recommend（现在的建议）"
+        ],
+        "tr": "我建议你买一台这种吹风机——我自己就有一台，特别好用！"
+      }
+    },
+    {
+      "n": 103,
+      "tag": "①-3",
+      "prompt": "训练①-3 ——「Max … to me for damaging my bike when he borrowed it.」空格应填哪个动词？",
+      "answer": "A",
+      "opts": {
+        "A": "apologise",
+        "B": "blame",
+        "C": "explain",
+        "D": "invite",
+        "E": "offer",
+        "F": "promise",
+        "G": "recommend",
+        "H": "warn"
+      },
+      "why": "搭配 <b>to me for damaging my bike</b> 正是 <b>apologise to sb for sth</b>（为某事向某人道歉）；借用自行车是过去的事，用 <b>apologised</b>。",
+      "clues": [
+        "to me for damaging（双搭配）",
+        "when he borrowed it"
+      ],
+      "others": [
+        [
+          "B",
+          "blame 是「责怪」—— 责怪的结构是 blame sb for sth，没有 to me 这个对象搭配。"
+        ],
+        [
+          "C",
+          "explain 是「解释」—— 介绍搭配是 explain sth to sb，不是 for damaging。"
+        ],
+        [
+          "D",
+          "invite 是「邀请」—— invite sb to sth 的 to 后面接活动，不接 me 这种人。"
+        ],
+        [
+          "E",
+          "offer 是「主动提出」—— offer to do 后面直接接动词，不接 to me。"
+        ],
+        [
+          "F",
+          "promise 是「承诺」—— 承诺没有「to sb」这层结构，也没有道歉的意思。"
+        ],
+        [
+          "G",
+          "recommend 是「推荐」—— 与「弄坏了车道歉」的语境无关。"
+        ],
+        [
+          "H",
+          "warn 是「警告」—— warn 接 sb not to do / about sth，不接 to me for sth。"
+        ]
+      ],
+      "tip": "两步走：①看空格前后的搭配（not to do / that 从句 / to do…）锁定动词；②按时间定形式（过去的事用过去式）。①里 8 个动词各用一次，拿不准时用排除法。",
+      "ana": {
+        "parts": [
+          [
+            "主语",
+            "<code>Max</code> —— Max"
+          ],
+          [
+            "谓语",
+            "<code>apologised</code> —— 道歉"
+          ],
+          [
+            "对象状语",
+            "<code>to me</code> —— 向我"
+          ],
+          [
+            "原因状语",
+            "<code>for damaging my bike</code> —— 因为弄坏了我的自行车"
+          ]
+        ],
+        "gram": [
+          "apologise to sb for sth 为某事向某人道歉",
+          "过去式 apologised"
+        ],
+        "tr": "Max 因为弄坏了我借给他的自行车向我道了歉。"
+      }
+    },
+    {
+      "n": 104,
+      "tag": "①-4",
+      "prompt": "训练①-4 ——「The boys … that they would be late because they had an exam after school.」空格应填哪个动词？",
+      "answer": "C",
+      "opts": {
+        "A": "apologise",
+        "B": "blame",
+        "C": "explain",
+        "D": "invite",
+        "E": "offer",
+        "F": "promise",
+        "G": "recommend",
+        "H": "warn"
+      },
+      "why": "后面接 <b>that they would be late</b>（说明原因）——<b>explain that…</b>；事情发生在过去，用 <b>explained</b>。",
+      "clues": [
+        "that 从句",
+        "because they had an exam"
+      ],
+      "others": [
+        [
+          "A",
+          "apologise 是「道歉」—— 说「会迟到、因为有考试」是在说明原因，不是道歉。"
+        ],
+        [
+          "B",
+          "blame 是「责怪」—— 后面没有责怪谁。"
+        ],
+        [
+          "D",
+          "invite 是「邀请」—— 不接 that 从句，这里也没有邀请活动。"
+        ],
+        [
+          "E",
+          "offer 是「主动提出」—— 不接 that 从句，事情也不是帮忙。"
+        ],
+        [
+          "F",
+          "promise 是「承诺」—— promise 是保证自己会怎样；这里是解释（because…）为什么迟到。"
+        ],
+        [
+          "G",
+          "recommend 是「推荐」—— recommend that sb do 是「建议你去做」，这里 they would be late 不是建议。"
+        ],
+        [
+          "H",
+          "warn 是「警告」—— 警告要有防备的危险，这里只是说明迟到的原因。"
+        ]
+      ],
+      "tip": "两步走：①看空格前后的搭配（not to do / that 从句 / to do…）锁定动词；②按时间定形式（过去的事用过去式）。①里 8 个动词各用一次，拿不准时用排除法。",
+      "ana": {
+        "parts": [
+          [
+            "主语",
+            "<code>The boys</code> —— 男孩们"
+          ],
+          [
+            "谓语",
+            "<code>explained</code> —— 解释"
+          ],
+          [
+            "宾语从句",
+            "<code>that they would be late</code> —— 他们会迟到"
+          ],
+          [
+            "原因状语从句",
+            "<code>because they had an exam after school</code> —— 因为放学后有考试"
+          ]
+        ],
+        "gram": [
+          "explain that… 解释（后接从句）",
+          "过去式 explained"
+        ],
+        "tr": "男孩们解释说他们会迟到，因为放学后有一场考试。"
+      }
+    },
+    {
+      "n": 105,
+      "tag": "①-5",
+      "prompt": "训练①-5 ——「The shop … to fix my phone by Tuesday, but it still wasn't ready by Friday.」空格应填哪个动词？",
+      "answer": "F",
+      "opts": {
+        "A": "apologise",
+        "B": "blame",
+        "C": "explain",
+        "D": "invite",
+        "E": "offer",
+        "F": "promise",
+        "G": "recommend",
+        "H": "warn"
+      },
+      "why": "搭配 <b>to fix my phone by Tuesday</b> 与 <b>but it still wasn't ready</b> 对照：答应修好却没修好 —— <b>promise to do sth</b>，过去式 <b>promised</b>。",
+      "clues": [
+        "to fix my phone",
+        "wasn't ready 前后反差"
+      ],
+      "others": [
+        [
+          "A",
+          "apologise 是「道歉」—— 后面接 to do 不搭（apologise 要配 to sb for sth）。"
+        ],
+        [
+          "B",
+          "blame 是「责怪」—— 没有责怪的对象。"
+        ],
+        [
+          "C",
+          "explain 是「解释」—— explain 不接 to do。"
+        ],
+        [
+          "D",
+          "invite 是「邀请」—— 这里没有邀请谁做什么。"
+        ],
+        [
+          "E",
+          "offer 是「主动提出」—— 也能接 to do，但 offer 是「主动白帮忙」的语气；这里付钱修手机、还约定期限，配 not ready 的反差，是「答应了却没做到」。"
+        ],
+        [
+          "G",
+          "recommend 是「推荐」—— 与修手机的期限无关。"
+        ],
+        [
+          "H",
+          "warn 是「警告」—— 没有警告的内容；warn sb to do 是提醒对方，不是自己答应。"
+        ]
+      ],
+      "tip": "两步走：①看空格前后的搭配（not to do / that 从句 / to do…）锁定动词；②按时间定形式（过去的事用过去式）。①里 8 个动词各用一次，拿不准时用排除法。",
+      "ana": {
+        "parts": [
+          [
+            "主语",
+            "<code>The shop</code> —— 商店"
+          ],
+          [
+            "谓语",
+            "<code>promised</code> —— 答应"
+          ],
+          [
+            "宾语",
+            "<code>to fix my phone</code> —— 修好我的手机"
+          ],
+          [
+            "时间状语",
+            "<code>by Tuesday</code> —— 最晚周二"
+          ]
+        ],
+        "gram": [
+          "promise to do sth 答应做某事",
+          "过去式 promised"
+        ],
+        "tr": "商店答应周二前修好我的手机，可到了周五还没修好。"
+      }
+    },
+    {
+      "n": 106,
+      "tag": "①-6",
+      "prompt": "训练①-6 ——「Amelie … me to her birthday party, which was really kind of her.」空格应填哪个动词？",
+      "answer": "D",
+      "opts": {
+        "A": "apologise",
+        "B": "blame",
+        "C": "explain",
+        "D": "invite",
+        "E": "offer",
+        "F": "promise",
+        "G": "recommend",
+        "H": "warn"
+      },
+      "why": "搭配 <b>me to her birthday party</b> 正是 <b>invite sb to sth</b>（邀请某人参加活动）；派对已经办过，用 <b>invited</b>。",
+      "clues": [
+        "me to her birthday party",
+        "which was really kind"
+      ],
+      "others": [
+        [
+          "A",
+          "apologise 是「道歉」—— 搭配是 apologise to sb for sth，不是 me to party。"
+        ],
+        [
+          "B",
+          "blame 是「责怪」—— 没有责怪的内容和理由。"
+        ],
+        [
+          "C",
+          "explain 是「解释」—— explain sth to sb 与「去派对」无关。"
+        ],
+        [
+          "E",
+          "offer 是「主动提出」—— offer to do 后面接动词，不是 me to her party（先人后活动）。"
+        ],
+        [
+          "F",
+          "promise 是「承诺」—— 不接「me to 活动」这种结构。"
+        ],
+        [
+          "G",
+          "recommend 是「推荐」—— 不是推荐活动。"
+        ],
+        [
+          "H",
+          "warn 是「警告」—— 这里没有提醒的危险。"
+        ]
+      ],
+      "tip": "两步走：①看空格前后的搭配（not to do / that 从句 / to do…）锁定动词；②按时间定形式（过去的事用过去式）。①里 8 个动词各用一次，拿不准时用排除法。",
+      "ana": {
+        "parts": [
+          [
+            "主语",
+            "<code>Amelie</code> —— Amelie"
+          ],
+          [
+            "谓语",
+            "<code>invited</code> —— 邀请"
+          ],
+          [
+            "宾语",
+            "me —— 我"
+          ],
+          [
+            "目的状语",
+            "<code>to her birthday party</code> —— 去她的生日派对"
+          ]
+        ],
+        "gram": [
+          "invite sb to sth 邀请某人参加…",
+          "过去式 invited"
+        ],
+        "tr": "Amelie 邀请我去她的生日派对，她真是好心。"
+      }
+    },
+    {
+      "n": 107,
+      "tag": "①-7",
+      "prompt": "训练①-7 ——「My cousin Miguel … to give me a lift into town in his new car.」空格应填哪个动词？",
+      "answer": "E",
+      "opts": {
+        "A": "apologise",
+        "B": "blame",
+        "C": "explain",
+        "D": "invite",
+        "E": "offer",
+        "F": "promise",
+        "G": "recommend",
+        "H": "warn"
+      },
+      "why": "搭配 <b>to give me a lift</b>（主动捎人）——<b>offer to do sth</b>；事情已发生，用 <b>offered</b>。",
+      "clues": [
+        "to give me a lift",
+        "in his new car"
+      ],
+      "others": [
+        [
+          "A",
+          "apologise 是「道歉」—— 没有道歉的理由。"
+        ],
+        [
+          "B",
+          "blame 是「责怪」—— 没有责怪的对象。"
+        ],
+        [
+          "C",
+          "explain 是「解释」—— explain 不接 to do。"
+        ],
+        [
+          "D",
+          "invite 是「邀请」—— 如果是邀请，也该是「邀请我参加活动」，而不是「开车捎我」。"
+        ],
+        [
+          "F",
+          "promise 是「承诺」—— 也能接 to do；但承诺通常在回应请求，这里是在夸 Miguel 主动好意，用 offer 更贴（且①里每个动词只用一次）。"
+        ],
+        [
+          "G",
+          "recommend 是「推荐」—— 与捎人无关。"
+        ],
+        [
+          "H",
+          "warn 是「警告」—— 没有提醒危险的内容。"
+        ]
+      ],
+      "tip": "两步走：①看空格前后的搭配（not to do / that 从句 / to do…）锁定动词；②按时间定形式（过去的事用过去式）。①里 8 个动词各用一次，拿不准时用排除法。",
+      "ana": {
+        "parts": [
+          [
+            "主语",
+            "<code>My cousin Miguel</code> —— 我表哥 Miguel"
+          ],
+          [
+            "谓语",
+            "<code>offered</code> —— 主动提出"
+          ],
+          [
+            "宾语",
+            "<code>to give me a lift</code> —— 捎我一程"
+          ]
+        ],
+        "gram": [
+          "offer to do sth 主动提出做某事",
+          "give sb a lift 捎某人一程"
+        ],
+        "tr": "我表哥 Miguel 主动提出开他的新车捎我进城。"
+      }
+    },
+    {
+      "n": 108,
+      "tag": "①-8",
+      "prompt": "训练①-8 ——「My mum … me for the mess in the kitchen, but really it was my sister's fault.」空格应填哪个动词？",
+      "answer": "B",
+      "opts": {
+        "A": "apologise",
+        "B": "blame",
+        "C": "explain",
+        "D": "invite",
+        "E": "offer",
+        "F": "promise",
+        "G": "recommend",
+        "H": "warn"
+      },
+      "why": "搭配 <b>me for the mess</b> 正是 <b>blame sb for sth</b>（为某事责怪某人）；厨房早就乱了，用 <b>blamed</b>。",
+      "clues": [
+        "me for the mess",
+        "it was my sister's fault 冤案反转"
+      ],
+      "others": [
+        [
+          "A",
+          "apologise 是「道歉」—— 妈妈没有道歉；而且搭配是 to sb for sth。"
+        ],
+        [
+          "C",
+          "explain 是「解释」—— for the mess 说明的是责怪的由头，explain 不接 sb for sth。"
+        ],
+        [
+          "D",
+          "invite 是「邀请」—— 与厨房的脏乱无关。"
+        ],
+        [
+          "E",
+          "offer 是「主动提出」—— 不接 me for the mess。"
+        ],
+        [
+          "F",
+          "promise 是「承诺」—— 没有承诺的内容。"
+        ],
+        [
+          "G",
+          "recommend 是「推荐」—— 这里不是推荐，是问责。"
+        ],
+        [
+          "H",
+          "warn 是「警告」—— warn sb 是提醒防备，不是为脏乱问责。"
+        ]
+      ],
+      "tip": "两步走：①看空格前后的搭配（not to do / that 从句 / to do…）锁定动词；②按时间定形式（过去的事用过去式）。①里 8 个动词各用一次，拿不准时用排除法。",
+      "ana": {
+        "parts": [
+          [
+            "主语",
+            "<code>My mum</code> —— 我妈妈"
+          ],
+          [
+            "谓语",
+            "<code>blamed</code> —— 责怪"
+          ],
+          [
+            "宾语",
+            "me —— 我"
+          ],
+          [
+            "原因状语",
+            "<code>for the mess in the kitchen</code> —— 因为厨房的脏乱"
+          ]
+        ],
+        "gram": [
+          "blame sb for sth 为某事责怪某人",
+          "过去式 blamed"
+        ],
+        "tr": "妈妈因为厨房一团糟责怪我，可其实那是妹妹的错。"
+      }
+    },
+    {
+      "n": 109,
+      "tag": "③-1",
+      "prompt": "训练③-1 —— 改正后的第 1 句：说话人这句话的目的是什么？",
+      "answer": "c",
+      "opts": {
+        "a": "to give an explanation",
+        "b": "to encourage others to do something",
+        "c": "to make a suggestion",
+        "d": "to refuse to do something",
+        "e": "to offer to do something for someone",
+        "f": "to remind someone to do something",
+        "g": "to persuade someone to do something",
+        "h": "to make a recommendation"
+      },
+      "why": "My friend <b>suggested going / (that) we (should) go</b>… 是提出『去公园踢球』的建议，对应 <b>to make a suggestion</b>（提建议）。",
+      "clues": [
+        "先想动词的含义（suggest 建议 / explain 解释 / recommend 推荐…）",
+        "再看句子想达到的效果"
+      ],
+      "others": [
+        [
+          "a",
+          "「to give an explanation」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "b",
+          "「to encourage others to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "d",
+          "「to refuse to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "e",
+          "「to offer to do something for someone」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "f",
+          "「to remind someone to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "g",
+          "「to persuade someone to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "h",
+          "「to make a recommendation」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ]
+      ],
+      "tip": "purpose（目的）＝动词想达到的效果：建议 / 解释 / 推荐 / 拒绝 / 提醒 / 主动帮忙 / 鼓励 / 说服。先把动词挑出来，再对号入座。",
+      "ana": {
+        "parts": [
+          [
+            "谓语",
+            "<code>suggested going</code> —— 建议去（动名词）"
+          ],
+          [
+            "宾语",
+            "<code>to the park</code> —— 去公园"
+          ]
+        ],
+        "gram": [
+          "suggest doing sth 建议做某事",
+          "make a suggestion 提建议"
+        ],
+        "tr": "我朋友建议去公园踢足球。"
+      }
+    },
+    {
+      "n": 110,
+      "tag": "③-2",
+      "prompt": "训练③-2 —— 改正后的第 2 句：说话人这句话的目的是什么？",
+      "answer": "a",
+      "opts": {
+        "a": "to give an explanation",
+        "b": "to encourage others to do something",
+        "c": "to make a suggestion",
+        "d": "to refuse to do something",
+        "e": "to offer to do something for someone",
+        "f": "to remind someone to do something",
+        "g": "to persuade someone to do something",
+        "h": "to make a recommendation"
+      },
+      "why": "Zara <b>explained to the teacher that</b>… 是在说明『为什么没来上学』，目的是 <b>to give an explanation</b>（作出解释）。",
+      "clues": [
+        "先想动词的含义（suggest 建议 / explain 解释 / recommend 推荐…）",
+        "再看句子想达到的效果"
+      ],
+      "others": [
+        [
+          "b",
+          "「to encourage others to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "c",
+          "「to make a suggestion」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "d",
+          "「to refuse to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "e",
+          "「to offer to do something for someone」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "f",
+          "「to remind someone to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "g",
+          "「to persuade someone to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "h",
+          "「to make a recommendation」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ]
+      ],
+      "tip": "purpose（目的）＝动词想达到的效果：建议 / 解释 / 推荐 / 拒绝 / 提醒 / 主动帮忙 / 鼓励 / 说服。先把动词挑出来，再对号入座。",
+      "ana": {
+        "parts": [
+          [
+            "谓语",
+            "<code>explained to the teacher</code> —— 向老师解释"
+          ],
+          [
+            "宾语从句",
+            "<code>that she had been off school</code> —— 她没来上学"
+          ]
+        ],
+        "gram": [
+          "explain sth to sb 向某人解释",
+          "give an explanation 作出解释"
+        ],
+        "tr": "Zara 向老师解释她因为生病没来上学。"
+      }
+    },
+    {
+      "n": 111,
+      "tag": "③-3",
+      "prompt": "训练③-3 —— 改正后的第 3 句：说话人这句话的目的是什么？",
+      "answer": "h",
+      "opts": {
+        "a": "to give an explanation",
+        "b": "to encourage others to do something",
+        "c": "to make a suggestion",
+        "d": "to refuse to do something",
+        "e": "to offer to do something for someone",
+        "f": "to remind someone to do something",
+        "g": "to persuade someone to do something",
+        "h": "to make a recommendation"
+      },
+      "why": "We <b>recommend (that) you wash</b>… 是在推荐这种衣服的洗法，目的是 <b>to make a recommendation</b>（提出推荐）。",
+      "clues": [
+        "先想动词的含义（suggest 建议 / explain 解释 / recommend 推荐…）",
+        "再看句子想达到的效果"
+      ],
+      "others": [
+        [
+          "a",
+          "「to give an explanation」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "b",
+          "「to encourage others to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "c",
+          "「to make a suggestion」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "d",
+          "「to refuse to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "e",
+          "「to offer to do something for someone」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "f",
+          "「to remind someone to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "g",
+          "「to persuade someone to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ]
+      ],
+      "tip": "purpose（目的）＝动词想达到的效果：建议 / 解释 / 推荐 / 拒绝 / 提醒 / 主动帮忙 / 鼓励 / 说服。先把动词挑出来，再对号入座。",
+      "ana": {
+        "parts": [
+          [
+            "谓语",
+            "<code>recommend (that) you wash</code> —— 建议你洗"
+          ],
+          [
+            "方式状语",
+            "<code>in warm water</code> —— 用温水"
+          ]
+        ],
+        "gram": [
+          "recommend (that) sb (should) do sth",
+          "make a recommendation 提出推荐"
+        ],
+        "tr": "我们建议你用温水洗这件衣服。"
+      }
+    },
+    {
+      "n": 112,
+      "tag": "③-4",
+      "prompt": "训练③-4 —— 改正后的第 4 句：说话人这句话的目的是什么？",
+      "answer": "d",
+      "opts": {
+        "a": "to give an explanation",
+        "b": "to encourage others to do something",
+        "c": "to make a suggestion",
+        "d": "to refuse to do something",
+        "e": "to offer to do something for someone",
+        "f": "to remind someone to do something",
+        "g": "to persuade someone to do something",
+        "h": "to make a recommendation"
+      },
+      "why": "The thief <b>refused to say</b>… 是小偷『拒绝』说出藏东西的地方，目的是 <b>to refuse to do something</b>（拒绝做某事）。",
+      "clues": [
+        "先想动词的含义（suggest 建议 / explain 解释 / recommend 推荐…）",
+        "再看句子想达到的效果"
+      ],
+      "others": [
+        [
+          "a",
+          "「to give an explanation」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "b",
+          "「to encourage others to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "c",
+          "「to make a suggestion」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "e",
+          "「to offer to do something for someone」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "f",
+          "「to remind someone to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "g",
+          "「to persuade someone to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "h",
+          "「to make a recommendation」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ]
+      ],
+      "tip": "purpose（目的）＝动词想达到的效果：建议 / 解释 / 推荐 / 拒绝 / 提醒 / 主动帮忙 / 鼓励 / 说服。先把动词挑出来，再对号入座。",
+      "ana": {
+        "parts": [
+          [
+            "谓语",
+            "<code>refused to say</code> —— 拒绝说出"
+          ],
+          [
+            "宾语从句",
+            "<code>where he had hidden the stolen diamonds</code> —— 钻石藏在哪里"
+          ]
+        ],
+        "gram": [
+          "refuse to do sth 拒绝做某事"
+        ],
+        "tr": "小偷拒绝说出钻石藏在了哪里。"
+      }
+    },
+    {
+      "n": 113,
+      "tag": "③-5",
+      "prompt": "训练③-5 —— 改正后的第 5 句：说话人这句话的目的是什么？",
+      "answer": "f",
+      "opts": {
+        "a": "to give an explanation",
+        "b": "to encourage others to do something",
+        "c": "to make a suggestion",
+        "d": "to refuse to do something",
+        "e": "to offer to do something for someone",
+        "f": "to remind someone to do something",
+        "g": "to persuade someone to do something",
+        "h": "to make a recommendation"
+      },
+      "why": "Dad <b>reminded me to check</b>… 是提醒『检查轮胎』，目的是 <b>to remind someone to do something</b>（提醒某人做某事）。",
+      "clues": [
+        "先想动词的含义（suggest 建议 / explain 解释 / recommend 推荐…）",
+        "再看句子想达到的效果"
+      ],
+      "others": [
+        [
+          "a",
+          "「to give an explanation」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "b",
+          "「to encourage others to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "c",
+          "「to make a suggestion」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "d",
+          "「to refuse to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "e",
+          "「to offer to do something for someone」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "g",
+          "「to persuade someone to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "h",
+          "「to make a recommendation」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ]
+      ],
+      "tip": "purpose（目的）＝动词想达到的效果：建议 / 解释 / 推荐 / 拒绝 / 提醒 / 主动帮忙 / 鼓励 / 说服。先把动词挑出来，再对号入座。",
+      "ana": {
+        "parts": [
+          [
+            "谓语",
+            "<code>reminded me</code> —— 提醒我"
+          ],
+          [
+            "宾补",
+            "<code>to check the tyres</code> —— 检查轮胎"
+          ]
+        ],
+        "gram": [
+          "remind sb to do sth 提醒某人做某事"
+        ],
+        "tr": "爸爸提醒我出门前检查自行车轮胎。"
+      }
+    },
+    {
+      "n": 114,
+      "tag": "③-6",
+      "prompt": "训练③-6 —— 改正后的第 6 句：说话人这句话的目的是什么？",
+      "answer": "e",
+      "opts": {
+        "a": "to give an explanation",
+        "b": "to encourage others to do something",
+        "c": "to make a suggestion",
+        "d": "to refuse to do something",
+        "e": "to offer to do something for someone",
+        "f": "to remind someone to do something",
+        "g": "to persuade someone to do something",
+        "h": "to make a recommendation"
+      },
+      "why": "Aisha <b>offered to help me</b>… 是主动提出帮做作业，目的是 <b>to offer to do something for someone</b>（主动为某人做事）。",
+      "clues": [
+        "先想动词的含义（suggest 建议 / explain 解释 / recommend 推荐…）",
+        "再看句子想达到的效果"
+      ],
+      "others": [
+        [
+          "a",
+          "「to give an explanation」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "b",
+          "「to encourage others to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "c",
+          "「to make a suggestion」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "d",
+          "「to refuse to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "f",
+          "「to remind someone to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "g",
+          "「to persuade someone to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "h",
+          "「to make a recommendation」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ]
+      ],
+      "tip": "purpose（目的）＝动词想达到的效果：建议 / 解释 / 推荐 / 拒绝 / 提醒 / 主动帮忙 / 鼓励 / 说服。先把动词挑出来，再对号入座。",
+      "ana": {
+        "parts": [
+          [
+            "谓语",
+            "<code>offered to help me</code> —— 主动帮我"
+          ],
+          [
+            "状语",
+            "<code>with my maths homework</code> —— 做数学作业"
+          ]
+        ],
+        "gram": [
+          "offer to do sth for sb 主动为某人做某事"
+        ],
+        "tr": "Aisha 提出帮我做数学作业。"
+      }
+    },
+    {
+      "n": 115,
+      "tag": "③-7",
+      "prompt": "训练③-7 —— 改正后的第 7 句：说话人这句话的目的是什么？",
+      "answer": "b",
+      "opts": {
+        "a": "to give an explanation",
+        "b": "to encourage others to do something",
+        "c": "to make a suggestion",
+        "d": "to refuse to do something",
+        "e": "to offer to do something for someone",
+        "f": "to remind someone to do something",
+        "g": "to persuade someone to do something",
+        "h": "to make a recommendation"
+      },
+      "why": "The teacher <b>encouraged us to read</b>… 是鼓励多读书，目的是 <b>to encourage others to do something</b>（鼓励别人做某事）。",
+      "clues": [
+        "先想动词的含义（suggest 建议 / explain 解释 / recommend 推荐…）",
+        "再看句子想达到的效果"
+      ],
+      "others": [
+        [
+          "a",
+          "「to give an explanation」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "c",
+          "「to make a suggestion」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "d",
+          "「to refuse to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "e",
+          "「to offer to do something for someone」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "f",
+          "「to remind someone to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "g",
+          "「to persuade someone to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "h",
+          "「to make a recommendation」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ]
+      ],
+      "tip": "purpose（目的）＝动词想达到的效果：建议 / 解释 / 推荐 / 拒绝 / 提醒 / 主动帮忙 / 鼓励 / 说服。先把动词挑出来，再对号入座。",
+      "ana": {
+        "parts": [
+          [
+            "谓语",
+            "<code>encouraged us</code> —— 鼓励我们"
+          ],
+          [
+            "宾补",
+            "<code>to read more books</code> —— 多读书"
+          ]
+        ],
+        "gram": [
+          "encourage sb to do sth 鼓励某人做某事"
+        ],
+        "tr": "文学老师鼓励我们多在家读书。"
+      }
+    },
+    {
+      "n": 116,
+      "tag": "③-8",
+      "prompt": "训练③-8 —— 改正后的第 8 句：说话人这句话的目的是什么？",
+      "answer": "g",
+      "opts": {
+        "a": "to give an explanation",
+        "b": "to encourage others to do something",
+        "c": "to make a suggestion",
+        "d": "to refuse to do something",
+        "e": "to offer to do something for someone",
+        "f": "to remind someone to do something",
+        "g": "to persuade someone to do something",
+        "h": "to make a recommendation"
+      },
+      "why": "I tried to <b>persuade my parents to let me</b>… 是想说服爸妈，目的是 <b>to persuade someone to do something</b>（说服某人做某事）。",
+      "clues": [
+        "先想动词的含义（suggest 建议 / explain 解释 / recommend 推荐…）",
+        "再看句子想达到的效果"
+      ],
+      "others": [
+        [
+          "a",
+          "「to give an explanation」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "b",
+          "「to encourage others to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "c",
+          "「to make a suggestion」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "d",
+          "「to refuse to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "e",
+          "「to offer to do something for someone」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "f",
+          "「to remind someone to do something」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ],
+        [
+          "h",
+          "「to make a recommendation」不是这句话在做的事（每个意图在八句里只配一次）。"
+        ]
+      ],
+      "tip": "purpose（目的）＝动词想达到的效果：建议 / 解释 / 推荐 / 拒绝 / 提醒 / 主动帮忙 / 鼓励 / 说服。先把动词挑出来，再对号入座。",
+      "ana": {
+        "parts": [
+          [
+            "谓语",
+            "<code>tried to persuade</code> —— 试图说服"
+          ],
+          [
+            "宾语",
+            "<code>my parents</code> —— 我爸妈"
+          ],
+          [
+            "宾补",
+            "<code>to let me stay out late</code> —— 让我在外面待晚些"
+          ]
+        ],
+        "gram": [
+          "persuade sb to do sth 说服某人做某事"
+        ],
+        "tr": "我试图说服爸妈让我在外面待晚些。"
+      }
+    },
+    {
+      "n": 117,
+      "tag": "④-1",
+      "prompt": "训练④-1 —— 这段文字出自哪种文本？",
+      "answer": "c",
+      "opts": {
+        "a": "an advertisement",
+        "b": "a travel guide",
+        "c": "a story"
+      },
+      "why": "用 <b>I</b> 讲亲身经历、有心理活动（I was so excited），结尾还以 just in case 表遗憾 —— 典型的 <b>story</b>。",
+      "clues": [
+        "The four of us came down… 第一人称叙事",
+        "wished I had 心理描写"
+      ],
+      "others": [
+        [
+          "a",
+          "广告要推销东西、号召购买 —— 这段只是在讲经历。"
+        ],
+        [
+          "b",
+          "旅游指南是给游客的建议信息（路线、价格、开放时间）—— 这段没有。"
+        ]
+      ],
+      "tip": "看人称和心理词：第一人称 + 情绪感受 = 故事。",
+      "ana": {
+        "parts": [
+          [
+            "内容",
+            "第一人称叙述下山经历 + 情绪（nervous / excited / wished）"
+          ],
+          [
+            "文体",
+            "叙事文本（story）"
+          ]
+        ],
+        "gram": [
+          "advertisement 广告",
+          "travel guide 旅行指南",
+          "story 故事"
+        ],
+        "tr": "（这段文字出自一篇第一人称的叙事文字。）"
+      }
+    },
+    {
+      "n": 118,
+      "tag": "④-2",
+      "prompt": "训练④-2 —— 说话人当时正在做什么？",
+      "answer": "b",
+      "opts": {
+        "a": "relaxing in a village",
+        "b": "climbing down a mountain",
+        "c": "watching some people climbing"
+      },
+      "why": "首句 <b>The four of us came down the mountain</b>（我们四人下山）说明她在下山 —— <b>climbing down a mountain</b>。",
+      "clues": [
+        "came down the mountain",
+        "the track that led to the village"
+      ],
+      "others": [
+        [
+          "a",
+          "文章说不想到村里不行，正在从山上往村里赶 —— 不是『在村里放松』。"
+        ],
+        [
+          "c",
+          "看别人爬山的是别处的游客（第 13 段），不是这一幕。"
+        ]
+      ],
+      "tip": "动作题只认第一个动作句：came down the mountain。",
+      "ana": {
+        "parts": [
+          [
+            "动作",
+            "<code>came down the mountain</code> —— 下山"
+          ],
+          [
+            "目标",
+            "<code>the village far below</code> —— 山下的村庄"
+          ]
+        ],
+        "gram": [
+          "come down 下来"
+        ],
+        "tr": "（说话人正在下山，往山下的村庄赶。）"
+      }
+    },
+    {
+      "n": 119,
+      "tag": "④-3",
+      "prompt": "训练④-3 —— 她当时感觉如何？",
+      "answer": "a",
+      "opts": {
+        "a": "a little worried",
+        "b": "rather bored",
+        "c": "angry with the other people"
+      },
+      "why": "雪下起来、路更难走：<b>it became more difficult…</b> + <b>wished I had, just in case</b> —— 有点担心（<b>a little worried</b>）。",
+      "clues": [
+        "it became more difficult to follow the path",
+        "wished I had, just in case"
+      ],
+      "others": [
+        [
+          "b",
+          "整段情绪紧迫，不是无聊。"
+        ],
+        [
+          "c",
+          "文中没有对同伴不满，只有自己的担心。"
+        ]
+      ],
+      "tip": "感受题找情绪词和虚拟语气（wished I had 表示遗憾、担心）。",
+      "ana": {
+        "parts": [
+          [
+            "环境",
+            "<code>it became more difficult to follow the path</code> —— 路更难走"
+          ],
+          [
+            "心情",
+            "<code>wished I had, just in case</code> —— 庆幸（担心）当初该说的"
+          ]
+        ],
+        "gram": [
+          "wish + 过去完成：对过去的遗憾"
+        ],
+        "tr": "（她有点担心：雪来了、路难走、又没提前告诉当地人。）"
+      }
+    },
+    {
+      "n": 120,
+      "tag": "④-4",
+      "prompt": "训练④-4 —— 作者写这段话的主要目的是什么？",
+      "answer": "b",
+      "opts": {
+        "a": "to blame other people for her situation",
+        "b": "to admit she had made a mistake",
+        "c": "to encourage others to do the same climb"
+      },
+      "why": "作者承认自己出发前没告诉当地人计划（I hadn't mentioned our plans…），还希望当初说了 —— 目的是<b>承认自己疏忽</b>（to admit she had made a mistake）。",
+      "clues": [
+        "I hadn't mentioned our plans to local people",
+        "I suddenly wished I had"
+      ],
+      "others": [
+        [
+          "a",
+          "整段没有责怪任何人，反倒怪自己没说。"
+        ],
+        [
+          "c",
+          "结尾是遗憾后怕，绝不是鼓励别人也这么爬。"
+        ]
+      ],
+      "tip": "目的题看『自责还是他责』：hadn't mentioned + wished I had = 自责。",
+      "ana": {
+        "parts": [
+          [
+            "事实",
+            "<code>I hadn't mentioned our plans to local people</code> —— 没告诉当地人"
+          ],
+          [
+            "态度",
+            "<code>I suddenly wished I had, just in case</code> —— 希望当初说了"
+          ]
+        ],
+        "gram": [
+          "admit a mistake 承认错误"
+        ],
+        "tr": "（作者在承认自己疏忽：出发前应该把计划告诉当地人。）"
+      }
+    },
+    {
+      "n": 121,
+      "tag": "⑤-3",
+      "prompt": "训练⑤-3 —— 关于第 4 题那道灰底选择题：哪个是最好的答案？",
+      "answer": "B",
+      "opts": {
+        "A": "leaving her mobile phone in the local village.",
+        "B": "going climbing without telling anyone else.",
+        "C": "spending so long at the top of the mountain.",
+        "D": "taking that route down towards the village."
+      },
+      "why": "原文最后一句：<b>I hadn't mentioned our plans to local people…</b> + <b>wished I had, just in case</b> —— 后悔的是『没告诉别人/没打招呼』，即选项 <b>B</b>。",
+      "clues": [
+        "hadn't mentioned our plans to local people",
+        "wished I had, just in case"
+      ],
+      "others": [
+        [
+          "A",
+          "手机是『在山上用不了』（didn't work up there），不是忘在村里 —— 与原文矛盾。"
+        ],
+        [
+          "C",
+          "在顶峰『it had been well worth spending some time there』—— 作者觉得值，不后悔。"
+        ],
+        [
+          "D",
+          "下山的路是『唯一的路』（the only way down）—— 没得选，谈不上后悔。"
+        ]
+      ],
+      "tip": "regret doing 问的是『后悔做过什么』——四个选项回原文一一对账：A 与原文矛盾、C 与态度相反、D 没得选。",
+      "ana": {
+        "parts": [
+          [
+            "谓语",
+            "<code>regretted</code> —— 后悔（regret doing sth）"
+          ],
+          [
+            "时间状语从句",
+            "<code>When the snow began to fall</code> —— 当雪开始下时"
+          ]
+        ],
+        "gram": [
+          "regret doing sth 后悔做过某事",
+          "without telling anyone = without having told anyone"
+        ],
+        "tr": "（雪开始下时，说话人后悔没有提前告诉别人自己的计划。）"
+      },
+      "optsAna": {
+        "A": {
+          "parts": [
+            [
+              "动名词短语",
+              "<code>leaving her mobile phone in the local village</code> —— 把手机落在村里"
+            ],
+            [
+              "搭配",
+              "regret doing：后悔做过某事"
+            ]
+          ],
+          "gram": [
+            "leave sth in + 地点 把某物落在某地"
+          ],
+          "tr": "把她的手机落在了当地村子里。 —— 原文说手机是『在山上不能用』，不是落在村里。"
+        },
+        "B": {
+          "parts": [
+            [
+              "动名词短语",
+              "<code>going climbing without telling anyone else</code> —— 没告诉任何人就去爬山"
+            ],
+            [
+              "呼应",
+              "<code>I hadn't mentioned our plans to local people</code> —— 原文的『没告诉别人』"
+            ]
+          ],
+          "gram": [
+            "without doing 没做某事",
+            "go climbing 去爬山"
+          ],
+          "tr": "没告诉任何人就跑去爬山。 —— 与原文 hadn't mentioned + wished I had 完全对应，正确答案。"
+        },
+        "C": {
+          "parts": [
+            [
+              "动名词短语",
+              "<code>spending so long at the top of the mountain</code> —— 在山顶上待太久"
+            ]
+          ],
+          "gram": [
+            "spend time doing sth 花时间做某事"
+          ],
+          "tr": "在顶峰待了那么久。 —— 原文说『well worth spending some time there』，作者觉得值。"
+        },
+        "D": {
+          "parts": [
+            [
+              "动名词短语",
+              "<code>taking that route down towards the village</code> —— 选择那条下山的路"
+            ]
+          ],
+          "gram": [
+            "take a route 走某条路线"
+          ],
+          "tr": "从那条路下山。 —— 原文说这是 the only way down（唯一的出路）。"
+        }
+      }
+    },
+    {
+      "n": 11,
+      "prompt": "Donna's Dad decided not to drive the Great Ocean Road himself because",
+      "answer": "D",
+      "opts": {
+        "A": "he realised he wouldn't enjoy the views as much.",
+        "B": "he thought it would be too tiring for him.",
+        "C": "he discovered the bus would be a cheaper option.",
+        "D": "he found out the route was very challenging."
+      },
+      "why": "原文：<b>he then read on the website that the road wouldn't be an easy drive, with a number of sharp bends</b> —— 不好开、很多急弯，即 <b>very challenging</b>（极具挑战）。",
+      "clues": [
+        "wouldn't be an easy drive",
+        "a number of sharp bends"
+      ],
+      "others": [
+        [
+          "A",
+          "家人觉得『他也该看风景』（deserved to enjoy the fantastic views），是他不开车的结果，不是他自己放弃的原因。"
+        ],
+        [
+          "B",
+          "原文：he was used to driving miles without getting exhausted —— 他习惯长途、不觉累。"
+        ],
+        [
+          "C",
+          "订了折扣票（discount bus tickets）是事实，但原文没说他为了便宜才选的。"
+        ]
+      ],
+      "tip": "原因题锁定 because 后面的原文句：read on the website that… 说的是路况难。",
+      "ana": {
+        "parts": [
+          [
+            "主语",
+            "<code>Donna's Dad</code> —— Donna 的爸爸"
+          ],
+          [
+            "谓语",
+            "<code>decided not to drive</code> —— 决定不开"
+          ],
+          [
+            "原因",
+            "road wouldn't be an easy drive, with a number of sharp bends"
+          ]
+        ],
+        "gram": [
+          "decide not to do sth 决定不做某事",
+          "challenging 有挑战性的（= not easy）"
+        ],
+        "tr": "Donna 的爸爸发现这条路线极具挑战（不好开、急弯多），所以决定不亲自开车。"
+      },
+      "optsAna": {
+        "A": {
+          "parts": [
+            [
+              "主语",
+              "he"
+            ],
+            [
+              "谓语",
+              "<code>realised</code> —— 意识到"
+            ],
+            [
+              "宾语从句",
+              "<code>he wouldn't enjoy the views as much</code> —— 他不能尽情看风景"
+            ]
+          ],
+          "gram": [
+            "enjoy the views 欣赏风景",
+            "as much 那么充分"
+          ],
+          "tr": "他意识到自己不能同样享受风景。 —— 这是家人替他考虑的理由，不是他放弃开车的直接原因。"
+        },
+        "B": {
+          "parts": [
+            [
+              "主语",
+              "he"
+            ],
+            [
+              "谓语",
+              "<code>thought</code> —— 认为"
+            ],
+            [
+              "宾语从句",
+              "<code>it would be too tiring for him</code> —— 对他太累"
+            ]
+          ],
+          "gram": [
+            "tiring 累人的"
+          ],
+          "tr": "他觉得开车对他太累了。 —— 与 he was used to driving miles without getting exhausted 矛盾。"
+        },
+        "C": {
+          "parts": [
+            [
+              "主语",
+              "he"
+            ],
+            [
+              "谓语",
+              "<code>discovered</code> —— 发现"
+            ],
+            [
+              "宾语从句",
+              "<code>the bus would be a cheaper option</code> —— 巴士是更便宜的选择"
+            ]
+          ],
+          "gram": [
+            "cheaper option 更便宜的选择"
+          ],
+          "tr": "他发现坐巴士更便宜。 —— 原文只说 book discount bus tickets，没说因为便宜。"
+        },
+        "D": {
+          "parts": [
+            [
+              "主语",
+              "he"
+            ],
+            [
+              "谓语",
+              "<code>found out</code> —— 查到"
+            ],
+            [
+              "宾语从句",
+              "<code>the route was very challenging</code> —— 这条路很有挑战"
+            ]
+          ],
+          "gram": [
+            "find out 查明、得知",
+            "challenging 有挑战性的"
+          ],
+          "tr": "他查到这条路线非常有挑战性。 —— 对应 wouldn't be an easy drive, with a number of sharp bends，正确答案。"
+        }
+      }
+    },
+    {
+      "n": 12,
+      "prompt": "When Donna saw a kangaroo along the route, she was",
+      "answer": "A",
+      "opts": {
+        "A": "worried that it might approach her.",
+        "B": "amazed at the size of it.",
+        "C": "sad that it didn't stay with them long.",
+        "D": "disappointed that she had forgotten her camera."
+      },
+      "why": "原文：<b>it seemed to consider coming towards us, which made me slightly nervous</b> —— 担心它朝自己走来，即 <b>worried that it might approach her</b>。",
+      "clues": [
+        "seemed to consider coming towards us",
+        "made me slightly nervous"
+      ],
+      "others": [
+        [
+          "B",
+          "文中只说 a big one（一只大的），没说她被体型震惊（amazed at the size）。"
+        ],
+        [
+          "C",
+          "原文 it was with us a while —— 它陪了一会儿，她并没有为此难过。"
+        ],
+        [
+          "D",
+          "相机不是忘带：I didn't even manage to pull out my camera（太激动没掏出来）。"
+        ]
+      ],
+      "tip": "感受题只认原文的心理句：slightly nervous → worried。",
+      "ana": {
+        "parts": [
+          [
+            "主语",
+            "<code>it</code> —— 袋鼠"
+          ],
+          [
+            "谓语",
+            "<code>seemed to consider coming towards us</code> —— 似乎在考虑朝我们走来"
+          ],
+          [
+            "结果",
+            "<code>made me slightly nervous</code> —— 让我有点紧张"
+          ]
+        ],
+        "gram": [
+          "consider doing sth 考虑做某事",
+          "make sb + adj. 使某人…"
+        ],
+        "tr": "袋鼠似乎要朝她走来，这让她有点紧张 —— 也就是担心它靠近。"
+      },
+      "optsAna": {
+        "A": {
+          "parts": [
+            [
+              "主语",
+              "she"
+            ],
+            [
+              "系动词",
+              "was"
+            ],
+            [
+              "表语",
+              "<code>worried that it might approach her</code> —— 担心它可能靠近她"
+            ]
+          ],
+          "gram": [
+            "might + 动词原形 可能…",
+            "approach 靠近"
+          ],
+          "tr": "担心它可能朝她过来。 —— 与 slightly nervous 对应，正确答案。"
+        },
+        "B": {
+          "parts": [
+            [
+              "表语",
+              "<code>amazed at the size of it</code> —— 对它的体型感到惊叹"
+            ]
+          ],
+          "gram": [
+            "be amazed at 对…惊叹"
+          ],
+          "tr": "惊叹于它的体型。 —— 原文没有『惊叹』这类描述。"
+        },
+        "C": {
+          "parts": [
+            [
+              "表语",
+              "<code>sad that it didn't stay with them long</code> —— 因为它没待久难过"
+            ]
+          ],
+          "gram": [
+            "stay with sb 和某人待一会儿"
+          ],
+          "tr": "因为它没陪他们多久而难过。 —— 与 it was with us a while 矛盾。"
+        },
+        "D": {
+          "parts": [
+            [
+              "表语",
+              "<code>disappointed that she had forgotten her camera</code> —— 因为忘了带相机而失望"
+            ]
+          ],
+          "gram": [
+            "forget to bring 忘了带"
+          ],
+          "tr": "因为忘了带相机而失望。 —— 原文是她太激动没掏出相机，不是忘带。"
+        }
+      }
+    },
+    {
+      "n": 13,
+      "prompt": "Donna says that the koala bears they saw were",
+      "answer": "C",
+      "opts": {
+        "A": "responsible for damage to the trees.",
+        "B": "even more attractive than people had told her.",
+        "C": "more common than she'd expected.",
+        "D": "very skilled at hiding away from tourists."
+      },
+      "why": "原文：她原以为稀有（as I'd heard they were rare），结果 <b>there were roughly six million in that area</b> —— 比预想的多得多，即 <b>more common than she'd expected</b>。",
+      "clues": [
+        "I'd heard they were rare",
+        "roughly six million in that area"
+      ],
+      "others": [
+        [
+          "A",
+          "『考拉导致树叶少』是 people told us 的说法（which people told us was because of the koalas）；作者自己读到的是缺水才是真正原因 —— 而且题目问的是 Donna 的说法，她并不认同这一点。"
+        ],
+        [
+          "B",
+          "她说 looked cute 是自己觉得可爱，不是『人们都这么说』。"
+        ],
+        [
+          "D",
+          "原文：easy to find – we just followed the tourists —— 非常容易被找到，与『善于躲游客』相反。"
+        ]
+      ],
+      "tip": "数字反差题：rare（听说）↔ six million（实际）→ more common than expected。",
+      "ana": {
+        "parts": [
+          [
+            "听说",
+            "<code>I'd heard they were rare</code> —— 听说稀有"
+          ],
+          [
+            "实际",
+            "<code>there were roughly six million in that area</code> —— 实际约有六百万只"
+          ]
+        ],
+        "gram": [
+          "rare 稀有的",
+          "roughly 大约",
+          "common 常见的（rare 的反义）"
+        ],
+        "tr": "她原以为考拉稀有，结果发现那一带约有六百万只 —— 比想象中常见。"
+      },
+      "optsAna": {
+        "A": {
+          "parts": [
+            [
+              "表语",
+              "<code>responsible for damage to the trees</code> —— 对树木受损负有责任"
+            ]
+          ],
+          "gram": [
+            "be responsible for 对…负责、是…的原因"
+          ],
+          "tr": "是树木受损的原因。 —— 那是『人们告诉她的』说法，作者读到的资料说是缺水（lack of water）。（题目的答句是 Donna says…）"
+        },
+        "B": {
+          "parts": [
+            [
+              "表语",
+              "<code>even more attractive than people had told her</code> —— 比人们说的更讨人喜欢"
+            ]
+          ],
+          "gram": [
+            "attractive 有吸引力的"
+          ],
+          "tr": "比人们告诉她的更吸引人。 —— 可爱是她自己的评价，不是『别人这么说』的对比。"
+        },
+        "C": {
+          "parts": [
+            [
+              "表语",
+              "<code>more common than she'd expected</code> —— 比她预想的更常见"
+            ]
+          ],
+          "gram": [
+            "more common than 比…更常见"
+          ],
+          "tr": "比她预想的更常见。 —— rare ↔ six million，正确答案。"
+        },
+        "D": {
+          "parts": [
+            [
+              "表语",
+              "<code>very skilled at hiding away from tourists</code> —— 非常擅长躲开游客"
+            ]
+          ],
+          "gram": [
+            "be skilled at 擅长…",
+            "hide away 躲起来"
+          ],
+          "tr": "非常擅长躲开游客。 —— 与 easy to find、followed the tourists 矛盾。"
+        }
+      }
+    },
+    {
+      "n": 14,
+      "prompt": "What was Donna's opinion of the place where they stayed?",
+      "answer": "B",
+      "opts": {
+        "A": "She found it was less comfortable than she'd hoped.",
+        "B": "She liked the fact that it was convenient for sightseeing.",
+        "C": "She enjoyed hearing the sounds of nature as she slept.",
+        "D": "She was disappointed there was no restaurant nearby."
+      },
+      "why": "原文：<b>they were actually luxury tents, within walking distance of some famous rocks and other places we hoped to visit</b> —— 豪华帐篷、步行可达景点，即 <b>convenient for sightseeing</b>。",
+      "clues": [
+        "actually luxury tents",
+        "within walking distance of some famous rocks and other places we hoped to visit"
+      ],
+      "others": [
+        [
+          "A",
+          "actually luxury tents（居然是豪华帐篷）—— 比预想的好，不是不如预期。"
+        ],
+        [
+          "C",
+          "『野生动物的声音帮睡眠』是爸爸调侃的话；实际 sounds of wild creatures → frogs，她还被吵得没睡着（kept awake）。"
+        ],
+        [
+          "D",
+          "没餐厅是事实（nowhere to eat），但他们自己带了食物、一起做饭 fun —— 她并不为此失望。"
+        ]
+      ],
+      "tip": "opinion 题注意态度词：actually luxury（好过预期）+ within walking distance（方便看景点）。",
+      "ana": {
+        "parts": [
+          [
+            "转折",
+            "<code>I wasn't sure about that, but…</code> —— 我本来不放心，但…"
+          ],
+          [
+            "关键",
+            "<code>actually luxury tents, within walking distance of some famous rocks</code> —— 豪华帐篷、步行可达景点"
+          ]
+        ],
+        "gram": [
+          "luxury 豪华的",
+          "within walking distance 步行能到"
+        ],
+        "tr": "她对住处评价很高：竟是豪华帐篷，走去著名岩石景点也方便。"
+      },
+      "optsAna": {
+        "A": {
+          "parts": [
+            [
+              "宾语从句",
+              "<code>it was less comfortable than she'd hoped</code> —— 没她期望的舒适"
+            ]
+          ],
+          "gram": [
+            "comfortable 舒适的",
+            "than she'd hoped 比她期望的"
+          ],
+          "tr": "她觉得没期望中舒适。 —— 与 luxury tents 矛盾。"
+        },
+        "B": {
+          "parts": [
+            [
+              "谓语",
+              "<code>liked</code> —— 喜欢"
+            ],
+            [
+              "宾语从句",
+              "<code>it was convenient for sightseeing</code> —— 观光很方便"
+            ]
+          ],
+          "gram": [
+            "convenient for 对…方便",
+            "sightseeing 观光"
+          ],
+          "tr": "她喜欢它观光很方便。 —— within walking distance of famous rocks 是正解，正确答案。"
+        },
+        "C": {
+          "parts": [
+            [
+              "宾语从句",
+              "<code>she enjoyed hearing the sounds of nature as she slept</code> —— 喜欢听着大自然的声音入睡"
+            ]
+          ],
+          "gram": [
+            "sounds of nature 大自然的声音"
+          ],
+          "tr": "她喜欢听着自然的声音入睡。 —— kept awake by the frogs，被青蛙吵得睡不着。"
+        },
+        "D": {
+          "parts": [
+            [
+              "宾语从句",
+              "<code>she was disappointed there was no restaurant nearby</code> —— 为附近没有餐厅失望"
+            ]
+          ],
+          "gram": [
+            "nearby 附近的"
+          ],
+          "tr": "她为附近没有餐厅失望。 —— 他们自己带了食物、一起做饭很开心。"
+        }
+      }
+    },
+    {
+      "n": 15,
+      "prompt": "What might Donna write in her blog during the trip?",
+      "answer": "D",
+      "opts": {
+        "A": "The bus we're travelling on is pretty comfortable, with great views from the window. Grandma and Grandad are enjoying it, too!",
+        "B": "We can see quite a lot as we drive along. I just wish we could stop and get out to explore properly.",
+        "C": "Yesterday we went to see some huge rocks near our campsite – and we were really impressed! I'm surprised they're not well known.",
+        "D": "I wasn't looking forward to camping, in case there were wild animals, but we haven't seen anything at all dangerous, so I feel silly now!"
+      },
+      "why": "与文章情绪一致的是 D：以为有危险动物（呼应 Dad 说的 wild creatures），结果只有青蛙（turned out to be frogs），现在觉得自己好傻（embarrassed by my fears / feel silly）—— 对照原文都能一一对上。",
+      "clues": [
+        "turned out to be frogs",
+        "embarrassed by my fears"
+      ],
+      "others": [
+        [
+          "A",
+          "祖父母没有同行 —— 原文是『去澳大利亚看祖父母』，此行是他们一家沿大洋路玩。"
+        ],
+        [
+          "B",
+          "『希望停下来好好探索』与文章相反：一路上他们每站都下车玩（袋鼠、考拉、岩石、营地）。"
+        ],
+        [
+          "C",
+          "岩石是 within walking distance 顺路去看的；文章没有说『被震撼』或『奇怪它不出名』。"
+        ]
+      ],
+      "tip": "博客题＝选与文章事实和情绪都吻合的一条；逐项回原文对账（尤其人名、动物、心态）。",
+      "ana": {
+        "parts": [
+          [
+            "情绪",
+            "<code>embarrassed by my fears</code> —— 为自己的害怕感到不好意思"
+          ],
+          [
+            "事实",
+            "<code>the 'wild creatures' turned out to be frogs</code> —— 野生动物原来只是青蛙"
+          ]
+        ],
+        "gram": [
+          "look forward to 期待",
+          "in case 以防；when discovered 等"
+        ],
+        "tr": "（最符合文意的是 D：以为露营会有危险动物，结果只遇到青蛙，觉得自己好笑。）"
+      },
+      "optsAna": {
+        "A": {
+          "parts": [
+            [
+              "主语",
+              "<code>The bus we're travelling on</code> —— 我们坐的巴士"
+            ],
+            [
+              "表语",
+              "<code>pretty comfortable, with great views</code> —— 挺舒服、景色好"
+            ],
+            [
+              "并列句",
+              "<code>Grandma and Grandad are enjoying it, too</code> —— 祖父母也很享受"
+            ]
+          ],
+          "gram": [
+            "we're travelling on 定语从句",
+            "pretty + adj. 相当…"
+          ],
+          "tr": "我们坐的巴士挺舒服，窗外景色很棒，爷爷奶奶也很喜欢！ —— 祖父母不在这次旅行里。"
+        },
+        "B": {
+          "parts": [
+            [
+              "谓语",
+              "<code>can see quite a lot</code> —— 能看到不少"
+            ],
+            [
+              "愿望",
+              "<code>I just wish we could stop and get out to explore properly</code> —— 希望能停下来好好探索"
+            ]
+          ],
+          "gram": [
+            "wish + 过去式：对现在的愿望",
+            "explore 探索"
+          ],
+          "tr": "一路上能看到不少景色，真希望能停下来好好逛逛。 —— 与他们每站都下车游玩的经历不符。"
+        },
+        "C": {
+          "parts": [
+            [
+              "时间状语",
+              "<code>Yesterday we went to see some huge rocks near our campsite</code> —— 昨天去看了营地附近的大岩石"
+            ],
+            [
+              "感受",
+              "<code>we were really impressed / surprised they're not well known</code> —— 印象深刻、奇怪它不出名"
+            ]
+          ],
+          "gram": [
+            "be impressed 印象深刻"
+          ],
+          "tr": "昨天去看了营地附近的巨石，很震撼，奇怪它居然不出名！ —— 文章没有『震撼/奇怪』这类内容。"
+        },
+        "D": {
+          "parts": [
+            [
+              "背景",
+              "<code>I wasn't looking forward to camping, in case there were wild animals</code> —— 原本担心露营会碰到野生动物"
+            ],
+            [
+              "转折",
+              "<code>but we haven't seen anything at all dangerous</code> —— 但完全没碰到危险"
+            ],
+            [
+              "感受",
+              "<code>so I feel silly now</code> —— 现在觉得自己好傻"
+            ]
+          ],
+          "gram": [
+            "look forward to doing sth 期待做某事",
+            "in case 以防",
+            "silly 傻的"
+          ],
+          "tr": "本来不期待露营、怕有野生动物，结果一点危险都没有，现在觉得自己好傻！ —— 与原文 wild creatures→frogs、embarrassed by my fears 完全吻合，正确答案。"
+        }
+      }
+    }
+  ],
+  "inlineQuiz": true
+}
