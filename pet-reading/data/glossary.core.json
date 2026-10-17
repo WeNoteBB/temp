@@ -206,6 +206,12 @@
     "ipa": "/bɔːd/",
     "cn": "无聊的"
   },
+  "borrow": {
+    "pos": "v.",
+    "ipa": "/ˈbɒrəʊ/",
+    "cn": "借（入）",
+    "note": "borrow sth from… 从…借入；对比 lend 借出"
+  },
   "brought": {
     "pos": "v.",
     "ipa": "/brɔːt/",
@@ -216,6 +222,11 @@
     "ipa": "/bʌt/",
     "cn": "但是",
     "note": "but 和 though/although 不能同时用在一个句子里。"
+  },
+  "buy": {
+    "pos": "v.",
+    "ipa": "/baɪ/",
+    "cn": "买（bought / bought）"
   },
   "by": {
     "pos": "prep.",
@@ -257,15 +268,37 @@
     "ipa": "/klɪə/",
     "cn": "清理；清楚的，晴朗的"
   },
+  "come": {
+    "pos": "v.",
+    "ipa": "/kʌm/",
+    "cn": "来",
+    "note": "come round 过来（串门）"
+  },
   "common": {
     "pos": "adj.",
     "ipa": "/ˈkɒmən/",
     "cn": "常见的"
   },
+  "complete": {
+    "pos": "v./adj.",
+    "ipa": "/kəmˈpliːt/",
+    "cn": "完成；补全；使完整；完整的"
+  },
   "completely": {
     "pos": "adv.",
     "ipa": "/kəmˈpliːtli/",
     "cn": "完全地，彻底地"
+  },
+  "correct": {
+    "pos": "adj./v.",
+    "ipa": "/kəˈrekt/",
+    "cn": "正确的；改正"
+  },
+  "could": {
+    "pos": "modal",
+    "ipa": "/kʊd/",
+    "cn": "能够；可能（can 的过去式）",
+    "note": "情态动词后面永远跟动词原形。"
   },
   "couldn't": {
     "pos": "缩写",
@@ -277,6 +310,12 @@
     "ipa": "",
     "cn": "选项 d 的记号"
   },
+  "dad": {
+    "pos": "n.",
+    "ipa": "/dæd/",
+    "cn": "爸爸",
+    "note": "口语用词，相当于 father。作称呼时首字母大写，如 Dad。"
+  },
   "day": {
     "pos": "n.",
     "ipa": "/deɪ/",
@@ -286,6 +325,11 @@
     "pos": "v.",
     "ipa": "/dɪˈsaɪd/",
     "cn": "决定；判断"
+  },
+  "deep": {
+    "pos": "adj./adv.",
+    "ipa": "/diːp/",
+    "cn": "深的；深地"
   },
   "didn't": {
     "pos": "缩写",
@@ -401,6 +445,12 @@
     "pos": "v.",
     "ipa": "/ɪkˈspektɪd/",
     "cn": "预料（expect 的过去式/过去分词）"
+  },
+  "explain": {
+    "pos": "v.",
+    "ipa": "/ɪkˈspleɪn/",
+    "cn": "解释；说明",
+    "note": "explain sth to sb（不能说 explain sb sth）；后接 that 从句。"
   },
   "explore": {
     "pos": "v.",
@@ -607,6 +657,11 @@
     "cn": "家",
     "note": "at home 在家（不加 the）；go home 回家（不加 to）。"
   },
+  "homework": {
+    "pos": "n.",
+    "ipa": "/ˈhəʊmwɜːk/",
+    "cn": "作业（不可数）"
+  },
   "hope": {
     "pos": "v.",
     "ipa": "/həʊp/",
@@ -661,6 +716,12 @@
     "ipa": "/ɪn/",
     "cn": "在……里；在（某段时间）"
   },
+  "in fact": {
+    "pos": "词组",
+    "ipa": "/ɪn ˈfækt/",
+    "cn": "事实上，其实",
+    "note": "用来补充或纠正前面的说法，是重要的逻辑衔接词。"
+  },
   "include": {
     "pos": "v.",
     "ipa": "/ɪnˈkluːd/",
@@ -684,6 +745,12 @@
     "cn": "进入，到……里面",
     "note": "divide A into B 把 A 分成 B。"
   },
+  "invite": {
+    "pos": "v.",
+    "ipa": "/ɪnˈvaɪt/",
+    "cn": "邀请",
+    "note": "invite sb to sth 邀请某人参加…"
+  },
   "is": {
     "pos": "v.",
     "ipa": "/ɪz/",
@@ -699,6 +766,11 @@
     "ipa": "/ɪt/",
     "cn": "它",
     "note": "五选句填空里，it 常常是判断答案的关键——一定要找到它指代什么。"
+  },
+  "item": {
+    "pos": "n.",
+    "ipa": "/ˈaɪtəm/",
+    "cn": "物品；一件东西"
   },
   "just": {
     "pos": "adv.",
@@ -747,6 +819,12 @@
     "pos": "adv.",
     "ipa": "/ˈleɪtə/",
     "cn": "稍后；后来"
+  },
+  "lead": {
+    "pos": "v.",
+    "ipa": "/liːd/",
+    "cn": "带领；通向；引导",
+    "note": "过去式/过去分词 led（不是 leaded）。"
   },
   "leave": {
     "pos": "v.",
@@ -827,6 +905,12 @@
     "pos": "n.",
     "ipa": "/ˈmiːtə/",
     "cn": "米（长度单位）"
+  },
+  "mistake": {
+    "pos": "n./v.",
+    "ipa": "/mɪˈsteɪk/",
+    "cn": "错误；弄错",
+    "note": "make a mistake / make mistakes 犯错（用 make，不用 do）。"
   },
   "more": {
     "pos": "adv./det.",
@@ -977,11 +1061,21 @@
     "cn": "部分",
     "note": "take part in 参加"
   },
+  "party": {
+    "pos": "n.",
+    "ipa": "/ˈpɑːti/",
+    "cn": "聚会；派对"
+  },
   "people": {
     "pos": "n.",
     "ipa": "/ˈpiːpl/",
     "cn": "人们，人",
     "note": "本身是复数，不能加 s。一个人是 a person。"
+  },
+  "phone": {
+    "pos": "n.",
+    "ipa": "/fəʊn/",
+    "cn": "电话；手机"
   },
   "pieces": {
     "pos": "n.",
@@ -1014,6 +1108,11 @@
     "ipa": "/ˈprɒbləm/",
     "cn": "问题"
   },
+  "purpose": {
+    "pos": "n.",
+    "ipa": "/ˈpɜːpəs/",
+    "cn": "目的；意图"
+  },
   "question": {
     "pos": "n.",
     "ipa": "/ˈkwestʃən/",
@@ -1044,6 +1143,11 @@
     "pos": "adv.",
     "ipa": "/ˈriːsntli/",
     "cn": "最近"
+  },
+  "remember": {
+    "pos": "v.",
+    "ipa": "/rɪˈmembə/",
+    "cn": "记得；记住"
   },
   "remind": {
     "pos": "v.",
@@ -1137,6 +1241,11 @@
     "ipa": "/ʃəʊ/",
     "cn": "表示；展示；节目"
   },
+  "sister": {
+    "pos": "n.",
+    "ipa": "/ˈsɪstə/",
+    "cn": "姐姐；妹妹"
+  },
   "six": {
     "pos": "num.",
     "ipa": "/sɪks/",
@@ -1162,6 +1271,12 @@
     "ipa": "/sʌm/",
     "cn": "一些；某个",
     "note": "肯定句用 some；否定句和疑问句一般用 any。"
+  },
+  "someone": {
+    "pos": "pron.",
+    "ipa": "/ˈsʌmwʌn/",
+    "cn": "某人",
+    "note": "作主语时谓语用单数。"
   },
   "something": {
     "pos": "pron.",
@@ -1292,6 +1407,12 @@
     "ipa": "/ðɪs/",
     "cn": "这个"
   },
+  "though": {
+    "pos": "adv./conj.",
+    "ipa": "/ðəʊ/",
+    "cn": "虽然；不过，然而",
+    "note": "放句末或句中作副词 = however；放句首作连词 = although；even though 尽管。"
+  },
   "thought": {
     "pos": "v.",
     "ipa": "/θɔːt/",
@@ -1399,6 +1520,12 @@
     "pos": "v.",
     "ipa": "/wɒnt/",
     "cn": "想要"
+  },
+  "warn": {
+    "pos": "v.",
+    "ipa": "/wɔːn/",
+    "cn": "警告；提醒",
+    "note": "warn sb of/about sth；warn sb (not) to do sth 提醒/警告某人（别）做某事。"
   },
   "was": {
     "pos": "v.",
@@ -1518,6 +1645,12 @@
     "pos": "adj.",
     "ipa": "/ˈwʌrid/",
     "cn": "担心的"
+  },
+  "would": {
+    "pos": "modal",
+    "ipa": "/wʊd/",
+    "cn": "会；将会；愿意（will 的过去式）",
+    "note": "在过去时的叙述里，will 退一步变成 would（过去将来时）；wouldn't 是缩写形式。"
   },
   "write": {
     "pos": "v.",

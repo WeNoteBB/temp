@@ -3617,117 +3617,6 @@
     "wild creatures"
   ],
   "glossary": {
-    "correct": {
-      "pos": "adj./v.",
-      "ipa": "/kəˈrekt/",
-      "cn": "正确的；改正"
-    },
-    "complete": {
-      "pos": "v./adj.",
-      "ipa": "/kəmˈpliːt/",
-      "cn": "使完整；完整的"
-    },
-    "explain": {
-      "pos": "v.",
-      "ipa": "/ɪkˈspleɪn/",
-      "cn": "解释",
-      "note": "explain sth to sb；后接 that 从句"
-    },
-    "invite": {
-      "pos": "v.",
-      "ipa": "/ɪnˈvaɪt/",
-      "cn": "邀请",
-      "note": "invite sb to sth 邀请某人参加…"
-    },
-    "warn": {
-      "pos": "v.",
-      "ipa": "/wɔːn/",
-      "cn": "提醒，警告",
-      "note": "warn sb not to do sth 提醒某人别做某事"
-    },
-    "deep": {
-      "pos": "adj.",
-      "ipa": "/diːp/",
-      "cn": "深的"
-    },
-    "buy": {
-      "pos": "v.",
-      "ipa": "/baɪ/",
-      "cn": "买"
-    },
-    "borrow": {
-      "pos": "v.",
-      "ipa": "/ˈbɒrəʊ/",
-      "cn": "借（入）"
-    },
-    "would": {
-      "pos": "modal",
-      "ipa": "/wʊd/",
-      "cn": "会（will 的过去式）",
-      "note": "wouldn't 的完整形式"
-    },
-    "phone": {
-      "pos": "n.",
-      "ipa": "/fəʊn/",
-      "cn": "电话，手机"
-    },
-    "party": {
-      "pos": "n.",
-      "ipa": "/ˈpɑːti/",
-      "cn": "聚会，派对"
-    },
-    "sister": {
-      "pos": "n.",
-      "ipa": "/ˈsɪstə/",
-      "cn": "姐姐；妹妹"
-    },
-    "mistake": {
-      "pos": "n./v.",
-      "ipa": "/mɪˈsteɪk/",
-      "cn": "错误；弄错",
-      "note": "make mistakes 犯错"
-    },
-    "item": {
-      "pos": "n.",
-      "ipa": "/ˈaɪtəm/",
-      "cn": "一件（物品）"
-    },
-    "dad": {
-      "pos": "n.",
-      "ipa": "/dæd/",
-      "cn": "爸爸"
-    },
-    "homework": {
-      "pos": "n.",
-      "ipa": "/ˈhəʊmwɜːk/",
-      "cn": "作业"
-    },
-    "purpose": {
-      "pos": "n.",
-      "ipa": "/ˈpɜːpəs/",
-      "cn": "目的，意图"
-    },
-    "someone": {
-      "pos": "pron.",
-      "ipa": "/ˈsʌmwʌn/",
-      "cn": "某人"
-    },
-    "though": {
-      "pos": "conj.",
-      "ipa": "/ðəʊ/",
-      "cn": "虽然",
-      "note": "even though 尽管"
-    },
-    "come": {
-      "pos": "v.",
-      "ipa": "/kʌm/",
-      "cn": "来"
-    },
-    "could": {
-      "pos": "modal",
-      "ipa": "/kʊd/",
-      "cn": "能（can 的过去式）"
-    },
     "f": {
       "pos": "字母",
       "ipa": "",
@@ -3796,12 +3685,6 @@
       "ipa": "/pəˈsweɪd/",
       "cn": "说服",
       "note": "persuade sb to do sth 说服某人做某事"
-    },
-    "remember": {
-      "pos": "v.",
-      "ipa": "/rɪˈmembə/",
-      "cn": "记住",
-      "note": "不忘"
     },
     "reporting": {
       "pos": "adj.",
@@ -4119,11 +4002,6 @@
       "pos": "n.",
       "ipa": "/træk/",
       "cn": "小路，小道"
-    },
-    "lead": {
-      "pos": "v.",
-      "ipa": "/liːd/",
-      "cn": "通向，引导"
     },
     "village": {
       "pos": "n.",
@@ -5026,11 +4904,6 @@
       "pos": "词组",
       "ipa": "/ə ˈnʌmbər əv/",
       "cn": "许多，若干（后接可数名词复数）"
-    },
-    "in fact": {
-      "pos": "词组",
-      "ipa": "/ɪn fækt/",
-      "cn": "事实上，其实"
     },
     "looked back": {
       "pos": "词组",

@@ -2729,12 +2729,6 @@
       "ipa": "/ben/",
       "cn": "Ben（人名）"
     },
-    "borrow": {
-      "pos": "v.",
-      "ipa": "/ˈbɒrəʊ/",
-      "cn": "借（入）",
-      "note": "borrow sth from… 从…借入；对比 lend 借出"
-    },
     "bring": {
       "pos": "v.",
       "ipa": "/brɪŋ/",
@@ -2745,12 +2739,6 @@
       "ipa": "/ˈsɜːtn/",
       "cn": "某个；确定的"
     },
-    "come": {
-      "pos": "v.",
-      "ipa": "/kʌm/",
-      "cn": "来",
-      "note": "come round 过来（串门）"
-    },
     "customer": {
       "pos": "n.",
       "ipa": "/ˈkʌstəmə/",
@@ -2760,12 +2748,6 @@
       "pos": "n.",
       "ipa": "/ˈsaɪkl/",
       "cn": "自行车（= bicycle）"
-    },
-    "dad": {
-      "pos": "n.",
-      "ipa": "/dæd/",
-      "cn": "爸爸",
-      "note": "口语用词，相当于 father。作称呼时首字母大写，如 Dad。"
     },
     "desk": {
       "pos": "n.",
@@ -2822,11 +2804,6 @@
       "pos": "n.",
       "ipa": "/ˈhɒskɪnz/",
       "cn": "Hoskins（姓）"
-    },
-    "item": {
-      "pos": "n.",
-      "ipa": "/ˈaɪtəm/",
-      "cn": "物品；一件东西"
     },
     "its": {
       "pos": "det.",
@@ -2898,11 +2875,6 @@
       "ipa": "/pɜː/",
       "cn": "每（per day 每天）"
     },
-    "phone": {
-      "pos": "n.",
-      "ipa": "/fəʊn/",
-      "cn": "电话；手机"
-    },
     "please": {
       "pos": "adv.",
       "ipa": "/pliːz/",
@@ -2924,11 +2896,6 @@
       "ipa": "/reɪndʒ/",
       "cn": "一系列；范围"
     },
-    "remember": {
-      "pos": "v.",
-      "ipa": "/rɪˈmembə/",
-      "cn": "记得"
-    },
     "reserve": {
       "pos": "v.",
       "ipa": "/rɪˈzɜːv/",
@@ -2949,17 +2916,6 @@
       "ipa": "/raʊnd/",
       "cn": "过来；围绕",
       "note": "come round 过来串门"
-    },
-    "sister": {
-      "pos": "n.",
-      "ipa": "/ˈsɪstə/",
-      "cn": "姐妹"
-    },
-    "someone": {
-      "pos": "pron.",
-      "ipa": "/ˈsʌmwʌn/",
-      "cn": "某人",
-      "note": "作主语时谓语用单数。"
     },
     "staff": {
       "pos": "n.",
@@ -3181,17 +3137,6 @@
       "ipa": "/kənˈdɪʃn/",
       "cn": "状况；成色"
     },
-    "purpose": {
-      "pos": "n.",
-      "ipa": "/ˈpɜːpəs/",
-      "cn": "目的"
-    },
-    "warn": {
-      "pos": "v.",
-      "ipa": "/wɔːn/",
-      "cn": "警告，提醒",
-      "note": "warn sb of/about sth；warn sb (not) to do sth。"
-    },
     "information": {
       "pos": "n.",
       "ipa": "/ˌɪnfəˈmeɪʃn/",
@@ -3207,11 +3152,6 @@
       "pos": "v.",
       "ipa": "/sel/",
       "cn": "卖（sold / sold）"
-    },
-    "correct": {
-      "pos": "adj.",
-      "ipa": "/kəˈrekt/",
-      "cn": "正确的"
     },
     "mustn't": {
       "pos": "modal",
@@ -3243,11 +3183,6 @@
       "ipa": "/breɪk/",
       "cn": "休息；（v. 打破）",
       "note": "have a break 休息一下"
-    },
-    "complete": {
-      "pos": "v./adj.",
-      "ipa": "/kəmˈpliːt/",
-      "cn": "完成；补全；完整的"
     },
     "early": {
       "pos": "adv./adj.",
@@ -3396,20 +3331,10 @@
       "ipa": "/haʊs/",
       "cn": "房子；家"
     },
-    "homework": {
-      "pos": "n.",
-      "ipa": "/ˈhəʊmwɜːk/",
-      "cn": "作业（不可数）"
-    },
     "secretary": {
       "pos": "n.",
       "ipa": "/ˈsekrətri/",
       "cn": "秘书"
-    },
-    "invite": {
-      "pos": "v.",
-      "ipa": "/ɪnˈvaɪt/",
-      "cn": "邀请"
     },
     "good": {
       "pos": "adj.",
@@ -3420,16 +3345,6 @@
       "pos": "助动词",
       "ipa": "/ˈdʌznt/",
       "cn": "不（= does not）"
-    },
-    "party": {
-      "pos": "n.",
-      "ipa": "/ˈpɑːti/",
-      "cn": "聚会；派对"
-    },
-    "buy": {
-      "pos": "v.",
-      "ipa": "/baɪ/",
-      "cn": "买（bought / bought）"
     },
     "can't": {
       "pos": "contr.",

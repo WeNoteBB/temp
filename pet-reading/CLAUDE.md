@@ -22,7 +22,7 @@ cd server && npm test      # 后端单测（假 db，不需要数据库；首次
 cd server && npm run migrate   # 建表/加列（幂等，需要 .env 里的数据库口令）
 ```
 
-改任何东西之后 `npm run check` 必须全绿。当前基线：**verify ✓（18 条跨篇警告是老账，见下）/ smoke 858 / test-store 144**，
+改任何东西之后 `npm run check` 必须全绿。当前基线：**verify ✓（0 警告）/ smoke 858 / test-store 144**，
 后端 `npm test` **94**。
 
 ## 架构要点
@@ -165,7 +165,7 @@ cd server && npm run migrate   # 建表/加列（幂等，需要 .env 里的数�
 
 **2026-10-17 晚（Reading Part 5 · 训练①②③ + 真题 21–26）：**
 
-17. **`t1-p5-ice-sculptures`**（书 P24–P25）：30 段 38 句 406 词 15 题（词条 108 条 + 共享词库 287 条）；
+17. **`t1-p5-ice-sculptures`**（书 P24–P25）：30 段 38 句 406 词 15 题（词条 103 条 + 共享词库 311 条）；
     训练题 101–109（① 介词表 3 题 + ③ 选词 6 题；② 是改错句、不设题），真题 21–26。
     答案逐题对照书后 P186；素材与裁剪坐标在 `sources/t1-p5-ice-sculptures.txt`。
 18. **引擎新增（全是数据标记，前三篇不受影响）**：
@@ -186,9 +186,9 @@ cd server && npm run migrate   # 建表/加列（幂等，需要 .env 里的数�
     ③ 式「解析」按钮改成数据驱动（原来写死 111）。
 21. **小教训**：两个 `tip` 浮框并排会互相让位（后一个被挤到左边）——书上是并排两个 Tip，
     数据里合成一个 `tip` 字符串即可；懒加载图片在无头截图里要先触发滚动再拍。
-22. **跑过 `tools/promote.mjs --write`**：287 条重复词条上浮进 `data/glossary.core.json`
-    （四篇各自剩下 151 / 274 / 139 / 108 条）；24 条跨篇释义打架的留在原处并报出来
-    （就是上面那 18 条 verify 警告），想彻底清零需要人工挑一个版本，属于另一件小事。
+22. **词库全书化落定**：`tools/promote.mjs --write` 两轮之后共享词库 **311 条**
+    （四篇各自剩下 135 / 250 / 128 / 103 条）；原先 24 条「跨篇释义打架」的已人工统一
+    （同义取一个版本、多义并进同一份 cn，用「；」分隔），verify 现在 **0 警告**。
     静态站已发布到线上（`SKIP_CHECK=1 bash deploy.sh 8.138.161.122`，HTTP 200 ✓）。
     整个 `pet-reading/` 首次提交进 git（v2.0 分支）。
 
@@ -203,9 +203,8 @@ Node 22 旁装 `/opt/node-v22`（系统 node v12 没动），systemd 单元 `pet
 HTML 配了 `Cache-Control: no-cache`（改版不用让学生手动清缓存）。
 Edge 按 375/744/768/820/1194/1440 逐宽度验收：每句「析/🔊」都在、无横向溢出。
 
-`npm run check` 全绿（verify / smoke 858 / test-store 144），后端单测 94。
-verify 的 18 条跨篇警告（item / phone / remember / warn / correct / complete / in fact…）
-是 Part 1 与 Part 3 的老账，两篇各自成立、暂未统一，不影响退出码。
+`npm run check` 全绿（verify **0 警告** / smoke 858 / test-store 144），后端单测 94。
+（原来的 18 条跨篇释义警告已统一并收进共享词库，见上面的第 22 条。）
 
 **未做 / 待办：**
 

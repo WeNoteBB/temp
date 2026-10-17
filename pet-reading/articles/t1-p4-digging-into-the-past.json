@@ -1244,12 +1244,6 @@
       "cn": "结果是，原来是",
       "note": "turn out (to be) 结果是……。例：It turned out to be a mistake. 结果证明是个错误。"
     },
-    "in fact": {
-      "pos": "phr.",
-      "ipa": "/ɪn ˈfækt/",
-      "cn": "事实上，其实",
-      "note": "用来补充或纠正前面的说法，是重要的逻辑衔接词。"
-    },
     "a bit": {
       "pos": "phr.",
       "ipa": "/ə ˈbɪt/",
@@ -1624,21 +1618,10 @@
       "cn": "困难的；努力地；硬的",
       "note": "作副词是“努力地”；<b>hardly</b> 却是“几乎不”，别搞混。"
     },
-    "deep": {
-      "pos": "adj./adv.",
-      "ipa": "/diːp/",
-      "cn": "深的；深地"
-    },
     "deeper": {
       "pos": "adj./adv.",
       "ipa": "/ˈdiːpə/",
       "cn": "更深的（deep 的比较级）"
-    },
-    "lead": {
-      "pos": "v.",
-      "ipa": "/liːd/",
-      "cn": "带领，领导",
-      "note": "过去式 led，过去分词 led。注意不是 leaded。"
     },
     "leading": {
       "pos": "v.",
@@ -1683,12 +1666,6 @@
       "ipa": "/prɪˈpeə/",
       "cn": "准备",
       "note": "prepare for sth 为…做准备；prepare sth 准备某物。"
-    },
-    "warn": {
-      "pos": "v.",
-      "ipa": "/wɔːn/",
-      "cn": "警告，提醒",
-      "note": "warn sb of/about sth；warn sb (not) to do sth。"
     },
     "warned": {
       "pos": "v.",
@@ -1737,12 +1714,6 @@
       "ipa": "/rɪˈpɔːts/",
       "cn": "说，报道（report 的第三人称单数）"
     },
-    "explain": {
-      "pos": "v.",
-      "ipa": "/ɪkˈspleɪn/",
-      "cn": "解释，说明",
-      "note": "explain sth to sb，<b>不能说 explain sb sth</b>。"
-    },
     "explains": {
       "pos": "v.",
       "ipa": "/ɪkˈspleɪnz/",
@@ -1764,12 +1735,6 @@
       "ipa": "/ɪˈmædʒɪn/",
       "cn": "想象，设想",
       "note": "imagine doing sth，不能跟不定式。"
-    },
-    "mistake": {
-      "pos": "n./v.",
-      "ipa": "/mɪˈsteɪk/",
-      "cn": "错误；弄错",
-      "note": "make a mistake 犯错（用 make，不用 do）。"
     },
     "carefully": {
       "pos": "adv.",
@@ -1795,18 +1760,6 @@
       "cn": "也（用于否定句）",
       "note": "否定句末尾用 either；肯定句用 too。"
     },
-    "though": {
-      "pos": "adv./conj.",
-      "ipa": "/ðəʊ/",
-      "cn": "不过，然而；虽然",
-      "note": "放句末或句中作副词= however；放句首作连词= although。"
-    },
-    "someone": {
-      "pos": "pron.",
-      "ipa": "/ˈsʌmwʌn/",
-      "cn": "某人",
-      "note": "作主语时谓语用单数。"
-    },
     "no-one": {
       "pos": "pron.",
       "ipa": "/ˈnəʊ wʌn/",
@@ -1818,18 +1771,6 @@
       "ipa": "/əˈɡəʊ/",
       "cn": "以前",
       "note": "用于一般过去时；before 用于过去完成时。"
-    },
-    "would": {
-      "pos": "modal",
-      "ipa": "/wʊd/",
-      "cn": "将会；愿意（will 的过去式）",
-      "note": "在过去时的叙述里，will 要退一步变成 would，叫过去将来时。"
-    },
-    "could": {
-      "pos": "modal",
-      "ipa": "/kʊd/",
-      "cn": "能够；可能（can 的过去式）",
-      "note": "情态动词后面永远跟动词原形。"
     },
     "those": {
       "pos": "pron.",
@@ -1846,12 +1787,6 @@
       "pos": "n.",
       "ipa": "/ˈmɑːʃl/",
       "cn": "马歇尔（姓氏）"
-    },
-    "dad": {
-      "pos": "n.",
-      "ipa": "/dæd/",
-      "cn": "爸爸",
-      "note": "口语用词，相当于 father。作称呼时首字母大写，如 Dad。"
     },
     "figure": {
       "pos": "n.",

@@ -1511,11 +1511,6 @@
       "cn": "缺口；空格",
       "note": "fill in the gap 填空。"
     },
-    "correct": {
-      "pos": "adj./v.",
-      "ipa": "/kəˈrekt/",
-      "cn": "正确的；改正"
-    },
     "adjective": {
       "pos": "n.",
       "ipa": "/ˈædʒɪktɪv/",
@@ -1531,11 +1526,6 @@
       "pos": "n.",
       "ipa": "/ˌprepəˈzɪʃn/",
       "cn": "介词"
-    },
-    "complete": {
-      "pos": "v./adj.",
-      "ipa": "/kəmˈpliːt/",
-      "cn": "使完整；完整的"
     },
     "table": {
       "pos": "n.",
@@ -1605,12 +1595,6 @@
       "pos": "n.",
       "ipa": "/kluː/",
       "cn": "线索；提示"
-    },
-    "mistake": {
-      "pos": "n./v.",
-      "ipa": "/mɪˈsteɪk/",
-      "cn": "错误；弄错",
-      "note": "make a mistake 犯错（用 make，不用 do）。"
     },
     "phrasal": {
       "pos": "adj.",
@@ -1818,11 +1802,6 @@
       "cn": "国家",
       "note": "复数 countries。"
     },
-    "come": {
-      "pos": "v.",
-      "ipa": "/kʌm/",
-      "cn": "来"
-    },
     "create": {
       "pos": "v.",
       "ipa": "/kriˈeɪt/",
@@ -1847,12 +1826,6 @@
       "pos": "prep.",
       "ipa": "/θruː/",
       "cn": "穿过；透过"
-    },
-    "though": {
-      "pos": "adv./conj.",
-      "ipa": "/ðəʊ/",
-      "cn": "不过，然而；虽然",
-      "note": "放句末或句中作副词= however；放句首作连词= although。"
     },
     "individual": {
       "pos": "adj.",
