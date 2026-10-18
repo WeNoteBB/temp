@@ -575,6 +575,8 @@ async function testArticle(slug) {
   }
 
   /* ---------- 12. 词组推导零漂移 ---------- */
+  /* 「本句词组」区里每个词组都要能对上来源：标黄词组（.ph）或书上笔记（ana.note）。
+     笔记行会顶掉同词的标黄 chip（带中文的行样式，不重复出）—— 两边并起来比。 */
   let drift = [];
   for (let pi = 0; pi < C.passage.paragraphs.length; pi++) {
     /* h/i 整段处理：面板给的是整段翻译，没有词条推导（短语仍可单独点，见空面板全量扫描） */
@@ -583,14 +585,17 @@ async function testArticle(slug) {
     for (let si = 0; si < C.passage.paragraphs[pi].length; si++) {
       const el = passage.querySelector(`[data-sent="${pi}-${si}"]`);
       click(el);
-      const fromAna = [...ana.querySelectorAll("[data-word]")].map(b => b.dataset.word).sort();
-      const fromTxt = [...el.querySelectorAll(".ph")].map(p => p.dataset.ph).sort();
+      const fromAna = [...ana.querySelectorAll("[data-word],[data-note]")]
+        .map(b => b.dataset.word || b.dataset.note).sort();
+      const noteKeys = (((C.passage.paragraphs[pi][si].ana || {}).note) || [])
+        .map(it => typeof it === "string" ? it : it.k).filter(Boolean);
+      const fromTxt = [...new Set([...el.querySelectorAll(".ph")].map(p => p.dataset.ph).concat(noteKeys))].sort();
       if (JSON.stringify(fromAna) !== JSON.stringify(fromTxt)) {
         drift.push(`${pi}-${si} 分析=${JSON.stringify(fromAna)} 正文=${JSON.stringify(fromTxt)}`);
       }
     }
   }
-  ok(drift.length === 0, `[${slug}] 逐句比对：推导词组 === 正文黄标词组`);
+  ok(drift.length === 0, `[${slug}] 逐句比对：本句词组 === 标黄词组 ∪ 笔记`);
   drift.slice(0, 4).forEach(d => notes.push("      ✗ " + d));
 
   /* ---------- 13. 历史：去重 / 删除 / 持久化 ---------- */
@@ -1061,7 +1066,7 @@ async function testArticle(slug) {
     ok(allOK, `[${slug}] ${clozeQs0.length} 道开放填空全都有输入框`);
   }
 
-  /* ---------- 15f. 笔记（书上批注）：点开词条 + ☆ 直接收藏 ---------- */
+  /* ---------- 15f. 笔记（书上批注）并进「本句词组」：带中文 + 点开词条 ---------- */
   {
     let host = null, hostRef = "";
     C.passage.paragraphs.forEach((p, pi) => p.forEach((s, si) => {
@@ -1073,40 +1078,25 @@ async function testArticle(slug) {
       ok(noteN > 0, `[${slug}] 笔记条目共 ${noteN} 条`);
       click(passage.querySelector('[data-sent="' + hostRef + '"]'));
       await tick();
-      const rows = [...ana.querySelectorAll(".noterow")];
-      ok(rows.length === host.ana.note.length, `[${slug}] 这句的「笔记」列出 ${rows.length} 条 === 数据 ${host.ana.note.length} 条`);
-      /* 优先拿一个多词的（词组/句型）来测收藏 */
+      ok(/本句词组/.test(ana.textContent), `[${slug}] 小黑板有「本句词组」区`);
+      ok(ana.textContent.indexOf("笔记（书上批注）") < 0,
+        `[${slug}] 不再有单独的「笔记（书上批注）」区`);
+      /* 优先拿一个多词的（词组/句型）来测 */
       const pick = host.ana.note
         .map(it => typeof it === "string" ? it : it.k)
         .find(k => /\s/.test(k)) || (typeof host.ana.note[0] === "string" ? host.ana.note[0] : host.ana.note[0].k);
       const keyBtn = ana.querySelector('.nkey[data-note="' + pick + '"]');
-      ok(!!keyBtn, `[${slug}] 笔记里有「${pick}」`);
+      ok(!!keyBtn, `[${slug}] 「本句词组」里有「${pick}」`);
+      const row = keyBtn && keyBtn.closest(".noterow");
+      ok(!!(row && row.querySelector(".ncn") && row.querySelector(".ncn").textContent.trim()),
+        `[${slug}] 「${pick}」带着中文意思`);
+      ok(!(row && row.querySelector(".nfav")), `[${slug}] 「本句词组」行里没有 ☆（收藏收在总结页）`);
       const h0 = hist.querySelectorAll(".hitem").length;
       click(keyBtn);
       await tick();
-      ok(/词条/.test(ana.textContent), `[${slug}] 点笔记里的「${pick}」→ 小黑板出词条`);
+      ok(/词条/.test(ana.textContent), `[${slug}] 点词组 → 小黑板出词条`);
       ok(hist.querySelectorAll(".hitem").length === h0 + 1,
-        `[${slug}] 笔记里的词组也进历史（历史行里有 ☆）`);
-      /* 回到这一句，测笔记行里的 ☆ 直接收藏 */
-      click(passage.querySelector('[data-sent="' + hostRef + '"]'));
-      await tick();
-      const favBtn = ana.querySelector('.nfav[data-notefav="' + pick + '"]');
-      ok(!!favBtn, `[${slug}] 笔记行有 ☆ 收藏按钮`);
-      if (favBtn) {
-        const favsBefore = JSON.parse(window.localStorage.getItem("pet:fav:v1") || "[]").length;
-        click(favBtn);
-        await tick();
-        const favsAfter = JSON.parse(window.localStorage.getItem("pet:fav:v1") || "[]");
-        ok(favBtn.classList.contains("on") && favBtn.textContent === "★",
-          `[${slug}] 点 ☆ → 收藏成功（★）`);
-        ok(favsAfter.length === favsBefore + 1 &&
-           favsAfter.some(x => x.type === "w" && String(x.cn || "").length > 0),
-          `[${slug}] 收藏表里多了一条带释义的词组（${pick}）`);
-        click(favBtn);
-        await tick();
-        ok(!favBtn.classList.contains("on") && favBtn.textContent === "☆",
-          `[${slug}] 再点一次 → 取消收藏`);
-      }
+        `[${slug}] 点开的词组也进历史（历史行里有 ☆）`);
     }
   }
 
@@ -1173,22 +1163,9 @@ async function testArticle(slug) {
           ok(/句子分析|整句翻译/.test(ana.textContent), `[${slug}] 并打开了这一句的讲解`);
         }
       }
-      /* ☆ 收藏（总结页和「析」里的笔记行星星同步） */
+      /* ☆ 收藏（总结页行内直接收藏，走和词书同一条链路） */
       const favb = sumBox.querySelector('.nfav[data-notefav="' + firstKey + '"]');
       if (favb) {
-        let noteRef = "";
-        C.passage.paragraphs.forEach((p, pi) => p.forEach((s, si) => {
-          (((s.ana && s.ana.note) || [])).forEach(it => {
-            const k = typeof it === "string" ? it : it.k;
-            if (k === firstKey && !noteRef) noteRef = pi + "-" + si;
-          });
-        }));
-        if (noteRef) {
-          click(passage.querySelector('.sent[data-sent="' + noteRef + '"]'));
-          await tick();
-          ok(!!ana.querySelector('.nfav[data-notefav="' + firstKey + '"]'),
-            `[${slug}] 「析」里有同一词组的笔记行（星星要同步）`);
-        }
         const favs0 = JSON.parse(window.localStorage.getItem("pet:fav:v1") || "[]").length;
         click(favb);
         await tick();
@@ -1196,12 +1173,9 @@ async function testArticle(slug) {
         ok(favb.classList.contains("on") && favb.textContent === "★",
           `[${slug}] 总结里点 ☆ → 收藏`);
         ok(favs1 === favs0 + 1, `[${slug}] 收藏表 +1（总结页收藏走同一条链路）`);
-        const anaFav = ana.querySelector('.nfav[data-notefav="' + firstKey + '"]');
-        if (anaFav) ok(anaFav.classList.contains("on"), `[${slug}] 「析」里的星星同步点亮`);
         click(favb);
         await tick();
         ok(!favb.classList.contains("on"), `[${slug}] 再点一次 → 取消收藏`);
-        if (anaFav) ok(!anaFav.classList.contains("on"), `[${slug}] 「析」里的星星同步取消`);
       }
       click(doc.querySelector('.tab[data-tab="read"]'));
       await tick();

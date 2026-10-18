@@ -323,11 +323,6 @@
       speechSynthesis.speak(u);
     }
 
-    function stop() {
-      speechSynthesis.cancel();
-      if (btn) { btn.classList.remove("speaking"); btn = null; }
-    }
-
     if ("speechSynthesis" in window) {
       pick();
       speechSynthesis.onvoiceschanged = pick;
@@ -335,7 +330,8 @@
       setTimeout(pick, 300);
       setTimeout(pick, 1200);
     }
-    return { speak: speak, stop: stop, ready: function () { return !!chosen; } };
+    /* 没有「停止朗读」按钮：点另一个 🔊 时 speak 内部已 cancel 上一句 */
+    return { speak: speak, ready: function () { return !!chosen; } };
   })();
 
   /* =======================================================
@@ -476,7 +472,7 @@
 
   /* 「总结」页里手写的那一半（数据里写了 summary 才渲染）：
      按考点/题型把笔记里的词组/句型分好组 —— 每行 = chip（点开词条）+ 中文 + 词性
-     + 「在哪儿考」跳回原文 + ☆ 收藏。行结构和「笔记」共用 .noterow / .nkey / .nfav，
+     + 「在哪儿考」跳回原文 + ☆ 收藏。行结构和自动清单共用 .noterow / .nkey / .nfav，
      bindPassage 里同一套分支处理；另一半（没整理到的自动清单）在 renderSummary 里。 */
   function buildSummaryHtml() {
     var S = C.summary;
@@ -1385,40 +1381,66 @@
         h += "</div></div>";
       }
 
-      // 本句词组：以正文实际标黄的为准（自动推导），手打的搭配作补充
+      /* 本句词组 = 书上笔记（批注直接就是本句的词组，带中文意思）
+         + 正文标黄词组（自动推导）+ 手打搭配。
+         笔记优先、按词条去重（笔记里的中文覆盖词表释义）；没进词表的手打搭配退回静态 chip。 */
       var derived = phrasesOf(s);
-      var manual = a.phrases || [];
-      var extra = manual.filter(function (m) {
-        return !derived.some(function (d) { return normPhrase(d.label) === normPhrase(m); });
+      var phSeen = {};
+      var markPh = function (form, r) {
+        var k = normPhrase(form);
+        if (k) phSeen[k] = 1;
+        if (r && r.key) phSeen[normPhrase(r.key)] = 1;
+      };
+      var phTaken = function (form, r) {
+        return !!phSeen[normPhrase(form)] || !!(r && r.key && phSeen[normPhrase(r.key)]);
+      };
+      var phRows = [], phChips = [];
+      (a.note || []).forEach(function (item) {
+        var nk = typeof item === "string" ? item : String((item && item.k) || "");
+        if (!nk) return;
+        var r = lookup(nk) || lookupPhrase(nk.toLowerCase());
+        if (phTaken(nk, r)) return;
+        markPh(nk, r);
+        var e = (r && r.entry) || {};
+        phRows.push({
+          k: nk,
+          disp: (item && typeof item === "object" && item.t) || nk,
+          cn: (item && typeof item === "object" && item.cn) ? item.cn : (e.cn || "")
+        });
       });
-      if (derived.length || extra.length) {
-        h += '<div class="sec"><div class="sec-t">本句词组</div><div class="chips">';
-        derived.forEach(function (d) {
-          h += '<button class="chip ph2" data-word="' + esc(d.key) + '" title="点一下看释义">' +
-            esc(d.label) + "</button>";
-        });
-        extra.forEach(function (m) {
-          h += '<span class="chip ph3" title="搭配 / 结构，未进正文词表">' + m + "</span>";
-        });
-        h += "</div></div>";
-      }
-
-      /* 笔记（书上批注）：词组/句型点开看词条、点 ☆ 直接收藏 */
-      if (a.note && a.note.length) {
-        h += '<div class="sec"><div class="sec-t">笔记（书上批注）' +
-          '<span style="font-weight:400;color:var(--ink-3);font-size:11.5px">点词组看释义 · 点 ☆ 收藏</span>' +
-          "</div><div class=\"notes\">";
-        a.note.forEach(function (item) {
-          var nk = typeof item === "string" ? item : String((item && item.k) || "");
-          if (!nk) return;
-          h += noteRowHtml({
-            k: nk,
-            cn: (item && typeof item === "object" && item.cn) || "",
-            t: (item && typeof item === "object" && item.t) || "",
-            ref: ref
+      derived.forEach(function (d) {
+        if (phTaken(d.label, null)) return;     // 笔记里已经收过（如 some time），不再重复出 chip
+        phChips.push({ key: d.key, label: d.label });
+      });
+      var extra = (a.phrases || []).filter(function (m) {
+        return !derived.some(function (d) { return normPhrase(d.label) === normPhrase(m); }) &&
+               !phRows.some(function (r2) { return normPhrase(r2.disp) === normPhrase(m); });
+      });
+      if (phRows.length || phChips.length || extra.length) {
+        h += '<div class="sec"><div class="sec-t">本句词组</div>';
+        if (phRows.length) {
+          h += '<div class="notes">';
+          phRows.forEach(function (r2) {
+            h += '<div class="noterow">';
+            h += '<button class="chip ph2 nkey" data-note="' + esc(r2.k) + '" data-noteref="' + esc(ref) +
+              '" title="点一下看词条">' + esc(r2.disp) + "</button>";
+            if (r2.cn) h += '<span class="ncn">' + esc(stripTags(r2.cn)) + "</span>";
+            h += "</div>";
           });
-        });
-        h += "</div></div>";
+          h += "</div>";
+        }
+        if (phChips.length || extra.length) {
+          h += '<div class="chips">';
+          phChips.forEach(function (d) {
+            h += '<button class="chip ph2" data-word="' + esc(d.key) + '" title="点一下看释义">' +
+              esc(d.label) + "</button>";
+          });
+          extra.forEach(function (m) {
+            h += '<span class="chip ph3" title="搭配 / 结构，未进正文词表">' + m + "</span>";
+          });
+          h += "</div>";
+        }
+        h += "</div>";
       }
       if (a.gram && a.gram.length) {
         h += '<div class="sec"><div class="sec-t">考点</div><div class="chips">';
@@ -1706,7 +1728,7 @@
         return;
       }
 
-      // 笔记行里的 ☆：直接收藏/取消收藏这个词组或句型（历史行/总结页里的星星一起同步）
+      // 总结页行里的 ☆：直接收藏/取消收藏这个词组或句型（历史行里的星星一起同步）
       var nfv = t.closest("[data-notefav]");
       if (nfv) {
         var nfk = nfv.dataset.notefav;
@@ -1716,7 +1738,7 @@
             r = r || {};
             if (!r.ok) return;
             if (r.added) state.favIds[nff.id] = 1; else delete state.favIds[nff.id];
-            /* 同一词组可能同时出现在「析」和「总结」两处，全部同步 */
+            /* 同一个词条理论上只有一处 ☆；数据里真有重复也一起同步 */
             document.querySelectorAll("[data-notefav]").forEach(function (b) {
               if (b.dataset.notefav !== nfk) return;
               b.classList.toggle("on", !!r.added);
@@ -1730,7 +1752,7 @@
         }
         return;
       }
-      // 笔记行的词条名：点开词条（进历史，历史行里也有 ☆）
+      // 本句词组 / 总结页的词条名：点开词条（进历史，历史行里也有 ☆）
       var ntm = t.closest("[data-note]");
       if (ntm) {
         var noteKey = ntm.dataset.note;
@@ -2124,8 +2146,8 @@
     return out;
   }
 
-  /* 一行「词组/句型 + 释义 + 词性 + ☆」。小黑板的「笔记（书上批注）」和总结页共用；
-     opts.jump（总结页用）：正文在另一页，额外给一个跳回原文那一句的小徽章 */
+  /* 总结页的一行：「词组/句型 chip + 释义 + 词性 + ☆」。
+     opts.jump：正文在另一页，额外给一个跳回原文那一句的小徽章 */
   function noteRowHtml(it, opts) {
     var r = lookup(it.k) || lookupPhrase(String(it.k).toLowerCase());
     var e = (r && r.entry) || {};
@@ -2341,8 +2363,6 @@
     if (document.fonts && document.fonts.ready) {
       document.fonts.ready.then(layoutGutter).catch(function () {});
     }
-
-    document.getElementById("btnStop").addEventListener("click", function () { TTS.stop(); });
 
     // 目录列：开合两个按钮 + 列内链接（点当前篇就只收列，不跳转）
     var tglToc = document.getElementById("tglToc");

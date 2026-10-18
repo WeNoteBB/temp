@@ -993,8 +993,10 @@ button.chip.ph2:hover{background:var(--phrase-hover)}
 .gapin.ok{background:var(--ins-bg);border-bottom:2px solid var(--ok-line);color:var(--ok)}
 .gapin.bad{background:var(--danger-bg);border-bottom:2px solid var(--danger);color:var(--danger)}
 .gaprow{display:flex;align-items:center;gap:8px;color:var(--ink-3);font-size:calc(13px * var(--zoom))}
-/* 笔记（书上批注）：一行一个词组/句型，右侧 ☆ 直接收藏 */
+/* 词组行：小黑板「本句词组」里的笔记行 + 总结页清单，一行一个词组/句型
+   （总结页的行尾带 ☆ 直接收藏；小黑板里不设 ☆，收藏走总结页和历史行） */
 .notes{display:flex;flex-direction:column;gap:6px}
+.notes + .chips{margin-top:8px}   /* 本句词组：笔记行下面再跟一排没进词表的手打搭配 */
 .noterow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .nkey{font-weight:700}
 .ncn{color:var(--ink-2);font-size:calc(13px * var(--zoom));line-height:1.6}
