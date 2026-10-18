@@ -23,7 +23,7 @@ cd server && npm test      # 后端单测（假 db，不需要数据库；首次
 cd server && npm run migrate   # 建表/加列（幂等，需要 .env 里的数据库口令）
 ```
 
-改任何东西之后 `npm run check` 必须全绿。当前基线：**verify ✓（0 警告）/ smoke 1070 / test-store 144**，
+改任何东西之后 `npm run check` 必须全绿。当前基线：**verify ✓（0 警告）/ smoke 1108 / test-store 144**，
 后端 `npm test` **94**。
 
 ## 架构要点
@@ -253,6 +253,23 @@ cd server && npm run migrate   # 建表/加列（幂等，需要 .env 里的数�
     - smoke：15f 改成「并进本句词组」（有中文、无单独笔记区、行里无 ☆）、第 12 节的词组零漂移
       改成「本句词组 === 标黄词组 ∪ 笔记」、15g 删掉与「析」同步星标的断言；1074 → **1070** 全绿。
 
+30. **「同义替换」页（2026-10-18 · 用户点名加的内部资料）**：
+    - 首页第 7 个入口「PET 同义替换」（🔀，在阅读理解后面）→ `synonyms.html`；
+      数据 `data/synonyms.json`（300 组，从 docx 里解出来的，方法记在 `sources/synonyms-source.txt`）。
+    - 两张玩法：**列表**（每 10 组一段；左原文右替换都带中文；**英文单词可点** →
+      小卡片：读音 / 回源组号 / ☆ 收藏这个词进「我的词书」；搜索中英文都行；
+      「遮住同义替换」自测，点「点一下对答案」逐行翻开）+ **连线题**（每轮随机 10 组，
+      先点左再点右配对，对绿错红、算错次，「换一组」重新洗牌）。
+    - 收藏走同一条链路（`PETStore.addFav`）：`type:"w"`、key = 单词小写原样（站里没有通用词库，
+      查不了原形）、cn = 所在组的中文、ex = 这组对照、`slug:"synonyms"`；门禁和文章页同一道。
+    - engine：新增 `engine/syn.js`（自动被构建扫描）；`build.mjs` 的 `renderSynonyms()` +
+      `PAGES` 注册表 + 首页磁贴；`style.css` 一节 `.syn-*`（全走令牌）。**没有加新的 max-width
+      断点**（verify 的 BPS 只认 1099）——两栏在 375 上靠网格自己让位。
+    - ⚠ **内部资料**（@Daniel老师KP成长营，版权登记）：数据进仓库的前提是**仓库私有**；
+      页面只放登录门禁后面，别公开宣传/索引。
+    - smoke 1070 → **1108**（+38：首页第 7 个磁贴、同义替换页 300 行/点词小卡片/收藏回写/
+      搜索/遮住自测/连线题对错/门禁）。
+
 **部署实况**（8.138.161.122，Ubuntu 22.04 + nginx 1.18，MySQL 在本机）：
 Node 22 旁装 `/opt/node-v22`（系统 node v12 没动），systemd 单元 `pet-api`
 只监听 127.0.0.1:3001，`sites-available/default` 里插了 `/api/` 反代
@@ -264,7 +281,7 @@ Node 22 旁装 `/opt/node-v22`（系统 node v12 没动），systemd 单元 `pet
 HTML 配了 `Cache-Control: no-cache`（改版不用让学生手动清缓存）。
 Edge 按 375/744/768/820/1194/1440 逐宽度验收：每句「析/🔊」都在、无横向溢出。
 
-`npm run check` 全绿（verify **0 警告** / smoke 1070 / test-store 144），后端单测 94。
+`npm run check` 全绿（verify **0 警告** / smoke 1108 / test-store 144），后端单测 94。
 （原来的 18 条跨篇释义警告已统一并收进共享词库，见上面的第 22 条。）
 
 **未做 / 待办：**

@@ -1371,3 +1371,125 @@ button.nat:hover{border-color:var(--border-accent);color:var(--accent);backgroun
 .wd-ul{margin:0;padding-left:18px}
 .wd-ul li{margin-bottom:3px}
 .wd-none{color:var(--ink-3)}
+
+/* ---------- 同义替换页（synonyms.html）：300 组列表 + 连线题 ---------- */
+/* 列表是左右两栏对照，页面比默认的 760px 放宽一点 */
+.page-wrap.syn-wrap{max-width:1000px}
+.syn-credit{
+  margin:0 0 14px;padding:8px 12px;border-radius:8px;
+  background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+  font-size:12.5px;line-height:1.7;
+}
+/* 搜索 / 遮住自测 / 列表-练习切换：吸顶，滚长列表时一直在 */
+.syn-bar{
+  position:sticky;top:0;z-index:6;display:flex;gap:10px;align-items:center;flex-wrap:wrap;
+  padding:10px 0;margin-bottom:4px;background:var(--bg);
+}
+.syn-search{
+  flex:1;min-width:170px;padding:9px 12px;border-radius:10px;font:inherit;font-size:13.5px;
+  border:1px solid var(--line);background:var(--panel);color:var(--ink);
+}
+.syn-search::placeholder{color:var(--ink-3)}
+.syn-search:focus{outline:none;border-color:var(--border-accent);background:var(--tint-accent)}
+.syn-bar .btn{flex:none}
+.syn-bar .btn.on{background:var(--accent-soft);border-color:var(--border-accent);color:var(--accent)}
+.syn-tabs{display:flex;gap:4px;background:var(--line-2);padding:3px;border-radius:9px;flex:none}
+.syn-tab{padding:6px 14px;border-radius:7px;font-size:13.5px;color:var(--ink-2);transition:background .15s,color .15s}
+.syn-tab.on{background:var(--panel);color:var(--accent);font-weight:600;box-shadow:var(--shadow-tab)}
+.syn-bar.quiz .syn-search,.syn-bar.quiz #synMask{display:none}
+
+.syn-list{
+  background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:2px 16px 14px;box-shadow:var(--shadow);
+}
+.syn-sec-h{margin:18px 0 4px;font-size:12.5px;color:var(--ink-3);font-weight:700;letter-spacing:.6px}
+.syn-sec:first-child .syn-sec-h{margin-top:12px}
+.syn-row{
+  display:grid;grid-template-columns:28px minmax(0,1fr) 16px minmax(0,1fr);
+  gap:8px;align-items:start;padding:9px 0;border-bottom:1px solid var(--line-2);
+}
+.syn-row:last-child{border-bottom:none}
+.syn-n{color:var(--ink-3);font-size:12px;padding-top:3px;text-align:right}
+.syn-side{min-width:0}
+.syn-en{font-size:14px;line-height:1.8;overflow-wrap:anywhere}
+.syn-cn{color:var(--ink-2);font-size:12.5px;line-height:1.6;margin-top:1px}
+.syn-arrow{color:var(--ink-3);text-align:center;padding-top:4px;font-size:12px}
+/* 英文单词：可点（读音 / 释义 / 收藏），收藏过的点亮 */
+.syn-w{
+  font:inherit;color:inherit;padding:0;border:0;background:none;cursor:pointer;border-radius:3px;
+  border-bottom:1px dotted transparent;
+}
+.syn-w:hover{color:var(--accent);border-bottom-color:var(--accent);background:var(--accent-soft)}
+.syn-w.on{color:var(--accent);border-bottom-color:var(--accent)}
+/* 遮住同义替换（自测）：右侧藏起来，点一下对答案 */
+.syn-tap{
+  display:none;margin-top:4px;padding:3px 10px;border-radius:999px;
+  border:1px dashed var(--border-accent);background:var(--tint-accent);color:var(--accent);
+  font-size:12px;cursor:pointer;
+}
+.syn-row.masked .syn-tap{display:inline-block}
+.syn-row.masked:not(.shown) .syn-side.r .syn-en,
+.syn-row.masked:not(.shown) .syn-side.r .syn-cn{display:none}
+.syn-row.masked:not(.shown) .syn-tap{margin-top:0}
+.syn-empty{color:var(--ink-3);text-align:center;padding:46px 16px;line-height:2;font-size:13.5px}
+.syn-empty .big{display:block;font-size:26px;margin-bottom:8px;opacity:.6}
+.syn-foot{color:var(--ink-3);font-size:12px;margin:12px 2px 0}
+
+/* 连线题 */
+.syn-quiz{
+  background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:14px 16px 16px;box-shadow:var(--shadow);
+}
+.syn-qhead{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.syn-qtitle{font-weight:700;font-size:14px}
+.syn-score{margin-left:auto;font-size:13px;color:var(--ink-2)}
+.syn-score b{color:var(--accent);font-size:15px}
+.syn-done{
+  margin:0 0 12px;padding:10px 12px;border-radius:10px;font-size:13.5px;
+  background:var(--ok-bg);border:1px solid var(--ok-line);color:var(--ok);
+}
+.syn-qcols{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.syn-qcol{display:flex;flex-direction:column;gap:8px;min-width:0}
+.syn-qitem{
+  text-align:left;padding:9px 11px;border-radius:10px;border:1px solid var(--line);
+  background:var(--panel);color:var(--ink);font:inherit;font-size:13.5px;line-height:1.6;
+  cursor:pointer;transition:background .12s,border-color .12s;overflow-wrap:anywhere;
+}
+.syn-qitem:hover{border-color:var(--border-accent);background:var(--tint-accent)}
+.syn-qitem.sel{border-color:var(--accent);background:var(--accent-soft)}
+.syn-qitem.ok{border-color:var(--ok-line-2);background:var(--ins-bg);cursor:default}
+.syn-qitem.bad{border-color:var(--danger);background:var(--danger-bg)}
+.syn-qen{display:block}
+.syn-qcn{display:none;margin-top:3px;color:var(--ink-2);font-size:12px;line-height:1.6}
+.syn-qitem.ok .syn-qcn{display:block}
+.syn-qtip{color:var(--ink-3);font-size:12.5px;margin:12px 0 0}
+
+/* 单词小卡片（点单词弹出） */
+.syn-pop{position:fixed;inset:0;z-index:210;display:flex;align-items:center;justify-content:center;padding:18px}
+.syn-pop[hidden]{display:none}
+.syn-pop-mask{position:absolute;inset:0;background:rgba(0,0,0,.45)}
+.syn-pop-card{
+  position:relative;width:100%;max-width:430px;max-height:88vh;overflow-y:auto;
+  background:var(--panel);border:1px solid var(--line);border-radius:16px;
+  padding:18px 18px 14px;box-shadow:var(--shadow-pop);animation:umpop .18s ease-out;
+}
+.syn-pop-h{display:flex;align-items:center;gap:8px}
+.syn-pop-w{font-weight:700;font-size:19px;overflow-wrap:anywhere}
+.syn-pop-x{
+  margin-left:auto;width:26px;height:26px;border-radius:8px;flex:none;font-size:12px;color:var(--ink-3);
+  display:flex;align-items:center;justify-content:center;transition:all .12s;
+}
+.syn-pop-x:hover{background:var(--danger-bg);color:var(--danger)}
+.syn-pop-from{color:var(--ink-3);font-size:12.5px;margin:8px 0 6px}
+.syn-pop-g{
+  background:var(--sunken);border-radius:10px;padding:9px 12px;margin-bottom:12px;
+  font-size:13.5px;line-height:1.7;
+}
+.syn-pop-row{display:flex;gap:8px;flex-wrap:wrap}
+.syn-pop-row + .syn-pop-row{margin-top:5px;color:var(--ink-2)}
+.syn-pop-row b{font-weight:600}
+.syn-pop-row span{color:var(--ink-2)}
+.syn-pop-fav{width:100%}
+.syn-pop-fav.on{background:var(--accent-soft);border-color:var(--border-accent);color:var(--accent);font-weight:600}
+.syn-pop-tip{color:var(--ink-3);font-size:12px;line-height:1.7;margin:10px 0 0}
+

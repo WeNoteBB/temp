@@ -51,7 +51,8 @@ const manifest = readJSON(P("data", "manifest.json"));
 const PAGES = [
   { out: "index.html", render: () => renderIndex(manifest, present) },
   { out: "mistakes.html", render: () => renderMistakes(manifest, present) },
-  { out: "words.html", render: () => renderWords(manifest, present) }
+  { out: "words.html", render: () => renderWords(manifest, present) },
+  { out: "synonyms.html", render: () => renderSynonyms(manifest) }
 ];
 const PAGE_OUTS = new Set(PAGES.map(p => p.out));
 
@@ -320,6 +321,7 @@ ${THEME_HEAD}
     <section class="tiles" id="tilesMain" aria-label="学习入口">
       <a class="tile" data-go="words" href="words.html"><span class="tile-ico">📖</span><span class="tile-lab">我的词书</span></a>
       <a class="tile" data-go="read" id="tileRead" href="#"><span class="tile-ico">📕</span><span class="tile-lab">PET 阅读理解</span></a>
+      <a class="tile" data-go="syn" href="synonyms.html"><span class="tile-ico">🔀</span><span class="tile-lab">PET 同义替换</span></a>
       <a class="tile soon" data-go="speak" href="#"><span class="tile-ico">🗣</span><span class="tile-lab">PET 口语</span></a>
       <a class="tile soon" data-go="listen" href="#"><span class="tile-ico">🎧</span><span class="tile-lab">PET 听力</span></a>
       <a class="tile soon" data-go="write" href="#"><span class="tile-ico">✍</span><span class="tile-lab">PET 写作</span></a>
@@ -426,6 +428,63 @@ function renderMistakes(man, slugs) {
     sub: "阅读理解里做错过的题都在这。点「去订正」回到那道题看看解析。",
     script: "mlist.js"
   });
+}
+
+/* ============================================================
+   同义替换页（synonyms.html · 内部资料）
+   内容 data/synonyms.json 整份内联（和文章页一个路子：纯静态、登录门禁后面）。
+   文件不在时构建给出空数据页（不报错）—— 换机器别让整站构建挂掉。
+   ============================================================ */
+function renderSynonyms(man) {
+  const src = P("data", "synonyms.json");
+  let D;
+  try { D = readJSON(src); } catch (e) {
+    console.error("! 读不到 data/synonyms.json（同义替换页会是空页）：" + e.message);
+    D = { title: "PET 阅读同义替换", credit: "", groups: [] };
+  }
+  return `<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>${escHTML(D.title || "PET 阅读同义替换")} · ${escHTML(man.site.title)}</title>
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#eef1f6">
+${THEME_HEAD}
+<link rel="stylesheet" href="engine/style.css?v=${assetV("style.css")}">
+<script src="engine/store.js?v=${assetV("store.js")}"></script>
+<!-- 门禁：和文章页同一道（存储不可用时放行，见 store.js） -->
+<script>PETStore.guard().catch(function(){});</script>
+</head>
+<body class="page-body">
+<div class="page-wrap syn-wrap">
+  <header class="page-top">
+    <a class="page-back" href="index.html">← 首页</a>
+    <h1 class="page-title">PET 同义替换</h1>
+    <span class="who" id="who" hidden></span>
+    <button class="tool" id="tglTheme" type="button" title="主题：跟随系统">◐ 跟随</button>
+  </header>
+  <p class="page-sub">${(D.groups || []).length} 组「原文 ⇄ 同义替换」：点英文单词听读音、☆ 收藏进词书；切到「连线题」按书上的玩法练。</p>
+  <p class="syn-credit" id="synCredit"></p>
+  <div class="syn-bar">
+    <input id="synSearch" class="syn-search" type="search" placeholder="搜索：中文、英文都行（如 野餐 / picnic）" autocomplete="off">
+    <button class="btn" id="synMask" type="button">遮住同义替换</button>
+    <div class="syn-tabs">
+      <button class="syn-tab on" data-view="list" type="button">列表</button>
+      <button class="syn-tab" data-view="quiz" type="button">连线题</button>
+    </div>
+  </div>
+  <div id="synList" class="syn-list"><div class="syn-empty">加载中…</div></div>
+  <div id="synQuiz" class="syn-quiz" hidden></div>
+</div>
+<div class="syn-pop" id="synPop" hidden>
+  <div class="syn-pop-mask" data-pop="close"></div>
+  <div class="syn-pop-card" id="synPopCard" role="dialog" aria-modal="true" aria-label="单词卡片"></div>
+</div>
+<script>window.PET_SYN = ${inlineJSON(D)};</script>
+<script src="engine/syn.js?v=${assetV("syn.js")}"></script>
+</body>
+</html>`;
 }
 
 function renderWords(man, slugs) {

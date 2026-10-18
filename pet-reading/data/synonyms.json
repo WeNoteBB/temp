@@ -1,0 +1,2106 @@
+{
+  "title": "PET 阅读同义替换 300 组",
+  "credit": "来源：@Daniel老师KP成长营《PET 阅读同义替换》（版权登记，翻版必究）· 内部学习资料，请勿外传",
+  "groups": [
+    {
+      "n": 1,
+      "en": "a DVD you can keep",
+      "cn": "你可以拥有的DVD",
+      "syn": "make something to take home",
+      "synCn": "制作可带回家的物品"
+    },
+    {
+      "n": 2,
+      "en": "a great selection of books",
+      "cn": "大量书籍",
+      "syn": "something to read",
+      "synCn": "可阅读的东西"
+    },
+    {
+      "n": 3,
+      "en": "eat your tasty sandwiches",
+      "cn": "享用美味的三明治",
+      "syn": "have a snack",
+      "synCn": "吃零食"
+    },
+    {
+      "n": 4,
+      "en": "a maximum of 30 students",
+      "cn": "最多容纳30名学生",
+      "syn": "places at the event are limited",
+      "synCn": "活动的位置有限"
+    },
+    {
+      "n": 5,
+      "en": "a new event that starts after dark",
+      "cn": "夜间活动",
+      "syn": "night-time activity",
+      "synCn": "夜间活动"
+    },
+    {
+      "n": 6,
+      "en": "a proper chef",
+      "cn": "厨师",
+      "syn": "a professional cook",
+      "synCn": "专业厨师"
+    },
+    {
+      "n": 7,
+      "en": "a restaurant",
+      "cn": "一个餐厅",
+      "syn": "sit down for something hot to eat",
+      "synCn": "坐下来吃点热的东西"
+    },
+    {
+      "n": 8,
+      "en": "ice rink",
+      "cn": "溜冰场19",
+      "syn": "watch other people's skating",
+      "synCn": "观看其他人滑冰"
+    },
+    {
+      "n": 9,
+      "en": "a roof covering the whole skating area",
+      "cn": "一个覆盖整个滑冰区的屋顶",
+      "syn": "won't get wet if it rains",
+      "synCn": "如果下雨也不会湿"
+    },
+    {
+      "n": 10,
+      "en": "a show in your area",
+      "cn": "本地演出",
+      "syn": "local concerts",
+      "synCn": "本地音乐会"
+    },
+    {
+      "n": 11,
+      "en": "a special play area for younger visitors",
+      "cn": "为年幼访客准备的特殊游乐区",
+      "syn": "activities for 5 years old",
+      "synCn": "5岁儿童的活动"
+    },
+    {
+      "n": 12,
+      "en": "above all",
+      "cn": "最重要的是",
+      "syn": "the most important part",
+      "synCn": "最重要的是"
+    },
+    {
+      "n": 13,
+      "en": "accommodation",
+      "cn": "住宿",
+      "syn": "stay overnight",
+      "synCn": "过夜"
+    },
+    {
+      "n": 14,
+      "en": "address and date of birth",
+      "cn": "地址和出生日期",
+      "syn": "their age and where they live",
+      "synCn": "年龄和居住地"
+    },
+    {
+      "n": 15,
+      "en": "advanced dance and drama students",
+      "cn": "高水平舞蹈戏剧学生",
+      "syn": "experienced dancer",
+      "synCn": "经验丰富的舞者"
+    },
+    {
+      "n": 16,
+      "en": "advice",
+      "cn": "建议",
+      "syn": "suggestion",
+      "synCn": "建议"
+    },
+    {
+      "n": 17,
+      "en": "after opening",
+      "cn": "开罐后",
+      "syn": "after you start using it",
+      "synCn": "在你开始使用之后"
+    },
+    {
+      "n": 18,
+      "en": "please him",
+      "cn": "让他开心",
+      "syn": "keep his father happy",
+      "synCn": "取悦父亲"
+    },
+    {
+      "n": 19,
+      "en": "easy access",
+      "cn": "方便出入",
+      "syn": "move around without difficulty",
+      "synCn": "行动无障碍"
+    },
+    {
+      "n": 20,
+      "en": "all over the planet",
+      "cn": "全球",
+      "syn": "around the world",
+      "synCn": "全世界"
+    },
+    {
+      "n": 21,
+      "en": "amazing creatures, from insects to camels",
+      "cn": "从昆虫到骆驼的神奇生物",
+      "syn": "various kinds of animals in deserts",
+      "synCn": "沙漠中的各类动物"
+    },
+    {
+      "n": 22,
+      "en": "an hour-long skating class",
+      "cn": "做一个时长一小时的滑冰课",
+      "syn": "a lesson",
+      "synCn": "一次课"
+    },
+    {
+      "n": 23,
+      "en": "ancient animals such as dinosaurs",
+      "cn": "古代动物(如恐龙)",
+      "syn": "creatures that lived millions of years ago",
+      "synCn": "数百万年前的生物"
+    },
+    {
+      "n": 24,
+      "en": "ancient clock tower, beautiful palace and old town hall",
+      "cn": "古钟塔、宫殿和古镇",
+      "syn": "historic buildings",
+      "synCn": "历史建筑"
+    },
+    {
+      "n": 25,
+      "en": "animals and birds",
+      "cn": "动物和鸟类",
+      "syn": "wildlife",
+      "synCn": "野生动物"
+    },
+    {
+      "n": 26,
+      "en": "Antarctica",
+      "cn": "南极洲",
+      "syn": "icy environment",
+      "synCn": "冰寒环境"
+    },
+    {
+      "n": 27,
+      "en": "popular movies",
+      "cn": "热门电影",
+      "syn": "famous films",
+      "synCn": "著名电影"
+    },
+    {
+      "n": 28,
+      "en": "argue about prices",
+      "cn": "讨价还价",
+      "syn": "ask to pay less",
+      "synCn": "想要低价买"
+    },
+    {
+      "n": 29,
+      "en": "someone to take photos",
+      "cn": "拍照的人",
+      "syn": "photographer",
+      "synCn": "摄影师"
+    },
+    {
+      "n": 30,
+      "en": "international bands and musicians",
+      "cn": "国际乐队和音乐家",
+      "syn": "music from around the world",
+      "synCn": "全球音乐"
+    },
+    {
+      "n": 31,
+      "en": "available every evening",
+      "cn": "每天晚上有空",
+      "syn": "free during the week",
+      "synCn": "周中有空"
+    },
+    {
+      "n": 32,
+      "en": "based on a novel",
+      "cn": "基于小说改编",
+      "syn": "based on a book",
+      "synCn": "基于书籍"
+    },
+    {
+      "n": 33,
+      "en": "be able to stop caring about…",
+      "cn": "可以停止在意…",
+      "syn": "not having to worry about…",
+      "synCn": "无需担心…"
+    },
+    {
+      "n": 34,
+      "en": "be with a group of walkers",
+      "cn": "和徒步者团队一起",
+      "syn": "hiking in the countryside",
+      "synCn": "乡间徒步"
+    },
+    {
+      "n": 35,
+      "en": "beginners' sessions in drawing nature",
+      "cn": "自然绘画初学者课程",
+      "syn": "try an art class",
+      "synCn": "尝试美术课"
+    },
+    {
+      "n": 36,
+      "en": "believe in themselves",
+      "cn": "相信自己",
+      "syn": "confident",
+      "synCn": "自信的"
+    },
+    {
+      "n": 37,
+      "en": "biggest sandy beaches",
+      "cn": "最大沙滩之一",
+      "syn": "plenty of space for games",
+      "synCn": "充足的游玩空间"
+    },
+    {
+      "n": 38,
+      "en": "birds and wild animals",
+      "cn": "鸟类和野生动物",
+      "syn": "wildlife",
+      "synCn": "野生动物"
+    },
+    {
+      "n": 39,
+      "en": "return",
+      "cn": "归还",
+      "syn": "take… back",
+      "synCn": "将…带回"
+    },
+    {
+      "n": 40,
+      "en": "test",
+      "cn": "测试",
+      "syn": "check",
+      "synCn": "检查"
+    },
+    {
+      "n": 41,
+      "en": "buy snacks, drinks and light meals",
+      "cn": "购买小吃、饮料和简餐",
+      "syn": "have refreshments on the train",
+      "synCn": "在火车上享用茶点"
+    },
+    {
+      "n": 42,
+      "en": "calm section with lifeguards",
+      "cn": "有救生员的平静区域",
+      "syn": "safe swimming areas",
+      "synCn": "安全游泳区"
+    },
+    {
+      "n": 43,
+      "en": "get together",
+      "cn": "见面",
+      "syn": "meet",
+      "synCn": "见面"
+    },
+    {
+      "n": 44,
+      "en": "catch salmon out at sea (back before lunch time)",
+      "cn": "出海捕鲑鱼(午前返回)",
+      "syn": "go fishing in the morning",
+      "synCn": "上午钓鱼"
+    },
+    {
+      "n": 45,
+      "en": "certificates for successful students",
+      "cn": "为优秀学生颁发的证书",
+      "syn": "diploma at the end",
+      "synCn": "结业证书"
+    },
+    {
+      "n": 46,
+      "en": "challenging",
+      "cn": "具有挑战性的",
+      "syn": "complicated",
+      "synCn": "复杂的"
+    },
+    {
+      "n": 47,
+      "en": "found",
+      "cn": "发现",
+      "syn": "discovered",
+      "synCn": "发现"
+    },
+    {
+      "n": 48,
+      "en": "cheaper tickets",
+      "cn": "更便宜的票",
+      "syn": "discounts",
+      "synCn": "折扣"
+    },
+    {
+      "n": 49,
+      "en": "City Gallery",
+      "cn": "城市画廊",
+      "syn": "exhibition",
+      "synCn": "作品展"
+    },
+    {
+      "n": 50,
+      "en": "complicated",
+      "cn": "复杂的",
+      "syn": "difficult",
+      "synCn": "困难的"
+    },
+    {
+      "n": 51,
+      "en": "cooking for yourself",
+      "cn": "为自己烹饪",
+      "syn": "meals for one person",
+      "synCn": "一人餐"
+    },
+    {
+      "n": 52,
+      "en": "cool for one minute",
+      "cn": "冷却1分钟",
+      "syn": "leave the food for one minute",
+      "synCn": "让食物静置1分钟"
+    },
+    {
+      "n": 53,
+      "en": "cost absolutely nothing",
+      "cn": "不花费任何钱",
+      "syn": "free",
+      "synCn": "免费的"
+    },
+    {
+      "n": 54,
+      "en": "rare animals and birds",
+      "cn": "珍稀动物和鸟类",
+      "syn": "wildlife",
+      "synCn": "野生动物"
+    },
+    {
+      "n": 55,
+      "en": "damage",
+      "cn": "破损",
+      "syn": "not in perfect condition",
+      "synCn": "(外观)不是很完美"
+    },
+    {
+      "n": 56,
+      "en": "damage the planet",
+      "cn": "破坏环境",
+      "syn": "affect the environment",
+      "synCn": "影响环境"
+    },
+    {
+      "n": 57,
+      "en": "none of them cost a lot",
+      "cn": "它们都不贵",
+      "syn": "reasonable price",
+      "synCn": "合理的价格"
+    },
+    {
+      "n": 58,
+      "en": "developed",
+      "cn": "被研发的",
+      "syn": "invented",
+      "synCn": "被发明的"
+    },
+    {
+      "n": 59,
+      "en": "didn't include meat or fish",
+      "cn": "不含肉鱼",
+      "syn": "vegetarian food",
+      "synCn": "素食"
+    },
+    {
+      "n": 60,
+      "en": "turn waste, plastic, glass, and metal into new products",
+      "cn": "将塑料，玻璃，金属变成新的产品",
+      "syn": "recycling processes",
+      "synCn": "学习回收流程"
+    },
+    {
+      "n": 61,
+      "en": "work by local painters and photographers",
+      "cn": "当地画家和摄影师的作品",
+      "syn": "art",
+      "synCn": "艺术"
+    },
+    {
+      "n": 62,
+      "en": "do better",
+      "cn": "做得更好",
+      "syn": "improve",
+      "synCn": "改善"
+    },
+    {
+      "n": 63,
+      "en": "do it another time",
+      "cn": "换个时间",
+      "syn": "change a plan",
+      "synCn": "改变计划"
+    },
+    {
+      "n": 64,
+      "en": "don't forget your camera",
+      "cn": "别忘了带相机",
+      "syn": "take photos",
+      "synCn": "拍照"
+    },
+    {
+      "n": 65,
+      "en": "don't have a minimum number of guests",
+      "cn": "无最低人数限制",
+      "syn": "very small party",
+      "synCn": "小型派对"
+    },
+    {
+      "n": 66,
+      "en": "dreamt of visiting as a child",
+      "cn": "从小梦想参观这个地方",
+      "syn": "wanted to travel there for a long time",
+      "synCn": "长期以来想去那里旅行"
+    },
+    {
+      "n": 67,
+      "en": "eating places serving local fish dishes all day long",
+      "cn": "全天供应的海鲜料理用餐区",
+      "syn": "a cafe offering good fish lunches",
+      "synCn": "提供优质鱼肉午餐的咖啡厅"
+    },
+    {
+      "n": 68,
+      "en": "elephants and giraffes",
+      "cn": "大象和长颈鹿",
+      "syn": "large animals",
+      "synCn": "大型动物"
+    },
+    {
+      "n": 69,
+      "en": "enjoy a video about the lives of top researchers",
+      "cn": "享受观看顶尖科学家纪录片",
+      "syn": "watch a film about scientists",
+      "synCn": "观看科学家纪录片"
+    },
+    {
+      "n": 70,
+      "en": "entry will be refused",
+      "cn": "谢绝进入",
+      "syn": "cannot enter",
+      "synCn": "进不去"
+    },
+    {
+      "n": 71,
+      "en": "every fortnight",
+      "cn": "每隔半月",
+      "syn": "every two weeks",
+      "synCn": "每两周"
+    },
+    {
+      "n": 72,
+      "en": "fun questions testing your musical knowledge",
+      "cn": "检验音乐知识的测试题",
+      "syn": "music quizzes",
+      "synCn": "音乐小测"
+    },
+    {
+      "n": 73,
+      "en": "exchange it",
+      "cn": "换货",
+      "syn": "return it and choose something else",
+      "synCn": "退货并选择其他商品"
+    },
+    {
+      "n": 74,
+      "en": "experiments that changed the world",
+      "cn": "改变世界的实验",
+      "syn": "important scientific discoveries",
+      "synCn": "重要科学发现"
+    },
+    {
+      "n": 75,
+      "en": "influence",
+      "cn": "影响",
+      "syn": "affects",
+      "synCn": "影响"
+    },
+    {
+      "n": 76,
+      "en": "extra charge",
+      "cn": "额外收费",
+      "syn": "pay more",
+      "synCn": "支付更多"
+    },
+    {
+      "n": 77,
+      "en": "extraordinary film clips of these places",
+      "cn": "这些地方的非凡影片片段",
+      "syn": "unusual videos of deserts",
+      "synCn": "沙漠的不寻常视频"
+    },
+    {
+      "n": 78,
+      "en": "famous athletes",
+      "cn": "著名运动员",
+      "syn": "top sportspeople from all over the world",
+      "synCn": "全球顶级运动员"
+    },
+    {
+      "n": 79,
+      "en": "fantastic playground for younger guests",
+      "cn": "儿童游乐场",
+      "syn": "a place where children can run around and have fun",
+      "synCn": "儿童活动区"
+    },
+    {
+      "n": 80,
+      "en": "fantastic sea views",
+      "cn": "迷人的海景",
+      "syn": "near the coast",
+      "synCn": "靠近海岸"
+    },
+    {
+      "n": 81,
+      "en": "post it onto the website",
+      "cn": "发布到网站上",
+      "syn": "upload",
+      "synCn": "上传"
+    },
+    {
+      "n": 82,
+      "en": "find new dishes on offer each week",
+      "cn": "每周发现新菜式",
+      "syn": "the menu changes regularly",
+      "synCn": "菜单经常更换"
+    },
+    {
+      "n": 83,
+      "en": "find out",
+      "cn": "发现",
+      "syn": "discover",
+      "synCn": "惊讶发现"
+    },
+    {
+      "n": 84,
+      "en": "fine",
+      "cn": "罚款",
+      "syn": "have to pay",
+      "synCn": "需要支付"
+    },
+    {
+      "n": 85,
+      "en": "the City Cafe",
+      "cn": "城市咖啡馆",
+      "syn": "nice coffee shop",
+      "synCn": "优质咖啡店"
+    },
+    {
+      "n": 86,
+      "en": "local mushrooms and fish",
+      "cn": "本地蘑菇和鱼",
+      "syn": "food from local forest",
+      "synCn": "本地森林食材"
+    },
+    {
+      "n": 87,
+      "en": "food waste",
+      "cn": "食物垃圾",
+      "syn": "unfinished burgers",
+      "synCn": "没吃完的汉堡"
+    },
+    {
+      "n": 88,
+      "en": "for club members only",
+      "cn": "仅限会员",
+      "syn": "club membership",
+      "synCn": "俱乐部会员身份"
+    },
+    {
+      "n": 89,
+      "en": "free",
+      "cn": "免费的",
+      "syn": "will not be charged",
+      "synCn": "不会收费"
+    },
+    {
+      "n": 90,
+      "en": "frightened",
+      "cn": "吓到了",
+      "syn": "find sth. scary",
+      "synCn": "觉得…可怕"
+    },
+    {
+      "n": 91,
+      "en": "get",
+      "cn": "得到",
+      "syn": "receive",
+      "synCn": "收到"
+    },
+    {
+      "n": 92,
+      "en": "get your own equipment here",
+      "cn": "在这里获取你自己的装备",
+      "syn": "buy some skates there",
+      "synCn": "在那里买些滑冰鞋"
+    },
+    {
+      "n": 93,
+      "en": "gifts made from thrown-out objects and materials",
+      "cn": "用废弃材料制成的礼品",
+      "syn": "something created from recycled items",
+      "synCn": "回收制品"
+    },
+    {
+      "n": 94,
+      "en": "give animals their lunch",
+      "cn": "给动物们吃午餐",
+      "syn": "feed some animals",
+      "synCn": "喂一些动物"
+    },
+    {
+      "n": 95,
+      "en": "be ready for extreme weather conditions",
+      "cn": "为极端天气条件做好准备",
+      "syn": "prepare for extreme weather events",
+      "synCn": "为极端天气事件做准备"
+    },
+    {
+      "n": 96,
+      "en": "give up some of my musical activities",
+      "cn": "放弃我的一些音乐活动",
+      "syn": "spend less time on her music",
+      "synCn": "花更少的时间在音乐上"
+    },
+    {
+      "n": 97,
+      "en": "go around on a horse or camel",
+      "cn": "骑马或骆驼四处走动",
+      "syn": "ride on some animals",
+      "synCn": "骑一些动物"
+    },
+    {
+      "n": 98,
+      "en": "great experience",
+      "cn": "美好经历",
+      "syn": "enjoyed themselves",
+      "synCn": "玩得开心"
+    },
+    {
+      "n": 99,
+      "en": "great museum with photographs and objects",
+      "cn": "有历史照片和物品的博物馆",
+      "syn": "exhibition about its history",
+      "synCn": "历史展览"
+    },
+    {
+      "n": 100,
+      "en": "guest bedrooms available",
+      "cn": "提供客房",
+      "syn": "offers accommodation",
+      "synCn": "提供住宿"
+    },
+    {
+      "n": 101,
+      "en": "talk about their experiences in the city",
+      "cn": "分享城市生活经验",
+      "syn": "find out about people's lives",
+      "synCn": "了解市民生活"
+    },
+    {
+      "n": 102,
+      "en": "had doubts",
+      "cn": "怀疑",
+      "syn": "wasn't sure",
+      "synCn": "不确定"
+    },
+    {
+      "n": 103,
+      "en": "half-price",
+      "cn": "半价",
+      "syn": "a special offer",
+      "synCn": "特价"
+    },
+    {
+      "n": 104,
+      "en": "hall and gardens available",
+      "cn": "大厅和花园均可使用",
+      "syn": "either indoors or outdoors",
+      "synCn": "可在室内或室外"
+    },
+    {
+      "n": 105,
+      "en": "have a go at sailing and surfing",
+      "cn": "尝试帆船和冲浪",
+      "syn": "try water sports",
+      "synCn": "尝试水上运动"
+    },
+    {
+      "n": 106,
+      "en": "hear experts give information about the wildlife",
+      "cn": "听专家提供有关野生动植物的信息",
+      "syn": "listen to talks about the animals",
+      "synCn": "听关于动物的讲座"
+    },
+    {
+      "n": 107,
+      "en": "outdoor theatre",
+      "cn": "露天剧场",
+      "syn": "see a play",
+      "synCn": "观看戏剧"
+    },
+    {
+      "n": 108,
+      "en": "historically accurate clothes",
+      "cn": "历史真实服装",
+      "syn": "realistic costumes from the period",
+      "synCn": "现实的时代服装"
+    },
+    {
+      "n": 109,
+      "en": "contests",
+      "cn": "比赛",
+      "syn": "competitions",
+      "synCn": "比赛"
+    },
+    {
+      "n": 110,
+      "en": "hope to get their own work published",
+      "cn": "希望出版书籍",
+      "syn": "would love to have career as a writer",
+      "synCn": "想要成为作家"
+    },
+    {
+      "n": 111,
+      "en": "how people live in different parts of the world",
+      "cn": "世界各地生活方式",
+      "syn": "discover other cultures",
+      "synCn": "探索其他文化"
+    },
+    {
+      "n": 112,
+      "en": "market with tasty snacks available",
+      "cn": "提供美味小吃的市场",
+      "syn": "try new food",
+      "synCn": "尝试新食物"
+    },
+    {
+      "n": 113,
+      "en": "I only relaxed when it was over",
+      "cn": "直到结束才放松下来",
+      "syn": "anxious",
+      "synCn": "焦虑"
+    },
+    {
+      "n": 114,
+      "en": "I thought I'd never get used to living there.",
+      "cn": "我以为永远无法适应那里的生活",
+      "syn": "worried about what it would be like",
+      "synCn": "担心新生活状况"
+    },
+    {
+      "n": 115,
+      "en": "got my age wrong",
+      "cn": "搞错了我的年龄",
+      "syn": "a mistake",
+      "synCn": "犯错"
+    },
+    {
+      "n": 116,
+      "en": "want to show I can do better than anyone else",
+      "cn": "想证明自己比别人做得更好",
+      "syn": "likes competing against others",
+      "synCn": "喜欢与他人竞争"
+    },
+    {
+      "n": 117,
+      "en": "includes ballet",
+      "cn": "包含芭蕾舞",
+      "syn": "a show with dancing",
+      "synCn": "包含舞蹈的表演"
+    },
+    {
+      "n": 118,
+      "en": "increased trust in my own abilities",
+      "cn": "增强自信心",
+      "syn": "be more confident",
+      "synCn": "更自信"
+    },
+    {
+      "n": 119,
+      "en": "the ingredients in our dishes",
+      "cn": "菜肴的食材成分",
+      "syn": "things we've used to make our dishes",
+      "synCn": "我们做菜用的东西"
+    },
+    {
+      "n": 120,
+      "en": "inspired by plants",
+      "cn": "受植物启发的",
+      "syn": "ideas from nature",
+      "synCn": "自然启发的创意"
+    },
+    {
+      "n": 121,
+      "en": "succeed",
+      "cn": "成功",
+      "syn": "achieve their goals",
+      "synCn": "实现了他们的目标"
+    },
+    {
+      "n": 122,
+      "en": "famous singers giving tips on becoming good",
+      "cn": "著名歌手分享提升技巧",
+      "syn": "advice on improving singing skills",
+      "synCn": "提高歌唱技巧建议"
+    },
+    {
+      "n": 123,
+      "en": "it was a while before we agreed",
+      "cn": "我们需要时间同意",
+      "syn": "needed time to decide",
+      "synCn": "需时间决定"
+    },
+    {
+      "n": 124,
+      "en": "It was like a game and never too challenging",
+      "cn": "它就像游戏一样没有挑战性",
+      "syn": "feeling he was doing sth. that was fun",
+      "synCn": "感觉自己在做有趣的事情"
+    },
+    {
+      "n": 125,
+      "en": "jog",
+      "cn": "慢跑",
+      "syn": "doing sport",
+      "synCn": "进行运动"
+    },
+    {
+      "n": 126,
+      "en": "joining school theatre club",
+      "cn": "加入戏剧俱乐部",
+      "syn": "being in drama group",
+      "synCn": "参加戏剧社团"
+    },
+    {
+      "n": 127,
+      "en": "journalists' opinions on the latest songs and albums",
+      "cn": "记者对最新歌曲专辑的评价",
+      "syn": "reviews of new recordings",
+      "synCn": "新唱片评论"
+    },
+    {
+      "n": 128,
+      "en": "railway station",
+      "cn": "火车站",
+      "syn": "travel by train",
+      "synCn": "乘火车旅行"
+    },
+    {
+      "n": 129,
+      "en": "keep noise to a minimum",
+      "cn": "将噪音降至最低",
+      "syn": "use your phone as quietly as possible",
+      "synCn": "尽可能安静地使用手机"
+    },
+    {
+      "n": 130,
+      "en": "sailing",
+      "cn": "帆船运动",
+      "syn": "watersport",
+      "synCn": "水上运动"
+    },
+    {
+      "n": 131,
+      "en": "landscape photography sessions",
+      "cn": "风景摄影课程",
+      "syn": "take pictures of trees and hills",
+      "synCn": "拍摄树木与山丘"
+    },
+    {
+      "n": 132,
+      "en": "large tables perfect for big groups of customers both inside and in its garden",
+      "cn": "大桌子，非常适合咖啡馆内外及其花园中的大群顾客",
+      "syn": "a cafe with space for all their friends to sit outside together",
+      "synCn": "一个咖啡馆，有足够的空间让所有朋友一起在外面坐着"
+    },
+    {
+      "n": 133,
+      "en": "laugh-a-minute show",
+      "cn": "全程爆笑演出",
+      "syn": "funny show",
+      "synCn": "搞笑表演"
+    },
+    {
+      "n": 134,
+      "en": "leave large bags and backpacks at the baggage desk",
+      "cn": "把大包和背包放在行李桌上",
+      "syn": "only small bags can be taken into the exhibition",
+      "synCn": "只有小包才可以被带入展馆内"
+    },
+    {
+      "n": 135,
+      "en": "lead the elephants on foot",
+      "cn": "徒步带领大象",
+      "syn": "walk with elephants",
+      "synCn": "与大象同行"
+    },
+    {
+      "n": 136,
+      "en": "members aged 12-18",
+      "cn": "年龄在12-18岁的人",
+      "syn": "certain people",
+      "synCn": "某些人群"
+    },
+    {
+      "n": 137,
+      "en": "live entertainment on the beach",
+      "cn": "海滩现场娱乐",
+      "syn": "outdoor show or concert",
+      "synCn": "户外演出/音乐会"
+    },
+    {
+      "n": 138,
+      "en": "live far from parents",
+      "cn": "远离父母",
+      "syn": "being away from family",
+      "synCn": "远离家人"
+    },
+    {
+      "n": 139,
+      "en": "loved telling friends how good my dad was",
+      "cn": "喜欢告诉朋友我爸爸有多厉害",
+      "syn": "felt proud of his father's success",
+      "synCn": "他为父亲的成就感到自豪"
+    },
+    {
+      "n": 140,
+      "en": "machines taken on early expeditions",
+      "cn": "早期探险使用的设备",
+      "syn": "scientific equipment used in the past",
+      "synCn": "以前被使用的科学设备"
+    },
+    {
+      "n": 141,
+      "en": "the same way it's been done for a hundred years",
+      "cn": "使用百年传统工艺",
+      "syn": "use traditional methods",
+      "synCn": "使用传统方法"
+    },
+    {
+      "n": 142,
+      "en": "make other arrangements to get there…",
+      "cn": "安排其他方式去…",
+      "syn": "find a different way to go to the college",
+      "synCn": "想出其他上学的方法"
+    },
+    {
+      "n": 143,
+      "en": "make power using sunlight",
+      "cn": "用阳光发电",
+      "syn": "energy production",
+      "synCn": "能源生产"
+    },
+    {
+      "n": 144,
+      "en": "picnic sites",
+      "cn": "野餐场地",
+      "syn": "outdoor eating facilities",
+      "synCn": "户外餐饮设施"
+    },
+    {
+      "n": 145,
+      "en": "meat-free dishes",
+      "cn": "无肉的菜肴",
+      "syn": "a vegetarian lunch",
+      "synCn": "素食午餐"
+    },
+    {
+      "n": 146,
+      "en": "every Saturday",
+      "cn": "每周六",
+      "syn": "at the weekend",
+      "synCn": "在周末"
+    },
+    {
+      "n": 147,
+      "en": "modern world",
+      "cn": "现代世界",
+      "syn": "today's life",
+      "synCn": "现代生活"
+    },
+    {
+      "n": 148,
+      "en": "mountain bikes available for hire",
+      "cn": "可租用山地自行车",
+      "syn": "get some exercise",
+      "synCn": "进行锻炼"
+    },
+    {
+      "n": 149,
+      "en": "move rooms or cancel any of the sessions",
+      "cn": "换教室或取消课程",
+      "syn": "changes",
+      "synCn": "改变"
+    },
+    {
+      "n": 150,
+      "en": "music from before the fifteenth century",
+      "cn": "15世纪前的音乐",
+      "syn": "very old music",
+      "synCn": "古老音乐聚焦"
+    },
+    {
+      "n": 151,
+      "en": "must be over 15",
+      "cn": "必须15岁以上",
+      "syn": "old enough",
+      "synCn": "年纪足够大"
+    },
+    {
+      "n": 152,
+      "en": "I was allowed to join.",
+      "cn": "我被允许加入",
+      "syn": "be accepted",
+      "synCn": "被接纳"
+    },
+    {
+      "n": 153,
+      "en": "need two days and book a room",
+      "cn": "需要两天并预定房间",
+      "syn": "stay overnight",
+      "synCn": "过夜"
+    },
+    {
+      "n": 154,
+      "en": "next-day delivery",
+      "cn": "次日送达",
+      "syn": "faster delivery",
+      "synCn": "更快的快递"
+    },
+    {
+      "n": 155,
+      "en": "no entry for students wearing the wrong shoes",
+      "cn": "穿错鞋子的学生谢绝进入",
+      "syn": "all players must wear the correct shoes",
+      "synCn": "所有学生必须穿恰当的鞋子"
+    },
+    {
+      "n": 156,
+      "en": "not having to stick to quite a strict diet",
+      "cn": "无需遵循严格的饮食习惯",
+      "syn": "eat whatever she likes",
+      "synCn": "随意饮食"
+    },
+    {
+      "n": 157,
+      "en": "not suitable for beginners",
+      "cn": "不适合新手",
+      "syn": "good surfers",
+      "synCn": "冲浪高手"
+    },
+    {
+      "n": 158,
+      "en": "One-to-one tuition",
+      "cn": "一对一教学",
+      "syn": "drama training on her own",
+      "synCn": "单独戏剧训练"
+    },
+    {
+      "n": 159,
+      "en": "organise cakes and food on board for a special occasion",
+      "cn": "为特殊场合提供火车餐饮",
+      "syn": "celebrate birthday on the train",
+      "synCn": "火车上庆祝生日"
+    },
+    {
+      "n": 160,
+      "en": "original paintings of generations",
+      "cn": "历代家族真迹画像",
+      "syn": "art in the castle for centuries",
+      "synCn": "数世纪艺术收藏"
+    },
+    {
+      "n": 161,
+      "en": "paid for it with my own money",
+      "cn": "自己付钱",
+      "syn": "buy something for herself",
+      "synCn": "为自己购买"
+    },
+    {
+      "n": 162,
+      "en": "paper and pencils",
+      "cn": "纸和铅笔",
+      "syn": "drawing equipment",
+      "synCn": "绘画工具"
+    },
+    {
+      "n": 163,
+      "en": "lit only by candles",
+      "cn": "仅用蜡烛照明",
+      "syn": "without bright lights",
+      "synCn": "无明亮灯光"
+    },
+    {
+      "n": 164,
+      "en": "a one-to-one session",
+      "cn": "一对一课程",
+      "syn": "an individual skating class",
+      "synCn": "个人的滑冰课"
+    },
+    {
+      "n": 165,
+      "en": "pay for your journeys",
+      "cn": "支付你的旅行费",
+      "syn": "buy a ticket",
+      "synCn": "买票"
+    },
+    {
+      "n": 166,
+      "en": "peaceful campsite in pine forests",
+      "cn": "松树林中的宁静营地",
+      "syn": "sleep in a tent among trees",
+      "synCn": "树林中露营"
+    },
+    {
+      "n": 167,
+      "en": "peaceful",
+      "cn": "宁静的",
+      "syn": "quiet",
+      "synCn": "安静的"
+    },
+    {
+      "n": 168,
+      "en": "instruments people no longer want",
+      "cn": "他人闲置乐器",
+      "syn": "second-hand guitars",
+      "synCn": "二手吉他"
+    },
+    {
+      "n": 169,
+      "en": "performers' answers to questions you've always wanted to ask",
+      "cn": "演奏家回答乐迷问题",
+      "syn": "interviews with musicians",
+      "synCn": "音乐家采访"
+    },
+    {
+      "n": 170,
+      "en": "plants and animals like nowhere else",
+      "cn": "别处未见的动植物",
+      "syn": "wildlife most people haven't seen",
+      "synCn": "罕见野生动物"
+    },
+    {
+      "n": 171,
+      "en": "play for a top team",
+      "cn": "为顶级球队效力",
+      "syn": "reach a high level",
+      "synCn": "达到高水平"
+    },
+    {
+      "n": 172,
+      "en": "plenty of seats left",
+      "cn": "剩下很多位置",
+      "syn": "tickets might become available",
+      "synCn": "票还可以买到"
+    },
+    {
+      "n": 173,
+      "en": "make friends",
+      "cn": "交朋友",
+      "syn": "meet new people",
+      "synCn": "结识新朋友"
+    },
+    {
+      "n": 174,
+      "en": "popular group's best work",
+      "cn": "流行乐队经典作品",
+      "syn": "songs by well-known musicians",
+      "synCn": "知名音乐家歌曲"
+    },
+    {
+      "n": 175,
+      "en": "positive comments",
+      "cn": "好评",
+      "syn": "good reviews",
+      "synCn": "良好评价"
+    },
+    {
+      "n": 176,
+      "en": "post questions to top scientists",
+      "cn": "向顶尖科学家提问",
+      "syn": "ask environmental experts about their work",
+      "synCn": "咨询环保专家工作"
+    },
+    {
+      "n": 177,
+      "en": "price reduced",
+      "cn": "减价",
+      "syn": "special offers",
+      "synCn": "特价"
+    },
+    {
+      "n": 178,
+      "en": "professionals",
+      "cn": "专业人士",
+      "syn": "experts",
+      "synCn": "专家"
+    },
+    {
+      "n": 179,
+      "en": "proud of the job",
+      "cn": "为工作自豪",
+      "syn": "pleased with one project",
+      "synCn": "对一项目满意"
+    },
+    {
+      "n": 180,
+      "en": "a party expert",
+      "cn": "派对专家",
+      "syn": "professional party organiser",
+      "synCn": "专业派对策划师"
+    },
+    {
+      "n": 181,
+      "en": "your own refreshments",
+      "cn": "自备茶点",
+      "syn": "bring food themselves",
+      "synCn": "自带食物"
+    },
+    {
+      "n": 182,
+      "en": "quizzes test your new knowledge",
+      "cn": "小测验检验新知识",
+      "syn": "games to review what's learnt",
+      "synCn": "复习知识的游戏"
+    },
+    {
+      "n": 183,
+      "en": "ready to compete against the best",
+      "cn": "准备好与顶尖选手竞争",
+      "syn": "enjoy entering competitions",
+      "synCn": "喜欢参加比赛"
+    },
+    {
+      "n": 184,
+      "en": "real story of a basketball player",
+      "cn": "篮球运动员真实故事",
+      "syn": "about a real person",
+      "synCn": "真实人物故事"
+    },
+    {
+      "n": 185,
+      "en": "traditional meals",
+      "cn": "传统菜肴",
+      "syn": "typical dishes",
+      "synCn": "特色菜肴"
+    },
+    {
+      "n": 186,
+      "en": "recommend",
+      "cn": "推荐",
+      "syn": "told by someone they know",
+      "synCn": "通过熟人得知"
+    },
+    {
+      "n": 187,
+      "en": "remain in their seats",
+      "cn": "留在座位上",
+      "syn": "stay at the table",
+      "synCn": "停留在桌子上"
+    },
+    {
+      "n": 188,
+      "en": "remove",
+      "cn": "移除",
+      "syn": "take off",
+      "synCn": "脱下"
+    },
+    {
+      "n": 189,
+      "en": "locally-caught fish",
+      "cn": "本地鲜鱼",
+      "syn": "fresh fish",
+      "synCn": "新鲜的鱼"
+    },
+    {
+      "n": 190,
+      "en": "romantic comedy",
+      "cn": "浪漫喜剧",
+      "syn": "love story",
+      "synCn": "爱情故事"
+    },
+    {
+      "n": 191,
+      "en": "run",
+      "cn": "举行活动",
+      "syn": "organize",
+      "synCn": "组织活动"
+    },
+    {
+      "n": 192,
+      "en": "sail",
+      "cn": "乘船",
+      "syn": "arrive by boat",
+      "synCn": "乘船到达"
+    },
+    {
+      "n": 193,
+      "en": "save energy",
+      "cn": "节能",
+      "syn": "help the environment",
+      "synCn": "保护环境"
+    },
+    {
+      "n": 194,
+      "en": "scary",
+      "cn": "令人害怕的",
+      "syn": "frightening",
+      "synCn": "恐怖的"
+    },
+    {
+      "n": 195,
+      "en": "scenery will keep changing",
+      "cn": "风景会不断变化",
+      "syn": "go through a variety of landscapes",
+      "synCn": "穿越多种地形"
+    },
+    {
+      "n": 196,
+      "en": "see beautiful countryside from the tower",
+      "cn": "塔楼眺望乡村美景",
+      "syn": "great views",
+      "synCn": "壮丽景色"
+    },
+    {
+      "n": 197,
+      "en": "see creatures",
+      "cn": "海洋生物",
+      "syn": "sea life",
+      "synCn": "海洋生物"
+    },
+    {
+      "n": 198,
+      "en": "serve top-quality dishes",
+      "cn": "供应顶级菜肴",
+      "syn": "excellent meal",
+      "synCn": "优质餐饮"
+    },
+    {
+      "n": 199,
+      "en": "She is excited about what she does",
+      "cn": "她对手上的工作充满激情",
+      "syn": "It's worth doing because she loves her job",
+      "synCn": "她觉得值得做，因为她热爱这份工作"
+    },
+    {
+      "n": 200,
+      "en": "short, easy-to-follow clips for beginners",
+      "cn": "初学者的简短教学视频",
+      "syn": "videos teaching instruments",
+      "synCn": "乐器教学视频"
+    },
+    {
+      "n": 201,
+      "en": "show you around and give information",
+      "cn": "带领参观并讲解",
+      "syn": "tours led by a guide",
+      "synCn": "导游带领游览"
+    },
+    {
+      "n": 202,
+      "en": "showed me how to tell the difference between…",
+      "cn": "展示我如何去区分…",
+      "syn": "taught",
+      "synCn": "教"
+    },
+    {
+      "n": 203,
+      "en": "sign up now",
+      "cn": "现在报名",
+      "syn": "register quickly",
+      "synCn": "快点注册"
+    },
+    {
+      "n": 204,
+      "en": "simple but delicious meals don't take long to make",
+      "cn": "简单美味且耗时短的餐食",
+      "syn": "quick and easy dishes",
+      "synCn": "快捷菜肴"
+    },
+    {
+      "n": 205,
+      "en": "simple wooden hut with a kitchen",
+      "cn": "带厨房的简朴木屋",
+      "syn": "basic accommodation and cook meals",
+      "synCn": "基础住宿与自炊"
+    },
+    {
+      "n": 206,
+      "en": "sit by the pool and enjoy a cool drink",
+      "cn": "泳池边享受冷饮",
+      "syn": "relax after a busy day",
+      "synCn": "忙碌后放松"
+    },
+    {
+      "n": 207,
+      "en": "snacks made using historical recipes",
+      "cn": "历史食谱制作的小吃",
+      "syn": "typical food from the past",
+      "synCn": "古代特色食物"
+    },
+    {
+      "n": 208,
+      "en": "somewhere that is generally quiet",
+      "cn": "某个通常安静的地方",
+      "syn": "somewhere that isn't busy",
+      "synCn": "某个不忙的地方"
+    },
+    {
+      "n": 209,
+      "en": "special offer on tickets for parents with children",
+      "cn": "家庭票优惠",
+      "syn": "family discount",
+      "synCn": "家庭折扣"
+    },
+    {
+      "n": 210,
+      "en": "the human population of deserts",
+      "cn": "沙漠人口",
+      "syn": "numbers of people living in deserts",
+      "synCn": "沙漠居住人口数量"
+    },
+    {
+      "n": 211,
+      "en": "staff can organise a taxi for anyone",
+      "cn": "工作人员可安排出租车",
+      "syn": "help with transport",
+      "synCn": "交通上的协助"
+    },
+    {
+      "n": 212,
+      "en": "staff take groups around the park",
+      "cn": "员工带领团队游览公园",
+      "syn": "have a guided tour",
+      "synCn": "有导游的游览"
+    },
+    {
+      "n": 213,
+      "en": "staff wear clothes typical of the time",
+      "cn": "工作人员穿着时代特色服装",
+      "syn": "people dressed in costume",
+      "synCn": "身着古装的人员"
+    },
+    {
+      "n": 214,
+      "en": "stalls",
+      "cn": "摊位",
+      "syn": "buy a souvenir",
+      "synCn": "购买纪念品"
+    },
+    {
+      "n": 215,
+      "en": "stand away from",
+      "cn": "远离",
+      "syn": "not get too close",
+      "synCn": "不要靠得太近"
+    },
+    {
+      "n": 216,
+      "en": "stars recognisable from TV",
+      "cn": "电视明星",
+      "syn": "famous actors",
+      "synCn": "著名演员"
+    },
+    {
+      "n": 217,
+      "en": "stay in the peace of the little cafe",
+      "cn": "在小咖啡馆的宁静中停留",
+      "syn": "a small place that isn't usually crowded",
+      "synCn": "一个通常不拥挤的小地方"
+    },
+    {
+      "n": 218,
+      "en": "strange but delicious",
+      "cn": "奇特口味",
+      "syn": "unusual flavours",
+      "synCn": "独特口味"
+    },
+    {
+      "n": 219,
+      "en": "sunbathers",
+      "cn": "日光浴者",
+      "syn": "lying on beach",
+      "synCn": "躺在沙滩上"
+    },
+    {
+      "n": 220,
+      "en": "surprise activities",
+      "cn": "惊喜活动",
+      "syn": "You'll never guess",
+      "synCn": "你绝对猜不到…"
+    },
+    {
+      "n": 221,
+      "en": "take cookery skills to the next level",
+      "cn": "将厨艺提升到新水平",
+      "syn": "advanced dishes",
+      "synCn": "高级菜肴"
+    },
+    {
+      "n": 222,
+      "en": "take my hobby to the next level",
+      "cn": "将爱好提升到新水平",
+      "syn": "develop his photography further",
+      "synCn": "进一步发展摄影"
+    },
+    {
+      "n": 223,
+      "en": "take part in a professional play",
+      "cn": "参加专业戏剧演出",
+      "syn": "act in a play",
+      "synCn": "参演戏剧"
+    },
+    {
+      "n": 224,
+      "en": "teach jazz, tap and street dance",
+      "cn": "教授爵士舞、踢踏舞和街舞",
+      "syn": "learn new dance styles quickly",
+      "synCn": "快速学习新舞种"
+    },
+    {
+      "n": 225,
+      "en": "the audience all clapping",
+      "cn": "观众鼓掌",
+      "syn": "a successful performance",
+      "synCn": "成功的演出"
+    },
+    {
+      "n": 226,
+      "en": "the biggest park in the city",
+      "cn": "城市最大的公园",
+      "syn": "green spaces",
+      "synCn": "绿色空间"
+    },
+    {
+      "n": 227,
+      "en": "the latest",
+      "cn": "最新的",
+      "syn": "up-to-date",
+      "synCn": "最新的"
+    },
+    {
+      "n": 228,
+      "en": "the scene of famous battles",
+      "cn": "著名战役的发生地",
+      "syn": "site of well-known historical events",
+      "synCn": "著名历史事件遗址"
+    },
+    {
+      "n": 229,
+      "en": "the shop has great gifts",
+      "cn": "商店有精美礼品",
+      "syn": "you can buy a souvenir",
+      "synCn": "你可以购买纪念品"
+    },
+    {
+      "n": 230,
+      "en": "The track was near her school",
+      "cn": "赛道在学校附近",
+      "syn": "She could get to a race track easily",
+      "synCn": "她可以轻松到达赛道"
+    },
+    {
+      "n": 231,
+      "en": "watch weather conditions and produce forecasts",
+      "cn": "观察天气状况并制作预报",
+      "syn": "predict the weather",
+      "synCn": "预测天气"
+    },
+    {
+      "n": 232,
+      "en": "the way deserts are created",
+      "cn": "沙漠形成的方式",
+      "syn": "how deserts were made",
+      "synCn": "沙漠的形成过程"
+    },
+    {
+      "n": 233,
+      "en": "their methods are so difficult",
+      "cn": "他们的方法太难",
+      "syn": "complicated techniques",
+      "synCn": "复杂的技巧"
+    },
+    {
+      "n": 234,
+      "en": "an indoor playground for young children",
+      "cn": "儿童室内游乐场",
+      "syn": "something to entertain her small sister",
+      "synCn": "让小妹妹娱乐(打发时间)的东西"
+    },
+    {
+      "n": 235,
+      "en": "this railway runs just a few metres from the sea",
+      "cn": "火车沿海岸线行驶",
+      "syn": "travel along the coast",
+      "synCn": "沿海旅行"
+    },
+    {
+      "n": 236,
+      "en": "tired of the whole thing",
+      "cn": "对整体厌倦",
+      "syn": "becoming bored with it",
+      "synCn": "对其厌倦"
+    },
+    {
+      "n": 237,
+      "en": "too light",
+      "cn": "体重太轻",
+      "syn": "put on weight",
+      "synCn": "增重"
+    },
+    {
+      "n": 238,
+      "en": "top hotels every night",
+      "cn": "每晚入住高端酒店",
+      "syn": "sleep somewhere comfortable",
+      "synCn": "舒适住宿"
+    },
+    {
+      "n": 239,
+      "en": "top of the hill",
+      "cn": "山顶",
+      "syn": "view of the whole city",
+      "synCn": "城市全景"
+    },
+    {
+      "n": 240,
+      "en": "top vacation spot",
+      "cn": "顶级度假胜地",
+      "syn": "popular beach",
+      "synCn": "热门海滩"
+    },
+    {
+      "n": 241,
+      "en": "two large lakes",
+      "cn": "两个大湖",
+      "syn": "near water",
+      "synCn": "靠近水域"
+    },
+    {
+      "n": 242,
+      "en": "use of film and advanced technology",
+      "cn": "运用电影和先进技术",
+      "syn": "special effects",
+      "synCn": "特效丰富"
+    },
+    {
+      "n": 243,
+      "en": "use trams to get around",
+      "cn": "使用有轨电车出行",
+      "syn": "traveling on public transport",
+      "synCn": "乘坐公共交通"
+    },
+    {
+      "n": 244,
+      "en": "use less electricity",
+      "cn": "节电",
+      "syn": "save energy",
+      "synCn": "节能"
+    },
+    {
+      "n": 245,
+      "en": "visit a few interesting cities",
+      "cn": "参观不同的城市",
+      "syn": "do some sightseeing",
+      "synCn": "进行观光"
+    },
+    {
+      "n": 246,
+      "en": "we decided…",
+      "cn": "我们决定…",
+      "syn": "agreed",
+      "synCn": "达成一致"
+    },
+    {
+      "n": 247,
+      "en": "high summer temperatures",
+      "cn": "非常高的夏季温度",
+      "syn": "hot days",
+      "synCn": "炎热的日子"
+    },
+    {
+      "n": 248,
+      "en": "when I was eight… difficult to make friends",
+      "cn": "八岁时…难交朋友",
+      "syn": "memories were not positive",
+      "synCn": "回忆不美好"
+    },
+    {
+      "n": 249,
+      "en": "why don't we…?",
+      "cn": "我们为什么不…?",
+      "syn": "make a suggestion",
+      "synCn": "提建议"
+    },
+    {
+      "n": 250,
+      "en": "a wide variety of",
+      "cn": "类型广泛",
+      "syn": "many different types of",
+      "synCn": "多种类型"
+    },
+    {
+      "n": 251,
+      "en": "wonderful restaurant",
+      "cn": "绝佳餐厅",
+      "syn": "have a meal",
+      "synCn": "用餐"
+    },
+    {
+      "n": 252,
+      "en": "won't need to share the venue with anyone",
+      "cn": "独享场地",
+      "syn": "hire whole building",
+      "synCn": "租用整栋建筑"
+    },
+    {
+      "n": 253,
+      "en": "work with experienced theatre directors",
+      "cn": "与经验丰富的戏剧导演合作",
+      "syn": "acting course run by professionals",
+      "synCn": "专业人士开设的课程"
+    },
+    {
+      "n": 254,
+      "en": "10-metre cliff with climbing classes",
+      "cn": "10米高悬崖的攀岩课程",
+      "syn": "adventure sport",
+      "synCn": "冒险运动"
+    },
+    {
+      "n": 255,
+      "en": "16th-century drama",
+      "cn": "16世纪戏剧",
+      "syn": "story set in the past",
+      "synCn": "故事的背景发生在过去"
+    },
+    {
+      "n": 256,
+      "en": "50% off",
+      "cn": "半折",
+      "syn": "discounts",
+      "synCn": "折扣"
+    },
+    {
+      "n": 257,
+      "en": "make sure",
+      "cn": "确保",
+      "syn": "check",
+      "synCn": "检查"
+    },
+    {
+      "n": 258,
+      "en": "novel",
+      "cn": "小说",
+      "syn": "fiction book",
+      "synCn": "科幻书"
+    },
+    {
+      "n": 259,
+      "en": "book",
+      "cn": "预定",
+      "syn": "reserve",
+      "synCn": "保留，预定"
+    },
+    {
+      "n": 260,
+      "en": "don't require technology",
+      "cn": "不需要科技",
+      "syn": "without using a computer",
+      "synCn": "不用电脑"
+    },
+    {
+      "n": 261,
+      "en": "further studies",
+      "cn": "进一步学习",
+      "syn": "college application",
+      "synCn": "大学申请"
+    },
+    {
+      "n": 262,
+      "en": "something to put on the wall",
+      "cn": "贴在墙上的东西",
+      "syn": "poster",
+      "synCn": "海报"
+    },
+    {
+      "n": 263,
+      "en": "various styles and methods",
+      "cn": "各种各样的风格和方法",
+      "syn": "different painting techniques",
+      "synCn": "不同的绘画技术"
+    },
+    {
+      "n": 264,
+      "en": "try yourself after the course",
+      "cn": "课后自己尝试",
+      "syn": "printing techniques to use at home",
+      "synCn": "在家里可以用的绘画技术"
+    },
+    {
+      "n": 265,
+      "en": "cotton and silk",
+      "cn": "棉和丝",
+      "syn": "different materials",
+      "synCn": "不同材料"
+    },
+    {
+      "n": 266,
+      "en": "One-to-one sessions",
+      "cn": "一对一课程",
+      "syn": "private lessons",
+      "synCn": "私教课程"
+    },
+    {
+      "n": 267,
+      "en": "the road wouldn't be an easy drive",
+      "cn": "路不容易开",
+      "syn": "the route was very challenging",
+      "synCn": "路线很有挑战"
+    },
+    {
+      "n": 268,
+      "en": "slightly nervous",
+      "cn": "有点紧张",
+      "syn": "worried",
+      "synCn": "担心"
+    },
+    {
+      "n": 269,
+      "en": "within walking distance",
+      "cn": "走路就能到",
+      "syn": "convenient for sightseeing",
+      "synCn": "方便观光"
+    },
+    {
+      "n": 270,
+      "en": "unable to attend classes",
+      "cn": "他们无法参加课程",
+      "syn": "some school and office may be closed",
+      "synCn": "一些学校和办公室可能会关闭"
+    },
+    {
+      "n": 271,
+      "en": "Books they no longer want",
+      "cn": "你不再想要的书",
+      "syn": "Books you have already read",
+      "synCn": "你已经读过的书"
+    },
+    {
+      "n": 272,
+      "en": "probably going to be late",
+      "cn": "可能会迟到",
+      "syn": "In a huge traffic jam",
+      "synCn": "在一个巨大的交通堵塞中"
+    },
+    {
+      "n": 273,
+      "en": "Spend as much time there as you want",
+      "cn": "在那里想待多久就待多久",
+      "syn": "At your own speed",
+      "synCn": "以你自己的速度"
+    },
+    {
+      "n": 274,
+      "en": "check the website",
+      "cn": "检查网站",
+      "syn": "see online",
+      "synCn": "网上看"
+    },
+    {
+      "n": 275,
+      "en": "collection of old cars once used in films",
+      "cn": "曾经在电影中使用过的旧车收藏",
+      "syn": "a vehicle that originally appeared in a film",
+      "synCn": "在电影中首次出现的交通工具"
+    },
+    {
+      "n": 276,
+      "en": "original clothes that stars were dressed in for their movies",
+      "cn": "明星在电影中穿的服装",
+      "syn": "costumes that famous actors have worn",
+      "synCn": "著名演员穿过的服装"
+    },
+    {
+      "n": 277,
+      "en": "get tickets in advance through the website",
+      "cn": "通过网站提前买票",
+      "syn": "book online before they go",
+      "synCn": "在他们出发前在线预订"
+    },
+    {
+      "n": 278,
+      "en": "how actors are turned into on-screen monsters",
+      "cn": "演员如何变成银幕上的怪物",
+      "syn": "how special effects are achieved",
+      "synCn": "特殊效果是如何实现的"
+    },
+    {
+      "n": 279,
+      "en": "from the streets of New York to the historical sites of Rome",
+      "cn": "从纽约的街道到罗马的历史遗迹",
+      "syn": "famous cities",
+      "synCn": "有名的城市"
+    },
+    {
+      "n": 280,
+      "en": "stuff we hadn't expected",
+      "cn": "没有预料到的事",
+      "syn": "new things",
+      "synCn": "新事情"
+    },
+    {
+      "n": 281,
+      "en": "special offer",
+      "cn": "特别优惠",
+      "syn": "pay less",
+      "synCn": "少付一些"
+    },
+    {
+      "n": 282,
+      "en": "giant",
+      "cn": "巨大的",
+      "syn": "big enough",
+      "synCn": "足够大"
+    },
+    {
+      "n": 283,
+      "en": "bring some friends",
+      "cn": "带一些朋友来",
+      "syn": "get others involved",
+      "synCn": "让其他人参与进来"
+    },
+    {
+      "n": 284,
+      "en": "top performers",
+      "cn": "顶尖表现者",
+      "syn": "well-known singer",
+      "synCn": "著名歌手"
+    },
+    {
+      "n": 285,
+      "en": "the film follows a friendly tiger in the jungle",
+      "cn": "这部电影讲述了一只在丛林中友好的老虎",
+      "syn": "films about animals",
+      "synCn": "关于动物的电影"
+    },
+    {
+      "n": 286,
+      "en": "have something in common with the people in the film",
+      "cn": "和电影中的人们有共同之处",
+      "syn": "main characters are like her",
+      "synCn": "主要角色像她一样"
+    },
+    {
+      "n": 287,
+      "en": "full of comedy situations",
+      "cn": "充满喜剧情节",
+      "syn": "enjoys films that make him laugh",
+      "synCn": "喜欢让他笑的电影"
+    },
+    {
+      "n": 288,
+      "en": "never get tired of watching it",
+      "cn": "永远看不厌",
+      "syn": "want to watch over and over again",
+      "synCn": "想要一遍又一遍地观看"
+    },
+    {
+      "n": 289,
+      "en": "brave",
+      "cn": "勇敢的",
+      "syn": "courage",
+      "synCn": "勇气"
+    },
+    {
+      "n": 290,
+      "en": "The pictures are so fantastic",
+      "cn": "这些图片太棒了",
+      "syn": "really beautiful animation",
+      "synCn": "非常美丽的动画"
+    },
+    {
+      "n": 291,
+      "en": "long-distance runner she'd always admired",
+      "cn": "她一直钦佩的长跑运动员",
+      "syn": "her athletics hero",
+      "synCn": "她的运动英雄"
+    },
+    {
+      "n": 292,
+      "en": "I felt I'd handle it — without injuring myself",
+      "cn": "我觉得我能处理它——不会伤到自己",
+      "syn": "confident that she wouldn't get hurt",
+      "synCn": "相信她不会受伤"
+    },
+    {
+      "n": 293,
+      "en": "adapt to the climate",
+      "cn": "适应气候",
+      "syn": "deal with their environment",
+      "synCn": "处理他们的环境"
+    },
+    {
+      "n": 294,
+      "en": "low temperatures",
+      "cn": "低温",
+      "syn": "cold winters",
+      "synCn": "寒冷的冬天"
+    },
+    {
+      "n": 295,
+      "en": "swim across it — around 2 kms",
+      "cn": "游过去大约2公里",
+      "syn": "distance swimming",
+      "synCn": "长距离游泳"
+    },
+    {
+      "n": 296,
+      "en": "attend",
+      "cn": "参加",
+      "syn": "took part in",
+      "synCn": "参加"
+    },
+    {
+      "n": 297,
+      "en": "avoid creating pollution",
+      "cn": "避免制造污染",
+      "syn": "without damaging the environment",
+      "synCn": "不损害环境"
+    },
+    {
+      "n": 298,
+      "en": "take away",
+      "cn": "外带食物",
+      "syn": "something made in the store to eat later",
+      "synCn": "在商店制作的，稍后食用的东西"
+    },
+    {
+      "n": 299,
+      "en": "good quality sportswear",
+      "cn": "高质量运动服",
+      "syn": "new tennis T-shirts",
+      "synCn": "新的网球T恤"
+    },
+    {
+      "n": 300,
+      "en": "well-known sportspeople",
+      "cn": "著名的体育人士",
+      "syn": "celebrities",
+      "synCn": "名人"
+    }
+  ]
+}

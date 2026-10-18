@@ -1351,11 +1351,14 @@ async function testHomePage() {
     const ask = doc.getElementById("homeAsk");
     ok(!ask.hidden && /请先登录哦/.test(ask.textContent), `[${S}] 未登录显示「请先登录哦」`);
     ok(doc.getElementById("avatar").classList.contains("off"), `[${S}] 圆圈（未登录）是灰的`);
-    ok(doc.querySelectorAll("#tilesMain .tile").length === 6,
-      `[${S}] 六个学习入口（实际 ${doc.querySelectorAll("#tilesMain .tile").length}）`);
+    ok(doc.querySelectorAll("#tilesMain .tile").length === 7,
+      `[${S}] 七个学习入口（实际 ${doc.querySelectorAll("#tilesMain .tile").length}）`);
     const labs = [...doc.querySelectorAll(".tile-lab")].map(x => x.textContent.trim());
-    ["我的词书", "PET 阅读理解", "PET 口语", "PET 听力", "PET 写作", "错题记录", "数学补习", "语文补习"]
+    ["我的词书", "PET 阅读理解", "PET 同义替换", "PET 口语", "PET 听力", "PET 写作", "错题记录", "数学补习", "语文补习"]
       .forEach(t => ok(labs.some(l => l.indexOf(t) >= 0), `[${S}] 入口里有「${t}」`));
+    const synTile = [...doc.querySelectorAll("#tilesMain .tile")].find(a => /同义替换/.test(a.textContent));
+    ok(synTile && synTile.getAttribute("href") === "synonyms.html",
+      `[${S}] 「PET 同义替换」入口指向 synonyms.html`);
     ok(doc.querySelectorAll(".home-sec-t").length === 1 && /今天的作业/.test(doc.querySelector(".home-sec-t").textContent),
       `[${S}] 第二部分有标题「今天的作业」`);
     ok(doc.querySelectorAll(".home-hr").length === 1, `[${S}] 两部分用横线划开`);
@@ -1589,6 +1592,120 @@ async function testListPages() {
 }
 
 /* ============================================================
+   同义替换页（synonyms.html）：300 组列表 / 搜索 / 遮住自测 / 单词收藏 / 连线题
+   ============================================================ */
+async function testSynonymsPage() {
+  const S = "synonyms";
+  const api = fakeFetch({
+    "GET /api/favs": { j: { ok: true, items: [] } },
+    "POST /api/favs/add": { j: { ok: true } },
+    "POST /api/favs/remove": { j: { ok: true } }
+  });
+  const { dom, logs } = await loadPage("synonyms.html", { expectScripts: 5, slug: S, fetch: api });
+  const { window } = dom, doc = window.document;
+  const click = el => el.dispatchEvent(new window.MouseEvent("click", { bubbles: true }));
+
+  const groups = (window.PET_SYN || {}).groups || [];
+  ok(groups.length === 300, `[${S}] 数据 300 组（实际 ${groups.length}）`);
+  await tick();
+
+  /* ---- 列表：300 行、30 段、第 1 行两侧齐全 ---- */
+  ok(doc.querySelectorAll(".syn-row").length === 300,
+    `[${S}] 列表 300 行（实际 ${doc.querySelectorAll(".syn-row").length}）`);
+  ok(doc.querySelectorAll(".syn-sec").length === 30, `[${S}] 分 30 段（每 10 组一段）`);
+  const g1 = groups[0];
+  const row1 = doc.querySelector('.syn-row[data-row="1"]');
+  ok(row1 && row1.textContent.includes(g1.en) && row1.textContent.includes(g1.cn) &&
+     row1.textContent.includes(g1.syn) && row1.textContent.includes(g1.synCn),
+    `[${S}] 第 1 行原文/替换（含中文）都在`);
+
+  /* ---- 单词可点：小卡片（读音 / 回源组 / 收藏） ---- */
+  const wbtn = doc.querySelector('.syn-w[data-sw="DVD"]');
+  ok(!!wbtn, `[${S}] 「DVD」渲染成可点的词`);
+  click(wbtn);
+  await tick();
+  const pop = doc.getElementById("synPop");
+  ok(pop && !pop.hidden && /出自第 1 组/.test(pop.textContent), `[${S}] 点词 → 小卡片（带回源组号）`);
+
+  const favBtn = doc.getElementById("synPopFav");
+  const favs0 = JSON.parse(window.localStorage.getItem("pet:fav:v1") || "[]").length;
+  click(favBtn);
+  await tick();
+  const favs1 = JSON.parse(window.localStorage.getItem("pet:fav:v1") || "[]");
+  ok(favBtn.classList.contains("on") && /已收藏/.test(favBtn.textContent), `[${S}] 点 ☆ → 已收藏`);
+  ok(favs1.length === favs0 + 1 &&
+     favs1.some(x => x.type === "w" && x.key === "dvd" && /DVD/.test(String(x.cn || "")) && x.slug === "synonyms"),
+    `[${S}] 收藏表里多了一条（key=dvd、释义来自本组、slug=synonyms）`);
+  ok(wbtn.classList.contains("on"), `[${S}] 列表里这个词同时点亮（收藏态回写）`);
+  click(favBtn);
+  await tick();
+  ok(!favBtn.classList.contains("on") && !wbtn.classList.contains("on"), `[${S}] 再点一次 → 取消收藏`);
+  click(pop.querySelector(".syn-pop-mask"));
+  ok(pop.hidden, `[${S}] 点遮罩关闭小卡片`);
+
+  /* ---- 搜索：中文命中 / 清空还原 ---- */
+  const search = doc.getElementById("synSearch");
+  search.value = "野餐";
+  search.dispatchEvent(new window.Event("input", { bubbles: true }));
+  await tick();
+  const hits = [...doc.querySelectorAll(".syn-row")];
+  ok(hits.length === 1 && hits[0].dataset.row === "144", `[${S}] 搜「野餐」只命中第 144 组`);
+  search.value = "";
+  search.dispatchEvent(new window.Event("input", { bubbles: true }));
+  await tick();
+  ok(doc.querySelectorAll(".syn-row").length === 300, `[${S}] 清空搜索 → 300 行回来`);
+
+  /* ---- 遮住自测：藏右侧、点「对答案」翻开 ---- */
+  const maskBtn = doc.getElementById("synMask");
+  click(maskBtn);
+  await tick();
+  const r1 = doc.querySelector('.syn-row[data-row="1"]');
+  ok(maskBtn.classList.contains("on") && r1.classList.contains("masked"),
+    `[${S}] 点「遮住同义替换」→ 行进入遮住态`);
+  click(r1.querySelector("[data-reveal]"));
+  await tick();
+  ok(r1.classList.contains("shown"), `[${S}] 点「点一下对答案」→ 该行翻开`);
+  click(maskBtn);
+  await tick();
+  ok(!doc.querySelector('.syn-row[data-row="1"]').classList.contains("masked") ||
+     doc.querySelector('.syn-row[data-row="1"]').classList.contains("shown"),
+    `[${S}] 再点 → 退出遮住态`);
+
+  /* ---- 连线题：左右各 10 项、连对变绿计分、连错红一下 ---- */
+  click(doc.querySelector('.syn-tab[data-view="quiz"]'));
+  await tick();
+  const qBox = doc.getElementById("synQuiz");
+  ok(!qBox.hidden && doc.getElementById("synList").hidden, `[${S}] 切到连线题：列表收起`);
+  ok(qBox.querySelectorAll('.syn-qitem[data-q^="l:"]').length === 10 &&
+     qBox.querySelectorAll('.syn-qitem[data-q^="r:"]').length === 10,
+    `[${S}] 每轮左右各 10 项`);
+  const l1 = qBox.querySelector('.syn-qitem[data-q^="l:"]');
+  const n1 = l1.dataset.q.split(":")[1];
+  click(l1);
+  ok(l1.classList.contains("sel"), `[${S}] 点左边一项 → 选中`);
+  click(qBox.querySelector('.syn-qitem[data-q="r:' + n1 + '"]'));
+  await tick();
+  ok(qBox.querySelector('.syn-qitem[data-q="l:' + n1 + '"]').classList.contains("ok"),
+    `[${S}] 点配对的右边 → 变绿（连对）`);
+  ok(/已连对 1\/10/.test(qBox.querySelector(".syn-score").textContent), `[${S}] 计分变成 1/10`);
+  const l2 = [...qBox.querySelectorAll('.syn-qitem[data-q^="l:"]')].find(x => !x.classList.contains("ok"));
+  const n2 = l2.dataset.q.split(":")[1];
+  const rWrong = [...qBox.querySelectorAll('.syn-qitem[data-q^="r:"]')]
+    .find(x => x.dataset.q.split(":")[1] !== n2 && !x.classList.contains("ok"));
+  click(l2);
+  click(rWrong);
+  await tick();
+  ok(l2.classList.contains("bad") && rWrong.classList.contains("bad"), `[${S}] 配错 → 两边红一下`);
+  ok(/错 1 次/.test(qBox.querySelector(".syn-score").textContent), `[${S}] 计分条记上「错 1 次」`);
+  click(doc.getElementById("synNewRound"));
+  await tick();
+  ok(doc.querySelectorAll('#synQuiz .syn-qitem[data-q^="l:"]').length === 10,
+    `[${S}] 「换一组」→ 新的一轮还是 10 项`);
+
+  ok(logs.filter(l => !/404/.test(l)).length === 0, `[${S}] 运行期没有 JS 报错`);
+}
+
+/* ============================================================
    门禁：文章页未登录 → 弹回首页登录框；存储不可用 → 放行
    ============================================================ */
 async function testGates() {
@@ -1604,16 +1721,21 @@ async function testGates() {
       "[gate] 存储不可用 → 放行，不跳转（file:// 不被锁死）");
     ok(dom.window.document.querySelectorAll("#passage .sent").length > 0, "[gate] 放行后正文正常渲染");
   }
+  {
+    const { logs } = await loadPage("synonyms.html", { expectScripts: 5, slug: "gate/synonyms", seed: { __user: false } });
+    ok(logs.some(l => /navigation/i.test(l)), "[gate] 未登录访问同义替换页 → 被门禁弹走");
+  }
 }
 
 /* ============================================================
    跑
    ============================================================ */
-console.log("冒烟测试 " + targets.length + " 篇 + 首页 + 错题页 + 词书页…\n");
+console.log("冒烟测试 " + targets.length + " 篇 + 首页 + 错题页 + 词书页 + 同义替换页…\n");
 let firstErr = null;
 const suites = [...targets.map(s => [s, () => testArticle(s)]),
                 ["index.html", testHomePage],
                 ["mistakes.html + words.html", testListPages],
+                ["synonyms.html", testSynonymsPage],
                 ["门禁", testGates]];
 for (const [name, fn] of suites) {
   try {
