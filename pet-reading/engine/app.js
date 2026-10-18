@@ -474,6 +474,54 @@
     return '<span class="' + cls + '" data-blank="' + n + '">' + n + "</span>";
   }
 
+  /* 「总结」页里手写的那一半（数据里写了 summary 才渲染）：
+     按考点/题型把笔记里的词组/句型分好组 —— 每行 = chip（点开词条）+ 中文 + 词性
+     + 「在哪儿考」跳回原文 + ☆ 收藏。行结构和「笔记」共用 .noterow / .nkey / .nfav，
+     bindPassage 里同一套分支处理；另一半（没整理到的自动清单）在 renderSummary 里。 */
+  function buildSummaryHtml() {
+    var S = C.summary;
+    if (!S || !Array.isArray(S.groups) || !S.groups.length) return "";
+    var h = '<div class="summ">';
+    h += '<div class="summ-h"><span class="summ-ico">总结</span>' + esc(S.title || "考点速览") + "</div>";
+    S.groups.forEach(function (grp) {
+      if (!grp || !Array.isArray(grp.items) || !grp.items.length) return;
+      h += '<div class="summ-g"><div class="summ-gt">' + esc(grp.t || "") + '</div><div class="notes">';
+      grp.items.forEach(function (item) {
+        if (!item) return;
+        var k = item.k == null ? "" : String(item.k).trim();
+        var ref = item.ref == null ? "" : String(item.ref);
+        h += '<div class="noterow">';
+        if (k) {
+          var r = lookup(k) || lookupPhrase(k.toLowerCase());
+          var e = (r && r.entry) || {};
+          var f = favOf({ t: "w", k: k, ref: ref });
+          var on = !!(f.id && state.favIds[f.id]);
+          h += '<button class="chip ph2 nkey" data-note="' + esc(k) +
+            '" data-noteref="' + esc(ref) + '" title="点一下看词条">' + esc(item.t || k) + "</button>";
+          h += '<span class="ncn">' + esc(stripTags(item.cn || e.cn || "")) + "</span>";
+          if (e.pos) h += '<span class="npos">' + esc(e.pos) + "</span>";
+        } else {
+          h += '<span class="ncn">' + esc(stripTags(item.cn || "")) + "</span>";
+        }
+        if (ref) {
+          h += '<button type="button" class="nat" data-sumgo="' + esc(ref) +
+            '" title="回到原文里这一句">' + esc(item.at || "原文") + "</button>";
+        } else if (item.at) {
+          h += '<span class="nat">' + esc(item.at) + "</span>";
+        }
+        if (k) {
+          h += '<button class="nfav' + (on ? " on" : "") + '" data-notefav="' + esc(k) +
+            '" data-noteref="' + esc(ref) + '" title="' + (on ? "取消收藏" : "收藏这个词组/句型") +
+            '">' + (on ? "★" : "☆") + "</button>";
+        }
+        h += "</div>";
+      });
+      h += "</div></div>";
+    });
+    h += "</div>";
+    return h;
+  }
+
   function buildPassage() {
     var h = "", gutter = "", n = 0;   // n 是跨段落的全局句序号，用于交替底色
     /* 标题在新 schema 里是顶层的 C.title（旧版塞在 passage.title 里）。
@@ -1363,22 +1411,12 @@
         a.note.forEach(function (item) {
           var nk = typeof item === "string" ? item : String((item && item.k) || "");
           if (!nk) return;
-          var disp = (item && typeof item === "object" && item.t) ? String(item.t) : nk;
-          var r = lookup(nk) || lookupPhrase(nk.toLowerCase());
-          var e = (r && r.entry) || {};
-          var f = favOf({ t: "w", k: nk, ref: ref });
-          var on = !!(f.id && state.favIds[f.id]);
-          var cnTxt = (item && typeof item === "object" && item.cn) ? item.cn : (e.cn || "");
-          h += '<div class="noterow">';
-          h += '<button class="chip ph2 nkey" data-note="' + esc(nk) + '" data-noteref="' + esc(ref) +
-            '" title="点一下看词条">' + esc(disp) + "</button>";
-          h += '<span class="ncn">' + esc(stripTags(cnTxt)) + "</span>";
-          if (e.pos) h += '<span class="npos">' + esc(e.pos) + "</span>";
-          h += '<button class="nfav' + (on ? " on" : "") + '" data-notefav="' + esc(nk) +
-            '" data-noteref="' + esc(ref) + '" title="' +
-            (on ? "取消收藏" : "收藏这个" + (e.pos === "句型" ? "句型" : "词组")) + '">' +
-            (on ? "★" : "☆") + "</button>";
-          h += "</div>";
+          h += noteRowHtml({
+            k: nk,
+            cn: (item && typeof item === "object" && item.cn) || "",
+            t: (item && typeof item === "object" && item.t) || "",
+            ref: ref
+          });
         });
         h += "</div></div>";
       }
@@ -1668,7 +1706,7 @@
         return;
       }
 
-      // 笔记行里的 ☆：直接收藏/取消收藏这个词组或句型（历史行里也会同步）
+      // 笔记行里的 ☆：直接收藏/取消收藏这个词组或句型（历史行/总结页里的星星一起同步）
       var nfv = t.closest("[data-notefav]");
       if (nfv) {
         var nfk = nfv.dataset.notefav;
@@ -1678,9 +1716,13 @@
             r = r || {};
             if (!r.ok) return;
             if (r.added) state.favIds[nff.id] = 1; else delete state.favIds[nff.id];
-            nfv.classList.toggle("on", !!r.added);
-            nfv.textContent = r.added ? "★" : "☆";
-            nfv.title = r.added ? "取消收藏" : "收藏";
+            /* 同一词组可能同时出现在「析」和「总结」两处，全部同步 */
+            document.querySelectorAll("[data-notefav]").forEach(function (b) {
+              if (b.dataset.notefav !== nfk) return;
+              b.classList.toggle("on", !!r.added);
+              b.textContent = r.added ? "★" : "☆";
+              b.title = r.added ? "取消收藏" : "收藏";
+            });
             /* 历史里已经有同一行的话，把星星也同步过来 */
             var hit = state.hist.some(function (x) { return histKey(x) === ("w:" + nfk); });
             if (hit) renderHistory();
@@ -1697,6 +1739,21 @@
         var nctx = nd ? String(nd.s).replace(/\{\d+\}/g, "……").replace(/[«»]/g, "") : "";
         showWord(noteKey, nctx);
         pushHistory("w", noteKey, nref2);
+        return;
+      }
+
+      // 总结页里的「27 / ②-1 / 原文」：切回原文（高亮 + 打开讲解 + 滚到那一句）
+      var sgo = t.closest("[data-sumgo]");
+      if (sgo) {
+        var goRef = sgo.dataset.sumgo;
+        if (state.tab !== "read") switchTab("read");
+        selectSent(goRef);
+        showAnalysis(goRef);
+        pushHistory("s", "", goRef);
+        var goEl = document.querySelector('.sent[data-sent="' + goRef + '"]');
+        if (goEl && goEl.scrollIntoView) {
+          try { goEl.scrollIntoView({ block: "center" }); } catch (e) {}
+        }
         return;
       }
 
@@ -2043,27 +2100,135 @@
       : "";
   }
 
+  /* =======================================================
+     总结页：把书上笔记（ana.note）里的词组/句型整理成一篇的清单
+     （按 句型 / 词组 / 单词 分组，全部可点开、可 ☆ 收藏；没有笔记就不出这个 tab）
+     ======================================================= */
+  function summaryItems() {
+    var seen = {}, out = [];
+    C.passage.paragraphs.forEach(function (p, pi) {
+      p.forEach(function (s, si) {
+        ((s.ana && s.ana.note) || []).forEach(function (it) {
+          var k = typeof it === "string" ? it : (it && it.k);
+          if (!k || seen[k]) return;
+          seen[k] = 1;
+          out.push({
+            k: String(k),
+            cn: (it && typeof it === "object" && it.cn) || "",
+            t: (it && typeof it === "object" && it.t) || "",
+            ref: pi + "-" + si
+          });
+        });
+      });
+    });
+    return out;
+  }
+
+  /* 一行「词组/句型 + 释义 + 词性 + ☆」。小黑板的「笔记（书上批注）」和总结页共用；
+     opts.jump（总结页用）：正文在另一页，额外给一个跳回原文那一句的小徽章 */
+  function noteRowHtml(it, opts) {
+    var r = lookup(it.k) || lookupPhrase(String(it.k).toLowerCase());
+    var e = (r && r.entry) || {};
+    var disp = it.t || it.k;
+    var cn = it.cn || e.cn || "";
+    var f = favOf({ t: "w", k: it.k, ref: it.ref || "" });
+    var on = !!(f.id && state.favIds[f.id]);
+    var h = '<div class="noterow">';
+    h += '<button class="chip ph2 nkey" data-note="' + esc(it.k) + '" data-noteref="' + esc(it.ref || "") +
+      '" title="点一下看词条">' + esc(disp) + "</button>";
+    h += '<span class="ncn">' + esc(stripTags(cn)) + "</span>";
+    if (e.pos) h += '<span class="npos">' + esc(e.pos) + "</span>";
+    if (opts && opts.jump && it.ref) {
+      h += '<button type="button" class="nat" data-sumgo="' + esc(it.ref) +
+        '" title="回到原文里这一句">原文</button>';
+    }
+    h += '<button class="nfav' + (on ? " on" : "") + '" data-notefav="' + esc(it.k) +
+      '" data-noteref="' + esc(it.ref || "") + '" title="' +
+      (on ? "取消收藏" : "收藏这个" + (e.pos === "句型" ? "句型" : "词组")) + '">' +
+      (on ? "★" : "☆") + "</button>";
+    h += "</div>";
+    return h;
+  }
+
+  /* 总结页 = 手写分组（summary 数据，按考点整理）+ 自动清单（没整理到的笔记/词组）。
+     两边都去重：手写分组里出现过的键（含词典原形）不再进下面的清单。
+     没有 summary 数据的文章就只出自动清单；两样都没有就不出「总结」页。 */
+  function normKey(s) { return String(s == null ? "" : s).toLowerCase().replace(/\s+/g, " ").trim(); }
+
+  function renderSummary() {
+    var box = document.getElementById("sumList");
+    var tb = document.getElementById("tabSum");
+    if (!box) return;
+    var items = summaryItems();
+    var S = C.summary;
+    var hasCurated = !!(S && Array.isArray(S.groups) && S.groups.length);
+    if (!items.length && !hasCurated) { box.innerHTML = ""; if (tb) tb.hidden = true; return; }
+    if (tb) tb.hidden = false;
+
+    var h = '<div class="sumwrap">';
+    h += '<div class="sec"><div class="sec-t">本篇总结' +
+      (items.length ? " · 来自书上笔记（" + items.length + " 条）" : "") + "</div>";
+    h += '<div class="sec-b">' + esc(C.summaryTip ||
+      "点词组看释义 · 点 ☆ 收藏（会进「我的词书」）") + "</div></div>";
+
+    /* 手写的那半：按考点/题型分组，每条带「在哪儿考」的跳转徽章 */
+    var covered = {};
+    if (hasCurated) {
+      h += buildSummaryHtml();
+      S.groups.forEach(function (grp) {
+        (grp.items || []).forEach(function (it) {
+          if (!it) return;
+          [it.k, it.t].forEach(function (x) { if (x) covered[normKey(x)] = 1; });
+          var r = it.k ? (lookup(it.k) || lookupPhrase(String(it.k).toLowerCase())) : null;
+          if (r && r.key) covered[normKey(r.key)] = 1;   // statues → statue
+        });
+      });
+    }
+    /* 自动清单：笔记 + 标黄词组里没被上面整理到的，按 句型 / 词组 / 单词 分组 */
+    var rest = items.filter(function (it) { return !covered[normKey(it.k)]; });
+    var groups = { "句型": [], "词组": [], "单词": [] };
+    rest.forEach(function (it) {
+      var r = lookup(it.k) || lookupPhrase(String(it.k).toLowerCase());
+      var e = (r && r.entry) || {};
+      var g = e.pos === "句型" ? "句型" : (e.pos === "词组" || /\s/.test(it.k) ? "词组" : "单词");
+      groups[g].push({ it: it, e: e });
+    });
+    ["句型", "词组", "单词"].forEach(function (g) {
+      if (!groups[g].length) return;
+      h += '<div class="sec"><div class="sec-t">' + (hasCurated ? "其余笔记 · " : "") +
+        g + "（" + groups[g].length + '）</div><div class="notes">';
+      groups[g].forEach(function (x) { h += noteRowHtml(x.it, { jump: true }); });
+      h += "</div></div>";
+    });
+    h += "</div>";
+    box.innerHTML = h;
+  }
+
   function switchTab(tab) {
     state.tab = tab;
     document.querySelectorAll(".tab").forEach(function (b) {
       b.classList.toggle("on", b.dataset.tab === tab);
     });
-    var isRead = tab === "read";
+    var isRead = tab === "read", isQuiz = tab === "quiz", isSum = tab === "sum";
     document.getElementById("passage").hidden = !isRead;
     document.getElementById("qListRead").hidden = !isRead;
-    document.getElementById("qList").hidden = isRead;
-    document.getElementById("col1Title").textContent = isRead ? "原文 + 题目" : "题目与答案";
+    document.getElementById("qList").hidden = !isQuiz;
+    var sumBox = document.getElementById("sumList");
+    if (sumBox) sumBox.hidden = !isSum;
+    document.getElementById("col1Title").textContent = isRead ? "原文 + 题目" : (isQuiz ? "题目与答案" : "本篇总结");
     var h1 = document.getElementById("col1Hint");
     h1.dataset.orig = isRead
       ? '点词查词 · 点句子看讲解 · <span style="background:var(--phrase);padding:0 4px;border-radius:3px">黄色</span>是词组'
-      : "点「分析」看解析 · 点选项里的词也能查";
+      : (isQuiz ? "点「分析」看解析 · 点选项里的词也能查"
+                : "书上笔记整理成的清单 · 点词组看释义 · 点 ☆ 收藏");
     document.getElementById("colAnaHint").textContent =
-      isRead ? "点单词或句子" : "点「分析」看题目解析";
+      isRead ? "点单词或句子" : (isQuiz ? "点「分析」看题目解析" : "点清单里的词组或 ☆");
     applyCols();   // 重新套用列显隐（会顺带刷新第一列提示）
     elAna.innerHTML = '<div class="empty"><span class="big">🔍</span>' +
       (isRead
         ? '点左边<b>任意一个单词</b>查词<br>点<b>任意一句</b>看讲解'
-        : "点题目的「分析」按钮<br>这里显示题目解析") + "</div>";
+        : (isQuiz ? "点题目的「分析」按钮<br>这里显示题目解析"
+                  : '点清单里的<b>词组/句型</b>看释义<br>点右侧的 <b>☆</b> 收藏进「我的词书」')) + "</div>";
     state.curHist = "";
     renderHistory();
     if (isRead) layoutGutter();     // 原文重新可见后，量一次页边位置
@@ -2080,6 +2245,7 @@
     renderPassage();
     renderHistory();
     renderQuestions();
+    renderSummary();
     renderToc();
 
     // bindPassage 同时挂在正文和小黑板上：喇叭、词、句子用的是同一套 data 属性
@@ -2089,6 +2255,8 @@
     // 点词 / 点选项句子 / 喇叭 统一走 bindPassage，两个题目容器都要绑
     bindPassage(document.getElementById("qList"));
     bindPassage(document.getElementById("qListRead"));
+    /* 总结页容器（笔记清单：点词组看词条、点 ☆ 收藏） */
+    bindPassage(document.getElementById("sumList"));
     bindQuestions(document.getElementById("qList"));
     bindQuestions(document.getElementById("qListRead"));
     /* 正文里也有答题交互（答案横排 / 整行选项 / 「解析」按钮），

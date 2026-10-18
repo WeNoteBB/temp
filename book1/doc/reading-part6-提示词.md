@@ -46,7 +46,7 @@
 | ③ 连接词二选一 | — | 句内 «» 标记：`…very early «as» / «so» …`；`pickQ` 挂题；**不要**再挂 `pick` 行 |
 | ④ 改错句 | **H** | `ul` 划「错的词」（that/unless/wherever/too/because/Despite），订正写 `ana.tip`；不设题 |
 | 真题 27–32 | **P** | 邮件全文用连续 `frame: true`（会拼成一个大框）+ 六个 `{n}` 输入框 |
-| 手写批注（笔记版） | **Q** | 句子的 `ana.note = ["键" | {k, t?, cn?}]`；词组/句型在 glossary 里建 `"词组"`/`"句型"` 条目 |
+| 手写批注（笔记版） | **Q** | 句子的 `ana.note = ["键" | {k, t?, cn?}]`；词组/句型在 glossary 里建 `"词组"`/`"句型"` 条目；**全篇笔记自动汇成「总结」tab**（可点、可收藏），开头一句话写顶层 `summaryTip` |
 
 **数据契约（verify 会逐条卡）**：
 

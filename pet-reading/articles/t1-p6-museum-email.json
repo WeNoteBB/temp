@@ -4,6 +4,7 @@
   "label": "Reading Part 6",
   "title": "Training Test 1",
   "note": "答案为逐题对照书后 P187 官方答案核对一致；训练①②③的答案与解析同 P187；「析」里的「笔记」来自带手写批注的 PET Trainers 版（书 P26–P27）",
+  "summaryTip": "这是一封 Sally 写给 Anna 的邮件：她第一次去市博物馆、为班级历史项目收集资料，还想约 Anna 一起去。第 6 部分（开放填空）考的是固定搭配——先想短语（believe it or not、hand in、as long as…），再对时态和单复数。下面就是本页笔记整理出的全部搭配和词汇：点开可看释义，点 ☆ 收藏。",
   "inlineQuiz": true,
   "options": {},
   "passage": {
@@ -1828,6 +1829,150 @@
       }
     ]
   },
+  "summary": {
+    "title": "固定搭配速览",
+    "groups": [
+      {
+        "t": "真题 27–32 · 每个空一个搭配",
+        "items": [
+          {
+            "k": "believe it or not",
+            "at": "27",
+            "ref": "30-1"
+          },
+          {
+            "k": "hand in",
+            "at": "28",
+            "ref": "30-3"
+          },
+          {
+            "k": "where",
+            "cn": "（逗号后的）非限制性定语从句：先行词 section 是地点",
+            "at": "29",
+            "ref": "31-0"
+          },
+          {
+            "k": "do research",
+            "at": "30",
+            "ref": "31-2"
+          },
+          {
+            "k": "why don't we",
+            "at": "31",
+            "ref": "32-1"
+          },
+          {
+            "k": "tag question",
+            "cn": "反意疑问句：前句否定 → 尾问用肯定 have you?",
+            "at": "32",
+            "ref": "32-2"
+          }
+        ]
+      },
+      {
+        "t": "训练② · 搭配与词形",
+        "items": [
+          {
+            "k": "most",
+            "cn": "the most exciting：一生中最…的（最高级）",
+            "at": "②-1",
+            "ref": "9-0"
+          },
+          {
+            "k": "in addition to",
+            "at": "②-2",
+            "ref": "9-1"
+          },
+          {
+            "k": "get used to",
+            "at": "②-3",
+            "ref": "9-1"
+          },
+          {
+            "k": "on one's own",
+            "at": "②-4",
+            "ref": "9-2"
+          }
+        ]
+      },
+      {
+        "t": "训练③ · 六个连接词",
+        "items": [
+          {
+            "k": "as",
+            "cn": "由于、因为（引导原因）",
+            "at": "③-1",
+            "ref": "12-0"
+          },
+          {
+            "k": "as long as",
+            "at": "③-2",
+            "ref": "13-0"
+          },
+          {
+            "k": "apart from",
+            "at": "③-3",
+            "ref": "14-0"
+          },
+          {
+            "k": "in case",
+            "at": "③-4",
+            "ref": "15-0"
+          },
+          {
+            "k": "in fact",
+            "cn": "事实上（③-4 的干扰项；表「以防」的是 in case）",
+            "at": "③-4",
+            "ref": "15-0"
+          },
+          {
+            "k": "in order to",
+            "at": "③-5",
+            "ref": "16-0"
+          },
+          {
+            "k": "instead of",
+            "at": "③-6",
+            "ref": "17-0"
+          }
+        ]
+      },
+      {
+        "t": "真题页生词（书上批注）",
+        "items": [
+          {
+            "k": "collect",
+            "ref": "30-2"
+          },
+          {
+            "k": "ancient history section",
+            "ref": "31-0"
+          },
+          {
+            "k": "ancient egyptian stuff",
+            "ref": "31-0"
+          },
+          {
+            "k": "statue",
+            "t": "statues",
+            "ref": "31-2"
+          },
+          {
+            "k": "various",
+            "ref": "31-2"
+          },
+          {
+            "k": "research",
+            "ref": "31-2"
+          },
+          {
+            "k": "some time",
+            "ref": "32-0"
+          }
+        ]
+      }
+    ]
+  },
   "phrases": [
     "some time",
     "ancient history section",
@@ -2124,6 +2269,12 @@
       "cn": "做，干",
       "note": "过去式 did，过去分词 done。do 和 make 都译“做”：do 偏“做事”，make 偏“做出实物”。"
     },
+    "do research": {
+      "pos": "词组",
+      "ipa": "/duː rɪˈsɜːtʃ/",
+      "cn": "做研究；查资料",
+      "note": "research 前用 do（不用 make）：do some research about sth 查某方面的资料。"
+    },
     "don't": {
       "pos": "助动词",
       "ipa": "/dəʊnt/",
@@ -2247,6 +2398,12 @@
       "cn": "得到，到达，变得",
       "note": "过去式 got，过去分词 got（英式）/ gotten（美式）。"
     },
+    "get used to": {
+      "pos": "词组",
+      "ipa": "/ɡet juːst tu/",
+      "cn": "习惯于…",
+      "note": "to 是介词，后接名词/动名词（get used to the customs）；别混 used to do sth（过去常常做）。"
+    },
     "give": {
       "pos": "v.",
       "ipa": "/ɡɪv/",
@@ -2324,6 +2481,12 @@
       "pos": "prep.",
       "ipa": "/ɪn/",
       "cn": "在……里；在（某段时间）"
+    },
+    "in addition to": {
+      "pos": "词组",
+      "ipa": "/ɪn əˈdɪʃn tu/",
+      "cn": "除…之外（还）",
+      "note": "= besides，to 是介词，后接名词/动名词：in addition to being lots of fun。"
     },
     "in case": {
       "pos": "词组",
@@ -2510,6 +2673,12 @@
       "pos": "prep.",
       "ipa": "/ɒn/",
       "cn": "在……上；在（某一天）"
+    },
+    "on one's own": {
+      "pos": "词组",
+      "ipa": "/ɒn wʌnz əʊn/",
+      "cn": "独自、靠自己",
+      "note": "= by oneself；one's 随主语变：on their own 靠他们自己。"
     },
     "one": {
       "pos": "num./pron.",
@@ -2870,16 +3039,16 @@
       "cn": "转，变成",
       "note": "turn out 结果是；turn on/off 开关。"
     },
+    "us": {
+      "pos": "pron.",
+      "ipa": "/ʌs/",
+      "cn": "我们（宾格）"
+    },
     "use": {
       "pos": "n./v.",
       "ipa": "/juːs/",
       "cn": "使用",
       "note": "for customers' use 供顾客使用"
-    },
-    "us": {
-      "pos": "pron.",
-      "ipa": "/ʌs/",
-      "cn": "我们（宾格）"
     },
     "various": {
       "pos": "adj.",

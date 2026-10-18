@@ -67,6 +67,9 @@ function verifyArticle(slug) {
   /* --- 基本字段 --- */
   if (A.slug !== slug) err(`${slug}：文件里的 slug 是「${A.slug}」，与文件名不符`);
   ["title", "label", "note"].forEach(k => { if (!A[k]) err(`${slug}：缺 ${k}`); });
+  if (A.summaryTip !== undefined && (typeof A.summaryTip !== "string" || !A.summaryTip.trim())) {
+    err(`${slug}：summaryTip 应为非空字符串（总结页开头的一句话，可选字段）`);
+  }
   if (!A.passage || !Array.isArray(A.passage.paragraphs)) { err(slug + "：缺 passage.paragraphs"); return null; }
 
   /* --- 段落角色（可选）：有就必须与段落一一对应，角色在白名单内 ---
@@ -200,6 +203,51 @@ function verifyArticle(slug) {
       }
     });
   });
+
+  /* --- 总结（「总结」页里的手写分组卡，可选，Part 6 起）---
+     把「笔记」按考点整理成分组条目：每组 items 里
+       · 有 k（词表键）：点开是词条，能收藏 —— 和 ana.note 同一条规则；
+       · 没 k 就得有 cn：纯文字行（如一句「大意」）；
+       · ref（可选）必须是文章里真实存在的句子「段-句」，点了要跳得回去；
+       · at（可选）是「在哪儿考」的小标签（如 27 / ②-3）。 */
+  if (A.summary !== undefined) {
+    const S = A.summary || {};
+    if (typeof S !== "object" || Array.isArray(S)) err(`${slug}：summary 应为对象`);
+    else {
+      if (S.title !== undefined && (typeof S.title !== "string" || !S.title.trim())) {
+        err(`${slug}：summary.title 应为非空字符串`);
+      }
+      if (!Array.isArray(S.groups) || !S.groups.length) err(`${slug}：summary.groups 应为非空数组`);
+      else S.groups.forEach((grp, gi) => {
+        if (!grp || typeof grp.t !== "string" || !grp.t.trim()) err(`${slug}：summary 第 ${gi + 1} 组缺 t（分组标题）`);
+        if (!Array.isArray(grp.items) || !grp.items.length) {
+          err(`${slug}：summary 第 ${gi + 1} 组的 items 应为非空数组`);
+          return;
+        }
+        grp.items.forEach((it, ii) => {
+          const where = `summary 第 ${gi + 1} 组第 ${ii + 1} 条`;
+          if (!it || typeof it !== "object" || Array.isArray(it)) { err(`${slug}：${where} 应为对象`); return; }
+          const k = it.k === undefined ? "" : String(it.k).trim();
+          if (!k && (typeof it.cn !== "string" || !it.cn.trim())) {
+            err(`${slug}：${where} 既没有 k（词表键）也没有 cn（纯文字行）`);
+          }
+          if (k && !g[k] && !lookup(g, k)) err(`${slug}：${where} 的 k「${k}」在词表里查不到（点开会是空卡片）`);
+          ["t", "cn", "at"].forEach(f => {
+            if (it[f] !== undefined && (typeof it[f] !== "string" || !it[f].trim())) {
+              err(`${slug}：${where} 的 ${f} 应为非空字符串`);
+            }
+          });
+          if (it.ref !== undefined) {
+            const ref = String(it.ref);
+            const m = ref.match(/^(\d+)-(\d+)$/);
+            if (!m || !(A.passage.paragraphs[+m[1]] || [])[+m[2]]) {
+              err(`${slug}：${where} 的 ref「${ref}」不是文章里存在的句子（应为「段-句」，如 30-1）`);
+            }
+          }
+        });
+      });
+    }
+  }
 
   /* --- 选项分析同样要有 ana --- */
   Object.keys(A.options || {}).forEach(L => {

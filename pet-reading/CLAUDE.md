@@ -221,6 +221,19 @@ cd server && npm run migrate   # 建表/加列（幂等，需要 .env 里的数�
     发布：`SKIP_CHECK=1 bash deploy.sh 8.138.161.122`（书 P26 训练页也有手写批注——
     整理时别只看真题页，整本带笔记 PDF 里两页都有）。
 
+**2026-10-18 补充（用户点名：把笔记整理成整篇的「总结」）：**
+
+28. **「总结」页（顶栏第三个 tab）**：把全篇 `ana.note` 笔记去重自动合成一张清单，
+    按 句型 / 词组 / 单词 分组（词性说了算；多词的一律归词组）；每行 = chip（点开词条，进历史）
+    + 中文 + 音标 + ☆（收藏/取消，和「析」里的笔记共用同一条收藏链路，星星两处同步）。
+    **文章没有笔记时 tab 隐藏**（老文章页面不受影响；一开始把 phrases 也收进来了，
+    smoke 立刻抓到「没有笔记时不出 tab」不成立——总结的语义就是「书上笔记的汇编」，别掺别的）。
+    数据侧只多一个可选顶层字段 `summaryTip`（清单开头的一句话；P6 用来点题「填空考固定搭配」）。
+    engine：`template.html` 加 `#tabSum` + `#sumList`；`app.js` 的 `summaryItems / noteRowHtml /
+    renderSummary`，`switchTab` 支持三个 tab，`#sumList` 也要 `bindPassage`（当时漏绑，
+    smoke 三条断言当场抓到：点 chip 不出词条、点 ☆ 不收藏）。
+    smoke 1053 → 1065（15g：tab 出现/清单条数=去重笔记数/点开/收藏/取消/没有笔记时不出 tab）。
+
 **部署实况**（8.138.161.122，Ubuntu 22.04 + nginx 1.18，MySQL 在本机）：
 Node 22 旁装 `/opt/node-v22`（系统 node v12 没动），systemd 单元 `pet-api`
 只监听 127.0.0.1:3001，`sites-available/default` 里插了 `/api/` 反代

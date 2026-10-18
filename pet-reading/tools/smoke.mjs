@@ -1110,6 +1110,107 @@ async function testArticle(slug) {
     }
   }
 
+  /* ---------- 15g. 总结页（手写分组 + 自动清单：点开 / 跳原文 / ☆ 收藏） ---------- */
+  {
+    const sumTab = doc.getElementById("tabSum");
+    const sumBox = doc.getElementById("sumList");
+    const noteKeys = [];
+    C.passage.paragraphs.forEach(p => p.forEach(s => ((s.ana && s.ana.note) || []).forEach(it => {
+      const k = typeof it === "string" ? it : it.k;
+      if (k && noteKeys.indexOf(k) < 0) noteKeys.push(k);
+    })));
+    /* 引擎的自动清单 = 笔记 + 标黄词组（词组小写、和笔记去重） */
+    const items = noteKeys.slice();
+    (C.phrases || []).forEach(p => { const k = String(p).toLowerCase(); if (items.indexOf(k) < 0) items.push(k); });
+    const S = C.summary;
+    const curated = (S && Array.isArray(S.groups)) ? S.groups.flatMap(g => g.items || []) : [];
+    if (items.length || curated.length) {
+      ok(sumTab && !sumTab.hidden, `[${slug}] 有笔记/总结数据 → 顶栏出现「总结」页`);
+      click(sumTab);
+      await tick();
+      ok(sumBox && !sumBox.hidden && passage.hidden,
+        `[${slug}] 切到总结页：正文收起、清单显示`);
+      /* 手写分组：组数、标题、每行带跳转徽章 */
+      if (curated.length) {
+        const groups = [...sumBox.querySelectorAll(".summ .summ-g")];
+        ok(groups.length === S.groups.length,
+          `[${slug}] 手写分组 ${groups.length} 组 === 数据 ${S.groups.length} 组`);
+        ok(groups.every((g, i) => g.querySelector(".summ-gt").textContent.trim() === S.groups[i].t),
+          `[${slug}] 每个分组标题与数据逐字一致`);
+      }
+      /* 自动清单条数：去掉手写分组里已经出现过的（含词典原形，如 statues → statue） */
+      const norm = x => String(x).toLowerCase().replace(/\s+/g, " ").trim();
+      const covered = {};
+      const mark = x => {
+        if (!x) return;
+        covered[norm(x)] = 1;
+        const r = resolves(String(x).toLowerCase());
+        if (r) covered[norm(r)] = 1;
+      };
+      curated.forEach(it => { if (it) { mark(it.k); mark(it.t); } });
+      const rest = items.filter(k => !covered[norm(k)]);
+      const rows = [...sumBox.querySelectorAll(".noterow")];
+      ok(rows.length === curated.length + rest.length,
+        `[${slug}] 总结清单 ${rows.length} 行 === 手写 ${curated.length} + 自动 ${rest.length}`);
+      const firstKey = curated.length ? curated[0].k : items[0];
+      const chip = sumBox.querySelector('.nkey[data-note="' + firstKey + '"]');
+      ok(!!chip, `[${slug}] 总结里有「${firstKey}」`);
+      if (chip) {
+        click(chip);
+        await tick();
+        ok(/词条/.test(ana.textContent), `[${slug}] 总结里点词组 → 出词条`);
+      }
+      /* 跳原文：点「27 / ②-1 / 原文」徽章 → 切回原文页 + 那一句高亮 + 打开讲解 */
+      const jumpIt = curated.find(it => it && it.ref);
+      if (jumpIt) {
+        const go = sumBox.querySelector('[data-sumgo="' + jumpIt.ref + '"]');
+        ok(!!go, `[${slug}] 总结里有跳回原文的徽章（${jumpIt.ref} / ${jumpIt.at || "原文"}）`);
+        if (go) {
+          click(go);
+          await tick();
+          ok(!passage.hidden, `[${slug}] 点徽章 → 切回原文页`);
+          const se = passage.querySelector('.sent[data-sent="' + jumpIt.ref + '"]');
+          ok(se && se.classList.contains("cur"), `[${slug}] 原文里那一句高亮`);
+          ok(/句子分析|整句翻译/.test(ana.textContent), `[${slug}] 并打开了这一句的讲解`);
+        }
+      }
+      /* ☆ 收藏（总结页和「析」里的笔记行星星同步） */
+      const favb = sumBox.querySelector('.nfav[data-notefav="' + firstKey + '"]');
+      if (favb) {
+        let noteRef = "";
+        C.passage.paragraphs.forEach((p, pi) => p.forEach((s, si) => {
+          (((s.ana && s.ana.note) || [])).forEach(it => {
+            const k = typeof it === "string" ? it : it.k;
+            if (k === firstKey && !noteRef) noteRef = pi + "-" + si;
+          });
+        }));
+        if (noteRef) {
+          click(passage.querySelector('.sent[data-sent="' + noteRef + '"]'));
+          await tick();
+          ok(!!ana.querySelector('.nfav[data-notefav="' + firstKey + '"]'),
+            `[${slug}] 「析」里有同一词组的笔记行（星星要同步）`);
+        }
+        const favs0 = JSON.parse(window.localStorage.getItem("pet:fav:v1") || "[]").length;
+        click(favb);
+        await tick();
+        const favs1 = JSON.parse(window.localStorage.getItem("pet:fav:v1") || "[]").length;
+        ok(favb.classList.contains("on") && favb.textContent === "★",
+          `[${slug}] 总结里点 ☆ → 收藏`);
+        ok(favs1 === favs0 + 1, `[${slug}] 收藏表 +1（总结页收藏走同一条链路）`);
+        const anaFav = ana.querySelector('.nfav[data-notefav="' + firstKey + '"]');
+        if (anaFav) ok(anaFav.classList.contains("on"), `[${slug}] 「析」里的星星同步点亮`);
+        click(favb);
+        await tick();
+        ok(!favb.classList.contains("on"), `[${slug}] 再点一次 → 取消收藏`);
+        if (anaFav) ok(!anaFav.classList.contains("on"), `[${slug}] 「析」里的星星同步取消`);
+      }
+      click(doc.querySelector('.tab[data-tab="read"]'));
+      await tick();
+    } else {
+      ok(!sumTab || sumTab.hidden, `[${slug}] 没有笔记也不出「总结」页`);
+    }
+  }
+
   /* ---------- 16. 答题解析 ---------- */
   click(doc.querySelector('.tab[data-tab="read"]'));
   const used = new Set((C.questions || []).map(q => q.answer));
