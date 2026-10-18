@@ -2150,9 +2150,9 @@
     return h;
   }
 
-  /* 总结页 = 手写分组（summary 数据，按考点整理）+ 自动清单（没整理到的笔记/词组）。
+  /* 总结页 = 手写分组（summary 数据，按考点整理）+ 自动清单（没整理到的笔记）。
      两边都去重：手写分组里出现过的键（含词典原形）不再进下面的清单。
-     没有 summary 数据的文章就只出自动清单；两样都没有就不出「总结」页。 */
+     没有 summary 数据的文章就只出自动清单；两样都没有（没有笔记）就不出「总结」页。 */
   function normKey(s) { return String(s == null ? "" : s).toLowerCase().replace(/\s+/g, " ").trim(); }
 
   function renderSummary() {
@@ -2184,7 +2184,7 @@
         });
       });
     }
-    /* 自动清单：笔记 + 标黄词组里没被上面整理到的，按 句型 / 词组 / 单词 分组 */
+    /* 自动清单：笔记里没被上面整理到的，按 句型 / 词组 / 单词 分组 */
     var rest = items.filter(function (it) { return !covered[normKey(it.k)]; });
     var groups = { "句型": [], "词组": [], "单词": [] };
     rest.forEach(function (it) {

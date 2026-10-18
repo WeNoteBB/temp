@@ -21,7 +21,7 @@
 
 1. `CLAUDE.md` —— 工程约定（提交前 `npm run check` 全绿）
 2. `README.md` —— 字段表、硬规矩、测试说明
-3. `book1/doc/reading-part3-设计方法.md` —— 方法代号字典；**Part 6 看文末的 P（开放填空）与 Q（笔记）**
+3. `book1/doc/reading-part3-设计方法.md` —— 方法代号字典；**Part 6 看文末的 P（开放填空）、Q（笔记）与 Q+（总结页）**
 4. 唯一权威样板：`articles/t1-p6-museum-email.json`（34 段 46 句 448 词 19 题）
    线上对照：`http://8.138.161.122/t1-p6-museum-email.html`
 
@@ -47,6 +47,7 @@
 | ④ 改错句 | **H** | `ul` 划「错的词」（that/unless/wherever/too/because/Despite），订正写 `ana.tip`；不设题 |
 | 真题 27–32 | **P** | 邮件全文用连续 `frame: true`（会拼成一个大框）+ 六个 `{n}` 输入框 |
 | 手写批注（笔记版） | **Q** | 句子的 `ana.note = ["键" | {k, t?, cn?}]`；词组/句型在 glossary 里建 `"词组"`/`"句型"` 条目；**全篇笔记自动汇成「总结」tab**（可点、可收藏），开头一句话写顶层 `summaryTip` |
+| 总结页（Q+） | **Q+** | 顶层 `summary`：把笔记按考点再整理一层（真题/训练/生词分组），每条 `{k, at, ref}`；`at` 显示「在哪儿考」并点回原文那一句。自动清单会跳过这里已出现的词条 |
 
 **数据契约（verify 会逐条卡）**：
 
@@ -55,6 +56,7 @@
   `others`（可选的「常见错答」）里不许出现答案本身；
 - 每题 `why/clues/tip/prompt/ana` 齐全（MC 题的 `others` 覆盖每个错选项）；
 - `ana.note` 里每个键必须能在词表里查到（点开有词条、可收藏）；
+- `summary.groups[].items[]` 的 `k` 同为词表键；`ref` 必须指向真实存在的句子（`"段-句"`，如 `30-1`）；
 - 顶层 `inlineQuiz: true`；词表覆盖率 **100%**（原文 + 选项 + 笔记的键）。
 
 ## 四、词库（先借后写）
@@ -69,7 +71,7 @@
 ```bash
 node tools/verify.mjs <slug>   # 内容契约（空位/开放填空/笔记键/词表/…）
 node build.mjs                 # 构建 dist/
-node tools/smoke.mjs           # 端到端（当前基线 1053 条，只增不减）
+node tools/smoke.mjs           # 端到端（当前基线 1074 条，只增不减）
 node tools/test-store.mjs
 # 四连 = npm run check
 ```
@@ -79,13 +81,15 @@ node tools/test-store.mjs
 1. 起本地静态服务指向 `dist/`，Edge + `playwright-core` 截图：1280 / 375，亮暗；
 2. 重点核对：① 胶囊排、② **输入框**（填对变绿、填错变红 + 解析自动展开）、段尾「N 解析」排、
    ③ «» 内联按钮、④ 红下划线、真题**连续边框盒**（多段拼成一个大框）、
-   小黑板里的**「笔记（书上批注）」区**（chip + 中文 + ☆）；
+   小黑板里的**「笔记（书上批注）」区**（chip + 中文 + ☆）、
+   **「总结」页**（手写分组卡 + 自动清单；点「在哪儿考」徽章跳回原句；两处 ☆ 同步）；
 3. 已知坑：表格块用 `<div>`；两个 `tip` 浮框并排会互相让位（合成一个）；懒加载图片要先触发滚动。
 
 ## 七、收尾清单
 
 - [ ] `data/manifest.json` 按书内顺序登记 slug；
 - [ ] `sources/<slug>.txt`：素材出处 + **笔记原文** + 官方答案速查表；
+- [ ] 顶层 `summaryTip`（总结页开头一句话）+ `summary` 分组卡（把笔记按考点/题型整理，带 `at` / `ref`）；
 - [ ] 若出现新题型：在 `book1/doc/reading-part3-设计方法.md` 追加新方法代号；
 - [ ] README / CLAUDE.md 的统计数字（smoke 总数、文章数）更新；
 - [ ] （可选）部署：`SKIP_CHECK=1 bash deploy.sh 8.138.161.122`（git-bash 里跑）。

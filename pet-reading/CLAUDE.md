@@ -23,7 +23,7 @@ cd server && npm test      # 后端单测（假 db，不需要数据库；首次
 cd server && npm run migrate   # 建表/加列（幂等，需要 .env 里的数据库口令）
 ```
 
-改任何东西之后 `npm run check` 必须全绿。当前基线：**verify ✓（0 警告）/ smoke 1053 / test-store 144**，
+改任何东西之后 `npm run check` 必须全绿。当前基线：**verify ✓（0 警告）/ smoke 1074 / test-store 144**，
 后端 `npm test` **94**。
 
 ## 架构要点
@@ -223,16 +223,22 @@ cd server && npm run migrate   # 建表/加列（幂等，需要 .env 里的数�
 
 **2026-10-18 补充（用户点名：把笔记整理成整篇的「总结」）：**
 
-28. **「总结」页（顶栏第三个 tab）**：把全篇 `ana.note` 笔记去重自动合成一张清单，
+28. **「总结」页（顶栏第三个 tab，Q+）**：把全篇 `ana.note` 笔记去重自动合成一张清单，
     按 句型 / 词组 / 单词 分组（词性说了算；多词的一律归词组）；每行 = chip（点开词条，进历史）
-    + 中文 + 音标 + ☆（收藏/取消，和「析」里的笔记共用同一条收藏链路，星星两处同步）。
+    + 中文 + 词性 + ☆（收藏/取消，和「析」里的笔记共用同一条收藏链路，星星两处同步）。
     **文章没有笔记时 tab 隐藏**（老文章页面不受影响；一开始把 phrases 也收进来了，
     smoke 立刻抓到「没有笔记时不出 tab」不成立——总结的语义就是「书上笔记的汇编」，别掺别的）。
-    数据侧只多一个可选顶层字段 `summaryTip`（清单开头的一句话；P6 用来点题「填空考固定搭配」）。
-    engine：`template.html` 加 `#tabSum` + `#sumList`；`app.js` 的 `summaryItems / noteRowHtml /
-    renderSummary`，`switchTab` 支持三个 tab，`#sumList` 也要 `bindPassage`（当时漏绑，
-    smoke 三条断言当场抓到：点 chip 不出词条、点 ☆ 不收藏）。
-    smoke 1053 → 1065（15g：tab 出现/清单条数=去重笔记数/点开/收藏/取消/没有笔记时不出 tab）。
+    数据侧多两个可选顶层字段：
+    - `summaryTip`：清单开头的一句话（P6 用来点题「填空考固定搭配」）；
+    - `summary`：**手写分组卡**（排在自动清单上面，按考点/题型把笔记再整理一遍）。
+      每条 `{k, cn?, t?, at?, ref?}`：`at` 是「在哪儿考」小徽章（如 27 / ②-3），点它
+      **切回原文页、高亮那一句并打开讲解**；`ref`（"段-句"）verify 会卡；自动清单会跳过
+      手写分组里已出现过的词条（含词典原形，如 statues → statue），两边不重复。
+    engine：`template.html` 加 `#tabSum` + `#sumList`；`app.js` 的
+    `summaryItems / buildSummaryHtml / noteRowHtml / renderSummary`，`switchTab` 支持三个 tab，
+    `#sumList` 也要 `bindPassage`（当时漏绑，smoke 三条断言当场抓到：点 chip 不出词条、点 ☆ 不收藏）；
+    `data-sumgo` 分支负责「跳回原文」。
+    smoke 1053 → 1074（15g：tab 出现/分组与行数=手写+自动/点开/跳原文/收藏两处同步/没有笔记时不出 tab）。
 
 **部署实况**（8.138.161.122，Ubuntu 22.04 + nginx 1.18，MySQL 在本机）：
 Node 22 旁装 `/opt/node-v22`（系统 node v12 没动），systemd 单元 `pet-api`
@@ -245,7 +251,7 @@ Node 22 旁装 `/opt/node-v22`（系统 node v12 没动），systemd 单元 `pet
 HTML 配了 `Cache-Control: no-cache`（改版不用让学生手动清缓存）。
 Edge 按 375/744/768/820/1194/1440 逐宽度验收：每句「析/🔊」都在、无横向溢出。
 
-`npm run check` 全绿（verify **0 警告** / smoke 1053 / test-store 144），后端单测 94。
+`npm run check` 全绿（verify **0 警告** / smoke 1074 / test-store 144），后端单测 94。
 （原来的 18 条跨篇释义警告已统一并收进共享词库，见上面的第 22 条。）
 
 **未做 / 待办：**

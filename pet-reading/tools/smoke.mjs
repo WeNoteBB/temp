@@ -1119,9 +1119,8 @@ async function testArticle(slug) {
       const k = typeof it === "string" ? it : it.k;
       if (k && noteKeys.indexOf(k) < 0) noteKeys.push(k);
     })));
-    /* 引擎的自动清单 = 笔记 + 标黄词组（词组小写、和笔记去重） */
+    /* 引擎的自动清单 = 去重后的笔记（没有笔记、也没有手写分组就不出页签） */
     const items = noteKeys.slice();
-    (C.phrases || []).forEach(p => { const k = String(p).toLowerCase(); if (items.indexOf(k) < 0) items.push(k); });
     const S = C.summary;
     const curated = (S && Array.isArray(S.groups)) ? S.groups.flatMap(g => g.items || []) : [];
     if (items.length || curated.length) {
