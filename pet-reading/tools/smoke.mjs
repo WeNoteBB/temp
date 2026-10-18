@@ -1671,36 +1671,43 @@ async function testSynonymsPage() {
      doc.querySelector('.syn-row[data-row="1"]').classList.contains("shown"),
     `[${S}] 再点 → 退出遮住态`);
 
-  /* ---- 连线题：左右各 10 项、连对变绿计分、连错红一下 ---- */
+  /* ---- 连线题：按分组出题（第 1 组 = 1–10），左边按序、右边打乱 ---- */
   click(doc.querySelector('.syn-tab[data-view="quiz"]'));
   await tick();
   const qBox = doc.getElementById("synQuiz");
   ok(!qBox.hidden && doc.getElementById("synList").hidden, `[${S}] 切到连线题：列表收起`);
-  ok(qBox.querySelectorAll('.syn-qitem[data-q^="l:"]').length === 10 &&
-     qBox.querySelectorAll('.syn-qitem[data-q^="r:"]').length === 10,
-    `[${S}] 每轮左右各 10 项`);
-  const l1 = qBox.querySelector('.syn-qitem[data-q^="l:"]');
-  const n1 = l1.dataset.q.split(":")[1];
+  const qTitle = () => qBox.querySelector(".syn-qtitle").textContent;
+  const lns = () => [...qBox.querySelectorAll('.syn-qitem[data-q^="l:"]')].map(x => +x.dataset.q.split(":")[1]);
+  const rns = () => [...qBox.querySelectorAll('.syn-qitem[data-q^="r:"]')].map(x => +x.dataset.q.split(":")[1]);
+  ok(/第 1 组（1–10）/.test(qTitle()), `[${S}] 从第 1 组（1–10）开始`);
+  ok(lns().join() === "1,2,3,4,5,6,7,8,9,10", `[${S}] 左边按书上的顺序 = 1–10`);
+  ok(rns().sort((a, b) => a - b).join() === "1,2,3,4,5,6,7,8,9,10",
+    `[${S}] 右边是同一组的 10 项（打乱也是这十个）`);
+  const l1 = qBox.querySelector('.syn-qitem[data-q="l:1"]');
   click(l1);
   ok(l1.classList.contains("sel"), `[${S}] 点左边一项 → 选中`);
-  click(qBox.querySelector('.syn-qitem[data-q="r:' + n1 + '"]'));
+  click(qBox.querySelector('.syn-qitem[data-q="r:1"]'));
   await tick();
-  ok(qBox.querySelector('.syn-qitem[data-q="l:' + n1 + '"]').classList.contains("ok"),
+  ok(qBox.querySelector('.syn-qitem[data-q="l:1"]').classList.contains("ok"),
     `[${S}] 点配对的右边 → 变绿（连对）`);
   ok(/已连对 1\/10/.test(qBox.querySelector(".syn-score").textContent), `[${S}] 计分变成 1/10`);
-  const l2 = [...qBox.querySelectorAll('.syn-qitem[data-q^="l:"]')].find(x => !x.classList.contains("ok"));
-  const n2 = l2.dataset.q.split(":")[1];
-  const rWrong = [...qBox.querySelectorAll('.syn-qitem[data-q^="r:"]')]
-    .find(x => x.dataset.q.split(":")[1] !== n2 && !x.classList.contains("ok"));
+  const l2 = qBox.querySelector('.syn-qitem[data-q="l:2"]');
+  const rWrong = qBox.querySelector('.syn-qitem[data-q="r:3"]');
   click(l2);
   click(rWrong);
   await tick();
   ok(l2.classList.contains("bad") && rWrong.classList.contains("bad"), `[${S}] 配错 → 两边红一下`);
   ok(/错 1 次/.test(qBox.querySelector(".syn-score").textContent), `[${S}] 计分条记上「错 1 次」`);
-  click(doc.getElementById("synNewRound"));
+  ok(doc.getElementById("synPrev").disabled, `[${S}] 第 1 组时「上一组」是灰的`);
+  click(doc.getElementById("synNext"));
   await tick();
-  ok(doc.querySelectorAll('#synQuiz .syn-qitem[data-q^="l:"]').length === 10,
-    `[${S}] 「换一组」→ 新的一轮还是 10 项`);
+  ok(/第 2 组（11–20）/.test(qTitle()), `[${S}] 「下一组」→ 第 2 组（11–20）`);
+  ok(lns().join() === "11,12,13,14,15,16,17,18,19,20", `[${S}] 左边变成 11–20（顺序不变）`);
+  ok(!doc.getElementById("synPrev").disabled, `[${S}] 第 2 组时「上一组」可用`);
+  click(doc.getElementById("synPrev"));
+  await tick();
+  ok(/第 1 组（1–10）/.test(qTitle()) && /已连对 0\/10/.test(qBox.querySelector(".syn-score").textContent),
+    `[${S}] 「上一组」回到第 1 组、分数清零重新练`);
 
   ok(logs.filter(l => !/404/.test(l)).length === 0, `[${S}] 运行期没有 JS 报错`);
 }

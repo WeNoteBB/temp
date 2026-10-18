@@ -182,13 +182,23 @@
     }
     return a;
   }
-  function newRound() {
-    var picked = shuffle(G.slice()).slice(0, Math.min(10, G.length));
+  /* 连线题按分组出题（和书上一样）：第 1 组 = 1–10，第 2 组 = 11–20……
+     左侧原文按顺序排（书上就是这样），右侧同义替换洗牌打乱。 */
+  function secCount() { return Math.ceil(G.length / 10); }
+  function newRound(sec) {
+    sec = Math.max(0, Math.min(secCount() - 1, sec || 0));
+    var base = sec * 10;
+    var picked = G.slice(base, base + 10);
     state.quiz = {
-      matched: {}, wrong: 0, sel: null,
-      left: shuffle(picked.slice()), right: shuffle(picked.slice())
+      sec: sec, matched: {}, wrong: 0, sel: null,
+      left: picked.slice(),                 // 原文：按组内顺序
+      right: shuffle(picked.slice())        // 同义替换：洗牌
     };
     renderQuiz();
+  }
+  function gotoSection(d) {
+    if (!state.quiz) return;
+    newRound(state.quiz.sec + d);
   }
   function qItemHtml(g, side) {
     var ok = state.quiz.matched[g.n];
@@ -200,14 +210,21 @@
     var q = state.quiz, box = $("synQuiz");
     if (!q) return;
     var done = Object.keys(q.matched).length;
-    var h = '<div class="syn-qhead"><span class="syn-qtitle">连一连 · 每轮 10 组</span>' +
-      '<span class="syn-score">已连对 <b>' + done + "</b>/10" +
+    var total = q.left.length;
+    var lb = q.sec * 10 + 1, rb = lb + total - 1;
+    var last = q.sec >= secCount() - 1;
+    var h = '<div class="syn-qhead">' +
+      '<span class="syn-qtitle">连一连 · 第 ' + (q.sec + 1) + " 组（" + lb + "–" + rb + "）</span>" +
+      '<span class="syn-score">已连对 <b>' + done + "</b>/" + total +
       (q.wrong ? "　错 " + q.wrong + " 次" : "") + "</span>" +
-      '<button type="button" class="btn" id="synNewRound">换一组</button></div>';
-    if (done === 10) {
+      '<span class="syn-qnav">' +
+        '<button type="button" class="btn" id="synPrev"' + (q.sec === 0 ? " disabled" : "") + ">← 上一组</button>" +
+        '<button type="button" class="btn" id="synNext"' + (last ? " disabled" : "") + ">下一组 →</button>" +
+      "</span></div>";
+    if (done === total) {
       h += '<div class="syn-done">' + (q.wrong
-        ? "本轮连完了，中间错了 " + q.wrong + " 次 —— 再来一组巩固一下？"
-        : "本轮全对，太稳了！") + "</div>";
+        ? "本组连完了，中间错了 " + q.wrong + " 次。" + (last ? "" : "点「下一组」继续。")
+        : "本组全对，太稳了！" + (last ? "30 组都练完了，厉害。" : "点「下一组」继续。")) + "</div>";
     }
     h += '<div class="syn-qcols"><div class="syn-qcol">';
     q.left.forEach(function (g) { h += qItemHtml(g, "l"); });
@@ -215,7 +232,7 @@
     q.right.forEach(function (g) { h += qItemHtml(g, "r"); });
     h += "</div></div>";
     h += '<p class="syn-qtip">先点左边一句，再点右边对应的替换；配对对了会变绿并显示中文。' +
-      "顺序是随机的，每轮都不一样。</p>";
+      "左边按书上的顺序，右边打乱 —— 一组一组往下练。</p>";
     box.innerHTML = h;
   }
   function qClick(el) {
@@ -236,7 +253,7 @@
       el.classList.add("ok");
       q.matched[n] = 1;
       q.sel = null;
-      if (Object.keys(q.matched).length === 10) renderQuiz();     // 连完出成绩条
+      if (Object.keys(q.matched).length === q.left.length) renderQuiz();   // 连完出成绩条
       else paintScore();
     } else {                                   // 配错：红一下再放开
       other.el.classList.remove("sel");
@@ -255,7 +272,7 @@
   function paintScore() {
     var q = state.quiz, el = $("synQuiz") && $("synQuiz").querySelector(".syn-score");
     if (!q || !el) return;
-    el.innerHTML = "已连对 <b>" + Object.keys(q.matched).length + "</b>/10" +
+    el.innerHTML = "已连对 <b>" + Object.keys(q.matched).length + "</b>/" + q.left.length +
       (q.wrong ? "　错 " + q.wrong + " 次" : "");
   }
 
@@ -268,7 +285,7 @@
     $("synList").hidden = state.view !== "list";
     $("synQuiz").hidden = state.view !== "quiz";
     document.querySelector(".syn-bar").classList.toggle("quiz", state.view === "quiz");
-    if (state.view === "quiz" && !state.quiz) newRound();
+    if (state.view === "quiz" && !state.quiz) newRound(0);     // 从第 1 组（1–10）开始
   }
 
   function bind() {
@@ -296,7 +313,8 @@
       if (say) { ev.stopPropagation(); speak(say.dataset.say); return; }
       if (t.closest && t.closest("[data-pop='close']")) { closePop(); return; }
       if (t.id === "synPopFav") { toggleFav(); return; }
-      if (t.closest && t.closest("#synNewRound")) { newRound(); return; }
+      if (t.closest && t.closest("#synPrev")) { gotoSection(-1); return; }
+      if (t.closest && t.closest("#synNext")) { gotoSection(1); return; }
       if (t.closest && t.closest(".syn-tab")) return;            // 上面单独绑了
 
       var reveal = t.closest && t.closest("[data-reveal]");

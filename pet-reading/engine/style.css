@@ -1444,6 +1444,8 @@ button.nat:hover{border-color:var(--border-accent);color:var(--accent);backgroun
 .syn-qtitle{font-weight:700;font-size:14px}
 .syn-score{margin-left:auto;font-size:13px;color:var(--ink-2)}
 .syn-score b{color:var(--accent);font-size:15px}
+.syn-qnav{display:flex;gap:6px;flex:none}
+.syn-qnav .btn[disabled]{opacity:.45;cursor:default}
 .syn-done{
   margin:0 0 12px;padding:10px 12px;border-radius:10px;font-size:13.5px;
   background:var(--ok-bg);border:1px solid var(--ok-line);color:var(--ok);
