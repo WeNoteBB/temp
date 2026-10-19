@@ -1,0 +1,6190 @@
+{
+  "slug": "t2-p2-film-studios",
+  "book": "剑桥PET 官方模考题精讲讲练",
+  "label": "Reading Part 2",
+  "title": "Training Test 2",
+  "note": "答案为逐题对照书后 P199 官方答案核对一致；训练①–④的答案与解析同 P199；「析」里的笔记来自带手写批注的 PET Trainers 版（书 P56–P58；扫描页码 73–75）（2026-10-19）",
+  "inlineQuiz": true,
+  "passage": {
+    "words": 993,
+    "sentences": 81,
+    "paragraphs": [
+      [
+        {
+          "s": "Training Test 2 · Reading Part 2",
+          "hard": false,
+          "tr": "训练测试 2 · 阅读第 2 部分。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题行：<b>Training Test 2 · Reading Part 2</b>（训练测试 2 · 阅读第 2 部分）",
+            "parts": [
+              [
+                "标题",
+                "Training Test 2 —— 训练测试编号"
+              ],
+              [
+                "标题",
+                "Reading Part 2 —— 阅读第 2 部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式省略句"
+            ],
+            "tip": "这一部分练的是：五个人各配一段最合适的介绍（A–H 里选，有三段用不上）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "How many descriptions of people do you have to read in Part 2?",
+          "hard": false,
+          "tr": "在第 2 部分里，你要读几段人物描述？",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "疑问句：<b>How many descriptions of people do you have to read …?</b>",
+            "parts": [
+              [
+                "疑问词",
+                "<code>How many descriptions of people</code> —— 多少段人物描述"
+              ],
+              [
+                "谓语",
+                "<code>do you have to read</code> —— 你必须读"
+              ],
+              [
+                "状语",
+                "in Part 2 —— 在第 2 部分"
+              ]
+            ],
+            "clauses": [
+              "have to 的疑问形式：do you have to …"
+            ],
+            "gram": [
+              "description 描述"
+            ],
+            "tip": "官方答案：五段（five）。",
+            "note": [
+              {
+                "k": "description",
+                "cn": "描述，介绍"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "How many matching texts can you choose from?",
+          "hard": false,
+          "tr": "有多少段可以匹配的文本供你选择？",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "疑问句：<b>How many matching texts can you choose from?</b>",
+            "parts": [
+              [
+                "疑问词",
+                "<code>How many matching texts</code> —— 多少段可匹配的文本"
+              ],
+              [
+                "谓语",
+                "<code>can you choose from</code> —— 你可以从中选择"
+              ]
+            ],
+            "clauses": [
+              "choose from 从……中选"
+            ],
+            "gram": [
+              "matching 匹配的"
+            ],
+            "tip": "官方答案：八段（eight）—— 但有三段用不上。",
+            "note": [
+              {
+                "k": "matching",
+                "cn": "匹配的，相配的"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "FOCUS: IDENTIFYING KEY WORDS",
+          "hard": false,
+          "tr": "重点：识别关键词。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>FOCUS: IDENTIFYING KEY WORDS</b>（重点：找出关键词）",
+            "parts": [
+              [
+                "动名词",
+                "IDENTIFYING —— 识别"
+              ],
+              [
+                "名词",
+                "KEY WORDS —— 关键词"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "identify 识别；key 关键的"
+            ],
+            "tip": "Part 2 的核心技能：把人物的每个需求变成关键词，再去文本里找同义说法。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "① Complete the text with words from the box.",
+          "hard": false,
+          "tr": "① 用方框里的词补全短文。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Complete the text with words from the box.</b>",
+            "parts": [
+              [
+                "谓语",
+                "Complete —— 补全"
+              ],
+              [
+                "宾语",
+                "the text —— 短文"
+              ],
+              [
+                "介词短语",
+                "<code>with words from the box</code> —— 用方框里的词"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "complete 补全"
+            ],
+            "tip": "七个词各用一次，先看空格后面跟什么形式（doing / on / of / to）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "A rather",
+          "hard": false,
+          "tr": "A 宁愿。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "词框：<b>rather</b>（宁愿）",
+            "parts": [
+              [
+                "词",
+                "rather —— 宁愿（would rather do sth 宁愿做某事）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "would rather do sth 宁愿做某事"
+            ],
+            "tip": "「would rather + 动词原形」表示宁愿。",
+            "note": [
+              {
+                "k": "rather",
+                "cn": "宁愿（would rather do sth 宁愿做某事）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "B stand",
+          "hard": false,
+          "tr": "B 忍受。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "词框：<b>stand</b>（忍受）",
+            "parts": [
+              [
+                "词",
+                "stand —— 忍受（can't stand doing sth 无法忍受做某事）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "can't stand doing sth/名词 无法忍受"
+            ],
+            "tip": "这里不是「站」，是「忍受」。",
+            "note": [
+              {
+                "k": "stand",
+                "cn": "忍受（can't stand doing sth 无法忍受做某事）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "C mind",
+          "hard": false,
+          "tr": "C 介意。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "词框：<b>mind</b>（介意）",
+            "parts": [
+              [
+                "词",
+                "mind —— 介意（mind doing sth；don't mind 不介意）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "mind doing sth 介意做某事"
+            ],
+            "tip": "don't mind 不介意 = 觉得不重要。",
+            "note": [
+              {
+                "k": "mind",
+                "cn": "介意（mind doing sth；don't mind 不介意）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "D fancy",
+          "hard": false,
+          "tr": "D 想做。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "词框：<b>fancy</b>（想做）",
+            "parts": [
+              [
+                "词",
+                "fancy —— 想做（fancy doing sth 想做某事）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "fancy doing sth 想做某事"
+            ],
+            "tip": "英式口语：fancy doing sth = 想做某事。",
+            "note": [
+              {
+                "k": "fancy",
+                "cn": "想做（fancy doing sth 想做某事）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "E prefer",
+          "hard": false,
+          "tr": "E 更喜欢。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "词框：<b>prefer</b>（更喜欢）",
+            "parts": [
+              [
+                "词",
+                "prefer —— 更喜欢（prefer to do sth 更喜欢做某事）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "prefer to do sth 更喜欢做某事"
+            ],
+            "tip": "prefer A to B：比起 B 更喜欢 A。",
+            "note": [
+              {
+                "k": "prefer",
+                "cn": "更喜欢（prefer to do sth 更喜欢做某事）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "F fond",
+          "hard": false,
+          "tr": "F 喜欢。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "词框：<b>fond</b>（喜欢）",
+            "parts": [
+              [
+                "词",
+                "fond —— 喜欢（be fond of 喜欢）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "be fond of 喜欢"
+            ],
+            "tip": "fond 要和 be 连用：be fond of sth。",
+            "note": [
+              {
+                "k": "fond",
+                "cn": "喜欢（be fond of 喜欢）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "G keen",
+          "hard": false,
+          "tr": "G 热衷。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "词框：<b>keen</b>（热衷）",
+            "parts": [
+              [
+                "词",
+                "keen —— 热衷（be keen on 喜欢、热衷于）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "be keen on 喜欢、热衷于"
+            ],
+            "tip": "be keen on sth/doing sth。",
+            "note": [
+              {
+                "k": "keen",
+                "cn": "热衷（be keen on 喜欢、热衷于）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Sonia doesn't …………… going abroad because she isn't …………… on travelling long distances and she really can't …………… flying.",
+          "hard": true,
+          "tr": "Sonia 不想出国，因为她不喜欢长途旅行，而且她实在受不了坐飞机。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "否定谓语 + 原因从句：<b>Sonia doesn't ____ going abroad because she isn't ____ on travelling long distances and she really can't ____ flying.</b>",
+            "parts": [
+              [
+                "谓语（空 1）",
+                "<code>doesn't …………… going abroad</code> —— 不想出国（fancy doing）"
+              ],
+              [
+                "原因从句",
+                "<code>because she isn't …………… on travelling long distances</code> —— 因为不喜欢长途旅行（be keen on）"
+              ],
+              [
+                "并列谓语",
+                "<code>and she really can't …………… flying</code> —— 而且受不了坐飞机（can't stand）"
+              ]
+            ],
+            "clauses": [
+              "because 引导原因状语从句",
+              "三个空后面分别是 doing / on / doing"
+            ],
+            "gram": [
+              "fancy doing sth 想做某事",
+              "be keen on 喜欢",
+              "can't stand doing sth 无法忍受"
+            ],
+            "tip": "看空后的形式：going → fancy doing；on → be keen on；flying → can't stand doing。官方：1 fancy / 2 keen / 3 stand。",
+            "note": [
+              {
+                "k": "abroad",
+                "cn": "在国外，出国"
+              }
+            ]
+          }
+        },
+        {
+          "s": "She would …………… to have a holiday near her home and she'd …………… go camping than stay in a hotel.",
+          "hard": true,
+          "tr": "她更愿意在离家近的地方度假，而且她宁愿去露营也不愿住酒店。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "并列谓语：<b>She would ____ to have a holiday … and she'd ____ go camping than stay in a hotel.</b>",
+            "parts": [
+              [
+                "谓语（空 4）",
+                "<code>would …………… to have a holiday near her home</code> —— 更愿意在离家近的地方度假（prefer to do）"
+              ],
+              [
+                "谓语（空 5）",
+                "<code>she'd …………… go camping than stay in a hotel</code> —— 宁愿露营也不住酒店（would rather do … than do）"
+              ]
+            ],
+            "clauses": [
+              "would rather do A than do B 宁愿做 A 也不做 B"
+            ],
+            "gram": [
+              "prefer to do sth 更喜欢",
+              "would rather do sth 宁愿"
+            ],
+            "tip": "空后有 to → prefer to；后面是 go 原形 + than → would rather。官方：4 prefer / 5 rather。",
+            "note": [
+              {
+                "k": "camping",
+                "cn": "露营"
+              }
+            ]
+          }
+        },
+        {
+          "s": "She's …………… of nature and really doesn't …………… if it rains a lot!",
+          "hard": true,
+          "tr": "她喜欢大自然，而且真的不介意经常下雨！",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "系表 + 并列谓语：<b>She's ____ of nature and really doesn't ____ if it rains a lot!</b>",
+            "parts": [
+              [
+                "系动词",
+                "She's —— 她是"
+              ],
+              [
+                "表语（空 6）",
+                "<code>…………… of nature</code> —— 喜欢大自然（be fond of）"
+              ],
+              [
+                "谓语（空 7）",
+                "<code>doesn't …………… if it rains a lot</code> —— 不介意下很多雨（don't mind if…）"
+              ]
+            ],
+            "clauses": [
+              "if 引导宾语从句（介意什么）"
+            ],
+            "gram": [
+              "be fond of 喜欢",
+              "don't mind if… 不介意……"
+            ],
+            "tip": "of → be fond of；「不介意」→ don't mind。官方：6 fond / 7 mind。",
+            "note": [
+              {
+                "k": "nature",
+                "cn": "大自然"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "② Work in pairs. Which of the words in Exercise 1 do we use for something we:",
+          "hard": false,
+          "tr": "② 两人一组。练习 1 里的哪些词用来表达我们对某事物的……：",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句 + 疑问句：<b>Work in pairs. Which of the words … do we use for something we: …</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Work in pairs</code> —— 两人一组活动"
+              ],
+              [
+                "疑问句",
+                "<code>Which of the words in Exercise 1 do we use</code> —— 我们用练习 1 里的哪些词"
+              ],
+              [
+                "目的",
+                "<code>for something we:</code> —— 用来表达我们对某事物的（感受）"
+              ]
+            ],
+            "clauses": [
+              "Which of … 哪些"
+            ],
+            "gram": [
+              "in pairs 两人一组"
+            ],
+            "tip": "下面四组感受各对应哪些词？一组可以不止一个词。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "a like?",
+          "hard": false,
+          "tr": "a 喜欢？",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "分组：<b>a like?</b>（喜欢）",
+            "parts": [
+              [
+                "动词",
+                "like —— 喜欢"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "like 喜欢"
+            ],
+            "tip": "官方答案：fancy、keen (on)、fond (of)。"
+          }
+        },
+        {
+          "s": "b prefer?",
+          "hard": false,
+          "tr": "b 更喜欢？",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "分组：<b>b prefer?</b>（更喜欢）",
+            "parts": [
+              [
+                "动词",
+                "prefer —— 更喜欢"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "prefer 更喜欢"
+            ],
+            "tip": "官方答案：rather（would rather 宁愿）。"
+          }
+        },
+        {
+          "s": "c dislike?",
+          "hard": false,
+          "tr": "c 不喜欢？",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "分组：<b>c dislike?</b>（不喜欢）",
+            "parts": [
+              [
+                "动词",
+                "dislike —— 不喜欢"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "dislike 不喜欢"
+            ],
+            "tip": "官方答案：(can't) stand（无法忍受）。"
+          }
+        },
+        {
+          "s": "d don't think is important?",
+          "hard": false,
+          "tr": "d 觉得不重要？",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "分组：<b>d don't think is important?</b>（觉得不重要）",
+            "parts": [
+              [
+                "谓语",
+                "don't think —— 不觉得"
+              ],
+              [
+                "表语",
+                "is important —— 重要"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "don't think … is important 觉得……不重要"
+            ],
+            "tip": "官方答案：(don't) mind（不介意 = 觉得不重要）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "B1 Preliminary candidates often make mistakes with words that express likes and dislikes.",
+          "hard": false,
+          "tr": "B1 Preliminary 的考生经常在表达「喜欢和不喜欢」的词上出错。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>B1 Preliminary candidates often make mistakes with words …</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>B1 Preliminary candidates</code> —— B1 Preliminary 的考生"
+              ],
+              [
+                "谓语",
+                "<code>often make mistakes</code> —— 经常出错"
+              ],
+              [
+                "介词短语",
+                "<code>with words that express likes and dislikes</code> —— 在表达喜欢和不喜欢的词上"
+              ]
+            ],
+            "clauses": [
+              "that 引导定语从句"
+            ],
+            "gram": [
+              "make mistakes with 在……上出错",
+              "express 表达"
+            ],
+            "tip": "likes and dislikes（喜欢与不喜欢）是 Part 2 的常见话题。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "FOCUS: IDENTIFYING LIKES, DISLIKES AND PREFERENCES",
+          "hard": false,
+          "tr": "重点：识别喜欢、不喜欢和偏好。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>FOCUS: IDENTIFYING LIKES, DISLIKES AND PREFERENCES</b>",
+            "parts": [
+              [
+                "动名词",
+                "IDENTIFYING —— 识别"
+              ],
+              [
+                "名词",
+                "LIKES, DISLIKES AND PREFERENCES —— 喜欢、不喜欢和偏好"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "preference 偏好"
+            ],
+            "tip": "人物文本里，喜欢/不喜欢/宁愿的词就是匹配的钥匙。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "③ Read this description of someone who wants to go to a sports centre. Underline the key expressions and the words that tell you what he likes and prefers.",
+          "hard": false,
+          "tr": "③ 读这段描述（他想去体育中心）。划出关键表达和告诉你他喜欢什么、偏好什么的词。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Read this description … Underline the key expressions and the words …</b>",
+            "parts": [
+              [
+                "谓语 1",
+                "<code>Read this description of someone who wants to go to a sports centre</code> —— 读这段想去体育中心的人物的描述"
+              ],
+              [
+                "谓语 2",
+                "<code>Underline the key expressions</code> —— 划出关键表达"
+              ],
+              [
+                "并列宾语",
+                "<code>and the words that tell you what he likes and prefers</code> —— 以及告诉你他喜欢和偏好的词"
+              ]
+            ],
+            "clauses": [
+              "who 引导定语从句",
+              "what 引导宾语从句"
+            ],
+            "gram": [
+              "underline 划下划线",
+              "expression 表达"
+            ],
+            "tip": "划出的词就是我们配对时的「关键词」。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Ethan wants to train every day",
+          "hard": false,
+          "ul": "every day",
+          "tr": "Ethan 想每天训练。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>Ethan wants to train every day</b>",
+            "parts": [
+              [
+                "主语",
+                "Ethan —— 人名"
+              ],
+              [
+                "谓语",
+                "<code>wants to train</code> —— 想训练"
+              ],
+              [
+                "时间",
+                "every day —— 每天"
+              ]
+            ],
+            "clauses": [
+              "want to do sth 想做某事"
+            ],
+            "gram": [
+              "train 训练"
+            ],
+            "tip": "划出 every day —— 对应「每天开放」的场馆。",
+            "note": [
+              {
+                "k": "train",
+                "cn": "训练；火车"
+              }
+            ]
+          }
+        },
+        {
+          "s": "and he doesn't mind paying a regular amount to stay fit.",
+          "hard": false,
+          "ul": "doesn't mind",
+          "tr": "而且他不介意定期付一笔钱来保持健康。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "并列谓语：<b>and he doesn't mind paying a regular amount to stay fit.</b>",
+            "parts": [
+              [
+                "主语",
+                "he —— 他"
+              ],
+              [
+                "谓语",
+                "<code>doesn't mind paying</code> —— 不介意支付"
+              ],
+              [
+                "宾语",
+                "<code>a regular amount</code> —— 一笔定期的费用"
+              ],
+              [
+                "目的",
+                "<code>to stay fit</code> —— 为了保持健康"
+              ]
+            ],
+            "clauses": [
+              "mind doing sth 介意做某事"
+            ],
+            "gram": [
+              "a regular amount 一笔定期的钱",
+              "stay fit 保持健康"
+            ],
+            "tip": "划出 doesn't mind —— 对应「会员费」这种定期付费。",
+            "note": [
+              {
+                "k": "regular",
+                "cn": "定期的，规律的"
+              },
+              {
+                "k": "fit",
+                "cn": "健康的；合身的"
+              }
+            ]
+          }
+        },
+        {
+          "s": "He fancies learning a new sport",
+          "hard": false,
+          "ul": "fancies",
+          "tr": "他想学一项新运动。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>He fancies learning a new sport</b>",
+            "parts": [
+              [
+                "主语",
+                "He —— 他"
+              ],
+              [
+                "谓语",
+                "fancies —— 想做"
+              ],
+              [
+                "宾语",
+                "<code>learning a new sport</code> —— 学一项新运动"
+              ]
+            ],
+            "clauses": [
+              "fancy doing sth 想做某事"
+            ],
+            "gram": [
+              "fancy doing 想做"
+            ],
+            "tip": "划出 fancies —— 对应「有课程可学」的场馆。",
+            "note": [
+              {
+                "k": "sport",
+                "cn": "运动"
+              }
+            ]
+          }
+        },
+        {
+          "s": "and prefers to make reservations by email.",
+          "hard": false,
+          "ul": "prefers",
+          "tr": "而且更喜欢用电子邮件预订。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "并列谓语：<b>and prefers to make reservations by email.</b>",
+            "parts": [
+              [
+                "主语（承前省略）",
+                "he —— 他"
+              ],
+              [
+                "谓语",
+                "<code>prefers to make</code> —— 更喜欢做"
+              ],
+              [
+                "宾语",
+                "reservations —— 预订"
+              ],
+              [
+                "方式",
+                "by email —— 用电子邮件"
+              ]
+            ],
+            "clauses": [
+              "prefer to do sth 更喜欢做某事"
+            ],
+            "gram": [
+              "make reservations 预订",
+              "by email 用电子邮件"
+            ],
+            "tip": "划出 prefers —— 对应「可在线预订」的场馆。",
+            "note": [
+              {
+                "k": "reservation",
+                "cn": "预订"
+              },
+              {
+                "k": "by email",
+                "cn": "用电子邮件"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "FOCUS: MATCHING KEYWORDS WITH PARAPHRASES",
+          "hard": false,
+          "tr": "重点：把关键词和同义改写匹配起来。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>FOCUS: MATCHING KEYWORDS WITH PARAPHRASES</b>",
+            "parts": [
+              [
+                "动名词",
+                "MATCHING —— 匹配"
+              ],
+              [
+                "名词",
+                "<code>KEYWORDS WITH PARAPHRASES</code> —— 关键词与同义改写"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "paraphrase 同义改写、换一种说法"
+            ],
+            "tip": "文本里很少出现和人物描述一模一样的词 —— 找「换了一种说法」的地方。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "④ Read these descriptions of three sports centres and decide which of A-C would be the most suitable for Ethan. Then say why that is the correct answer.",
+          "hard": true,
+          "tr": "④ 读这三家体育中心的介绍，判断 A–C 中哪一家最适合 Ethan，然后说说为什么那才是正确答案。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Read these descriptions … and decide which of A-C would be the most suitable for Ethan.</b>",
+            "parts": [
+              [
+                "谓语 1",
+                "<code>Read these descriptions of three sports centres</code> —— 读三家体育中心的介绍"
+              ],
+              [
+                "谓语 2",
+                "<code>and decide which of A-C would be the most suitable for Ethan</code> —— 判断 A–C 哪家最适合 Ethan"
+              ],
+              [
+                "谓语 3",
+                "<code>Then say why that is the correct answer</code> —— 再说说为什么"
+              ]
+            ],
+            "clauses": [
+              "which 引导宾语从句；would 表推测"
+            ],
+            "gram": [
+              "suitable for 适合"
+            ],
+            "tip": "把 Ethan 的四个需求逐条对到场馆文本上。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "We don't charge much: just a £3 entrance fee (free for students).",
+          "hard": false,
+          "tr": "我们收费不高：门票只要 3 英镑（学生免费）。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>We don't charge much: just a £3 entrance fee …</b>",
+            "parts": [
+              [
+                "主语",
+                "We —— 我们"
+              ],
+              [
+                "谓语",
+                "<code>don't charge much</code> —— 收费不高"
+              ],
+              [
+                "补充",
+                "<code>just a £3 entrance fee (free for students)</code> —— 门票只要 3 英镑（学生免费）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "charge 收费",
+              "entrance fee 门票费"
+            ],
+            "tip": "价格便宜 ≠ Ethan 的需求（他更在意设施和预订方式）。",
+            "note": [
+              {
+                "k": "charge",
+                "cn": "收费，要价，充电"
+              }
+            ]
+          }
+        },
+        {
+          "s": "In summer, relax in our outdoor pool or walk around our beautiful gardens.",
+          "hard": false,
+          "tr": "夏天可以在我们的露天泳池放松，或者在我们美丽的花园里散步。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>relax in our outdoor pool or walk around our beautiful gardens.</b>",
+            "parts": [
+              [
+                "谓语 1",
+                "<code>relax in our outdoor pool</code> —— 在露天泳池放松"
+              ],
+              [
+                "谓语 2",
+                "<code>or walk around our beautiful gardens</code> —— 或在花园里散步"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "outdoor pool 露天泳池"
+            ],
+            "tip": "泳池和花园 —— 休闲向，Ethan 要的是训练。",
+            "note": [
+              {
+                "k": "relax",
+                "cn": "放松"
+              },
+              {
+                "k": "outdoor",
+                "cn": "户外的"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Open Tuesday to Friday, plus weekends.",
+          "hard": false,
+          "tr": "周二到周五开放，周末也开。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "省略句：<b>Open Tuesday to Friday, plus weekends.</b>",
+            "parts": [
+              [
+                "表语",
+                "Open —— 开放（省略 is）"
+              ],
+              [
+                "时间",
+                "<code>Tuesday to Friday, plus weekends</code> —— 周二到周五，外加周末"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "plus 外加"
+            ],
+            "tip": "每周只开到周五+周末 —— 不是「每天」（daily）。",
+            "note": [
+              {
+                "k": "weekend",
+                "cn": "周末"
+              }
+            ]
+          }
+        },
+        {
+          "s": "We care about the environment, so please don't bring your car.",
+          "hard": false,
+          "tr": "我们关心环境，所以请不要开车来。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾 + 结果：<b>We care about the environment, so please don't bring your car.</b>",
+            "parts": [
+              [
+                "主语",
+                "We —— 我们"
+              ],
+              [
+                "谓语",
+                "<code>care about</code> —— 关心"
+              ],
+              [
+                "宾语",
+                "the environment —— 环境"
+              ],
+              [
+                "结果",
+                "<code>so please don't bring your car</code> —— 所以请不要开车来"
+              ]
+            ],
+            "clauses": [
+              "so 引导结果"
+            ],
+            "gram": [
+              "care about 关心"
+            ],
+            "tip": "不能开车来 —— 对 Ethan 来说多一条不方便。",
+            "note": [
+              {
+                "k": "environment",
+                "cn": "环境"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "There's nowhere better to get really fit.",
+          "hard": false,
+          "tr": "想真正变健康，没有比这里更好的地方了。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>There's nowhere better to get really fit.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>There's nowhere better</code> —— 没有更好的地方"
+              ],
+              [
+                "不定式",
+                "<code>to get really fit</code> —— 来变得真正健康"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "nowhere better 没有更好的地方"
+            ],
+            "tip": "口号式开头，重点在后面的设施和预订方式。",
+            "note": [
+              {
+                "k": "nowhere",
+                "cn": "没有地方（nowhere better 没有更好的）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Gym membership costs just £20 per month and our squash courts can be reserved online.",
+          "hard": false,
+          "tr": "健身房会员每月只要 20 英镑，我们的壁球场可以在线预订。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "并列句：<b>Gym membership costs just £20 per month and our squash courts can be reserved online.</b>",
+            "parts": [
+              [
+                "主语 1",
+                "<code>Gym membership</code> —— 健身房会员"
+              ],
+              [
+                "谓语 1",
+                "<code>costs just £20 per month</code> —— 每月只要 20 英镑"
+              ],
+              [
+                "主语 2",
+                "<code>our squash courts</code> —— 我们的壁球场"
+              ],
+              [
+                "谓语 2",
+                "<code>can be reserved online</code> —— 可以在线预订"
+              ]
+            ],
+            "clauses": [
+              "被动语态 be reserved"
+            ],
+            "gram": [
+              "membership 会员资格",
+              "be reserved online 在线预订"
+            ],
+            "tip": "会员费（定期付费）+ 在线预订 —— 正好对上 Ethan 的两个需求。",
+            "note": [
+              {
+                "k": "gym",
+                "cn": "健身房"
+              },
+              {
+                "k": "squash court",
+                "cn": "壁球场"
+              },
+              {
+                "k": "be reserved",
+                "cn": "被预定（reserve 预订）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Lessons are available for most activities.",
+          "hard": false,
+          "tr": "大多数活动都有课程可以上。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>Lessons are available for most activities.</b>",
+            "parts": [
+              [
+                "主语",
+                "Lessons —— 课程"
+              ],
+              [
+                "表语",
+                "<code>are available</code> —— 可获得的、有的"
+              ],
+              [
+                "范围",
+                "<code>for most activities</code> —— 对大多数活动"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "be available for 可供……使用"
+            ],
+            "tip": "有课程 = Ethan 想「学一项新运动」能实现。",
+            "note": [
+              {
+                "k": "available",
+                "cn": "可获得的，可用的"
+              }
+            ]
+          }
+        },
+        {
+          "s": "We open from 7 a.m. to 10 p.m. daily; hot and cold drinks are available.",
+          "hard": false,
+          "tr": "我们每天早 7 点到晚 10 点开放；有冷热饮供应。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "并列句：<b>We open from 7 a.m. to 10 p.m. daily; hot and cold drinks are available.</b>",
+            "parts": [
+              [
+                "主语",
+                "We —— 我们"
+              ],
+              [
+                "谓语",
+                "<code>open from 7 a.m. to 10 p.m. daily</code> —— 每天 7 点到 22 点开放"
+              ],
+              [
+                "并列分句",
+                "<code>hot and cold drinks are available</code> —— 有冷热饮供应"
+              ]
+            ],
+            "clauses": [
+              "分号连接两个分句"
+            ],
+            "gram": [
+              "daily 每天",
+              "a.m. 上午；p.m. 下午"
+            ],
+            "tip": "daily（每天）对应 Ethan 的 every day —— 答案 B 的证据齐了。",
+            "note": [
+              {
+                "k": "daily",
+                "cn": "每天的"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Eastpark has both outdoor and indoor pools, playing areas for football and rugby and a first-class gym.",
+          "hard": false,
+          "tr": "Eastpark 有室内外泳池、足球和橄榄球场地，还有一流的健身房。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>Eastpark has both outdoor and indoor pools …</b>",
+            "parts": [
+              [
+                "主语",
+                "Eastpark —— 场馆名"
+              ],
+              [
+                "谓语",
+                "has —— 有"
+              ],
+              [
+                "宾语",
+                "<code>both outdoor and indoor pools, playing areas for football and rugby and a first-class gym</code> —— 室内外泳池、运动场地和一流的健身房"
+              ]
+            ],
+            "clauses": [
+              "both … and … 既……又……"
+            ],
+            "gram": [
+              "indoor 室内的",
+              "first-class 一流的"
+            ],
+            "tip": "设施看着全，但要和 Ethan 的具体需求逐条比。",
+            "note": [
+              {
+                "k": "indoor",
+                "cn": "室内的"
+              },
+              {
+                "k": "first-class",
+                "cn": "一流的"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Facilities can be booked by phone only.",
+          "hard": false,
+          "tr": "设施只能通过电话预订。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "被动句：<b>Facilities can be booked by phone only.</b>",
+            "parts": [
+              [
+                "主语",
+                "Facilities —— 设施"
+              ],
+              [
+                "谓语",
+                "<code>can be booked</code> —— 可以被预订"
+              ],
+              [
+                "方式",
+                "<code>by phone only</code> —— 只能用电话"
+              ]
+            ],
+            "clauses": [
+              "被动语态"
+            ],
+            "gram": [
+              "facility 设施",
+              "by phone 通过电话"
+            ],
+            "tip": "only（只能）电话预订 —— 和 Ethan 的「用 email 预订」不符。",
+            "note": [
+              {
+                "k": "facility",
+                "cn": "设备，设施"
+              }
+            ]
+          }
+        },
+        {
+          "s": "For students, we offer reduced prices for membership.",
+          "hard": false,
+          "tr": "对学生，我们提供会员折扣价。",
+          "ana": {
+            "pat": [
+              "主谓双宾"
+            ],
+            "frame": "主谓双宾：<b>we offer reduced prices for membership.</b>",
+            "parts": [
+              [
+                "状语",
+                "<code>For students</code> —— 对学生"
+              ],
+              [
+                "谓语",
+                "offer —— 提供"
+              ],
+              [
+                "宾语",
+                "<code>reduced prices</code> —— 折扣价"
+              ],
+              [
+                "对象",
+                "<code>for membership</code> —— 会员"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "reduced prices 优惠价"
+            ],
+            "tip": "学生优惠 ≠ Ethan 的需求。",
+            "note": [
+              {
+                "k": "reduced",
+                "cn": "减少的，优惠的"
+              },
+              {
+                "k": "price",
+                "cn": "价格"
+              }
+            ]
+          }
+        },
+        {
+          "s": "There are bus stops nearby and parking is free.",
+          "hard": false,
+          "tr": "附近有公交站，停车免费。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "并列句：<b>There are bus stops nearby and parking is free.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>bus stops</code> —— 公交站"
+              ],
+              [
+                "谓语",
+                "<code>are</code> —— 是（系动词）"
+              ],
+              [
+                "状语",
+                "<code>nearby</code> —— 在附近"
+              ],
+              [
+                "并列分句",
+                "<code>parking is free</code> —— 停车免费"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "nearby 在附近",
+              "parking 停车"
+            ],
+            "tip": "交通方便 ≠ 训练、课程、在线预订 —— 逐条排除后答案 B。",
+            "note": [
+              {
+                "k": "nearby",
+                "cn": "在附近"
+              },
+              {
+                "k": "parking",
+                "cn": "停车"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Exam Practice Test 2 · Reading Part 2",
+          "hard": false,
+          "tr": "考试实践测试 2 · 阅读第 2 部分。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题行：<b>Exam Practice Test 2 · Reading Part 2</b>",
+            "parts": [
+              [
+                "标题",
+                "Exam Practice Test 2 —— 考试实践测试编号"
+              ],
+              [
+                "标题",
+                "Reading Part 2 —— 阅读第 2 部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式省略句"
+            ],
+            "tip": "下面五个人各选一家最合适的制片厂（A–H），三段用不上。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Questions 6–10",
+          "hard": false,
+          "tr": "第 6–10 题。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题：<b>Questions 6–10</b>（第 6–10 题）",
+            "parts": [
+              [
+                "名词",
+                "Questions —— 题目"
+              ],
+              [
+                "数字",
+                "6–10 —— 第 6 到第 10 题"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "真题部分题号连续编号"
+            ],
+            "tip": "五个人，每人配一家制片厂。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "For each question, choose the correct answer.",
+          "hard": false,
+          "tr": "每题选出一个正确答案。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>choose the correct answer</b>（选出正确答案）",
+            "parts": [
+              [
+                "状语",
+                "<code>For each question</code> —— 对每一道题"
+              ],
+              [
+                "谓语",
+                "choose —— 选择"
+              ],
+              [
+                "宾语",
+                "<code>the correct answer</code> —— 正确的答案"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "祈使句"
+            ],
+            "tip": "正确答案 = 把人每个需求都满足的那一家。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "The people below all want to visit a studio where films are made.",
+          "hard": false,
+          "tr": "下面这些人全都想参观拍电影的制片厂。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>The people below all want to visit a studio where films are made.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>The people below</code> —— 下面这些人"
+              ],
+              [
+                "谓语",
+                "<code>want to visit</code> —— 想参观"
+              ],
+              [
+                "宾语",
+                "<code>a studio where films are made</code> —— 拍电影的制片厂"
+              ]
+            ],
+            "clauses": [
+              "where 引导定语从句"
+            ],
+            "gram": [
+              "studio 制片厂、演播室"
+            ],
+            "tip": "人物是「需求方」，制片厂文本是「供给方」。",
+            "note": [
+              {
+                "k": "studio",
+                "cn": "制片厂，演播室"
+              }
+            ]
+          }
+        },
+        {
+          "s": "On the next page there are descriptions of eight film studios that people can visit.",
+          "hard": false,
+          "tr": "下一页有八家可供参观的电影制片厂的介绍。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "存在句：<b>On the next page there are descriptions of eight film studios …</b>",
+            "parts": [
+              [
+                "状语",
+                "<code>On the next page</code> —— 在下一页"
+              ],
+              [
+                "主语",
+                "<code>descriptions of eight film studios</code> —— 八家电影制片厂的介绍"
+              ],
+              [
+                "定语从句",
+                "<code>that people can visit</code> —— 人们可以参观的"
+              ]
+            ],
+            "clauses": [
+              "that 引导定语从句"
+            ],
+            "gram": [
+              "film studio 电影制片厂"
+            ],
+            "tip": "八家 = A–H。",
+            "note": [
+              {
+                "k": "film studio",
+                "cn": "电影制片厂"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Decide which film studios would be the most suitable for the people below.",
+          "hard": false,
+          "tr": "判断哪些制片厂最适合下面这些人。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Decide which film studios would be the most suitable for the people below.</b>",
+            "parts": [
+              [
+                "谓语",
+                "Decide —— 判断"
+              ],
+              [
+                "宾语从句",
+                "<code>which film studios would be the most suitable</code> —— 哪些制片厂最合适"
+              ],
+              [
+                "对象",
+                "<code>for the people below</code> —— 对下面这些人"
+              ]
+            ],
+            "clauses": [
+              "which 引导宾语从句"
+            ],
+            "gram": [
+              "suitable for 适合"
+            ],
+            "tip": "逐一核对：每个人的每个需求都要在文本里有对应。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Tom wants to look around the studio at his own speed, and visit the actual sets where films were made.",
+          "hard": false,
+          "tr": "Tom 想按自己的节奏参观制片厂，看看真正拍过电影的场景。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>Tom wants to look around the studio at his own speed, and visit the actual sets …</b>",
+            "parts": [
+              [
+                "主语",
+                "Tom —— 人名"
+              ],
+              [
+                "谓语",
+                "<code>wants to look around</code> —— 想参观"
+              ],
+              [
+                "宾语",
+                "the studio —— 制片厂"
+              ],
+              [
+                "方式",
+                "<code>at his own speed</code> —— 按自己的速度"
+              ],
+              [
+                "并列谓语",
+                "<code>and visit the actual sets where films were made</code> —— 看看真正拍过电影的场景"
+              ]
+            ],
+            "clauses": [
+              "where 引导定语从句"
+            ],
+            "gram": [
+              "look around 四处看看",
+              "at one's own speed 按自己的速度",
+              "actual sets 实际的布景"
+            ],
+            "tip": "关键词：own speed（自己逛）、actual sets（真实拍摄场景）。",
+            "note": [
+              {
+                "k": "look around",
+                "cn": "四处看看（参观）"
+              },
+              {
+                "k": "own speed",
+                "cn": "自己的速度（at one's own speed 按某人自己的速度）"
+              },
+              {
+                "k": "actual set",
+                "cn": "实际的布景（拍摄现场）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "His mum wants to see online what the studio is like before she buys tickets.",
+          "hard": false,
+          "tr": "他妈妈想在买票前先在网上看看这家制片厂什么样。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>His mum wants to see online what the studio is like before she buys tickets.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>His mum</code> —— 他妈妈"
+              ],
+              [
+                "谓语",
+                "<code>wants to see</code> —— 想看"
+              ],
+              [
+                "宾语从句",
+                "<code>what the studio is like</code> —— 制片厂是什么样"
+              ],
+              [
+                "时间从句",
+                "<code>before she buys tickets</code> —— 在她买票之前"
+              ]
+            ],
+            "clauses": [
+              "what 引导宾语从句；before 引导时间状语从句"
+            ],
+            "gram": [
+              "see online 在网上看"
+            ],
+            "tip": "关键词：see online before buying（先网上看再买票）—— 找「有官网介绍」的那家。",
+            "note": [
+              {
+                "k": "online",
+                "cn": "在线，在网上"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Ingrid is interested in seeing costumes that famous actors have worn, and she'd also like to ride on a vehicle that originally appeared in a film.",
+          "hard": true,
+          "tr": "Ingrid 有兴趣看著名演员穿过的戏服，还想乘坐一辆真正在电影里出现过的车。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表 + 并列谓语：<b>Ingrid is interested in seeing costumes … and she'd also like to ride on a vehicle …</b>",
+            "parts": [
+              [
+                "主语",
+                "Ingrid —— 人名"
+              ],
+              [
+                "系表",
+                "<code>is interested in seeing costumes that famous actors have worn</code> —— 有兴趣看著名演员穿过的戏服"
+              ],
+              [
+                "并列谓语",
+                "<code>and she'd also like to ride on a vehicle that originally appeared in a film</code> —— 还想乘坐真正在电影里出现过的车"
+              ]
+            ],
+            "clauses": [
+              "两个 that 引导定语从句"
+            ],
+            "gram": [
+              "be interested in 对……有兴趣",
+              "ride on 乘坐",
+              "originally 起初、原来"
+            ],
+            "tip": "关键词：costumes worn by famous actors（明星戏服）、vehicle appeared in a film（电影道具车）。",
+            "note": [
+              {
+                "k": "costume",
+                "cn": "服装，戏服"
+              },
+              {
+                "k": "worn",
+                "cn": "穿过（wear 的过去分词）"
+              },
+              {
+                "k": "appear",
+                "cn": "出现"
+              },
+              {
+                "k": "originally",
+                "cn": "起初，原来"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Ingrid's mum wants a souvenir to remember their trip.",
+          "hard": false,
+          "tr": "Ingrid 的妈妈想要一件纪念品来记住这次旅行。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>Ingrid's mum wants a souvenir to remember their trip.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Ingrid's mum</code> —— Ingrid 的妈妈"
+              ],
+              [
+                "谓语",
+                "wants —— 想要"
+              ],
+              [
+                "宾语",
+                "a souvenir —— 一件纪念品"
+              ],
+              [
+                "目的",
+                "<code>to remember their trip</code> —— 来记住这次旅行"
+              ]
+            ],
+            "clauses": [
+              "不定式表目的"
+            ],
+            "gram": [
+              "souvenir 纪念品"
+            ],
+            "tip": "关键词：souvenir（纪念品）—— 找「有东西可以带走」的那家。",
+            "note": [
+              {
+                "k": "souvenir",
+                "cn": "纪念品"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Roberto wants to visit a studio where famous films were made many years ago, and buy something that appeared in one of the films.",
+          "hard": false,
+          "tr": "Roberto 想参观一家多年前拍过著名电影的制片厂，还想买一件在电影里出现过的东西。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>Roberto wants to visit a studio where famous films were made many years ago, and buy something …</b>",
+            "parts": [
+              [
+                "主语",
+                "Roberto —— 人名"
+              ],
+              [
+                "谓语",
+                "<code>wants to visit</code> —— 想参观"
+              ],
+              [
+                "宾语",
+                "<code>a studio where famous films were made many years ago</code> —— 多年前拍过著名电影的制片厂"
+              ],
+              [
+                "并列谓语",
+                "<code>and buy something that appeared in one of the films</code> —— 买一件在电影里出现过的东西"
+              ]
+            ],
+            "clauses": [
+              "where / that 引导定语从句"
+            ],
+            "gram": [
+              "many years ago 多年前"
+            ],
+            "tip": "关键词：made many years ago（老电影）、buy something from the films（买电影里的东西）。",
+            "note": [
+              {
+                "k": "ago",
+                "cn": "以前"
+              }
+            ]
+          }
+        },
+        {
+          "s": "His dad wants to book online before they go.",
+          "hard": false,
+          "tr": "他爸爸想在他们去之前先在网上订票。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>His dad wants to book online before they go.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>His dad</code> —— 他爸爸"
+              ],
+              [
+                "谓语",
+                "<code>wants to book</code> —— 想预订"
+              ],
+              [
+                "方式",
+                "online —— 在网上"
+              ],
+              [
+                "时间从句",
+                "<code>before they go</code> —— 在他们去之前"
+              ]
+            ],
+            "clauses": [
+              "before 引导时间状语从句"
+            ],
+            "gram": [
+              "book online 网上预订"
+            ],
+            "tip": "关键词：book online（提前网上订）—— 找「官网提前购票」的那家。",
+            "note": [
+              {
+                "k": "book online",
+                "cn": "网上预订"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Simone likes science fiction films, and prefers looking at digital displays about how special effects are achieved to reading information.",
+          "hard": true,
+          "tr": "Simone 喜欢科幻电影，而且比起阅读资料，她更喜欢看关于特效如何实现的数码显示屏。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾 + 比较：<b>Simone likes science fiction films, and prefers looking at digital displays … to reading information.</b>",
+            "parts": [
+              [
+                "主语",
+                "Simone —— 人名"
+              ],
+              [
+                "谓语",
+                "likes —— 喜欢"
+              ],
+              [
+                "宾语",
+                "<code>science fiction films</code> —— 科幻电影"
+              ],
+              [
+                "比较结构",
+                "<code>prefers looking at digital displays about how special effects are achieved to reading information</code> —— 比起读资料，更喜欢看特效如何实现的数码显示屏"
+              ]
+            ],
+            "clauses": [
+              "prefer A to B 比起 B 更喜欢 A；how 引导宾语从句"
+            ],
+            "gram": [
+              "science fiction 科幻",
+              "digital display 数码显示屏",
+              "special effects 特效"
+            ],
+            "tip": "关键词：science fiction（科幻）、digital displays（数码显示屏）、special effects（特效）。",
+            "note": [
+              {
+                "k": "science fiction",
+                "cn": "科幻（科学小说）"
+              },
+              {
+                "k": "prefer",
+                "cn": "更喜欢（prefer to do sth 更喜欢做某事）"
+              },
+              {
+                "k": "digital display",
+                "cn": "数字显示屏"
+              },
+              {
+                "k": "achieve",
+                "cn": "达到，实现"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Simone's dad wants to get a digital guide.",
+          "hard": false,
+          "tr": "Simone 的爸爸想要一份数码导览。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>Simone's dad wants to get a digital guide.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Simone's dad</code> —— Simone 的爸爸"
+              ],
+              [
+                "谓语",
+                "<code>wants to get</code> —— 想要得到"
+              ],
+              [
+                "宾语",
+                "<code>a digital guide</code> —— 一份数码导览"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "digital guide 数码向导、数码导览"
+            ],
+            "tip": "关键词：digital guide（数码导览）—— 找「可下载的导览」的那家。",
+            "note": [
+              {
+                "k": "digital guide",
+                "cn": "数码向导"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Ben is interested in how scenes from famous cities are created in studios.",
+          "hard": false,
+          "tr": "Ben 对制片厂里如何造出著名城市的场景感兴趣。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>Ben is interested in how scenes from famous cities are created in studios.</b>",
+            "parts": [
+              [
+                "主语",
+                "Ben —— 人名"
+              ],
+              [
+                "系表",
+                "<code>is interested in</code> —— 对……感兴趣"
+              ],
+              [
+                "宾语从句",
+                "<code>how scenes from famous cities are created in studios</code> —— 制片厂里如何造出著名城市的场景"
+              ]
+            ],
+            "clauses": [
+              "how 引导宾语从句；被动语态 are created"
+            ],
+            "gram": [
+              "scene 场面、布景",
+              "create 创造"
+            ],
+            "tip": "关键词：scenes from famous cities（著名城市的场景）。",
+            "note": [
+              {
+                "k": "scene",
+                "cn": "场面，情节，布景"
+              }
+            ]
+          }
+        },
+        {
+          "s": "He'd also like to visit film locations outside the studios, accompanied by a guide who can answer his questions.",
+          "hard": true,
+          "tr": "他还想参观制片厂外的拍摄地，并由一位能回答他问题的导游陪同。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>He'd also like to visit film locations outside the studios, accompanied by a guide …</b>",
+            "parts": [
+              [
+                "主语",
+                "He —— 他"
+              ],
+              [
+                "谓语",
+                "<code>'d also like to visit</code> —— 想要参观"
+              ],
+              [
+                "宾语",
+                "<code>film locations outside the studios</code> —— 制片厂外的拍摄地"
+              ],
+              [
+                "伴随状语",
+                "<code>accompanied by a guide who can answer his questions</code> —— 由一位能回答他问题的导游陪同"
+              ]
+            ],
+            "clauses": [
+              "过去分词短语作伴随状语；who 引导定语从句"
+            ],
+            "gram": [
+              "film location 拍摄地",
+              "accompanied by 由……陪同"
+            ],
+            "tip": "关键词：film locations outside（厂外拍摄地）、a guide who can answer questions（能解答的导游）。",
+            "note": [
+              {
+                "k": "location",
+                "cn": "地点，外景地"
+              },
+              {
+                "k": "accompanied",
+                "cn": "陪伴的，伴随的（accompanied by 由…陪同）"
+              },
+              {
+                "k": "guide",
+                "cn": "导游，向导"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Film studios",
+          "hard": false,
+          "tr": "电影制片厂。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题：<b>Film studios</b>（电影制片厂）",
+            "parts": [
+              [
+                "名词",
+                "Film studios —— 电影制片厂"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "studio 制片厂"
+            ],
+            "tip": "下面 A–H 八家，各有各的卖点 —— 和人物需求一一对照。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "These studios have been the home of special effects for years!",
+          "hard": false,
+          "tr": "这些制片厂多年来一直是特效的大本营！",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表（现在完成时）：<b>These studios have been the home of special effects for years!</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>These studios</code> —— 这些制片厂"
+              ],
+              [
+                "系动词",
+                "<code>have been</code> —— 一直是"
+              ],
+              [
+                "表语",
+                "<code>the home of special effects</code> —— 特效的大本营"
+              ],
+              [
+                "时间",
+                "for years —— 多年来"
+              ]
+            ],
+            "clauses": [
+              "现在完成时 have been"
+            ],
+            "gram": [
+              "special effects 特效"
+            ],
+            "tip": "「特效」是关键词，但注意它只是「看和读」—— 和 Simone 要的数码显示屏不同。",
+            "note": [
+              {
+                "k": "special effects",
+                "cn": "特效"
+              }
+            ]
+          }
+        },
+        {
+          "s": "There's plenty to look at and read, so allow lots of time for your visit.",
+          "hard": false,
+          "tr": "有很多可以看和读的东西，所以要给你的参观留出充足时间。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "存在句 + 结果：<b>There's plenty to look at and read, so allow lots of time for your visit.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>plenty to look at and read</code> —— 很多可看可读的东西"
+              ],
+              [
+                "结果",
+                "<code>so allow lots of time for your visit</code> —— 所以要留足参观时间"
+              ]
+            ],
+            "clauses": [
+              "so 引导结果"
+            ],
+            "gram": [
+              "plenty 很多",
+              "allow 允许、留出"
+            ],
+            "tip": "「看和读」≠「数码显示屏」—— Simone 题的干扰点。",
+            "note": [
+              {
+                "k": "allow",
+                "cn": "允许；留出"
+              },
+              {
+                "k": "plenty of",
+                "cn": "许多"
+              }
+            ]
+          }
+        },
+        {
+          "s": "And our friendly guides around the studios are ready to help direct you to the most interesting sights.",
+          "hard": false,
+          "tr": "我们制片厂里友好的导游随时可以帮你指路，带你去最有趣的景点。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>our friendly guides around the studios are ready to help direct you to the most interesting sights.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>our friendly guides around the studios</code> —— 我们制片厂里友好的导游"
+              ],
+              [
+                "系表",
+                "<code>are ready to help</code> —— 随时准备帮忙"
+              ],
+              [
+                "目的",
+                "<code>direct you to the most interesting sights</code> —— 指引你去最有趣的景点"
+              ]
+            ],
+            "clauses": [
+              "be ready to do sth 准备好做某事"
+            ],
+            "gram": [
+              "direct sb to sp 指引某人去某地",
+              "sight 景物"
+            ],
+            "tip": "导游帮忙指路 —— 但 Ben 要的是「厂外拍摄地」+ 能解答问题的导游，这里没提。",
+            "note": [
+              {
+                "k": "be ready to",
+                "cn": "准备好做某事"
+              },
+              {
+                "k": "direct",
+                "cn": "指引（direct sb to sp 指引某人去某地）"
+              },
+              {
+                "k": "sight",
+                "cn": "景物，景象"
+              }
+            ]
+          }
+        },
+        {
+          "s": "It's best to book online in advance.",
+          "hard": false,
+          "tr": "最好提前在网上预订。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>It's best to book online in advance.</b>",
+            "parts": [
+              [
+                "形式主语",
+                "It —— 形式主语"
+              ],
+              [
+                "表语",
+                "<code>'s best</code> —— 最好的"
+              ],
+              [
+                "真主语",
+                "<code>to book online in advance</code> —— 提前网上预订"
+              ]
+            ],
+            "clauses": [
+              "It's best to do sth 最好做某事"
+            ],
+            "gram": [
+              "in advance 提前"
+            ],
+            "tip": "可以网上订 —— 但 Roberto 还要「老电影 + 买道具」，这里没有。",
+            "note": [
+              {
+                "k": "in advance",
+                "cn": "提前"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "You'll find the best movies ever here, set far into the future!",
+          "hard": false,
+          "tr": "在这里你能找到史上最好的电影，背景设定在遥远的未来！",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>You'll find the best movies ever here, set far into the future!</b>",
+            "parts": [
+              [
+                "主语",
+                "You —— 你"
+              ],
+              [
+                "谓语",
+                "<code>'ll find</code> —— 会找到"
+              ],
+              [
+                "宾语",
+                "<code>the best movies ever here</code> —— 史上最好的电影"
+              ],
+              [
+                "补充",
+                "<code>set far into the future</code> —— 设定在遥远的未来"
+              ]
+            ],
+            "clauses": [
+              "set … 过去分词作补充说明"
+            ],
+            "gram": [
+              "set far into the future 背景设定在遥远未来"
+            ],
+            "tip": "「设定在未来」= 科幻片 —— Simone 的第一个关键词对上了。",
+            "note": [
+              {
+                "k": "future",
+                "cn": "未来"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Use the interactive videos on our computers, to see how actors are turned into on-screen monsters, using amazing make-up, costumes and filming techniques, and models of dinosaurs are created to look as though they're alive!",
+          "hard": true,
+          "tr": "用我们电脑上的互动视频，看看演员如何用神奇的化妆、戏服和拍摄技巧变成银幕怪物，恐龙模型又是如何做得栩栩如生！",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句 + 目的：<b>Use the interactive videos on our computers, to see how actors are turned into on-screen monsters …</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Use the interactive videos on our computers</code> —— 用电脑上的互动视频"
+              ],
+              [
+                "目的",
+                "<code>to see how actors are turned into on-screen monsters</code> —— 看演员如何变成银幕怪物"
+              ],
+              [
+                "方式",
+                "<code>using amazing make-up, costumes and filming techniques</code> —— 用神奇的化妆、戏服和拍摄技巧"
+              ],
+              [
+                "并列分句",
+                "<code>and models of dinosaurs are created to look as though they're alive</code> —— 恐龙模型做得栩栩如生"
+              ]
+            ],
+            "clauses": [
+              "how 引导宾语从句；as though 引导方式状语从句"
+            ],
+            "gram": [
+              "turn into 转变成",
+              "make-up 化妆",
+              "filming techniques 电影技巧",
+              "as though 仿佛"
+            ],
+            "tip": "互动视频讲「怎么变出来的」= Simone 要的「数码显示屏讲特效如何实现」；下载导览也在后面。",
+            "note": [
+              {
+                "k": "turn into",
+                "cn": "转变成"
+              },
+              {
+                "k": "make-up",
+                "cn": "化妆"
+              },
+              {
+                "k": "filming techniques",
+                "cn": "电影技巧"
+              },
+              {
+                "k": "as though",
+                "cn": "仿佛，好像"
+              }
+            ]
+          }
+        },
+        {
+          "s": "There are video activities, and 'tours' of the studio to download.",
+          "hard": false,
+          "tr": "还有视频活动和可以下载的制片厂「导览」。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "存在句：<b>There are video activities, and 'tours' of the studio to download.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>video activities</code> —— 视频活动"
+              ],
+              [
+                "并列主语",
+                "<code>'tours' of the studio to download</code> —— 可下载的制片厂导览"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "download 下载"
+            ],
+            "tip": "可下载的导览 = digital guide（Simone 爸爸的需求）—— 答案 B 的证据齐了。",
+            "note": [
+              {
+                "k": "download",
+                "cn": "下载"
+              },
+              {
+                "k": "video activities",
+                "cn": "视频活动"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "These studios are huge, with plenty of space for displaying the scenery and stages where big stars acted in scenes from famous films.",
+          "hard": true,
+          "tr": "这些制片厂很大，有充足的空间展示著名电影里大明星演戏用的布景和舞台。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表 + 补充：<b>These studios are huge, with plenty of space for displaying the scenery and stages …</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>These studios</code> —— 这些制片厂"
+              ],
+              [
+                "表语",
+                "huge —— 巨大的"
+              ],
+              [
+                "补充",
+                "<code>with plenty of space for displaying the scenery and stages where big stars acted in scenes from famous films</code> —— 有充足空间展示明星演戏的布景和舞台"
+              ]
+            ],
+            "clauses": [
+              "where 引导定语从句"
+            ],
+            "gram": [
+              "scenery 布景",
+              "stage 舞台",
+              "plenty of 许多"
+            ],
+            "tip": "「大明星演戏的舞台」= actual sets（Tom 想看的真实拍摄场景）✓。",
+            "note": [
+              {
+                "k": "huge",
+                "cn": "庞大的，巨大的"
+              },
+              {
+                "k": "stage",
+                "cn": "舞台；阶段"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Check the website to see exactly what the studio offers inside.",
+          "hard": false,
+          "tr": "上官网看看这家制片厂里面到底有什么。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Check the website to see exactly what the studio offers inside.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Check the website</code> —— 查看网站"
+              ],
+              [
+                "目的",
+                "<code>to see exactly what the studio offers inside</code> —— 看看里面到底有什么"
+              ]
+            ],
+            "clauses": [
+              "what 引导宾语从句"
+            ],
+            "gram": [
+              "offer 提供"
+            ],
+            "tip": "先上官网看 = Tom 妈妈「买票前先在网上看看」✓。",
+            "note": [
+              {
+                "k": "offer",
+                "cn": "提供"
+              },
+              {
+                "k": "website",
+                "cn": "网站"
+              }
+            ]
+          }
+        },
+        {
+          "s": "And because you're not shown around in groups, you can spend as much time there as you want!",
+          "hard": false,
+          "tr": "而且因为不会成团带着你参观，你想待多久都可以！",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "原因从句 + 主句：<b>because you're not shown around in groups, you can spend as much time there as you want!</b>",
+            "parts": [
+              [
+                "原因从句",
+                "<code>because you're not shown around in groups</code> —— 因为不是成团参观"
+              ],
+              [
+                "主语",
+                "you —— 你"
+              ],
+              [
+                "谓语",
+                "<code>can spend as much time there as you want</code> —— 想待多久都可以"
+              ]
+            ],
+            "clauses": [
+              "because 引导原因从句；被动语态 be shown around"
+            ],
+            "gram": [
+              "as much time as you want 你想多长时间都可"
+            ],
+            "tip": "不成团、随便待 = Tom 的 own speed（按自己的节奏）✓ —— 答案 C。",
+            "note": [
+              {
+                "k": "as much time as you want",
+                "cn": "你想多长时间都可"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Many famous movies from the last century were made in these studios, and you can still see the costumes worn in them, and the original sets used in the films.",
+          "hard": true,
+          "tr": "上世纪的许多著名电影就是在这家制片厂拍的，你还能看到当年穿过的戏服和电影里用过的原版布景。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "被动句 + 并列：<b>Many famous movies … were made in these studios, and you can still see the costumes worn in them, and the original sets …</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Many famous movies from the last century</code> —— 上世纪许多著名电影"
+              ],
+              [
+                "谓语",
+                "<code>were made in these studios</code> —— 在这家制片厂拍摄"
+              ],
+              [
+                "并列分句",
+                "<code>and you can still see the costumes worn in them, and the original sets used in the films</code> —— 还能看到戏服和原版布景"
+              ]
+            ],
+            "clauses": [
+              "被动语态；过去分词作后置定语 worn / used"
+            ],
+            "gram": [
+              "century 世纪",
+              "original 原来的"
+            ],
+            "tip": "老电影 + 戏服（Ingrid 关键词之一）—— 但没有道具车和纪念品。",
+            "note": [
+              {
+                "k": "century",
+                "cn": "世纪"
+              },
+              {
+                "k": "wear",
+                "cn": "穿（wear-wore-worn）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "There's a useful digital guide you can buy here, so you'll find your way through these studios really quickly!",
+          "hard": false,
+          "tr": "这里有实用的数码导览可以买，你很快就能逛遍这些制片厂！",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "存在句 + 结果：<b>There's a useful digital guide you can buy here, so you'll find your way … quickly!</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>a useful digital guide you can buy here</code> —— 这里可以买的实用数码导览"
+              ],
+              [
+                "结果",
+                "<code>so you'll find your way through these studios really quickly</code> —— 所以很快就能逛完"
+              ]
+            ],
+            "clauses": [
+              "省略 that 的定语从句"
+            ],
+            "gram": [
+              "find your way 找到路、认路"
+            ],
+            "tip": "digital guide 是在现场买的 —— Simone 爸爸要的更像 B 的「下载导览」。",
+            "note": [
+              {
+                "k": "digital guide",
+                "cn": "数码向导"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "To visit this studio, get tickets in advance through the website, to avoid long queues – it's very popular with people who love top movies from the 40s, many of which were filmed here.",
+          "hard": true,
+          "tr": "要参观这家制片厂，请通过网站提前买票，避免排长队——它很受喜欢 40 年代经典电影的人欢迎，那些电影很多就是在这里拍的。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "目的 + 祈使句：<b>To visit this studio, get tickets in advance through the website, to avoid long queues …</b>",
+            "parts": [
+              [
+                "目的",
+                "<code>To visit this studio</code> —— 要参观这家制片厂"
+              ],
+              [
+                "谓语",
+                "<code>get tickets in advance through the website</code> —— 通过网站提前买票"
+              ],
+              [
+                "目的 2",
+                "<code>to avoid long queues</code> —— 避免排长队"
+              ],
+              [
+                "补充",
+                "<code>it's very popular with people who love top movies from the 40s, many of which were filmed here</code> —— 很受 40 年代经典电影爱好者欢迎，很多片在这里拍"
+              ]
+            ],
+            "clauses": [
+              "who / many of which 引导定语从句"
+            ],
+            "gram": [
+              "in advance 提前",
+              "through 通过",
+              "avoid 避免",
+              "queue 队"
+            ],
+            "tip": "「40 年代的电影在这里拍」= Roberto 的「多年前拍著名电影」；「网站提前买票」= book online ✓。",
+            "note": [
+              {
+                "k": "through",
+                "cn": "通过"
+              },
+              {
+                "k": "long queues",
+                "cn": "长队（avoid long queues 避免排长队）"
+              },
+              {
+                "k": "top",
+                "cn": "顶级的，最好的"
+              }
+            ]
+          }
+        },
+        {
+          "s": "The studio also has a great selection of items from various movies, now on sale as souvenirs!",
+          "hard": false,
+          "tr": "制片厂还有大量来自各部电影的东西，现在作为纪念品出售！",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>The studio also has a great selection of items from various movies, now on sale as souvenirs!</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>The studio</code> —— 制片厂"
+              ],
+              [
+                "谓语",
+                "has —— 有"
+              ],
+              [
+                "宾语",
+                "<code>a great selection of items from various movies</code> —— 大量来自各部电影的东西"
+              ],
+              [
+                "补充",
+                "<code>now on sale as souvenirs</code> —— 现在作为纪念品出售"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "selection 精选、大量",
+              "on sale 出售",
+              "souvenir 纪念品"
+            ],
+            "tip": "「买电影里的东西」= Roberto 的第二个需求 ✓ —— 答案 E。",
+            "note": [
+              {
+                "k": "selection",
+                "cn": "选择，精选"
+              },
+              {
+                "k": "on sale",
+                "cn": "在售"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Come and visit amazingly realistic sets, from the streets of New York to the historical sites of Rome – and walk around them!",
+          "hard": false,
+          "tr": "来参观极其逼真的布景吧，从纽约的街道到罗马的历史遗迹——还可以走进去逛！",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Come and visit amazingly realistic sets, from the streets of New York to the historical sites of Rome – and walk around them!</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Come and visit</code> —— 来参观"
+              ],
+              [
+                "宾语",
+                "<code>amazingly realistic sets, from the streets of New York to the historical sites of Rome</code> —— 极其逼真的布景（纽约街道、罗马古迹）"
+              ],
+              [
+                "补充",
+                "<code>and walk around them</code> —— 还能走进去逛"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "realistic 逼真的",
+              "historical site 历史遗迹"
+            ],
+            "tip": "「著名城市的场景」= Ben 的第一个需求 ✓。",
+            "note": [
+              {
+                "k": "realistic",
+                "cn": "现实的，逼真的"
+              },
+              {
+                "k": "historical site",
+                "cn": "历史的遗址"
+              }
+            ]
+          }
+        },
+        {
+          "s": "The tour also includes a bus ride to places in the surrounding area which have appeared in films, with a staff member to tell you whatever you'd like to know.",
+          "hard": true,
+          "tr": "行程还包括坐巴士去周边在电影里出现过的地点，并有一位工作人员为你解答任何想知道的问题。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>The tour also includes a bus ride to places in the surrounding area … with a staff member to tell you whatever you'd like to know.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>The tour</code> —— 行程"
+              ],
+              [
+                "谓语",
+                "includes —— 包括"
+              ],
+              [
+                "宾语",
+                "<code>a bus ride to places in the surrounding area which have appeared in films</code> —— 坐巴士去周边电影里出现过的地方"
+              ],
+              [
+                "伴随",
+                "<code>with a staff member to tell you whatever you'd like to know</code> —— 有工作人员解答任何问题"
+              ]
+            ],
+            "clauses": [
+              "which 引导定语从句；whatever 引导宾语从句"
+            ],
+            "gram": [
+              "surrounding area 周边地区",
+              "staff member 职员"
+            ],
+            "tip": "「厂外拍摄地 + 能解答问题的导游」= Ben 的另两个需求 ✓ —— 答案 F。",
+            "note": [
+              {
+                "k": "surrounding area",
+                "cn": "周边地区"
+              },
+              {
+                "k": "staff member",
+                "cn": "职员，员工"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "See a 360° online tour of these studios before you come – they're huge!",
+          "hard": false,
+          "tr": "来之前先看一圈这些制片厂的 360° 在线导览——它们很大！",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>See a 360° online tour of these studios before you come – they're huge!</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>See a 360° online tour of these studios</code> —— 看 360° 在线导览"
+              ],
+              [
+                "时间从句",
+                "<code>before you come</code> —— 在你来之前"
+              ],
+              [
+                "补充",
+                "<code>they're huge</code> —— 它们很大"
+              ]
+            ],
+            "clauses": [
+              "before 引导时间从句"
+            ],
+            "gram": [
+              "360° online tour 360 度在线导览"
+            ],
+            "tip": "在线导览是「来之前看」——和 Tom 妈妈的「买票前看」像，但没有「真实拍摄场景 + 随便逛」。",
+            "note": [
+              {
+                "k": "online tour",
+                "cn": "在线导览"
+              }
+            ]
+          }
+        },
+        {
+          "s": "And during your visit, ride through what look like London and Paris streets, on original buses used in old films, and even try on costumes from films made here.",
+          "hard": true,
+          "tr": "参观期间，你可以乘坐老电影里的原版巴士穿过仿造的伦敦和巴黎街道，甚至可以试穿在这里拍的电影里的戏服。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>ride through what look like London and Paris streets, on original buses used in old films, and even try on costumes …</b>",
+            "parts": [
+              [
+                "谓语 1",
+                "<code>ride through what look like London and Paris streets</code> —— 乘车穿过仿造的伦敦巴黎街道"
+              ],
+              [
+                "方式",
+                "<code>on original buses used in old films</code> —— 坐老电影里的原版巴士"
+              ],
+              [
+                "谓语 2",
+                "<code>and even try on costumes from films made here</code> —— 甚至试穿这里的电影戏服"
+              ]
+            ],
+            "clauses": [
+              "what 引导宾语从句；过去分词作后置定语 used / made"
+            ],
+            "gram": [
+              "original 原版的",
+              "try on 试穿"
+            ],
+            "tip": "原版巴士 + 戏服 —— Ingrid 的两个关键词都有！但「妈妈要的纪念品」没有（照片才是 H 的）。",
+            "note": [
+              {
+                "k": "original",
+                "cn": "原先的，古老的"
+              },
+              {
+                "k": "try on",
+                "cn": "试穿"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Digital displays will give you plenty of information!",
+          "hard": false,
+          "tr": "数码显示屏会给你很多信息！",
+          "ana": {
+            "pat": [
+              "主谓双宾"
+            ],
+            "frame": "主谓双宾：<b>Digital displays will give you plenty of information!</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Digital displays</code> —— 数码显示屏"
+              ],
+              [
+                "谓语",
+                "<code>will give</code> —— 会给"
+              ],
+              [
+                "间接宾语",
+                "you —— 你"
+              ],
+              [
+                "直接宾语",
+                "<code>plenty of information</code> —— 很多信息"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "digital display 数码显示屏"
+            ],
+            "tip": "有数码显示屏 —— 但 Simone 还要「科幻片 + 下载导览」，这里是「穿越伦敦巴黎街道」。",
+            "note": [
+              {
+                "k": "digital display",
+                "cn": "数字显示屏"
+              },
+              {
+                "k": "information",
+                "cn": "信息"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "FilmPark has an amazing collection of old cars once used in films – and they still work!",
+          "hard": false,
+          "tr": "FilmPark 收藏了一批曾在电影里用过的老爷车——而且它们还能开！",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>FilmPark has an amazing collection of old cars once used in films – and they still work!</b>",
+            "parts": [
+              [
+                "主语",
+                "FilmPark —— 场馆名"
+              ],
+              [
+                "谓语",
+                "has —— 有"
+              ],
+              [
+                "宾语",
+                "<code>an amazing collection of old cars once used in films</code> —— 一批曾在电影里用过的老爷车"
+              ],
+              [
+                "补充",
+                "<code>and they still work</code> —— 还能开"
+              ]
+            ],
+            "clauses": [
+              "过去分词 used 作后置定语"
+            ],
+            "gram": [
+              "a collection of 一批",
+              "old cars 老爷车"
+            ],
+            "tip": "「电影道具车」= Ingrid 的第二个需求 ✓（还能坐）。",
+            "note": [
+              {
+                "k": "a collection of",
+                "cn": "一组，一系列"
+              },
+              {
+                "k": "old car",
+                "cn": "老爷车"
+              }
+            ]
+          }
+        },
+        {
+          "s": "So, have a trip in one and see the studios as you're driven around its huge city street scenes.",
+          "hard": false,
+          "tr": "所以，坐上一辆兜一圈吧，在穿过巨大的城市街景时看看这些制片厂。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>have a trip in one and see the studios as you're driven around its huge city street scenes.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>have a trip in one</code> —— 坐上一辆兜一圈"
+              ],
+              [
+                "谓语 2",
+                "<code>and see the studios</code> —— 看制片厂"
+              ],
+              [
+                "时间从句",
+                "<code>as you're driven around its huge city street scenes</code> —— 在乘车穿过巨大城市街景时"
+              ]
+            ],
+            "clauses": [
+              "as 引导时间从句；被动语态 are driven"
+            ],
+            "gram": [
+              "have a trip 兜一圈",
+              "city street scenes 城市街景"
+            ],
+            "tip": "「坐车兜风」= ride on a vehicle ✓。",
+            "note": [
+              {
+                "k": "trip",
+                "cn": "旅行，出行"
+              }
+            ]
+          }
+        },
+        {
+          "s": "There's also a collection of original clothes that stars were dressed in for their movies.",
+          "hard": false,
+          "tr": "还有一批明星拍电影时穿过的原版服装。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "存在句：<b>There's also a collection of original clothes that stars were dressed in for their movies.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>a collection of original clothes</code> —— 一批原版服装"
+              ],
+              [
+                "定语从句",
+                "<code>that stars were dressed in for their movies</code> —— 明星拍电影时穿过的"
+              ]
+            ],
+            "clauses": [
+              "that 引导定语从句（介词 in 后置）；被动语态 were dressed in"
+            ],
+            "gram": [
+              "be dressed in 穿着"
+            ],
+            "tip": "「明星穿过的戏服」= Ingrid 的第一个需求 ✓。",
+            "note": [
+              {
+                "k": "original clothes",
+                "cn": "原版服装"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Visitors get free photos of themselves as they leave.",
+          "hard": false,
+          "tr": "参观者离开时可以拿到自己的免费照片。",
+          "ana": {
+            "pat": [
+              "主谓双宾"
+            ],
+            "frame": "主谓双宾：<b>Visitors get free photos of themselves as they leave.</b>",
+            "parts": [
+              [
+                "主语",
+                "Visitors —— 参观者"
+              ],
+              [
+                "谓语",
+                "get —— 得到"
+              ],
+              [
+                "宾语",
+                "<code>free photos of themselves</code> —— 自己的免费照片"
+              ],
+              [
+                "时间从句",
+                "<code>as they leave</code> —— 在他们离开时"
+              ]
+            ],
+            "clauses": [
+              "as 引导时间从句"
+            ],
+            "gram": [
+              "free photos 免费照片"
+            ],
+            "tip": "免费照片 = 妈妈要的 souvenir（纪念品）✓ —— 答案 H 的证据齐了。",
+            "note": [
+              {
+                "k": "free photos",
+                "cn": "免费照片"
+              }
+            ]
+          }
+        }
+      ]
+    ],
+    "blocks": [
+      {
+        "r": "h",
+        "head": {
+          "l": "Training Test 2",
+          "r": "Reading Part 2"
+        },
+        "badge": "答案见 P199"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "o",
+        "frame": true
+      },
+      {
+        "r": "q",
+        "pick": [
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107
+        ]
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "o",
+        "pick": [
+          108,
+          109,
+          110,
+          111,
+          112,
+          113
+        ]
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "n": "A",
+        "img": {
+          "src": "assets/img/t2-p2-ethan.png",
+          "alt": "Ethan 的照片（原书 P56）",
+          "side": "left",
+          "w": 200
+        }
+      },
+      {
+        "r": "q",
+        "n": "B"
+      },
+      {
+        "r": "q",
+        "n": "C",
+        "pick": [
+          114
+        ]
+      },
+      {
+        "r": "h",
+        "head": {
+          "l": "Exam Practice Test 2",
+          "r": "Reading Part 2"
+        },
+        "tip": "Remember that for each of descriptions 6-10 only one of A-H is correct, so there are three texts you will not use."
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "n": "6",
+        "img": {
+          "src": "assets/img/t2-p2-tom.png",
+          "alt": "Tom 的照片（原书 P57）",
+          "side": "left",
+          "w": 190
+        },
+        "pick": [
+          6
+        ]
+      },
+      {
+        "r": "q",
+        "n": "7",
+        "img": {
+          "src": "assets/img/t2-p2-ingrid.png",
+          "alt": "Ingrid 的照片（原书 P57）",
+          "side": "left",
+          "w": 190
+        },
+        "pick": [
+          7
+        ]
+      },
+      {
+        "r": "q",
+        "n": "8",
+        "img": {
+          "src": "assets/img/t2-p2-roberto.png",
+          "alt": "Roberto 的照片（原书 P57）",
+          "side": "left",
+          "w": 190
+        },
+        "pick": [
+          8
+        ]
+      },
+      {
+        "r": "q",
+        "n": "9",
+        "img": {
+          "src": "assets/img/t2-p2-simone.png",
+          "alt": "Simone 的照片（原书 P57）",
+          "side": "left",
+          "w": 190
+        },
+        "pick": [
+          9
+        ]
+      },
+      {
+        "r": "q",
+        "n": "10",
+        "img": {
+          "src": "assets/img/t2-p2-ben.png",
+          "alt": "Ben 的照片（原书 P57）",
+          "side": "left",
+          "w": 190
+        },
+        "pick": [
+          10
+        ]
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "q",
+        "n": "A"
+      },
+      {
+        "r": "q",
+        "n": "B"
+      },
+      {
+        "r": "q",
+        "n": "C"
+      },
+      {
+        "r": "q",
+        "n": "D"
+      },
+      {
+        "r": "q",
+        "n": "E"
+      },
+      {
+        "r": "q",
+        "n": "F"
+      },
+      {
+        "r": "q",
+        "n": "G"
+      },
+      {
+        "r": "q",
+        "n": "H"
+      }
+    ]
+  },
+  "phrases": [
+    "in advance",
+    "plenty of",
+    "as though",
+    "make-up",
+    "turned into",
+    "filming techniques",
+    "video activities",
+    "as much time",
+    "digital guide",
+    "through the website",
+    "long queues",
+    "on sale",
+    "selection of",
+    "historical sites",
+    "surrounding area",
+    "staff member",
+    "bus ride",
+    "old cars",
+    "city street scenes",
+    "original clothes",
+    "free photos",
+    "special effects",
+    "look around",
+    "own speed",
+    "actual sets",
+    "science fiction",
+    "digital displays",
+    "gym membership",
+    "squash courts",
+    "entrance fee",
+    "outdoor pool",
+    "first-class gym",
+    "top movies",
+    "film locations",
+    "famous actors",
+    "lots of time",
+    "make reservations",
+    "book online",
+    "stay fit",
+    "a regular amount"
+  ],
+  "glossary": {
+    "reading": {
+      "pos": "n.",
+      "ipa": "/ˈriːdɪŋ/",
+      "cn": "阅读"
+    },
+    "descriptions": {
+      "pos": "n.",
+      "ipa": "/dɪˈskrɪpʃnz/",
+      "cn": "描述（description 的复数）"
+    },
+    "matching": {
+      "pos": "adj.",
+      "ipa": "/ˈmætʃɪŋ/",
+      "cn": "匹配的、对上号的"
+    },
+    "texts": {
+      "pos": "n.",
+      "ipa": "/teksts/",
+      "cn": "文本、短文（text 的复数）"
+    },
+    "identifying": {
+      "pos": "v.",
+      "ipa": "/aɪˈdentɪfaɪɪŋ/",
+      "cn": "识别、找出（identify 的现在分词）"
+    },
+    "key": {
+      "pos": "adj./n.",
+      "ipa": "/kiː/",
+      "cn": "关键的；钥匙；key words 关键词"
+    },
+    "words": {
+      "pos": "n.",
+      "ipa": "/wɜːdz/",
+      "cn": "词（word 的复数）"
+    },
+    "box": {
+      "pos": "n.",
+      "ipa": "/bɒks/",
+      "cn": "盒子，方框"
+    },
+    "rather": {
+      "pos": "adv.",
+      "ipa": "/ˈrɑːðə/",
+      "cn": "相当，颇；宁愿（would rather do sth 宁愿做某事）",
+      "note": "rather basic 相当基础（常带委婉的贬义）；would rather 宁愿。"
+    },
+    "stand": {
+      "pos": "v.",
+      "ipa": "/stænd/",
+      "cn": "忍受（can't stand doing sth 无法忍受做某事）"
+    },
+    "mind": {
+      "pos": "v./n.",
+      "ipa": "/maɪnd/",
+      "cn": "介意（mind doing sth；don't mind 不介意）；头脑；make one's mind up 下定决心"
+    },
+    "fancy": {
+      "pos": "v.",
+      "ipa": "/ˈfænsi/",
+      "cn": "想做（fancy doing sth 想做某事）"
+    },
+    "prefer": {
+      "pos": "v.",
+      "ipa": "/prɪˈfɜː/",
+      "cn": "更喜欢（prefer to do sth 更喜欢做某事）"
+    },
+    "f": {
+      "pos": "n.",
+      "ipa": "/ef/",
+      "cn": "字母 f（选项/编号的标记）"
+    },
+    "fond": {
+      "pos": "adj.",
+      "ipa": "/fɒnd/",
+      "cn": "喜爱的",
+      "note": "be fond of sth 喜爱某物。"
+    },
+    "g": {
+      "pos": "n.",
+      "ipa": "/dʒiː/",
+      "cn": "字母 g（选项/编号的标记）"
+    },
+    "keen": {
+      "pos": "adj.",
+      "ipa": "/kiːn/",
+      "cn": "热衷的；渴望的",
+      "note": "be keen on sth/doing sth 热衷于……。"
+    },
+    "sonia": {
+      "pos": "n.",
+      "ipa": "/ˈsɒnjə/",
+      "cn": "Sonia（女子名）"
+    },
+    "going": {
+      "pos": "v.",
+      "ipa": "/ˈɡəʊɪŋ/",
+      "cn": "去；be going to 将要"
+    },
+    "abroad": {
+      "pos": "adv.",
+      "ipa": "/əˈbrɔːd/",
+      "cn": "在国外；到国外",
+      "note": "go/study abroad 出国——abroad 前不加 to。"
+    },
+    "travelling": {
+      "pos": "n.",
+      "ipa": "/ˈtrævlɪŋ/",
+      "cn": "旅行（travel 的现在分词）"
+    },
+    "distances": {
+      "pos": "n.",
+      "ipa": "/ˈdɪstənsɪz/",
+      "cn": "距离（distance 的复数）"
+    },
+    "can't": {
+      "pos": "contr.",
+      "ipa": "/kɑːnt/",
+      "cn": "不能（= cannot）"
+    },
+    "flying": {
+      "pos": "v.",
+      "ipa": "/ˈflaɪɪŋ/",
+      "cn": "飞（fly 的现在分词）；坐飞机"
+    },
+    "holiday": {
+      "pos": "n.",
+      "ipa": "/ˈhɒlədeɪ/",
+      "cn": "假期；on holiday 度假"
+    },
+    "she'd": {
+      "pos": "contr.",
+      "ipa": "/ʃiːd/",
+      "cn": "= she would 或 she had"
+    },
+    "camping": {
+      "pos": "n.",
+      "ipa": "/ˈkæmpɪŋ/",
+      "cn": "露营（camp 的 -ing 形式）"
+    },
+    "stay": {
+      "pos": "v./n.",
+      "ipa": "/steɪ/",
+      "cn": "停留；住；待"
+    },
+    "hotel": {
+      "pos": "n.",
+      "ipa": "/həʊˈtel/",
+      "cn": "酒店，旅馆"
+    },
+    "she's": {
+      "pos": "contr.",
+      "ipa": "/ʃiːz/",
+      "cn": "= she is 或 she has"
+    },
+    "nature": {
+      "pos": "n.",
+      "ipa": "/ˈneɪtʃə/",
+      "cn": "大自然"
+    },
+    "rains": {
+      "pos": "v.",
+      "ipa": "/reɪnz/",
+      "cn": "下雨（rain 的第三人称单数）"
+    },
+    "exercise": {
+      "pos": "n.",
+      "ipa": "/ˈeksəsaɪz/",
+      "cn": "练习；运动"
+    },
+    "dislike": {
+      "pos": "v./n.",
+      "ipa": "/dɪsˈlaɪk/",
+      "cn": "不喜欢"
+    },
+    "important": {
+      "pos": "adj.",
+      "ipa": "/ɪmˈpɔːtnt/",
+      "cn": "重要的"
+    },
+    "candidates": {
+      "pos": "n.",
+      "ipa": "/ˈkændɪdəts/",
+      "cn": "考生（candidate 的复数）"
+    },
+    "mistakes": {
+      "pos": "n.",
+      "ipa": "/mɪˈsteɪks/",
+      "cn": "错误（mistake 的复数）"
+    },
+    "express": {
+      "pos": "v.",
+      "ipa": "/ɪkˈspres/",
+      "cn": "表达"
+    },
+    "likes": {
+      "pos": "n./v.",
+      "ipa": "/laɪks/",
+      "cn": "喜欢（like 的复数/第三人称单数）"
+    },
+    "dislikes": {
+      "pos": "n./v.",
+      "ipa": "/dɪsˈlaɪks/",
+      "cn": "不喜欢（dislike 的复数/第三人称单数）"
+    },
+    "preferences": {
+      "pos": "n.",
+      "ipa": "/ˈprefrənsɪz/",
+      "cn": "偏好（preference 的复数）"
+    },
+    "description": {
+      "pos": "n.",
+      "ipa": "/dɪˈskrɪpʃn/",
+      "cn": "描述，介绍"
+    },
+    "wants": {
+      "pos": "v.",
+      "ipa": "/wɒnts/",
+      "cn": "想要（want 的第三人称单数）"
+    },
+    "sports": {
+      "pos": "n./adj.",
+      "ipa": "/spɔːts/",
+      "cn": "运动（sport 的复数）"
+    },
+    "sport": {
+      "pos": "n.",
+      "ipa": "/spɔːt/",
+      "cn": "运动"
+    },
+    "centre": {
+      "pos": "n.",
+      "ipa": "/ˈsentə/",
+      "cn": "中心；英式拼写（美式 center）"
+    },
+    "underline": {
+      "pos": "v.",
+      "ipa": "/ˌʌndəˈlaɪn/",
+      "cn": "划下划线（在……下面划线）"
+    },
+    "expressions": {
+      "pos": "n.",
+      "ipa": "/ɪkˈspreʃnz/",
+      "cn": "表达、说法（expression 的复数）"
+    },
+    "prefers": {
+      "pos": "v.",
+      "ipa": "/prɪˈfɜːz/",
+      "cn": "更喜欢（prefer 的第三人称单数）"
+    },
+    "ethan": {
+      "pos": "n.",
+      "ipa": "/ˈiːθən/",
+      "cn": "Ethan（男子名）"
+    },
+    "train": {
+      "pos": "n./v.",
+      "ipa": "/treɪn/",
+      "cn": "火车；训练",
+      "note": "作动词是「训练、培训」。"
+    },
+    "paying": {
+      "pos": "v.",
+      "ipa": "/ˈpeɪɪŋ/",
+      "cn": "支付（pay 的现在分词）"
+    },
+    "regular": {
+      "pos": "adj.",
+      "ipa": "/ˈreɡjələ/",
+      "cn": "定期的，规律的；常规的"
+    },
+    "amount": {
+      "pos": "n.",
+      "ipa": "/əˈmaʊnt/",
+      "cn": "数量，金额",
+      "note": "修饰不可数名词：a large amount of water；a regular amount 一笔定期的钱。"
+    },
+    "fit": {
+      "pos": "adj./v.",
+      "ipa": "/fɪt/",
+      "cn": "健康的；合身；合适"
+    },
+    "fancies": {
+      "pos": "v.",
+      "ipa": "/ˈfænsiz/",
+      "cn": "想做（fancy 的第三人称单数）"
+    },
+    "learning": {
+      "pos": "v.",
+      "ipa": "/ˈlɜːnɪŋ/",
+      "cn": "学、学习（learn 的现在分词）"
+    },
+    "reservations": {
+      "pos": "n.",
+      "ipa": "/ˌrezəˈveɪʃnz/",
+      "cn": "预订（reservation 的复数）"
+    },
+    "reservation": {
+      "pos": "n.",
+      "ipa": "/ˌrezəˈveɪʃn/",
+      "cn": "预订"
+    },
+    "email": {
+      "pos": "n.",
+      "ipa": "/ˈiːmeɪl/",
+      "cn": "电子邮件"
+    },
+    "by email": {
+      "pos": "词组",
+      "ipa": "/baɪ ˈiːmeɪl/",
+      "cn": "用电子邮件"
+    },
+    "keywords": {
+      "pos": "n.",
+      "ipa": "/ˈkiːwɜːdz/",
+      "cn": "关键词（keyword 的复数）"
+    },
+    "paraphrases": {
+      "pos": "n.",
+      "ipa": "/ˈpærəfreɪsɪz/",
+      "cn": "同义转述、同义改写（paraphrase 的复数）"
+    },
+    "three": {
+      "pos": "num.",
+      "ipa": "/θriː/",
+      "cn": "三"
+    },
+    "centres": {
+      "pos": "n.",
+      "ipa": "/ˈsentəz/",
+      "cn": "中心（centre 的复数）"
+    },
+    "a-c": {
+      "pos": "n.",
+      "ipa": "/ˌeɪ tə ˈsiː/",
+      "cn": "A–C（选项 A 到 C）"
+    },
+    "most": {
+      "pos": "adv./det.",
+      "ipa": "/məʊst/",
+      "cn": "最（最高级）；最多；大多数",
+      "note": "the most exciting 最激动人心的（最高级）。"
+    },
+    "suitable": {
+      "pos": "adj.",
+      "ipa": "/ˈsuːtəbl/",
+      "cn": "合适的；the most suitable for 对……最合适的"
+    },
+    "why": {
+      "pos": "adv.",
+      "ipa": "/waɪ/",
+      "cn": "为什么"
+    },
+    "charge": {
+      "pos": "v./n.",
+      "ipa": "/tʃɑːdʒ/",
+      "cn": "收费，要价；充电"
+    },
+    "entrance": {
+      "pos": "n.",
+      "ipa": "/ˈentrəns/",
+      "cn": "入口"
+    },
+    "fee": {
+      "pos": "n.",
+      "ipa": "/fiː/",
+      "cn": "费用"
+    },
+    "free": {
+      "pos": "adj.",
+      "ipa": "/friː/",
+      "cn": "免费的；自由的；空闲的"
+    },
+    "students": {
+      "pos": "n.",
+      "ipa": "/ˈstjuːdnts/",
+      "cn": "学生（student 的复数）"
+    },
+    "summer": {
+      "pos": "n.",
+      "ipa": "/ˈsʌmə/",
+      "cn": "夏天"
+    },
+    "relax": {
+      "pos": "v.",
+      "ipa": "/rɪˈlæks/",
+      "cn": "放松"
+    },
+    "outdoor": {
+      "pos": "adj.",
+      "ipa": "/ˈaʊtdɔː/",
+      "cn": "户外的"
+    },
+    "pool": {
+      "pos": "n.",
+      "ipa": "/puːl/",
+      "cn": "水池；泳池"
+    },
+    "around": {
+      "pos": "prep./adv.",
+      "ipa": "/əˈraʊnd/",
+      "cn": "围绕；四处"
+    },
+    "beautiful": {
+      "pos": "adj.",
+      "ipa": "/ˈbjuːtɪfl/",
+      "cn": "美丽的"
+    },
+    "gardens": {
+      "pos": "n.",
+      "ipa": "/ˈɡɑːdnz/",
+      "cn": "花园（garden 的复数）"
+    },
+    "open": {
+      "pos": "adj./v.",
+      "ipa": "/ˈəʊpən/",
+      "cn": "开着的；营业的；打开"
+    },
+    "tuesday": {
+      "pos": "n.",
+      "ipa": "/ˈtjuːzdeɪ/",
+      "cn": "星期二"
+    },
+    "plus": {
+      "pos": "prep./conj.",
+      "ipa": "/plʌs/",
+      "cn": "外加；加"
+    },
+    "weekends": {
+      "pos": "n.",
+      "ipa": "/ˌwiːkˈendz/",
+      "cn": "周末（weekend 的复数）"
+    },
+    "weekend": {
+      "pos": "n.",
+      "ipa": "/ˌwiːkˈend/",
+      "cn": "周末"
+    },
+    "care": {
+      "pos": "v./n.",
+      "ipa": "/keə/",
+      "cn": "关心；照料"
+    },
+    "environment": {
+      "pos": "n.",
+      "ipa": "/ɪnˈvaɪrənmənt/",
+      "cn": "环境"
+    },
+    "please": {
+      "pos": "int.",
+      "ipa": "/pliːz/",
+      "cn": "请"
+    },
+    "bring": {
+      "pos": "v.",
+      "ipa": "/brɪŋ/",
+      "cn": "带来"
+    },
+    "car": {
+      "pos": "n.",
+      "ipa": "/kɑː/",
+      "cn": "汽车"
+    },
+    "there's": {
+      "pos": "contr.",
+      "ipa": "/ðeəz/",
+      "cn": "= there is"
+    },
+    "nowhere": {
+      "pos": "adv.",
+      "ipa": "/ˈnəʊweə/",
+      "cn": "没有地方（nowhere better 没有更好的）"
+    },
+    "gym": {
+      "pos": "n.",
+      "ipa": "/dʒɪm/",
+      "cn": "健身房"
+    },
+    "membership": {
+      "pos": "n.",
+      "ipa": "/ˈmembəʃɪp/",
+      "cn": "会员资格"
+    },
+    "costs": {
+      "pos": "v./n.",
+      "ipa": "/kɒsts/",
+      "cn": "花费（cost 的第三人称单数）；费用、成本"
+    },
+    "per": {
+      "pos": "prep.",
+      "ipa": "/pɜː/",
+      "cn": "每（per day 每天）"
+    },
+    "month": {
+      "pos": "n.",
+      "ipa": "/mʌnθ/",
+      "cn": "月；月份"
+    },
+    "squash": {
+      "pos": "n.",
+      "ipa": "/skwɒʃ/",
+      "cn": "壁球"
+    },
+    "courts": {
+      "pos": "n.",
+      "ipa": "/kɔːts/",
+      "cn": "球场（court 的复数）"
+    },
+    "reserved": {
+      "pos": "v.",
+      "ipa": "/rɪˈzɜːvd/",
+      "cn": "预订（reserve 的过去分词）"
+    },
+    "be reserved": {
+      "pos": "词组",
+      "ipa": "/biː rɪˈzɜːvd/",
+      "cn": "被预定（reserve 预订）"
+    },
+    "online": {
+      "pos": "adv./adj.",
+      "ipa": "/ˌɒnˈlaɪn/",
+      "cn": "在线（的）；在网上"
+    },
+    "lessons": {
+      "pos": "n.",
+      "ipa": "/ˈlesnz/",
+      "cn": "课、课程（lesson 的复数）"
+    },
+    "available": {
+      "pos": "adj.",
+      "ipa": "/əˈveɪləbl/",
+      "cn": "可获得的；可用的；有空的"
+    },
+    "activities": {
+      "pos": "n.",
+      "ipa": "/ækˈtɪvətiz/",
+      "cn": "活动（activity 的复数）"
+    },
+    "m": {
+      "pos": "n.",
+      "ipa": "/em/",
+      "cn": "字母 m（p.m. = 下午；a.m. = 上午）"
+    },
+    "p": {
+      "pos": "n.",
+      "ipa": "/piː/",
+      "cn": "字母 p（p.m. = 下午）"
+    },
+    "daily": {
+      "pos": "adv./adj.",
+      "ipa": "/ˈdeɪli/",
+      "cn": "每天"
+    },
+    "hot": {
+      "pos": "adj.",
+      "ipa": "/hɒt/",
+      "cn": "热的"
+    },
+    "cold": {
+      "pos": "adj./n.",
+      "ipa": "/kəʊld/",
+      "cn": "冷的；寒冷"
+    },
+    "drinks": {
+      "pos": "n.",
+      "ipa": "/drɪŋks/",
+      "cn": "饮料（drink 的复数）"
+    },
+    "eastpark": {
+      "pos": "n.",
+      "ipa": "/ˈiːstpɑːk/",
+      "cn": "Eastpark（场馆名）"
+    },
+    "both": {
+      "pos": "det.",
+      "ipa": "/bəʊθ/",
+      "cn": "两个都；两者都"
+    },
+    "indoor": {
+      "pos": "adj.",
+      "ipa": "/ˈɪndɔː/",
+      "cn": "室内的"
+    },
+    "pools": {
+      "pos": "n.",
+      "ipa": "/puːlz/",
+      "cn": "水池（pool 的复数）"
+    },
+    "playing": {
+      "pos": "v.",
+      "ipa": "/ˈpleɪɪŋ/",
+      "cn": "玩、演奏（play 的现在分词）"
+    },
+    "areas": {
+      "pos": "n.",
+      "ipa": "/ˈeəriəz/",
+      "cn": "区域（area 的复数）"
+    },
+    "rugby": {
+      "pos": "n.",
+      "ipa": "/ˈrʌɡbi/",
+      "cn": "橄榄球"
+    },
+    "first-class": {
+      "pos": "adj.",
+      "ipa": "/ˌfɜːst ˈklɑːs/",
+      "cn": "一流的"
+    },
+    "facilities": {
+      "pos": "n.",
+      "ipa": "/fəˈsɪlətiz/",
+      "cn": "设施（facility 的复数）"
+    },
+    "facility": {
+      "pos": "n.",
+      "ipa": "/fəˈsɪləti/",
+      "cn": "设备，设施"
+    },
+    "booked": {
+      "pos": "v.",
+      "ipa": "/bʊkt/",
+      "cn": "预订（book 的过去分词）"
+    },
+    "offer": {
+      "pos": "v./n.",
+      "ipa": "/ˈɒfə/",
+      "cn": "提供；出价；主动提出",
+      "note": "offer to do sth 主动提出做某事。"
+    },
+    "offers": {
+      "pos": "v.",
+      "ipa": "/ˈɒfəz/",
+      "cn": "提供（offer 的第三人称单数）"
+    },
+    "reduced": {
+      "pos": "adj.",
+      "ipa": "/rɪˈdjuːst/",
+      "cn": "减少的，优惠的"
+    },
+    "prices": {
+      "pos": "n.",
+      "ipa": "/ˈpraɪsɪz/",
+      "cn": "价格（price 的复数）"
+    },
+    "price": {
+      "pos": "n.",
+      "ipa": "/praɪs/",
+      "cn": "价格"
+    },
+    "bus": {
+      "pos": "n.",
+      "ipa": "/bʌs/",
+      "cn": "公交车，公共汽车"
+    },
+    "stops": {
+      "pos": "n./v.",
+      "ipa": "/stɒps/",
+      "cn": "车站（stop 的复数）；停"
+    },
+    "parking": {
+      "pos": "n.",
+      "ipa": "/ˈpɑːkɪŋ/",
+      "cn": "停车"
+    },
+    "nearby": {
+      "pos": "adv./adj.",
+      "ipa": "/ˌnɪəˈbaɪ/",
+      "cn": "在附近"
+    },
+    "questions": {
+      "pos": "n.",
+      "ipa": "/ˈkwestʃənz/",
+      "cn": "题目（question 的复数）"
+    },
+    "studio": {
+      "pos": "n.",
+      "ipa": "/ˈstjuːdiəʊ/",
+      "cn": "工作室、画室；制片厂、演播室"
+    },
+    "studios": {
+      "pos": "n.",
+      "ipa": "/ˈstjuːdiəʊz/",
+      "cn": "制片厂（studio 的复数）"
+    },
+    "film studio": {
+      "pos": "词组",
+      "ipa": "/ˈfɪlm ˌstjuːdiəʊ/",
+      "cn": "电影制片厂"
+    },
+    "films": {
+      "pos": "n.",
+      "ipa": "/fɪlmz/",
+      "cn": "电影（film 的复数）"
+    },
+    "page": {
+      "pos": "n.",
+      "ipa": "/peɪdʒ/",
+      "cn": "页；next page 下一页"
+    },
+    "eight": {
+      "pos": "num.",
+      "ipa": "/eɪt/",
+      "cn": "八"
+    },
+    "film": {
+      "pos": "n./v.",
+      "ipa": "/fɪlm/",
+      "cn": "电影；拍摄"
+    },
+    "tom": {
+      "pos": "n.",
+      "ipa": "/tɒm/",
+      "cn": "Tom（男子名）"
+    },
+    "speed": {
+      "pos": "n.",
+      "ipa": "/spiːd/",
+      "cn": "速度"
+    },
+    "actual": {
+      "pos": "adj.",
+      "ipa": "/ˈæktʃuəl/",
+      "cn": "实际的，真实的"
+    },
+    "sets": {
+      "pos": "n.",
+      "ipa": "/sets/",
+      "cn": "布景（set 的复数）"
+    },
+    "buys": {
+      "pos": "v.",
+      "ipa": "/baɪz/",
+      "cn": "买（buy 的第三人称单数）"
+    },
+    "tickets": {
+      "pos": "n.",
+      "ipa": "/ˈtɪkɪts/",
+      "cn": "票（ticket 的复数）"
+    },
+    "ingrid": {
+      "pos": "n.",
+      "ipa": "/ˈɪŋɡrɪd/",
+      "cn": "Ingrid（女子名）"
+    },
+    "seeing": {
+      "pos": "v.",
+      "ipa": "/ˈsiːɪŋ/",
+      "cn": "看（see 的现在分词）"
+    },
+    "costumes": {
+      "pos": "n.",
+      "ipa": "/ˈkɒstjuːmz/",
+      "cn": "戏服（costume 的复数）"
+    },
+    "costume": {
+      "pos": "n.",
+      "ipa": "/ˈkɒstjuːm/",
+      "cn": "服装，戏服"
+    },
+    "actors": {
+      "pos": "n.",
+      "ipa": "/ˈæktəz/",
+      "cn": "演员（actor 的复数）"
+    },
+    "worn": {
+      "pos": "v.",
+      "ipa": "/wɔːn/",
+      "cn": "穿过（wear 的过去分词）"
+    },
+    "wear": {
+      "pos": "v.",
+      "ipa": "/weə/",
+      "cn": "穿；戴（wore / worn）"
+    },
+    "ride": {
+      "pos": "v./n.",
+      "ipa": "/raɪd/",
+      "cn": "乘坐；旅程"
+    },
+    "vehicle": {
+      "pos": "n.",
+      "ipa": "/ˈviːəkl/",
+      "cn": "车辆"
+    },
+    "originally": {
+      "pos": "adv.",
+      "ipa": "/əˈrɪdʒənəli/",
+      "cn": "起初，原来"
+    },
+    "appeared": {
+      "pos": "v.",
+      "ipa": "/əˈpɪəd/",
+      "cn": "出现（appear 的过去式/过去分词）"
+    },
+    "appear": {
+      "pos": "v.",
+      "ipa": "/əˈpɪə/",
+      "cn": "出现"
+    },
+    "ingrid's": {
+      "pos": "n.",
+      "ipa": "/ˈɪŋɡrɪdz/",
+      "cn": "Ingrid 的（所有格）"
+    },
+    "souvenir": {
+      "pos": "n.",
+      "ipa": "/ˌsuːvəˈnɪə/",
+      "cn": "纪念品"
+    },
+    "trip": {
+      "pos": "n.",
+      "ipa": "/trɪp/",
+      "cn": "旅行，出行"
+    },
+    "roberto": {
+      "pos": "n.",
+      "ipa": "/rəˈbetəʊ/",
+      "cn": "Roberto（男子名）"
+    },
+    "years": {
+      "pos": "n.",
+      "ipa": "/jɪəz/",
+      "cn": "年（year 的复数）"
+    },
+    "ago": {
+      "pos": "adv.",
+      "ipa": "/əˈɡəʊ/",
+      "cn": "以前"
+    },
+    "simone": {
+      "pos": "n.",
+      "ipa": "/sɪˈməʊn/",
+      "cn": "Simone（女子名）"
+    },
+    "fiction": {
+      "pos": "n.",
+      "ipa": "/ˈfɪkʃn/",
+      "cn": "小说（虚构作品）"
+    },
+    "science fiction": {
+      "pos": "词组",
+      "ipa": "/ˌsaɪəns ˈfɪkʃn/",
+      "cn": "科幻（科学小说）"
+    },
+    "digital": {
+      "pos": "adj.",
+      "ipa": "/ˈdɪdʒɪtl/",
+      "cn": "数字的，数码的"
+    },
+    "displays": {
+      "pos": "n.",
+      "ipa": "/dɪˈspleɪz/",
+      "cn": "显示屏（display 的复数）"
+    },
+    "digital display": {
+      "pos": "词组",
+      "ipa": "/ˌdɪdʒɪtl dɪˈspleɪ/",
+      "cn": "数字显示屏"
+    },
+    "special": {
+      "pos": "adj.",
+      "ipa": "/ˈspeʃl/",
+      "cn": "特别的；专门的"
+    },
+    "effects": {
+      "pos": "n.",
+      "ipa": "/ɪˈfekts/",
+      "cn": "效果（effect 的复数）"
+    },
+    "special effects": {
+      "pos": "词组",
+      "ipa": "/ˌspeʃl ɪˈfekts/",
+      "cn": "特效"
+    },
+    "achieved": {
+      "pos": "v.",
+      "ipa": "/əˈtʃiːvd/",
+      "cn": "实现（achieve 的过去分词）"
+    },
+    "achieve": {
+      "pos": "v.",
+      "ipa": "/əˈtʃiːv/",
+      "cn": "达到，实现"
+    },
+    "simone's": {
+      "pos": "n.",
+      "ipa": "/sɪˈməʊnz/",
+      "cn": "Simone 的（所有格）"
+    },
+    "guide": {
+      "pos": "n./v.",
+      "ipa": "/ɡaɪd/",
+      "cn": "指南；向导、导游；引导"
+    },
+    "digital guide": {
+      "pos": "词组",
+      "ipa": "/ˌdɪdʒɪtl ˈɡaɪd/",
+      "cn": "数码向导"
+    },
+    "ben": {
+      "pos": "n.",
+      "ipa": "/ben/",
+      "cn": "Ben（人名，男子名）"
+    },
+    "scenes": {
+      "pos": "n.",
+      "ipa": "/siːnz/",
+      "cn": "场面，布景（scene 的复数）"
+    },
+    "scene": {
+      "pos": "n.",
+      "ipa": "/siːn/",
+      "cn": "场面，情节，布景"
+    },
+    "cities": {
+      "pos": "n.",
+      "ipa": "/ˈsɪtiz/",
+      "cn": "城市（city 的复数）"
+    },
+    "created": {
+      "pos": "v.",
+      "ipa": "/kriˈeɪtɪd/",
+      "cn": "创作、创造（create 的过去分词）"
+    },
+    "he'd": {
+      "pos": "contr.",
+      "ipa": "/hiːd/",
+      "cn": "= he would 或 he had"
+    },
+    "locations": {
+      "pos": "n.",
+      "ipa": "/ləʊˈkeɪʃnz/",
+      "cn": "地点，外景地（location 的复数）"
+    },
+    "location": {
+      "pos": "n.",
+      "ipa": "/ləʊˈkeɪʃn/",
+      "cn": "地点，外景地"
+    },
+    "outside": {
+      "pos": "adv./prep.",
+      "ipa": "/ˌaʊtˈsaɪd/",
+      "cn": "在外面；在……外面"
+    },
+    "accompanied": {
+      "pos": "v.",
+      "ipa": "/əˈkʌmpənid/",
+      "cn": "陪伴的，伴随的（accompanied by 由……陪同）"
+    },
+    "plenty": {
+      "pos": "n.",
+      "ipa": "/ˈplenti/",
+      "cn": "大量，充足（plenty of 许多）"
+    },
+    "plenty of": {
+      "pos": "词组",
+      "ipa": "/ˈplenti əv/",
+      "cn": "许多"
+    },
+    "allow": {
+      "pos": "v.",
+      "ipa": "/əˈlaʊ/",
+      "cn": "允许；留出（时间）"
+    },
+    "lots": {
+      "pos": "n.",
+      "ipa": "/lɒts/",
+      "cn": "大量（lots of 许多）"
+    },
+    "friendly": {
+      "pos": "adj.",
+      "ipa": "/ˈfrendli/",
+      "cn": "友好的"
+    },
+    "guides": {
+      "pos": "n.",
+      "ipa": "/ɡaɪdz/",
+      "cn": "导游（guide 的复数）"
+    },
+    "ready": {
+      "pos": "adj.",
+      "ipa": "/ˈredi/",
+      "cn": "准备好的"
+    },
+    "be ready to": {
+      "pos": "词组",
+      "ipa": "/biː ˈredi tə/",
+      "cn": "准备好做某事"
+    },
+    "direct": {
+      "pos": "v./adj.",
+      "ipa": "/dəˈrekt/",
+      "cn": "指引（direct sb to sp 指引某人去某地）；直接的"
+    },
+    "sights": {
+      "pos": "n.",
+      "ipa": "/saɪts/",
+      "cn": "景物、景点（sight 的复数）"
+    },
+    "sight": {
+      "pos": "n.",
+      "ipa": "/saɪt/",
+      "cn": "景物，景象"
+    },
+    "it's": {
+      "pos": "contr.",
+      "ipa": "/ɪts/",
+      "cn": "= it is 或 it has"
+    },
+    "in advance": {
+      "pos": "词组",
+      "ipa": "/ɪn ədˈvɑːns/",
+      "cn": "提前（预订）"
+    },
+    "advance": {
+      "pos": "n./v.",
+      "ipa": "/ədˈvɑːns/",
+      "cn": "前进；提前",
+      "note": "in advance 提前。"
+    },
+    "you'll": {
+      "pos": "contr.",
+      "ipa": "/juːl/",
+      "cn": "= you will（你将会）"
+    },
+    "movies": {
+      "pos": "n.",
+      "ipa": "/ˈmuːviz/",
+      "cn": "电影（movie 的复数）"
+    },
+    "ever": {
+      "pos": "adv.",
+      "ipa": "/ˈevə/",
+      "cn": "曾经；史上（best … ever 史上最好的）；ever 与 hardly 连用表「几乎从不」"
+    },
+    "set": {
+      "pos": "v./n.",
+      "ipa": "/set/",
+      "cn": "设置；一套；布景",
+      "note": "set out 出发。"
+    },
+    "future": {
+      "pos": "n./adj.",
+      "ipa": "/ˈfjuːtʃə/",
+      "cn": "未来；将来的",
+      "note": "in future 今后（= from now on）。"
+    },
+    "interactive": {
+      "pos": "adj.",
+      "ipa": "/ˌɪntərˈæktɪv/",
+      "cn": "互动的"
+    },
+    "videos": {
+      "pos": "n.",
+      "ipa": "/ˈvɪdiəʊz/",
+      "cn": "视频（video 的复数）"
+    },
+    "computers": {
+      "pos": "n.",
+      "ipa": "/kəmˈpjuːtəz/",
+      "cn": "电脑（computer 的复数）"
+    },
+    "turned": {
+      "pos": "v.",
+      "ipa": "/tɜːnd/",
+      "cn": "变成（turn 的过去分词）"
+    },
+    "turn into": {
+      "pos": "词组",
+      "ipa": "/ˌtɜːn ˈɪntu/",
+      "cn": "变成（turn A into B 把 A 变成 B）"
+    },
+    "turned into": {
+      "pos": "词组",
+      "ipa": "/ˈtɜːnd ˈɪntə/",
+      "cn": "转变成（被动/过去式）"
+    },
+    "as though": {
+      "pos": "词组",
+      "ipa": "/əz ˈðəʊ/",
+      "cn": "仿佛，好像"
+    },
+    "bus ride": {
+      "pos": "词组",
+      "ipa": "/ˈbʌs raɪd/",
+      "cn": "巴士之旅（坐巴士的行程）"
+    },
+    "old cars": {
+      "pos": "词组",
+      "ipa": "/ˌəʊld ˈkɑːz/",
+      "cn": "老爷车（复数）"
+    },
+    "old car": {
+      "pos": "词组",
+      "ipa": "/ˌəʊld ˈkɑː/",
+      "cn": "老爷车"
+    },
+    "as much time": {
+      "pos": "词组",
+      "ipa": "/əz ˌmʌtʃ ˈtaɪm/",
+      "cn": "同样多的时间（as much time as you want 你想待多久都行）"
+    },
+    "on-screen": {
+      "pos": "adj.",
+      "ipa": "/ˌɒn ˈskriːn/",
+      "cn": "屏幕上的，银幕上的"
+    },
+    "monsters": {
+      "pos": "n.",
+      "ipa": "/ˈmɒnstəz/",
+      "cn": "怪物（monster 的复数）"
+    },
+    "using": {
+      "pos": "v.",
+      "ipa": "/ˈjuːzɪŋ/",
+      "cn": "使用（use 的现在分词）"
+    },
+    "amazing": {
+      "pos": "adj.",
+      "ipa": "/əˈmeɪzɪŋ/",
+      "cn": "令人惊叹的；很棒的"
+    },
+    "make-up": {
+      "pos": "n.",
+      "ipa": "/ˈmeɪkʌp/",
+      "cn": "化妆"
+    },
+    "filming": {
+      "pos": "n.",
+      "ipa": "/ˈfɪlmɪŋ/",
+      "cn": "拍摄（film 的动名词）"
+    },
+    "techniques": {
+      "pos": "n.",
+      "ipa": "/tekˈniːks/",
+      "cn": "技巧（technique 的复数）"
+    },
+    "filming techniques": {
+      "pos": "词组",
+      "ipa": "/ˈfɪlmɪŋ tekˌniːks/",
+      "cn": "电影技巧"
+    },
+    "models": {
+      "pos": "n.",
+      "ipa": "/ˈmɒdlz/",
+      "cn": "模型；模特（model 的复数）"
+    },
+    "dinosaurs": {
+      "pos": "n.",
+      "ipa": "/ˈdaɪnəsɔːz/",
+      "cn": "恐龙（dinosaur 的复数）"
+    },
+    "alive": {
+      "pos": "adj.",
+      "ipa": "/əˈlaɪv/",
+      "cn": "活着的"
+    },
+    "video": {
+      "pos": "n.",
+      "ipa": "/ˈvɪdiəʊ/",
+      "cn": "视频"
+    },
+    "video activities": {
+      "pos": "词组",
+      "ipa": "/ˈvɪdiəʊ ækˌtɪvətiz/",
+      "cn": "视频活动"
+    },
+    "tours": {
+      "pos": "n.",
+      "ipa": "/tʊəz/",
+      "cn": "旅行、导览（tour 的复数）"
+    },
+    "tour": {
+      "pos": "n.",
+      "ipa": "/tʊə/",
+      "cn": "导览，游览"
+    },
+    "online tour": {
+      "pos": "词组",
+      "ipa": "/ˌɒnˈlaɪn tʊə/",
+      "cn": "在线导览"
+    },
+    "download": {
+      "pos": "v.",
+      "ipa": "/ˌdaʊnˈləʊd/",
+      "cn": "下载"
+    },
+    "huge": {
+      "pos": "adj.",
+      "ipa": "/hjuːdʒ/",
+      "cn": "庞大的，巨大的"
+    },
+    "space": {
+      "pos": "n.",
+      "ipa": "/speɪs/",
+      "cn": "空间"
+    },
+    "displaying": {
+      "pos": "v.",
+      "ipa": "/dɪˈspleɪɪŋ/",
+      "cn": "展示（display 的现在分词）"
+    },
+    "scenery": {
+      "pos": "n.",
+      "ipa": "/ˈsiːnəri/",
+      "cn": "风景，景色，舞台布景"
+    },
+    "stages": {
+      "pos": "n.",
+      "ipa": "/ˈsteɪdʒɪz/",
+      "cn": "舞台（stage 的复数）"
+    },
+    "stage": {
+      "pos": "n.",
+      "ipa": "/steɪdʒ/",
+      "cn": "舞台；阶段"
+    },
+    "stars": {
+      "pos": "n.",
+      "ipa": "/stɑːz/",
+      "cn": "明星（star 的复数）"
+    },
+    "star": {
+      "pos": "n./v.",
+      "ipa": "/stɑː/",
+      "cn": "明星；主演（Star Studios 场馆名）"
+    },
+    "acted": {
+      "pos": "v.",
+      "ipa": "/ˈæktɪd/",
+      "cn": "演戏（act 的过去式）"
+    },
+    "website": {
+      "pos": "n.",
+      "ipa": "/ˈwebsaɪt/",
+      "cn": "网站"
+    },
+    "exactly": {
+      "pos": "adv.",
+      "ipa": "/ɪɡˈzæktli/",
+      "cn": "确切地，正是"
+    },
+    "inside": {
+      "pos": "adv./prep.",
+      "ipa": "/ˌɪnˈsaɪd/",
+      "cn": "在里面；在……里面"
+    },
+    "you're": {
+      "pos": "contr.",
+      "ipa": "/jɔː/",
+      "cn": "= you are（你是）"
+    },
+    "shown": {
+      "pos": "v.",
+      "ipa": "/ʃəʊn/",
+      "cn": "带领参观（show 的过去分词）"
+    },
+    "groups": {
+      "pos": "n.",
+      "ipa": "/ɡruːps/",
+      "cn": "团体（group 的复数）"
+    },
+    "as much time as you want": {
+      "pos": "词组",
+      "ipa": "/əz ˌmʌtʃ ˈtaɪm əz juː ˈwɒnt/",
+      "cn": "你想多长时间都可"
+    },
+    "century": {
+      "pos": "n.",
+      "ipa": "/ˈsentʃəri/",
+      "cn": "世纪，一百年"
+    },
+    "original": {
+      "pos": "adj.",
+      "ipa": "/əˈrɪdʒənl/",
+      "cn": "原先的，古老的"
+    },
+    "used": {
+      "pos": "v.",
+      "ipa": "/juːzd/",
+      "cn": "使用（use 的过去式/过去分词）"
+    },
+    "useful": {
+      "pos": "adj.",
+      "ipa": "/ˈjuːsfl/",
+      "cn": "有用的"
+    },
+    "through": {
+      "pos": "prep.",
+      "ipa": "/θruː/",
+      "cn": "穿过；透过；通过",
+      "note": "through research 通过研究。"
+    },
+    "through the website": {
+      "pos": "词组",
+      "ipa": "/θruː ðə ˈwebsaɪt/",
+      "cn": "通过网站"
+    },
+    "quickly": {
+      "pos": "adv.",
+      "ipa": "/ˈkwɪkli/",
+      "cn": "快速地"
+    },
+    "avoid": {
+      "pos": "v.",
+      "ipa": "/əˈvɔɪd/",
+      "cn": "避免"
+    },
+    "queues": {
+      "pos": "n.",
+      "ipa": "/kjuːz/",
+      "cn": "队伍（queue 的复数）"
+    },
+    "long queues": {
+      "pos": "词组",
+      "ipa": "/ˌlɒŋ ˈkjuːz/",
+      "cn": "长队（avoid long queues 避免排长队）"
+    },
+    "popular": {
+      "pos": "adj.",
+      "ipa": "/ˈpɒpjələ/",
+      "cn": "受欢迎的；流行的"
+    },
+    "love": {
+      "pos": "v./n.",
+      "ipa": "/lʌv/",
+      "cn": "爱；喜爱",
+      "note": "love doing sth 喜欢做某事。"
+    },
+    "top": {
+      "pos": "n./adj.",
+      "ipa": "/tɒp/",
+      "cn": "顶部；顶部的；顶级的"
+    },
+    "s": {
+      "pos": "n.",
+      "ipa": "/es/",
+      "cn": "字母 s（40s = 40 年代；under-12s = 12 岁以下）"
+    },
+    "filmed": {
+      "pos": "v.",
+      "ipa": "/fɪlmd/",
+      "cn": "拍摄（film 的过去分词）"
+    },
+    "selection": {
+      "pos": "n.",
+      "ipa": "/sɪˈlekʃn/",
+      "cn": "选择，精选"
+    },
+    "selection of": {
+      "pos": "词组",
+      "ipa": "/sɪˈlekʃn əv/",
+      "cn": "精选的……"
+    },
+    "items": {
+      "pos": "n.",
+      "ipa": "/ˈaɪtəmz/",
+      "cn": "物品（item 的复数）"
+    },
+    "various": {
+      "pos": "adj.",
+      "ipa": "/ˈveəriəs/",
+      "cn": "各种各样的"
+    },
+    "sale": {
+      "pos": "n.",
+      "ipa": "/seɪl/",
+      "cn": "出售"
+    },
+    "on sale": {
+      "pos": "词组",
+      "ipa": "/ɒn ˈseɪl/",
+      "cn": "在售"
+    },
+    "souvenirs": {
+      "pos": "n.",
+      "ipa": "/ˌsuːvəˈnɪəz/",
+      "cn": "纪念品（souvenir 的复数）"
+    },
+    "amazingly": {
+      "pos": "adv.",
+      "ipa": "/əˈmeɪzɪŋli/",
+      "cn": "令人惊叹地"
+    },
+    "realistic": {
+      "pos": "adj.",
+      "ipa": "/ˌriːəˈlɪstɪk/",
+      "cn": "现实的，逼真的"
+    },
+    "streets": {
+      "pos": "n.",
+      "ipa": "/striːts/",
+      "cn": "街道（street 的复数）"
+    },
+    "york": {
+      "pos": "n.",
+      "ipa": "/jɔːk/",
+      "cn": "约克（New York 纽约）"
+    },
+    "historical": {
+      "pos": "adj.",
+      "ipa": "/hɪˈstɒrɪkl/",
+      "cn": "历史的，与历史有关的",
+      "note": "对比 historic（有历史意义的）：a historic victory 历史性胜利。"
+    },
+    "historical site": {
+      "pos": "词组",
+      "ipa": "/hɪˌstɒrɪkl ˈsaɪt/",
+      "cn": "历史的遗址"
+    },
+    "historical sites": {
+      "pos": "词组",
+      "ipa": "/hɪˌstɒrɪkl ˈsaɪts/",
+      "cn": "历史的遗址（复数）"
+    },
+    "sites": {
+      "pos": "n.",
+      "ipa": "/saɪts/",
+      "cn": "遗址（site 的复数）"
+    },
+    "rome": {
+      "pos": "n.",
+      "ipa": "/rəʊm/",
+      "cn": "Rome（罗马）"
+    },
+    "includes": {
+      "pos": "v.",
+      "ipa": "/ɪnˈkluːdz/",
+      "cn": "包括（include 的第三人称单数）"
+    },
+    "places": {
+      "pos": "n.",
+      "ipa": "/ˈpleɪsɪz/",
+      "cn": "地方（place 的复数）"
+    },
+    "surrounding": {
+      "pos": "adj.",
+      "ipa": "/səˈraʊndɪŋ/",
+      "cn": "周边的"
+    },
+    "surrounding area": {
+      "pos": "词组",
+      "ipa": "/səˌraʊndɪŋ ˈeəriə/",
+      "cn": "周边地区"
+    },
+    "staff": {
+      "pos": "n.",
+      "ipa": "/stɑːf/",
+      "cn": "全体员工（集合名词）"
+    },
+    "staff member": {
+      "pos": "词组",
+      "ipa": "/ˈstɑːf ˌmembə/",
+      "cn": "职员，员工"
+    },
+    "member": {
+      "pos": "n.",
+      "ipa": "/ˈmembə/",
+      "cn": "成员"
+    },
+    "whatever": {
+      "pos": "pron.",
+      "ipa": "/wɒtˈevə/",
+      "cn": "无论什么"
+    },
+    "you'd": {
+      "pos": "contr.",
+      "ipa": "/juːd/",
+      "cn": "= you would 或 you had",
+      "note": "you'd better = you had better 你最好。"
+    },
+    "london": {
+      "pos": "n.",
+      "ipa": "/ˈlʌndən/",
+      "cn": "伦敦（英国首都）"
+    },
+    "paris": {
+      "pos": "n.",
+      "ipa": "/ˈpærɪs/",
+      "cn": "Paris（巴黎）"
+    },
+    "buses": {
+      "pos": "n.",
+      "ipa": "/ˈbʌsɪz/",
+      "cn": "巴士（bus 的复数）"
+    },
+    "old": {
+      "pos": "adj.",
+      "ipa": "/əʊld/",
+      "cn": "旧的，老的"
+    },
+    "will": {
+      "pos": "modal",
+      "ipa": "/wɪl/",
+      "cn": "将要（助动词）"
+    },
+    "filmpark": {
+      "pos": "n.",
+      "ipa": "/ˈfɪlmpɑːk/",
+      "cn": "FilmPark（场馆名）"
+    },
+    "collection": {
+      "pos": "n.",
+      "ipa": "/kəˈlekʃn/",
+      "cn": "收藏；一批"
+    },
+    "a collection of": {
+      "pos": "词组",
+      "ipa": "/ə kəˈlekʃn əv/",
+      "cn": "一组，一系列"
+    },
+    "cars": {
+      "pos": "n.",
+      "ipa": "/kɑːz/",
+      "cn": "汽车（car 的复数）"
+    },
+    "once": {
+      "pos": "adv.",
+      "ipa": "/wʌns/",
+      "cn": "一次；曾经",
+      "note": "once more 再一次。"
+    },
+    "driven": {
+      "pos": "v.",
+      "ipa": "/ˈdrɪvn/",
+      "cn": "驾驶（drive 的过去分词）"
+    },
+    "street": {
+      "pos": "n.",
+      "ipa": "/striːt/",
+      "cn": "街道"
+    },
+    "city street scenes": {
+      "pos": "词组",
+      "ipa": "/ˌsɪti ˈstriːt siːnz/",
+      "cn": "城市街景"
+    },
+    "clothes": {
+      "pos": "n.",
+      "ipa": "/kləʊðz/",
+      "cn": "衣服（永远复数）"
+    },
+    "original clothes": {
+      "pos": "词组",
+      "ipa": "/əˌrɪdʒənl ˈkləʊðz/",
+      "cn": "原版服装"
+    },
+    "dressed": {
+      "pos": "v.",
+      "ipa": "/drest/",
+      "cn": "穿着（dress 的过去分词）"
+    },
+    "visitors": {
+      "pos": "n.",
+      "ipa": "/ˈvɪzɪtəz/",
+      "cn": "参观者（visitor 的复数）"
+    },
+    "photos": {
+      "pos": "n.",
+      "ipa": "/ˈfəʊtəʊz/",
+      "cn": "照片（photo 的复数）"
+    },
+    "free photos": {
+      "pos": "词组",
+      "ipa": "/ˌfriː ˈfəʊtəʊz/",
+      "cn": "免费照片"
+    },
+    "themselves": {
+      "pos": "pron.",
+      "ipa": "/ðəmˈselvz/",
+      "cn": "他们自己"
+    },
+    "greenfields": {
+      "pos": "n.",
+      "ipa": "/ˈɡriːnfiːldz/",
+      "cn": "Greenfields（场馆名）"
+    },
+    "topfitness": {
+      "pos": "n.",
+      "ipa": "/ˌtɒpˈfɪtnəs/",
+      "cn": "Topfitness（场馆名）"
+    },
+    "grand": {
+      "pos": "adj.",
+      "ipa": "/ɡrænd/",
+      "cn": "宏伟的（Grand Studios 场馆名）"
+    },
+    "movieworld": {
+      "pos": "n.",
+      "ipa": "/ˈmuːviwɜːld/",
+      "cn": "Movieworld（场馆名）"
+    },
+    "waverley": {
+      "pos": "n.",
+      "ipa": "/ˈweɪvəli/",
+      "cn": "Waverley（姓氏；场馆名）"
+    },
+    "screen": {
+      "pos": "n.",
+      "ipa": "/skriːn/",
+      "cn": "屏幕；银幕"
+    },
+    "world": {
+      "pos": "n.",
+      "ipa": "/wɜːld/",
+      "cn": "世界"
+    },
+    "westways": {
+      "pos": "n.",
+      "ipa": "/ˌwestˈweɪz/",
+      "cn": "WestWays（场馆名）"
+    },
+    "filmfun": {
+      "pos": "n.",
+      "ipa": "/ˈfɪlmfʌn/",
+      "cn": "FilmFun（场馆名）"
+    },
+    "look around": {
+      "pos": "词组",
+      "ipa": "/ˌlʊk əˈraʊnd/",
+      "cn": "四处看看（参观）"
+    },
+    "own speed": {
+      "pos": "词组",
+      "ipa": "/ˌəʊn ˈspiːd/",
+      "cn": "自己的速度（at one's own speed 按某人自己的速度）"
+    },
+    "actual set": {
+      "pos": "词组",
+      "ipa": "/ˌæktʃuəl ˈset/",
+      "cn": "实际的布景（拍摄现场）"
+    },
+    "actual sets": {
+      "pos": "词组",
+      "ipa": "/ˌæktʃuəl ˈsets/",
+      "cn": "实际的布景（复数）"
+    },
+    "digital displays": {
+      "pos": "词组",
+      "ipa": "/ˌdɪdʒɪtl dɪˈspleɪz/",
+      "cn": "数字显示屏（复数）"
+    },
+    "gym membership": {
+      "pos": "词组",
+      "ipa": "/ˈdʒɪm ˌmembəʃɪp/",
+      "cn": "健身房会员"
+    },
+    "squash court": {
+      "pos": "词组",
+      "ipa": "/ˈskwɒʃ kɔːt/",
+      "cn": "壁球场"
+    },
+    "squash courts": {
+      "pos": "词组",
+      "ipa": "/ˈskwɒʃ kɔːts/",
+      "cn": "壁球场（复数）"
+    },
+    "entrance fee": {
+      "pos": "词组",
+      "ipa": "/ˈentrəns fiː/",
+      "cn": "门票费"
+    },
+    "outdoor pool": {
+      "pos": "词组",
+      "ipa": "/ˌaʊtdɔː ˈpuːl/",
+      "cn": "露天泳池"
+    },
+    "first-class gym": {
+      "pos": "词组",
+      "ipa": "/ˌfɜːst ˈklɑːs dʒɪm/",
+      "cn": "一流的健身房"
+    },
+    "top movies": {
+      "pos": "词组",
+      "ipa": "/ˌtɒp ˈmuːviz/",
+      "cn": "经典电影"
+    },
+    "film locations": {
+      "pos": "词组",
+      "ipa": "/ˈfɪlm ləʊˌkeɪʃnz/",
+      "cn": "拍摄地"
+    },
+    "famous actors": {
+      "pos": "词组",
+      "ipa": "/ˌfeɪməs ˈæktəz/",
+      "cn": "著名演员"
+    },
+    "lots of time": {
+      "pos": "词组",
+      "ipa": "/ˌlɒts əv ˈtaɪm/",
+      "cn": "充足的时间"
+    },
+    "make reservations": {
+      "pos": "词组",
+      "ipa": "/ˌmeɪk ˌrezəˈveɪʃnz/",
+      "cn": "预订"
+    },
+    "book online": {
+      "pos": "词组",
+      "ipa": "/ˌbʊk ɒnˈlaɪn/",
+      "cn": "网上预订"
+    },
+    "stay fit": {
+      "pos": "词组",
+      "ipa": "/ˌsteɪ ˈfɪt/",
+      "cn": "保持健康"
+    },
+    "a regular amount": {
+      "pos": "词组",
+      "ipa": "/ə ˌreɡjələr əˈmaʊnt/",
+      "cn": "一笔定期的钱"
+    },
+    "try on": {
+      "pos": "词组",
+      "ipa": "/ˌtraɪ ˈɒn/",
+      "cn": "试穿"
+    }
+  },
+  "questions": [
+    {
+      "n": 101,
+      "tag": "①-1",
+      "answer": "D",
+      "prompt": "训练①-1 —— 空 (1)：Sonia doesn't ____ going abroad，选哪个词？",
+      "opts": {
+        "A": "rather",
+        "B": "stand",
+        "C": "mind",
+        "D": "fancy",
+        "E": "prefer",
+        "F": "fond",
+        "G": "keen"
+      },
+      "why": "官方答案 <b>D</b>（fancy doing sth）。空后面是 going（-ing 形式）→ fancy doing sth。官方：1 fancy。",
+      "clues": [
+        "fancy doing sth"
+      ],
+      "others": [
+        [
+          "A",
+          "「rather」表示「宁愿」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "B",
+          "「stand」表示「忍受」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "C",
+          "「mind」表示「介意」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "E",
+          "「prefer」表示「更喜欢」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "F",
+          "「fond」表示「喜欢」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "G",
+          "「keen」表示「热衷」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ]
+      ],
+      "tip": "先看空后面跟的是 doing、to 还是 on/of，再选词。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "空 (1)：Sonia doesn't ____ going abroad"
+          ],
+          [
+            "答案",
+            "D（fancy doing sth）"
+          ]
+        ],
+        "gram": [
+          "likes / dislikes / preferences 表达"
+        ],
+        "tr": "D —— fancy doing sth。"
+      }
+    },
+    {
+      "n": 102,
+      "tag": "①-2",
+      "answer": "G",
+      "prompt": "训练①-2 —— 空 (2)：she isn't ____ on travelling long distances，选哪个词？",
+      "opts": {
+        "A": "rather",
+        "B": "stand",
+        "C": "mind",
+        "D": "fancy",
+        "E": "prefer",
+        "F": "fond",
+        "G": "keen"
+      },
+      "why": "官方答案 <b>G</b>（be keen on）。空后面是 on → be keen on（喜欢、热衷于）。官方：2 keen。",
+      "clues": [
+        "be keen on"
+      ],
+      "others": [
+        [
+          "A",
+          "「rather」表示「宁愿」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "B",
+          "「stand」表示「忍受」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "C",
+          "「mind」表示「介意」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "D",
+          "「fancy」表示「想做」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "E",
+          "「prefer」表示「更喜欢」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "F",
+          "「fond」表示「喜欢」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ]
+      ],
+      "tip": "先看空后面跟的是 doing、to 还是 on/of，再选词。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "空 (2)：she isn't ____ on travelling long distances"
+          ],
+          [
+            "答案",
+            "G（be keen on）"
+          ]
+        ],
+        "gram": [
+          "likes / dislikes / preferences 表达"
+        ],
+        "tr": "G —— be keen on。"
+      }
+    },
+    {
+      "n": 103,
+      "tag": "①-3",
+      "answer": "B",
+      "prompt": "训练①-3 —— 空 (3)：she really can't ____ flying，选哪个词？",
+      "opts": {
+        "A": "rather",
+        "B": "stand",
+        "C": "mind",
+        "D": "fancy",
+        "E": "prefer",
+        "F": "fond",
+        "G": "keen"
+      },
+      "why": "官方答案 <b>B</b>（can't stand doing sth）。空后面是 flying（-ing）→ can't stand doing sth 无法忍受。官方：3 stand。",
+      "clues": [
+        "can't stand doing sth"
+      ],
+      "others": [
+        [
+          "A",
+          "「rather」表示「宁愿」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "C",
+          "「mind」表示「介意」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "D",
+          "「fancy」表示「想做」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "E",
+          "「prefer」表示「更喜欢」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "F",
+          "「fond」表示「喜欢」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "G",
+          "「keen」表示「热衷」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ]
+      ],
+      "tip": "先看空后面跟的是 doing、to 还是 on/of，再选词。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "空 (3)：she really can't ____ flying"
+          ],
+          [
+            "答案",
+            "B（can't stand doing sth）"
+          ]
+        ],
+        "gram": [
+          "likes / dislikes / preferences 表达"
+        ],
+        "tr": "B —— can't stand doing sth。"
+      }
+    },
+    {
+      "n": 104,
+      "tag": "①-4",
+      "answer": "E",
+      "prompt": "训练①-4 —— 空 (4)：She would ____ to have a holiday near her home，选哪个词？",
+      "opts": {
+        "A": "rather",
+        "B": "stand",
+        "C": "mind",
+        "D": "fancy",
+        "E": "prefer",
+        "F": "fond",
+        "G": "keen"
+      },
+      "why": "官方答案 <b>E</b>（prefer to do sth）。空后面是 to → would prefer to do sth（更愿意做）。官方：4 prefer。",
+      "clues": [
+        "prefer to do sth"
+      ],
+      "others": [
+        [
+          "A",
+          "「rather」表示「宁愿」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "B",
+          "「stand」表示「忍受」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "C",
+          "「mind」表示「介意」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "D",
+          "「fancy」表示「想做」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "F",
+          "「fond」表示「喜欢」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "G",
+          "「keen」表示「热衷」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ]
+      ],
+      "tip": "先看空后面跟的是 doing、to 还是 on/of，再选词。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "空 (4)：She would ____ to have a holiday near her home"
+          ],
+          [
+            "答案",
+            "E（prefer to do sth）"
+          ]
+        ],
+        "gram": [
+          "likes / dislikes / preferences 表达"
+        ],
+        "tr": "E —— prefer to do sth。"
+      }
+    },
+    {
+      "n": 105,
+      "tag": "①-5",
+      "answer": "A",
+      "prompt": "训练①-5 —— 空 (5)：she'd ____ go camping than stay in a hotel，选哪个词？",
+      "opts": {
+        "A": "rather",
+        "B": "stand",
+        "C": "mind",
+        "D": "fancy",
+        "E": "prefer",
+        "F": "fond",
+        "G": "keen"
+      },
+      "why": "官方答案 <b>A</b>（would rather do sth）。空后面是 go 原形、后面还有 than → would rather do A than do B。官方：5 rather。",
+      "clues": [
+        "would rather do sth"
+      ],
+      "others": [
+        [
+          "B",
+          "「stand」表示「忍受」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "C",
+          "「mind」表示「介意」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "D",
+          "「fancy」表示「想做」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "E",
+          "「prefer」表示「更喜欢」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "F",
+          "「fond」表示「喜欢」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "G",
+          "「keen」表示「热衷」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ]
+      ],
+      "tip": "先看空后面跟的是 doing、to 还是 on/of，再选词。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "空 (5)：she'd ____ go camping than stay in a hotel"
+          ],
+          [
+            "答案",
+            "A（would rather do sth）"
+          ]
+        ],
+        "gram": [
+          "likes / dislikes / preferences 表达"
+        ],
+        "tr": "A —— would rather do sth。"
+      }
+    },
+    {
+      "n": 106,
+      "tag": "①-6",
+      "answer": "F",
+      "prompt": "训练①-6 —— 空 (6)：She's ____ of nature，选哪个词？",
+      "opts": {
+        "A": "rather",
+        "B": "stand",
+        "C": "mind",
+        "D": "fancy",
+        "E": "prefer",
+        "F": "fond",
+        "G": "keen"
+      },
+      "why": "官方答案 <b>F</b>（be fond of）。空后面是 of → be fond of（喜欢）。官方：6 fond。",
+      "clues": [
+        "be fond of"
+      ],
+      "others": [
+        [
+          "A",
+          "「rather」表示「宁愿」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "B",
+          "「stand」表示「忍受」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "C",
+          "「mind」表示「介意」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "D",
+          "「fancy」表示「想做」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "E",
+          "「prefer」表示「更喜欢」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "G",
+          "「keen」表示「热衷」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ]
+      ],
+      "tip": "先看空后面跟的是 doing、to 还是 on/of，再选词。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "空 (6)：She's ____ of nature"
+          ],
+          [
+            "答案",
+            "F（be fond of）"
+          ]
+        ],
+        "gram": [
+          "likes / dislikes / preferences 表达"
+        ],
+        "tr": "F —— be fond of。"
+      }
+    },
+    {
+      "n": 107,
+      "tag": "①-7",
+      "answer": "C",
+      "prompt": "训练①-7 —— 空 (7)：really doesn't ____ if it rains a lot，选哪个词？",
+      "opts": {
+        "A": "rather",
+        "B": "stand",
+        "C": "mind",
+        "D": "fancy",
+        "E": "prefer",
+        "F": "fond",
+        "G": "keen"
+      },
+      "why": "官方答案 <b>C</b>（don't mind if…）。「不介意下雨」→ don't mind if…。官方：7 mind。",
+      "clues": [
+        "don't mind if…"
+      ],
+      "others": [
+        [
+          "A",
+          "「rather」表示「宁愿」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "B",
+          "「stand」表示「忍受」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "D",
+          "「fancy」表示「想做」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "E",
+          "「prefer」表示「更喜欢」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "F",
+          "「fond」表示「喜欢」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "G",
+          "「keen」表示「热衷」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ]
+      ],
+      "tip": "先看空后面跟的是 doing、to 还是 on/of，再选词。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "空 (7)：really doesn't ____ if it rains a lot"
+          ],
+          [
+            "答案",
+            "C（don't mind if…）"
+          ]
+        ],
+        "gram": [
+          "likes / dislikes / preferences 表达"
+        ],
+        "tr": "C —— don't mind if…。"
+      }
+    },
+    {
+      "n": 108,
+      "tag": "②-rather",
+      "answer": "b",
+      "prompt": "训练②-rather —— rather 用来表达哪种？，选哪个词？",
+      "opts": {
+        "a": "like",
+        "b": "prefer",
+        "c": "dislike",
+        "d": "don't think is important"
+      },
+      "why": "官方答案 <b>b</b>（would rather 宁愿）。官方分组：b rather（would rather 宁愿 = 更喜欢）。",
+      "clues": [
+        "would rather 宁愿"
+      ],
+      "others": [
+        [
+          "a",
+          "「like」表示「喜欢」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "c",
+          "「dislike」表示「不喜欢」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "d",
+          "「don't think is important」表示「觉得不重要」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ]
+      ],
+      "tip": "想每个词最常见的搭配：fancy doing / be keen on / be fond of / would rather / can't stand / don't mind。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "rather 用来表达哪种？"
+          ],
+          [
+            "答案",
+            "b（would rather 宁愿）"
+          ]
+        ],
+        "gram": [
+          "likes / dislikes / preferences 表达"
+        ],
+        "tr": "b —— would rather 宁愿。"
+      }
+    },
+    {
+      "n": 109,
+      "tag": "②-stand",
+      "answer": "c",
+      "prompt": "训练②-stand —— stand 用来表达哪种？，选哪个词？",
+      "opts": {
+        "a": "like",
+        "b": "prefer",
+        "c": "dislike",
+        "d": "don't think is important"
+      },
+      "why": "官方答案 <b>c</b>（can't stand 无法忍受）。官方分组：c (can't) stand（无法忍受 = 不喜欢）。",
+      "clues": [
+        "can't stand 无法忍受"
+      ],
+      "others": [
+        [
+          "a",
+          "「like」表示「喜欢」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "b",
+          "「prefer」表示「更喜欢（宁愿）」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "d",
+          "「don't think is important」表示「觉得不重要」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ]
+      ],
+      "tip": "想每个词最常见的搭配：fancy doing / be keen on / be fond of / would rather / can't stand / don't mind。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "stand 用来表达哪种？"
+          ],
+          [
+            "答案",
+            "c（can't stand 无法忍受）"
+          ]
+        ],
+        "gram": [
+          "likes / dislikes / preferences 表达"
+        ],
+        "tr": "c —— can't stand 无法忍受。"
+      }
+    },
+    {
+      "n": 110,
+      "tag": "②-mind",
+      "answer": "d",
+      "prompt": "训练②-mind —— mind 用来表达哪种？，选哪个词？",
+      "opts": {
+        "a": "like",
+        "b": "prefer",
+        "c": "dislike",
+        "d": "don't think is important"
+      },
+      "why": "官方答案 <b>d</b>（don't mind 不介意）。官方分组：d (don't) mind（不介意 = 觉得不重要）。",
+      "clues": [
+        "don't mind 不介意"
+      ],
+      "others": [
+        [
+          "a",
+          "「like」表示「喜欢」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "b",
+          "「prefer」表示「更喜欢（宁愿）」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "c",
+          "「dislike」表示「不喜欢」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ]
+      ],
+      "tip": "想每个词最常见的搭配：fancy doing / be keen on / be fond of / would rather / can't stand / don't mind。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "mind 用来表达哪种？"
+          ],
+          [
+            "答案",
+            "d（don't mind 不介意）"
+          ]
+        ],
+        "gram": [
+          "likes / dislikes / preferences 表达"
+        ],
+        "tr": "d —— don't mind 不介意。"
+      }
+    },
+    {
+      "n": 111,
+      "tag": "②-fancy",
+      "answer": "a",
+      "prompt": "训练②-fancy —— fancy 用来表达哪种？，选哪个词？",
+      "opts": {
+        "a": "like",
+        "b": "prefer",
+        "c": "dislike",
+        "d": "don't think is important"
+      },
+      "why": "官方答案 <b>a</b>（fancy doing 想做）。官方分组：a fancy（喜欢、想做）。",
+      "clues": [
+        "fancy doing 想做"
+      ],
+      "others": [
+        [
+          "b",
+          "「prefer」表示「更喜欢（宁愿）」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "c",
+          "「dislike」表示「不喜欢」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "d",
+          "「don't think is important」表示「觉得不重要」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ]
+      ],
+      "tip": "想每个词最常见的搭配：fancy doing / be keen on / be fond of / would rather / can't stand / don't mind。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "fancy 用来表达哪种？"
+          ],
+          [
+            "答案",
+            "a（fancy doing 想做）"
+          ]
+        ],
+        "gram": [
+          "likes / dislikes / preferences 表达"
+        ],
+        "tr": "a —— fancy doing 想做。"
+      }
+    },
+    {
+      "n": 112,
+      "tag": "②-fond",
+      "answer": "a",
+      "prompt": "训练②-fond —— fond 用来表达哪种？，选哪个词？",
+      "opts": {
+        "a": "like",
+        "b": "prefer",
+        "c": "dislike",
+        "d": "don't think is important"
+      },
+      "why": "官方答案 <b>a</b>（be fond of 喜欢）。官方分组：a fond (of)（喜欢）。",
+      "clues": [
+        "be fond of 喜欢"
+      ],
+      "others": [
+        [
+          "b",
+          "「prefer」表示「更喜欢（宁愿）」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "c",
+          "「dislike」表示「不喜欢」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "d",
+          "「don't think is important」表示「觉得不重要」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ]
+      ],
+      "tip": "想每个词最常见的搭配：fancy doing / be keen on / be fond of / would rather / can't stand / don't mind。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "fond 用来表达哪种？"
+          ],
+          [
+            "答案",
+            "a（be fond of 喜欢）"
+          ]
+        ],
+        "gram": [
+          "likes / dislikes / preferences 表达"
+        ],
+        "tr": "a —— be fond of 喜欢。"
+      }
+    },
+    {
+      "n": 113,
+      "tag": "②-keen",
+      "answer": "a",
+      "prompt": "训练②-keen —— keen 用来表达哪种？，选哪个词？",
+      "opts": {
+        "a": "like",
+        "b": "prefer",
+        "c": "dislike",
+        "d": "don't think is important"
+      },
+      "why": "官方答案 <b>a</b>（be keen on 热衷）。官方分组：a keen (on)（喜欢、热衷）。",
+      "clues": [
+        "be keen on 热衷"
+      ],
+      "others": [
+        [
+          "b",
+          "「prefer」表示「更喜欢（宁愿）」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "c",
+          "「dislike」表示「不喜欢」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ],
+        [
+          "d",
+          "「don't think is important」表示「觉得不重要」，和这个空要表达的意思不符（也要看空后的形式）。"
+        ]
+      ],
+      "tip": "想每个词最常见的搭配：fancy doing / be keen on / be fond of / would rather / can't stand / don't mind。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "keen 用来表达哪种？"
+          ],
+          [
+            "答案",
+            "a（be keen on 热衷）"
+          ]
+        ],
+        "gram": [
+          "likes / dislikes / preferences 表达"
+        ],
+        "tr": "a —— be keen on 热衷。"
+      }
+    },
+    {
+      "n": 114,
+      "tag": "④",
+      "answer": "B",
+      "prompt": "训练④ —— 三家体育中心 A–C，哪家最适合 Ethan？",
+      "opts": {
+        "A": "Greenfields",
+        "B": "Topfitness",
+        "C": "Eastpark"
+      },
+      "why": "官方答案 <b>B</b>。Ethan 的四个需求逐条对上 B：① 想每天训练（train every day）→ <b>We open … 10 p.m. daily</b>；② 不介意定期付费（doesn't mind paying a regular amount）→ <b>Gym membership costs just £20 per month</b>；③ 想学一项新运动（fancies learning a new sport）→ <b>Lessons are available for most activities</b>；④ 喜欢用 email 预订（prefers to make reservations by email）→ <b>squash courts can be reserved online</b>。",
+      "clues": [
+        "every day ↔ daily",
+        "a regular amount ↔ membership",
+        "learning a new sport ↔ lessons",
+        "by email ↔ reserved online"
+      ],
+      "others": [
+        [
+          "A",
+          "Greenfields 便宜（£3 门票）又有泳池和花园，但没提「每天开放、会员制、课程、在线预订」—— 官方干扰项。"
+        ],
+        [
+          "C",
+          "Eastpark 设施很全，但 <b>Facilities can be booked by phone only</b>（只能电话预订）—— 和 Ethan 的 email 偏好不符，也没有课程信息。"
+        ]
+      ],
+      "tip": "把 Ethan 的每个需求圈成关键词，逐条对：缺一条的就不是答案。",
+      "ana": {
+        "parts": [
+          [
+            "人物需求",
+            "train every day / doesn't mind paying / fancies learning a new sport / prefers by email"
+          ],
+          [
+            "对应文本",
+            "daily / membership £20 per month / lessons / reserved online"
+          ]
+        ],
+        "gram": [
+          "关键词 ↔ 同义改写"
+        ],
+        "tr": "答案 B —— Topfitness（每天开放 + 会员制 + 课程 + 在线预订全对上）。"
+      }
+    },
+    {
+      "n": 6,
+      "answer": "C",
+      "prompt": "第 6 题 —— 这个人最适合哪家制片厂？",
+      "opts": {
+        "A": "Grand Studios",
+        "B": "Movieworld",
+        "C": "Waverley Studios",
+        "D": "Screen World",
+        "E": "WestWays",
+        "F": "FilmFun",
+        "G": "Star Studios",
+        "H": "FilmPark"
+      },
+      "why": "官方答案 <b>C</b>。Tom：①想按自己的节奏参观（look around … at his own speed）→ C「because you're not shown around in groups, you can spend as much time there as you want」；②想看真实拍摄场景（the actual sets where films were made）→ C「stages where big stars acted in scenes from famous films」；③妈妈想买票前先在网上看看（see online … before she buys tickets）→ C「Check the website to see exactly what the studio offers inside」。",
+      "clues": [
+        "own speed ↔ spend as much time as you want",
+        "actual sets ↔ stages where big stars acted",
+        "see online before buying ↔ check the website"
+      ],
+      "others": [
+        [
+          "A",
+          "A 可以提前网上预订（book online in advance），但没说可以自己随便逛，也没有「网上先看」—— 官方干扰项。"
+        ],
+        [
+          "B",
+          "B 主打未来科幻和互动视频，没有「真实拍摄场景」和「按自己节奏参观」的信息。"
+        ],
+        [
+          "D",
+          "D 的 digital guide 是到现场买的，不是「买票前先上网看」—— 官方干扰项。"
+        ],
+        [
+          "E",
+          "E 要提前上网买票，但没有「按自己节奏参观」和「真实拍摄场景」的信息 —— 官方干扰项。"
+        ],
+        [
+          "F",
+          "F 有真实布景和厂外巴士游，但没有「大明星演戏的舞台」，也不能「网上先看」。"
+        ],
+        [
+          "G",
+          "G 的 360° 在线导览是来之前看，但参观要跟着穿过街景、试穿戏服 —— 不是「按自己节奏逛真实片场」。"
+        ],
+        [
+          "H",
+          "H 是坐车逛城市街景，没有「真实电影布景」，也不能「网上先看」。"
+        ]
+      ],
+      "tip": "Tom 的三个需求：自己逛、看真场景、妈妈先上网看 —— 三条都在 C。",
+      "ana": {
+        "parts": [
+          [
+            "人物需求",
+            "look around at his own speed / actual sets / see online before buying tickets"
+          ],
+          [
+            "对应文本 C",
+            "spend as much time there as you want / stages where big stars acted / Check the website"
+          ]
+        ],
+        "gram": [
+          "Part 2：人物需求 ↔ 文本同义改写"
+        ],
+        "tr": "答案 C —— Waverley Studios。"
+      }
+    },
+    {
+      "n": 7,
+      "answer": "H",
+      "prompt": "第 7 题 —— 这个人最适合哪家制片厂？",
+      "opts": {
+        "A": "Grand Studios",
+        "B": "Movieworld",
+        "C": "Waverley Studios",
+        "D": "Screen World",
+        "E": "WestWays",
+        "F": "FilmFun",
+        "G": "Star Studios",
+        "H": "FilmPark"
+      },
+      "why": "官方答案 <b>H</b>。Ingrid：①想看明星穿过的戏服（costumes that famous actors have worn）→ H「a collection of original clothes that stars were dressed in for their movies」；②想乘坐电影里出现过的车（ride on a vehicle that originally appeared in a film）→ H「have a trip in one of the old cars once used in films」；③妈妈想要纪念品（a souvenir）→ H「Visitors get free photos of themselves as they leave」。",
+      "clues": [
+        "costumes worn by famous actors ↔ original clothes that stars were dressed in",
+        "ride on a vehicle from a film ↔ have a trip in one of the old cars",
+        "souvenir ↔ free photos"
+      ],
+      "others": [
+        [
+          "A",
+          "A 有导游指路和提前订票，但没有戏服、道具车或纪念品。"
+        ],
+        [
+          "B",
+          "B 是互动视频和科幻内容，没有戏服、道具车或纪念品。"
+        ],
+        [
+          "C",
+          "C 有真实布景和随便逛，但没有戏服、道具车或纪念品。"
+        ],
+        [
+          "D",
+          "有戏服（costumes worn），但没有能乘坐的道具车，也没有纪念品 —— 官方干扰项。"
+        ],
+        [
+          "E",
+          "有纪念品出售，但没有戏服和道具车 —— 官方干扰项。"
+        ],
+        [
+          "F",
+          "有巴士之旅，但那不是电影里出现过的道具车，也没有戏服和纪念品 —— 官方干扰项。"
+        ],
+        [
+          "G",
+          "有老巴士和戏服可以试穿，但没有免费纪念品；360° 在线导览也不是「带回家的纪念品」—— 官方干扰项。"
+        ]
+      ],
+      "tip": "三条需求：明星戏服 + 电影道具车 + 纪念品 —— 都在 H。",
+      "ana": {
+        "parts": [
+          [
+            "人物需求",
+            "costumes that famous actors have worn / ride on a vehicle that appeared in a film / a souvenir"
+          ],
+          [
+            "对应文本 H",
+            "original clothes that stars were dressed in / have a trip in one of the old cars / free photos"
+          ]
+        ],
+        "gram": [
+          "Part 2：人物需求 ↔ 文本同义改写"
+        ],
+        "tr": "答案 H —— FilmPark。"
+      }
+    },
+    {
+      "n": 8,
+      "answer": "E",
+      "prompt": "第 8 题 —— 这个人最适合哪家制片厂？",
+      "opts": {
+        "A": "Grand Studios",
+        "B": "Movieworld",
+        "C": "Waverley Studios",
+        "D": "Screen World",
+        "E": "WestWays",
+        "F": "FilmFun",
+        "G": "Star Studios",
+        "H": "FilmPark"
+      },
+      "why": "官方答案 <b>E</b>。Roberto：①想看多年前拍著名电影的制片厂 → E「very popular with people who love top movies from the 40s, many of which were filmed here」；②想买电影里出现过的物品（buy something that appeared in one of the films）→ E「a great selection of items from various movies, now on sale as souvenirs」；③爸爸想提前网上订票（book online before they go）→ E「get tickets in advance through the website」。",
+      "clues": [
+        "famous films made many years ago ↔ top movies from the 40s filmed here",
+        "buy something from the films ↔ items from various movies on sale",
+        "book online before ↔ get tickets in advance through the website"
+      ],
+      "others": [
+        [
+          "A",
+          "可以网上预订，但没有老电影和可买的电影物品 —— 官方干扰项。"
+        ],
+        [
+          "B",
+          "B 是未来科幻主题，没有老电影和可买的电影物品。"
+        ],
+        [
+          "C",
+          "C 有真实布景，但不是「40 年代老电影」的厂，也没有电影物品出售。"
+        ],
+        [
+          "D",
+          "有上世纪老电影和戏服，但没提可以买电影里的东西，也不能提前网上订票 —— 官方干扰项。"
+        ],
+        [
+          "F",
+          "F 有外景巴士游，但没有老电影场景和纪念品。"
+        ],
+        [
+          "G",
+          "G 有老巴士和戏服，但没有「电影物品出售」，也不能提前网上订票。"
+        ],
+        [
+          "H",
+          "有老车和原版服装，但没有「电影物品出售」，也不能网上预订 —— 官方干扰项。"
+        ]
+      ],
+      "tip": "三条需求：老电影 + 买电影物品 + 网上订票 —— 都在 E。",
+      "ana": {
+        "parts": [
+          [
+            "人物需求",
+            "famous films made many years ago / buy something from the films / book online"
+          ],
+          [
+            "对应文本 E",
+            "top movies from the 40s filmed here / items from various movies on sale / tickets in advance through the website"
+          ]
+        ],
+        "gram": [
+          "Part 2：人物需求 ↔ 文本同义改写"
+        ],
+        "tr": "答案 E —— WestWays。"
+      }
+    },
+    {
+      "n": 9,
+      "answer": "B",
+      "prompt": "第 9 题 —— 这个人最适合哪家制片厂？",
+      "opts": {
+        "A": "Grand Studios",
+        "B": "Movieworld",
+        "C": "Waverley Studios",
+        "D": "Screen World",
+        "E": "WestWays",
+        "F": "FilmFun",
+        "G": "Star Studios",
+        "H": "FilmPark"
+      },
+      "why": "官方答案 <b>B</b>。Simone：①喜欢科幻电影（science fiction films）→ B「the best movies ever here, set far into the future」；②喜欢看「特效如何实现」的数码显示屏（digital displays about how special effects are achieved）→ B「interactive videos on our computers, to see how actors are turned into on-screen monsters」；③爸爸想要数码导览（a digital guide）→ B「'tours' of the studio to download」。",
+      "clues": [
+        "science fiction ↔ set far into the future",
+        "digital displays about special effects ↔ interactive videos on computers",
+        "digital guide ↔ tours to download"
+      ],
+      "others": [
+        [
+          "A",
+          "有 special effects，但只是「看和读」（plenty to look at and read），不是数码显示屏，也没有科幻片 —— 官方干扰项。"
+        ],
+        [
+          "C",
+          "没有科幻、特效或导览相关内容 —— 官方干扰项。"
+        ],
+        [
+          "D",
+          "D 有数码导览（现场买），但没有科幻电影和「特效如何做」的数码展示。"
+        ],
+        [
+          "E",
+          "E 是 40 年代老电影主题，没有科幻、特效或导览内容。"
+        ],
+        [
+          "F",
+          "F 是真实布景和外景游，没有科幻、特效或数码导览。"
+        ],
+        [
+          "G",
+          "有数码显示屏，但没有科幻电影，也没有「可下载的导览」—— 官方干扰项。"
+        ],
+        [
+          "H",
+          "H 是老爷车和城市街景，没有科幻、特效或导览。"
+        ]
+      ],
+      "tip": "三条需求：科幻片 + 特效数码展示 + 数码导览 —— 都在 B。",
+      "ana": {
+        "parts": [
+          [
+            "人物需求",
+            "science fiction films / digital displays about special effects / a digital guide"
+          ],
+          [
+            "对应文本 B",
+            "set far into the future / interactive videos on computers / 'tours' to download"
+          ]
+        ],
+        "gram": [
+          "Part 2：人物需求 ↔ 文本同义改写"
+        ],
+        "tr": "答案 B —— Movieworld。"
+      }
+    },
+    {
+      "n": 10,
+      "answer": "F",
+      "prompt": "第 10 题 —— 这个人最适合哪家制片厂？",
+      "opts": {
+        "A": "Grand Studios",
+        "B": "Movieworld",
+        "C": "Waverley Studios",
+        "D": "Screen World",
+        "E": "WestWays",
+        "F": "FilmFun",
+        "G": "Star Studios",
+        "H": "FilmPark"
+      },
+      "why": "官方答案 <b>F</b>。Ben：①对著名城市的场景如何造出来感兴趣（how scenes from famous cities are created）→ F「amazingly realistic sets, from the streets of New York to the historical sites of Rome」；②想参观厂外拍摄地（film locations outside the studios）→ F「a bus ride to places in the surrounding area which have appeared in films」；③想有能解答问题的导游陪同（accompanied by a guide who can answer his questions）→ F「with a staff member to tell you whatever you'd like to know」。",
+      "clues": [
+        "scenes from famous cities ↔ realistic sets of New York / Rome",
+        "locations outside the studios ↔ bus ride to places in the surrounding area",
+        "a guide who can answer questions ↔ a staff member to tell you whatever you'd like to know"
+      ],
+      "others": [
+        [
+          "A",
+          "A 有特效大本营和导游，但没有「著名城市场景」和厂外拍摄地。"
+        ],
+        [
+          "B",
+          "没有外景参观，也没有讲解员 —— 官方干扰项。"
+        ],
+        [
+          "C",
+          "没有厂外拍摄地游览，也没有讲解员 —— 官方干扰项。"
+        ],
+        [
+          "D",
+          "D 有老电影布景，但没有「城市场景如何造出来」和厂外外景游。"
+        ],
+        [
+          "E",
+          "E 是老电影和纪念品，没有外景参观和讲解员。"
+        ],
+        [
+          "G",
+          "有仿造的伦敦巴黎街景，但那是坐在巴士上「穿过」，不是参观真实外景，也没有能解答问题的导游 —— 官方干扰项。"
+        ],
+        [
+          "H",
+          "H 是坐车逛城市街景，不是参观真实拍摄地和厂外外景。"
+        ]
+      ],
+      "tip": "三条需求：著名城市场景 + 厂外拍摄地 + 能解答的导游 —— 都在 F。",
+      "ana": {
+        "parts": [
+          [
+            "人物需求",
+            "scenes from famous cities / film locations outside the studios / a guide who can answer questions"
+          ],
+          [
+            "对应文本 F",
+            "realistic sets of New York and Rome / bus ride to places in the surrounding area / a staff member to tell you whatever you'd like to know"
+          ]
+        ],
+        "gram": [
+          "Part 2：人物需求 ↔ 文本同义改写"
+        ],
+        "tr": "答案 F —— FilmFun。"
+      }
+    }
+  ],
+  "summaryTip": "Part 2 的关键：先把人物的每个需求拆成关键词（想要什么 / 谁陪他去 / 怎么订票），再逐条去文本里找「换一种说法」。正确的那家能把所有需求一一对上，干扰项总缺一条。"
+}

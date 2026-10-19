@@ -3618,19 +3618,19 @@
   ],
   "glossary": {
     "f": {
-      "pos": "字母",
-      "ipa": "",
-      "cn": "选项 f 的记号"
+      "pos": "n.",
+      "ipa": "/ef/",
+      "cn": "字母 f（选项/编号的标记）"
     },
     "g": {
-      "pos": "字母",
-      "ipa": "",
-      "cn": "选项 g 的记号"
+      "pos": "n.",
+      "ipa": "/dʒiː/",
+      "cn": "字母 g（选项/编号的标记）"
     },
     "h": {
-      "pos": "字母",
-      "ipa": "",
-      "cn": "选项 h 的记号"
+      "pos": "n.",
+      "ipa": "/eɪtʃ/",
+      "cn": "字母 h（选项/编号的标记）"
     },
     "apologise": {
       "pos": "v.",
@@ -3651,10 +3651,10 @@
       "note": "promise to do sth 答应做某事"
     },
     "offer": {
-      "pos": "v.",
+      "pos": "v./n.",
       "ipa": "/ˈɒfə/",
-      "cn": "主动提出",
-      "note": "offer to do sth 主动提出做某事"
+      "cn": "提供；出价；主动提出",
+      "note": "offer to do sth 主动提出做某事。"
     },
     "suggest": {
       "pos": "v.",
@@ -3715,7 +3715,7 @@
     "exercise": {
       "pos": "n.",
       "ipa": "/ˈeksəsaɪz/",
-      "cn": "练习"
+      "cn": "练习；运动"
     },
     "suggestion": {
       "pos": "n.",
@@ -3820,7 +3820,7 @@
     "mess": {
       "pos": "n.",
       "ipa": "/mes/",
-      "cn": "脏乱"
+      "cn": "脏乱，一团糟"
     },
     "kitchen": {
       "pos": "n.",
@@ -3898,14 +3898,14 @@
       "cn": "文学"
     },
     "stay": {
-      "pos": "v.",
+      "pos": "v./n.",
       "ipa": "/steɪ/",
-      "cn": "停留"
+      "cn": "停留；住；待"
     },
     "no": {
       "pos": "adv./det.",
       "ipa": "/nəʊ/",
-      "cn": "不；没有"
+      "cn": "不；没有（No + -ing 禁止做某事）"
     },
     "eat": {
       "pos": "v.",
@@ -3915,7 +3915,8 @@
     "down": {
       "pos": "adv./prep.",
       "ipa": "/daʊn/",
-      "cn": "向下"
+      "cn": "向下",
+      "note": "keep … down 把……压下来。"
     },
     "mountain": {
       "pos": "n.",
@@ -3932,7 +3933,7 @@
       "pos": "adv.",
       "ipa": "/wel/",
       "cn": "好；很",
-      "note": "well worth 非常值得"
+      "note": "well worth 非常值得。"
     },
     "worth": {
       "pos": "adj./n.",
@@ -4030,8 +4031,8 @@
     "set": {
       "pos": "v./n.",
       "ipa": "/set/",
-      "cn": "设置；一套",
-      "note": "set out 出发"
+      "cn": "设置；一套；布景",
+      "note": "set out 出发。"
     },
     "speaker": {
       "pos": "n.",
@@ -4041,7 +4042,7 @@
     "did": {
       "pos": "v.",
       "ipa": "/dɪd/",
-      "cn": "做（do 的过去式）"
+      "cn": "做（do 的过去式）；助动词"
     },
     "feel": {
       "pos": "v.",
@@ -4051,7 +4052,7 @@
     "main": {
       "pos": "adj.",
       "ipa": "/meɪn/",
-      "cn": "主要的"
+      "cn": "主要的（main entrance 正门）"
     },
     "began": {
       "pos": "v.",
@@ -4077,7 +4078,7 @@
     "wrong": {
       "pos": "adj.",
       "ipa": "/rɒŋ/",
-      "cn": "错误的"
+      "cn": "错误的；不对的"
     },
     "ocean": {
       "pos": "n.",
@@ -4092,7 +4093,7 @@
     "waverley": {
       "pos": "n.",
       "ipa": "/ˈweɪvəli/",
-      "cn": "Waverley（姓氏）"
+      "cn": "Waverley（姓氏；场馆名）"
     },
     "australia": {
       "pos": "n.",
@@ -4112,9 +4113,10 @@
       "note": "go sightseeing 去观光"
     },
     "along": {
-      "pos": "prep.",
+      "pos": "prep./adv.",
       "ipa": "/əˈlɒŋ/",
-      "cn": "沿着"
+      "cn": "沿着；一起",
+      "note": "bring along 带上；along the road 沿着路。"
     },
     "australian": {
       "pos": "adj./n.",
@@ -4134,7 +4136,7 @@
     "exhausted": {
       "pos": "adj.",
       "ipa": "/ɪɡˈzɔːstɪd/",
-      "cn": "精疲力竭的"
+      "cn": "精疲力竭的；exhausting 使人疲惫不堪的"
     },
     "website": {
       "pos": "n.",
@@ -4168,14 +4170,14 @@
       "cn": "司机，驾驶者"
     },
     "discount": {
-      "pos": "n./adj.",
+      "pos": "n.",
       "ipa": "/ˈdɪskaʊnt/",
-      "cn": "折扣；打折的"
+      "cn": "折扣；打折（的）"
     },
     "bus": {
       "pos": "n.",
       "ipa": "/bʌs/",
-      "cn": "公共汽车"
+      "cn": "公交车，公共汽车"
     },
     "ticket": {
       "pos": "n.",
@@ -4185,7 +4187,7 @@
     "stop": {
       "pos": "n./v.",
       "ipa": "/stɒp/",
-      "cn": "停靠站；停下"
+      "cn": "停靠站；车站；停下"
     },
     "kangaroo": {
       "pos": "n.",
@@ -4213,7 +4215,7 @@
       "pos": "v.",
       "ipa": "/kənˈsɪdə/",
       "cn": "考虑",
-      "note": "consider doing sth 考虑做某事"
+      "note": "consider doing sth 考虑做某事。"
     },
     "towards": {
       "pos": "prep.",
@@ -4228,12 +4230,12 @@
     "although": {
       "pos": "conj.",
       "ipa": "/ɔːlˈðəʊ/",
-      "cn": "虽然"
+      "cn": "虽然，尽管"
     },
     "while": {
       "pos": "conj./n.",
       "ipa": "/waɪl/",
-      "cn": "一会儿；当…时"
+      "cn": "一会儿；当……的时候"
     },
     "pull": {
       "pos": "v.",
@@ -4249,8 +4251,8 @@
     "once": {
       "pos": "adv.",
       "ipa": "/wʌns/",
-      "cn": "一次",
-      "note": "once more 再一次"
+      "cn": "一次；曾经",
+      "note": "once more 再一次。"
     },
     "bush": {
       "pos": "n.",
@@ -4273,9 +4275,9 @@
       "cn": "不太可能的"
     },
     "we'd": {
-      "pos": "缩写",
-      "ipa": "/wiːd/",
-      "cn": "we would 的缩写"
+      "pos": "contr.",
+      "ipa": "/wɪd/",
+      "cn": "= we would 或 we had"
     },
     "koala": {
       "pos": "n.",
@@ -4295,7 +4297,7 @@
     "discover": {
       "pos": "v.",
       "ipa": "/dɪˈskʌvə/",
-      "cn": "发现"
+      "cn": "发现；探索"
     },
     "roughly": {
       "pos": "adv.",
@@ -4335,8 +4337,8 @@
     "lack": {
       "pos": "n./v.",
       "ipa": "/læk/",
-      "cn": "缺乏",
-      "note": "lack of water 缺水"
+      "cn": "缺少（a lack of 缺少）",
+      "note": "lack of water 缺水。"
     },
     "guess": {
       "pos": "v./n.",
@@ -4361,7 +4363,8 @@
     "night": {
       "pos": "n.",
       "ipa": "/naɪt/",
-      "cn": "夜晚"
+      "cn": "夜晚",
+      "note": "by night 在夜里；the city that never sleeps 不夜城。"
     },
     "ready-made": {
       "pos": "adj.",
@@ -4376,7 +4379,8 @@
     "luxury": {
       "pos": "adj./n.",
       "ipa": "/ˈlʌkʃəri/",
-      "cn": "豪华的；奢华"
+      "cn": "豪华的；奢华",
+      "note": "luxury hotel 豪华酒店。"
     },
     "distance": {
       "pos": "n.",
@@ -4387,12 +4391,12 @@
     "rock": {
       "pos": "n.",
       "ipa": "/rɒk/",
-      "cn": "岩石"
+      "cn": "岩石，礁石"
     },
     "creature": {
       "pos": "n.",
       "ipa": "/ˈkriːtʃə/",
-      "cn": "生物，动物"
+      "cn": "生物，动物，人"
     },
     "sleep": {
       "pos": "v./n.",
@@ -4407,12 +4411,13 @@
     "worrying": {
       "pos": "adj.",
       "ipa": "/ˈwʌriɪŋ/",
-      "cn": "令人担心的"
+      "cn": "令人担心的（形容事物）"
     },
     "until": {
-      "pos": "conj./prep.",
+      "pos": "prep./conj.",
       "ipa": "/ənˈtɪl/",
-      "cn": "直到"
+      "cn": "直到……为止",
+      "note": "until + 时间点：直到某时（工作到 5.30 p.m.）。"
     },
     "frog": {
       "pos": "n.",
@@ -4441,19 +4446,19 @@
       "cn": "食物"
     },
     "there'd": {
-      "pos": "缩写",
+      "pos": "contr.",
       "ipa": "/ðeəd/",
-      "cn": "there would 的缩写"
+      "cn": "= there would 或 there had"
     },
     "nowhere": {
       "pos": "adv.",
       "ipa": "/ˈnəʊweə/",
-      "cn": "没有地方"
+      "cn": "没有地方（nowhere better 没有更好的）"
     },
     "trip": {
       "pos": "n.",
       "ipa": "/trɪp/",
-      "cn": "旅行"
+      "cn": "旅行，出行"
     },
     "himself": {
       "pos": "pron.",
@@ -4468,7 +4473,7 @@
     "opinion": {
       "pos": "n.",
       "ipa": "/əˈpɪnjən/",
-      "cn": "看法，意见"
+      "cn": "观点，意见，看法"
     },
     "might": {
       "pos": "modal",
@@ -4481,9 +4486,9 @@
       "cn": "博客"
     },
     "guide": {
-      "pos": "n.",
+      "pos": "n./v.",
       "ipa": "/ɡaɪd/",
-      "cn": "指南；向导"
+      "cn": "指南；向导、导游；引导"
     },
     "story": {
       "pos": "n.",
@@ -4493,7 +4498,8 @@
     "relax": {
       "pos": "v.",
       "ipa": "/rɪˈlæks/",
-      "cn": "放松"
+      "cn": "放松",
+      "note": "relaxing on a beach 在海滩上放松。"
     },
     "climbing": {
       "pos": "n./v.",
@@ -4503,13 +4509,13 @@
     "little": {
       "pos": "adj./det.",
       "ipa": "/ˈlɪtl/",
-      "cn": "小的；一点",
-      "note": "a little 一点"
+      "cn": "小的；一点（a little 一点）"
     },
     "rather": {
       "pos": "adv.",
       "ipa": "/ˈrɑːðə/",
-      "cn": "相当，颇"
+      "cn": "相当，颇；宁愿（would rather do sth 宁愿做某事）",
+      "note": "rather basic 相当基础（常带委婉的贬义）；would rather 宁愿。"
     },
     "angry": {
       "pos": "adj.",
@@ -4519,7 +4525,7 @@
     "situation": {
       "pos": "n.",
       "ipa": "/ˌsɪtʃuˈeɪʃn/",
-      "cn": "处境，情况"
+      "cn": "情况；处境；场景"
     },
     "admit": {
       "pos": "v.",
@@ -4541,17 +4547,17 @@
     "else": {
       "pos": "adv.",
       "ipa": "/els/",
-      "cn": "别的，其他"
+      "cn": "别的，其他的（else 常接在 someone/anyone 后）"
     },
     "top": {
       "pos": "n./adj.",
       "ipa": "/tɒp/",
-      "cn": "顶部；顶部的"
+      "cn": "顶部；顶部的；顶级的"
     },
     "tiring": {
       "pos": "adj.",
       "ipa": "/ˈtaɪərɪŋ/",
-      "cn": "累人的"
+      "cn": "累人的（形容事物）"
     },
     "cheap": {
       "pos": "adj.",
@@ -4585,9 +4591,9 @@
       "cn": "有吸引力的"
     },
     "she'd": {
-      "pos": "缩写",
+      "pos": "contr.",
       "ipa": "/ʃiːd/",
-      "cn": "she would 的缩写"
+      "cn": "= she would 或 she had"
     },
     "skilled": {
       "pos": "adj.",
@@ -4597,7 +4603,7 @@
     "less": {
       "pos": "adv./det.",
       "ipa": "/les/",
-      "cn": "更少"
+      "cn": "更少（little 的比较级）"
     },
     "comfortable": {
       "pos": "adj.",
@@ -4625,9 +4631,9 @@
       "cn": "餐厅"
     },
     "we're": {
-      "pos": "缩写",
+      "pos": "contr.",
       "ipa": "/wɪə/",
-      "cn": "we are 的缩写"
+      "cn": "= we are"
     },
     "pretty": {
       "pos": "adv./adj.",
@@ -4662,18 +4668,18 @@
     "huge": {
       "pos": "adj.",
       "ipa": "/hjuːdʒ/",
-      "cn": "巨大的"
+      "cn": "庞大的，巨大的"
     },
     "impressed": {
       "pos": "adj.",
       "ipa": "/ɪmˈprest/",
-      "cn": "印象深刻的",
-      "note": "be impressed 印象深刻"
+      "cn": "印象深刻的；深受感动的",
+      "note": "be impressed by 被打动；be impressed 印象深刻。"
     },
     "surprised": {
       "pos": "adj.",
       "ipa": "/səˈpraɪzd/",
-      "cn": "惊讶的"
+      "cn": "惊讶的（形容人）；surprising 令人惊讶的"
     },
     "known": {
       "pos": "v.",
@@ -4693,9 +4699,9 @@
       "cn": "露营；营地"
     },
     "haven't": {
-      "pos": "缩写",
+      "pos": "contr.",
       "ipa": "/ˈhævnt/",
-      "cn": "have not 的缩写"
+      "cn": "= have not"
     },
     "seen": {
       "pos": "v.",
@@ -4710,7 +4716,7 @@
     "silly": {
       "pos": "adj.",
       "ipa": "/ˈsɪli/",
-      "cn": "傻的，好笑的"
+      "cn": "傻的，愚蠢的（It was silly of me to do that 我那样做很傻）"
     },
     "wouldn't": {
       "pos": "缩写",
@@ -4750,7 +4756,7 @@
     "change": {
       "pos": "v./n.",
       "ipa": "/tʃeɪndʒ/",
-      "cn": "改变；零钱"
+      "cn": "改变；换；零钱"
     },
     "quickly": {
       "pos": "adv.",
@@ -4770,12 +4776,12 @@
     "led": {
       "pos": "v.",
       "ipa": "/led/",
-      "cn": "通向（lead 的过去式）"
+      "cn": "带领；通向（lead 的过去式/过去分词）"
     },
     "heard": {
       "pos": "v.",
       "ipa": "/hɜːd/",
-      "cn": "听见（hear 的过去式/过去分词）"
+      "cn": "听见，听说（hear 的过去式/过去分词）"
     },
     "climb": {
       "pos": "v.",
@@ -4794,8 +4800,8 @@
     },
     "used to": {
       "pos": "词组",
-      "ipa": "/juːst tə/",
-      "cn": "习惯于（be used to doing sth；注意 to 是介词）"
+      "ipa": "/ˈjuːst tə/",
+      "cn": "过去常常（used to do sth）；习惯于（be used to doing sth——注意 to 是介词）"
     },
     "make a suggestion": {
       "pos": "词组",

@@ -17,13 +17,24 @@
         → {ok, wordId}
      POST /api/favs/add     {phone, kind:"sentence", sentence, translation, analysis, sourceTitle?}
         → {ok, sentenceId, hash}
+     POST /api/favs/add     {phone, kind:"phrase",   phrase, meaning, usageNote?, example, exampleCn, no?, sourceTitle?}
+        → {ok, phraseId}
      POST /api/favs/remove  {phone, kind:"word",     word}
                        或   {phone, kind:"sentence", sentence}
+                       或   {phone, kind:"phrase",   phrase}
         → {ok, removed}
      POST /api/mistakes     {phone, slug, q, chosen, correct}
         → {ok}                            错题登记（同题重复错只计数 +1）
      GET  /api/mistakes?phone=138…
         → {ok, items:[{slug, q, chosen, correct, count, ts}]}
+     POST /api/phrase-mistakes {phone, no, phrase, stem, chosen, correct}
+        → {ok}                            词组选择题错题（存原题 + 选项文本）
+     GET  /api/phrase-mistakes?phone=138…
+        → {ok, items:[{no, phrase, stem, chosen, correct, count, ts}]}
+     POST /api/phrase-review {phone, no, phrase, level, ok}
+        → {ok, level, days}               词组复习（间隔重复：对升级、错回 1 级）
+     GET  /api/phrase-review?phone=138…[&all=1][&limit=20]
+        → {ok, items:[{no, phrase, level, reps, wrongs, due, meaning, example, exampleCn, use}]}
      GET  /api/health       → {ok, db:"up"}
 
    ⚠ 认证口径：除了注册/登录校验密码，其余接口仍按手机号认人（软认证）。
@@ -41,7 +52,7 @@ import { fileURLToPath } from "node:url";
 import {
   validPhone, normPhone, normWord, normSentence,
   normNickname, validNickname, validPassword, verifyPassword, hashPassword,
-  SLUG_RE,
+  SLUG_RE, srsNext,
   WORD_MAX, TEXT_MAX_BYTES, TITLE_MAX, fitText, fitChars, byteLen
 } from "./lib.mjs";
 
@@ -224,7 +235,29 @@ export function createApp(db, opts) {
         return res.json({ ok: true, sentenceId: r.sentenceId, hash: r.hash });
       }
 
-      return bad(res, "kind 必须是 word 或 sentence");
+      /* 词组：词组原文是唯一键（pet_phrase.phrase），内容按 varchar 长度截断 */
+      if (b.kind === "phrase") {
+        const phrase = normSentence(b.phrase);
+        if (!phrase) return bad(res, "缺 phrase");
+        if (phrase.length > 128) return bad(res, "phrase 太长（最多 128 字符）");
+        const r = await db.addPhraseFav({
+          phone: phone,
+          phrase: phrase,
+          no: parseInt(b.no, 10) || 0,
+          alt: fitChars(b.alt || "", 128),
+          meaning: fitText(b.meaning || ""),
+          usageNote: fitText(b.usageNote || ""),
+          example: fitText(b.example || ""),
+          exampleCn: fitText(b.exampleCn || ""),
+          blank: fitChars(b.blank || "", 128),
+          why: fitText(b.why || ""),
+          trap: fitText(b.trap || ""),
+          sourceTitle: fitText(b.sourceTitle || "", TITLE_MAX)
+        });
+        return res.json({ ok: true, phraseId: r.phraseId });
+      }
+
+      return bad(res, "kind 必须是 word / sentence / phrase");
     } catch (e) { next(e); }
   });
 
@@ -247,7 +280,80 @@ export function createApp(db, opts) {
         const r = await db.removeSentenceFav({ phone: phone, sentence: sentence });
         return res.json({ ok: true, removed: r.removed });
       }
-      return bad(res, "kind 必须是 word 或 sentence");
+      if (b.kind === "phrase") {
+        const phrase = normSentence(b.phrase);
+        if (!phrase) return bad(res, "缺 phrase");
+        if (phrase.length > 128) return bad(res, "phrase 太长（最多 128 字符）");
+        const r = await db.removePhraseFav({ phone: phone, phrase: phrase });
+        return res.json({ ok: true, removed: r.removed });
+      }
+      return bad(res, "kind 必须是 word / sentence / phrase");
+    } catch (e) { next(e); }
+  });
+
+  /* ---------- 词组错题（选择题） ----------
+     和阅读错题同一套形状，但存的是「原题 + 选项文本」（词组题没有 A/B/C 字母）。 */
+  app.post("/api/phrase-mistakes", async function (req, res, next) {
+    try {
+      const b = req.body || {};
+      const phone = phoneOf(res, b.phone);
+      if (!phone) return;
+      const no = parseInt(b.no, 10);
+      if (!(no >= 1 && no <= 254)) return bad(res, "词组题号不合法（1-254）");
+      const phrase = normSentence(b.phrase);
+      if (!phrase) return bad(res, "缺 phrase");
+      const chosen = fitChars(b.chosen || "", 128);
+      const correct = fitChars(b.correct || "", 128);
+      if (!chosen || !correct) return bad(res, "缺 chosen / correct");
+      await db.addPhraseMistake({
+        phone: phone, no: no, phrase: phrase,
+        stem: fitText(b.stem || ""),
+        chosen: chosen, chosenK: fitChars(b.chosenK || "", 1),
+        correct: correct, correctK: fitChars(b.correctK || "", 1)
+      });
+      res.json({ ok: true });
+    } catch (e) { next(e); }
+  });
+
+  app.get("/api/phrase-mistakes", async function (req, res, next) {
+    try {
+      const phone = phoneOf(res, req.query && req.query.phone);
+      if (!phone) return;
+      const r = await db.listPhraseMistakes(phone);
+      res.json({ ok: true, items: r.items });
+    } catch (e) { next(e); }
+  });
+
+  /* ---------- 词组复习（间隔重复） ----------
+     答对升级、答错回 1 级；间隔由 lib.mjs 的 srsNext 算（1/2/4/7/15/30 天），
+     服务端把它落库，客户端只管「问 - 答 - 报」。 */
+  app.post("/api/phrase-review", async function (req, res, next) {
+    try {
+      const b = req.body || {};
+      const phone = phoneOf(res, b.phone);
+      if (!phone) return;
+      const no = parseInt(b.no, 10);
+      if (!(no >= 1 && no <= 254)) return bad(res, "词组题号不合法（1-254）");
+      const phrase = normSentence(b.phrase);
+      if (!phrase) return bad(res, "缺 phrase");
+      const ok = !!b.ok;
+      const s = srsNext(b.level, ok);
+      await db.addPhraseReview({
+        phone: phone, no: no, phrase: phrase,
+        level: s.level, days: s.days, ok: ok
+      });
+      res.json({ ok: true, level: s.level, days: s.days });
+    } catch (e) { next(e); }
+  });
+
+  app.get("/api/phrase-review", async function (req, res, next) {
+    try {
+      const phone = phoneOf(res, req.query && req.query.phone);
+      if (!phone) return;
+      const limit = parseInt((req.query && req.query.limit) || "0", 10) || 0;
+      const all = String((req.query && req.query.all) || "") === "1";
+      const r = await db.listPhraseReviews(phone, { limit: limit, all: all });
+      res.json({ ok: true, items: r.items });
     } catch (e) { next(e); }
   });
 

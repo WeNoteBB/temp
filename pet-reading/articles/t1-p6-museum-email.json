@@ -2067,9 +2067,9 @@
       "cn": "Anna（女子名）"
     },
     "another": {
-      "pos": "det.",
+      "pos": "det./pron.",
       "ipa": "/əˈnʌðə/",
-      "cn": "另一个；再一个"
+      "cn": "另一个；再一个（+ 单数可数名词）"
     },
     "answer": {
       "pos": "n./v.",
@@ -2085,12 +2085,12 @@
       "pos": "adv.",
       "ipa": "/əˈpɑːt/",
       "cn": "分开；隔开",
-      "note": "apart from = 除了…之外。"
+      "note": "apart from = 除了……之外。"
     },
     "apart from": {
       "pos": "词组",
       "ipa": "/əˈpɑːt frəm/",
-      "cn": "除了…（之外）",
+      "cn": "除了……（之外）",
       "note": "= except；Nothing except / apart from a table and chairs."
     },
     "apple": {
@@ -2199,10 +2199,9 @@
       "note": "brush your teeth 刷牙。"
     },
     "call": {
-      "pos": "v.",
+      "pos": "n./v.",
       "ipa": "/kɔːl/",
-      "cn": "打电话给；叫",
-      "note": "call sb 给某人打电话。"
+      "cn": "电话；打电话；叫（call sb 给某人打电话）"
     },
     "can": {
       "pos": "modal",
@@ -2305,7 +2304,7 @@
     "except": {
       "pos": "prep.",
       "ipa": "/ɪkˈsept/",
-      "cn": "除…之外",
+      "cn": "除……之外",
       "note": "except 后面不接 from；except for 才带 for。"
     },
     "exchange": {
@@ -2317,8 +2316,7 @@
     "expression": {
       "pos": "n.",
       "ipa": "/ɪkˈspreʃn/",
-      "cn": "表达；用语",
-      "note": "linking expressions 连接用语。"
+      "cn": "表达（方式）；说法，用语"
     },
     "fact": {
       "pos": "n.",
@@ -2387,9 +2385,9 @@
       "cn": "乐趣；有趣的"
     },
     "future": {
-      "pos": "n.",
+      "pos": "n./adj.",
       "ipa": "/ˈfjuːtʃə/",
-      "cn": "未来；将来",
+      "cn": "未来；将来的",
       "note": "in future 今后（= from now on）。"
     },
     "get": {
@@ -2497,7 +2495,7 @@
     "in fact": {
       "pos": "词组",
       "ipa": "/ɪn ˈfækt/",
-      "cn": "事实上，其实",
+      "cn": "事实上，其实（实际上）",
       "note": "用来补充或纠正前面的说法，是重要的逻辑衔接词。"
     },
     "in order to": {
@@ -2553,16 +2551,15 @@
       "note": "复数 lives。"
     },
     "link": {
-      "pos": "v.",
+      "pos": "v./n.",
       "ipa": "/lɪŋk/",
       "cn": "连接；联系",
       "note": "linking words 连接词。"
     },
     "lives": {
-      "pos": "n.",
-      "ipa": "/laɪvz/",
-      "cn": "生活（life 的复数）",
-      "note": "of their lives 他们一生中。"
+      "pos": "n./v.",
+      "ipa": "/laɪvz/（名词）；/lɪvz/（动词）",
+      "cn": "生活（life 的复数，读 /laɪvz/）；居住（live 的第三人称单数，读 /lɪvz/）"
     },
     "long": {
       "pos": "adj./adv.",
@@ -2611,7 +2608,7 @@
     "most": {
       "pos": "adv./det.",
       "ipa": "/məʊst/",
-      "cn": "最；最多；大多数",
+      "cn": "最（最高级）；最多；大多数",
       "note": "the most exciting 最激动人心的（最高级）。"
     },
     "much": {
@@ -2639,7 +2636,7 @@
     "nothing": {
       "pos": "pron.",
       "ipa": "/ˈnʌθɪŋ/",
-      "cn": "没有什么"
+      "cn": "没有什么，什么都没有"
     },
     "now": {
       "pos": "adv.",
@@ -3023,9 +3020,9 @@
       "note": "because of the traffic 因为交通（拥堵）。"
     },
     "train": {
-      "pos": "n.",
+      "pos": "n./v.",
       "ipa": "/treɪn/",
-      "cn": "火车",
+      "cn": "火车；训练",
       "note": "作动词是「训练、培训」。"
     },
     "training": {
@@ -3034,9 +3031,9 @@
       "cn": "训练"
     },
     "turn": {
-      "pos": "v.",
+      "pos": "v./n.",
       "ipa": "/tɜːn/",
-      "cn": "转，变成",
+      "cn": "转，转弯；变成",
       "note": "turn out 结果是；turn on/off 开关。"
     },
     "us": {
@@ -3045,10 +3042,10 @@
       "cn": "我们（宾格）"
     },
     "use": {
-      "pos": "n./v.",
-      "ipa": "/juːs/",
+      "pos": "v./n.",
+      "ipa": "/juːz/",
       "cn": "使用",
-      "note": "for customers' use 供顾客使用"
+      "note": "动词读 /juːz/；名词读 /juːs/（for customers' use 供顾客使用）。"
     },
     "various": {
       "pos": "adj.",
@@ -3169,13 +3166,13 @@
     "you'd": {
       "pos": "contr.",
       "ipa": "/juːd/",
-      "cn": "你…（= you would / you had）",
+      "cn": "= you would 或 you had",
       "note": "you'd better = you had better 你最好。"
     },
     "you'll": {
       "pos": "contr.",
       "ipa": "/juːl/",
-      "cn": "你将会（= you will）"
+      "cn": "= you will（你将会）"
     },
     "young": {
       "pos": "adj.",

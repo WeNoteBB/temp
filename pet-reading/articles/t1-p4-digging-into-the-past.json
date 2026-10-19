@@ -1149,10 +1149,10 @@
   ],
   "glossary": {
     "dig up": {
-      "pos": "phr.",
+      "pos": "词组",
       "ipa": "/ˌdɪɡ ˈʌp/",
-      "cn": "挖出，掘起",
-      "note": "动词 + 副词型短语。代词作宾语要夹中间：dig <b>it</b> up。"
+      "cn": "挖出，掘出（挖掘，找到）",
+      "note": "动词 + 副词型短语。代词作宾语要夹中间：dig it up。"
     },
     "as soon as": {
       "pos": "phr.",
@@ -1173,7 +1173,7 @@
       "note": "deep 的比较级是 deeper。引申义：深入研究。"
     },
     "in the end": {
-      "pos": "phr.",
+      "pos": "词组",
       "ipa": "/ɪn ði ˈend/",
       "cn": "最后，终于",
       "note": "= finally。注意区分 at the end of（在…的末尾，后接名词）。"
@@ -1241,7 +1241,7 @@
     "a bit": {
       "pos": "phr.",
       "ipa": "/ə ˈbɪt/",
-      "cn": "有点儿，稍微",
+      "cn": "一点儿，稍微（有一点，修饰形容词）",
       "note": "修饰形容词或动词，语气比 a little 更口语。a bit of + 不可数名词。"
     },
     "the whole area": {
@@ -1421,7 +1421,7 @@
       "pos": "n.",
       "ipa": "/dʒɒb/",
       "cn": "工作，活儿，任务",
-      "note": "可数。指具体的“一份活儿“；work 泛指”工作“，不可数。"
+      "note": "可数。指具体的「一份活儿」；work 泛指「工作」，不可数。"
     },
     "land": {
       "pos": "n.",
@@ -1492,7 +1492,7 @@
       "pos": "n.",
       "ipa": "/əˈmaʊnt/",
       "cn": "数量，金额",
-      "note": "修饰不可数名词：a large amount of water。"
+      "note": "修饰不可数名词：a large amount of water；a regular amount 一笔定期的钱。"
     },
     "amounts": {
       "pos": "n.",
@@ -1559,7 +1559,7 @@
     "ordinary": {
       "pos": "adj.",
       "ipa": "/ˈɔːdnri/",
-      "cn": "普通的，平常的",
+      "cn": "普通的，平常的，平淡无奇的",
       "note": "= common, usual。反义：extraordinary 非凡的。"
     },
     "everyday": {
@@ -1583,7 +1583,7 @@
       "pos": "adj./adv.",
       "ipa": "/hɑːd/",
       "cn": "困难的；努力地；硬的",
-      "note": "作副词是“努力地”；<b>hardly</b> 却是“几乎不”，别搞混。"
+      "note": "作副词是「努力地」；hardly 却是「几乎不」，别搞混。"
     },
     "deeper": {
       "pos": "adj./adv.",
@@ -1626,7 +1626,7 @@
     "remove": {
       "pos": "v.",
       "ipa": "/rɪˈmuːv/",
-      "cn": "移走，清除，去掉"
+      "cn": "移走，清除，去掉（remove sth. from sth. 把某物从某物拿开）"
     },
     "prepare": {
       "pos": "v.",
@@ -1734,7 +1734,7 @@
       "note": "用于一般过去时；before 用于过去完成时。"
     },
     "those": {
-      "pos": "pron.",
+      "pos": "pron./det.",
       "ipa": "/ðəʊz/",
       "cn": "那些（that 的复数）"
     },
@@ -1773,10 +1773,10 @@
       "note": "文中是「漏掉」：didn't miss anything 什么都没漏。"
     },
     "cover": {
-      "pos": "v.",
+      "pos": "n./v.",
       "ipa": "/ˈkʌvə/",
-      "cn": "覆盖，盖住",
-      "note": "be covered in/with 被…覆盖着，表状态。"
+      "cn": "封面；覆盖；盖住",
+      "note": "be covered in/with 被…覆盖着（表状态）。"
     },
     "covered": {
       "pos": "v.",

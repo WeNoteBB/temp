@@ -235,6 +235,7 @@
 
   function boot() {
     if (S.mountTheme) S.mountTheme($("tglTheme"));
+  if (S.mountZoom) S.mountZoom();
     wireTop();
     wireTiles();
     wireModal();

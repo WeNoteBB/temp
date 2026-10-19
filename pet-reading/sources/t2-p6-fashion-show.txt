@@ -1,0 +1,54 @@
+# t2-p6-fashion-show · 素材与批注存档（2026-10-19）
+
+## 来源
+
+- 原题：`剑桥PET 官方模考题精讲讲练 _67-70.pdf` 后 2 页（书 P68–P69）
+  - 4 倍渲染校对：`t2p56/src-3.png`（P68）· `src-4.png`（P69）
+- 笔记（手写批注）：扫描第 86–87 页（= 书 P68–69）
+- 官方答案：书 P203 = 全本 PDF 第 204 页 → `t2p56/ans-204.png`
+
+## 官方答案（逐题核对）
+
+- 讨论题：1 six / 2 one
+- ①（关系代词改正）：1 who→which（that 也可）/ 2 which→where / 3 that→who / 4 which→whose /
+  5 which→who（that 也可）/ 6 where→when / 7 who→whose / 8 that→where
+- ②（填一词）：1 who / 2 until / 3 have / 4 case（in case）/ 5 in（take part in）/ 6 so
+- ③（分类）：1 relative pronoun / 2 until（preposition, conjunction）/ 3 verb form /
+  4 part of linking expression（reason, in case）/ 5 in（preposition）/ 6 so（linking word, purpose）
+- ④（雪地骑行）：1 which / 2 to（similar to）/ 3 instead（instead of）/ 4 therefore /
+  5 so（so that）；每空的词性分类同官方
+- 真题 27–32：**27 have（had 也可）/ 28 they / 29 took / 30 There / 31 by / 32 no**
+  （官方理由：缺助动词 have been involved；they 指家长朋友；take part in 过去时 took；
+  存在句 There were；被动 created by；there's no doubt）
+
+## 手写批注清单（→ ana.note）
+
+P68：
+- 关系代词/副词总表：which（指代物）· who（指代人）· that（指代人或者物）· whose（指代人或者物的）·
+  whom（指代人）；关系副词 when / where / why
+- ② 手写答案（蓝）：who / unless·until / have / case / in / so
+- ③ 手写分类（红）：1 relative pronoun 2 linking word (conditional)/until (preposition, conjunction) 3 verb form
+  4 part of linking expression (reason) 5 in (preposition) 6 linking word (purpose)
+- ④ 答案（蓝）：which / to / instead / therefore / so + 词性分类
+
+P69：
+- reporter 记者，通讯员 · aim 目标 · display 展示，陈列 · involved 参与，涉及 · impressed 深受感动的 ·
+  定语从句（The models that took part…）· creative 有创意的 · such as 例如 ·
+  recycled materials 回收材料 · scenery 风景，景色，舞台布景 · spectacular 壮观的，令人惊叹的，惊人的 ·
+  created by 由……创作 · Head of Design 设计主管 · absolutely 绝对地，完全地 · no doubt 毫无疑问 ·
+  extremely 极度，非常 · talented 有天资的，有才能的
+
+## 图片（2 张 → assets/img/）
+
+| 文件 | 来源 | 裁切框 (left, top, w, h) |
+|---|---|---|
+| t2-p6-snowbike.png | src-3（P68） | 1545, 2080, 830, 640 |
+| t2-p6-fashion.png | src-4（P69） | 1560, 840, 790, 440 |
+
+## 数据/工程备注
+
+- 训练题号：① 138–145（每题 5 枚胶囊 which/who/where/when/whose）· ② 146–151（开放填空，gap 1–6）·
+  ③ 152–157（六排分类，行标 = 答案词）· ④ 158–162（开放填空，gap 1–5）；真题 27–32（开放填空）。
+- ⚠ 词条键必须小写（verify 词组检查用精确键）：「an English course」「the Art Department」已小写化。
+- ⚠ 句型 chip 静态坑：修 5 句（强调句加 主语/谓语、②/④ 的从句句补 主语/谓语）。
+- 跨篇冲突 40 个词一次统一到全部 12 篇（含 lives 名词/动词两读、used to 两种结构合并）。

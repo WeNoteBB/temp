@@ -1,0 +1,6294 @@
+{
+  "slug": "t1-p2-art-courses",
+  "book": "剑桥PET 官方模考题精讲讲练",
+  "label": "Reading Part 2",
+  "title": "Training Test 1",
+  "note": "答案为逐题对照书后 P183 官方答案核对一致；训练①②③④的答案与解析同 P183；「析」里的笔记来自带手写批注的 PET Trainers 版（书 P14–P16）（2026-10-18）",
+  "inlineQuiz": true,
+  "passage": {
+    "words": 972,
+    "sentences": 88,
+    "paragraphs": [
+      [
+        {
+          "s": "Training Test 1 · Reading Part 2",
+          "hard": false,
+          "tr": "训练测试 1 · 阅读第 2 部分。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题行：<b>Training Test 1 · Reading Part 2</b>（训练测试 1 · 阅读第 2 部分）",
+            "parts": [
+              [
+                "标题",
+                "Training Test 1 —— 训练测试编号"
+              ],
+              [
+                "标题",
+                "Reading Part 2 —— 阅读第 2 部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式省略句"
+            ],
+            "tip": "这一部分练的是：把五个人的需求与八段短文逐一配对（人物—文本匹配题）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "In this part you:",
+          "hard": false,
+          "tr": "在这一部分里，你要：",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>In this part you:</b>（这一部分里你要做的事）",
+            "parts": [
+              [
+                "介词短语",
+                "In this part —— 在这一部分里"
+              ],
+              [
+                "主语",
+                "you —— 你（指考生）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "In this part you: 是阅读各部分的固定开场白"
+            ],
+            "tip": "下面列的是两项任务：读什么、做什么题。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "read — five descriptions of people and eight short texts on a variety of subjects.",
+          "hard": false,
+          "tr": "读——五段人物描述和八段题材各异的短文。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>read five descriptions of people and eight short texts</b>（读……）",
+            "parts": [
+              [
+                "谓语",
+                "read —— 祈使句：读"
+              ],
+              [
+                "宾语 1",
+                "<code>five descriptions of people</code> —— 五段对人物的描述"
+              ],
+              [
+                "宾语 2",
+                "<code>eight short texts</code> —— 八段短文"
+              ],
+              [
+                "后置定语",
+                "<code>on a variety of subjects</code> —— 关于各种各样的主题（a variety of 各种各样的）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "a variety of + 复数名词：各种各样的"
+            ],
+            "tip": "八段短文主题各异 —— 配对时不能只找相同单词，要找「换了一种说法」的同义表达。",
+            "note": [
+              {
+                "k": "a variety of",
+                "cn": "各种各样的；多种不同的"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "match — what each person requires with information in one of the eight texts.",
+          "hard": false,
+          "tr": "配对——把每个人的需求与八段文本之一里的信息对应起来。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "祈使句：<b>match what each person requires with information …</b>（把需求与信息配对）",
+            "parts": [
+              [
+                "谓语",
+                "match —— 配对"
+              ],
+              [
+                "宾语从句",
+                "<code>what each person requires</code> —— 每个人需要什么（requires 需要）"
+              ],
+              [
+                "介词短语",
+                "<code>with information in one of the eight texts</code> —— 与八段文本之一里的信息"
+              ]
+            ],
+            "clauses": [
+              "what 引导的宾语从句作 match 的宾语"
+            ],
+            "gram": [
+              "match A with B：把 A 与 B 配对"
+            ],
+            "tip": "配对题的做题动作：人在左、信息在右，一对一配完不能重复。",
+            "note": [
+              {
+                "k": "require",
+                "cn": "需要；要求"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "FOCUS: PARAPHRASING",
+          "hard": false,
+          "tr": "重点：同义转述（换一种说法）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>FOCUS: PARAPHRASING</b>（重点：同义转述）",
+            "parts": [
+              [
+                "名词",
+                "FOCUS —— 重点"
+              ],
+              [
+                "名词",
+                "PARAPHRASING —— 用不同的话表达相同的意思"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "paraphrase（动词/名词）：同义转述"
+            ],
+            "tip": "Part 2 的灵魂就是同义替换——原文说「坐公交」，文本里说「附近有公交站」。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "① Match the expressions about people with the expressions about apartments.",
+          "hard": false,
+          "tr": "① 把关于人物的表达与关于公寓的表达配对。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Match the expressions about people with the expressions about apartments.</b>",
+            "parts": [
+              [
+                "宾语",
+                "<code>the expressions about people</code> —— 关于人物（需求）的表达"
+              ],
+              [
+                "介词短语",
+                "<code>with the expressions about apartments</code> —— 与关于公寓的表达"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "match … with …：把……与……配对"
+            ],
+            "tip": "两栏是一一对应的六对同义表达；先认「人需要什么」，再找公寓的卖点。",
+            "note": [
+              {
+                "k": "expression",
+                "cn": "表达（方式）；说法"
+              },
+              {
+                "k": "apartment",
+                "cn": "公寓"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Information about apartments",
+          "hard": false,
+          "tr": "关于公寓的信息。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>Information about apartments</b>（关于公寓的信息）",
+            "parts": [
+              [
+                "名词",
+                "Information —— 信息"
+              ],
+              [
+                "介词短语",
+                "about apartments —— 关于公寓"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "名词短语作栏目标题"
+            ],
+            "tip": "右栏是公寓的「卖点」，将作为配对的选项（a–f）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "a extremely low prices",
+          "hard": false,
+          "tr": "a 极低的价格。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "名词短语：<b>extremely low prices</b>（极低的价格）",
+            "parts": [
+              [
+                "名词短语",
+                "<code>extremely low prices</code> —— 极低的价格（extremely 极其，very 的加强版）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "extremely + 形容词：极其……"
+            ],
+            "tip": "对应「cannot afford to spend much」（花不起太多钱）。",
+            "note": [
+              {
+                "k": "extremely",
+                "cn": "极其、非常"
+              },
+              {
+                "k": "price",
+                "cn": "价格（extremely low prices 价格极低）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "b has its own gym",
+          "hard": false,
+          "tr": "b 有自己的健身房。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>has its own gym</b>（有自己的健身房）",
+            "parts": [
+              [
+                "谓语",
+                "has —— 有"
+              ],
+              [
+                "宾语",
+                "<code>its own gym</code> —— 它自己的健身房（own 自己的）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "its own + 名词：它自己的……"
+            ],
+            "tip": "对应「likes to keep fit」（喜欢保持健康）。",
+            "note": [
+              {
+                "k": "gym",
+                "cn": "健身房（has its own gym 自带健身房）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "c is in a quiet neighbourhood",
+          "hard": false,
+          "tr": "c 在一个安静的街区里。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>is in a quiet neighbourhood</b>（在安静的街区里）",
+            "parts": [
+              [
+                "系动词",
+                "is —— 是/位于"
+              ],
+              [
+                "表语",
+                "<code>in a quiet neighbourhood</code> —— 在一个安静的街区里"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "quiet 安静的（反义 noisy）"
+            ],
+            "tip": "对应「dislikes noise」（不喜欢噪音）。",
+            "note": [
+              {
+                "k": "neighbourhood",
+                "cn": "街区，社区；quiet neighbourhood 安静的社区"
+              }
+            ]
+          }
+        },
+        {
+          "s": "d next to a leisure centre open every evening",
+          "hard": false,
+          "tr": "d 紧挨着一个每晚营业的休闲中心。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "介词短语：<b>next to a leisure centre open every evening</b>",
+            "parts": [
+              [
+                "介词短语",
+                "<code>next to</code> —— 紧挨着、在……旁边"
+              ],
+              [
+                "名词",
+                "<code>a leisure centre</code> —— 一个休闲中心"
+              ],
+              [
+                "后置修饰",
+                "<code>open every evening</code> —— 每晚都营业的"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "next to：紧邻；open 作形容词：开着的/营业的"
+            ],
+            "tip": "对应「works until 5.30 p.m.」（工作到 5 点半）——晚上才有空去。",
+            "note": [
+              {
+                "k": "leisure centre",
+                "cn": "休闲中心（有运动设施）"
+              },
+              {
+                "k": "next to",
+                "cn": "紧挨着，在……旁边"
+              }
+            ]
+          }
+        },
+        {
+          "s": "e bus stop nearby",
+          "hard": false,
+          "tr": "e 附近有公交站。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "名词短语：<b>bus stop nearby</b>（附近有公交站）",
+            "parts": [
+              [
+                "名词",
+                "<code>bus stop</code> —— 公交站"
+              ],
+              [
+                "副词",
+                "<code>nearby</code> —— 在附近"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "nearby 作副词/形容词：在附近"
+            ],
+            "tip": "对应「always uses public transport」（总是坐公交）。",
+            "note": [
+              {
+                "k": "bus stop",
+                "cn": "公交站"
+              },
+              {
+                "k": "nearby",
+                "cn": "在附近"
+              }
+            ]
+          }
+        },
+        {
+          "s": "f opportunities to meet new people",
+          "hard": false,
+          "tr": "f 结识新朋友的机会。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "名词短语：<b>opportunities to meet new people</b>（结识新朋友的机会）",
+            "parts": [
+              [
+                "名词",
+                "<code>opportunities</code> —— 机会（opportunity 的复数）"
+              ],
+              [
+                "不定式定语",
+                "<code>to meet new people</code> —— 去结识新朋友"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "opportunity to do sth：做某事的机会"
+            ],
+            "tip": "对应「is very sociable」（善于交际）。",
+            "note": [
+              {
+                "k": "opportunity",
+                "cn": "机会（opportunities to meet new people 结识新朋友的机会）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Information about people looking for apartments",
+          "hard": false,
+          "tr": "关于找公寓的人的信息。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>Information about people looking for apartments</b>",
+            "parts": [
+              [
+                "名词",
+                "Information —— 信息"
+              ],
+              [
+                "后置定语",
+                "<code>about people looking for apartments</code> —— 关于正在找公寓的人"
+              ]
+            ],
+            "clauses": [
+              "looking for apartments 现在是分词短语作定语"
+            ],
+            "gram": [
+              "现在分词短语作后置定语"
+            ],
+            "tip": "左栏六条「需求」就是我们下面要逐条作答的 1–6。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "1 always uses public transport",
+          "hard": false,
+          "tr": "1 总是使用公共交通。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>always uses public transport</b>（总是用公共交通）",
+            "parts": [
+              [
+                "状语",
+                "always —— 总是"
+              ],
+              [
+                "谓语",
+                "uses —— 使用（use 的第三人称单数）"
+              ],
+              [
+                "宾语",
+                "<code>public transport</code> —— 公共交通"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "一般现在时第三人称单数 + always"
+            ],
+            "tip": "同义替换：用公交 → 公寓「附近有公交站」（e）。",
+            "note": [
+              {
+                "k": "public transport",
+                "cn": "公共交通（总是用公共交通）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "2 cannot afford to spend much",
+          "hard": false,
+          "tr": "2 花不起太多钱。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "否定谓语：<b>cannot afford to spend much</b>（负担不起花很多钱）",
+            "parts": [
+              [
+                "谓语",
+                "<code>cannot afford</code> —— 负担不起（afford to do sth）"
+              ],
+              [
+                "宾语",
+                "<code>to spend much</code> —— 花很多钱（much 指钱，省略了 money）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "afford to do sth：负担得起做某事（常与 can/cannot 连用）"
+            ],
+            "tip": "同义替换：花不起钱 → 公寓「价格极低」（a）。",
+            "note": [
+              {
+                "k": "afford",
+                "cn": "负担得起（cannot afford to spend much 花不起太多钱）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "3 dislikes noise",
+          "hard": false,
+          "tr": "3 不喜欢噪音。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>dislikes noise</b>（不喜欢噪音）",
+            "parts": [
+              [
+                "谓语",
+                "dislikes —— 不喜欢"
+              ],
+              [
+                "宾语",
+                "noise —— 噪音（不可数）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "dislike + 名词：不喜欢……（反义 like）"
+            ],
+            "tip": "同义替换：不喜欢噪音 → 公寓「在安静的街区」（c）。",
+            "note": [
+              {
+                "k": "noise",
+                "cn": "噪音（dislikes noise 不喜欢吵）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "4 is very sociable",
+          "hard": false,
+          "tr": "4 非常善于交际。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>is very sociable</b>（很爱社交）",
+            "parts": [
+              [
+                "系动词",
+                "is —— 是"
+              ],
+              [
+                "表语",
+                "<code>very sociable</code> —— 非常善于交际的"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "sociable 形容词：好社交的（social 是「社会的/社交的」——人物性格用 sociable）"
+            ],
+            "tip": "同义替换：爱社交 → 公寓「有机会结识新朋友」（f）。",
+            "note": [
+              {
+                "k": "sociable",
+                "cn": "善于交际的，合群的"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "5 likes to keep fit",
+          "hard": false,
+          "tr": "5 喜欢保持健康。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>likes to keep fit</b>（喜欢健身）",
+            "parts": [
+              [
+                "谓语",
+                "likes —— 喜欢"
+              ],
+              [
+                "宾语",
+                "<code>to keep fit</code> —— 保持健康（keep fit 固定搭配）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "like to do sth；keep fit 保持健康"
+            ],
+            "tip": "同义替换：保持健康 → 公寓「有自己的健身房」（b）。",
+            "note": [
+              {
+                "k": "keep fit",
+                "cn": "保持健康（锻炼）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "6 works until 5.30 p.m.",
+          "hard": false,
+          "tr": "6 工作到下午 5 点半。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "主谓 + 时间：<b>works until 5.30 p.m.</b>（工作到下午五点半）",
+            "parts": [
+              [
+                "谓语",
+                "works —— 工作"
+              ],
+              [
+                "时间状语",
+                "<code>until 5.30 p.m.</code> —— 直到下午 5 点半"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "until + 时间点：直到……为止"
+            ],
+            "tip": "同义替换：工作到五点半 → 公寓「旁边休闲中心每晚营业」（d）——晚上才有时间去。",
+            "note": [
+              {
+                "k": "until",
+                "cn": "直到……为止（工作到下午 5 点半）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "FOCUS: IDENTIFYING KEY WORDS",
+          "hard": false,
+          "tr": "重点：找出关键词。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>FOCUS: IDENTIFYING KEY WORDS</b>（重点：辨认关键词）",
+            "parts": [
+              [
+                "动名词",
+                "IDENTIFYING —— 辨认、找出"
+              ],
+              [
+                "名词",
+                "KEY WORDS —— 关键词"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "identify（动词）：确认、辨认"
+            ],
+            "tip": "关键词 = 决定「合不合适」的那几个词。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "② Read this description of someone who wants to go away on holiday.",
+          "hard": false,
+          "tr": "② 读这段对某个想出门度假的人的描述。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Read this description of someone …</b>（读这段描述）",
+            "parts": [
+              [
+                "谓语",
+                "Read —— 读"
+              ],
+              [
+                "宾语",
+                "<code>this description of someone</code> —— 这段对某个人的描述"
+              ],
+              [
+                "定语从句",
+                "<code>who wants to go away on holiday</code> —— 想出门度假的"
+              ]
+            ],
+            "clauses": [
+              "who 引导定语从句修饰 someone"
+            ],
+            "gram": [
+              "go away on holiday：出门度假"
+            ],
+            "tip": "下面 Hannah 的这段话里有四个「需求信号」，圈出来。"
+          }
+        },
+        {
+          "s": "Underline the words and phrases that tell you exactly what she wants.",
+          "hard": false,
+          "tr": "在那些准确说明她想要什么词和短语下面划横线。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Underline the words and phrases …</b>（给……划横线）",
+            "parts": [
+              [
+                "谓语",
+                "Underline —— 在……下划线"
+              ],
+              [
+                "宾语",
+                "<code>the words and phrases</code> —— 词和短语"
+              ],
+              [
+                "定语从句",
+                "<code>that tell you exactly what she wants</code> —— 告诉你她到底想要什么的"
+              ]
+            ],
+            "clauses": [
+              "that 引导定语从句；what she wants 是宾语从句"
+            ],
+            "gram": [
+              "underline（动词）：在……下画线"
+            ],
+            "tip": "本页已把官方答案的划线标出来（红色下划线），点句子可以看讲解。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Hannah wants to go to a really lively place where everything stays open late.",
+          "hard": false,
+          "ul": "really lively place where everything stays open late",
+          "tr": "Hannah 想去一个真正热闹、什么都开得很晚的地方。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>Hannah wants to go to a really lively place</b>（Hannah 想去一个很热闹的地方）",
+            "parts": [
+              [
+                "主语",
+                "Hannah —— 人名"
+              ],
+              [
+                "谓语",
+                "<code>wants to go to</code> —— 想去（want to do sth）"
+              ],
+              [
+                "宾语",
+                "<code>a really lively place</code> —— 一个真正热闹的地方"
+              ],
+              [
+                "定语从句",
+                "<code>where everything stays open late</code> —— 那里一切都开得很晚"
+              ]
+            ],
+            "clauses": [
+              "where 引导定语从句修饰 place"
+            ],
+            "gram": [
+              "lively 热闹的、充满活力的（注意不是 live）",
+              "stay open：保持营业"
+            ],
+            "tip": "划线的两个信号：lively（要热闹）+ stays open late（要开得晚）——找同义替换用。",
+            "note": [
+              {
+                "k": "lively",
+                "cn": "热闹的，充满活力的"
+              }
+            ]
+          }
+        },
+        {
+          "s": "It should also offer some top-class cultural attractions and high-quality accommodation.",
+          "hard": false,
+          "ul": "top-class cultural attractions and high-quality accommodation",
+          "tr": "它还应该提供一些一流的文化景点和高质量的住宿。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>It should also offer some top-class cultural attractions and high-quality accommodation.</b>",
+            "parts": [
+              [
+                "主语",
+                "It —— 指那个地方"
+              ],
+              [
+                "谓语",
+                "<code>should also offer</code> —— 还应该提供"
+              ],
+              [
+                "宾语 1",
+                "<code>some top-class cultural attractions</code> —— 一些一流的文化景点"
+              ],
+              [
+                "宾语 2",
+                "<code>and high-quality accommodation</code> —— 以及高质量的住宿"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "top-class 一流的；high-quality 高质量的",
+              "accommodation 不可数：住宿"
+            ],
+            "tip": "划线的两个信号：top-class cultural attractions（要有文化景点）+ high-quality accommodation（住宿要好）。",
+            "note": [
+              {
+                "k": "attraction",
+                "cn": "景点（top-class cultural attractions 一流的文化景点）"
+              },
+              {
+                "k": "accommodation",
+                "cn": "住宿（不可数；high-quality accommodation 高质量的住宿）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "FOCUS: MATCHING KEY WORDS WITH PARAPHRASES",
+          "hard": false,
+          "tr": "重点：把关键词与同义转述对上号。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>FOCUS: MATCHING KEY WORDS WITH PARAPHRASES</b>",
+            "parts": [
+              [
+                "动名词",
+                "MATCHING —— 匹配"
+              ],
+              [
+                "名词",
+                "KEY WORDS —— 关键词"
+              ],
+              [
+                "名词",
+                "PARAPHRASES —— 同义转述"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "match A with B；paraphrase 同义转述"
+            ],
+            "tip": "拿着刚才划的关键词，去三段假期里找「说的是同一件事」的那段。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "③ Read these descriptions of three holidays and decide which of A–C would be the most suitable for Hannah.",
+          "hard": false,
+          "tr": "③ 读这三段假期描述，判断 A–C 里哪个最适合 Hannah。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Read … and decide which of A–C would be the most suitable for Hannah.</b>",
+            "parts": [
+              [
+                "谓语 1",
+                "Read —— 读"
+              ],
+              [
+                "谓语 2",
+                "<code>decide which of A–C would be the most suitable for Hannah</code> —— 判断 A–C 哪个最适合 Hannah"
+              ],
+              [
+                "短语",
+                "<code>the most suitable for</code> —— 对……最合适的"
+              ]
+            ],
+            "clauses": [
+              "which of A–C 引导宾语从句"
+            ],
+            "gram": [
+              "suitable for sb：适合某人"
+            ],
+            "tip": "答案的唯一标准是「Hannah 的四条需求」，不是「哪段看起来最好」。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Study tours",
+          "hard": false,
+          "tr": "文化游学。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "课程名：<b>Study tours</b>（学习之旅）",
+            "parts": [
+              [
+                "名词",
+                "Study tours —— 以学习为目的的旅行"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "study tour 游学"
+            ],
+            "tip": "选项 A 的标题；看下面的具体安排。",
+            "note": [
+              {
+                "k": "study tour",
+                "cn": "游学（以学习为目的的旅行）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Travel to a country famous for its culture and visit cities of historical interest, attending lessons and meeting local experts.",
+          "hard": true,
+          "tr": "去一个以文化闻名的国家旅行，参观有历史名胜的城市，参加课程并会见当地专家。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句（两串动作）：<b>Travel to a country … and visit cities …</b>",
+            "parts": [
+              [
+                "谓语 1",
+                "Travel to —— 去……旅行"
+              ],
+              [
+                "名词",
+                "<code>a country famous for its culture</code> —— 以文化闻名的国家"
+              ],
+              [
+                "谓语 2",
+                "<code>visit cities of historical interest</code> —— 参观有历史名胜的城市"
+              ],
+              [
+                "伴随状语",
+                "<code>attending lessons and meeting local experts</code> —— 参加课程、见当地专家"
+              ]
+            ],
+            "clauses": [
+              "现在分词短语作伴随状语"
+            ],
+            "gram": [
+              "be famous for：以……闻名",
+              "of historical interest：有历史名胜的"
+            ],
+            "tip": "Hannah 要的「文化景点」这里只提到「历史城市」——但住宿是青年旅舍、不是高质量酒店。",
+            "note": [
+              {
+                "k": "be famous for",
+                "cn": "以……著名"
+              },
+              {
+                "k": "historical interest",
+                "cn": "历史名胜"
+              },
+              {
+                "k": "attend",
+                "cn": "参加（attend lessons 上课）"
+              },
+              {
+                "k": "expert",
+                "cn": "专家（local experts 当地专家）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "To keep costs down you stay in inexpensive hostels.",
+          "hard": false,
+          "tr": "为了压低费用，你住在不贵的青年旅舍里。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "目的状语前置：<b>To keep costs down</b> + 主句 you stay in inexpensive hostels",
+            "parts": [
+              [
+                "目的状语",
+                "<code>To keep costs down</code> —— 为了降低成本"
+              ],
+              [
+                "谓语",
+                "stay in —— 住在"
+              ],
+              [
+                "宾语",
+                "<code>inexpensive hostels</code> —— 不贵的青年旅舍"
+              ]
+            ],
+            "clauses": [
+              "不定式 to do 表目的"
+            ],
+            "gram": [
+              "keep costs down：压低花费",
+              "hostel 青年旅舍（比 hotel 便宜）"
+            ],
+            "tip": "住宿是「不贵的旅舍」——直接违背 Hannah 要的 high-quality accommodation。",
+            "note": [
+              {
+                "k": "keep costs down",
+                "cn": "降低成本，压低花费"
+              },
+              {
+                "k": "inexpensive",
+                "cn": "不贵的（expensive 反义）"
+              },
+              {
+                "k": "hostel",
+                "cn": "青年旅舍，招待所"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Favourite destinations include Italy for art and Austria for classical music.",
+          "hard": false,
+          "tr": "最受欢迎的目的地包括以艺术著称的意大利和以古典音乐著称的奥地利。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>Favourite destinations include Italy and Austria</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Favourite destinations</code> —— 最受欢迎的目的地"
+              ],
+              [
+                "谓语",
+                "include —— 包括"
+              ],
+              [
+                "宾语",
+                "<code>Italy for art and Austria for classical music</code> —— 以艺术闻名的意大利、以古典音乐闻名的奥地利"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "favourite 最受欢迎的",
+              "for 表示「以……著称」"
+            ],
+            "tip": "文化成分拉满，可惜住宿与「开得晚」对不上——配对题要四条需求全对才算。",
+            "note": [
+              {
+                "k": "classical music",
+                "cn": "古典音乐"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Sunshine destinations",
+          "hard": false,
+          "tr": "阳光度假地。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "课程名：<b>Sunshine destinations</b>（阳光目的地）",
+            "parts": [
+              [
+                "名词",
+                "Sunshine —— 阳光"
+              ],
+              [
+                "名词",
+                "destinations —— 目的地"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "destination 目的地"
+            ],
+            "tip": "选项 B 的标题：主打海边晒太阳。",
+            "note": [
+              {
+                "k": "destination",
+                "cn": "目的地"
+              }
+            ]
+          }
+        },
+        {
+          "s": "This seaside holiday includes your flights abroad, transport to the (rather basic) hotel, evening entertainment and meals.",
+          "hard": true,
+          "tr": "这个海滨假期包含你的出国机票、去（相当基本的）酒店的交通、晚间娱乐和餐食。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>This seaside holiday includes flights, transport, entertainment and meals.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>This seaside holiday</code> —— 这个海滨假期"
+              ],
+              [
+                "谓语",
+                "includes —— 包含"
+              ],
+              [
+                "宾语",
+                "<code>your flights abroad</code> —— 你的出国机票"
+              ],
+              [
+                "宾语",
+                "<code>transport to the (rather basic) hotel</code> —— 到（相当基础的）酒店的接送"
+              ],
+              [
+                "宾语",
+                "<code>evening entertainment and meals</code> —— 晚间娱乐和餐食"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "seaside 海边的；flight 航班；（rather basic）括号里作者自己对酒店的评价"
+            ],
+            "tip": "旅馆「rather basic（相当基础）」+ 小镇「没什么可做」——热闹、文化、好住宿三条全不满足。",
+            "note": [
+              {
+                "k": "seaside",
+                "cn": "海滨，海边的"
+              },
+              {
+                "k": "flight",
+                "cn": "航班（flights abroad 出国航班）"
+              },
+              {
+                "k": "entertainment",
+                "cn": "娱乐（evening entertainment 晚间娱乐）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "There’s not much to do in the local town, but if you enjoy relaxing on a beautiful beach, it’s perfect!",
+          "hard": true,
+          "tr": "当地小镇上没什么可做的，但如果你喜欢在美丽的海滩上放松，那就太完美了！",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "并列句：<b>There’s not much to do … but … it’s perfect!</b>",
+            "parts": [
+              [
+                "表语",
+                "<code>not much to do</code> —— 没什么可做的事（there be 句型的表语部分）"
+              ],
+              [
+                "前半句",
+                "<code>There’s not much to do in the local town</code> —— 小镇上没什么可做的"
+              ],
+              [
+                "条件从句",
+                "<code>if you enjoy relaxing on a beautiful beach</code> —— 如果你喜欢在海滩放松"
+              ],
+              [
+                "主句",
+                "<code>it’s perfect</code> —— 那它就太完美了"
+              ]
+            ],
+            "clauses": [
+              "there be 句型；if 条件句"
+            ],
+            "gram": [
+              "relax 放松（relaxing 动名词）",
+              "there is not much to do：没什么可做的"
+            ],
+            "tip": "「not much to do（没什么可做）」和 Hannah 要的「热闹、开得晚」正相反。",
+            "note": [
+              {
+                "k": "relax",
+                "cn": "放松（relaxing on a beach 在海滩上放松）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "City breaks",
+          "hard": false,
+          "tr": "城市短假。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "课程名：<b>City breaks</b>（城市短假）",
+            "parts": [
+              [
+                "名词",
+                "City —— 城市"
+              ],
+              [
+                "名词",
+                "breaks —— 短假（a short holiday）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "a city break 城市短假（周末去大城市玩）"
+            ],
+            "tip": "选项 C 的标题：答案就在这一段。",
+            "note": [
+              {
+                "k": "city break",
+                "cn": "城市短假"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Stay in a luxury hotel in one of the world’s most exciting cities: New York.",
+          "hard": false,
+          "ul": "a luxury hotel in one of the world’s most exciting cities",
+          "tr": "住在世界上最激动人心的城市之一的豪华酒店里：纽约。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Stay in a luxury hotel in one of the world’s most exciting cities</b>",
+            "parts": [
+              [
+                "谓语",
+                "Stay in —— 住在"
+              ],
+              [
+                "名词",
+                "<code>a luxury hotel</code> —— 一家豪华酒店"
+              ],
+              [
+                "地点",
+                "<code>in one of the world’s most exciting cities</code> —— 在世界最激动人心的城市之一"
+              ],
+              [
+                "同位语",
+                ": New York —— 即纽约"
+              ]
+            ],
+            "clauses": [
+              "one of the + 最高级 + 复数名词"
+            ],
+            "gram": [
+              "luxury 豪华的；exciting 激动人心的"
+            ],
+            "tip": "「豪华酒店」= high-quality accommodation；「最激动人心的城市」= lively。",
+            "note": [
+              {
+                "k": "luxury",
+                "cn": "豪华的（luxury hotel 豪华酒店）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Enjoy the world-famous Museum of Modern Art and the theatres of Broadway.",
+          "hard": false,
+          "ul": "the world-famous Museum of Modern Art and the theatres of Broadway",
+          "tr": "欣赏世界闻名的现代艺术博物馆和百老汇的剧院。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Enjoy the Museum of Modern Art and the theatres of Broadway.</b>",
+            "parts": [
+              [
+                "谓语",
+                "Enjoy —— 欣赏、享受"
+              ],
+              [
+                "宾语",
+                "<code>the world-famous Museum of Modern Art</code> —— 世界闻名的现代艺术博物馆"
+              ],
+              [
+                "宾语",
+                "<code>the theatres of Broadway</code> —— 百老汇的剧院"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "world-famous 世界闻名的",
+              "Broadway 百老汇（纽约剧院区）"
+            ],
+            "tip": "艺术馆 + 剧院 = top-class cultural attractions（一流的文化景点）。",
+            "note": [
+              {
+                "k": "world-famous",
+                "cn": "世界闻名的"
+              },
+              {
+                "k": "theatre",
+                "cn": "剧院（the theatres of Broadway 百老汇剧院）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Then, by night, have fun in the city that never sleeps!",
+          "hard": false,
+          "ul": "by night, have fun in the city that never sleeps",
+          "tr": "然后，到了晚上，在这座不眠之城里尽情玩乐！",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>have fun in the city that never sleeps!</b>",
+            "parts": [
+              [
+                "时间状语",
+                "<code>Then, by night</code> —— 然后，在夜里"
+              ],
+              [
+                "谓语",
+                "<code>have fun</code> —— 玩得开心"
+              ],
+              [
+                "地点",
+                "<code>in the city that never sleeps</code> —— 在这座不眠之城"
+              ]
+            ],
+            "clauses": [
+              "that never sleeps 定语从句修饰 city"
+            ],
+            "gram": [
+              "by night：在夜里",
+              "the city that never sleeps：纽约的别名「不夜城」"
+            ],
+            "tip": "「不夜城」= everything stays open late（开得晚）——四条需求全对上，答案 C。",
+            "note": [
+              {
+                "k": "never sleeps",
+                "cn": "不眠（the city that never sleeps 不夜城）"
+              }
+            ]
+          }
+        }
+      ],
+      [],
+      [
+        {
+          "s": "④ In pairs, underline the expressions in the correct text (A, B or C) that have similar meanings to the words and phrases you underlined in Exercise 2.",
+          "hard": true,
+          "tr": "④ 两人一组，在选对的文本（A、B 或 C）里，把与练习 2 中你划的词和短语意思相近的表达也划出来。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>underline the expressions in the correct text …</b>",
+            "parts": [
+              [
+                "状语",
+                "<code>In pairs</code> —— 两人一组"
+              ],
+              [
+                "谓语",
+                "underline —— 划出"
+              ],
+              [
+                "宾语",
+                "<code>the expressions in the correct text (A, B or C)</code> —— 选对的文本里的表达"
+              ],
+              [
+                "定语从句",
+                "<code>that have similar meanings to the words and phrases you underlined in Exercise 2</code> —— 与练习 2 里你划的词和短语意思相近的"
+              ]
+            ],
+            "clauses": [
+              "that 引导定语从句；you underlined in Exercise 2 是省略了 that 的定语从句"
+            ],
+            "gram": [
+              "have similar meanings to：与……意思相近"
+            ],
+            "tip": "本页已把笔记版上的手写划线复原到 C 文里（红色下划线），对着看就知道怎么对应。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Exam Practice Test 1 · Reading Part 2",
+          "hard": false,
+          "tr": "考试实践测试 1 · 阅读第 2 部分。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题行：<b>Exam Practice Test 1 · Reading Part 2</b>（考试实践测试 1 · 阅读第 2 部分）",
+            "parts": [
+              [
+                "标题",
+                "Exam Practice Test 1 —— 考试实践测试编号"
+              ],
+              [
+                "标题",
+                "Reading Part 2 —— 阅读第 2 部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式省略句"
+            ],
+            "tip": "下面就是真题：五个人匹配八段课程介绍，题号从 6 开始。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Questions 6–10",
+          "hard": false,
+          "tr": "第 6–10 题。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题：<b>Questions 6–10</b>（第 6–10 题）",
+            "parts": [
+              [
+                "名词",
+                "Questions —— 题目"
+              ],
+              [
+                "数字",
+                "6–10 —— 第 6 到第 10 题"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "真题部分题号连续编号"
+            ],
+            "tip": "一共五道题，每题选一个字母（A–H）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "For each question, choose the correct answer.",
+          "hard": false,
+          "tr": "每题选出一个正确答案。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>choose the correct answer</b>（选出正确答案）",
+            "parts": [
+              [
+                "状语",
+                "<code>For each question</code> —— 对每一道题"
+              ],
+              [
+                "谓语",
+                "choose —— 选择"
+              ],
+              [
+                "宾语",
+                "<code>the correct answer</code> —— 正确的答案"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "祈使句：N 选一"
+            ],
+            "tip": "注意：这里的选项是八段课程文本 A–H。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "The young people below all want to find an art course to attend.",
+          "hard": false,
+          "tr": "下面这些年轻人都想找一门可以参加的艺术课程。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>The young people … want to find an art course.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>The young people below</code> —— 下面的年轻人"
+              ],
+              [
+                "谓语",
+                "<code>all want to find</code> —— 都想找"
+              ],
+              [
+                "宾语",
+                "<code>an art course to attend</code> —— 一门可以参加的艺术课程"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "attend a course：参加课程"
+            ],
+            "tip": "五个人各有一条「课程需求线」，逐条去课程表里找。"
+          }
+        },
+        {
+          "s": "On the next page there are descriptions of eight art courses.",
+          "hard": false,
+          "tr": "下一页有八门艺术课程的介绍。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "there be 句型：<b>there are descriptions of eight art courses</b>",
+            "parts": [
+              [
+                "地点状语",
+                "<code>On the next page</code> —— 在下一页"
+              ],
+              [
+                "主语",
+                "<code>descriptions of eight art courses</code> —— 八门艺术课程的介绍"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "there be 句型；下一面有八段文本 A–H"
+            ],
+            "tip": "八段课程在下一页（本页顺序往下就是）。",
+            "note": [
+              {
+                "k": "next page",
+                "cn": "下一页（书上的「下面」）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Decide which art course would be the most suitable for the people below.",
+          "hard": false,
+          "tr": "判断哪门艺术课程最适合下面的这些人。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Decide which art course would be the most suitable for the people below.</b>",
+            "parts": [
+              [
+                "谓语",
+                "Decide —— 判断"
+              ],
+              [
+                "宾语从句",
+                "<code>which art course would be the most suitable for the people below</code> —— 哪门课程对下面的人最合适"
+              ]
+            ],
+            "clauses": [
+              "which 引导宾语从句；would be 表推测"
+            ],
+            "gram": [
+              "the most suitable for sb：对某人最合适"
+            ],
+            "tip": "「最合适」= 需求逐条对上，缺一条都不行。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Rafa wants to produce artwork to support his art college application.",
+          "hard": false,
+          "tr": "Rafa 想创作艺术作品，来支持他的艺术学院申请。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>Rafa wants to produce artwork</b>（Rafa 想创作艺术作品）",
+            "parts": [
+              [
+                "主语",
+                "Rafa —— 人名"
+              ],
+              [
+                "谓语",
+                "<code>wants to produce</code> —— 想创作"
+              ],
+              [
+                "宾语",
+                "<code>artwork</code> —— 艺术作品（不可数）"
+              ],
+              [
+                "目的状语",
+                "<code>to support his art college application</code> —— 为了支持他的美院申请"
+              ]
+            ],
+            "clauses": [
+              "不定式 to support 表目的"
+            ],
+            "gram": [
+              "produce artwork 创作艺术作品；application 申请"
+            ],
+            "tip": "选课的两个需求：① 作品要能用于申请（靠谱的成果）② 具体见下一句。",
+            "note": [
+              {
+                "k": "artwork",
+                "cn": "艺术作品（总称，不可数）"
+              },
+              {
+                "k": "application",
+                "cn": "申请（art college application 艺术学院申请）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "He’s written stories, which he’d like to publish, and wants to learn how to include drawings in them, without using a computer.",
+          "hard": true,
+          "tr": "他写了些故事，想把它们出版，还想学着把画加进去——不用电脑。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "并列谓语：<b>He’s written stories … and wants to learn how to include drawings in them</b>",
+            "parts": [
+              [
+                "谓语 1",
+                "<code>He’s written stories</code> —— 他写了故事（现在完成时）"
+              ],
+              [
+                "定语从句",
+                "<code>which he’d like to publish</code> —— 他想出版的（非限制性）"
+              ],
+              [
+                "谓语 2",
+                "<code>wants to learn how to include drawings in them</code> —— 想学着把画放进故事里"
+              ],
+              [
+                "方式状语",
+                "<code>without using a computer</code> —— 不用电脑"
+              ]
+            ],
+            "clauses": [
+              "which 引导非限制性定语从句（见总结页的语法批注）"
+            ],
+            "gram": [
+              "include A in B：把 A 加进 B",
+              "without doing：不借助……"
+            ],
+            "tip": "不用电脑 + 想做成书 → 只有 B「不必用技术、做成小书」对得上。",
+            "note": [
+              {
+                "k": "publish",
+                "cn": "出版，发表"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Simona enjoys creating art on her computer, and wants to find ways to improve the posters she makes on it.",
+          "hard": false,
+          "tr": "Simona 喜欢在电脑上创作艺术，想找到方法来改进她在电脑上做的海报。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "并列谓语：<b>enjoys creating art on her computer, and wants to find ways …</b>",
+            "parts": [
+              [
+                "谓语 1",
+                "enjoys creating art —— 喜欢在电脑上创作（enjoy doing）"
+              ],
+              [
+                "谓语 2",
+                "<code>wants to find ways to improve the posters</code> —— 想找到改进海报的方法"
+              ],
+              [
+                "定语从句",
+                "<code>she makes on it</code> —— 她在电脑上做的"
+              ]
+            ],
+            "clauses": [
+              "enjoy doing sth；定语从句 she makes on it 修饰 posters"
+            ],
+            "gram": [
+              "improve 提高、改进；poster 海报"
+            ],
+            "tip": "两条需求：用电脑 + 改进海报 → 选项要含数字设计。",
+            "note": [
+              {
+                "k": "improve",
+                "cn": "提高，改进（improve the posters 改进海报）"
+              },
+              {
+                "k": "poster",
+                "cn": "海报"
+              }
+            ]
+          }
+        },
+        {
+          "s": "She also wants to share what she’s done with other students on the course.",
+          "hard": false,
+          "tr": "她还想把自己的作品分享给课程上的其他学生。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>She wants to share what she’s done with other students.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>wants to share</code> —— 想分享"
+              ],
+              [
+                "宾语从句",
+                "<code>what she’s done</code> —— 她做过的东西"
+              ],
+              [
+                "介词短语",
+                "<code>with other students on the course</code> —— 和课程上的其他学生"
+              ]
+            ],
+            "clauses": [
+              "what 引导宾语从句"
+            ],
+            "gram": [
+              "share sth with sb：与某人分享某物"
+            ],
+            "tip": "「分享给同学」→ H 的「把作品传上工作室网站、看同学的意见」。",
+            "note": [
+              {
+                "k": "share",
+                "cn": "分享（share sth with sb 与某人分享某物）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Andrei wants to try different painting techniques, and have trips to see the work of famous painters, to get ideas for his own pictures.",
+          "hard": true,
+          "tr": "Andrei 想尝试不同的绘画技巧，还想有旅行去看看著名画家的作品，为自己的画寻找灵感。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "并列宾语：<b>wants to try different techniques, and have trips …</b>",
+            "parts": [
+              [
+                "谓语",
+                "wants to—— 想"
+              ],
+              [
+                "宾语 1",
+                "<code>try different painting techniques</code> —— 尝试不同的绘画技巧"
+              ],
+              [
+                "宾语 2",
+                "<code>have trips to see the work of famous painters</code> —— 出行去看著名画家的作品"
+              ],
+              [
+                "目的状语",
+                "<code>to get ideas for his own pictures</code> —— 为自己的画找灵感"
+              ]
+            ],
+            "clauses": [
+              "不定式表目的"
+            ],
+            "gram": [
+              "technique 技巧；trip 出行"
+            ],
+            "tip": "三条需求：不同技巧 + 看名家作品 + 户外画 → D 全部满足。",
+            "note": [
+              {
+                "k": "technique",
+                "cn": "技巧，技术（painting techniques 绘画技巧）"
+              },
+              {
+                "k": "idea",
+                "cn": "想法，灵感（get ideas 找灵感）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "He’d also like to try painting outdoors.",
+          "hard": false,
+          "tr": "他还想在户外画画。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>He’d like to try painting outdoors.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>He’d like to try</code> —— 他想尝试"
+              ],
+              [
+                "宾语",
+                "<code>painting outdoors</code> —— 在户外画画"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "outdoors 在户外（outdoor 户外的）"
+            ],
+            "tip": "户外元素 → D「在工作室或公园作画」。",
+            "note": [
+              {
+                "k": "outdoors",
+                "cn": "在户外"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Nicola enjoys printing by hand.",
+          "hard": false,
+          "tr": "Nicola 喜欢手工印制。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>Nicola enjoys printing by hand.</b>",
+            "parts": [
+              [
+                "谓语",
+                "enjoys printing —— 喜欢印制（enjoy doing）"
+              ],
+              [
+                "方式状语",
+                "<code>by hand</code> —— 用手工"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "by hand：用手工（对比 by machine）"
+            ],
+            "tip": "手工印制 → 找含 printed designs 的课程（F）。",
+            "note": [
+              {
+                "k": "by hand",
+                "cn": "用手工（printing by hand 手工印制）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "She wants to print the patterns she’s created onto different materials, for her mother to make into clothes, and also learn basic printing techniques to use at home.",
+          "hard": true,
+          "tr": "她想把自己创作的花样印到不同的材料上，给妈妈做成衣服，还想学基本的印制技巧好在家里用。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>She wants to print the patterns … onto different materials</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>wants to print</code> —— 想印"
+              ],
+              [
+                "宾语",
+                "<code>the patterns she’s created</code> —— 她创作的花样"
+              ],
+              [
+                "介词短语",
+                "<code>onto different materials</code> —— 到不同的材料上"
+              ],
+              [
+                "目的状语",
+                "<code>for her mother to make into clothes</code> —— 好让妈妈做成衣服"
+              ],
+              [
+                "并列宾语",
+                "<code>and also learn basic printing techniques to use at home</code> —— 还学在家能用的基本印法"
+              ]
+            ],
+            "clauses": [
+              "she’s created 是省略 that 的定语从句"
+            ],
+            "gram": [
+              "print A onto B：把 A 印到 B 上",
+              "make A into B：把 A 做成 B"
+            ],
+            "tip": "「印到布料上 + 在家也能用」→ F「把图案转印到棉和丝绸、方法课后自己能用（缝纫项目）」。",
+            "note": [
+              {
+                "k": "pattern",
+                "cn": "花样，图案"
+              },
+              {
+                "k": "material",
+                "cn": "材料"
+              },
+              {
+                "k": "make into",
+                "cn": "把……制成（make A into B 把 A 做成 B）"
+              },
+              {
+                "k": "basic",
+                "cn": "基本的（basic printing techniques 基本印制技巧）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Karl enjoys taking photos of his family, and wants to use them as a basis for the art he produces.",
+          "hard": false,
+          "tr": "Karl 喜欢给家人拍照，想用这些照片作为他创作艺术的基础。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "并列谓语：<b>enjoys taking photos …, and wants to use them as a basis …</b>",
+            "parts": [
+              [
+                "谓语 1",
+                "enjoys taking photos of his family —— 喜欢给家人拍照"
+              ],
+              [
+                "谓语 2",
+                "<code>wants to use them as a basis</code> —— 想把它们当基础"
+              ],
+              [
+                "定语从句",
+                "<code>the art he produces</code> —— 他创作的艺术（省略 that）"
+              ]
+            ],
+            "clauses": [
+              "he produces 是省略 that 的定语从句"
+            ],
+            "gram": [
+              "use A as a basis for B：把 A 当作 B 的基础"
+            ],
+            "tip": "照片当素材 → 找「用你带来的东西」的课程（A 的 portraits 课用你带的作品/照片）。",
+            "note": [
+              {
+                "k": "basis",
+                "cn": "基础（use … as a basis for 把……作为基础）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "He’d like to go somewhere that also offers private lessons.",
+          "hard": false,
+          "tr": "他还想去一个也提供私人课程的地方。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>He’d like to go somewhere that offers private lessons.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>He’d like to go</code> —— 他想去"
+              ],
+              [
+                "地点",
+                "somewhere —— 某个地方"
+              ],
+              [
+                "定语从句",
+                "<code>that also offers private lessons</code> —— 也提供私人课程的"
+              ]
+            ],
+            "clauses": [
+              "that 引导定语从句修饰 somewhere"
+            ],
+            "gram": [
+              "private lessons 私人课程"
+            ],
+            "tip": "「私人课程」→ A 的 one-to-one sessions（一对一）——答案 A。",
+            "note": [
+              {
+                "k": "private",
+                "cn": "私人的（private lessons 私人课程）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Art Courses",
+          "hard": false,
+          "tr": "艺术课程。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题：<b>Art Courses</b>（艺术课程）",
+            "parts": [
+              [
+                "名词",
+                "Art Courses —— 艺术课程（八门课程的总标题）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式名词短语"
+            ],
+            "tip": "以下八段 A–H 就是五道题的选项池。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Get Artistic",
+          "hard": false,
+          "tr": "A 走进艺术。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "课程名：<b>Get Artistic</b>（变得有艺术范儿）",
+            "parts": [
+              [
+                "动词短语",
+                "Get Artistic —— 变得有艺术气息"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "get + 形容词：变得……"
+            ],
+            "tip": "课程 A 的标题。",
+            "note": [
+              {
+                "k": "get artistic",
+                "cn": "变得有艺术气息（课程名）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Teachers here always have ideas to get you drawing, painting and printing – but you can use your own material, too.",
+          "hard": false,
+          "tr": "这里的老师总有办法让你动手画画、上色、印制——不过你也可以用你自己的材料。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主句：<b>Teachers always have ideas</b> + 结果：<b>get you drawing …</b>",
+            "parts": [
+              [
+                "主语",
+                "Teachers here —— 这里的老师"
+              ],
+              [
+                "谓语",
+                "<code>always have ideas</code> —— 总有主意、有办法"
+              ],
+              [
+                "宾补结构",
+                "<code>to get you drawing, painting and printing</code> —— 让你动笔画画、上色、印制"
+              ],
+              [
+                "转折",
+                "<code>but you can use your own material, too</code> —— 不过你也可以用自己带的材料"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "get sb doing sth：使某人做某事（动手做）",
+              "material 材料"
+            ],
+            "tip": "「if 你带了自己的东西」→ 服务到个人材料——这条对 Karl（照片）有利。",
+            "note": [
+              {
+                "k": "get sb doing sth",
+                "cn": "使某人做某事"
+              },
+              {
+                "k": "material",
+                "cn": "材料（use your own material 用你自己的材料）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "The studio-based course focuses on portraits – you’ll learn how to develop whatever you’ve brought, or use famous portraits, to create pictures of people.",
+          "hard": true,
+          "tr": "这门以画室为基础的课程专注于肖像——你将学会如何把你带来的东西加工出来，或者用著名的肖像画，来创作人物画。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>The course focuses on portraits</b> + 学什么：<b>learn how to develop …</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>The studio-based course</code> —— 这门在工作室进行的课程"
+              ],
+              [
+                "谓语",
+                "<code>focuses on</code> —— 专注于"
+              ],
+              [
+                "宾语",
+                "portraits —— 肖像、画像"
+              ],
+              [
+                "宾语从句",
+                "<code>how to develop whatever you’ve brought</code> —— 怎么把你带来的东西加工出来"
+              ],
+              [
+                "目的状语",
+                "<code>to create pictures of people</code> —— 来创作人物画"
+              ]
+            ],
+            "clauses": [
+              "whatever you’ve brought 是宾语从句"
+            ],
+            "gram": [
+              "focus on：专注于",
+              "develop 冲印/加工（照片、作品）"
+            ],
+            "tip": "「develop whatever you’ve brought」= 用你自己带的素材（照片也行）——正好服务 Karl。",
+            "note": [
+              {
+                "k": "studio-based",
+                "cn": "基于工作室的（场地上课）"
+              },
+              {
+                "k": "focus on",
+                "cn": "专注于"
+              },
+              {
+                "k": "portrait",
+                "cn": "肖像，画像"
+              }
+            ]
+          }
+        },
+        {
+          "s": "One-to-one sessions also available.",
+          "hard": false,
+          "tr": "也提供一对一的辅导课。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "省略句：<b>One-to-one sessions (are) also available.</b>（也提供一对一课）",
+            "parts": [
+              [
+                "名词",
+                "<code>One-to-one sessions</code> —— 一对一课程"
+              ],
+              [
+                "表语",
+                "<code>also available</code> —— 也可以获得（省略了 are）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "available 可获得的；one-to-one 一对一的"
+            ],
+            "tip": "「one-to-one」= Karl 要的 private lessons——A 是答案。",
+            "note": [
+              {
+                "k": "one-to-one",
+                "cn": "一对一的（one-to-one sessions 一对一课）"
+              },
+              {
+                "k": "session",
+                "cn": "课时，场次（一对一/小组课）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Art Attack!",
+          "hard": false,
+          "tr": "B 艺术冲击！",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "课程名：<b>Art Attack!</b>",
+            "parts": [
+              [
+                "名词短语",
+                "Art Attack —— 艺术冲击（attack 冲击、进攻）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "attack 攻击、冲击（课程名用夸张词）"
+            ],
+            "tip": "课程 B 的标题。",
+            "note": [
+              {
+                "k": "attack",
+                "cn": "冲击，攻击（课程名）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Learn how to create pictures, perhaps based on your own writing, to put into a short book or poster, using simple techniques that don’t require technology.",
+          "hard": true,
+          "tr": "学习如何创作图画——也许以你自己的写作内容为基础——好放进一本小书或海报里，用的是不需要技术设备的简单技法。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Learn how to create pictures …</b>（学会怎么创作图画）",
+            "parts": [
+              [
+                "谓语",
+                "Learn —— 学习"
+              ],
+              [
+                "宾语从句",
+                "<code>how to create pictures</code> —— 怎么创作图画"
+              ],
+              [
+                "插入",
+                "<code>perhaps based on your own writing</code> —— 也许以你自己的写作内容为基础"
+              ],
+              [
+                "目的",
+                "<code>to put into a short book or poster</code> —— 好放进小书或海报"
+              ],
+              [
+                "方式",
+                "<code>using simple techniques that don’t require technology</code> —— 用不需要科技的简单技法"
+              ]
+            ],
+            "clauses": [
+              "that don’t require technology 定语从句"
+            ],
+            "gram": [
+              "be based on：以……为基础",
+              "require 需要"
+            ],
+            "tip": "「你自己的写作 + 不用电脑」→ Rafa：「写故事 + 不用电脑」——B 是答案。",
+            "note": [
+              {
+                "k": "perhaps",
+                "cn": "也许"
+              },
+              {
+                "k": "based on",
+                "cn": "以……为基础"
+              },
+              {
+                "k": "one's own",
+                "cn": "某人自己的（your own writing 你自己的写作）"
+              },
+              {
+                "k": "simple",
+                "cn": "简单的（simple techniques 简单的技巧）"
+              },
+              {
+                "k": "require",
+                "cn": "需要（don’t require technology 不需要技术）"
+              },
+              {
+                "k": "technology",
+                "cn": "科技，技术"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Discover, too, how to put a book together, with a professional-looking cover designed and hand-printed by you.",
+          "hard": false,
+          "tr": "还要探索如何把一本书装订起来，封面看起来专业，由你亲自设计、手工印制。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Discover how to put a book together</b>（学会把书装订起来）",
+            "parts": [
+              [
+                "谓语",
+                "Discover —— 探索、发现（祈使句）"
+              ],
+              [
+                "宾语从句",
+                "<code>how to put a book together</code> —— 怎么把一本书做出来"
+              ],
+              [
+                "伴随/特征",
+                "<code>with a professional-looking cover designed and hand-printed by you</code> —— 封面由你设计、手工印制、看起来很专业"
+              ]
+            ],
+            "clauses": [
+              "with 复合结构（with + 名词 + 过去分词短语）"
+            ],
+            "gram": [
+              "put together 组装、拼合",
+              "professional-looking 看起来专业的"
+            ],
+            "tip": "「做成书 + 手工封面」→ Rafa 想出书——B 越来越稳。",
+            "note": [
+              {
+                "k": "discover",
+                "cn": "探索，发现"
+              },
+              {
+                "k": "professional-looking",
+                "cn": "看起来专业的"
+              },
+              {
+                "k": "hand-printed",
+                "cn": "手工印制的"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Perfect for anyone considering further studies in art.",
+          "hard": false,
+          "tr": "非常适合任何考虑在艺术上继续深造的人。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>(It’s) Perfect for anyone considering further studies in art.</b>",
+            "parts": [
+              [
+                "表语",
+                "Perfect —— 完美的"
+              ],
+              [
+                "对象",
+                "<code>for anyone considering further studies in art</code> —— 对任何考虑在艺术上继续深造的人"
+              ]
+            ],
+            "clauses": [
+              "considering … 现在分词短语作定语"
+            ],
+            "gram": [
+              "further studies 继续深造；consider doing 考虑做"
+            ],
+            "tip": "「continuing studies」对应 Rafa 的「支持美院申请」——三重需求全对上。",
+            "note": [
+              {
+                "k": "consider",
+                "cn": "考虑（consider doing sth）"
+              },
+              {
+                "k": "further studies",
+                "cn": "继续深造，后续学习"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Art and imagination",
+          "hard": false,
+          "tr": "C 艺术与想象力。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "课程名：<b>Art and imagination</b>（艺术与想象力）",
+            "parts": [
+              [
+                "名词",
+                "Art —— 艺术"
+              ],
+              [
+                "名词",
+                "imagination —— 想象力"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "imagination 想象力"
+            ],
+            "tip": "课程 C 的标题。",
+            "note": [
+              {
+                "k": "imagination",
+                "cn": "想象力"
+              }
+            ]
+          }
+        },
+        {
+          "s": "If you like designing clothes, you’ll enjoy learning to use special computer software here to create and print out designs for tops, shoes and hats that people would love to wear!",
+          "hard": true,
+          "tr": "如果你喜欢设计服装，你会喜欢在这里学习使用特殊的电脑软件，创作并打印出上衣、鞋子和帽子的设计——人们会很喜欢穿的那种！",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "条件句：<b>If you like designing clothes, you’ll enjoy learning to use special computer software …</b>",
+            "parts": [
+              [
+                "条件从句",
+                "<code>If you like designing clothes</code> —— 如果你喜欢设计服装"
+              ],
+              [
+                "谓语",
+                "<code>enjoy learning to use special computer software</code> —— 会喜欢学用专门的电脑软件"
+              ],
+              [
+                "目的",
+                "<code>to create and print out designs for tops, shoes and hats</code> —— 创作并打印出上衣、鞋子、帽子的设计"
+              ],
+              [
+                "定语从句",
+                "<code>that people would love to wear</code> —— 人们会喜欢穿的"
+              ]
+            ],
+            "clauses": [
+              "if 条件句；that 引导定语从句"
+            ],
+            "gram": [
+              "design 设计；print out 打印出"
+            ],
+            "tip": "用电脑 + 打印成品 → Simona 的「电脑创作」；但「分享给同学」它没有。",
+            "note": [
+              {
+                "k": "design",
+                "cn": "设计（designing clothes 设计服装）"
+              },
+              {
+                "k": "print out",
+                "cn": "打印出"
+              }
+            ]
+          }
+        },
+        {
+          "s": "You’ll go home with a folder of work, perfect to present when applying for a higher-level art course.",
+          "hard": false,
+          "tr": "你会带着一文件夹的作品回家，非常适合用来申请更高级别的艺术课程。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>You’ll go home with a folder of work.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>You’ll go home with</code> —— 你会带着……回家"
+              ],
+              [
+                "宾语",
+                "<code>a folder of work</code> —— 一文件夹的作品"
+              ],
+              [
+                "后置修饰",
+                "<code>perfect to present when applying for a higher-level art course</code> —— 申请更高级课程时非常适合拿出来展示"
+              ]
+            ],
+            "clauses": [
+              "when applying … 是时间状语（省略 you are）"
+            ],
+            "gram": [
+              "present 展示、呈现；apply for 申请"
+            ],
+            "tip": "「作品集用于申请」——这条其实也对 Rafa 有利，但电脑设计不符合「不用电脑」。",
+            "note": [
+              {
+                "k": "a folder of work",
+                "cn": "一文件夹的作品（作品集）"
+              },
+              {
+                "k": "present",
+                "cn": "展示，呈现"
+              },
+              {
+                "k": "apply for",
+                "cn": "申请（apply for a course）"
+              },
+              {
+                "k": "higher-level",
+                "cn": "更高级别的"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Individual classes also available.",
+          "hard": false,
+          "tr": "也提供一对一的课程。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "省略句：<b>Individual classes (are) also available.</b>",
+            "parts": [
+              [
+                "名词",
+                "<code>Individual classes</code> —— 单独授课（一对一课程）"
+              ],
+              [
+                "表语",
+                "<code>also available</code> —— 也可获得"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "individual 单独的、个人的"
+            ],
+            "tip": "也有一对一——这是 C 对 Karl 的吸引点，但 C 用电脑、海报方向不对。",
+            "note": [
+              {
+                "k": "individual",
+                "cn": "单独的，一对一的（individual classes 一对一课程）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Create!",
+          "hard": false,
+          "tr": "D 去创作！",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "课程名：<b>Create!</b>",
+            "parts": [
+              [
+                "动词",
+                "Create —— 创作（祈使语气，课程名）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "create 创作"
+            ],
+            "tip": "课程 D 的标题。"
+          }
+        },
+        {
+          "s": "Draw and paint in different situations – in the studio or even in the park!",
+          "hard": false,
+          "tr": "在不同的场景里画画——在画室里，甚至在公园里！",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Draw and paint in different situations</b>（在不同场景里画）",
+            "parts": [
+              [
+                "谓语",
+                "Draw and paint —— 画画（铅笔/颜料）"
+              ],
+              [
+                "地点",
+                "<code>in different situations</code> —— 在不同的场景里"
+              ],
+              [
+                "补充",
+                "<code>in the studio or even in the park</code> —— 在画室甚至在公园"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "situation 场景、情境"
+            ],
+            "tip": "「公园里画」→ Andrei 的「户外画」。",
+            "note": [
+              {
+                "k": "situation",
+                "cn": "场景，情境（in different situations 在不同场景）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Gallery visits are also included, and you’re taught how to base your work on studies of landscapes and portraits by well-known artists.",
+          "hard": true,
+          "tr": "还包含美术馆参观，也会教你如何把作品建立在著名画家的风景和肖像研究之上。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "并列句：<b>Gallery visits are also included, and you’re taught how to …</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Gallery visits</code> —— 美术馆参观"
+              ],
+              [
+                "谓语",
+                "are included —— 被包含在内"
+              ],
+              [
+                "被动谓语",
+                "<code>you’re taught</code> —— 你会被教"
+              ],
+              [
+                "宾语从句",
+                "<code>how to base your work on studies of landscapes and portraits by well-known artists</code> —— 怎么把你的创作建立在名家的风景、肖像研究之上"
+              ]
+            ],
+            "clauses": [
+              "how to do 作宾语；by well-known artists 修饰 studies"
+            ],
+            "gram": [
+              "base A on B：把 A 建立在 B 上",
+              "be included 包含在内"
+            ],
+            "tip": "「参观美术馆 + 研究名家」→ Andrei 的「看名家作品」需求。",
+            "note": [
+              {
+                "k": "gallery",
+                "cn": "美术馆，画廊"
+              },
+              {
+                "k": "landscape",
+                "cn": "风景，风景地貌"
+              },
+              {
+                "k": "portrait",
+                "cn": "肖像，画像"
+              },
+              {
+                "k": "well-known",
+                "cn": "知名的"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Teachers also encourage you to experiment with various styles and methods.",
+          "hard": false,
+          "tr": "老师还会鼓励你尝试各种各样的风格和方法。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>Teachers encourage you to experiment with various styles and methods.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>encourage you</code> —— 鼓励你"
+              ],
+              [
+                "宾补",
+                "<code>to experiment with various styles and methods</code> —— 尝试各种风格与方法"
+              ]
+            ],
+            "clauses": [
+              "encourage sb to do sth"
+            ],
+            "gram": [
+              "experiment with：尝试、试验",
+              "various 各种各样的"
+            ],
+            "tip": "「各种风格方法」→ Andrei 的「尝试不同绘画技巧」——D 是答案。",
+            "note": [
+              {
+                "k": "experiment",
+                "cn": "实验，尝试（experiment with sth 尝试某物）"
+              },
+              {
+                "k": "various",
+                "cn": "各种各样的"
+              },
+              {
+                "k": "style",
+                "cn": "风格"
+              },
+              {
+                "k": "method",
+                "cn": "方式，方法"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "More Art Now!",
+          "hard": false,
+          "tr": "E 现在多画一点！",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "课程名：<b>More Art Now!</b>",
+            "parts": [
+              [
+                "名词短语",
+                "More Art Now —— 现在多画点艺术（课程名）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "课程名用祈使语气"
+            ],
+            "tip": "课程 E 的标题。"
+          }
+        },
+        {
+          "s": "Improve how you paint people and places on this studio-based course.",
+          "hard": false,
+          "tr": "在这门画室课程里提高你画人和画场景的水平。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Improve how you paint people and places …</b>",
+            "parts": [
+              [
+                "谓语",
+                "Improve —— 提高"
+              ],
+              [
+                "宾语从句",
+                "<code>how you paint people and places</code> —— 你怎么画人和场景"
+              ],
+              [
+                "地点",
+                "<code>on this studio-based course</code> —— 在这门画室课上"
+              ]
+            ],
+            "clauses": [
+              "how 引导宾语从句"
+            ],
+            "gram": [
+              "improve 提高；studio-based 画室进行的"
+            ],
+            "tip": "「画人」→ 肖像方向，但 Simona 要的是电脑+海报，E 不对全部。",
+            "note": [
+              {
+                "k": "improve",
+                "cn": "提高（improve how you paint 提高绘画水平）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "The teachers bring in work, ranging from photos to posters, to give you ideas.",
+          "hard": false,
+          "tr": "老师会带来作品——从照片到海报都有——给你灵感。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>The teachers bring in work … to give you ideas.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>bring in</code> —— 带来"
+              ],
+              [
+                "宾语",
+                "work —— 作品（不可数）"
+              ],
+              [
+                "范围",
+                "<code>ranging from photos to posters</code> —— 从照片到海报"
+              ],
+              [
+                "目的",
+                "<code>to give you ideas</code> —— 给你灵感"
+              ]
+            ],
+            "clauses": [
+              "ranging … 现在分词短语作后置修饰"
+            ],
+            "gram": [
+              "range from A to B：从 A 到 B 不等",
+              "bring in 带来"
+            ],
+            "tip": "「照片到海报」有照片——Karl 会喜欢，但他还要「私人课程」，E 没有。",
+            "note": [
+              {
+                "k": "bring in",
+                "cn": "带来，引入（bring in work 带作品来）"
+              },
+              {
+                "k": "range from A to B",
+                "cn": "从 A 到 B 的范围"
+              }
+            ]
+          }
+        },
+        {
+          "s": "And use the studio website to show your work and exchange ideas with other students – useful for anyone wishing to study art at a higher level.",
+          "hard": true,
+          "tr": "并使用画室网站来展示你的作品、与其他学生交流想法——对想在更高层次学艺术的人都很有用。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>use the studio website to show your work and exchange ideas …</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>use the studio website</code> —— 使用画室网站"
+              ],
+              [
+                "目的",
+                "<code>to show your work and exchange ideas with other students</code> —— 展示作品、与同学交流想法"
+              ],
+              [
+                "补充",
+                "<code>useful for anyone wishing to study art at a higher level</code> —— 对想深造的人有用"
+              ]
+            ],
+            "clauses": [
+              "wishing … 现在分词作定语"
+            ],
+            "gram": [
+              "exchange ideas 交流想法；at a higher level 在更高层次"
+            ],
+            "tip": "「网站展示 + 交流」接近 Simona 的分享需求——但「电脑创作」E 没提，H 才是。",
+            "note": [
+              {
+                "k": "studio website",
+                "cn": "画室网站"
+              },
+              {
+                "k": "exchange ideas",
+                "cn": "交流想法"
+              },
+              {
+                "k": "higher level",
+                "cn": "更高层次，更高级别"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Art Workshop",
+          "hard": false,
+          "tr": "F 艺术工坊。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "课程名：<b>Art Workshop</b>（艺术工坊）",
+            "parts": [
+              [
+                "名词",
+                "Art Workshop —— 艺术工坊"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "workshop 工作坊、工坊"
+            ],
+            "tip": "课程 F 的标题。",
+            "note": [
+              {
+                "k": "workshop",
+                "cn": "工作坊（课程名）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Do some drawings, in the studio or outside, or bring along your own.",
+          "hard": false,
+          "tr": "画一些画——在画室或户外都行——或者带上你自己的作品来。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Do some drawings … or bring along your own.</b>",
+            "parts": [
+              [
+                "谓语 1",
+                "<code>Do some drawings</code> —— 画些画"
+              ],
+              [
+                "地点",
+                "<code>in the studio or outside</code> —— 在画室或外面"
+              ],
+              [
+                "谓语 2",
+                "<code>or bring along your own</code> —— 或带上你自己的"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "bring along 带上；do drawings 画画"
+            ],
+            "tip": "「画 + 带自己的东西」是 Nicola 会开始的步骤，重点看下一句印制的部分。",
+            "note": [
+              {
+                "k": "bring along",
+                "cn": "带上（bring along your own 带上你自己的）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "The teachers will then help you to turn them into wonderful printed designs, using simple methods you can try yourself after the course.",
+          "hard": false,
+          "tr": "然后老师会帮你把它们变成美妙的印制图案，用的是课程结束后你自己也能用的简单方法。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>The teachers will help you to turn them into printed designs.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>help you to turn them into</code> —— 帮你把它们变成"
+              ],
+              [
+                "宾语",
+                "<code>wonderful printed designs</code> —— 漂亮的印制图案"
+              ],
+              [
+                "方式",
+                "<code>using simple methods you can try yourself after the course</code> —— 用课后你自己也能试的简单方法"
+              ]
+            ],
+            "clauses": [
+              "you can try yourself 省略 that 的定语从句"
+            ],
+            "gram": [
+              "turn A into B：把 A 变成 B"
+            ],
+            "tip": "「课后自己能用」→ Nicola「在家也能用」——F 逐条命中。",
+            "note": [
+              {
+                "k": "turn into",
+                "cn": "变成（turn A into B 把 A 变成 B）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "You’ll then transfer your designs onto cotton and silk, using special paints – perfect to use in sewing projects afterwards.",
+          "hard": false,
+          "tr": "然后你会把图案转印到棉布和丝绸上，用的是特殊的颜料——之后用在缝纫项目里正合适。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>You’ll transfer your designs onto cotton and silk.</b>",
+            "parts": [
+              [
+                "主语",
+                "You —— 你"
+              ],
+              [
+                "谓语",
+                "<code>transfer … onto</code> —— 转印到……上"
+              ],
+              [
+                "宾语",
+                "<code>your designs</code> —— 你的图案"
+              ],
+              [
+                "材料",
+                "<code>cotton and silk</code> —— 棉布和丝绸"
+              ],
+              [
+                "补充",
+                "<code>perfect to use in sewing projects afterwards</code> —— 之后用在缝纫项目里正合适"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "transfer A onto B：把 A 转印到 B 上；sewing projects 缝纫项目"
+            ],
+            "tip": "「印到不同材料 + 做衣服」→ Nicola 的「妈妈做成衣服」——F 是答案。",
+            "note": [
+              {
+                "k": "transfer onto",
+                "cn": "转印到……上（transfer designs onto cloth）"
+              },
+              {
+                "k": "sewing",
+                "cn": "缝纫（sewing projects 缝纫项目）"
+              },
+              {
+                "k": "afterwards",
+                "cn": "然后，后来"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Do it yourself",
+          "hard": false,
+          "tr": "G 自己动手。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "课程名：<b>Do it yourself</b>（自己动手）",
+            "parts": [
+              [
+                "动词短语",
+                "Do it yourself —— 自己动手做（DIY）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "DIY = do it yourself"
+            ],
+            "tip": "课程 G 的标题。",
+            "note": [
+              {
+                "k": "do it yourself",
+                "cn": "自己动手（DIY，课程名）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Try making art to go with your stories here – working inside or outside!",
+          "hard": false,
+          "tr": "来这里试试为你的故事配图——室内室外都行！",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Try making art to go with your stories.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Try making</code> —— 试着做（try doing 尝试做）"
+              ],
+              [
+                "宾语",
+                "<code>art to go with your stories</code> —— 配你故事的艺术"
+              ],
+              [
+                "补充",
+                "<code>working inside or outside</code> —— 在室内或室外做"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "go with 与……相配"
+            ],
+            "tip": "「给故事配图」又像 Rafa 的方向——但看它用的工具（数字设计）。"
+          }
+        },
+        {
+          "s": "You’ll get ideas from books showing famous paintings and cartoons, and then create and print pictures of people to accompany your stories, using digital design techniques.",
+          "hard": true,
+          "tr": "你会从展示名画和卡通的书籍里获得灵感，然后用数码设计技巧创作并打印人物图片，来配合你的故事。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "并列谓语：<b>get ideas from books … and then create and print pictures of people</b>",
+            "parts": [
+              [
+                "谓语 1",
+                "<code>get ideas from books showing famous paintings and cartoons</code> —— 从名画和卡通书里找灵感"
+              ],
+              [
+                "谓语 2",
+                "<code>create and print pictures of people</code> —— 创作并打印人物图片"
+              ],
+              [
+                "目的",
+                "<code>to accompany your stories</code> —— 来配合你的故事"
+              ],
+              [
+                "方式",
+                "<code>using digital design techniques</code> —— 用数字设计技术"
+              ]
+            ],
+            "clauses": [
+              "showing … 分词短语作后置定语"
+            ],
+            "gram": [
+              "accompany 伴随、配合",
+              "digital design 数字设计"
+            ],
+            "tip": "方向像 Rafa（故事配图）但要用「数字技术」——Rafa 明确「不用电脑」，排除。",
+            "note": [
+              {
+                "k": "cartoon",
+                "cn": "卡通，动漫"
+              },
+              {
+                "k": "painting",
+                "cn": "图画，油画"
+              },
+              {
+                "k": "accompany",
+                "cn": "伴随，配合（accompany your stories 配合你的故事）"
+              },
+              {
+                "k": "digital design",
+                "cn": "数字设计（用电脑做的设计）"
+              },
+              {
+                "k": "technique",
+                "cn": "技巧，方法"
+              }
+            ]
+          }
+        },
+        {
+          "s": "There’s even one-to-one teaching if you’d prefer.",
+          "hard": false,
+          "tr": "如果你更喜欢，甚至还有一对一教学。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "there be 句型：<b>There’s even one-to-one teaching …</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>one-to-one teaching</code> —— 一对一教学"
+              ],
+              [
+                "条件",
+                "<code>if you’d prefer</code> —— 如果你更喜欢（这样）"
+              ]
+            ],
+            "clauses": [
+              "if 条件句"
+            ],
+            "gram": [
+              "one-to-one teaching 一对一教学"
+            ],
+            "tip": "也有一对一——G 对 Karl 有两分像，但「照片当基础」它没有，排除。",
+            "note": [
+              {
+                "k": "one-to-one teaching",
+                "cn": "一对一教学"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "The Studio",
+          "hard": false,
+          "tr": "H 画室。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "课程名：<b>The Studio</b>（画室）",
+            "parts": [
+              [
+                "名词",
+                "The Studio —— 画室、工作室"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "studio 工作室"
+            ],
+            "tip": "课程 H 的标题。"
+          }
+        },
+        {
+          "s": "Come and experiment with digital design.",
+          "hard": false,
+          "tr": "来尝试数字设计吧。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Come and experiment with digital design.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Come and experiment with</code> —— 来尝试"
+              ],
+              [
+                "宾语",
+                "<code>digital design</code> —— 数字设计"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "come and do 连动；experiment with 尝试……"
+            ],
+            "tip": "「数字设计」→ Simona 的「电脑上创作」——H 方向正确。",
+            "note": [
+              {
+                "k": "experiment",
+                "cn": "尝试，试验（experiment with sth 尝试）"
+              },
+              {
+                "k": "digital design",
+                "cn": "数字设计"
+              }
+            ]
+          }
+        },
+        {
+          "s": "You’ll get great ideas through research, then using special software, create your pictures and add details on screen, whether it’s clothes, people, books or something to put on the wall.",
+          "hard": true,
+          "tr": "你会通过研究获得好点子，然后用专门的软件在屏幕上创作图画、添加细节——不管是衣服、人物、书还是挂墙上的东西。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主干：<b>You’ll get great ideas … then create your pictures and add details on screen.</b>",
+            "parts": [
+              [
+                "谓语 1",
+                "<code>get great ideas through research</code> —— 通过研究获得灵感"
+              ],
+              [
+                "方式",
+                "<code>using special software</code> —— 用专门软件"
+              ],
+              [
+                "谓语 2",
+                "<code>create your pictures and add details on screen</code> —— 在屏幕上创作并加细节"
+              ],
+              [
+                "让步",
+                "<code>whether it’s clothes, people, books or something to put on the wall</code> —— 无论是衣服、人物、书还是墙饰"
+              ]
+            ],
+            "clauses": [
+              "whether … or … 让步状语从句"
+            ],
+            "gram": [
+              "add details 添加细节；on screen 在屏幕上"
+            ],
+            "tip": "「屏幕上做海报式创作」→ Simona 的「电脑 + 海报」——再对上分享就是全中。",
+            "note": [
+              {
+                "k": "research",
+                "cn": "研究（through research 通过研究）"
+              },
+              {
+                "k": "detail",
+                "cn": "细节（add details 添加细节）"
+              },
+              {
+                "k": "put on the wall",
+                "cn": "挂在墙上"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Upload your work on the studio website and get opinions from your classmates there – and comment on theirs!",
+          "hard": false,
+          "tr": "把你的作品上传到画室网站上，看看那里同学的意见——也去评论他们的作品！",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Upload your work … and get opinions … – and comment on theirs!</b>",
+            "parts": [
+              [
+                "谓语 1",
+                "<code>Upload your work on the studio website</code> —— 把作品上传到画室网站"
+              ],
+              [
+                "谓语 2",
+                "<code>get opinions from your classmates</code> —— 获取同学的意见"
+              ],
+              [
+                "谓语 3",
+                "<code>and comment on theirs</code> —— 并评论他们的（作品）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "upload 上传；opinion 看法；comment on 评论"
+            ],
+            "tip": "「上传 + 同学意见」→ Simona 的「分享给同学」——H 全中，答案是 H。",
+            "note": [
+              {
+                "k": "upload",
+                "cn": "上传"
+              },
+              {
+                "k": "opinion",
+                "cn": "观点，看法，意见"
+              },
+              {
+                "k": "comment",
+                "cn": "评论，评价（comment on 评论……）"
+              }
+            ]
+          }
+        }
+      ]
+    ],
+    "blocks": [
+      {
+        "r": "h",
+        "head": {
+          "l": "Training Test 1",
+          "r": "Reading Part 2"
+        },
+        "badge": "答案见 P183"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "o",
+        "frame": true
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "n": "1",
+        "pick": [
+          101
+        ]
+      },
+      {
+        "r": "q",
+        "n": "2",
+        "pick": [
+          102
+        ]
+      },
+      {
+        "r": "q",
+        "n": "3",
+        "pick": [
+          103
+        ]
+      },
+      {
+        "r": "q",
+        "n": "4",
+        "pick": [
+          104
+        ]
+      },
+      {
+        "r": "q",
+        "n": "5",
+        "pick": [
+          105
+        ]
+      },
+      {
+        "r": "q",
+        "n": "6",
+        "pick": [
+          106
+        ]
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "img": {
+          "src": "assets/img/t1-p2-hannah.jpg",
+          "alt": "Hannah 的照片（原书 P14）",
+          "w": 240
+        }
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "n": "A"
+      },
+      {
+        "r": "q",
+        "n": "B"
+      },
+      {
+        "r": "q",
+        "n": "C"
+      },
+      {
+        "r": "q",
+        "pick": [
+          107
+        ]
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "h",
+        "head": {
+          "l": "Exam Practice Test 1",
+          "r": "Reading Part 2"
+        },
+        "badge": "答案见 P183",
+        "tip": "圈出关于每个人的关键词，然后快速阅读 8 篇短文，找出匹配信息。记住，信息多采用同义词转换的方式来表达。"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "n": "6",
+        "pick": [
+          6
+        ],
+        "img": {
+          "src": "assets/img/t1-p2-rafa.jpg",
+          "alt": "Rafa 的照片（原书 P15）",
+          "side": "left",
+          "w": 200
+        }
+      },
+      {
+        "r": "q",
+        "n": "7",
+        "pick": [
+          7
+        ],
+        "img": {
+          "src": "assets/img/t1-p2-simona.jpg",
+          "alt": "Simona 的照片（原书 P15）",
+          "side": "left",
+          "w": 200
+        }
+      },
+      {
+        "r": "q",
+        "n": "8",
+        "pick": [
+          8
+        ],
+        "img": {
+          "src": "assets/img/t1-p2-andrei.jpg",
+          "alt": "Andrei 的照片（原书 P15）",
+          "side": "left",
+          "w": 200
+        }
+      },
+      {
+        "r": "q",
+        "n": "9",
+        "pick": [
+          9
+        ],
+        "img": {
+          "src": "assets/img/t1-p2-nicola.jpg",
+          "alt": "Nicola 的照片（原书 P15）",
+          "side": "left",
+          "w": 200
+        }
+      },
+      {
+        "r": "q",
+        "n": "10",
+        "pick": [
+          10
+        ],
+        "img": {
+          "src": "assets/img/t1-p2-karl.jpg",
+          "alt": "Karl 的照片（原书 P15）",
+          "side": "left",
+          "w": 200
+        }
+      },
+      {
+        "r": "h",
+        "center": true
+      },
+      {
+        "r": "q",
+        "n": "A"
+      },
+      {
+        "r": "q",
+        "n": "B"
+      },
+      {
+        "r": "q",
+        "n": "C"
+      },
+      {
+        "r": "q",
+        "n": "D"
+      },
+      {
+        "r": "q",
+        "n": "E"
+      },
+      {
+        "r": "q",
+        "n": "F"
+      },
+      {
+        "r": "q",
+        "n": "G"
+      },
+      {
+        "r": "q",
+        "n": "H"
+      }
+    ]
+  },
+  "phrases": [
+    "public transport",
+    "keep fit",
+    "bus stop",
+    "leisure centre",
+    "next to",
+    "quiet neighbourhood",
+    "a variety of",
+    "go away",
+    "famous for",
+    "historical interest",
+    "keep costs down",
+    "classical music",
+    "inexpensive hostels",
+    "seaside holiday",
+    "flights abroad",
+    "evening entertainment",
+    "luxury hotel",
+    "never sleeps",
+    "by night",
+    "art course",
+    "one-to-one sessions",
+    "one-to-one teaching",
+    "digital design",
+    "further studies",
+    "studio website",
+    "exchange ideas",
+    "sewing projects",
+    "put on the wall",
+    "do it yourself",
+    "study tours",
+    "city breaks",
+    "next page",
+    "print out",
+    "a folder of work",
+    "bring in",
+    "ranging from",
+    "based on",
+    "make into",
+    "by hand",
+    "add details",
+    "comment on",
+    "art attack",
+    "art workshop"
+  ],
+  "glossary": {
+    "reading": {
+      "pos": "n.",
+      "ipa": "/ˈriːdɪŋ/",
+      "cn": "阅读"
+    },
+    "descriptions": {
+      "pos": "n.",
+      "ipa": "/dɪˈskrɪpʃnz/",
+      "cn": "描述（description 的复数）"
+    },
+    "eight": {
+      "pos": "num.",
+      "ipa": "/eɪt/",
+      "cn": "八"
+    },
+    "texts": {
+      "pos": "n.",
+      "ipa": "/teksts/",
+      "cn": "文本、短文（text 的复数）"
+    },
+    "variety": {
+      "pos": "n.",
+      "ipa": "/vəˈraɪəti/",
+      "cn": "多样；a variety of 各种各样的"
+    },
+    "subjects": {
+      "pos": "n.",
+      "ipa": "/ˈsʌbdʒɪkts/",
+      "cn": "主题；科目（subject 的复数）"
+    },
+    "person": {
+      "pos": "n.",
+      "ipa": "/ˈpɜːsn/",
+      "cn": "人（复数 people）"
+    },
+    "requires": {
+      "pos": "v.",
+      "ipa": "/rɪˈkwaɪəz/",
+      "cn": "需要（require 的第三人称单数）"
+    },
+    "paraphrasing": {
+      "pos": "n.",
+      "ipa": "/ˈpærəfreɪzɪŋ/",
+      "cn": "同义转述（用不同的话表达同样的意思）"
+    },
+    "expressions": {
+      "pos": "n.",
+      "ipa": "/ɪkˈspreʃnz/",
+      "cn": "表达、说法（expression 的复数）"
+    },
+    "apartments": {
+      "pos": "n.",
+      "ipa": "/əˈpɑːtmənts/",
+      "cn": "公寓（apartment 的复数）"
+    },
+    "extremely": {
+      "pos": "adv.",
+      "ipa": "/ɪkˈstriːmli/",
+      "cn": "极其，极度，非常（very 的加强版）"
+    },
+    "low": {
+      "pos": "adj.",
+      "ipa": "/ləʊ/",
+      "cn": "低的；低价的"
+    },
+    "prices": {
+      "pos": "n.",
+      "ipa": "/ˈpraɪsɪz/",
+      "cn": "价格（price 的复数）"
+    },
+    "price": {
+      "pos": "n.",
+      "ipa": "/praɪs/",
+      "cn": "价格"
+    },
+    "gym": {
+      "pos": "n.",
+      "ipa": "/dʒɪm/",
+      "cn": "健身房"
+    },
+    "quiet": {
+      "pos": "adj.",
+      "ipa": "/ˈkwaɪət/",
+      "cn": "安静的"
+    },
+    "neighbourhood": {
+      "pos": "n.",
+      "ipa": "/ˈneɪbəhʊd/",
+      "cn": "街区，社区；quiet neighbourhood 安静的社区"
+    },
+    "leisure": {
+      "pos": "n.",
+      "ipa": "/ˈleʒə/",
+      "cn": "休闲、闲暇"
+    },
+    "leisure centre": {
+      "pos": "词组",
+      "ipa": "/ˈleʒə ˌsentə/",
+      "cn": "休闲中心（有运动设施）",
+      "note": "英国常见设施：游泳池、健身房、球场都在一起。"
+    },
+    "centre": {
+      "pos": "n.",
+      "ipa": "/ˈsentə/",
+      "cn": "中心；英式拼写（美式 center）"
+    },
+    "open": {
+      "pos": "adj./v.",
+      "ipa": "/ˈəʊpən/",
+      "cn": "开着的；营业的；打开"
+    },
+    "evening": {
+      "pos": "n.",
+      "ipa": "/ˈiːvnɪŋ/",
+      "cn": "晚上；傍晚"
+    },
+    "bus": {
+      "pos": "n.",
+      "ipa": "/bʌs/",
+      "cn": "公交车，公共汽车"
+    },
+    "stop": {
+      "pos": "n./v.",
+      "ipa": "/stɒp/",
+      "cn": "停靠站；车站；停下"
+    },
+    "bus stop": {
+      "pos": "词组",
+      "ipa": "/ˈbʌs stɒp/",
+      "cn": "公交站"
+    },
+    "f": {
+      "pos": "n.",
+      "ipa": "/ef/",
+      "cn": "字母 f（选项/编号的标记）"
+    },
+    "opportunities": {
+      "pos": "n.",
+      "ipa": "/ˌɒpəˈtjuːnətiz/",
+      "cn": "机会（opportunity 的复数）"
+    },
+    "opportunity": {
+      "pos": "n.",
+      "ipa": "/ˌɒpəˈtjuːnəti/",
+      "cn": "机会（opportunities to meet new people 结识新朋友的机会）"
+    },
+    "meet": {
+      "pos": "v.",
+      "ipa": "/miːt/",
+      "cn": "见面；遇见；结识"
+    },
+    "uses": {
+      "pos": "v.",
+      "ipa": "/ˈjuːzɪz/",
+      "cn": "使用（use 的第三人称单数）"
+    },
+    "public": {
+      "pos": "adj.",
+      "ipa": "/ˈpʌblɪk/",
+      "cn": "公共的"
+    },
+    "transport": {
+      "pos": "n.",
+      "ipa": "/ˈtrænspɔːt/",
+      "cn": "交通；公共交通"
+    },
+    "public transport": {
+      "pos": "词组",
+      "ipa": "/ˌpʌblɪk ˈtrænspɔːt/",
+      "cn": "公共交通（公交、地铁等）"
+    },
+    "cannot": {
+      "pos": "v.",
+      "ipa": "/ˈkænɒt/",
+      "cn": "不能（can not）"
+    },
+    "afford": {
+      "pos": "v.",
+      "ipa": "/əˈfɔːd/",
+      "cn": "负担得起（cannot afford to spend much 花不起太多钱）",
+      "note": "afford to do sth：负担得起做某事，常与 can/cannot 连用。"
+    },
+    "dislikes": {
+      "pos": "n./v.",
+      "ipa": "/dɪsˈlaɪks/",
+      "cn": "不喜欢（dislike 的复数/第三人称单数）"
+    },
+    "noise": {
+      "pos": "n.",
+      "ipa": "/nɔɪz/",
+      "cn": "噪音",
+      "note": "make a noise 发出声响；dislikes noise 不喜欢吵。"
+    },
+    "sociable": {
+      "pos": "adj.",
+      "ipa": "/ˈsəʊʃəbl/",
+      "cn": "善于交际的，合群的"
+    },
+    "likes": {
+      "pos": "n./v.",
+      "ipa": "/laɪks/",
+      "cn": "喜欢（like 的复数/第三人称单数）"
+    },
+    "fit": {
+      "pos": "adj./v.",
+      "ipa": "/fɪt/",
+      "cn": "健康的；合身；合适"
+    },
+    "keep fit": {
+      "pos": "词组",
+      "ipa": "/ˌkiːp ˈfɪt/",
+      "cn": "保持健康（锻炼）",
+      "note": "keep fit 用 keep + 形容词：一直保持健康的状态。"
+    },
+    "works": {
+      "pos": "v./n.",
+      "ipa": "/wɜːks/",
+      "cn": "工作、运转（第三人称单数）；作品"
+    },
+    "until": {
+      "pos": "prep./conj.",
+      "ipa": "/ənˈtɪl/",
+      "cn": "直到……为止",
+      "note": "until + 时间点：直到某时（工作到 5.30 p.m.）。"
+    },
+    "p": {
+      "pos": "n.",
+      "ipa": "/piː/",
+      "cn": "字母 p（p.m. = 下午）"
+    },
+    "m": {
+      "pos": "n.",
+      "ipa": "/em/",
+      "cn": "字母 m（p.m. = 下午；a.m. = 上午）"
+    },
+    "identifying": {
+      "pos": "v.",
+      "ipa": "/aɪˈdentɪfaɪɪŋ/",
+      "cn": "识别、找出（identify 的现在分词）"
+    },
+    "key": {
+      "pos": "adj./n.",
+      "ipa": "/kiː/",
+      "cn": "关键的；钥匙；key words 关键词"
+    },
+    "words": {
+      "pos": "n.",
+      "ipa": "/wɜːdz/",
+      "cn": "词（word 的复数）"
+    },
+    "description": {
+      "pos": "n.",
+      "ipa": "/dɪˈskrɪpʃn/",
+      "cn": "描述，介绍"
+    },
+    "expression": {
+      "pos": "n.",
+      "ipa": "/ɪkˈspreʃn/",
+      "cn": "表达（方式）；说法，用语"
+    },
+    "apartment": {
+      "pos": "n.",
+      "ipa": "/əˈpɑːtmənt/",
+      "cn": "公寓"
+    },
+    "wants": {
+      "pos": "v.",
+      "ipa": "/wɒnts/",
+      "cn": "想要（want 的第三人称单数）"
+    },
+    "holiday": {
+      "pos": "n.",
+      "ipa": "/ˈhɒlədeɪ/",
+      "cn": "假期；on holiday 度假"
+    },
+    "underline": {
+      "pos": "v.",
+      "ipa": "/ˌʌndəˈlaɪn/",
+      "cn": "划下划线（在……下面划线）"
+    },
+    "phrases": {
+      "pos": "n.",
+      "ipa": "/ˈfreɪzɪz/",
+      "cn": "短语（phrase 的复数）"
+    },
+    "exactly": {
+      "pos": "adv.",
+      "ipa": "/ɪɡˈzæktli/",
+      "cn": "确切地，正是"
+    },
+    "hannah": {
+      "pos": "n.",
+      "ipa": "/ˈhænə/",
+      "cn": "Hannah（女子名）"
+    },
+    "lively": {
+      "pos": "adj.",
+      "ipa": "/ˈlaɪvli/",
+      "cn": "热闹的，充满活力的"
+    },
+    "everything": {
+      "pos": "pron.",
+      "ipa": "/ˈevriθɪŋ/",
+      "cn": "一切；所有事物"
+    },
+    "stays": {
+      "pos": "v.",
+      "ipa": "/steɪz/",
+      "cn": "保持（stay 的第三人称单数）；stay open 保持营业"
+    },
+    "offer": {
+      "pos": "v./n.",
+      "ipa": "/ˈɒfə/",
+      "cn": "提供；出价；主动提出",
+      "note": "offer to do sth 主动提出做某事。"
+    },
+    "top-class": {
+      "pos": "adj.",
+      "ipa": "/ˌtɒp ˈklɑːs/",
+      "cn": "一流的，顶级的"
+    },
+    "cultural": {
+      "pos": "adj.",
+      "ipa": "/ˈkʌltʃərəl/",
+      "cn": "文化的"
+    },
+    "attractions": {
+      "pos": "n.",
+      "ipa": "/əˈtrækʃnz/",
+      "cn": "景点（attraction 的复数）"
+    },
+    "attraction": {
+      "pos": "n.",
+      "ipa": "/əˈtrækʃn/",
+      "cn": "景点；吸引人的东西（top-class cultural attractions 一流的文化景点）"
+    },
+    "high-quality": {
+      "pos": "adj.",
+      "ipa": "/ˌhaɪ ˈkwɒləti/",
+      "cn": "高质量的"
+    },
+    "accommodation": {
+      "pos": "n.",
+      "ipa": "/əˌkɒməˈdeɪʃn/",
+      "cn": "住宿（不可数；high-quality accommodation 高质量的住宿）"
+    },
+    "matching": {
+      "pos": "adj.",
+      "ipa": "/ˈmætʃɪŋ/",
+      "cn": "匹配的、对上号的"
+    },
+    "paraphrases": {
+      "pos": "n.",
+      "ipa": "/ˈpærəfreɪsɪz/",
+      "cn": "同义转述、同义改写（paraphrase 的复数）"
+    },
+    "three": {
+      "pos": "num.",
+      "ipa": "/θriː/",
+      "cn": "三"
+    },
+    "holidays": {
+      "pos": "n.",
+      "ipa": "/ˈhɒlədeɪz/",
+      "cn": "假期（holiday 的复数）"
+    },
+    "most": {
+      "pos": "adv./det.",
+      "ipa": "/məʊst/",
+      "cn": "最（最高级）；最多；大多数",
+      "note": "the most exciting 最激动人心的（最高级）。"
+    },
+    "suitable": {
+      "pos": "adj.",
+      "ipa": "/ˈsuːtəbl/",
+      "cn": "合适的；the most suitable for 对……最合适的"
+    },
+    "tours": {
+      "pos": "n.",
+      "ipa": "/tʊəz/",
+      "cn": "旅行、导览（tour 的复数）"
+    },
+    "study tour": {
+      "pos": "词组",
+      "ipa": "/ˈstʌdi tʊə/",
+      "cn": "游学（以学习为目的的旅行）"
+    },
+    "culture": {
+      "pos": "n.",
+      "ipa": "/ˈkʌltʃə/",
+      "cn": "文化"
+    },
+    "cities": {
+      "pos": "n.",
+      "ipa": "/ˈsɪtiz/",
+      "cn": "城市（city 的复数）"
+    },
+    "historical": {
+      "pos": "adj.",
+      "ipa": "/hɪˈstɒrɪkl/",
+      "cn": "历史的，与历史有关的",
+      "note": "对比 historic（有历史意义的）：a historic victory 历史性胜利。"
+    },
+    "historical interest": {
+      "pos": "词组",
+      "ipa": "/hɪˌstɒrɪkl ˈɪntrəst/",
+      "cn": "历史名胜（cities of historical interest 有历史底蕴的城市）"
+    },
+    "interest": {
+      "pos": "n.",
+      "ipa": "/ˈɪntrəst/",
+      "cn": "兴趣；名胜、古迹"
+    },
+    "attending": {
+      "pos": "v.",
+      "ipa": "/əˈtendɪŋ/",
+      "cn": "参加（attend 的现在分词）"
+    },
+    "attend": {
+      "pos": "v.",
+      "ipa": "/əˈtend/",
+      "cn": "参加、出席",
+      "note": "attend a course 参加课程；attend classes 上课。"
+    },
+    "lessons": {
+      "pos": "n.",
+      "ipa": "/ˈlesnz/",
+      "cn": "课、课程（lesson 的复数）"
+    },
+    "meeting": {
+      "pos": "v./n.",
+      "ipa": "/ˈmiːtɪŋ/",
+      "cn": "会见（meet 的现在分词）；会议"
+    },
+    "local": {
+      "pos": "adj.",
+      "ipa": "/ˈləʊkl/",
+      "cn": "当地的"
+    },
+    "experts": {
+      "pos": "n.",
+      "ipa": "/ˈekspɜːts/",
+      "cn": "专家（expert 的复数）"
+    },
+    "expert": {
+      "pos": "n.",
+      "ipa": "/ˈekspɜːt/",
+      "cn": "专家（local experts 当地专家）"
+    },
+    "costs": {
+      "pos": "v./n.",
+      "ipa": "/kɒsts/",
+      "cn": "花费（cost 的第三人称单数）；费用、成本"
+    },
+    "down": {
+      "pos": "adv./prep.",
+      "ipa": "/daʊn/",
+      "cn": "向下",
+      "note": "keep … down 把……压下来。"
+    },
+    "keep costs down": {
+      "pos": "词组",
+      "ipa": "/ˌkiːp ˈkɒsts daʊn/",
+      "cn": "降低成本，压低花费"
+    },
+    "stay": {
+      "pos": "v./n.",
+      "ipa": "/steɪ/",
+      "cn": "停留；住；待"
+    },
+    "inexpensive": {
+      "pos": "adj.",
+      "ipa": "/ˌɪnɪkˈspensɪv/",
+      "cn": "不贵的（expensive 的反义）"
+    },
+    "hostels": {
+      "pos": "n.",
+      "ipa": "/ˈhɒstlz/",
+      "cn": "青年旅舍（hostel 的复数）"
+    },
+    "hostel": {
+      "pos": "n.",
+      "ipa": "/ˈhɒstl/",
+      "cn": "青年旅舍，招待所（比 hotel 便宜）"
+    },
+    "favourite": {
+      "pos": "adj./n.",
+      "ipa": "/ˈfeɪvərɪt/",
+      "cn": "最喜欢的",
+      "note": "英式拼写 favourite（美式 favorite）。"
+    },
+    "destinations": {
+      "pos": "n.",
+      "ipa": "/ˌdestɪˈneɪʃnz/",
+      "cn": "目的地（destination 的复数）"
+    },
+    "destination": {
+      "pos": "n.",
+      "ipa": "/ˌdestɪˈneɪʃn/",
+      "cn": "目的地"
+    },
+    "italy": {
+      "pos": "n.",
+      "ipa": "/ˈɪtəli/",
+      "cn": "意大利"
+    },
+    "art": {
+      "pos": "n.",
+      "ipa": "/ɑːt/",
+      "cn": "艺术；美术"
+    },
+    "austria": {
+      "pos": "n.",
+      "ipa": "/ˈɒstriə/",
+      "cn": "奥地利"
+    },
+    "classical": {
+      "pos": "adj.",
+      "ipa": "/ˈklæsɪkl/",
+      "cn": "古典的"
+    },
+    "classical music": {
+      "pos": "词组",
+      "ipa": "/ˌklæsɪkl ˈmjuːzɪk/",
+      "cn": "古典音乐"
+    },
+    "music": {
+      "pos": "n.",
+      "ipa": "/ˈmjuːzɪk/",
+      "cn": "音乐"
+    },
+    "sunshine": {
+      "pos": "n.",
+      "ipa": "/ˈsʌnʃaɪn/",
+      "cn": "阳光"
+    },
+    "seaside": {
+      "pos": "n./adj.",
+      "ipa": "/ˈsiːsaɪd/",
+      "cn": "海滨，海边的"
+    },
+    "includes": {
+      "pos": "v.",
+      "ipa": "/ɪnˈkluːdz/",
+      "cn": "包括（include 的第三人称单数）"
+    },
+    "flights": {
+      "pos": "n.",
+      "ipa": "/flaɪts/",
+      "cn": "航班（flight 的复数）"
+    },
+    "flight": {
+      "pos": "n.",
+      "ipa": "/flaɪt/",
+      "cn": "航班（flights abroad 出国航班）"
+    },
+    "abroad": {
+      "pos": "adv.",
+      "ipa": "/əˈbrɔːd/",
+      "cn": "在国外；到国外",
+      "note": "go/study abroad 出国——abroad 前不加 to。"
+    },
+    "rather": {
+      "pos": "adv.",
+      "ipa": "/ˈrɑːðə/",
+      "cn": "相当，颇；宁愿（would rather do sth 宁愿做某事）",
+      "note": "rather basic 相当基础（常带委婉的贬义）；would rather 宁愿。"
+    },
+    "basic": {
+      "pos": "adj.",
+      "ipa": "/ˈbeɪsɪk/",
+      "cn": "基本的"
+    },
+    "hotel": {
+      "pos": "n.",
+      "ipa": "/həʊˈtel/",
+      "cn": "酒店，旅馆"
+    },
+    "entertainment": {
+      "pos": "n.",
+      "ipa": "/ˌentəˈteɪnmənt/",
+      "cn": "娱乐（evening entertainment 晚间娱乐）"
+    },
+    "meals": {
+      "pos": "n.",
+      "ipa": "/miːlz/",
+      "cn": "餐（meal 的复数）"
+    },
+    "there’s": {
+      "pos": "contr.",
+      "ipa": "/ðeəz/",
+      "cn": "= there is 有"
+    },
+    "relaxing": {
+      "pos": "adj.",
+      "ipa": "/rɪˈlæksɪŋ/",
+      "cn": "令人放松的（形容事物；也作 relax 的动名词）"
+    },
+    "relax": {
+      "pos": "v.",
+      "ipa": "/rɪˈlæks/",
+      "cn": "放松",
+      "note": "relaxing on a beach 在海滩上放松。"
+    },
+    "beautiful": {
+      "pos": "adj.",
+      "ipa": "/ˈbjuːtɪfl/",
+      "cn": "美丽的"
+    },
+    "beach": {
+      "pos": "n.",
+      "ipa": "/biːtʃ/",
+      "cn": "海滩"
+    },
+    "it’s": {
+      "pos": "contr.",
+      "ipa": "/ɪts/",
+      "cn": "= it is 或 it has"
+    },
+    "perfect": {
+      "pos": "adj.",
+      "ipa": "/ˈpɜːfɪkt/",
+      "cn": "完美的，最合适的"
+    },
+    "breaks": {
+      "pos": "n.",
+      "ipa": "/breɪks/",
+      "cn": "短假（break 的复数）"
+    },
+    "city break": {
+      "pos": "词组",
+      "ipa": "/ˈsɪti breɪk/",
+      "cn": "城市短假（周末去大城市玩）"
+    },
+    "luxury": {
+      "pos": "adj./n.",
+      "ipa": "/ˈlʌkʃəri/",
+      "cn": "豪华的；奢华",
+      "note": "luxury hotel 豪华酒店。"
+    },
+    "world’s": {
+      "pos": "n.",
+      "ipa": "/wɜːldz/",
+      "cn": "世界的（world 的所有格）"
+    },
+    "york": {
+      "pos": "n.",
+      "ipa": "/jɔːk/",
+      "cn": "约克（New York 纽约）"
+    },
+    "world-famous": {
+      "pos": "adj.",
+      "ipa": "/ˌwɜːld ˈfeɪməs/",
+      "cn": "世界闻名的"
+    },
+    "modern": {
+      "pos": "adj.",
+      "ipa": "/ˈmɒdn/",
+      "cn": "现代的；Modern Art 现代艺术"
+    },
+    "theatres": {
+      "pos": "n.",
+      "ipa": "/ˈθɪətəz/",
+      "cn": "剧院（theatre 的复数）"
+    },
+    "theatre": {
+      "pos": "n.",
+      "ipa": "/ˈθɪətə/",
+      "cn": "剧院（the theatres of Broadway 百老汇剧院）"
+    },
+    "broadway": {
+      "pos": "n.",
+      "ipa": "/ˈbrɔːdweɪ/",
+      "cn": "百老汇（纽约剧院区）"
+    },
+    "night": {
+      "pos": "n.",
+      "ipa": "/naɪt/",
+      "cn": "夜晚",
+      "note": "by night 在夜里；the city that never sleeps 不夜城。"
+    },
+    "never": {
+      "pos": "adv.",
+      "ipa": "/ˈnevə/",
+      "cn": "从不，绝不"
+    },
+    "never sleeps": {
+      "pos": "词组",
+      "ipa": "/ˌnevə ˈsliːps/",
+      "cn": "不眠（the city that never sleeps 不夜城）"
+    },
+    "sleeps": {
+      "pos": "v.",
+      "ipa": "/sliːps/",
+      "cn": "睡觉（sleep 的第三人称单数）"
+    },
+    "similar": {
+      "pos": "adj.",
+      "ipa": "/ˈsɪmələ/",
+      "cn": "相似的"
+    },
+    "meanings": {
+      "pos": "n.",
+      "ipa": "/ˈmiːnɪŋz/",
+      "cn": "意思（meaning 的复数）"
+    },
+    "underlined": {
+      "pos": "v.",
+      "ipa": "/ˌʌndəˈlaɪnd/",
+      "cn": "划线的（underline 的过去分词）"
+    },
+    "exercise": {
+      "pos": "n.",
+      "ipa": "/ˈeksəsaɪz/",
+      "cn": "练习；运动"
+    },
+    "questions": {
+      "pos": "n.",
+      "ipa": "/ˈkwestʃənz/",
+      "cn": "题目（question 的复数）"
+    },
+    "young": {
+      "pos": "adj.",
+      "ipa": "/jʌŋ/",
+      "cn": "年轻的"
+    },
+    "course": {
+      "pos": "n.",
+      "ipa": "/kɔːs/",
+      "cn": "课程"
+    },
+    "page": {
+      "pos": "n.",
+      "ipa": "/peɪdʒ/",
+      "cn": "页；next page 下一页"
+    },
+    "next page": {
+      "pos": "词组",
+      "ipa": "/ˌnekst ˈpeɪdʒ/",
+      "cn": "下一页（书上的「下面」）"
+    },
+    "go away": {
+      "pos": "词组",
+      "ipa": "/ˌɡəʊ əˈweɪ/",
+      "cn": "出门（度假）；（away 也可单用）"
+    },
+    "a variety of": {
+      "pos": "词组",
+      "ipa": "/ə vəˈraɪəti əv/",
+      "cn": "各种各样的；多种不同的"
+    },
+    "be famous for": {
+      "pos": "词组",
+      "ipa": "/biː ˈfeɪməs fɔː/",
+      "cn": "以……著名",
+      "note": "famous for + 出名的原因；比 celebs 的 famous 更常考。"
+    },
+    "famous for": {
+      "pos": "词组",
+      "ipa": "/ˈfeɪməs fɔː/",
+      "cn": "以……闻名（famous for its culture 以文化闻名）"
+    },
+    "study tours": {
+      "pos": "词组",
+      "ipa": "/ˈstʌdi tʊəz/",
+      "cn": "游学（复数；A 课程名）"
+    },
+    "city breaks": {
+      "pos": "词组",
+      "ipa": "/ˈsɪti breɪks/",
+      "cn": "城市短假（复数；C 课程名）"
+    },
+    "ranging from": {
+      "pos": "词组",
+      "ipa": "/ˈreɪndʒɪŋ frəm/",
+      "cn": "从……到……都有（ranging from photos to posters）"
+    },
+    "courses": {
+      "pos": "n.",
+      "ipa": "/ˈkɔːsɪz/",
+      "cn": "课程（course 的复数）"
+    },
+    "rafa": {
+      "pos": "n.",
+      "ipa": "/ˈræfə/",
+      "cn": "Rafa（男子名）"
+    },
+    "produce": {
+      "pos": "v.",
+      "ipa": "/prəˈdjuːs/",
+      "cn": "创作；生产；produce artwork 创作艺术作品"
+    },
+    "artwork": {
+      "pos": "n.",
+      "ipa": "/ˈɑːtwɜːk/",
+      "cn": "艺术作品（总称，不可数）"
+    },
+    "support": {
+      "pos": "v./n.",
+      "ipa": "/səˈpɔːt/",
+      "cn": "支持（support his application 支持他的申请）"
+    },
+    "college": {
+      "pos": "n.",
+      "ipa": "/ˈkɒlɪdʒ/",
+      "cn": "学院；art college 艺术学院"
+    },
+    "application": {
+      "pos": "n.",
+      "ipa": "/ˌæplɪˈkeɪʃn/",
+      "cn": "申请（art college application 艺术学院申请）"
+    },
+    "he’s": {
+      "pos": "contr.",
+      "ipa": "/hiːz/",
+      "cn": "= he has 或 he is"
+    },
+    "written": {
+      "pos": "v.",
+      "ipa": "/ˈrɪtn/",
+      "cn": "写（write 的过去分词）"
+    },
+    "stories": {
+      "pos": "n.",
+      "ipa": "/ˈstɔːriz/",
+      "cn": "故事（story 的复数）"
+    },
+    "he’d": {
+      "pos": "contr.",
+      "ipa": "/hiːd/",
+      "cn": "= he would 或 he had"
+    },
+    "publish": {
+      "pos": "v.",
+      "ipa": "/ˈpʌblɪʃ/",
+      "cn": "出版，发表"
+    },
+    "drawings": {
+      "pos": "n.",
+      "ipa": "/ˈdrɔːɪŋz/",
+      "cn": "图画（drawing 的复数）"
+    },
+    "using": {
+      "pos": "v.",
+      "ipa": "/ˈjuːzɪŋ/",
+      "cn": "使用（use 的现在分词）"
+    },
+    "computer": {
+      "pos": "n.",
+      "ipa": "/kəmˈpjuːtə/",
+      "cn": "电脑"
+    },
+    "simona": {
+      "pos": "n.",
+      "ipa": "/sɪˈməʊnə/",
+      "cn": "Simona（女子名）"
+    },
+    "enjoys": {
+      "pos": "v.",
+      "ipa": "/ɪnˈdʒɔɪz/",
+      "cn": "享受（enjoy 的第三人称单数；enjoy doing）"
+    },
+    "creating": {
+      "pos": "v.",
+      "ipa": "/kriˈeɪtɪŋ/",
+      "cn": "创作（create 的现在分词）"
+    },
+    "ways": {
+      "pos": "n.",
+      "ipa": "/weɪz/",
+      "cn": "方法（way 的复数）"
+    },
+    "improve": {
+      "pos": "v.",
+      "ipa": "/ɪmˈpruːv/",
+      "cn": "提高，改进（improve the posters 提高海报水平）"
+    },
+    "posters": {
+      "pos": "n.",
+      "ipa": "/ˈpəʊstəz/",
+      "cn": "海报（poster 的复数）"
+    },
+    "poster": {
+      "pos": "n.",
+      "ipa": "/ˈpəʊstə/",
+      "cn": "海报"
+    },
+    "makes": {
+      "pos": "v.",
+      "ipa": "/meɪks/",
+      "cn": "做（make 的第三人称单数）"
+    },
+    "share": {
+      "pos": "v.",
+      "ipa": "/ʃeə/",
+      "cn": "分享（share sth with sb 与某人分享某物）"
+    },
+    "she’s": {
+      "pos": "contr.",
+      "ipa": "/ʃiːz/",
+      "cn": "= she has 或 she is"
+    },
+    "done": {
+      "pos": "v.",
+      "ipa": "/dʌn/",
+      "cn": "做（do 的过去分词）"
+    },
+    "students": {
+      "pos": "n.",
+      "ipa": "/ˈstjuːdnts/",
+      "cn": "学生（student 的复数）"
+    },
+    "andrei": {
+      "pos": "n.",
+      "ipa": "/ˈændreɪ/",
+      "cn": "Andrei（男子名）"
+    },
+    "painting": {
+      "pos": "n.",
+      "ipa": "/ˈpeɪntɪŋ/",
+      "cn": "图画，油画；绘画（painting techniques 绘画技巧）"
+    },
+    "techniques": {
+      "pos": "n.",
+      "ipa": "/tekˈniːks/",
+      "cn": "技巧（technique 的复数）"
+    },
+    "technique": {
+      "pos": "n.",
+      "ipa": "/tekˈniːk/",
+      "cn": "技巧，方法，技术"
+    },
+    "trips": {
+      "pos": "n.",
+      "ipa": "/trɪps/",
+      "cn": "出行（trip 的复数）"
+    },
+    "painters": {
+      "pos": "n.",
+      "ipa": "/ˈpeɪntəz/",
+      "cn": "画家（painter 的复数）"
+    },
+    "ideas": {
+      "pos": "n.",
+      "ipa": "/aɪˈdɪəz/",
+      "cn": "想法（idea 的复数）"
+    },
+    "idea": {
+      "pos": "n.",
+      "ipa": "/aɪˈdɪə/",
+      "cn": "想法，主意（have no idea 完全不知道）"
+    },
+    "pictures": {
+      "pos": "n.",
+      "ipa": "/ˈpɪktʃəz/",
+      "cn": "画；照片（picture 的复数）"
+    },
+    "outdoors": {
+      "pos": "adv.",
+      "ipa": "/ˌaʊtˈdɔːz/",
+      "cn": "在户外"
+    },
+    "nicola": {
+      "pos": "n.",
+      "ipa": "/ˈnɪkələ/",
+      "cn": "Nicola（人名）"
+    },
+    "printing": {
+      "pos": "n.",
+      "ipa": "/ˈprɪntɪŋ/",
+      "cn": "印制（printing by hand 手工印制）"
+    },
+    "print": {
+      "pos": "v./n.",
+      "ipa": "/prɪnt/",
+      "cn": "印刷；打印"
+    },
+    "by hand": {
+      "pos": "词组",
+      "ipa": "/baɪ ˈhænd/",
+      "cn": "用手工（对比 by machine）"
+    },
+    "patterns": {
+      "pos": "n.",
+      "ipa": "/ˈpætnz/",
+      "cn": "花样、图案（pattern 的复数）"
+    },
+    "pattern": {
+      "pos": "n.",
+      "ipa": "/ˈpætn/",
+      "cn": "花样，图案"
+    },
+    "created": {
+      "pos": "v.",
+      "ipa": "/kriˈeɪtɪd/",
+      "cn": "创作、创造（create 的过去分词）"
+    },
+    "onto": {
+      "pos": "prep.",
+      "ipa": "/ˈɒntə/",
+      "cn": "到……上面"
+    },
+    "materials": {
+      "pos": "n.",
+      "ipa": "/məˈtɪəriəlz/",
+      "cn": "材料（material 的复数）"
+    },
+    "material": {
+      "pos": "n.",
+      "ipa": "/məˈtɪəriəl/",
+      "cn": "材料（use your own material 用你自己的材料）"
+    },
+    "mother": {
+      "pos": "n.",
+      "ipa": "/ˈmʌðə/",
+      "cn": "母亲"
+    },
+    "make into": {
+      "pos": "词组",
+      "ipa": "/ˌmeɪk ˈɪntu/",
+      "cn": "把……制成（make A into B 把 A 做成 B）"
+    },
+    "clothes": {
+      "pos": "n.",
+      "ipa": "/kləʊðz/",
+      "cn": "衣服（永远复数）"
+    },
+    "karl": {
+      "pos": "n.",
+      "ipa": "/kɑːl/",
+      "cn": "Karl（男子名）"
+    },
+    "taking": {
+      "pos": "v.",
+      "ipa": "/ˈteɪkɪŋ/",
+      "cn": "拿、度过、拍（take 的现在分词）"
+    },
+    "photos": {
+      "pos": "n.",
+      "ipa": "/ˈfəʊtəʊz/",
+      "cn": "照片（photo 的复数）"
+    },
+    "basis": {
+      "pos": "n.",
+      "ipa": "/ˈbeɪsɪs/",
+      "cn": "基础（use … as a basis for 把……作为……的基础）"
+    },
+    "produces": {
+      "pos": "v.",
+      "ipa": "/prəˈdjuːsɪz/",
+      "cn": "创作（produce 的第三人称单数）"
+    },
+    "somewhere": {
+      "pos": "adv.",
+      "ipa": "/ˈsʌmweə/",
+      "cn": "某个地方"
+    },
+    "offers": {
+      "pos": "v.",
+      "ipa": "/ˈɒfəz/",
+      "cn": "提供（offer 的第三人称单数）"
+    },
+    "private": {
+      "pos": "adj.",
+      "ipa": "/ˈpraɪvət/",
+      "cn": "私人的（private lessons 私人课程）"
+    },
+    "artistic": {
+      "pos": "adj.",
+      "ipa": "/ɑːˈtɪstɪk/",
+      "cn": "艺术的（Get Artistic 课程名）"
+    },
+    "get artistic": {
+      "pos": "词组",
+      "ipa": "/ˌɡet ɑːˈtɪstɪk/",
+      "cn": "变得有艺术气息（课程名）"
+    },
+    "teachers": {
+      "pos": "n.",
+      "ipa": "/ˈtiːtʃəz/",
+      "cn": "老师（teacher 的复数）"
+    },
+    "drawing": {
+      "pos": "n.",
+      "ipa": "/ˈdrɔːɪŋ/",
+      "cn": "画画（get you drawing 让你动笔画）"
+    },
+    "studio-based": {
+      "pos": "adj.",
+      "ipa": "/ˈstjuːdiəʊ beɪst/",
+      "cn": "以画室为基础的（场地形式）"
+    },
+    "focuses": {
+      "pos": "v.",
+      "ipa": "/ˈfəʊkəsɪz/",
+      "cn": "集中于（focus on 专注于）"
+    },
+    "focus on": {
+      "pos": "词组",
+      "ipa": "/ˈfəʊkəs ɒn/",
+      "cn": "专注于"
+    },
+    "portraits": {
+      "pos": "n.",
+      "ipa": "/ˈpɔːtrɪts/",
+      "cn": "肖像（portrait 的复数）"
+    },
+    "portrait": {
+      "pos": "n.",
+      "ipa": "/ˈpɔːtrɪt/",
+      "cn": "肖像，画像"
+    },
+    "get sb doing sth": {
+      "pos": "句型",
+      "ipa": "/ˌɡet sʌmbədi ˈduːɪŋ/",
+      "cn": "使某人（动起来）做某事"
+    },
+    "you’ll": {
+      "pos": "contr.",
+      "ipa": "/juːl/",
+      "cn": "= you will"
+    },
+    "develop": {
+      "pos": "v.",
+      "ipa": "/dɪˈveləp/",
+      "cn": "发展；开发；加工、冲洗（照片）"
+    },
+    "whatever": {
+      "pos": "pron.",
+      "ipa": "/wɒtˈevə/",
+      "cn": "无论什么"
+    },
+    "you’ve": {
+      "pos": "contr.",
+      "ipa": "/juːv/",
+      "cn": "= you have"
+    },
+    "create": {
+      "pos": "v.",
+      "ipa": "/kriˈeɪt/",
+      "cn": "创造；创作"
+    },
+    "one-to-one": {
+      "pos": "adj.",
+      "ipa": "/ˌwʌn tə ˈwʌn/",
+      "cn": "一对一的（one-to-one sessions 一对一课）"
+    },
+    "one-to-one sessions": {
+      "pos": "词组",
+      "ipa": "/ˌwʌn tə ˈwʌn ˈseʃnz/",
+      "cn": "一对一课程（= private lessons）"
+    },
+    "one-to-one teaching": {
+      "pos": "词组",
+      "ipa": "/ˌwʌn tə ˈwʌn ˈtiːtʃɪŋ/",
+      "cn": "一对一教学"
+    },
+    "sessions": {
+      "pos": "n.",
+      "ipa": "/ˈseʃnz/",
+      "cn": "课次（session 的复数；一对一/小组课）"
+    },
+    "session": {
+      "pos": "n.",
+      "ipa": "/ˈseʃn/",
+      "cn": "一节（课）；一场活动"
+    },
+    "available": {
+      "pos": "adj.",
+      "ipa": "/əˈveɪləbl/",
+      "cn": "可获得的；可用的；有空的"
+    },
+    "attack": {
+      "pos": "n./v.",
+      "ipa": "/əˈtæk/",
+      "cn": "冲击，攻击（课程名 Art Attack!）"
+    },
+    "art attack": {
+      "pos": "词组",
+      "ipa": "/ˌɑːt əˈtæk/",
+      "cn": "艺术冲击（课程名）"
+    },
+    "perhaps": {
+      "pos": "adv.",
+      "ipa": "/pəˈhæps/",
+      "cn": "也许（= maybe）"
+    },
+    "based": {
+      "pos": "v.",
+      "ipa": "/beɪst/",
+      "cn": "以……为基础（base 的过去分词）"
+    },
+    "based on": {
+      "pos": "词组",
+      "ipa": "/ˈbeɪst ɒn/",
+      "cn": "以……为基础、基于"
+    },
+    "one's own": {
+      "pos": "词组",
+      "ipa": "/wʌnz əʊn/",
+      "cn": "某人自己的（your own writing 你自己的写作）"
+    },
+    "writing": {
+      "pos": "n.",
+      "ipa": "/ˈraɪtɪŋ/",
+      "cn": "写作；文字作品"
+    },
+    "put": {
+      "pos": "v.",
+      "ipa": "/pʊt/",
+      "cn": "放；放置",
+      "note": "put off doing sth 拖延；put … into 放进……里；put on 穿上、系上。"
+    },
+    "simple": {
+      "pos": "adj.",
+      "ipa": "/ˈsɪmpl/",
+      "cn": "简单的（simple techniques 简单的技巧）"
+    },
+    "don’t": {
+      "pos": "contr.",
+      "ipa": "/dəʊnt/",
+      "cn": "= do not"
+    },
+    "require": {
+      "pos": "v.",
+      "ipa": "/rɪˈkwaɪə/",
+      "cn": "需要（don’t require technology 不需要技术）"
+    },
+    "technology": {
+      "pos": "n.",
+      "ipa": "/tekˈnɒlədʒi/",
+      "cn": "科技，技术"
+    },
+    "discover": {
+      "pos": "v.",
+      "ipa": "/dɪˈskʌvə/",
+      "cn": "发现；探索"
+    },
+    "professional-looking": {
+      "pos": "adj.",
+      "ipa": "/prəˈfeʃənl ˌlʊkɪŋ/",
+      "cn": "看起来专业的"
+    },
+    "cover": {
+      "pos": "n./v.",
+      "ipa": "/ˈkʌvə/",
+      "cn": "封面；覆盖；盖住",
+      "note": "be covered in/with 被…覆盖着（表状态）。"
+    },
+    "designed": {
+      "pos": "v.",
+      "ipa": "/dɪˈzaɪnd/",
+      "cn": "设计（design 的过去分词）"
+    },
+    "hand-printed": {
+      "pos": "adj.",
+      "ipa": "/ˌhænd ˈprɪntɪd/",
+      "cn": "手工印制的"
+    },
+    "anyone": {
+      "pos": "pron.",
+      "ipa": "/ˈeniwʌn/",
+      "cn": "任何人"
+    },
+    "considering": {
+      "pos": "v.",
+      "ipa": "/kənˈsɪdərɪŋ/",
+      "cn": "考虑（consider 的现在分词）"
+    },
+    "consider": {
+      "pos": "v.",
+      "ipa": "/kənˈsɪdə/",
+      "cn": "考虑",
+      "note": "consider doing sth 考虑做某事。"
+    },
+    "further": {
+      "pos": "adj.",
+      "ipa": "/ˈfɜːðə/",
+      "cn": "进一步的"
+    },
+    "further studies": {
+      "pos": "词组",
+      "ipa": "/ˌfɜːðə ˈstʌdiz/",
+      "cn": "继续深造、后续学习"
+    },
+    "studies": {
+      "pos": "n.",
+      "ipa": "/ˈstʌdiz/",
+      "cn": "学习、研究（study 的复数）"
+    },
+    "imagination": {
+      "pos": "n.",
+      "ipa": "/ɪˌmædʒɪˈneɪʃn/",
+      "cn": "想象力"
+    },
+    "designing": {
+      "pos": "v.",
+      "ipa": "/dɪˈzaɪnɪŋ/",
+      "cn": "设计（design 的现在分词）"
+    },
+    "learning": {
+      "pos": "v.",
+      "ipa": "/ˈlɜːnɪŋ/",
+      "cn": "学、学习（learn 的现在分词）"
+    },
+    "special": {
+      "pos": "adj.",
+      "ipa": "/ˈspeʃl/",
+      "cn": "特别的；专门的"
+    },
+    "software": {
+      "pos": "n.",
+      "ipa": "/ˈsɒftweə/",
+      "cn": "软件"
+    },
+    "designs": {
+      "pos": "n.",
+      "ipa": "/dɪˈzaɪnz/",
+      "cn": "设计（design 的复数）"
+    },
+    "tops": {
+      "pos": "n.",
+      "ipa": "/tɒps/",
+      "cn": "上衣（top 的复数）"
+    },
+    "shoes": {
+      "pos": "n.",
+      "ipa": "/ʃuːz/",
+      "cn": "鞋子（shoe 的复数）"
+    },
+    "hats": {
+      "pos": "n.",
+      "ipa": "/hæts/",
+      "cn": "帽子（hat 的复数）"
+    },
+    "love": {
+      "pos": "v./n.",
+      "ipa": "/lʌv/",
+      "cn": "爱；喜爱",
+      "note": "love doing sth 喜欢做某事。"
+    },
+    "wear": {
+      "pos": "v.",
+      "ipa": "/weə/",
+      "cn": "穿；戴（wore / worn）"
+    },
+    "folder": {
+      "pos": "n.",
+      "ipa": "/ˈfəʊldə/",
+      "cn": "文件夹"
+    },
+    "a folder of work": {
+      "pos": "词组",
+      "ipa": "/ə ˌfəʊldər əv ˈwɜːk/",
+      "cn": "一文件夹的作品（作品集）"
+    },
+    "present": {
+      "pos": "v./n.",
+      "ipa": "/ˈpreznt/",
+      "cn": "礼物；现在；展示（动词读 /prɪˈzent/）"
+    },
+    "applying": {
+      "pos": "v.",
+      "ipa": "/əˈplaɪɪŋ/",
+      "cn": "申请（apply 的现在分词）"
+    },
+    "apply for": {
+      "pos": "词组",
+      "ipa": "/əˈplaɪ fɔː/",
+      "cn": "申请（apply for a course）"
+    },
+    "higher-level": {
+      "pos": "adj.",
+      "ipa": "/ˌhaɪə ˈlevl/",
+      "cn": "更高级别的"
+    },
+    "individual": {
+      "pos": "adj.",
+      "ipa": "/ˌɪndɪˈvɪdʒuəl/",
+      "cn": "单独的；个别的；一对一的",
+      "note": "individual classes 一对一课程。"
+    },
+    "classes": {
+      "pos": "n.",
+      "ipa": "/ˈklɑːsɪz/",
+      "cn": "课程、班级（class 的复数）"
+    },
+    "draw": {
+      "pos": "v.",
+      "ipa": "/drɔː/",
+      "cn": "画（draw /drew /drawn）"
+    },
+    "paint": {
+      "pos": "v./n.",
+      "ipa": "/peɪnt/",
+      "cn": "绘画、上色；颜料"
+    },
+    "situations": {
+      "pos": "n.",
+      "ipa": "/ˌsɪtʃuˈeɪʃnz/",
+      "cn": "场景、情境（situation 的复数）"
+    },
+    "situation": {
+      "pos": "n.",
+      "ipa": "/ˌsɪtʃuˈeɪʃn/",
+      "cn": "情况；处境；场景"
+    },
+    "studio": {
+      "pos": "n.",
+      "ipa": "/ˈstjuːdiəʊ/",
+      "cn": "工作室、画室；制片厂、演播室"
+    },
+    "gallery": {
+      "pos": "n.",
+      "ipa": "/ˈɡæləri/",
+      "cn": "美术馆，画廊"
+    },
+    "visits": {
+      "pos": "n.",
+      "ipa": "/ˈvɪzɪts/",
+      "cn": "参观（visit 的复数）"
+    },
+    "included": {
+      "pos": "v.",
+      "ipa": "/ɪnˈkluːdɪd/",
+      "cn": "包含在内（include 的过去式/过去分词）"
+    },
+    "you’re": {
+      "pos": "contr.",
+      "ipa": "/jɔː/",
+      "cn": "= you are"
+    },
+    "taught": {
+      "pos": "v.",
+      "ipa": "/tɔːt/",
+      "cn": "教（teach 的过去分词）"
+    },
+    "base": {
+      "pos": "v./n.",
+      "ipa": "/beɪs/",
+      "cn": "以…为基础；基础",
+      "note": "be based on 以…为基础/改编自；base A on B 把 A 建立在 B 上。"
+    },
+    "landscapes": {
+      "pos": "n.",
+      "ipa": "/ˈlændskeɪps/",
+      "cn": "风景（landscape 的复数）"
+    },
+    "landscape": {
+      "pos": "n.",
+      "ipa": "/ˈlændskeɪp/",
+      "cn": "风景，风景地貌"
+    },
+    "well-known": {
+      "pos": "adj.",
+      "ipa": "/ˌwel ˈnəʊn/",
+      "cn": "知名的，著名的"
+    },
+    "artists": {
+      "pos": "n.",
+      "ipa": "/ˈɑːtɪsts/",
+      "cn": "艺术家（artist 的复数）"
+    },
+    "experiment": {
+      "pos": "v./n.",
+      "ipa": "/ɪkˈsperɪment/",
+      "cn": "实验，尝试（experiment with sth 尝试某物）"
+    },
+    "various": {
+      "pos": "adj.",
+      "ipa": "/ˈveəriəs/",
+      "cn": "各种各样的"
+    },
+    "styles": {
+      "pos": "n.",
+      "ipa": "/staɪlz/",
+      "cn": "风格（style 的复数）"
+    },
+    "style": {
+      "pos": "n.",
+      "ipa": "/staɪl/",
+      "cn": "风格"
+    },
+    "methods": {
+      "pos": "n.",
+      "ipa": "/ˈmeθədz/",
+      "cn": "方法（method 的复数）"
+    },
+    "method": {
+      "pos": "n.",
+      "ipa": "/ˈmeθəd/",
+      "cn": "方法，方式"
+    },
+    "places": {
+      "pos": "n.",
+      "ipa": "/ˈpleɪsɪz/",
+      "cn": "地方（place 的复数）"
+    },
+    "bring": {
+      "pos": "v.",
+      "ipa": "/brɪŋ/",
+      "cn": "带来",
+      "note": "bring sth to sb 带给某人；bring along 带上。"
+    },
+    "bring in": {
+      "pos": "词组",
+      "ipa": "/ˌbrɪŋ ˈɪn/",
+      "cn": "带来，引入（bring in work 带作品来）"
+    },
+    "ranging": {
+      "pos": "v.",
+      "ipa": "/ˈreɪndʒɪŋ/",
+      "cn": "范围涵盖（range 的现在分词）"
+    },
+    "range from A to B": {
+      "pos": "句型",
+      "ipa": "/reɪndʒ frəm … tə …/",
+      "cn": "从 A 到 B 不等（ranging from photos to posters 从照片到海报都有）"
+    },
+    "website": {
+      "pos": "n.",
+      "ipa": "/ˈwebsaɪt/",
+      "cn": "网站"
+    },
+    "studio website": {
+      "pos": "词组",
+      "ipa": "/ˈstjuːdiəʊ ˈwebsaɪt/",
+      "cn": "画室网站"
+    },
+    "exchange": {
+      "pos": "v.",
+      "ipa": "/ɪksˈtʃeɪndʒ/",
+      "cn": "交换"
+    },
+    "exchange ideas": {
+      "pos": "词组",
+      "ipa": "/ɪksˌtʃeɪndʒ aɪˈdɪəz/",
+      "cn": "交流想法"
+    },
+    "useful": {
+      "pos": "adj.",
+      "ipa": "/ˈjuːsfl/",
+      "cn": "有用的"
+    },
+    "wishing": {
+      "pos": "v.",
+      "ipa": "/ˈwɪʃɪŋ/",
+      "cn": "希望（wish 的现在分词）"
+    },
+    "higher": {
+      "pos": "adj.",
+      "ipa": "/ˈhaɪə/",
+      "cn": "更高的（high 的比较级）"
+    },
+    "higher level": {
+      "pos": "词组",
+      "ipa": "/ˌhaɪə ˈlevl/",
+      "cn": "更高层次、更高级别"
+    },
+    "level": {
+      "pos": "n.",
+      "ipa": "/ˈlevl/",
+      "cn": "水平，层次"
+    },
+    "workshop": {
+      "pos": "n.",
+      "ipa": "/ˈwɜːkʃɒp/",
+      "cn": "工作坊（课程名 Art Workshop）"
+    },
+    "art workshop": {
+      "pos": "词组",
+      "ipa": "/ˌɑːt ˈwɜːkʃɒp/",
+      "cn": "艺术工坊（课程名）"
+    },
+    "outside": {
+      "pos": "adv./prep.",
+      "ipa": "/ˌaʊtˈsaɪd/",
+      "cn": "在外面；在……外面"
+    },
+    "along": {
+      "pos": "prep./adv.",
+      "ipa": "/əˈlɒŋ/",
+      "cn": "沿着；一起",
+      "note": "bring along 带上；along the road 沿着路。"
+    },
+    "bring along": {
+      "pos": "词组",
+      "ipa": "/ˌbrɪŋ əˈlɒŋ/",
+      "cn": "带上（bring along your own 带上你自己的）"
+    },
+    "will": {
+      "pos": "v.",
+      "ipa": "/wɪl/",
+      "cn": "将要（助动词）"
+    },
+    "wonderful": {
+      "pos": "adj.",
+      "ipa": "/ˈwʌndəfl/",
+      "cn": "美妙的；极好的"
+    },
+    "printed": {
+      "pos": "adj.",
+      "ipa": "/ˈprɪntɪd/",
+      "cn": "印制的（printed designs 印制图案）"
+    },
+    "yourself": {
+      "pos": "pron.",
+      "ipa": "/jɔːˈself/",
+      "cn": "你自己"
+    },
+    "turn into": {
+      "pos": "词组",
+      "ipa": "/ˌtɜːn ˈɪntu/",
+      "cn": "变成（turn A into B 把 A 变成 B）"
+    },
+    "transfer": {
+      "pos": "v.",
+      "ipa": "/trænsˈfɜː/",
+      "cn": "转移"
+    },
+    "transfer onto": {
+      "pos": "词组",
+      "ipa": "/trænsˌfɜː ˈɒntə/",
+      "cn": "转印到……上（transfer designs onto cloth）"
+    },
+    "cotton": {
+      "pos": "n.",
+      "ipa": "/ˈkɒtn/",
+      "cn": "棉，棉布"
+    },
+    "silk": {
+      "pos": "n.",
+      "ipa": "/sɪlk/",
+      "cn": "丝绸"
+    },
+    "paints": {
+      "pos": "n.",
+      "ipa": "/peɪnts/",
+      "cn": "颜料（paint 的复数）"
+    },
+    "sewing": {
+      "pos": "n.",
+      "ipa": "/ˈsəʊɪŋ/",
+      "cn": "缝纫（sewing projects 缝纫项目）"
+    },
+    "sewing projects": {
+      "pos": "词组",
+      "ipa": "/ˈsəʊɪŋ ˌprɒdʒekts/",
+      "cn": "缝纫项目（缝东西的活儿）"
+    },
+    "projects": {
+      "pos": "n.",
+      "ipa": "/ˈprɒdʒekts/",
+      "cn": "项目（project 的复数）"
+    },
+    "afterwards": {
+      "pos": "adv.",
+      "ipa": "/ˈɑːftəwədz/",
+      "cn": "然后，后来"
+    },
+    "making": {
+      "pos": "v.",
+      "ipa": "/ˈmeɪkɪŋ/",
+      "cn": "做，制造（make 的现在分词）"
+    },
+    "working": {
+      "pos": "v.",
+      "ipa": "/ˈwɜːkɪŋ/",
+      "cn": "工作、做（work 的现在分词）"
+    },
+    "inside": {
+      "pos": "adv./prep.",
+      "ipa": "/ˌɪnˈsaɪd/",
+      "cn": "在里面；在……里面"
+    },
+    "books": {
+      "pos": "n.",
+      "ipa": "/bʊks/",
+      "cn": "书（book 的复数）"
+    },
+    "showing": {
+      "pos": "v.",
+      "ipa": "/ˈʃəʊɪŋ/",
+      "cn": "展示（show 的现在分词）"
+    },
+    "paintings": {
+      "pos": "n.",
+      "ipa": "/ˈpeɪntɪŋz/",
+      "cn": "画作（painting 的复数）"
+    },
+    "cartoons": {
+      "pos": "n.",
+      "ipa": "/kɑːˈtuːnz/",
+      "cn": "卡通、动漫（cartoon 的复数）"
+    },
+    "cartoon": {
+      "pos": "n.",
+      "ipa": "/kɑːˈtuːn/",
+      "cn": "卡通，动漫"
+    },
+    "accompany": {
+      "pos": "v.",
+      "ipa": "/əˈkʌmpəni/",
+      "cn": "陪伴；伴随（accompany your stories 配合你的故事）"
+    },
+    "digital": {
+      "pos": "adj.",
+      "ipa": "/ˈdɪdʒɪtl/",
+      "cn": "数字的，数码的"
+    },
+    "digital design": {
+      "pos": "词组",
+      "ipa": "/ˌdɪdʒɪtl dɪˈzaɪn/",
+      "cn": "数字设计（用电脑做的设计）"
+    },
+    "design": {
+      "pos": "n./v.",
+      "ipa": "/dɪˈzaɪn/",
+      "cn": "设计（designing clothes 设计服装）"
+    },
+    "teaching": {
+      "pos": "n./v.",
+      "ipa": "/ˈtiːtʃɪŋ/",
+      "cn": "教学；教（teach 的现在分词）"
+    },
+    "you’d": {
+      "pos": "contr.",
+      "ipa": "/juːd/",
+      "cn": "= you would 或 you had"
+    },
+    "prefer": {
+      "pos": "v.",
+      "ipa": "/prɪˈfɜː/",
+      "cn": "更喜欢（prefer to do sth 更喜欢做某事）"
+    },
+    "through": {
+      "pos": "prep.",
+      "ipa": "/θruː/",
+      "cn": "穿过；透过；通过",
+      "note": "through research 通过研究。"
+    },
+    "research": {
+      "pos": "n./v.",
+      "ipa": "/rɪˈsɜːtʃ/",
+      "cn": "研究；调查",
+      "note": "do (some) research 做研究——动词用 do，不用 make。"
+    },
+    "add": {
+      "pos": "v.",
+      "ipa": "/æd/",
+      "cn": "添加（add details 添加细节；add … to …）"
+    },
+    "details": {
+      "pos": "n.",
+      "ipa": "/ˈdiːteɪlz/",
+      "cn": "细节（detail 的复数）"
+    },
+    "detail": {
+      "pos": "n.",
+      "ipa": "/ˈdiːteɪl/",
+      "cn": "细节（add details on screen 在屏幕上加细节）"
+    },
+    "screen": {
+      "pos": "n.",
+      "ipa": "/skriːn/",
+      "cn": "屏幕；银幕"
+    },
+    "whether": {
+      "pos": "conj.",
+      "ipa": "/ˈweðə/",
+      "cn": "是否；无论（whether … or …）"
+    },
+    "wall": {
+      "pos": "n.",
+      "ipa": "/wɔːl/",
+      "cn": "墙"
+    },
+    "put on the wall": {
+      "pos": "词组",
+      "ipa": "/ˌpʊt ɒn ðə ˈwɔːl/",
+      "cn": "挂在墙上（挂墙上的东西）"
+    },
+    "upload": {
+      "pos": "v.",
+      "ipa": "/ˌʌpˈləʊd/",
+      "cn": "上传"
+    },
+    "opinions": {
+      "pos": "n.",
+      "ipa": "/əˈpɪnjənz/",
+      "cn": "意见（opinion 的复数）"
+    },
+    "opinion": {
+      "pos": "n.",
+      "ipa": "/əˈpɪnjən/",
+      "cn": "观点，意见，看法"
+    },
+    "classmates": {
+      "pos": "n.",
+      "ipa": "/ˈklɑːsmeɪts/",
+      "cn": "同学（classmate 的复数）"
+    },
+    "comment": {
+      "pos": "v./n.",
+      "ipa": "/ˈkɒment/",
+      "cn": "评论（comment on 评论……）"
+    },
+    "comment on": {
+      "pos": "词组",
+      "ipa": "/ˈkɒment ɒn/",
+      "cn": "对……发表评论"
+    },
+    "theirs": {
+      "pos": "pron.",
+      "ipa": "/ðeəz/",
+      "cn": "他们的（东西）"
+    },
+    "do it yourself": {
+      "pos": "词组",
+      "ipa": "/ˌduː ɪt jɔːˈself/",
+      "cn": "自己动手（DIY，课程名）"
+    },
+    "add details": {
+      "pos": "词组",
+      "ipa": "/æd ˈdiːteɪlz/",
+      "cn": "添加细节"
+    },
+    "print out": {
+      "pos": "词组",
+      "ipa": "/ˌprɪnt ˈaʊt/",
+      "cn": "打印出"
+    },
+    "next to": {
+      "pos": "词组",
+      "ipa": "/ˈnekst tə/",
+      "cn": "紧挨着，在……旁边"
+    },
+    "quiet neighbourhood": {
+      "pos": "词组",
+      "ipa": "/ˌkwaɪət ˈneɪbəhʊd/",
+      "cn": "安静的社区"
+    },
+    "inexpensive hostels": {
+      "pos": "词组",
+      "ipa": "/ˌɪnɪkˈspensɪv ˈhɒstlz/",
+      "cn": "不贵的青年旅舍"
+    },
+    "seaside holiday": {
+      "pos": "词组",
+      "ipa": "/ˈsiːsaɪd ˌhɒlədeɪ/",
+      "cn": "海滨假期"
+    },
+    "flights abroad": {
+      "pos": "词组",
+      "ipa": "/ˌflaɪts əˈbrɔːd/",
+      "cn": "出国航班"
+    },
+    "evening entertainment": {
+      "pos": "词组",
+      "ipa": "/ˌiːvnɪŋ ˌentəˈteɪnmənt/",
+      "cn": "晚间娱乐"
+    },
+    "luxury hotel": {
+      "pos": "词组",
+      "ipa": "/ˌlʌkʃəri həʊˈtel/",
+      "cn": "豪华酒店"
+    },
+    "by night": {
+      "pos": "词组",
+      "ipa": "/baɪ ˈnaɪt/",
+      "cn": "在夜里"
+    },
+    "art course": {
+      "pos": "词组",
+      "ipa": "/ˌɑːt ˈkɔːs/",
+      "cn": "艺术课程"
+    },
+    "top-class cultural attractions": {
+      "pos": "词组",
+      "ipa": "/ˌtɒp klɑːs ˈkʌltʃərəl əˈtrækʃnz/",
+      "cn": "一流的文化景点"
+    }
+  },
+  "questions": [
+    {
+      "n": 101,
+      "tag": "①-1",
+      "answer": "e",
+      "prompt": "训练①-1 ——「always uses public transport（总坐公交的人）」应该配哪条公寓信息？",
+      "opts": {
+        "a": "extremely low prices",
+        "b": "has its own gym",
+        "c": "is in a quiet neighbourhood",
+        "d": "next to a leisure centre open every evening",
+        "e": "bus stop nearby",
+        "f": "opportunities to meet new people"
+      },
+      "why": "官方答案 <b>e</b>。天天坐公交 → 楼下必须有站；一个说动作、一个说设施，这就是同义转述。",
+      "clues": [
+        "uses public transport ↔ bus stop"
+      ],
+      "others": [
+        [
+          "a",
+          "价格低是给「花不起太多钱」的人（第 2 条）准备的。"
+        ],
+        [
+          "b",
+          "健身房对应「喜欢保持健康」（第 5 条）。"
+        ],
+        [
+          "c",
+          "安静的街区对应「不喜欢噪音」（第 3 条）。"
+        ],
+        [
+          "d",
+          "晚上营业的休闲中心对应「工作到五点半」（第 6 条）——下班后才有空。"
+        ],
+        [
+          "f",
+          "结识新朋友对应「善于交际」（第 4 条）。"
+        ]
+      ],
+      "tip": "配对题的排除法：每条「人的需求」只对应一条公寓信息，配过的就划掉。",
+      "ana": {
+        "parts": [
+          [
+            "人物需求",
+            "always uses public transport —— 总坐公交的人"
+          ],
+          [
+            "句的对应",
+            "<code>bus stop nearby（旁边就有公交站）</code> —— bus stop nearby"
+          ]
+        ],
+        "gram": [
+          "同义替换：人物需求 ↔ 公寓卖点"
+        ],
+        "tr": "「always uses public transport」→ bus stop nearby（旁边就有公交站）。"
+      }
+    },
+    {
+      "n": 102,
+      "tag": "①-2",
+      "answer": "a",
+      "prompt": "训练①-2 ——「cannot afford to spend much（花不起太多钱的人）」应该配哪条公寓信息？",
+      "opts": {
+        "a": "extremely low prices",
+        "b": "has its own gym",
+        "c": "is in a quiet neighbourhood",
+        "d": "next to a leisure centre open every evening",
+        "e": "bus stop nearby",
+        "f": "opportunities to meet new people"
+      },
+      "why": "官方答案 <b>a</b>。「负担不起花太多」= 价格必须极低；afford 是「负担得起」，常与 can/cannot 连用。",
+      "clues": [
+        "afford to spend ↔ low prices"
+      ],
+      "others": [
+        [
+          "b",
+          "健身房是「保持健康」那条（第 5 条）的答案。"
+        ],
+        [
+          "c",
+          "安静街区回应「不喜欢噪音」（第 3 条）。"
+        ],
+        [
+          "d",
+          "休闲中心晚上营业 → 给工作到五点半的人（第 6 条）。"
+        ],
+        [
+          "e",
+          "公交站 → 给总坐公交的人（第 1 条）。"
+        ],
+        [
+          "f",
+          "结识新朋友 → 给爱交际的人（第 4 条）。"
+        ]
+      ],
+      "tip": "配对题的排除法：每条「人的需求」只对应一条公寓信息，配过的就划掉。",
+      "ana": {
+        "parts": [
+          [
+            "人物需求",
+            "cannot afford to spend much —— 花不起太多钱的人"
+          ],
+          [
+            "句的对应",
+            "<code>extremely low prices（极低的价格）</code> —— extremely low prices"
+          ]
+        ],
+        "gram": [
+          "同义替换：人物需求 ↔ 公寓卖点"
+        ],
+        "tr": "「cannot afford to spend much」→ extremely low prices（极低的价格）。"
+      }
+    },
+    {
+      "n": 103,
+      "tag": "①-3",
+      "answer": "c",
+      "prompt": "训练①-3 ——「dislikes noise（不喜欢噪音的人）」应该配哪条公寓信息？",
+      "opts": {
+        "a": "extremely low prices",
+        "b": "has its own gym",
+        "c": "is in a quiet neighbourhood",
+        "d": "next to a leisure centre open every evening",
+        "e": "bus stop nearby",
+        "f": "opportunities to meet new people"
+      },
+      "why": "官方答案 <b>c</b>。「讨厌吵」= 需要安静的环境；noise（噪音）和 quiet（安静）是天然的反义对照。",
+      "clues": [
+        "dislikes noise ↔ quiet neighbourhood"
+      ],
+      "others": [
+        [
+          "a",
+          "低价格 → 给花不起钱的人（第 2 条）。"
+        ],
+        [
+          "b",
+          "健身房 → 给要保持健康的人（第 5 条）。"
+        ],
+        [
+          "d",
+          "晚上营业 → 给工作到五点半的人（第 6 条）。"
+        ],
+        [
+          "e",
+          "公交站 → 给总坐公交的人（第 1 条）。"
+        ],
+        [
+          "f",
+          "结识新朋友 → 给爱交际的人（第 4 条）。"
+        ]
+      ],
+      "tip": "配对题的排除法：每条「人的需求」只对应一条公寓信息，配过的就划掉。",
+      "ana": {
+        "parts": [
+          [
+            "人物需求",
+            "dislikes noise —— 不喜欢噪音的人"
+          ],
+          [
+            "句的对应",
+            "<code>is in a quiet neighbourhood（住在安静的街区）</code> —— is in a quiet neighbourhood"
+          ]
+        ],
+        "gram": [
+          "同义替换：人物需求 ↔ 公寓卖点"
+        ],
+        "tr": "「dislikes noise」→ is in a quiet neighbourhood（住在安静的街区）。"
+      }
+    },
+    {
+      "n": 104,
+      "tag": "①-4",
+      "answer": "f",
+      "prompt": "训练①-4 ——「is very sociable（非常爱交际的人）」应该配哪条公寓信息？",
+      "opts": {
+        "a": "extremely low prices",
+        "b": "has its own gym",
+        "c": "is in a quiet neighbourhood",
+        "d": "next to a leisure centre open every evening",
+        "e": "bus stop nearby",
+        "f": "opportunities to meet new people"
+      },
+      "why": "官方答案 <b>f</b>。「善于交际」= 想认识人；sociable 讲性格，meet new people 讲机会 —— 需求与卖点的转换。",
+      "clues": [
+        "sociable ↔ meet new people"
+      ],
+      "others": [
+        [
+          "a",
+          "低价格 → 给花不起钱的人（第 2 条）。"
+        ],
+        [
+          "b",
+          "健身房 → 给要健身的人（第 5 条）。"
+        ],
+        [
+          "c",
+          "安静街区 → 给讨厌噪音的人（第 3 条）。"
+        ],
+        [
+          "d",
+          "晚上营业 → 给工作到五点半的人（第 6 条）。"
+        ],
+        [
+          "e",
+          "公交站 → 给总坐公交的人（第 1 条）。"
+        ]
+      ],
+      "tip": "配对题的排除法：每条「人的需求」只对应一条公寓信息，配过的就划掉。",
+      "ana": {
+        "parts": [
+          [
+            "人物需求",
+            "is very sociable —— 非常爱交际的人"
+          ],
+          [
+            "句的对应",
+            "<code>opportunities to meet new people（结识新朋友的机会）</code> —— opportunities to meet new people"
+          ]
+        ],
+        "gram": [
+          "同义替换：人物需求 ↔ 公寓卖点"
+        ],
+        "tr": "「is very sociable」→ opportunities to meet new people（结识新朋友的机会）。"
+      }
+    },
+    {
+      "n": 105,
+      "tag": "①-5",
+      "answer": "b",
+      "prompt": "训练①-5 ——「likes to keep fit（喜欢保持健康的人）」应该配哪条公寓信息？",
+      "opts": {
+        "a": "extremely low prices",
+        "b": "has its own gym",
+        "c": "is in a quiet neighbourhood",
+        "d": "next to a leisure centre open every evening",
+        "e": "bus stop nearby",
+        "f": "opportunities to meet new people"
+      },
+      "why": "官方答案 <b>b</b>。「保持健康」= 要运动设施；keep fit 是习惯，gym 是配套。",
+      "clues": [
+        "keep fit ↔ gym"
+      ],
+      "others": [
+        [
+          "a",
+          "低价格 → 给花不起钱的人（第 2 条）。"
+        ],
+        [
+          "c",
+          "安静街区 → 给讨厌噪音的人（第 3 条）。"
+        ],
+        [
+          "d",
+          "晚上营业 → 给工作到五点半的人（第 6 条）。"
+        ],
+        [
+          "e",
+          "公交站 → 给总坐公交的人（第 1 条）。"
+        ],
+        [
+          "f",
+          "结识新朋友 → 给爱交际的人（第 4 条）。"
+        ]
+      ],
+      "tip": "配对题的排除法：每条「人的需求」只对应一条公寓信息，配过的就划掉。",
+      "ana": {
+        "parts": [
+          [
+            "人物需求",
+            "likes to keep fit —— 喜欢保持健康的人"
+          ],
+          [
+            "句的对应",
+            "<code>has its own gym（自带健身房）</code> —— has its own gym"
+          ]
+        ],
+        "gram": [
+          "同义替换：人物需求 ↔ 公寓卖点"
+        ],
+        "tr": "「likes to keep fit」→ has its own gym（自带健身房）。"
+      }
+    },
+    {
+      "n": 106,
+      "tag": "①-6",
+      "answer": "d",
+      "prompt": "训练①-6 ——「works until 5.30 p.m.（工作到五点半的人）」应该配哪条公寓信息？",
+      "opts": {
+        "a": "extremely low prices",
+        "b": "has its own gym",
+        "c": "is in a quiet neighbourhood",
+        "d": "next to a leisure centre open every evening",
+        "e": "bus stop nearby",
+        "f": "opportunities to meet new people"
+      },
+      "why": "官方答案 <b>d</b>。下班晚 = 只能用晚上的设施；「工作到五点半」和「每晚营业」是时间上的对接。",
+      "clues": [
+        "works until 5.30 p.m. ↔ open every evening"
+      ],
+      "others": [
+        [
+          "a",
+          "低价格 → 给花不起钱的人（第 2 条）。"
+        ],
+        [
+          "b",
+          "健身房 → 给要健身的人（第 5 条）——注意这是他时间之外的事。"
+        ],
+        [
+          "c",
+          "安静街区 → 给讨厌噪音的人（第 3 条）。"
+        ],
+        [
+          "e",
+          "公交站 → 给总坐公交的人（第 1 条）。"
+        ],
+        [
+          "f",
+          "结识新朋友 → 给爱交际的人（第 4 条）。"
+        ]
+      ],
+      "tip": "配对题的排除法：每条「人的需求」只对应一条公寓信息，配过的就划掉。",
+      "ana": {
+        "parts": [
+          [
+            "人物需求",
+            "works until 5.30 p.m. —— 工作到五点半的人"
+          ],
+          [
+            "句的对应",
+            "<code>next to a leisure centre open every evening（紧挨着每晚营业的休闲中心）</code> —— next to a leisure centre open every evening"
+          ]
+        ],
+        "gram": [
+          "同义替换：人物需求 ↔ 公寓卖点"
+        ],
+        "tr": "「works until 5.30 p.m.」→ next to a leisure centre open every evening（紧挨着每晚营业的休闲中心）。"
+      }
+    },
+    {
+      "n": 107,
+      "tag": "③",
+      "answer": "C",
+      "prompt": "训练③ —— A、B、C 三个假期里，哪个最适合 Hannah？",
+      "opts": {
+        "A": "Study tours",
+        "B": "Sunshine destinations",
+        "C": "City breaks"
+      },
+      "why": "官方答案 <b>C</b>。Hannah 的四条需求与 City breaks 四条表达一一对应：<b>lively place</b> ↔ <b>one of the world's most exciting cities / the city that never sleeps</b>；<b>stays open late</b> ↔ <b>by night, have fun</b>（晚上还在玩）；<b>top-class cultural attractions</b> ↔ <b>the world-famous Museum of Modern Art and the theatres of Broadway</b>；<b>high-quality accommodation</b> ↔ <b>a luxury hotel</b>。四条全中。",
+      "clues": [
+        "lively place ↔ most exciting cities / never sleeps",
+        "stays open late ↔ by night, have fun",
+        "top-class cultural attractions ↔ Museum of Modern Art / theatres of Broadway",
+        "high-quality accommodation ↔ a luxury hotel"
+      ],
+      "others": [
+        [
+          "A",
+          "文化成分很足（历史城市、艺术、古典音乐），但住宿是 <b>inexpensive hostels</b>（不贵的青年旅舍）——直接违背「高质量住宿」这条，且没有「开得晚」。"
+        ],
+        [
+          "B",
+          "海滩放松方向：旅馆 <b>rather basic</b>（相当基础）、小镇 <b>not much to do</b>（没什么可做）——热闹、文化、好住宿三条全缺。"
+        ]
+      ],
+      "tip": "配对题的铁律：四条需求全对上才算对。只碰到一条就选的，往往正落在出题人的坑里。",
+      "ana": {
+        "parts": [
+          [
+            "需求①",
+            "really lively place ↔ <code>the most exciting cities / the city that never sleeps</code>"
+          ],
+          [
+            "需求②",
+            "stays open late ↔ <code>by night, have fun</code>"
+          ],
+          [
+            "需求③",
+            "top-class cultural attractions ↔ <code>the Museum of Modern Art and the theatres of Broadway</code>"
+          ],
+          [
+            "需求④",
+            "high-quality accommodation ↔ <code>a luxury hotel</code>"
+          ]
+        ],
+        "gram": [
+          "配对题：逐条需求找同义转述"
+        ],
+        "tr": "Hannah 想去的「热闹、玩得晚、有顶级文化景点、住宿高级」→ City breaks（C）。"
+      }
+    },
+    {
+      "n": 6,
+      "answer": "B",
+      "prompt": "第 6 题 —— 选出最适合这个人的艺术课程（A–H）。",
+      "opts": {
+        "A": "Get Artistic",
+        "B": "Art Attack!",
+        "C": "Art and imagination",
+        "D": "Create!",
+        "E": "More Art Now!",
+        "F": "Art Workshop",
+        "G": "Do it yourself",
+        "H": "The Studio"
+      },
+      "why": "官方答案 <b>B</b>。Rafa 的三条需求条条对上 Art Attack!：想出版自己写的故事 → <b>based on your own writing, to put into a short book</b>；想把画加进故事 → <b>create pictures … to put into a book or poster</b>；不用电脑 → <b>simple techniques that don't require technology</b>。「支持美院申请」还呼应结尾的 <b>further studies in art</b>。",
+      "clues": [
+        "written stories, would like to publish ↔ based on your own writing / put into a book",
+        "include drawings in them ↔ create pictures",
+        "without using a computer ↔ don't require technology",
+        "art college application ↔ further studies in art"
+      ],
+      "others": [
+        [
+          "A",
+          "画室的肖像课、还提供一对一——Rafa 没说要画人像或一对一（那是 Karl 的需求）。"
+        ],
+        [
+          "C",
+          "用 <b>special computer software</b> 做服装设计——和「不用电脑」正面冲突。"
+        ],
+        [
+          "D",
+          "画廊、户外、各种绘画风格——是绘画技巧方向，没有「故事/做书」这条线。"
+        ],
+        [
+          "E",
+          "画人和场景、用工作室网站——没提把画放进自己的故事、做成书。"
+        ],
+        [
+          "F",
+          "印制图案、转印布料——那是手工印制（Nicola）的需求方向。"
+        ],
+        [
+          "G",
+          "也要用 <b>digital design techniques</b>（数字设计）——要电脑，排除。"
+        ],
+        [
+          "H",
+          "digital design 电脑方向——排除。"
+        ]
+      ],
+      "tip": "把每个人的需求拆成三、四条线，逐条去八段文本里找「换了一种说法」；全部对上才是答案。",
+      "ana": {
+        "parts": [
+          [
+            "需求①",
+            "出版自己写的故事 ↔ <code>based on your own writing / put into a book</code>"
+          ],
+          [
+            "需求②",
+            "把画加进故事 ↔ <code>create pictures</code>"
+          ],
+          [
+            "需求③",
+            "不用电脑 ↔ <code>don't require technology</code>"
+          ]
+        ],
+        "gram": [
+          "Part 2 配对：把人物需求逐条换成文本里的同义表达"
+        ],
+        "tr": "Rafa 要「给自己的故事配图、做成书、不用电脑」→ B Art Attack!。"
+      }
+    },
+    {
+      "n": 7,
+      "answer": "H",
+      "prompt": "第 7 题 —— 选出最适合这个人的艺术课程（A–H）。",
+      "opts": {
+        "A": "Get Artistic",
+        "B": "Art Attack!",
+        "C": "Art and imagination",
+        "D": "Create!",
+        "E": "More Art Now!",
+        "F": "Art Workshop",
+        "G": "Do it yourself",
+        "H": "The Studio"
+      },
+      "why": "官方答案 <b>H</b>。Simona 的三条需求条条对上 The Studio：电脑做艺术 → <b>digital design / using special software</b>；改进海报 → <b>create your pictures and add details on screen</b>（在屏幕上完善作品）；分享给同学 → <b>Upload your work on the studio website and get opinions from your classmates</b>。",
+      "clues": [
+        "creating art on her computer ↔ digital design / special software",
+        "improve the posters ↔ create your pictures and add details on screen",
+        "share what she's done with other students ↔ upload your work … get opinions from your classmates"
+      ],
+      "others": [
+        [
+          "A",
+          "肖像画室 + 一对一——没有电脑、海报、同学分享这几条。"
+        ],
+        [
+          "B",
+          "明确写着 <b>don't require technology</b>——和「用电脑」正相反。"
+        ],
+        [
+          "C",
+          "也用电脑，但方向是服装设计、作品集申请——没有「改进海报、分享给同学」。"
+        ],
+        [
+          "D",
+          "绘画 + 画廊方向——不是电脑创作。"
+        ],
+        [
+          "E",
+          "有 <b>studio website / exchange ideas</b>（网站交流这条像），但没有电脑创作、屏幕加细节这条线。"
+        ],
+        [
+          "F",
+          "印制布料方向——不符。"
+        ],
+        [
+          "G",
+          "数字设计（电脑方向像），但重点在「给故事配图、书和卡通」——没有海报和同学分享。"
+        ]
+      ],
+      "tip": "干扰项常常「有半个对」——E 也有网站交流，但 Simona 第一条「电脑创作海报」它没写，所以不选。",
+      "ana": {
+        "parts": [
+          [
+            "需求①",
+            "电脑创作、改进海报 ↔ <code>digital design / add details on screen</code>"
+          ],
+          [
+            "需求②",
+            "分享给同学 ↔ <code>upload … get opinions from your classmates</code>"
+          ]
+        ],
+        "gram": [
+          "Part 2 配对：把人物需求逐条换成文本里的同义表达"
+        ],
+        "tr": "Simona 要「电脑做艺术、改进海报、分享给同学」→ H The Studio。"
+      }
+    },
+    {
+      "n": 8,
+      "answer": "D",
+      "prompt": "第 8 题 —— 选出最适合这个人的艺术课程（A–H）。",
+      "opts": {
+        "A": "Get Artistic",
+        "B": "Art Attack!",
+        "C": "Art and imagination",
+        "D": "Create!",
+        "E": "More Art Now!",
+        "F": "Art Workshop",
+        "G": "Do it yourself",
+        "H": "The Studio"
+      },
+      "why": "官方答案 <b>D</b>。Andrei 的三条需求条条对上 Create!：尝试不同绘画技巧 → <b>experiment with various styles and methods</b>；看名家作品找灵感 → <b>Gallery visits … studies of landscapes and portraits by well-known artists</b>；户外画 → <b>in the studio or even in the park</b>。",
+      "clues": [
+        "try different painting techniques ↔ experiment with various styles and methods",
+        "trips to see the work of famous painters ↔ gallery visits / by well-known artists",
+        "painting outdoors ↔ in the studio or even in the park"
+      ],
+      "others": [
+        [
+          "A",
+          "画室肖像、一对一——没有户外、画廊、多样技法这几条。"
+        ],
+        [
+          "B",
+          "做书做海报、手工封面——是制作方向，不是绘画技巧。"
+        ],
+        [
+          "C",
+          "电脑服装设计——方向不符。"
+        ],
+        [
+          "E",
+          "也「bring in work（照片、海报）」给你灵感，但没有户外作画和画廊参观（带照片 ≠ 看名家原作）。"
+        ],
+        [
+          "F",
+          "印制图案、缝纫——不符。"
+        ],
+        [
+          "G",
+          "数字设计方向——要电脑，排除。"
+        ],
+        [
+          "H",
+          "digital design 电脑方向——排除。"
+        ]
+      ],
+      "tip": "Andrei 全是「画」的需求：出现 computer / printing 方向的选项直接排除。",
+      "ana": {
+        "parts": [
+          [
+            "需求①",
+            "不同绘画技巧 ↔ <code>experiment with various styles and methods</code>"
+          ],
+          [
+            "需求②",
+            "看名家作品 ↔ <code>Gallery visits … by well-known artists</code>"
+          ],
+          [
+            "需求③",
+            "户外画 ↔ <code>or even in the park</code>"
+          ]
+        ],
+        "gram": [
+          "Part 2 配对：把人物需求逐条换成文本里的同义表达"
+        ],
+        "tr": "Andrei 要「不同技法、看名家、户外画」→ D Create!。"
+      }
+    },
+    {
+      "n": 9,
+      "answer": "F",
+      "prompt": "第 9 题 —— 选出最适合这个人的艺术课程（A–H）。",
+      "opts": {
+        "A": "Get Artistic",
+        "B": "Art Attack!",
+        "C": "Art and imagination",
+        "D": "Create!",
+        "E": "More Art Now!",
+        "F": "Art Workshop",
+        "G": "Do it yourself",
+        "H": "The Studio"
+      },
+      "why": "官方答案 <b>F</b>。Nicola 的三条需求条条对上 Art Workshop：手工印制 → <b>wonderful printed designs</b>；把图案印到不同材料给妈妈做衣服 → <b>transfer your designs onto cotton and silk / sewing projects</b>；学在家能用的基本技巧 → <b>simple methods you can try yourself after the course</b>。",
+      "clues": [
+        "printing by hand ↔ printed designs / hand-printed",
+        "print the patterns … onto different materials ↔ transfer your designs onto cotton and silk",
+        "for her mother to make into clothes ↔ sewing projects",
+        "basic printing techniques to use at home ↔ methods you can try yourself after the course"
+      ],
+      "others": [
+        [
+          "A",
+          "肖像画室——没有印制；一对一也不是 Nicola 要的。"
+        ],
+        [
+          "B",
+          "也有「hand-printed」，但那是做书用的封面——不是印到布料、做衣服。"
+        ],
+        [
+          "C",
+          "电脑设计方向——排除。"
+        ],
+        [
+          "D",
+          "绘画、画廊——排除。"
+        ],
+        [
+          "E",
+          "画人和场景——排除。"
+        ],
+        [
+          "G",
+          "数字设计——排除。"
+        ],
+        [
+          "H",
+          "电脑方向——排除。"
+        ]
+      ],
+      "tip": "看到 cotton and silk / sewing（材料 + 缝纫）这种词，先想 Nicola——答案就是手工印制课。",
+      "ana": {
+        "parts": [
+          [
+            "需求①",
+            "手工印制 ↔ <code>printed designs</code>"
+          ],
+          [
+            "需求②",
+            "印到材料做衣服 ↔ <code>transfer … onto cotton and silk / sewing projects</code>"
+          ],
+          [
+            "需求③",
+            "在家能用 ↔ <code>try yourself after the course</code>"
+          ]
+        ],
+        "gram": [
+          "Part 2 配对：把人物需求逐条换成文本里的同义表达"
+        ],
+        "tr": "Nicola 要「手工印、印到布料做衣服、在家能用」→ F Art Workshop。"
+      }
+    },
+    {
+      "n": 10,
+      "answer": "A",
+      "prompt": "第 10 题 —— 选出最适合这个人的艺术课程（A–H）。",
+      "opts": {
+        "A": "Get Artistic",
+        "B": "Art Attack!",
+        "C": "Art and imagination",
+        "D": "Create!",
+        "E": "More Art Now!",
+        "F": "Art Workshop",
+        "G": "Do it yourself",
+        "H": "The Studio"
+      },
+      "why": "官方答案 <b>A</b>。Karl 的两条需求条条对上 Get Artistic：用家人照片作为创作基础 → <b>develop whatever you've brought</b>（把你自己带来的东西加工出来）+ 课程 <b>focuses on portraits</b>（肖像/人物方向）；要私人课程 → <b>One-to-one sessions also available</b>。",
+      "clues": [
+        "taking photos of his family ↔ portraits / whatever you've brought",
+        "use them as a basis for the art he produces ↔ develop … to create pictures of people",
+        "private lessons ↔ one-to-one sessions"
+      ],
+      "others": [
+        [
+          "B",
+          "做书做封面——没有照片基础、也没有一对一。"
+        ],
+        [
+          "C",
+          "也有 <b>Individual classes</b>（一对一），但方向是电脑服装设计——没有「用你带来的照片」这条。"
+        ],
+        [
+          "D",
+          "画廊绘画——没有一对一。"
+        ],
+        [
+          "E",
+          "画人 + 网站——没有一对一，也没提用你自己的照片。"
+        ],
+        [
+          "F",
+          "印制布料——排除。"
+        ],
+        [
+          "G",
+          "也有 <b>one-to-one teaching</b>（一对一像），但用的是数字设计、书和卡通方向——不服务「照片当基础」。"
+        ],
+        [
+          "H",
+          "电脑方向——排除。"
+        ]
+      ],
+      "tip": "「private lessons」在八段里被换成 one-to-one / individual——出现两次的转述要小心：两条需求都对上才是它。",
+      "ana": {
+        "parts": [
+          [
+            "需求①",
+            "照片当创作基础 ↔ <code>develop whatever you've brought / portraits</code>"
+          ],
+          [
+            "需求②",
+            "私人课程 ↔ <code>One-to-one sessions also available</code>"
+          ]
+        ],
+        "gram": [
+          "Part 2 配对：把人物需求逐条换成文本里的同义表达"
+        ],
+        "tr": "Karl 要「用家人照片创作、有私人课」→ A Get Artistic。"
+      }
+    }
+  ],
+  "summaryTip": "先圈出每个人的关键需求，再到文本里找「换了一种说法」的表达——答案永远是同义替换。",
+  "summary": {
+    "title": "书上批注 · 要点速览",
+    "groups": [
+      {
+        "t": "语法 / 讲解（非词组类批注）",
+        "items": [
+          {
+            "cn": "Which 引导非限制性定语从句：一个句子 + 逗号 + which 引导的句子。把「逗号 + which 从句」去掉，前面主句的意思照样完整——它只是对主句的补充说明。",
+            "at": "6",
+            "ref": "29-1"
+          },
+          {
+            "cn": "digital design 数字设计：指使用计算机软件和工具进行图形设计、平面设计、网页设计等创作的过程和结果。",
+            "at": "H",
+            "ref": "42-1"
+          }
+        ]
+      }
+    ]
+  }
+}

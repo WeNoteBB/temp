@@ -342,6 +342,7 @@
   function boot() {
     if (S && S.mountWho) S.mountWho($("who"));
     if (S && S.mountTheme) S.mountTheme($("tglTheme"));
+    if (S && S.mountZoom) S.mountZoom();
     bind();
     renderList();                    // 先画（数据是内联的，不等网络）
     loadFavs().then(paintFavs);      // 收藏态到了再把 ☆ 点亮

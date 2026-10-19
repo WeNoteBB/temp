@@ -10,6 +10,9 @@
      pet_sentence   全站句子表（uk_hash 唯一，hash = sha256(句子)）
      user_word      用户-单词关联（uk: user_id + level + word_id）
      user_sentence  用户-句子关联（uk: user_id + level + sentence_id）
+     pet_phrase     词组库内容镜像（uk_phrase_text 唯一；真源 data/phrases.json）
+     user_phrase    用户-词组关联（uk: user_id + level + phrase_id；带内容快照）
+     pet_phrase_mistake 词组选择题错题（uk: user_id + phrase_id，重复错就计数）
 
    设计约定：
    · 收藏 = 建关联。pet_word / pet_sentence 里没有就补一条（只填我们知道的字段，
@@ -298,6 +301,196 @@ export function createDb(pool, opts) {
     } catch (e) { return null; }
   }
 
+  /* ---------- 词组收藏 ----------
+     和单词/句子同一套路：pet_phrase 里没有就补一条（内容以页面传上来的为准，
+     文件真源是 data/phrases.json），然后挂用户关联。
+     user_phrase 里**存一份内容快照**（词组/中文/例句/例句翻译）——
+     词书和复习页读它就不用 join，内容改了老收藏也不烂。 */
+  async function ensurePhrase(conn, data) {
+    const [p] = await conn.query(
+      "INSERT INTO `pet_phrase` " +
+        "(`no`, `grp`, `phrase`, `alt`, `meaning`, `usage_note`, `example`, `example_cn`, `blank`, `quest`, `status`) " +
+        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1) " +
+        "ON DUPLICATE KEY UPDATE `id` = LAST_INSERT_ID(`id`)",
+      [
+        data.no || 0,
+        Math.max(1, Math.ceil((data.no || 1) / 10)),
+        data.phrase,
+        fitChars(data.alt || "", 128),
+        fitText(data.meaning || ""),
+        fitText(data.usageNote || ""),
+        fitText(data.example || ""),
+        fitText(data.exampleCn || ""),
+        fitChars(data.blank || "", 128),
+        data.why ? JSON.stringify({ why: data.why, trap: data.trap || "" }) : null
+      ]
+    );
+    return p.insertId;
+  }
+
+  async function addPhraseFav(data) {
+    const userId = await ensureUser(data.phone);
+    const conn = await pool.getConnection();
+    try {
+      await conn.beginTransaction();
+      const phraseId = await ensurePhrase(conn, data);
+      await conn.query(
+        "INSERT INTO `user_phrase` " +
+          "(`user_id`, `phrase_id`, `level`, `phrase`, `meaning`, `example`, `example_cn`, `source_type`, `source_title`) " +
+          "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) " +
+          "ON DUPLICATE KEY UPDATE `id` = `id`",
+        [
+          userId, phraseId, LEVEL, data.phrase, fitText(data.meaning || ""),
+          fitText(data.example || ""), fitText(data.exampleCn || ""),
+          SOURCE_TYPE === 2 ? 3 : SOURCE_TYPE, fitText(data.sourceTitle || "", TITLE_MAX) || null
+        ]
+      );
+      await conn.commit();
+      return { phraseId: phraseId, userId: userId };
+    } catch (e) {
+      try { await conn.rollback(); } catch (e2) { /* 同上 */ }
+      throw e;
+    } finally {
+      conn.release();
+    }
+  }
+
+  /* 取消收藏词组：只删 user_phrase 那一行（pet_phrase 留着） */
+  async function removePhraseFav(data) {
+    const userId = await getUserId(data.phone);
+    if (!userId) return { removed: 0 };
+    const [r] = await pool.query(
+      "DELETE up FROM `user_phrase` up JOIN `pet_phrase` p ON p.`id` = up.`phrase_id` " +
+        "WHERE up.`user_id` = ? AND up.`level` = ? AND p.`phrase` = ?",
+      [userId, LEVEL, data.phrase]
+    );
+    return { removed: r.affectedRows };
+  }
+
+  /* ---------- 词组错题 ----------
+     一道题一个用户只留一行：第一次错插入，再错就换最新选的那个并计数 +1。 */
+  async function addPhraseMistake(data) {
+    const userId = await ensureUser(data.phone);
+    const conn = await pool.getConnection();
+    try {
+      await conn.beginTransaction();
+      const phraseId = await ensurePhrase(conn, data);
+      await conn.query(
+        "INSERT INTO `pet_phrase_mistake` " +
+          "(`user_id`, `phrase_id`, `phrase_no`, `phrase`, `stem`, `chosen`, `chosen_k`, `correct`, `correct_k`) " +
+          "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) " +
+          "ON DUPLICATE KEY UPDATE `chosen` = ?, `chosen_k` = ?, `correct` = ?, `correct_k` = ?, " +
+          "`stem` = ?, `wrong_count` = `wrong_count` + 1, `updated_at` = CURRENT_TIMESTAMP",
+        [
+          userId, phraseId, data.no || 0, data.phrase, fitText(data.stem || ""),
+          fitChars(data.chosen || "", 128), data.chosenK || "",
+          fitChars(data.correct || "", 128), data.correctK || "",
+          fitChars(data.chosen || "", 128), data.chosenK || "",
+          fitChars(data.correct || "", 128), data.correctK || "",
+          fitText(data.stem || "")
+        ]
+      );
+      await conn.commit();
+      return { ok: true };
+    } catch (e) {
+      try { await conn.rollback(); } catch (e2) { /* 同上 */ }
+      throw e;
+    } finally {
+      conn.release();
+    }
+  }
+
+  async function listPhraseMistakes(phone) {
+    const userId = await getUserId(phone);
+    if (!userId) return { items: [] };
+    const [rows] = await pool.query(
+      "SELECT `phrase_no` AS no, `phrase`, `stem`, `chosen`, `correct`, " +
+        "`wrong_count` AS cnt, UNIX_TIMESTAMP(`updated_at`) * 1000 AS ts " +
+        "FROM `pet_phrase_mistake` WHERE `user_id` = ? ORDER BY `updated_at` DESC, `id` DESC",
+      [userId]
+    );
+    return {
+      items: rows.map(function (r0) {
+        return {
+          no: Number(r0.no) || 0,
+          phrase: r0.phrase,
+          stem: r0.stem,
+          chosen: r0.chosen,
+          correct: r0.correct,
+          count: Number(r0.cnt) || 1,
+          ts: Number(r0.ts) || 0
+        };
+      })
+    };
+  }
+
+  /* ---------- 词组复习（间隔重复） ----------
+     一个用户一条词组只留一行：答对升级（间隔变长）、答错回到 1 级（明天再来）。
+     到期日由服务端算（srsNext），这里只负责把 level / due_at 落库。 */
+  async function addPhraseReview(data) {
+    const userId = await ensureUser(data.phone);
+    const conn = await pool.getConnection();
+    try {
+      await conn.beginTransaction();
+      const phraseId = await ensurePhrase(conn, data);
+      await conn.query(
+        "INSERT INTO `pet_phrase_review` " +
+          "(`user_id`, `phrase_id`, `phrase_no`, `phrase`, `level`, `reps`, `wrongs`, `due_at`) " +
+          "VALUES (?, ?, ?, ?, ?, 1, ?, DATE_ADD(CURDATE(), INTERVAL ? DAY)) " +
+          "ON DUPLICATE KEY UPDATE `level` = VALUES(`level`), `phrase_no` = VALUES(`phrase_no`), " +
+          "`phrase` = VALUES(`phrase`), `reps` = `reps` + 1, " +
+          "`wrongs` = `wrongs` + VALUES(`wrongs`), `due_at` = VALUES(`due_at`), " +
+          "`updated_at` = CURRENT_TIMESTAMP",
+        [
+          userId, phraseId, data.no || 0, data.phrase,
+          Math.max(1, Math.min(6, parseInt(data.level, 10) || 1)),
+          data.ok ? 0 : 1,
+          Math.max(0, Math.min(60, parseInt(data.days, 10) || 1))
+        ]
+      );
+      await conn.commit();
+      return { ok: true };
+    } catch (e) {
+      try { await conn.rollback(); } catch (e2) { /* 同上 */ }
+      throw e;
+    } finally {
+      conn.release();
+    }
+  }
+
+  /* 复习列表：due=1 只要到期的（默认），due=0 全部（前端自己算「没练过的」） */
+  async function listPhraseReviews(phone, opts) {
+    const userId = await getUserId(phone);
+    if (!userId) return { items: [] };
+    const dueOnly = !(opts && opts.all);
+    const limit = Math.max(1, Math.min(200, (opts && opts.limit) || 100));
+    const [rows] = await pool.query(
+      "SELECT r.`phrase_no` AS no, r.`phrase` AS phrase, r.`level` AS level, " +
+        "r.`reps` AS reps, r.`wrongs` AS wrongs, DATE_FORMAT(r.`due_at`, '%Y-%m-%d') AS due, " +
+        "p.`meaning` AS meaning, p.`example` AS example, p.`example_cn` AS exampleCn, p.`usage_note` AS useNote " +
+        "FROM `pet_phrase_review` r LEFT JOIN `pet_phrase` p ON p.`id` = r.`phrase_id` " +
+        "WHERE r.`user_id` = ?" + (dueOnly ? " AND r.`due_at` <= CURDATE()" : "") +
+        " ORDER BY r.`due_at` ASC, r.`id` ASC LIMIT ?",
+      [userId, limit]
+    );
+    return {
+      items: rows.map(function (r0) {
+        return {
+          no: Number(r0.no) || 0,
+          phrase: r0.phrase,
+          level: Number(r0.level) || 1,
+          reps: Number(r0.reps) || 0,
+          wrongs: Number(r0.wrongs) || 0,
+          due: r0.due || "",
+          meaning: r0.meaning || "",
+          example: r0.example || "",
+          exampleCn: r0.exampleCn || "",
+          use: r0.useNote || ""
+        };
+      })
+    };
+  }
+
   /* 某个用户的全部收藏（客户端把它并进本地收藏表：词书页、点亮星星、跨设备恢复）。
      形状与本地条目一致：单词带 音标/词性/例句(连翻译)/搭配，句子带分析 ——
      词书详情页直接拿这份数据渲染，不用再单独请求。
@@ -326,6 +519,17 @@ export function createDb(pool, opts) {
         "ORDER BY us.`created_at` DESC, us.`id` DESC",
       [userId, LEVEL]
     );
+    /* 词组：读的是 user_phrase 里的快照（内容改了老收藏也不烂），
+       组号/用法从 pet_phrase 顺带带出来（老数据 join 不到也有默认值） */
+    const [phrases] = await pool.query(
+      "SELECT up.`phrase` AS phrase, up.`meaning` AS meaning, up.`example` AS example, " +
+        "up.`example_cn` AS exampleCn, p.`no` AS no, p.`usage_note` AS useNote, " +
+        "UNIX_TIMESTAMP(up.`created_at`) * 1000 AS ts " +
+        "FROM `user_phrase` up LEFT JOIN `pet_phrase` p ON p.`id` = up.`phrase_id` " +
+        "WHERE up.`user_id` = ? AND up.`level` = ? " +
+        "ORDER BY up.`created_at` DESC, up.`id` DESC",
+      [userId, LEVEL]
+    );
 
     const items = [];
     words.forEach(function (r) {
@@ -351,6 +555,18 @@ export function createDb(pool, opts) {
         ts: Number(r.ts) || 0
       });
     });
+    phrases.forEach(function (r) {
+      items.push({
+        type: "p",
+        key: r.phrase,
+        cn: r.meaning || "",
+        use: r.useNote || "",
+        ex: r.example || "",
+        exTr: r.exampleCn || "",
+        no: Number(r.no) || 0,
+        ts: Number(r.ts) || 0
+      });
+    });
     return { items: items };
   }
 
@@ -366,6 +582,12 @@ export function createDb(pool, opts) {
     removeWordFav: removeWordFav,
     addSentenceFav: addSentenceFav,
     removeSentenceFav: removeSentenceFav,
+    addPhraseFav: addPhraseFav,
+    removePhraseFav: removePhraseFav,
+    addPhraseMistake: addPhraseMistake,
+    listPhraseMistakes: listPhraseMistakes,
+    addPhraseReview: addPhraseReview,
+    listPhraseReviews: listPhraseReviews,
     listFavs: listFavs,
     addMistake: addMistake,
     listMistakes: listMistakes

@@ -436,8 +436,9 @@ async function testArticle(slug) {
 
   /* 词组内部的空格也带 .w（撑黄底用），点它必须落到词组，
      不能当成一个词形去查 —— 那样会往历史里写一条 data-w=" " 的空行。
-     这是实机验证时抓到的真 bug，留一条卡口守住。 */
-  const gapEl = wEls.find(e => String(e.dataset.w).trim() === "");
+     这是实机验证时抓到的真 bug，留一条卡口守住。
+     注意：plain 区块（选项清单等）按设计不响应点击，挑第一个可点的。 */
+  const gapEl = wEls.find(e => String(e.dataset.w).trim() === "" && e.closest(".ph") && !e.closest(".para.plain"));
   if (gapEl && gapEl.closest(".ph")) {
     const phKey = gapEl.closest(".ph").dataset.ph;
     const n0 = hist.querySelectorAll(".hitem").length;
@@ -757,12 +758,18 @@ async function testArticle(slug) {
     click(doc.querySelector('.tab[data-tab="read"]'));
     await tick();
 
-    /* 选项清单行首的字母徽章（角色 o 的块才有） */
-    const oBlockN = ((C.passage.blocks || []).filter(b => b && b.r === "o")).length;
-    if (oBlockN) {
+    /* 选项清单行首的字母徽章（角色 o 的块才有）——按数据里的字母行数对账
+       （有些清单是「1 a bus」这种编号行，没有字母徽章，跳过） */
+    const oLines = [];
+    (C.passage.paragraphs || []).forEach((p, pi) => {
+      const b = (C.passage.blocks || [])[pi];
+      if (b && b.r === "o") p.forEach(s => oLines.push(String(s.s)));
+    });
+    const wantOBadges = oLines.filter(s => /^([A-Ha-l])[\s.、:：]+/.test(s)).length;
+    if (wantOBadges >= 5) {
       const badges = [...passage.querySelectorAll(".para.r-o .opletter")];
-      ok(badges.length >= 5 && badges.every(b => b.textContent.trim().length === 1),
-        `[${slug}] 选项清单行首有单字母徽章（${badges.length} 个）`);
+      ok(badges.length === wantOBadges && badges.every(b => b.textContent.trim().length === 1),
+        `[${slug}] 选项清单行首有单字母徽章（${badges.length}/${wantOBadges} 个）`);
     }
 
     /* plain 区块：点词不查词（「一行一个解析」就够），点整行才出讲解 */
@@ -937,8 +944,10 @@ async function testArticle(slug) {
       C.passage.paragraphs.forEach((p, pi) => p.forEach((s, si) => {
         if (!s.ul) return;
         const el = passage.querySelector(`[data-sent="${pi}-${si}"] .sent-txt`);
-        const us = el ? [...el.querySelectorAll("u.ul-fix")].map(u => u.textContent).join("") : "";
-        if (us !== s.ul) { uOK = false; uBad = pi + "-" + si; }
+        /* 词组内部的空格在 HTML 里是「字面空格 + w 壳空格」两个字符（折叠后视觉一致），
+           和「逐字比对」一样先做空白归一再比 */
+        const us = el ? [...el.querySelectorAll("u.ul-fix")].map(u => u.textContent).join("").replace(/\s+/g, " ") : "";
+        if (us !== s.ul.replace(/\s+/g, " ")) { uOK = false; uBad = pi + "-" + si; }
       }));
       ok(uOK, `[${slug}] 下划线的文字与 ul 数据逐字一致${uOK ? "" : "（" + uBad + "）"}`);
     }
@@ -1095,8 +1104,11 @@ async function testArticle(slug) {
       click(keyBtn);
       await tick();
       ok(/词条/.test(ana.textContent), `[${slug}] 点词组 → 小黑板出词条`);
-      ok(hist.querySelectorAll(".hitem").length === h0 + 1,
-        `[${slug}] 点开的词组也进历史（历史行里有 ☆）`);
+      /* 该词组若已在历史里（前面章节点过同一个），再点是「置顶」不新增行 */
+      const h1 = hist.querySelectorAll(".hitem").length;
+      const topLbl = hist.querySelector(".hitem .hlabel");
+      ok((h1 === h0 + 1 || h1 === h0) && !!topLbl && topLbl.textContent === pick,
+        `[${slug}] 点开的词组进历史并置顶（已在历史里则只置顶不新增）`);
     }
   }
 
@@ -1141,8 +1153,11 @@ async function testArticle(slug) {
       const rows = [...sumBox.querySelectorAll(".noterow")];
       ok(rows.length === curated.length + rest.length,
         `[${slug}] 总结清单 ${rows.length} 行 === 手写 ${curated.length} + 自动 ${rest.length}`);
-      const firstKey = curated.length ? curated[0].k : items[0];
-      const chip = sumBox.querySelector('.nkey[data-note="' + firstKey + '"]');
+      /* firstKey：优先手写分组里带词条的项；分组里可能全是纯文字行（{cn} 拓展讲解），
+         那就退到自动清单的第一个词条 */
+      const curatedK = curated.filter(it => it && it.k);
+      const firstKey = curatedK.length ? curatedK[0].k : items[0];
+      const chip = firstKey && sumBox.querySelector('.nkey[data-note="' + firstKey + '"]');
       ok(!!chip, `[${slug}] 总结里有「${firstKey}」`);
       if (chip) {
         click(chip);
@@ -1335,6 +1350,26 @@ async function testArticle(slug) {
   return { slug, checks: nPass };
 }
 
+/* 每个固定页面都要有的「字号缩放」检查（顶栏 .zoom 条 → --zoom → 落盘）
+   —— 文章页那份在 app.js 里，语义一致（键 pet:zoom:v1、1–5、步长 0.5）。 */
+function checkZoom(dom, doc, S) {
+  const r = doc.getElementById("zoomRange");
+  ok(!!r && !!doc.getElementById("zoomLabel"), `[${S}] 顶栏有字号缩放条（1x + 滑条）`);
+  if (!r) return;
+  ok(r.getAttribute("min") === "1" && r.getAttribute("max") === "5" && r.getAttribute("step") === "0.5",
+    `[${S}] 缩放范围 1–5、步长 0.5（和文章页一致）`);
+  r.value = "2";
+  r.dispatchEvent(new dom.window.Event("input", { bubbles: true }));
+  ok(doc.documentElement.style.getPropertyValue("--zoom") === "2",
+    `[${S}] 拖到 2 → :root 的 --zoom = ${doc.documentElement.style.getPropertyValue("--zoom") || "（空）"}`);
+  ok(doc.getElementById("zoomLabel").textContent === "2x",
+    `[${S}] 数字跟着变成 2x（实际「${doc.getElementById("zoomLabel").textContent}」）`);
+  ok(String(dom.window.localStorage.getItem("pet:zoom:v1")) === "2",
+    `[${S}] 缩放比例落盘（pet:zoom:v1，换页面跟着走）`);
+  r.value = "1";
+  r.dispatchEvent(new dom.window.Event("input", { bubbles: true }));
+}
+
 /* ============================================================
    首页（个性化主页 + 登录弹框）
    ============================================================ */
@@ -1351,18 +1386,22 @@ async function testHomePage() {
     const ask = doc.getElementById("homeAsk");
     ok(!ask.hidden && /请先登录哦/.test(ask.textContent), `[${S}] 未登录显示「请先登录哦」`);
     ok(doc.getElementById("avatar").classList.contains("off"), `[${S}] 圆圈（未登录）是灰的`);
-    ok(doc.querySelectorAll("#tilesMain .tile").length === 7,
-      `[${S}] 七个学习入口（实际 ${doc.querySelectorAll("#tilesMain .tile").length}）`);
+    ok(doc.querySelectorAll("#tilesMain .tile").length === 8,
+      `[${S}] 八个学习入口（实际 ${doc.querySelectorAll("#tilesMain .tile").length}）`);
     const labs = [...doc.querySelectorAll(".tile-lab")].map(x => x.textContent.trim());
-    ["我的词书", "PET 阅读理解", "PET 同义替换", "PET 口语", "PET 听力", "PET 写作", "错题记录", "数学补习", "语文补习"]
+    ["我的词书", "PET 阅读理解", "PET 同义替换", "PET 词组库", "PET 口语", "PET 听力", "PET 写作", "错题记录", "数学补习", "语文补习"]
       .forEach(t => ok(labs.some(l => l.indexOf(t) >= 0), `[${S}] 入口里有「${t}」`));
     const synTile = [...doc.querySelectorAll("#tilesMain .tile")].find(a => /同义替换/.test(a.textContent));
     ok(synTile && synTile.getAttribute("href") === "synonyms.html",
       `[${S}] 「PET 同义替换」入口指向 synonyms.html`);
+    const collTile = [...doc.querySelectorAll("#tilesMain .tile")].find(a => /词组库/.test(a.textContent));
+    ok(collTile && collTile.getAttribute("href") === "phrases.html",
+      `[${S}] 「PET 词组库」入口指向 phrases.html`);
     ok(doc.querySelectorAll(".home-sec-t").length === 1 && /今天的作业/.test(doc.querySelector(".home-sec-t").textContent),
       `[${S}] 第二部分有标题「今天的作业」`);
     ok(doc.querySelectorAll(".home-hr").length === 1, `[${S}] 两部分用横线划开`);
     ok(doc.getElementById("homeMain").classList.contains("locked"), `[${S}] 未登录时入口处于锁定（淡化）态`);
+    checkZoom(dom, doc, S);
     ok(/\.html$/.test(doc.getElementById("tileRead").getAttribute("href") || ""),
       `[${S}] 阅读理解入口指向一篇文章`);
 
@@ -1502,31 +1541,50 @@ async function testHomePage() {
 async function testListPages() {
   const item = { slug: allSlugs[0], q: 16, chosen: "B", correct: "C", count: 2, ts: 1700000000000 };
 
-  /* ---- 错题记录：列表 / 篇名映射 / 去订正链接 ---- */
+  /* ---- 错题记录：列表 / 篇名映射 / 去订正链接（+ 词组错题一段） ---- */
   {
-    const api = fakeFetch({ "GET /api/mistakes": { j: { ok: true, items: [item] } } });
+    const api = fakeFetch({
+      "GET /api/mistakes": { j: { ok: true, items: [item] } },
+      "GET /api/phrase-mistakes": { j: { ok: true, items: [
+        { no: 3, phrase: "a group of", stem: "We're ＿＿ people aged 16–25…",
+          chosen: "a number of", correct: "a group of", count: 2, ts: 1700000000000 }
+      ] } }
+    });
     const { dom, logs } = await loadPage("mistakes.html", { expectScripts: 5, slug: "mistakes", fetch: api });
     const doc = dom.window.document;
     await tick();
     ok(logs.filter(l => /navigation/i.test(l)).length === 0, "[mistakes] 已登录正常渲染，不跳");
     ok(api.calls.some(c => c.method === "GET" && c.path === "/api/mistakes"),
       "[mistakes] 现拉 /api/mistakes（本机不缓存）");
-    const rows = doc.querySelectorAll(".mrow");
-    ok(rows.length === 1, "[mistakes] 错题列表 1 行");
-    const txt = rows[0] ? rows[0].textContent : "";
+    ok(api.calls.some(c => c.method === "GET" && c.path === "/api/phrase-mistakes"),
+      "[mistakes] 词组错题也现拉");
+    ok(doc.querySelectorAll(".list-h").length === 2, "[mistakes] 分两段：阅读理解 / 词组");
+    const allRows = doc.querySelectorAll(".mrow");
+    ok(allRows.length === 2, "[mistakes] 两段各一行");
+    const readRow = doc.querySelectorAll(".mrow")[0];
+    const txt = readRow ? readRow.textContent : "";
     ok(/第\s*16\s*题/.test(txt) && txt.indexOf("B") >= 0 && txt.indexOf("C") >= 0 && /错过\s*2\s*次/.test(txt),
       `[mistakes] 行里有题号 / 我选的 / 正确答案 / 错过次数（实际「${txt.replace(/\s+/g, " ")}」）`);
-    ok(rows[0] && rows[0].querySelector(".mrow-t").textContent.trim() !== allSlugs[0],
+    ok(readRow && readRow.querySelector(".mrow-t").textContent.trim() !== allSlugs[0],
       '[mistakes] 篇名来自目录数据（不是 slug 原文）');
-    ok(rows[0] && rows[0].querySelector("a").getAttribute("href") === allSlugs[0] + ".html?q=16",
+    ok(readRow && readRow.querySelector("a").getAttribute("href") === allSlugs[0] + ".html?q=16",
       "[mistakes] 「去订正」链到那篇的那道题");
+    const prow = doc.querySelectorAll(".mrow")[1];
+    ok(prow && /a group of/.test(prow.textContent) && /a number of/.test(prow.textContent),
+      "[mistakes] 词组那段有词组 / 题面 / 你选的");
+    ok(prow && prow.querySelector("a").getAttribute("href") === "phrases.html?g=1&mode=xbw&q=3",
+      "[mistakes] 词组错题「去订正」跳回词组库那道题");
+    checkZoom(dom, doc, "mistakes");          // 错题页也有字号缩放
     ok(!doc.getElementById("who").hidden && /小明/.test(doc.getElementById("who").textContent),
       "[mistakes] 顶栏显示登录的人（昵称角标）");
   }
 
   /* ---- 错题为空：给去首页的引导 ---- */
   {
-    const api = fakeFetch({ "GET /api/mistakes": { j: { ok: true, items: [] } } });
+    const api = fakeFetch({
+      "GET /api/mistakes": { j: { ok: true, items: [] } },
+      "GET /api/phrase-mistakes": { j: { ok: true, items: [] } }
+    });
     const { dom } = await loadPage("mistakes.html", { expectScripts: 5, slug: "mistakes/空", fetch: api });
     await tick();
     ok(/还没有错题记录/.test(dom.window.document.body.textContent), "[mistakes] 空状态有提示");
@@ -1538,9 +1596,12 @@ async function testListPages() {
     ok(logs.some(l => /navigation/i.test(l)), "[mistakes] 未登录 → 被门禁拦下");
   }
 
-  /* ---- 我的词书：单词 + 句子两段；点开有详情 ---- */
+  /* ---- 我的词书：词组 + 单词 + 句子三段；点开有详情 ---- */
   {
     const api = fakeFetch({ "GET /api/favs": { j: { ok: true, items: [
+      { type: "p", key: "a couple of", cn: "几个；一对；一双", use: "后接可数名词复数", no: 1,
+        ex: "Anyway, a couple of months ago I saw someone playing the piano on TV.",
+        exTr: "不管怎样，几个月前我在电视上看到有人弹钢琴。", ts: 3 },
       { type: "w", key: "century", cn: "世纪", pos: "n.", ipa: "/ˈsentʃəri/",
         ex: "This century was hard.", exTr: "这个世纪很难。", ph: "the twentieth century", ts: 1 },
       { type: "s", key: "Hello there.", cn: "你好", ts: 2,
@@ -1550,9 +1611,24 @@ async function testListPages() {
     const doc = dom.window.document;
     const click = el => el.dispatchEvent(new dom.window.MouseEvent("click", { bubbles: true }));
     await tick();
-    ok(doc.querySelectorAll(".wrow").length === 2, "[words] 单词 + 句子各一行");
+    ok(doc.querySelectorAll(".wrow").length === 3, "[words] 词组 / 单词 / 句子各一行");
+    ok(doc.querySelectorAll(".list-h").length === 3, "[words] 分三段：词组 / 单词 / 句子");
     ok(/century/.test(doc.body.textContent) && /世纪/.test(doc.body.textContent), "[words] 单词行有词和释义");
     ok(/Hello there\./.test(doc.body.textContent) && /你好/.test(doc.body.textContent), "[words] 句子行有原文和翻译");
+
+    /* 词组行：中文在行上，点开有 释义/用法/例句（连翻译）+ 回词组库 */
+    const prow = doc.querySelector('.wentry[data-kind="p"] .wrow');
+    ok(/a couple of/.test(prow.textContent) && /几个/.test(prow.textContent), "[words] 词组行有词组和释义");
+    click(prow);
+    await tick();
+    const pdet = doc.querySelector('.wentry[data-kind="p"] .wdetail');
+    ok(pdet && !pdet.hidden, "[words] 点词组行 → 详情展开");
+    ok(/后接可数名词复数/.test(pdet.textContent), "[words] 词组详情有用法");
+    ok(/Anyway, a couple of months ago/.test(pdet.textContent) && /不管怎样/.test(pdet.textContent),
+      "[words] 词组详情有例句和翻译");
+    ok(/phrases\.html\?g=1&mode=read/.test(pdet.querySelector("a").getAttribute("href")),
+      "[words] 词组详情能回词组库看");
+    checkZoom(dom, doc, "words");             // 词书页也有字号缩放
 
     /* 点单词行 → 详情展开：音标 / 词性 / 例句(连翻译) / 搭配 / 喇叭 */
     const wrow = doc.querySelector('.wentry[data-kind="w"] .wrow');
@@ -1676,6 +1752,7 @@ async function testSynonymsPage() {
   await tick();
   const qBox = doc.getElementById("synQuiz");
   ok(!qBox.hidden && doc.getElementById("synList").hidden, `[${S}] 切到连线题：列表收起`);
+  checkZoom(dom, doc, S + "/连线");
   const qTitle = () => qBox.querySelector(".syn-qtitle").textContent;
   const lns = () => [...qBox.querySelectorAll('.syn-qitem[data-q^="l:"]')].map(x => +x.dataset.q.split(":")[1]);
   const rns = () => [...qBox.querySelectorAll('.syn-qitem[data-q^="r:"]')].map(x => +x.dataset.q.split(":")[1]);
@@ -1713,6 +1790,451 @@ async function testSynonymsPage() {
 }
 
 /* ============================================================
+   固定搭配页（collocations.html）：10 个一组 · 短语卡 + 同组填空练习
+   ============================================================ */
+async function testCollocationsPage() {
+  const S = "collocations";
+  const { dom, logs } = await loadPage("collocations.html", { expectScripts: 5, slug: S });
+  const { window } = dom, doc = window.document;
+  const click = el => el.dispatchEvent(new window.MouseEvent("click", { bubbles: true }));
+
+  const items = (window.PET_COL || {}).items || [];
+  ok(items.length === 254, `[${S}] 数据 254 条（26 组；实际 ${items.length}）`);
+  ok(items.every(x => x.ph && x.cn && x.use && x.ex && x.exCn && x.blank &&
+      x.ex.toLowerCase().includes(x.blank.toLowerCase())),
+    `[${S}] 每条都有 短语/中文/用法/例句/翻译，挖空的那块在原句里找得到`);
+
+  /* ---- 短语卡 ---- */
+  ok(doc.querySelectorAll(".col-card").length === 10, `[${S}] 10 张短语卡`);
+  checkZoom(dom, doc, S);
+  ok(/第 1 组 · 短语卡（1–10）/.test(doc.getElementById("colCardsH").textContent),
+    `[${S}] 卡区标题带组号和范围`);
+  const c1 = doc.querySelector('.col-card[data-card="1"]');
+  ok(/a couple of/.test(c1.textContent) && /几个/.test(c1.textContent) &&
+     /后接可数名词复数/.test(c1.textContent) && /Anyway/.test(c1.textContent) &&
+     /不管怎样/.test(c1.textContent),
+    `[${S}] 第 1 张卡：短语 / 中文 / 用法 / 例句 / 翻译都在`);
+  ok(!!c1.querySelector(".col-hl") && /a couple of/.test(c1.querySelector(".col-hl").textContent),
+    `[${S}] 例句里的短语标黄`);
+  const sayBtns = c1.querySelectorAll(".col-spk[data-say]");
+  ok(sayBtns.length === 2 && sayBtns[0].dataset.say === "a couple of" &&
+     /Anyway/.test(sayBtns[1].dataset.say),
+    `[${S}] 卡片两个 🔊：短语 + 例句`);
+  const alt = doc.querySelector('.col-card[data-card="3"] .col-alt');
+  ok(!!alt && /groups of/.test(alt.textContent), `[${S}] 等价说法（= groups of）单独小字列在短语旁边`);
+
+  /* ---- 练习：10 题、短语库同一组乱序 ---- */
+  ok(/第 1 组练习 · 1–10/.test(doc.getElementById("colPH").textContent), `[${S}] 练习区标题带组号`);
+  ok(doc.querySelectorAll(".col-q").length === 10, `[${S}] 10 道题（和短语卡一一对应）`);
+  ok(doc.querySelectorAll(".col-slot").length === 10, `[${S}] 10 个空`);
+  const chips = [...doc.querySelectorAll(".col-chip")].map(b => +b.dataset.chip);
+  ok(chips.length === 10 && chips.slice().sort((a, b) => a - b).join() === "1,2,3,4,5,6,7,8,9,10",
+    `[${S}] 短语库是同一组的 10 个短语`);
+  ok(/已填对 0\/10/.test(doc.getElementById("colScore").textContent), `[${S}] 开局计分 0/10`);
+  const q1 = doc.querySelector('.col-q[data-q="1"]');
+  ok(/几个/.test(q1.textContent) && /后接可数名词复数/.test(q1.textContent) && /Anyway/.test(q1.textContent),
+    `[${S}] 题面：中文 + 用法提示 + 挖空的原句`);
+  ok(!/a couple of/.test(q1.querySelector(".col-qsent").textContent), `[${S}] 题面里不出现答案本身`);
+
+  /* ---- 填错：红一下、记错次、不落答案 ---- */
+  const slot1 = doc.querySelector('.col-slot[data-slot="1"]');
+  click(doc.querySelector('.col-chip[data-chip="2"]'));      // 没选空 → 自动填到第 1 个空
+  await tick();
+  ok(slot1.classList.contains("bad") && !slot1.classList.contains("ok"),
+    `[${S}] 填错 → 空红一下、不落答案`);
+  ok(/错 1 次/.test(doc.getElementById("colScore").textContent), `[${S}] 计分条记上「错 1 次」`);
+
+  /* ---- 填对：点空再点短语 → 填回原文、库里用掉 ---- */
+  click(slot1);
+  ok(slot1.classList.contains("sel"), `[${S}] 点空 → 选中`);
+  click(doc.querySelector('.col-chip[data-chip="1"]'));
+  await tick();
+  const slot1b = doc.querySelector('.col-slot[data-slot="1"]');
+  ok(slot1b.classList.contains("ok") && /a couple of/.test(slot1b.textContent),
+    `[${S}] 选对短语 → 空里填回原文（a couple of）`);
+  ok(doc.querySelector('.col-chip[data-chip="1"]').disabled, `[${S}] 用掉的短语在库里变灰不可点`);
+  ok(/✓/.test(doc.querySelector('.col-chip[data-chip="1"]').textContent), `[${S}] 用掉的那条打上 ✓`);
+  ok(/已填对 1\/10/.test(doc.getElementById("colScore").textContent), `[${S}] 计分变 1/10`);
+
+  /* ---- 模式型短语（advise sb. to do sth）：填回的是句子里的变形，旁边标「＝ 短语」 ---- */
+  click(doc.querySelector('.col-slot[data-slot="8"]'));
+  click(doc.querySelector('.col-chip[data-chip="8"]'));
+  await tick();
+  const q8 = doc.querySelector('.col-q[data-q="8"]');
+  ok(/advises me to/.test(q8.querySelector(".col-slot").textContent), `[${S}] 第 8 题填回句中变形（advises me to）`);
+  ok(/＝ advise sb\. to do sth/.test(q8.textContent), `[${S}] 变形旁边标出「＝ 短语」`);
+
+  /* ---- 对答案 / 重做本组 ---- */
+  click(doc.getElementById("colReveal"));
+  await tick();
+  ok(doc.querySelectorAll(".col-slot.ok").length === 10, `[${S}] 对答案 → 10 个空全填上`);
+  ok(/已填对 10\/10/.test(doc.getElementById("colScore").textContent), `[${S}] 计分 10/10`);
+  ok(!doc.getElementById("colDone").hidden && /本组/.test(doc.getElementById("colDone").textContent),
+    `[${S}] 做完出成绩条`);
+  click(doc.getElementById("colReset"));
+  await tick();
+  ok(doc.querySelectorAll(".col-slot.ok").length === 0 && /已填对 0\/10/.test(doc.getElementById("colScore").textContent),
+    `[${S}] 重做本组 → 清空重来`);
+
+  /* ---- 组号条：26 组；「下一组」→ 第 2 组 ---- */
+  ok(doc.querySelectorAll(".col-g").length === 26, `[${S}] 组号条 26 个（254 条 · 每 10 个一组）`);
+  click(doc.getElementById("colNext"));
+  await tick();
+  ok(/第 2 组 · 短语卡（11–20）/.test(doc.getElementById("colCardsH").textContent),
+    `[${S}] 「下一组」→ 第 2 组（11–20）`);
+  ok(!doc.getElementById("colPrev").disabled, `[${S}] 第 2 组时「上一组」可用`);
+  click(doc.getElementById("colPrev"));
+  await tick();
+  ok(/第 1 组 · 短语卡（1–10）/.test(doc.getElementById("colCardsH").textContent),
+    `[${S}] 「上一组」回到第 1 组`);
+
+  ok(logs.filter(l => !/404/.test(l)).length === 0, `[${S}] 运行期没有 JS 报错`);
+  if (logs.length) console.log(`\n  ${S} 细节：\n` + logs.slice(0, 4).map(l => "      ✗ " + l).join("\n"));
+}
+
+/* ============================================================
+   词组库（phrases.html）：分组视图 + 精读模式 + 小霸王模式（三关 + 批改）
+   ============================================================ */
+async function testPhrasesPage() {
+  const S = "phrases";
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+  const api = fakeFetch({
+    "GET /api/favs": { j: { ok: true, items: [] } },
+    "POST /api/favs/add": { j: { ok: true } },
+    "POST /api/favs/remove": { j: { ok: true } },
+    "POST /api/phrase-mistakes": { j: { ok: true } },
+    "GET /api/phrase-mistakes": { j: { ok: true, items: [] } }
+  });
+  const { dom, logs } = await loadPage("phrases.html", { expectScripts: 7, slug: S, fetch: api });
+  const { window } = dom, doc = window.document;
+  const click = el => el.dispatchEvent(new window.MouseEvent("click", { bubbles: true }));
+  const key = k => doc.dispatchEvent(new window.KeyboardEvent("keydown", { key: k, bubbles: true }));
+
+  const D = window.PET_PHRASES || {};
+  const items = D.items || [];
+  ok(items.length === 254, `[${S}] 数据 254 条（26 组；实际 ${items.length}）`);
+  ok(Object.keys(D.dict || {}).length > 300, `[${S}] 随页小词典有词条（实际 ${Object.keys(D.dict || {}).length} 条）`);
+  ok(items.every(x => x.why), `[${S}] 每条都有答案分析 why`);
+  ok(items.every(x => !x.blank || x.ex.toLowerCase().indexOf(x.blank.toLowerCase()) >= 0),
+    `[${S}] 每条 blank 都是例句的子串`);
+  await tick();
+
+  /* ---- 分组视图 ---- */
+  ok(!doc.getElementById("viewList").hidden, `[${S}] 打开先进分组视图`);
+  checkZoom(dom, doc, S);
+  ok(doc.querySelectorAll(".ph-gcard").length === 26, `[${S}] 26 张组卡（254 条 · 10 个一组）`);
+  const g1 = doc.querySelector(".ph-gcard");
+  ok(/第 1 组/.test(g1.textContent) && /1–10/.test(g1.textContent), `[${S}] 组卡写着「第 1 组 · 1–10」`);
+  ok(!!g1.querySelector("[data-phread]") && !!g1.querySelector("[data-phxbw]"), `[${S}] 组卡两个模式入口`);
+  ok(/collocations\.html/.test(doc.querySelector(".ph-foot a").getAttribute("href")),
+    `[${S}] 分组视图底部留了「速查表」入口`);
+
+  /* ---- 精读模式：一次一张卡 ---- */
+  click(g1.querySelector("[data-phread]"));
+  await tick();
+  ok(!doc.getElementById("viewRead").hidden && doc.getElementById("viewList").hidden,
+    `[${S}] 进精读模式：分组视图收起`);
+  const card = doc.querySelector(".ph-card");
+  ok(!!card && /1\/10/.test(card.textContent), `[${S}] 第 1 张 · 进度 1/10`);
+  ok(/a couple of/.test(card.querySelector(".ph-mainph").textContent), `[${S}] 卡上是第 1 条词组`);
+  ok(/几个/.test(card.textContent) && /后接可数名词复数/.test(card.textContent), `[${S}] 卡上有中文和用法`);
+  ok(card.querySelectorAll(".ph-ph").length >= 1, `[${S}] 例句里的词组标黄可点`);
+  ok(card.querySelectorAll(".ph-w").length >= 8, `[${S}] 例句里的单词可点`);
+  ok(/不管怎样/.test(card.textContent), `[${S}] 例句翻译在卡上`);
+  ok(card.querySelectorAll(".wd-spk").length === 0, `[${S}] 卡片里的 🔊 已去掉（朗读只走本地跟读）`);
+  ok(!!card.querySelector("[data-playread]"), `[${S}] 卡片上有「▶ 播放跟读」`);
+  ok(card.querySelector(".ph-pbar i").getAttribute("style").indexOf("10%") >= 0, `[${S}] 进度条画出来了`);
+
+  /* 点词组 → 小黑板（释义/用法/例句/解析/☆） */
+  click(card.querySelector(".ph-mainph"));
+  await tick();
+  const ana = doc.getElementById("analysis");
+  ok(/释义/.test(ana.textContent) && /用法/.test(ana.textContent) && /解析/.test(ana.textContent),
+    `[${S}] 点词组 → 小黑板出释义/用法/解析`);
+  ok(/空后是 months/.test(ana.textContent), `[${S}] 解析来自数据里的 why`);
+  ok(/a number of 也能接复数名词/.test(ana.textContent), `[${S}] 易错点（trap）也在`);
+
+  /* ---- 音色面板（🎙）：挑英文/中文音色 + 试听 + 体检提示 ---- */
+  ok(!!doc.getElementById("tglVoice"), `[${S}] 顶栏有「🎙 音色」按钮`);
+  ok(!!window.PET_READ.diagnose && typeof window.PET_READ.voices === "function" && typeof window.PET_READ.setVoice === "function",
+    `[${S}] PET_READ 暴露了 diagnose / voices / setVoice（页面提示和音色面板都靠它）`);
+  const dg = window.PET_READ.diagnose();
+  ok(typeof dg.enGb === "number" && typeof dg.zh === "number" && Array.isArray(dg.tips),
+    `[${S}] diagnose() 报出设备语音情况（实际 en-GB ${dg.enGb} 个 / 中文 ${dg.zh} 个）`);
+  click(doc.getElementById("tglVoice"));
+  await tick();
+  const vpanel = doc.getElementById("voicePanel");
+  ok(vpanel && !vpanel.hidden, `[${S}] 点「🎙 音色」→ 面板打开`);
+  ok(/这台设备没报出可用音色|英文（词组 \/ 例句）/.test(vpanel.textContent),
+    `[${S}] 面板里有音色列表或「没报出可用音色」的说明`);
+  ok(/jsdom 里没有语音列表/.test(vpanel.textContent) === false, `[${S}] 面板不写死 jsdom 的字样`);
+  click(vpanel.querySelector("[data-voice-close]"));
+  ok(vpanel.hidden, `[${S}] 面板能关掉`);
+
+  /* ---- 本地跟读：精读模式全手动（点「播放跟读」才念，念完不自动翻卡） ---- */
+  ok(!!window.PET_READ && typeof window.PET_READ.card === "function", `[${S}] 跟读引擎 PET_READ 在（英音+中文女声、0.75 倍速）`);
+  ok(window.PET_READ.rates.join() === "0.6,0.75,1", `[${S}] 语速三档：0.6 / 0.75 / 1`);
+  const readBtn = card.querySelector("[data-playread]");
+  click(readBtn);
+  await tick();
+  ok(!!doc.querySelector("[data-playread]") &&
+     /播放跟读|停止跟读|没有语音朗读/.test(doc.querySelector("[data-playread]").textContent),
+    `[${S}] 点「播放跟读」不报错（jsdom 没有语音合成 → 提示一下；真机里开始念）`);
+  ok(!!card.querySelector("[data-phfav]"), `[${S}] 卡上有 ☆`);
+
+  /* 点单词 → 读音 + 释义 + 相关词组（翻到第 3 张，「people」在 a group of 里） */
+  click(doc.getElementById("phNext"));
+  await tick();
+  click(doc.getElementById("phNext"));
+  await tick();
+  const card3 = doc.querySelector(".ph-card");
+  ok(/3\/10/.test(card3.textContent), `[${S}] 「下一张」翻到第 3 张`);
+  const wbtn = card3.querySelector('.ph-w[data-w="people"]');
+  ok(!!wbtn, `[${S}] 「people」渲染成可点的单词`);
+  click(wbtn);
+  await tick();
+  ok(/people/.test(ana.textContent) && /相关词组/.test(ana.textContent),
+    `[${S}] 点单词 → 读音/释义 + 相关词组`);
+  ok(!!ana.querySelector('.chip[data-ph="a group of"]'), `[${S}] 「相关词组」里能点到 a group of`);
+
+  /* ☆ 收藏词组：本地立即生效 + 推后端（kind:"phrase"） */
+  click(ana.querySelector('.chip[data-ph="a group of"]'));
+  await tick();
+  const favBtn = ana.querySelector('[data-phfav="p:a group of"]');
+  ok(!!favBtn, `[${S}] 小黑板里有词组的 ☆`);
+  click(favBtn);
+  await tick();
+  const favs = JSON.parse(window.localStorage.getItem("pet:fav:v1") || "[]");
+  ok(favs.some(x => x.type === "p" && x.key === "a group of" && /一群/.test(String(x.cn)) && x.no === 3),
+    `[${S}] 收藏表里多了一条词组（type:p、带中文和序号）`);
+  ok(api.calls.some(c => c.path === "/api/favs/add" && c.body && c.body.kind === "phrase" &&
+      c.body.phrase === "a group of" && /一群/.test(String(c.body.meaning))),
+    `[${S}] 词组收藏推给后端（kind:"phrase"）`);
+
+  /* 历史：点过的进了历史，能重新打开、能删 */
+  ok(doc.querySelectorAll("#history .hitem").length >= 2, `[${S}] 历史里记了词组和单词`);
+  const hrows = doc.querySelectorAll("#history .hitem");
+  ok(!!hrows[0].querySelector(".hbadge"), `[${S}] 历史行有「组 / 词」徽章`);
+  click(hrows[hrows.length - 1].querySelector(".hopen"));
+  await tick();
+  ok(/a couple of/.test(doc.getElementById("analysis").textContent), `[${S}] 点历史行 → 小黑板重现`);
+  const before = doc.querySelectorAll("#history .hitem").length;
+  click(doc.querySelector("#history .hitem .hdel"));
+  await tick();
+  ok(doc.querySelectorAll("#history .hitem").length === before - 1, `[${S}] 历史行能删掉`);
+
+  /* 翻卡：按钮 + 键盘 */
+  click(doc.getElementById("phNext"));
+  await tick();
+  ok(/4\/10/.test(doc.querySelector(".ph-card").textContent) &&
+     /a number of/.test(doc.querySelector(".ph-card").textContent), `[${S}] 「下一张」再翻一张`);
+  key("ArrowRight");
+  await tick();
+  ok(/5\/10/.test(doc.querySelector(".ph-card").textContent), `[${S}] →键翻一张`);
+  key("ArrowLeft");
+  await tick();
+  ok(/4\/10/.test(doc.querySelector(".ph-card").textContent), `[${S}] ←键翻回去`);
+
+  /* ---- 小霸王模式 ---- */
+  click(doc.querySelector('[data-phview="xbw"]'));
+  await tick();
+  ok(!doc.getElementById("viewXbw").hidden && doc.getElementById("viewRead").hidden,
+    `[${S}] 切到小霸王模式`);
+  let x = doc.getElementById("xbw");
+  ok(/第一关 · 本地跟读/.test(x.textContent) && !!x.querySelector(".xbw-card"),
+    `[${S}] 第一关：本地跟读（卡片已经出来）`);
+  ok(!!x.querySelector('[data-x="read"]') && !!x.querySelector('[data-x="again"]') && !!x.querySelector('[data-x="speed"]'),
+    `[${S}] 跟读三个开关：暂停跟读 / 重听本卡 / 语速`);
+  ok(!x.querySelector('[data-x="toggle"]') && !x.querySelector('[data-x="snd"]') && !x.querySelector('[data-x="audio"]'),
+    `[${S}] 老的「播放 / 开声音 / 跟读音频」按钮已经去掉`);
+  ok(!doc.getElementById("xbwAudio") && !doc.getElementById("xbwAudioWrap"),
+    `[${S}] 关卡里不再挂 mp3 播放器（跟读统一走 TTS）`);
+  ok(x.querySelectorAll(".xbw-dot").length === 10, `[${S}] 第一关 10 个小圆点`);
+  const rateBtn = x.querySelector('[data-x="speed"]');
+  ok(/0\.75/.test(rateBtn.textContent), `[${S}] 默认 0.75 倍速（按钮上写着）`);
+  click(rateBtn);
+  await tick();
+  ok(/语速 1×/.test(doc.getElementById("xbw").textContent), `[${S}] 点一下 → 1 倍速`);
+  click(doc.getElementById("xbw").querySelector('[data-x="speed"]'));
+  await tick();
+  ok(/语速 0\.6×/.test(doc.getElementById("xbw").textContent), `[${S}] 再点一下 → 0.6 倍速（循环）`);
+  click(doc.getElementById("xbw").querySelector('[data-x="speed"]'));
+  await tick();
+  /* 点小圆点跳到第 3 张：卡片跟着换（跟读在真机上会从这张重念） */
+  click(doc.getElementById("xbw").querySelectorAll(".xbw-dot")[2]);
+  await tick();
+  ok(/3\/10/.test(doc.getElementById("xbw").textContent), `[${S}] 点小圆点 → 跳到第 3 张`);
+  click(doc.getElementById("xbw").querySelector('[data-x="read"]'));
+  await tick();
+  ok(!!doc.getElementById("xbw"), `[${S}] 「暂停跟读」点了不报错（jsdom 里没有语音）`);
+  /* 被浏览器拦下（iOS 首次要手势）：按钮变成「点一下开始跟读」+ 一行说明 */
+  window.PET_XBW.state.blocked = true;
+  click(doc.getElementById("xbw").querySelector('[data-x="again"]'));
+  await tick();
+  ok(/点一下开始跟读/.test(doc.getElementById("xbw").textContent), `[${S}] 被拦下时按钮改成「▶ 点一下开始跟读」`);
+  ok(/先点一次才肯出声/.test(doc.getElementById("xbw").textContent), `[${S}] 并给一句解释（iPhone/iPad 常见）`);
+  window.PET_XBW.state.blocked = false;
+
+  click(x.querySelector('[data-x="skip"]'));
+  await tick();
+  x = doc.getElementById("xbw");
+  ok(x.querySelectorAll('.xbw-li[data-xl^="l:"]').length === 10 &&
+     x.querySelectorAll('.xbw-li[data-xl^="r:"]').length === 10, `[${S}] 第二关：10 词组 + 10 中文`);
+  click(x.querySelector('.xbw-li[data-xl="l:1"]'));
+  click(x.querySelector('.xbw-li[data-xl="r:2"]'));
+  await tick();
+  ok(/错 1 次/.test(x.textContent), `[${S}] 连线配错 → 记错次`);
+  for (let n = 1; n <= 10; n++) {
+    click(x.querySelector('.xbw-li[data-xl="l:' + n + '"]'));
+    click(x.querySelector('.xbw-li[data-xl="r:' + n + '"]'));
+    await tick();
+  }
+  ok(/已连对 <b>10<\/b>\/10/.test(x.innerHTML), `[${S}] 十个都连对`);
+
+  click(x.querySelector('[data-x="toquiz"]'));
+  await tick();
+  x = doc.getElementById("xbw");
+  ok(/第三关 · 选择题/.test(x.textContent) && /第 1\/10 题/.test(x.textContent), `[${S}] 第三关：选择题`);
+  ok(x.querySelectorAll(".xbw-opt").length === 10, `[${S}] 每题给本组 10 个词组当选项`);
+  ok(/几个/.test(x.textContent) && /后接可数名词复数/.test(x.textContent), `[${S}] 题面给了中文 + 用法线索`);
+  ok(!!x.querySelector(".xbw-stem .xbw-blank") && !/a couple of months/.test(x.querySelector(".xbw-stem").textContent),
+    `[${S}] 题干里把要填的那块挖掉了（不出现答案）`);
+
+  const rightOpt = [...x.querySelectorAll(".xbw-opt")].filter(b => b.textContent === "a couple of")[0];
+  ok(!!rightOpt, `[${S}] 选项里有正确答案`);
+  click(rightOpt);
+  await tick();
+  ok(/✔ 对了/.test(x.textContent), `[${S}] 选对 → 即时判分（对）`);
+  await sleep(1100);
+  ok(/第 2\/10 题/.test(doc.getElementById("xbw").textContent), `[${S}] 选完自动进下一题`);
+
+  const wrongOpt = [...doc.getElementById("xbw").querySelectorAll(".xbw-opt")]
+    .filter(b => b.textContent === "a wide range of")[0];
+  click(wrongOpt);
+  await tick();
+  ok(/你选的是/.test(x.textContent) && /正确答案是/.test(x.textContent), `[${S}] 选错 → 标出正确答案`);
+  ok(/a fantastic tour/.test(x.textContent), `[${S}] 错题反馈里有正确答案文本`);
+  ok(api.calls.some(c => c.path === "/api/phrase-mistakes" && c.body && c.body.no === 2 &&
+      c.body.chosen === "a wide range of" && c.body.correct === "a fantastic tour"),
+    `[${S}] 错题报给后端（题号 + 原题 + 你选的）`);
+
+  click(doc.getElementById("xbw").querySelector('[data-x="toend"]'));
+  await tick();
+  x = doc.getElementById("xbw");
+  ok(/得分/.test(x.textContent) && /得分 <b>1\/10<\/b>/.test(x.innerHTML), `[${S}] 批改总结：得分 1/10`);
+  ok(/错题 · 1 道/.test(x.textContent), `[${S}] 总结列出错题`);
+  ok(/你选：/.test(x.textContent) && /正确：/.test(x.textContent), `[${S}] 错题条目有「你选的 / 正确的」`);
+  ok(!!x.querySelector('[data-x="again"]') && !!x.querySelector('[data-x="cards"]') && !!x.querySelector('[data-x="next"]'),
+    `[${S}] 总结页有 重做 / 回看卡片 / 下一组`);
+
+  /* ---- 深链：错题本「去订正」进来直接考那一道（phrases.html?g=1&mode=xbw&q=3） ---- */
+  {
+    const { dom } = await loadPage("phrases.html", {
+      expectScripts: 7, slug: S + "/深链", query: "?g=1&mode=xbw&q=3",
+      fetch: fakeFetch({ "GET /api/favs": { j: { ok: true, items: [] } },
+                         "GET /api/phrase-mistakes": { j: { ok: true, items: [] } } })
+    });
+    const doc = dom.window.document;
+    await tick();
+    const box = doc.getElementById("xbw");
+    ok(!doc.getElementById("viewXbw").hidden, `[${S}] 深链 ?mode=xbw 直接进小霸王`);
+    ok(/第三关 · 选择题/.test(box.textContent) && /第 3\/10 题/.test(box.textContent),
+      `[${S}] 深链 ?q=3 从第 3 题开始考（不从头自动播放）`);
+  }
+
+  ok(logs.filter(l => !/404/.test(l)).length === 0, `[${S}] 运行期没有 JS 报错`);
+  if (logs.length) console.log(`\n  ${S} 细节：\n` + logs.slice(0, 4).map(l => "      ✗ " + l).join("\n"));
+}
+
+/* ============================================================
+   词组复习（🔁 复习 tab · 间隔重复）：到期列表 / 做题判分 / 报服务端 / 结果页
+   ============================================================ */
+async function testSrsTab() {
+  const S = "srs";
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+  const due = [
+    { no: 1, phrase: "a couple of", level: 1, reps: 1, wrongs: 0, due: "2026-10-19",
+      meaning: "几个；一对；一双", use: "后接可数名词复数",
+      example: "Anyway, a couple of months ago I saw someone playing the piano on TV – he was brilliant.",
+      exampleCn: "不管怎样，几个月前我在电视上看到有人弹钢琴——他非常出色。" },
+    { no: 3, phrase: "a group of", level: 2, reps: 2, wrongs: 0, due: "2026-10-19",
+      meaning: "一群；一组", use: "后接可数名词复数",
+      example: "We're a group of people aged 16–25 who meet every week for two hours of chat in Spanish.",
+      exampleCn: "我们是一群年龄在 16 到 25 岁之间的人，每周聚在一起用西班牙语聊两个小时。" }
+  ];
+  const api = fakeFetch({
+    "GET /api/favs": { j: { ok: true, items: [] } },
+    "GET /api/phrase-review": { j: { ok: true, items: due } },
+    "POST /api/phrase-review": { j: { ok: true, level: 2, days: 2 } },
+    "POST /api/phrase-mistakes": { j: { ok: true } }
+  });
+  const { dom, logs } = await loadPage("phrases.html", { expectScripts: 7, slug: S, fetch: api });
+  const { window } = dom, doc = window.document;
+  const click = el => el.dispatchEvent(new window.MouseEvent("click", { bubbles: true }));
+  await tick();
+
+  /* ---- 切到复习 tab：先拉到期列表 ---- */
+  click(doc.querySelector('[data-phview="srs"]'));
+  await sleep(30);
+  ok(!doc.getElementById("viewSrs").hidden && doc.getElementById("viewRead").hidden, `[${S}] 切到复习 tab`);
+  ok(api.calls.some(c => /\/api\/phrase-review\?phone=.*&all=1/.test(c.url || "")),
+    `[${S}] 拉了一次全量记录（用来算「没练过的」）`);
+  const box = () => doc.getElementById("srs");
+  ok(/今天有 <b>2<\/b> 条到期/.test(box().innerHTML), `[${S}] 首页：今天 2 条到期`);
+  ok(/2\/254 条已经进过复习/.test(box().textContent), `[${S}] 首页：2/254 条进过复习（全量记录 2 条）`);
+  ok(/答对升一级，间隔变成 1 → 2 → 4 → 7 → 15 → 30 天/.test(box().textContent), `[${S}] 首页写了间隔规则`);
+
+  /* ---- 开始复习：一题一题做 ---- */
+  click(box().querySelector('[data-s="start"]'));
+  await sleep(30);
+  ok(/第 1\/2 题/.test(box().textContent), `[${S}] 进入做题：第 1/2 题`);
+  ok(box().querySelectorAll(".xbw-opt").length === 4, `[${S}] 每题 4 个选项（1 对 + 3 个干扰）`);
+  ok(box().querySelector(".xbw-stem").textContent.indexOf("a couple of") < 0, `[${S}] 题干里不出现答案`);
+  ok(!!box().querySelector(".xbw-stem .xbw-blank"), `[${S}] 题干是挖空句`);
+  ok(/后接可数名词复数/.test(box().textContent), `[${S}] 题面带用法线索`);
+
+  /* 选对 → 判分 + 报服务端 */
+  const rightOpt = [...box().querySelectorAll(".xbw-opt")].filter(b => b.textContent === "a couple of")[0];
+  ok(!!rightOpt, `[${S}] 选项里有正确答案`);
+  click(rightOpt);
+  await tick();
+  ok(/✔ 对了/.test(box().textContent), `[${S}] 选对 → 即时判分`);
+  ok(api.calls.some(c => c.path === "/api/phrase-review" && c.body && c.body.ok === true &&
+      c.body.no === 1 && c.body.level === 1), `[${S}] 报服务端：对（带当时等级 1）`);
+  await sleep(1000);
+  ok(/第 2\/2 题/.test(box().textContent), `[${S}] 自动进下一题`);
+
+  /* 选错 → 判分 + 报错 + 进错题本 */
+  const wrongOpt = [...box().querySelectorAll(".xbw-opt")].filter(b => b.textContent !== "a group of")[0];
+  click(wrongOpt);
+  await tick();
+  ok(/正确答案是 <b>a group of<\/b>/.test(box().innerHTML), `[${S}] 选错 → 标出正确答案`);
+  ok(api.calls.some(c => c.path === "/api/phrase-review" && c.body && c.body.ok === false && c.body.no === 3),
+    `[${S}] 报服务端：错（第 3 条）`);
+  ok(api.calls.some(c => c.path === "/api/phrase-mistakes" && c.body && c.body.no === 3),
+    `[${S}] 错的题同时进词组错题本`);
+  await sleep(1800);
+
+  /* ---- 结果页 ---- */
+  ok(/答对 <b>1\/2<\/b>/.test(box().innerHTML), `[${S}] 结果页：答对 1/2`);
+  ok(/错的 · 1 道（已进词组错题本）/.test(box().textContent), `[${S}] 结果页列出错题`);
+  ok(!!box().querySelector('[data-s="again"]') && !!box().querySelector('[data-s="home"]'), `[${S}] 结果页有「再练错的 / 回复习首页」`);
+
+  /* 再练错的：只有 1 题 */
+  click(box().querySelector('[data-s="again"]'));
+  await sleep(30);
+  ok(/第 1\/1 题/.test(box().textContent) && /再练错的 1 条/.test(box().textContent), `[${S}] 「再练错的」只练错的那 1 条`);
+
+  /* 回首页：重新拉一次计划 */
+  click(box().querySelector('[data-s="stop"]'));
+  await sleep(30);
+  ok(/今天有 <b>2<\/b> 条到期/.test(box().innerHTML), `[${S}] 「先回去」回到复习首页`);
+
+  ok(logs.filter(l => !/404/.test(l)).length === 0, `[${S}] 运行期没有 JS 报错`);
+  if (logs.length) console.log(`\n  ${S} 细节：\n` + logs.slice(0, 4).map(l => "      ✗ " + l).join("\n"));
+}
+
+/* ============================================================
    门禁：文章页未登录 → 弹回首页登录框；存储不可用 → 放行
    ============================================================ */
 async function testGates() {
@@ -1732,17 +2254,28 @@ async function testGates() {
     const { logs } = await loadPage("synonyms.html", { expectScripts: 5, slug: "gate/synonyms", seed: { __user: false } });
     ok(logs.some(l => /navigation/i.test(l)), "[gate] 未登录访问同义替换页 → 被门禁弹走");
   }
+  {
+    const { logs } = await loadPage("collocations.html", { expectScripts: 5, slug: "gate/collocations", seed: { __user: false } });
+    ok(logs.some(l => /navigation/i.test(l)), "[gate] 未登录访问固定搭配页 → 被门禁弹走");
+  }
+  {
+    const { logs } = await loadPage("phrases.html", { expectScripts: 7, slug: "gate/phrases", seed: { __user: false } });
+    ok(logs.some(l => /navigation/i.test(l)), "[gate] 未登录访问词组库 → 被门禁弹走");
+  }
 }
 
 /* ============================================================
    跑
    ============================================================ */
-console.log("冒烟测试 " + targets.length + " 篇 + 首页 + 错题页 + 词书页 + 同义替换页…\n");
+console.log("冒烟测试 " + targets.length + " 篇 + 首页 + 错题页 + 词书页 + 同义替换页 + 固定搭配页 + 词组库…\n");
 let firstErr = null;
 const suites = [...targets.map(s => [s, () => testArticle(s)]),
                 ["index.html", testHomePage],
                 ["mistakes.html + words.html", testListPages],
                 ["synonyms.html", testSynonymsPage],
+                ["collocations.html", testCollocationsPage],
+                ["phrases.html", testPhrasesPage],
+                ["复习（SRS）", testSrsTab],
                 ["门禁", testGates]];
 for (const [name, fn] of suites) {
   try {

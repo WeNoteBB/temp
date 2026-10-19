@@ -131,15 +131,55 @@ try {
   mark(!list.items.some(x => x.key === word), "取消后单词从列表消失");
   mark(!list.items.some(x => x.key === sentence), "取消后句子从列表消失");
 
+  /* ---- 词组库：收藏词组（带快照）+ 词组错题 ---- */
+  const phrase = "a selftest phrase " + stamp;
+  await db.addPhraseFav({
+    phone, no: 1, phrase,
+    meaning: "自检词组", usageNote: "后接可数名词复数",
+    example: "This is a selftest phrase example (" + stamp + ").",
+    exampleCn: "自检词组例句",
+    sourceTitle: "selftest"
+  });
+  let plist = await db.listFavs(phone);
+  const lp = plist.items.find(x => x.type === "p" && x.key === phrase);
+  mark(lp && lp.cn === "自检词组" && lp.use === "后接可数名词复数" &&
+       lp.exTr === "自检词组例句" && lp.no === 1,
+    "收藏词组：user_phrase 快照（中文/用法/例句+翻译/序号）都在，listFavs 带得出来");
+  await db.addPhraseFav({ phone, no: 1, phrase, meaning: "自检词组", sourceTitle: "selftest" });
+  plist = await db.listFavs(phone);
+  mark(plist.items.filter(x => x.type === "p" && x.key === phrase).length === 1,
+    "重复收藏词组不产生重复关联（唯一键生效）");
+
+  await db.addPhraseMistake({
+    phone: regPhone, no: 3, phrase, stem: "We're ____ people aged 16–25…",
+    chosen: "a number of", correct: phrase
+  });
+  await db.addPhraseMistake({
+    phone: regPhone, no: 3, phrase, stem: "We're ____ people aged 16–25…",
+    chosen: "a group of", correct: phrase
+  });
+  const pms = await db.listPhraseMistakes(regPhone);
+  const pm0 = pms.items.filter(x => x.no === 3)[0];
+  mark(!!pm0 && pm0.chosen === "a group of" && pm0.correct === phrase && pm0.count === 2 &&
+       /____/.test(pm0.stem),
+    "词组错题：同题错两次只留一行，存的是原题 + 选的那个 + 正确项、计数 2");
+
+  await db.removePhraseFav({ phone, phrase });
+  plist = await db.listFavs(phone);
+  mark(!plist.items.some(x => x.key === phrase), "取消后词组从列表消失");
+
   /* 收尾：把测试词句两行也删掉（关联行上面已经删了）。
      只有这里直接碰 pool —— 它是测试收尾，不属于业务 SQL（业务 SQL 全在 db.mjs）。 */
   await pool.query("DELETE FROM `pet_word` WHERE `word` = ?", [word]);
   await pool.query("DELETE FROM `pet_sentence` WHERE `hash` IN (?, ?)", [sha256Hex(sentence), sha256Hex(example)]);
+  /* 词组库收尾：关联行上面删了，测试词组那行 + 错题行也清掉 */
+  await pool.query("DELETE FROM `pet_phrase` WHERE `phrase` = ?", [phrase]);
+  await pool.query("DELETE FROM `pet_phrase_mistake` WHERE `user_id` = ?", [reg.userId]);
   /* 注册用的随机测试号连人带错题一起清掉 */
   await pool.query("DELETE FROM `pet_mistake` WHERE `user_id` = ?", [reg.userId]);
   await pool.query("DELETE FROM `user` WHERE `phone` = ?", [regPhone]);
   await pool.end();
-  console.log("  · 已清理测试词句行、随机测试用户和它的错题行（固定测试号那行用户保留）");
+  console.log("  · 已清理测试词句行、测试词组行、随机测试用户和它的错题行（固定测试号那行用户保留）");
 
   console.log(nFail ? "\n✗ 有 " + nFail + " 项没过，看上面的 ✗" : "\n✓ 全部通过 —— 后端到数据库这条链路是通的");
   process.exit(nFail ? 1 : 0);

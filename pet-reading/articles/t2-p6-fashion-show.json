@@ -1,0 +1,3905 @@
+{
+  "slug": "t2-p6-fashion-show",
+  "book": "剑桥PET 官方模考题精讲讲练",
+  "label": "Reading Part 6",
+  "title": "Training Test 2",
+  "note": "答案为逐题对照书后 P203 官方答案核对一致；训练①–④的答案与解析同 P203；「析」里的笔记来自带手写批注的 PET Trainers 版（书 P68–P69；扫描页码 86–87）（2026-10-19）",
+  "inlineQuiz": true,
+  "passage": {
+    "words": 509,
+    "sentences": 46,
+    "paragraphs": [
+      [
+        {
+          "s": "Training Test 2 · Reading Part 6",
+          "hard": false,
+          "tr": "训练测试 2 · 阅读第 6 部分。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题行：<b>Training Test 2 · Reading Part 6</b>（训练测试 2 · 阅读第 6 部分）",
+            "parts": [
+              [
+                "标题",
+                "Training Test 2 —— 训练测试编号"
+              ],
+              [
+                "标题",
+                "Reading Part 6 —— 阅读第 6 部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式省略句"
+            ],
+            "tip": "这一部分练的是：短文挖六个空，每空自己填一个词（开放填空）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "How many gaps are there in the text?",
+          "hard": false,
+          "tr": "文章里有几个空？",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "疑问句：<b>How many gaps are there in the text?</b>",
+            "parts": [
+              [
+                "疑问词",
+                "<code>How many gaps</code> —— 多少个空"
+              ],
+              [
+                "状语",
+                "<code>in the text</code> —— 在文章里"
+              ]
+            ],
+            "clauses": [
+              "there be 句型"
+            ],
+            "gram": [
+              "gap 空"
+            ],
+            "tip": "官方答案：six（六个）。",
+            "note": [
+              {
+                "k": "gap",
+                "cn": "空，缺口"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "How many words must you write in each gap?",
+          "hard": false,
+          "tr": "每个空你要写几个词？",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "疑问句：<b>How many words must you write in each gap?</b>",
+            "parts": [
+              [
+                "疑问词",
+                "<code>How many words</code> —— 多少个词"
+              ],
+              [
+                "谓语",
+                "<code>must you write</code> —— 你必须写"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "write 写"
+            ],
+            "tip": "官方答案：one（一个）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "GRAMMAR: RELATIVE PRONOUNS",
+          "hard": false,
+          "tr": "语法：关系代词。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>GRAMMAR: RELATIVE PRONOUNS</b>（语法：关系代词）",
+            "parts": [
+              [
+                "名词",
+                "RELATIVE PRONOUNS —— 关系代词"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "relative pronoun 关系代词"
+            ],
+            "tip": "which 指物、who 指人、where 指地点、when 指时间、whose 表所有。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "B1 Preliminary candidates often make mistakes with relative pronouns.",
+          "hard": false,
+          "tr": "B1 Preliminary 的考生经常在关系代词上出错。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>B1 Preliminary candidates often make mistakes with relative pronouns.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>B1 Preliminary candidates</code> —— 考生"
+              ],
+              [
+                "谓语",
+                "<code>often make mistakes</code> —— 经常出错"
+              ],
+              [
+                "介词短语",
+                "<code>with relative pronouns</code> —— 在关系代词上"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "make mistakes with 在……上出错"
+            ],
+            "tip": "口诀：人 who、物 which、地点 where、时间 when、所有 whose。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "① Correct the mistakes in these sentences using the relative pronouns in the box.",
+          "hard": false,
+          "tr": "① 用方框里的关系代词改正这些句子里的错误。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Correct the mistakes in these sentences using the relative pronouns in the box.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Correct the mistakes</code> —— 改正错误"
+              ],
+              [
+                "方式",
+                "<code>using the relative pronouns in the box</code> —— 用方框里的关系代词"
+              ]
+            ],
+            "clauses": [
+              "using + 名词"
+            ],
+            "gram": [
+              "correct the mistake 改正错误"
+            ],
+            "tip": "For each gap, first decide what kind of word you need, e.g. a pronoun."
+          }
+        }
+      ],
+      [
+        {
+          "s": "A which",
+          "hard": false,
+          "tr": "A which。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "关系代词：<b>which</b>",
+            "parts": [
+              [
+                "代词",
+                "which —— 指代物"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "which 指代物"
+            ],
+            "tip": "先行词是「物/事」时用。",
+            "note": [
+              {
+                "k": "which",
+                "cn": "（关系代词）指代物"
+              }
+            ]
+          }
+        },
+        {
+          "s": "B who",
+          "hard": false,
+          "tr": "B who。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "关系代词：<b>who</b>",
+            "parts": [
+              [
+                "代词",
+                "who —— 指代人"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "who 指代人"
+            ],
+            "tip": "先行词是「人」时用（作主语）。",
+            "note": [
+              {
+                "k": "who",
+                "cn": "（关系代词）指代人"
+              }
+            ]
+          }
+        },
+        {
+          "s": "C where",
+          "hard": false,
+          "tr": "C where。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "关系副词：<b>where</b>",
+            "parts": [
+              [
+                "副词",
+                "where —— 关系副词（指地点）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "where 指地点"
+            ],
+            "tip": "先行词是「地点」时用。",
+            "note": [
+              {
+                "k": "where",
+                "cn": "（关系副词）指地点"
+              }
+            ]
+          }
+        },
+        {
+          "s": "D when",
+          "hard": false,
+          "tr": "D when。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "关系副词：<b>when</b>",
+            "parts": [
+              [
+                "副词",
+                "when —— 关系副词（指时间）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "when 指时间"
+            ],
+            "tip": "先行词是「时间」时用。",
+            "note": [
+              {
+                "k": "when",
+                "cn": "（关系副词）指时间"
+              }
+            ]
+          }
+        },
+        {
+          "s": "E whose",
+          "hard": false,
+          "tr": "E whose。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "关系代词：<b>whose</b>",
+            "parts": [
+              [
+                "代词",
+                "whose —— 指代人或者物的（所有格）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "whose 表所有"
+            ],
+            "tip": "后面接名词（whose house 他的房子）。",
+            "note": [
+              {
+                "k": "whose",
+                "cn": "（关系代词）指代人或者物的（所有格）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "The fish who I saw was a shark, I think.",
+          "hard": false,
+          "tr": "我看到的那条鱼是条鲨鱼，我想。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>The fish who I saw was a shark, I think.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>The fish who I saw</code> —— 我看到的那条鱼（who 这里错了）"
+              ],
+              [
+                "表语",
+                "<code>was a shark</code> —— 是条鲨鱼"
+              ],
+              [
+                "插入",
+                "<code>I think</code> —— 我想"
+              ]
+            ],
+            "clauses": [
+              "定语从句（关系代词作宾语）"
+            ],
+            "gram": [
+              "which 指代物"
+            ],
+            "tip": "有错：fish 是「物」→ which（that 也可以）。官方：1 who → which/that。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Buenos Aires, which my cousins live, is a long way from here.",
+          "hard": false,
+          "tr": "我表亲住的布宜诺斯艾利斯离这里很远。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>Buenos Aires, which my cousins live, is a long way from here.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Buenos Aires, which my cousins live</code> —— 我表亲住的布宜诺斯艾利斯（which 这里错了）"
+              ],
+              [
+                "表语",
+                "<code>is a long way from here</code> —— 离这里很远"
+              ]
+            ],
+            "clauses": [
+              "非限制性定语从句"
+            ],
+            "gram": [
+              "where 指地点"
+            ],
+            "tip": "有错：先行词是地点（城市）→ where。官方：2 which → where。",
+            "note": [
+              {
+                "k": "a long way from",
+                "cn": "离……很远"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "My big sister Layla, that is 17, is going to university next year.",
+          "hard": false,
+          "tr": "我姐姐 Layla，17 岁，明年要上大学了。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>My big sister Layla, that is 17, is going to university next year.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>My big sister Layla, that is 17</code> —— 我姐姐 Layla，17 岁（that 这里错了）"
+              ],
+              [
+                "谓语",
+                "<code>is going to university next year</code> —— 明年要上大学"
+              ]
+            ],
+            "clauses": [
+              "非限制性定语从句（不能用 that）"
+            ],
+            "gram": [
+              "who 指代人"
+            ],
+            "tip": "有错：非限制性从句不能用 that，指人用 who。官方：3 that → who。",
+            "note": [
+              {
+                "k": "university",
+                "cn": "大学"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "The neighbours, which house is much bigger than ours, have two cars.",
+          "hard": false,
+          "tr": "邻居家（房子比我们大得多）有两辆车。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>The neighbours, which house is much bigger than ours, have two cars.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>The neighbours, which house is much bigger than ours</code> —— 邻居（which 这里错了）"
+              ],
+              [
+                "谓语",
+                "<code>have two cars</code> —— 有两辆车"
+              ]
+            ],
+            "clauses": [
+              "定语从句（所有格）"
+            ],
+            "gram": [
+              "whose + 名词"
+            ],
+            "tip": "有错：「邻居的房子」表所有 → whose。官方：4 which → whose。",
+            "note": [
+              {
+                "k": "neighbour",
+                "cn": "邻居"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "That's the boy which I told you about.",
+          "hard": false,
+          "tr": "那就是我跟你说过的那个男孩。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>That's the boy which I told you about.</b>",
+            "parts": [
+              [
+                "主语",
+                "That —— 那"
+              ],
+              [
+                "表语",
+                "<code>the boy which I told you about</code> —— 我跟你说过的那个男孩（which 这里错了）"
+              ]
+            ],
+            "clauses": [
+              "定语从句（关系代词作宾语）"
+            ],
+            "gram": [
+              "who 指代人"
+            ],
+            "tip": "有错：boy 是「人」→ who（that 也可以）。官方：5 which → who/that。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "It was in February, where the weather was cold, that I bought this coat.",
+          "hard": false,
+          "tr": "我是在二月（天气很冷的时候）买这件外套的。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "强调句：<b>It was in February, where the weather was cold, that I bought this coat.</b>",
+            "parts": [
+              [
+                "强调部分",
+                "<code>in February, where the weather was cold</code> —— 在二月（where 这里错了）"
+              ],
+              [
+                "主语",
+                "<code>I</code> —— 我"
+              ],
+              [
+                "谓语",
+                "<code>bought this coat</code> —— 买了这件外套"
+              ]
+            ],
+            "clauses": [
+              "It was … that 强调句"
+            ],
+            "gram": [
+              "when 指时间"
+            ],
+            "tip": "有错：先行词是时间（February）→ when。官方：6 where → when。",
+            "note": [
+              {
+                "k": "february",
+                "cn": "二月"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "A good cook is someone who food always tastes good!",
+          "hard": false,
+          "tr": "好厨师就是做出来的饭菜总是好吃的人！",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>A good cook is someone who food always tastes good!</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>A good cook</code> —— 好厨师"
+              ],
+              [
+                "表语",
+                "<code>someone who food always tastes good</code> —— 饭菜总是好吃的人（who 这里错了）"
+              ]
+            ],
+            "clauses": [
+              "定语从句（所有格）"
+            ],
+            "gram": [
+              "whose + 名词（whose food 他的饭菜）"
+            ],
+            "tip": "有错：「某人的饭菜」表所有 → whose。官方：7 who → whose。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "There's the house that I used to live.",
+          "hard": false,
+          "tr": "那就是我以前住的房子。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>There's the house that I used to live.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>the house that I used to live</code> —— 我以前住的房子（that 这里错了）"
+              ]
+            ],
+            "clauses": [
+              "定语从句"
+            ],
+            "gram": [
+              "where 指地点；live 是不及物动词"
+            ],
+            "tip": "有错：live 后面缺地点 → where（或 that … live in）。官方：8 that → where。",
+            "note": [
+              {
+                "k": "used to",
+                "cn": "过去常常（used to do sth）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "FOCUS: IDENTIFYING PART OF SPEECH",
+          "hard": false,
+          "tr": "重点：判断词性。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>FOCUS: IDENTIFYING PART OF SPEECH</b>",
+            "parts": [
+              [
+                "动名词",
+                "IDENTIFYING —— 判断"
+              ],
+              [
+                "名词",
+                "<code>PART OF SPEECH</code> —— 词性"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "part of speech 词性"
+            ],
+            "tip": "先想「这个空缺什么词性」，再想填哪个词。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "② Complete each sentence with one word.",
+          "hard": false,
+          "tr": "② 每个句子填一个词补全。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Complete each sentence with one word.</b>",
+            "parts": [
+              [
+                "谓语",
+                "Complete —— 补全"
+              ],
+              [
+                "宾语",
+                "<code>each sentence</code> —— 每个句子"
+              ],
+              [
+                "方式",
+                "<code>with one word</code> —— 用一个词"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "one word 一个词"
+            ],
+            "tip": "首先判断每个空格需要填入哪类词，例如，介词。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "The girl {146} lives in that house goes to my school.",
+          "hard": false,
+          "tr": "住在那栋房子里的女孩上我的学校。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "主谓：<b>The girl ____ lives in that house goes to my school.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>The girl {146} lives in that house</code> —— 住在那个房子里的女孩"
+              ],
+              [
+                "谓语",
+                "<code>goes to my school</code> —— 上我的学校"
+              ]
+            ],
+            "clauses": [
+              "定语从句（缺主语，指人）"
+            ],
+            "gram": [
+              "who 指代人（作主语）"
+            ],
+            "tip": "空后是谓语动词、先行词是「人」→ 填 who。官方：1 who。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "In some countries you can't drive a car {147} you're 18.",
+          "hard": false,
+          "tr": "在一些国家，你 18 岁前不能开车。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>you can't drive a car ____ you're 18.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>you</code> —— 你"
+              ],
+              [
+                "谓语",
+                "<code>can't drive a car</code> —— 不能开车"
+              ],
+              [
+                "时间从句",
+                "<code>{147} you're 18</code> —— ……你 18 岁"
+              ]
+            ],
+            "clauses": [
+              "时间状语从句"
+            ],
+            "gram": [
+              "until 直到"
+            ],
+            "tip": "「直到 18 岁」→ 填 until。官方：2 until（也有人用 unless，意思不同：除非）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "We'll go to the shopping mall tomorrow if we {148} enough time.",
+          "hard": false,
+          "tr": "如果时间够，我们明天去购物中心。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>We'll go to the shopping mall tomorrow if we ____ enough time.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>We</code> —— 我们"
+              ],
+              [
+                "谓语",
+                "<code>'ll go to the shopping mall</code> —— 要去购物中心"
+              ],
+              [
+                "条件从句",
+                "<code>if we {148} enough time</code> —— 如果我们……足够时间"
+              ]
+            ],
+            "clauses": [
+              "if 条件从句"
+            ],
+            "gram": [
+              "have time 有时间"
+            ],
+            "tip": "「有时间」→ 填 have。官方：3 have。",
+            "note": [
+              {
+                "k": "shopping mall",
+                "cn": "购物中心"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Take some money with you in {149} you want to buy a drink.",
+          "hard": false,
+          "tr": "带点钱，以防你想买饮料。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Take some money with you in ____ you want to buy a drink.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Take some money with you</code> —— 带点钱"
+              ],
+              [
+                "目的从句",
+                "<code>in {149} you want to buy a drink</code> —— 以防你想买饮料"
+              ]
+            ],
+            "clauses": [
+              "in case 引导从句"
+            ],
+            "gram": [
+              "in case 以防万一"
+            ],
+            "tip": "「以防」→ 填 case（in case）。官方：4 case。",
+            "note": [
+              {
+                "k": "in case",
+                "cn": "以防万一（in case + 从句）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "I always like to take part {150} as many different sports as I can.",
+          "hard": false,
+          "tr": "我总是喜欢尽可能参加多种运动。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>I always like to take part ____ as many different sports as I can.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>like to take part {150}</code> —— 喜欢参加……"
+              ],
+              [
+                "宾语",
+                "<code>as many different sports as I can</code> —— 尽可能多的运动"
+              ]
+            ],
+            "clauses": [
+              "as … as one can"
+            ],
+            "gram": [
+              "take part in 参加"
+            ],
+            "tip": "「参加」→ 填 in（take part in）。官方：5 in。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Let's leave now {151} we don't have to run to catch the bus.",
+          "hard": false,
+          "tr": "我们现在走吧，这样就不用跑着赶公交。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "主谓：<b>Let's leave now ____ we don't have to run to catch the bus.</b>",
+            "parts": [
+              [
+                "祈使句",
+                "<code>Let's leave now</code> —— 我们现在走吧"
+              ],
+              [
+                "主语",
+                "<code>we</code> —— 我们"
+              ],
+              [
+                "谓语",
+                "<code>don't have to run</code> —— 不用跑"
+              ],
+              [
+                "目的从句",
+                "<code>{151} we don't have to run to catch the bus</code> —— 这样就不用跑着赶公交"
+              ]
+            ],
+            "clauses": [
+              "so (that) 表目的"
+            ],
+            "gram": [
+              "so that 以便"
+            ],
+            "tip": "「以便、这样」→ 填 so。官方：6 so。空填完后检查全文通顺（After you fill in all the gaps, make sure the completed text makes sense.）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "③ Which of your answers above are:",
+          "hard": false,
+          "tr": "③ 你上面的答案里，哪些是：",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "疑问句：<b>Which of your answers above are:</b>",
+            "parts": [
+              [
+                "疑问词",
+                "<code>Which of your answers above</code> —— 你上面答案里的哪些"
+              ]
+            ],
+            "clauses": [
+              "which of … 哪些"
+            ],
+            "gram": [
+              "answer 答案"
+            ],
+            "tip": "把六个答案按词性分类（下面四类）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "verb forms? (e.g. was)",
+          "hard": false,
+          "tr": "动词形式？（例如 was）",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "类别：<b>verb forms?</b>（动词形式）",
+            "parts": [
+              [
+                "名词",
+                "verb forms —— 动词形式"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "verb form 动词形式"
+            ],
+            "tip": "如 was、have。"
+          }
+        },
+        {
+          "s": "linking words or part of linking expressions? (e.g. though, in order to)",
+          "hard": false,
+          "tr": "连接词或连接表达的一部分？（例如 though、in order to）",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "类别：<b>linking words or part of linking expressions?</b>（连接词/连接表达）",
+            "parts": [
+              [
+                "名词",
+                "<code>linking words or part of linking expressions</code> —— 连接词或连接表达的一部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "linking expression 连接表达"
+            ],
+            "tip": "如 though、so that、in case。"
+          }
+        },
+        {
+          "s": "prepositions? (e.g. of)",
+          "hard": false,
+          "tr": "介词？（例如 of）",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "类别：<b>prepositions?</b>（介词）",
+            "parts": [
+              [
+                "名词",
+                "prepositions —— 介词"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "preposition 介词"
+            ],
+            "tip": "如 of、in、to。"
+          }
+        },
+        {
+          "s": "relative pronouns? (e.g. which)",
+          "hard": false,
+          "tr": "关系代词？（例如 which）",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "类别：<b>relative pronouns?</b>（关系代词）",
+            "parts": [
+              [
+                "名词",
+                "relative pronouns —— 关系代词"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "relative pronoun 关系代词"
+            ],
+            "tip": "如 which、who。"
+          }
+        }
+      ],
+      [],
+      [
+        {
+          "s": "④ In pairs, look at the gaps in this paragraph and for each one decide what kind of word is needed. Then complete each gap with one suitable word.",
+          "hard": false,
+          "tr": "④ 两人一组，看这段文字里的空，逐个判断需要什么词性，然后用一个合适的词填空。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>look at the gaps in this paragraph and for each one decide what kind of word is needed. Then complete each gap with one suitable word.</b>",
+            "parts": [
+              [
+                "谓语 1",
+                "<code>look at the gaps in this paragraph</code> —— 看这段里的空"
+              ],
+              [
+                "谓语 2",
+                "<code>decide what kind of word is needed</code> —— 判断需要什么词性"
+              ],
+              [
+                "谓语 3",
+                "<code>Then complete each gap with one suitable word</code> —— 用一个合适的词填空"
+              ]
+            ],
+            "clauses": [
+              "what 宾语从句"
+            ],
+            "gram": [
+              "suitable 合适的"
+            ],
+            "tip": "先定词性（代词？介词？连接词？），再定词。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Snow biking is a new winter sport (1) {158} is now becoming very popular.",
+          "hard": false,
+          "tr": "雪地骑行是一项新的冬季运动，现在正变得越来越流行。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>Snow biking is a new winter sport (1) ____ is now becoming very popular.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Snow biking</code> —— 雪地骑行"
+              ],
+              [
+                "表语",
+                "<code>a new winter sport (1) {158}</code> —— 一项新的冬季运动（缺关系代词）"
+              ],
+              [
+                "从句谓语",
+                "<code>is now becoming very popular</code> —— 正变得越来越流行"
+              ]
+            ],
+            "clauses": [
+              "定语从句（缺主语，指物）"
+            ],
+            "gram": [
+              "which 指代物"
+            ],
+            "tip": "指物、作从句主语 → 填 which。官方：1 which。",
+            "note": [
+              {
+                "k": "snow biking",
+                "cn": "雪地骑行"
+              },
+              {
+                "k": "popular",
+                "cn": "受欢迎的；流行的"
+              }
+            ]
+          }
+        },
+        {
+          "s": "It's similar (2) {159} mountain biking in that it involves riding down steep hills, often at high speed, but on snow or ice (3) {160} of on ordinary ground.",
+          "hard": true,
+          "tr": "它和山地骑行很像，都是冲下陡坡、常常高速，只不过是在雪地或冰面上而不是普通地面。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>It's similar (2) ____ mountain biking … but on snow or ice (3) ____ of on ordinary ground.</b>",
+            "parts": [
+              [
+                "表语",
+                "<code>similar (2) {159}</code> —— 与……相似（缺介词）"
+              ],
+              [
+                "补充",
+                "<code>in that it involves riding down steep hills, often at high speed</code> —— 在于都是冲下陡坡"
+              ],
+              [
+                "对比",
+                "<code>but on snow or ice (3) {160} of on ordinary ground</code> —— 但在雪地/冰面而非普通地面（缺 instead）"
+              ]
+            ],
+            "clauses": [
+              "in that 表「在于」"
+            ],
+            "gram": [
+              "be similar to 与……相似；instead of 而不是"
+            ],
+            "tip": "similar to → 填 to；「而不是」→ 填 instead（instead of）。官方：2 to / 3 instead。",
+            "note": [
+              {
+                "k": "similar to",
+                "cn": "与……相似"
+              },
+              {
+                "k": "steep",
+                "cn": "陡的"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Snow biking tyres, (4) {161}, have to be wider than those on a mountain bike, (5) {162} that the wheels don't slip on icy surfaces.",
+          "hard": true,
+          "tr": "因此，雪地骑行的轮胎必须比山地车的更宽，这样轮子才不会在冰面上打滑。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "主谓：<b>Snow biking tyres, (4) ____, have to be wider than those on a mountain bike, (5) ____ that the wheels don't slip on icy surfaces.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Snow biking tyres, (4) {161}</code> —— 雪地骑行轮胎（缺连接词）"
+              ],
+              [
+                "谓语",
+                "<code>have to be wider than those on a mountain bike</code> —— 必须比山地车更宽"
+              ],
+              [
+                "目的从句",
+                "<code>(5) {162} that the wheels don't slip on icy surfaces</code> —— 这样轮子不会在冰面打滑（缺 so）"
+              ]
+            ],
+            "clauses": [
+              "so that 目的从句"
+            ],
+            "gram": [
+              "therefore 因此；so that 以便"
+            ],
+            "tip": "「因此」→ 填 therefore；「以便」→ 填 so（so that）。官方：4 therefore / 5 so。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Exam Practice Test 2 · Reading Part 6",
+          "hard": false,
+          "tr": "考试实践测试 2 · 阅读第 6 部分。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题行：<b>Exam Practice Test 2 · Reading Part 6</b>",
+            "parts": [
+              [
+                "标题",
+                "Exam Practice Test 2 —— 考试实践测试编号"
+              ],
+              [
+                "标题",
+                "Reading Part 6 —— 阅读第 6 部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式省略句"
+            ],
+            "tip": "开放填空：六个空，每空自己写一个词。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Questions 27–32",
+          "hard": false,
+          "tr": "第 27–32 题。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题：<b>Questions 27–32</b>（第 27–32 题）",
+            "parts": [
+              [
+                "名词",
+                "Questions —— 题目"
+              ],
+              [
+                "数字",
+                "27–32 —— 第 27 到第 32 题"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "真题部分题号连续编号"
+            ],
+            "tip": "六道题 = 六个空。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "For each question, write the correct word. Write one word for each gap.",
+          "hard": false,
+          "tr": "每题写出正确的词。每个空写一个词。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>write the correct word. Write one word for each gap.</b>",
+            "parts": [
+              [
+                "谓语 1",
+                "<code>write the correct word</code> —— 写出正确的词"
+              ],
+              [
+                "谓语 2",
+                "<code>Write one word for each gap</code> —— 每空写一个词"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "one word 一个词"
+            ],
+            "tip": "先判断词性（冠词？代词？介词？动词形式？），再想具体的词。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "As you may know, we had a fantastic fashion show here at the college last week.",
+          "hard": false,
+          "tr": "你可能知道，我们上周在学院办了一场很棒的时装秀。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>we had a fantastic fashion show here at the college last week.</b>",
+            "parts": [
+              [
+                "状语从句",
+                "<code>As you may know</code> —— 如你所知"
+              ],
+              [
+                "谓语",
+                "<code>had a fantastic fashion show</code> —— 办了一场很棒的时装秀"
+              ],
+              [
+                "地点时间",
+                "<code>here at the college last week</code> —— 上周在学院"
+              ]
+            ],
+            "clauses": [
+              "as 引导从句"
+            ],
+            "gram": [
+              "fashion show 时装秀"
+            ],
+            "tip": "开场介绍背景：上周的时装秀。",
+            "note": [
+              {
+                "k": "fashion show",
+                "cn": "时装秀"
+              },
+              {
+                "k": "fantastic",
+                "cn": "极好的"
+              }
+            ]
+          }
+        },
+        {
+          "s": "The aim was to display the work that the fashion students {27} recently been involved in all year here at the college, and show parents and friends the results.",
+          "hard": true,
+          "tr": "目的是展示时装专业学生这一年一直在学院参与的作品，并把成果给家长和朋友看。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>The aim was to display the work that the fashion students {27} recently been involved in all year …</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>The aim</code> —— 目的"
+              ],
+              [
+                "表语",
+                "<code>was to display the work</code> —— 是展示作品"
+              ],
+              [
+                "定语从句",
+                "<code>that the fashion students {27} recently been involved in all year</code> —— 学生们这一年一直参与的"
+              ],
+              [
+                "并列",
+                "<code>and show parents and friends the results</code> —— 并给家长朋友看成果"
+              ]
+            ],
+            "clauses": [
+              "that 定语从句；be involved in 参与"
+            ],
+            "gram": [
+              "have/had been involved in 一直参与"
+            ],
+            "tip": "空后是 recently been（过去分词）→ 缺助动词 have/had。官方：27 have（或 had）。",
+            "note": [
+              {
+                "k": "aim",
+                "cn": "目标"
+              },
+              {
+                "k": "display",
+                "cn": "展示，陈列"
+              },
+              {
+                "k": "involved",
+                "cn": "参与，涉及（be involved in）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "And it was clear to us that {28} were impressed by it.",
+          "hard": false,
+          "tr": "而且我们能看出他们都被它打动了。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>it was clear to us that {28} were impressed by it.</b>",
+            "parts": [
+              [
+                "分句",
+                "<code>it was clear to us</code> —— 我们看得很清楚"
+              ],
+              [
+                "主语从句",
+                "<code>that {28} were impressed by it</code> —— 他们被打动了（缺主语）"
+              ]
+            ],
+            "clauses": [
+              "it 形式主语；that 主语从句"
+            ],
+            "gram": [
+              "be impressed by 被……打动"
+            ],
+            "tip": "缺从句主语、指「家长和朋友」→ 填 they。官方：28 they。",
+            "note": [
+              {
+                "k": "impressed",
+                "cn": "深受感动的（were impressed by 被打动）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "The models that {29} part in the show were actually the students themselves, wearing their own clothes designs.",
+          "hard": false,
+          "tr": "参加表演的模特其实都是学生自己，穿着他们自己设计的衣服。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>The models that {29} part in the show were actually the students themselves …</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>The models that {29} part in the show</code> —— 参加表演的模特（缺动词）"
+              ],
+              [
+                "表语",
+                "<code>were actually the students themselves</code> —— 其实是学生自己"
+              ],
+              [
+                "伴随",
+                "<code>wearing their own clothes designs</code> —— 穿着自己设计的衣服"
+              ]
+            ],
+            "clauses": [
+              "that 定语从句；take part in 参加"
+            ],
+            "gram": [
+              "take part in 参加"
+            ],
+            "tip": "「参加」→ take part in，过去时 → 填 took。官方：29 took。",
+            "note": [
+              {
+                "k": "model",
+                "cn": "模特"
+              },
+              {
+                "k": "take part in",
+                "cn": "参加（某活动）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "{30} were some amazingly creative clothes on show, such as a dress made of recycled materials, and a coat that included every colour you could possibly think of!",
+          "hard": true,
+          "tr": "展出的还有一些令人惊叹的创意服装，比如一件用回收材料做的连衣裙，和一件包含你能想到的所有颜色的外套！",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "存在句：<b>{30} were some amazingly creative clothes on show …</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>{30} were some amazingly creative clothes on show</code> —— 展出了一些创意服装（缺引导词）"
+              ],
+              [
+                "举例",
+                "<code>such as a dress made of recycled materials, and a coat that included every colour you could possibly think of</code> —— 比如回收材料做的连衣裙和色彩齐全的外套"
+              ]
+            ],
+            "clauses": [
+              "there be 句型；such as 举例"
+            ],
+            "gram": [
+              "There were … 有……"
+            ],
+            "tip": "「有……」存在句 → 填 There。官方：30 There。",
+            "note": [
+              {
+                "k": "creative",
+                "cn": "有创意的"
+              },
+              {
+                "k": "such as",
+                "cn": "例如"
+              },
+              {
+                "k": "recycled materials",
+                "cn": "回收材料"
+              }
+            ]
+          }
+        },
+        {
+          "s": "And the scenery, created {31} the students in the Art Department, was really spectacular too.",
+          "hard": false,
+          "tr": "而由艺术系学生创作的布景也非常壮观。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>the scenery, created {31} the students in the Art Department, was really spectacular too.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>the scenery, created {31} the students in the Art Department</code> —— 由艺术系学生创作的布景（缺 by）"
+              ],
+              [
+                "表语",
+                "<code>was really spectacular</code> —— 非常壮观"
+              ]
+            ],
+            "clauses": [
+              "过去分词作定语（被动）"
+            ],
+            "gram": [
+              "created by 由……创作"
+            ],
+            "tip": "被动语态「由……创作」→ 填 by。官方：31 by。",
+            "note": [
+              {
+                "k": "scenery",
+                "cn": "风景，景色，舞台布景"
+              },
+              {
+                "k": "spectacular",
+                "cn": "壮观的，令人惊叹的，惊人的"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Mrs Jackson, Head of Design, said: 'There's absolutely {32} doubt in my mind that all these students are extremely talented – and I'm sure we'll hear more about them in the future. I wish them every success in their careers.'",
+          "hard": true,
+          "tr": "设计主管 Jackson 老师说：「我脑子里绝对没有疑问——这些学生都极有天赋。我相信以后还会听到他们的消息。祝他们事业成功。」",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "引语：<b>There's absolutely {32} doubt in my mind that all these students are extremely talented …</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Mrs Jackson</code> —— Jackson 老师"
+              ],
+              [
+                "谓语",
+                "<code>said</code> —— 说"
+              ],
+              [
+                "存在句",
+                "<code>There's absolutely {32} doubt in my mind</code> —— 我脑子里绝对……疑问（缺 no）"
+              ],
+              [
+                "同位语从句",
+                "<code>that all these students are extremely talented</code> —— 这些学生都极有天赋"
+              ],
+              [
+                "补充",
+                "<code>I wish them every success in their careers</code> —— 祝他们事业成功"
+              ]
+            ],
+            "clauses": [
+              "that 同位语从句"
+            ],
+            "gram": [
+              "there's no doubt that 毫无疑问"
+            ],
+            "tip": "「毫无疑问」→ 填 no（there's no doubt）。官方：32 no。",
+            "note": [
+              {
+                "k": "head of design",
+                "cn": "设计主管"
+              },
+              {
+                "k": "absolutely",
+                "cn": "绝对地，完全地"
+              },
+              {
+                "k": "no doubt",
+                "cn": "毫无疑问"
+              },
+              {
+                "k": "extremely",
+                "cn": "极度，非常"
+              },
+              {
+                "k": "talented",
+                "cn": "有天资的，有才能的"
+              }
+            ]
+          }
+        }
+      ]
+    ],
+    "blocks": [
+      {
+        "r": "h",
+        "head": {
+          "l": "Training Test 2",
+          "r": "Reading Part 6"
+        },
+        "badge": "答案见 P203"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "o",
+        "frame": true
+      },
+      {
+        "r": "q",
+        "n": "1",
+        "pick": [
+          138
+        ]
+      },
+      {
+        "r": "q",
+        "n": "2",
+        "pick": [
+          139
+        ]
+      },
+      {
+        "r": "q",
+        "n": "3",
+        "pick": [
+          140
+        ]
+      },
+      {
+        "r": "q",
+        "n": "4",
+        "pick": [
+          141
+        ]
+      },
+      {
+        "r": "q",
+        "n": "5",
+        "pick": [
+          142
+        ]
+      },
+      {
+        "r": "q",
+        "n": "6",
+        "pick": [
+          143
+        ]
+      },
+      {
+        "r": "q",
+        "n": "7",
+        "pick": [
+          144
+        ]
+      },
+      {
+        "r": "q",
+        "n": "8",
+        "pick": [
+          145
+        ]
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "q"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "o"
+      },
+      {
+        "r": "q",
+        "pick": [
+          152,
+          153,
+          154,
+          155,
+          156,
+          157
+        ]
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "img": {
+          "src": "assets/img/t2-p6-snowbike.png",
+          "alt": "雪地骑行的照片（原书 P68）",
+          "side": "left",
+          "w": 300
+        }
+      },
+      {
+        "r": "h",
+        "head": {
+          "l": "Exam Practice Test 2",
+          "r": "Reading Part 6"
+        },
+        "badge": "答案见 P203"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "img": {
+          "src": "assets/img/t2-p6-fashion.png",
+          "alt": "时装秀观众的照片（原书 P69）",
+          "side": "left",
+          "w": 300
+        }
+      }
+    ]
+  },
+  "phrases": [
+    "winter sport",
+    "mountain biking",
+    "steep hills",
+    "high speed",
+    "ordinary ground",
+    "icy surfaces",
+    "fashion show",
+    "last week",
+    "fashion students",
+    "been involved in",
+    "parents and friends",
+    "were impressed by",
+    "such as",
+    "recycled materials",
+    "every colour",
+    "the Art Department",
+    "Head of Design",
+    "in the future",
+    "every success"
+  ],
+  "glossary": {
+    "reading": {
+      "pos": "n.",
+      "ipa": "/ˈriːdɪŋ/",
+      "cn": "阅读"
+    },
+    "winter sport": {
+      "pos": "词组",
+      "ipa": "/ˈwɪntə spɔːt/",
+      "cn": "冬季运动"
+    },
+    "the art department": {
+      "pos": "词组",
+      "ipa": "/ði ˈɑːt dɪˌpɑːtmənt/",
+      "cn": "艺术系"
+    },
+    "gaps": {
+      "pos": "n.",
+      "ipa": "/ɡæps/",
+      "cn": "空，缺口（gap 的复数）"
+    },
+    "gap": {
+      "pos": "n.",
+      "ipa": "/ɡæp/",
+      "cn": "空，缺口"
+    },
+    "words": {
+      "pos": "n.",
+      "ipa": "/wɜːdz/",
+      "cn": "词（word 的复数）"
+    },
+    "must": {
+      "pos": "modal",
+      "ipa": "/mʌst/",
+      "cn": "必须；must not 不许"
+    },
+    "relative": {
+      "pos": "adj.",
+      "ipa": "/ˈrelətɪv/",
+      "cn": "关系的（relative pronoun 关系代词）"
+    },
+    "pronouns": {
+      "pos": "n.",
+      "ipa": "/ˈprəʊnaʊnz/",
+      "cn": "代词（pronoun 的复数）"
+    },
+    "candidates": {
+      "pos": "n.",
+      "ipa": "/ˈkændɪdəts/",
+      "cn": "考生（candidate 的复数）"
+    },
+    "mistakes": {
+      "pos": "n.",
+      "ipa": "/mɪˈsteɪks/",
+      "cn": "错误（mistake 的复数）"
+    },
+    "sentences": {
+      "pos": "n.",
+      "ipa": "/ˈsentənsɪz/",
+      "cn": "句子（sentence 的复数）"
+    },
+    "using": {
+      "pos": "v.",
+      "ipa": "/ˈjuːzɪŋ/",
+      "cn": "使用（use 的现在分词）"
+    },
+    "box": {
+      "pos": "n.",
+      "ipa": "/bɒks/",
+      "cn": "盒子，方框"
+    },
+    "whose": {
+      "pos": "pron.",
+      "ipa": "/huːz/",
+      "cn": "（关系代词）指代人或者物的（所有格）"
+    },
+    "fish": {
+      "pos": "n.",
+      "ipa": "/fɪʃ/",
+      "cn": "鱼（单复数同形）"
+    },
+    "saw": {
+      "pos": "v.",
+      "ipa": "/sɔː/",
+      "cn": "看见（see 的过去式）"
+    },
+    "shark": {
+      "pos": "n.",
+      "ipa": "/ʃɑːk/",
+      "cn": "鲨鱼"
+    },
+    "buenos": {
+      "pos": "n.",
+      "ipa": "/ˈbwenəs/",
+      "cn": "Buenos（Buenos Aires 布宜诺斯艾利斯）"
+    },
+    "aires": {
+      "pos": "n.",
+      "ipa": "/ˈaɪrɪz/",
+      "cn": "Aires（Buenos Aires 布宜诺斯艾利斯）"
+    },
+    "cousins": {
+      "pos": "n.",
+      "ipa": "/ˈkʌznz/",
+      "cn": "表亲（cousin 的复数）"
+    },
+    "layla": {
+      "pos": "n.",
+      "ipa": "/ˈleɪlə/",
+      "cn": "Layla（女子名）"
+    },
+    "going": {
+      "pos": "v.",
+      "ipa": "/ˈɡəʊɪŋ/",
+      "cn": "去；be going to 将要"
+    },
+    "university": {
+      "pos": "n.",
+      "ipa": "/ˌjuːnɪˈvɜːsəti/",
+      "cn": "大学"
+    },
+    "neighbours": {
+      "pos": "n.",
+      "ipa": "/ˈneɪbəz/",
+      "cn": "邻居（neighbour 的复数）"
+    },
+    "neighbour": {
+      "pos": "n.",
+      "ipa": "/ˈneɪbə/",
+      "cn": "邻居"
+    },
+    "house": {
+      "pos": "n.",
+      "ipa": "/haʊs/",
+      "cn": "房子；家"
+    },
+    "bigger": {
+      "pos": "adj.",
+      "ipa": "/ˈbɪɡə/",
+      "cn": "更大的（big 的比较级）"
+    },
+    "ours": {
+      "pos": "pron.",
+      "ipa": "/ˈaʊəz/",
+      "cn": "我们的（东西）"
+    },
+    "two": {
+      "pos": "num.",
+      "ipa": "/tuː/",
+      "cn": "二"
+    },
+    "cars": {
+      "pos": "n.",
+      "ipa": "/kɑːz/",
+      "cn": "汽车（car 的复数）"
+    },
+    "that's": {
+      "pos": "contr.",
+      "ipa": "/ðæts/",
+      "cn": "= that is"
+    },
+    "boy": {
+      "pos": "n.",
+      "ipa": "/bɔɪ/",
+      "cn": "男孩"
+    },
+    "february": {
+      "pos": "n.",
+      "ipa": "/ˈfebruəri/",
+      "cn": "二月"
+    },
+    "weather": {
+      "pos": "n.",
+      "ipa": "/ˈweðə/",
+      "cn": "天气"
+    },
+    "cold": {
+      "pos": "adj./n.",
+      "ipa": "/kəʊld/",
+      "cn": "冷的；寒冷"
+    },
+    "bought": {
+      "pos": "v.",
+      "ipa": "/bɔːt/",
+      "cn": "买（buy 的过去式/过去分词）"
+    },
+    "coat": {
+      "pos": "n.",
+      "ipa": "/kəʊt/",
+      "cn": "外套"
+    },
+    "good": {
+      "pos": "adj.",
+      "ipa": "/ɡʊd/",
+      "cn": "好的"
+    },
+    "cook": {
+      "pos": "v./n.",
+      "ipa": "/kʊk/",
+      "cn": "做饭，烹饪；厨师"
+    },
+    "food": {
+      "pos": "n.",
+      "ipa": "/fuːd/",
+      "cn": "食物"
+    },
+    "tastes": {
+      "pos": "v.",
+      "ipa": "/teɪsts/",
+      "cn": "尝起来（taste 的第三人称单数）"
+    },
+    "there's": {
+      "pos": "contr.",
+      "ipa": "/ðeəz/",
+      "cn": "= there is"
+    },
+    "used": {
+      "pos": "v.",
+      "ipa": "/juːzd/",
+      "cn": "使用（use 的过去式/过去分词）"
+    },
+    "used to": {
+      "pos": "词组",
+      "ipa": "/ˈjuːst tə/",
+      "cn": "过去常常（used to do sth）；习惯于（be used to doing sth——注意 to 是介词）"
+    },
+    "identifying": {
+      "pos": "v.",
+      "ipa": "/aɪˈdentɪfaɪɪŋ/",
+      "cn": "识别、找出（identify 的现在分词）"
+    },
+    "speech": {
+      "pos": "n.",
+      "ipa": "/spiːtʃ/",
+      "cn": "言语（part of speech 词性）"
+    },
+    "girl": {
+      "pos": "n.",
+      "ipa": "/ɡɜːl/",
+      "cn": "女孩"
+    },
+    "lives": {
+      "pos": "n./v.",
+      "ipa": "/laɪvz/（名词）；/lɪvz/（动词）",
+      "cn": "生活（life 的复数，读 /laɪvz/）；居住（live 的第三人称单数，读 /lɪvz/）"
+    },
+    "goes": {
+      "pos": "v.",
+      "ipa": "/ɡəʊz/",
+      "cn": "去（go 的第三人称单数）"
+    },
+    "countries": {
+      "pos": "n.",
+      "ipa": "/ˈkʌntriz/",
+      "cn": "国家（country 的复数）"
+    },
+    "can't": {
+      "pos": "contr.",
+      "ipa": "/kɑːnt/",
+      "cn": "不能（= cannot）"
+    },
+    "car": {
+      "pos": "n.",
+      "ipa": "/kɑː/",
+      "cn": "汽车"
+    },
+    "you're": {
+      "pos": "contr.",
+      "ipa": "/jɔː/",
+      "cn": "= you are（你是）"
+    },
+    "shopping": {
+      "pos": "n.",
+      "ipa": "/ˈʃɒpɪŋ/",
+      "cn": "购物"
+    },
+    "mall": {
+      "pos": "n.",
+      "ipa": "/mɔːl/",
+      "cn": "购物中心（shopping mall）"
+    },
+    "shopping mall": {
+      "pos": "词组",
+      "ipa": "/ˈʃɒpɪŋ mɔːl/",
+      "cn": "购物中心"
+    },
+    "tomorrow": {
+      "pos": "adv./n.",
+      "ipa": "/təˈmɒrəʊ/",
+      "cn": "明天"
+    },
+    "enough": {
+      "pos": "det./adv.",
+      "ipa": "/ɪˈnʌf/",
+      "cn": "足够的（not enough 不够）"
+    },
+    "money": {
+      "pos": "n.",
+      "ipa": "/ˈmʌni/",
+      "cn": "钱（不可数）"
+    },
+    "drink": {
+      "pos": "n./v.",
+      "ipa": "/drɪŋk/",
+      "cn": "饮料；喝"
+    },
+    "in case": {
+      "pos": "词组",
+      "ipa": "/ɪn ˈkeɪs/",
+      "cn": "以防万一",
+      "note": "in case + 从句（以防…会发生）；in case of + 名词。"
+    },
+    "sports": {
+      "pos": "n./adj.",
+      "ipa": "/spɔːts/",
+      "cn": "运动（sport 的复数）"
+    },
+    "let's": {
+      "pos": "contr.",
+      "ipa": "/lets/",
+      "cn": "= let us 让我们（表建议）"
+    },
+    "run": {
+      "pos": "v./n.",
+      "ipa": "/rʌn/",
+      "cn": "跑；经营"
+    },
+    "catch": {
+      "pos": "v.",
+      "ipa": "/kætʃ/",
+      "cn": "赶上（车）；抓住"
+    },
+    "bus": {
+      "pos": "n.",
+      "ipa": "/bʌs/",
+      "cn": "公交车，公共汽车"
+    },
+    "answers": {
+      "pos": "n.",
+      "ipa": "/ˈɑːnsəz/",
+      "cn": "答案（answer 的复数）"
+    },
+    "above": {
+      "pos": "prep./adv.",
+      "ipa": "/əˈbʌv/",
+      "cn": "在上面；上面的"
+    },
+    "forms": {
+      "pos": "n.",
+      "ipa": "/fɔːmz/",
+      "cn": "形式（form 的复数）"
+    },
+    "g": {
+      "pos": "n.",
+      "ipa": "/dʒiː/",
+      "cn": "字母 g（选项/编号的标记）"
+    },
+    "linking": {
+      "pos": "n.",
+      "ipa": "/ˈlɪŋkɪŋ/",
+      "cn": "连接（link 的动名词）"
+    },
+    "expressions": {
+      "pos": "n.",
+      "ipa": "/ɪkˈspreʃnz/",
+      "cn": "表达、说法（expression 的复数）"
+    },
+    "order": {
+      "pos": "n./v.",
+      "ipa": "/ˈɔːdə/",
+      "cn": "顺序；命令；点（菜）",
+      "note": "in order to do sth 为了做某事。"
+    },
+    "prepositions": {
+      "pos": "n.",
+      "ipa": "/ˌprepəˈzɪʃnz/",
+      "cn": "介词（preposition 的复数）"
+    },
+    "preposition": {
+      "pos": "n.",
+      "ipa": "/ˌprepəˈzɪʃn/",
+      "cn": "介词"
+    },
+    "pronoun": {
+      "pos": "n.",
+      "ipa": "/ˈprəʊnaʊn/",
+      "cn": "代词"
+    },
+    "form": {
+      "pos": "n.",
+      "ipa": "/fɔːm/",
+      "cn": "形式"
+    },
+    "expression": {
+      "pos": "n.",
+      "ipa": "/ɪkˈspreʃn/",
+      "cn": "表达（方式）；说法，用语"
+    },
+    "paragraph": {
+      "pos": "n.",
+      "ipa": "/ˈpærəɡrɑːf/",
+      "cn": "段落"
+    },
+    "needed": {
+      "pos": "v.",
+      "ipa": "/ˈniːdɪd/",
+      "cn": "需要（need 的过去式/过去分词）"
+    },
+    "suitable": {
+      "pos": "adj.",
+      "ipa": "/ˈsuːtəbl/",
+      "cn": "合适的；the most suitable for 对……最合适的"
+    },
+    "snow": {
+      "pos": "n./v.",
+      "ipa": "/snəʊ/",
+      "cn": "雪；下雪"
+    },
+    "biking": {
+      "pos": "n.",
+      "ipa": "/ˈbaɪkɪŋ/",
+      "cn": "骑车（bike 的动名词）"
+    },
+    "snow biking": {
+      "pos": "词组",
+      "ipa": "/ˈsnəʊ ˌbaɪkɪŋ/",
+      "cn": "雪地骑行"
+    },
+    "becoming": {
+      "pos": "v.",
+      "ipa": "/bɪˈkʌmɪŋ/",
+      "cn": "变得（become 的现在分词）"
+    },
+    "popular": {
+      "pos": "adj.",
+      "ipa": "/ˈpɒpjələ/",
+      "cn": "受欢迎的；流行的"
+    },
+    "it's": {
+      "pos": "contr.",
+      "ipa": "/ɪts/",
+      "cn": "= it is 或 it has"
+    },
+    "similar": {
+      "pos": "adj.",
+      "ipa": "/ˈsɪmələ/",
+      "cn": "相似的"
+    },
+    "similar to": {
+      "pos": "词组",
+      "ipa": "/ˈsɪmələ tə/",
+      "cn": "与……相似"
+    },
+    "mountain": {
+      "pos": "n.",
+      "ipa": "/ˈmaʊntən/",
+      "cn": "山"
+    },
+    "mountain biking": {
+      "pos": "词组",
+      "ipa": "/ˈmaʊntən ˌbaɪkɪŋ/",
+      "cn": "山地骑行"
+    },
+    "involves": {
+      "pos": "v.",
+      "ipa": "/ɪnˈvɒlvz/",
+      "cn": "包含（involve 的第三人称单数）"
+    },
+    "riding": {
+      "pos": "v.",
+      "ipa": "/ˈraɪdɪŋ/",
+      "cn": "骑（ride 的现在分词）"
+    },
+    "down": {
+      "pos": "prep./adv.",
+      "ipa": "/daʊn/",
+      "cn": "向下"
+    },
+    "steep": {
+      "pos": "adj.",
+      "ipa": "/stiːp/",
+      "cn": "陡的"
+    },
+    "steep hills": {
+      "pos": "词组",
+      "ipa": "/ˌstiːp ˈhɪlz/",
+      "cn": "陡峭的山坡"
+    },
+    "hills": {
+      "pos": "n.",
+      "ipa": "/hɪlz/",
+      "cn": "山丘（hill 的复数）"
+    },
+    "high": {
+      "pos": "adj.",
+      "ipa": "/haɪ/",
+      "cn": "高的"
+    },
+    "speed": {
+      "pos": "n.",
+      "ipa": "/spiːd/",
+      "cn": "速度"
+    },
+    "high speed": {
+      "pos": "词组",
+      "ipa": "/ˌhaɪ ˈspiːd/",
+      "cn": "高速"
+    },
+    "ordinary": {
+      "pos": "adj.",
+      "ipa": "/ˈɔːdnri/",
+      "cn": "普通的，平常的，平淡无奇的",
+      "note": "= common, usual。反义：extraordinary 非凡的。"
+    },
+    "ordinary ground": {
+      "pos": "词组",
+      "ipa": "/ˌɔːdnri ˈɡraʊnd/",
+      "cn": "普通地面"
+    },
+    "ground": {
+      "pos": "n.",
+      "ipa": "/ɡraʊnd/",
+      "cn": "地面，土地",
+      "note": "on the ground 在地面上；under the ground 在地下。"
+    },
+    "tyres": {
+      "pos": "n.",
+      "ipa": "/ˈtaɪəz/",
+      "cn": "轮胎（tyre 的复数）"
+    },
+    "wider": {
+      "pos": "adj.",
+      "ipa": "/ˈwaɪdə/",
+      "cn": "更宽的（wide 的比较级）"
+    },
+    "those": {
+      "pos": "pron./det.",
+      "ipa": "/ðəʊz/",
+      "cn": "那些（that 的复数）"
+    },
+    "wheels": {
+      "pos": "n.",
+      "ipa": "/wiːlz/",
+      "cn": "轮子（wheel 的复数）"
+    },
+    "slip": {
+      "pos": "v.",
+      "ipa": "/slɪp/",
+      "cn": "打滑"
+    },
+    "icy": {
+      "pos": "adj.",
+      "ipa": "/ˈaɪsi/",
+      "cn": "结冰的，滑的"
+    },
+    "surfaces": {
+      "pos": "n.",
+      "ipa": "/ˈsɜːfɪsɪz/",
+      "cn": "表面（surface 的复数）"
+    },
+    "icy surfaces": {
+      "pos": "词组",
+      "ipa": "/ˌaɪsi ˈsɜːfɪsɪz/",
+      "cn": "结冰的表面"
+    },
+    "questions": {
+      "pos": "n.",
+      "ipa": "/ˈkwestʃənz/",
+      "cn": "题目（question 的复数）"
+    },
+    "may": {
+      "pos": "modal",
+      "ipa": "/meɪ/",
+      "cn": "可能；可以"
+    },
+    "fantastic": {
+      "pos": "adj.",
+      "ipa": "/fænˈtæstɪk/",
+      "cn": "极好的，壮丽的"
+    },
+    "fashion": {
+      "pos": "n.",
+      "ipa": "/ˈfæʃn/",
+      "cn": "时尚"
+    },
+    "fashion show": {
+      "pos": "词组",
+      "ipa": "/ˈfæʃn ʃəʊ/",
+      "cn": "时装秀"
+    },
+    "college": {
+      "pos": "n.",
+      "ipa": "/ˈkɒlɪdʒ/",
+      "cn": "学院；art college 艺术学院"
+    },
+    "week": {
+      "pos": "n.",
+      "ipa": "/wiːk/",
+      "cn": "星期；周"
+    },
+    "last week": {
+      "pos": "词组",
+      "ipa": "/ˌlɑːst ˈwiːk/",
+      "cn": "上周"
+    },
+    "aim": {
+      "pos": "n./v.",
+      "ipa": "/eɪm/",
+      "cn": "目标；瞄准"
+    },
+    "display": {
+      "pos": "v./n.",
+      "ipa": "/dɪˈspleɪ/",
+      "cn": "展示，陈列"
+    },
+    "students": {
+      "pos": "n.",
+      "ipa": "/ˈstjuːdnts/",
+      "cn": "学生（student 的复数）"
+    },
+    "fashion students": {
+      "pos": "词组",
+      "ipa": "/ˈfæʃn ˌstjuːdnts/",
+      "cn": "时装专业学生"
+    },
+    "involved": {
+      "pos": "v.",
+      "ipa": "/ɪnˈvɒlvd/",
+      "cn": "包含，涉及（be involved in 参与；involve 的过去分词）"
+    },
+    "been involved in": {
+      "pos": "词组",
+      "ipa": "/biːn ɪnˈvɒlvd ɪn/",
+      "cn": "一直参与（be involved in 的完成式）"
+    },
+    "parents": {
+      "pos": "n.",
+      "ipa": "/ˈpeərənts/",
+      "cn": "父母（parent 的复数）"
+    },
+    "parents and friends": {
+      "pos": "词组",
+      "ipa": "/ˌpeərənts ənd ˈfrendz/",
+      "cn": "家长和朋友"
+    },
+    "results": {
+      "pos": "n.",
+      "ipa": "/rɪˈzʌlts/",
+      "cn": "结果（result 的复数）"
+    },
+    "impressed": {
+      "pos": "adj.",
+      "ipa": "/ɪmˈprest/",
+      "cn": "印象深刻的；深受感动的",
+      "note": "be impressed by 被打动；be impressed 印象深刻。"
+    },
+    "were impressed by": {
+      "pos": "词组",
+      "ipa": "/wə ɪmˈprest baɪ/",
+      "cn": "被……打动"
+    },
+    "models": {
+      "pos": "n.",
+      "ipa": "/ˈmɒdlz/",
+      "cn": "模型；模特（model 的复数）"
+    },
+    "model": {
+      "pos": "n.",
+      "ipa": "/ˈmɒdl/",
+      "cn": "模特；模型"
+    },
+    "themselves": {
+      "pos": "pron.",
+      "ipa": "/ðəmˈselvz/",
+      "cn": "他们自己"
+    },
+    "wearing": {
+      "pos": "v.",
+      "ipa": "/ˈweərɪŋ/",
+      "cn": "穿（wear 的现在分词）"
+    },
+    "clothes": {
+      "pos": "n.",
+      "ipa": "/kləʊðz/",
+      "cn": "衣服（永远复数）"
+    },
+    "designs": {
+      "pos": "n.",
+      "ipa": "/dɪˈzaɪnz/",
+      "cn": "设计（design 的复数）"
+    },
+    "amazingly": {
+      "pos": "adv.",
+      "ipa": "/əˈmeɪzɪŋli/",
+      "cn": "令人惊叹地"
+    },
+    "creative": {
+      "pos": "adj.",
+      "ipa": "/kriˈeɪtɪv/",
+      "cn": "有创意的"
+    },
+    "such": {
+      "pos": "det.",
+      "ipa": "/sʌtʃ/",
+      "cn": "这样的，如此的",
+      "note": "such as 例如。"
+    },
+    "such as": {
+      "pos": "词组",
+      "ipa": "/ˈsʌtʃ əz/",
+      "cn": "例如"
+    },
+    "dress": {
+      "pos": "n./v.",
+      "ipa": "/dres/",
+      "cn": "连衣裙；穿衣"
+    },
+    "recycled": {
+      "pos": "adj.",
+      "ipa": "/ˌriːˈsaɪkld/",
+      "cn": "回收的"
+    },
+    "materials": {
+      "pos": "n.",
+      "ipa": "/məˈtɪəriəlz/",
+      "cn": "材料（material 的复数）"
+    },
+    "recycled materials": {
+      "pos": "词组",
+      "ipa": "/ˌriːsaɪkld məˈtɪəriəlz/",
+      "cn": "回收材料"
+    },
+    "included": {
+      "pos": "v.",
+      "ipa": "/ɪnˈkluːdɪd/",
+      "cn": "包含在内（include 的过去式/过去分词）"
+    },
+    "colour": {
+      "pos": "n.",
+      "ipa": "/ˈkʌlə/",
+      "cn": "颜色（英式拼写）"
+    },
+    "every colour": {
+      "pos": "词组",
+      "ipa": "/ˌevri ˈkʌlə/",
+      "cn": "每一种颜色"
+    },
+    "possibly": {
+      "pos": "adv.",
+      "ipa": "/ˈpɒsəbli/",
+      "cn": "可能地"
+    },
+    "scenery": {
+      "pos": "n.",
+      "ipa": "/ˈsiːnəri/",
+      "cn": "风景，景色，舞台布景"
+    },
+    "created": {
+      "pos": "v.",
+      "ipa": "/kriˈeɪtɪd/",
+      "cn": "创作、创造（create 的过去分词）"
+    },
+    "art": {
+      "pos": "n.",
+      "ipa": "/ɑːt/",
+      "cn": "艺术；美术"
+    },
+    "department": {
+      "pos": "n.",
+      "ipa": "/dɪˈpɑːtmənt/",
+      "cn": "部门，系"
+    },
+    "spectacular": {
+      "pos": "adj.",
+      "ipa": "/spekˈtækjələ/",
+      "cn": "壮观的，令人惊叹的，惊人的"
+    },
+    "mrs": {
+      "pos": "n.",
+      "ipa": "/ˈmɪsɪz/",
+      "cn": "夫人（已婚女士的称呼）"
+    },
+    "jackson": {
+      "pos": "n.",
+      "ipa": "/ˈdʒæksn/",
+      "cn": "Jackson（姓氏）"
+    },
+    "head": {
+      "pos": "n.",
+      "ipa": "/hed/",
+      "cn": "头；主管（Head of Design 设计主管）"
+    },
+    "design": {
+      "pos": "n./v.",
+      "ipa": "/dɪˈzaɪn/",
+      "cn": "设计（designing clothes 设计服装）"
+    },
+    "head of design": {
+      "pos": "词组",
+      "ipa": "/ˌhed əv dɪˈzaɪn/",
+      "cn": "设计主管"
+    },
+    "absolutely": {
+      "pos": "adv.",
+      "ipa": "/ˈæbsəluːtli/",
+      "cn": "完全地；绝对地",
+      "note": "absolutely everything 所有一切（固定搭配）。"
+    },
+    "doubt": {
+      "pos": "n./v.",
+      "ipa": "/daʊt/",
+      "cn": "疑问，怀疑"
+    },
+    "no doubt": {
+      "pos": "词组",
+      "ipa": "/ˌnəʊ ˈdaʊt/",
+      "cn": "毫无疑问"
+    },
+    "mind": {
+      "pos": "v./n.",
+      "ipa": "/maɪnd/",
+      "cn": "介意（mind doing sth；don't mind 不介意）；头脑；make one's mind up 下定决心"
+    },
+    "extremely": {
+      "pos": "adv.",
+      "ipa": "/ɪkˈstriːmli/",
+      "cn": "极其，极度，非常（very 的加强版）"
+    },
+    "talented": {
+      "pos": "adj.",
+      "ipa": "/ˈtæləntɪd/",
+      "cn": "有天资的，有才能的"
+    },
+    "hear": {
+      "pos": "v.",
+      "ipa": "/hɪə/",
+      "cn": "听见；听说"
+    },
+    "future": {
+      "pos": "n./adj.",
+      "ipa": "/ˈfjuːtʃə/",
+      "cn": "未来；将来的",
+      "note": "in future 今后（= from now on）。"
+    },
+    "in the future": {
+      "pos": "词组",
+      "ipa": "/ɪn ðə ˈfjuːtʃə/",
+      "cn": "将来，以后"
+    },
+    "success": {
+      "pos": "n.",
+      "ipa": "/səkˈses/",
+      "cn": "成功"
+    },
+    "every success": {
+      "pos": "词组",
+      "ipa": "/ˌevri səkˈses/",
+      "cn": "祝一切成功"
+    },
+    "careers": {
+      "pos": "n.",
+      "ipa": "/kəˈrɪəz/",
+      "cn": "职业（career 的复数）"
+    },
+    "take part in": {
+      "pos": "词组",
+      "ipa": "/ˌteɪk ˈpɑːt ɪn/",
+      "cn": "参加（某活动）"
+    },
+    "a long way from": {
+      "pos": "词组",
+      "ipa": "/ə ˌlɒŋ ˈweɪ frəm/",
+      "cn": "离……很远"
+    }
+  },
+  "questions": [
+    {
+      "n": 138,
+      "tag": "①-1",
+      "answer": "A",
+      "prompt": "训练①-1 ——「The fish who I saw was a shark, I think.」应该换成哪个关系词？",
+      "opts": {
+        "A": "which",
+        "B": "who",
+        "C": "where",
+        "D": "when",
+        "E": "whose"
+      },
+      "why": "官方答案 <b>A</b>（which）。fish 是「物」→ which（that 也可以）。官方：1 who → which/that。",
+      "clues": [
+        "which"
+      ],
+      "others": [
+        [
+          "B",
+          "who 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "C",
+          "where 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "D",
+          "when 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "E",
+          "whose 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ]
+      ],
+      "tip": "先找先行词，再定关系词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "The fish who I saw was a shark, I think."
+          ],
+          [
+            "改正",
+            "which"
+          ]
+        ],
+        "gram": [
+          "关系代词/关系副词"
+        ],
+        "tr": "改为 which。"
+      }
+    },
+    {
+      "n": 139,
+      "tag": "①-2",
+      "answer": "C",
+      "prompt": "训练①-2 ——「Buenos Aires, which my cousins live, is a long way from here.」应该换成哪个关系词？",
+      "opts": {
+        "A": "which",
+        "B": "who",
+        "C": "where",
+        "D": "when",
+        "E": "whose"
+      },
+      "why": "官方答案 <b>C</b>（where）。先行词是地点（城市）→ where。官方：2 which → where。",
+      "clues": [
+        "where"
+      ],
+      "others": [
+        [
+          "A",
+          "which 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "B",
+          "who 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "D",
+          "when 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "E",
+          "whose 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ]
+      ],
+      "tip": "先找先行词，再定关系词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "Buenos Aires, which my cousins live, is a long way from here."
+          ],
+          [
+            "改正",
+            "where"
+          ]
+        ],
+        "gram": [
+          "关系代词/关系副词"
+        ],
+        "tr": "改为 where。"
+      }
+    },
+    {
+      "n": 140,
+      "tag": "①-3",
+      "answer": "B",
+      "prompt": "训练①-3 ——「My big sister Layla, that is 17, is going to university next year.」应该换成哪个关系词？",
+      "opts": {
+        "A": "which",
+        "B": "who",
+        "C": "where",
+        "D": "when",
+        "E": "whose"
+      },
+      "why": "官方答案 <b>B</b>（who）。非限制性从句不能用 that，指人用 who。官方：3 that → who。",
+      "clues": [
+        "who"
+      ],
+      "others": [
+        [
+          "A",
+          "which 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "C",
+          "where 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "D",
+          "when 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "E",
+          "whose 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ]
+      ],
+      "tip": "先找先行词，再定关系词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "My big sister Layla, that is 17, is going to university next year."
+          ],
+          [
+            "改正",
+            "who"
+          ]
+        ],
+        "gram": [
+          "关系代词/关系副词"
+        ],
+        "tr": "改为 who。"
+      }
+    },
+    {
+      "n": 141,
+      "tag": "①-4",
+      "answer": "E",
+      "prompt": "训练①-4 ——「The neighbours, which house is much bigger than ours, have two cars.」应该换成哪个关系词？",
+      "opts": {
+        "A": "which",
+        "B": "who",
+        "C": "where",
+        "D": "when",
+        "E": "whose"
+      },
+      "why": "官方答案 <b>E</b>（whose）。「邻居的房子」表所有 → whose。官方：4 which → whose。",
+      "clues": [
+        "whose"
+      ],
+      "others": [
+        [
+          "A",
+          "which 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "B",
+          "who 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "C",
+          "where 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "D",
+          "when 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ]
+      ],
+      "tip": "先找先行词，再定关系词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "The neighbours, which house is much bigger than ours, have two cars."
+          ],
+          [
+            "改正",
+            "whose"
+          ]
+        ],
+        "gram": [
+          "关系代词/关系副词"
+        ],
+        "tr": "改为 whose。"
+      }
+    },
+    {
+      "n": 142,
+      "tag": "①-5",
+      "answer": "B",
+      "prompt": "训练①-5 ——「That's the boy which I told you about.」应该换成哪个关系词？",
+      "opts": {
+        "A": "which",
+        "B": "who",
+        "C": "where",
+        "D": "when",
+        "E": "whose"
+      },
+      "why": "官方答案 <b>B</b>（who）。boy 是「人」→ who（that 也可以）。官方：5 which → who/that。",
+      "clues": [
+        "who"
+      ],
+      "others": [
+        [
+          "A",
+          "which 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "C",
+          "where 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "D",
+          "when 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "E",
+          "whose 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ]
+      ],
+      "tip": "先找先行词，再定关系词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "That's the boy which I told you about."
+          ],
+          [
+            "改正",
+            "who"
+          ]
+        ],
+        "gram": [
+          "关系代词/关系副词"
+        ],
+        "tr": "改为 who。"
+      }
+    },
+    {
+      "n": 143,
+      "tag": "①-6",
+      "answer": "D",
+      "prompt": "训练①-6 ——「It was in February, where the weather was cold, that I bought this coat.」应该换成哪个关系词？",
+      "opts": {
+        "A": "which",
+        "B": "who",
+        "C": "where",
+        "D": "when",
+        "E": "whose"
+      },
+      "why": "官方答案 <b>D</b>（when）。先行词是时间（February）→ when。官方：6 where → when。",
+      "clues": [
+        "when"
+      ],
+      "others": [
+        [
+          "A",
+          "which 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "B",
+          "who 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "C",
+          "where 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "E",
+          "whose 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ]
+      ],
+      "tip": "先找先行词，再定关系词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "It was in February, where the weather was cold, that I bought this coat."
+          ],
+          [
+            "改正",
+            "when"
+          ]
+        ],
+        "gram": [
+          "关系代词/关系副词"
+        ],
+        "tr": "改为 when。"
+      }
+    },
+    {
+      "n": 144,
+      "tag": "①-7",
+      "answer": "E",
+      "prompt": "训练①-7 ——「A good cook is someone who food always tastes good!」应该换成哪个关系词？",
+      "opts": {
+        "A": "which",
+        "B": "who",
+        "C": "where",
+        "D": "when",
+        "E": "whose"
+      },
+      "why": "官方答案 <b>E</b>（whose）。「某人的饭菜」表所有 → whose。官方：7 who → whose。",
+      "clues": [
+        "whose"
+      ],
+      "others": [
+        [
+          "A",
+          "which 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "B",
+          "who 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "C",
+          "where 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "D",
+          "when 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ]
+      ],
+      "tip": "先找先行词，再定关系词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "A good cook is someone who food always tastes good!"
+          ],
+          [
+            "改正",
+            "whose"
+          ]
+        ],
+        "gram": [
+          "关系代词/关系副词"
+        ],
+        "tr": "改为 whose。"
+      }
+    },
+    {
+      "n": 145,
+      "tag": "①-8",
+      "answer": "C",
+      "prompt": "训练①-8 ——「There's the house that I used to live.」应该换成哪个关系词？",
+      "opts": {
+        "A": "which",
+        "B": "who",
+        "C": "where",
+        "D": "when",
+        "E": "whose"
+      },
+      "why": "官方答案 <b>C</b>（where）。live 后面缺地点 → where（或 that … live in）。官方：8 that → where。",
+      "clues": [
+        "where"
+      ],
+      "others": [
+        [
+          "A",
+          "which 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "B",
+          "who 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "D",
+          "when 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ],
+        [
+          "E",
+          "whose 用在这里对不上（看先行词是「人/物/地点/时间/所有」）。"
+        ]
+      ],
+      "tip": "先找先行词，再定关系词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "There's the house that I used to live."
+          ],
+          [
+            "改正",
+            "where"
+          ]
+        ],
+        "gram": [
+          "关系代词/关系副词"
+        ],
+        "tr": "改为 where。"
+      }
+    },
+    {
+      "n": 146,
+      "tag": "②-1",
+      "gap": "1",
+      "answer": "who",
+      "prompt": "训练②-1 —— 填一个词补全。",
+      "why": "空后是谓语动词、先行词是「人」→ who（作从句主语）。官方：1 who。",
+      "clues": [
+        "who"
+      ],
+      "others": [
+        [
+          "that",
+          "that 也可以（指人作主语），但官方给的答案词表里是 who。"
+        ]
+      ],
+      "tip": "先判断词性：代词？连接词？介词？",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "The girl {146} lives in that house goes to my school."
+          ],
+          [
+            "答案",
+            "who"
+          ]
+        ],
+        "gram": [
+          "开放填空"
+        ],
+        "tr": "填 who。"
+      }
+    },
+    {
+      "n": 147,
+      "tag": "②-2",
+      "gap": "2",
+      "answer": "until",
+      "prompt": "训练②-2 —— 填一个词补全。",
+      "why": "「直到 18 岁」→ until。官方：2 until。",
+      "clues": [
+        "until"
+      ],
+      "others": [
+        [
+          "unless",
+          "unless 是「除非」（can't drive unless you're 18 = 不满 18 不能开）—— 意思不同，官方答案是 until。"
+        ]
+      ],
+      "tip": "先判断词性：代词？连接词？介词？",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "In some countries you can't drive a car {147} you're 18."
+          ],
+          [
+            "答案",
+            "until"
+          ]
+        ],
+        "gram": [
+          "开放填空"
+        ],
+        "tr": "填 until。"
+      }
+    },
+    {
+      "n": 148,
+      "tag": "②-3",
+      "gap": "3",
+      "answer": "have",
+      "prompt": "训练②-3 —— 填一个词补全。",
+      "why": "「有时间」→ have。官方：3 have。",
+      "clues": [
+        "have"
+      ],
+      "others": [
+        [
+          "has",
+          "主语是 we，不能配 has。"
+        ]
+      ],
+      "tip": "先判断词性：代词？连接词？介词？",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "We'll go to the shopping mall tomorrow if we {148} enough time."
+          ],
+          [
+            "答案",
+            "have"
+          ]
+        ],
+        "gram": [
+          "开放填空"
+        ],
+        "tr": "填 have。"
+      }
+    },
+    {
+      "n": 149,
+      "tag": "②-4",
+      "gap": "4",
+      "answer": "case",
+      "prompt": "训练②-4 —— 填一个词补全。",
+      "why": "「以防」→ in case。官方：4 case。",
+      "clues": [
+        "case"
+      ],
+      "others": [
+        [
+          "if",
+          "in if 不成表达 —— in case 才是「以防」。"
+        ]
+      ],
+      "tip": "先判断词性：代词？连接词？介词？",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "Take some money with you in {149} you want to buy a drink."
+          ],
+          [
+            "答案",
+            "case"
+          ]
+        ],
+        "gram": [
+          "开放填空"
+        ],
+        "tr": "填 case。"
+      }
+    },
+    {
+      "n": 150,
+      "tag": "②-5",
+      "gap": "5",
+      "answer": "in",
+      "prompt": "训练②-5 —— 填一个词补全。",
+      "why": "「参加」→ take part in。官方：5 in。",
+      "clues": [
+        "in"
+      ],
+      "others": [
+        [
+          "of",
+          "take part of 不成表达。"
+        ]
+      ],
+      "tip": "先判断词性：代词？连接词？介词？",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "I always like to take part {150} as many different sports as I can."
+          ],
+          [
+            "答案",
+            "in"
+          ]
+        ],
+        "gram": [
+          "开放填空"
+        ],
+        "tr": "填 in。"
+      }
+    },
+    {
+      "n": 151,
+      "tag": "②-6",
+      "gap": "6",
+      "answer": "so",
+      "prompt": "训练②-6 —— 填一个词补全。",
+      "why": "「以便、这样」→ so（so that）。官方：6 so。",
+      "clues": [
+        "so"
+      ],
+      "others": [
+        [
+          "that",
+          "只填 that 不成表达（so that 是两个词，这里空只有一个词位）。"
+        ]
+      ],
+      "tip": "先判断词性：代词？连接词？介词？",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "Let's leave now {151} we don't have to run to catch the bus."
+          ],
+          [
+            "答案",
+            "so"
+          ]
+        ],
+        "gram": [
+          "开放填空"
+        ],
+        "tr": "填 so。"
+      }
+    },
+    {
+      "n": 152,
+      "tag": "③-who",
+      "answer": "D",
+      "prompt": "训练③-who ——「who」属于哪一类？",
+      "opts": {
+        "A": "verb form",
+        "B": "linking word / part of linking expression",
+        "C": "preposition",
+        "D": "relative pronoun"
+      },
+      "why": "官方分类：<b>who → relative pronoun（关系代词）</b>。官方：1 relative pronoun。",
+      "clues": [
+        "relative pronoun（关系代词）"
+      ],
+      "others": [
+        [
+          "A",
+          "「who」不是verb form。"
+        ],
+        [
+          "B",
+          "「who」不是linking word / part of linking expression。"
+        ],
+        [
+          "C",
+          "「who」不是preposition。"
+        ]
+      ],
+      "tip": "按「词性」归类：动词形式 / 连接词 / 介词 / 关系代词。",
+      "ana": {
+        "parts": [
+          [
+            "答案词",
+            "who"
+          ],
+          [
+            "类别",
+            "relative pronoun（关系代词）"
+          ]
+        ],
+        "gram": [
+          "词性分类"
+        ],
+        "tr": "who —— relative pronoun（关系代词）。"
+      }
+    },
+    {
+      "n": 153,
+      "tag": "③-until",
+      "answer": "C",
+      "prompt": "训练③-until ——「until」属于哪一类？",
+      "opts": {
+        "A": "verb form",
+        "B": "linking word / part of linking expression",
+        "C": "preposition",
+        "D": "relative pronoun"
+      },
+      "why": "官方分类：<b>until → preposition（介词/连词）</b>。官方：2 until (preposition, conjunction)。",
+      "clues": [
+        "preposition（介词/连词）"
+      ],
+      "others": [
+        [
+          "A",
+          "「until」不是verb form。"
+        ],
+        [
+          "B",
+          "「until」不是linking word / part of linking expression。"
+        ],
+        [
+          "D",
+          "「until」不是relative pronoun。"
+        ]
+      ],
+      "tip": "按「词性」归类：动词形式 / 连接词 / 介词 / 关系代词。",
+      "ana": {
+        "parts": [
+          [
+            "答案词",
+            "until"
+          ],
+          [
+            "类别",
+            "preposition（介词/连词）"
+          ]
+        ],
+        "gram": [
+          "词性分类"
+        ],
+        "tr": "until —— preposition（介词/连词）。"
+      }
+    },
+    {
+      "n": 154,
+      "tag": "③-have",
+      "answer": "A",
+      "prompt": "训练③-have ——「have」属于哪一类？",
+      "opts": {
+        "A": "verb form",
+        "B": "linking word / part of linking expression",
+        "C": "preposition",
+        "D": "relative pronoun"
+      },
+      "why": "官方分类：<b>have → verb form（动词形式）</b>。官方：3 verb form。",
+      "clues": [
+        "verb form（动词形式）"
+      ],
+      "others": [
+        [
+          "B",
+          "「have」不是linking word / part of linking expression。"
+        ],
+        [
+          "C",
+          "「have」不是preposition。"
+        ],
+        [
+          "D",
+          "「have」不是relative pronoun。"
+        ]
+      ],
+      "tip": "按「词性」归类：动词形式 / 连接词 / 介词 / 关系代词。",
+      "ana": {
+        "parts": [
+          [
+            "答案词",
+            "have"
+          ],
+          [
+            "类别",
+            "verb form（动词形式）"
+          ]
+        ],
+        "gram": [
+          "词性分类"
+        ],
+        "tr": "have —— verb form（动词形式）。"
+      }
+    },
+    {
+      "n": 155,
+      "tag": "③-case",
+      "answer": "B",
+      "prompt": "训练③-case ——「case」属于哪一类？",
+      "opts": {
+        "A": "verb form",
+        "B": "linking word / part of linking expression",
+        "C": "preposition",
+        "D": "relative pronoun"
+      },
+      "why": "官方分类：<b>case → part of linking expression (reason)（连接表达的一部分：in case）</b>。官方：4 part of linking expression (reason)。",
+      "clues": [
+        "part of linking expression (reason)（连接表达的一部分：in case）"
+      ],
+      "others": [
+        [
+          "A",
+          "「case」不是verb form。"
+        ],
+        [
+          "C",
+          "「case」不是preposition。"
+        ],
+        [
+          "D",
+          "「case」不是relative pronoun。"
+        ]
+      ],
+      "tip": "按「词性」归类：动词形式 / 连接词 / 介词 / 关系代词。",
+      "ana": {
+        "parts": [
+          [
+            "答案词",
+            "case"
+          ],
+          [
+            "类别",
+            "part of linking expression (reason)（连接表达的一部分：in case）"
+          ]
+        ],
+        "gram": [
+          "词性分类"
+        ],
+        "tr": "case —— part of linking expression (reason)（连接表达的一部分：in case）。"
+      }
+    },
+    {
+      "n": 156,
+      "tag": "③-in",
+      "answer": "C",
+      "prompt": "训练③-in ——「in」属于哪一类？",
+      "opts": {
+        "A": "verb form",
+        "B": "linking word / part of linking expression",
+        "C": "preposition",
+        "D": "relative pronoun"
+      },
+      "why": "官方分类：<b>in → preposition（介词）</b>。官方：5 in (preposition)。",
+      "clues": [
+        "preposition（介词）"
+      ],
+      "others": [
+        [
+          "A",
+          "「in」不是verb form。"
+        ],
+        [
+          "B",
+          "「in」不是linking word / part of linking expression。"
+        ],
+        [
+          "D",
+          "「in」不是relative pronoun。"
+        ]
+      ],
+      "tip": "按「词性」归类：动词形式 / 连接词 / 介词 / 关系代词。",
+      "ana": {
+        "parts": [
+          [
+            "答案词",
+            "in"
+          ],
+          [
+            "类别",
+            "preposition（介词）"
+          ]
+        ],
+        "gram": [
+          "词性分类"
+        ],
+        "tr": "in —— preposition（介词）。"
+      }
+    },
+    {
+      "n": 157,
+      "tag": "③-so",
+      "answer": "B",
+      "prompt": "训练③-so ——「so」属于哪一类？",
+      "opts": {
+        "A": "verb form",
+        "B": "linking word / part of linking expression",
+        "C": "preposition",
+        "D": "relative pronoun"
+      },
+      "why": "官方分类：<b>so → linking word (purpose)（连接词：so that 表目的）</b>。官方：6 linking word (purpose)。",
+      "clues": [
+        "linking word (purpose)（连接词：so that 表目的）"
+      ],
+      "others": [
+        [
+          "A",
+          "「so」不是verb form。"
+        ],
+        [
+          "C",
+          "「so」不是preposition。"
+        ],
+        [
+          "D",
+          "「so」不是relative pronoun。"
+        ]
+      ],
+      "tip": "按「词性」归类：动词形式 / 连接词 / 介词 / 关系代词。",
+      "ana": {
+        "parts": [
+          [
+            "答案词",
+            "so"
+          ],
+          [
+            "类别",
+            "linking word (purpose)（连接词：so that 表目的）"
+          ]
+        ],
+        "gram": [
+          "词性分类"
+        ],
+        "tr": "so —— linking word (purpose)（连接词：so that 表目的）。"
+      }
+    },
+    {
+      "n": 158,
+      "tag": "④-1",
+      "gap": "1",
+      "answer": "which",
+      "prompt": "训练④-1 —— 填一个词补全。",
+      "why": "指物、作从句主语 → which。官方：1 which。",
+      "clues": [
+        "which"
+      ],
+      "others": [
+        [
+          "that",
+          "that 也可以（指物），官方答案词表是 which。"
+        ],
+        [
+          "who",
+          "指物的定语从句不用 who。"
+        ]
+      ],
+      "tip": "先定词性（关系词？介词？连接词？），再定词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "Snow biking is a new winter sport (1) {158} is now becoming very popular."
+          ],
+          [
+            "答案",
+            "which"
+          ]
+        ],
+        "gram": [
+          "开放填空"
+        ],
+        "tr": "填 which。"
+      }
+    },
+    {
+      "n": 159,
+      "tag": "④-2",
+      "gap": "2",
+      "answer": "to",
+      "prompt": "训练④-2 —— 填一个词补全。",
+      "why": "similar to 与……相似。官方：2 to。",
+      "clues": [
+        "to"
+      ],
+      "others": [
+        [
+          "with",
+          "similar with 不成搭配 —— 是 similar to。"
+        ]
+      ],
+      "tip": "先定词性（关系词？介词？连接词？），再定词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "It's similar (2) {159} mountain biking in that it involves riding down steep hills …"
+          ],
+          [
+            "答案",
+            "to"
+          ]
+        ],
+        "gram": [
+          "开放填空"
+        ],
+        "tr": "填 to。"
+      }
+    },
+    {
+      "n": 160,
+      "tag": "④-3",
+      "gap": "3",
+      "answer": "instead",
+      "prompt": "训练④-3 —— 填一个词补全。",
+      "why": "「而不是」→ instead of。官方：3 instead。",
+      "clues": [
+        "instead"
+      ],
+      "others": [
+        [
+          "because",
+          "because of 表原因，这里是对比（而不是）。"
+        ]
+      ],
+      "tip": "先定词性（关系词？介词？连接词？），再定词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "… but on snow or ice (3) {160} of on ordinary ground."
+          ],
+          [
+            "答案",
+            "instead"
+          ]
+        ],
+        "gram": [
+          "开放填空"
+        ],
+        "tr": "填 instead。"
+      }
+    },
+    {
+      "n": 161,
+      "tag": "④-4",
+      "gap": "4",
+      "answer": "therefore",
+      "prompt": "训练④-4 —— 填一个词补全。",
+      "why": "「因此」→ therefore。官方：4 therefore。",
+      "clues": [
+        "therefore"
+      ],
+      "others": [
+        [
+          "however",
+          "however 表转折 —— 这里前后是因果（因此）。"
+        ]
+      ],
+      "tip": "先定词性（关系词？介词？连接词？），再定词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "Snow biking tyres, (4) {161}, have to be wider than those on a mountain bike …"
+          ],
+          [
+            "答案",
+            "therefore"
+          ]
+        ],
+        "gram": [
+          "开放填空"
+        ],
+        "tr": "填 therefore。"
+      }
+    },
+    {
+      "n": 162,
+      "tag": "④-5",
+      "gap": "5",
+      "answer": "so",
+      "prompt": "训练④-5 —— 填一个词补全。",
+      "why": "「以便」→ so（so that 表目的）。官方：5 so。",
+      "clues": [
+        "so"
+      ],
+      "others": [
+        [
+          "such",
+          "such that 不成这里的表达（so that 才表目的）。"
+        ]
+      ],
+      "tip": "先定词性（关系词？介词？连接词？），再定词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "… (5) {162} that the wheels don't slip on icy surfaces."
+          ],
+          [
+            "答案",
+            "so"
+          ]
+        ],
+        "gram": [
+          "开放填空"
+        ],
+        "tr": "填 so。"
+      }
+    },
+    {
+      "n": 27,
+      "tag": "27",
+      "gap": "27",
+      "answer": "have",
+      "prompt": "第 27 题 —— 这个空填什么词？（在输入框里写一个词）",
+      "why": "the fashion students {27} recently been involved in（缺助动词）→ have/had。官方：27 have（或 had）。",
+      "clues": [
+        "have"
+      ],
+      "others": [
+        [
+          "has",
+          "主语是复数 students，不能配 has。"
+        ],
+        [
+          "is",
+          "后面是 recently been（过去分词），不能用 is。"
+        ]
+      ],
+      "tip": "填完把整句读一遍 —— 通顺、语法对才算对。",
+      "ana": {
+        "parts": [
+          [
+            "答案",
+            "have"
+          ],
+          [
+            "判断",
+            "词性 + 搭配"
+          ]
+        ],
+        "gram": [
+          "开放填空"
+        ],
+        "tr": "填 have。"
+      }
+    },
+    {
+      "n": 28,
+      "tag": "28",
+      "gap": "28",
+      "answer": "they",
+      "prompt": "第 28 题 —— 这个空填什么词？（在输入框里写一个词）",
+      "why": "缺从句主语、指「家长和朋友」→ they。官方：28 they。",
+      "clues": [
+        "they"
+      ],
+      "others": [
+        [
+          "it",
+          "it 指物/事 —— 这里指人（家长朋友）。"
+        ],
+        [
+          "we",
+          "作者是「我们」看的人，被打动的不是我们。"
+        ]
+      ],
+      "tip": "填完把整句读一遍 —— 通顺、语法对才算对。",
+      "ana": {
+        "parts": [
+          [
+            "答案",
+            "they"
+          ],
+          [
+            "判断",
+            "词性 + 搭配"
+          ]
+        ],
+        "gram": [
+          "开放填空"
+        ],
+        "tr": "填 they。"
+      }
+    },
+    {
+      "n": 29,
+      "tag": "29",
+      "gap": "29",
+      "answer": "took",
+      "prompt": "第 29 题 —— 这个空填什么词？（在输入框里写一个词）",
+      "why": "「参加」→ take part in，过去时 → took。官方：29 took。",
+      "clues": [
+        "took"
+      ],
+      "others": [
+        [
+          "take",
+          "全文是过去时（were），要用 took。"
+        ],
+        [
+          "taking",
+          "谓语位置不能用 -ing 形式。"
+        ]
+      ],
+      "tip": "填完把整句读一遍 —— 通顺、语法对才算对。",
+      "ana": {
+        "parts": [
+          [
+            "答案",
+            "took"
+          ],
+          [
+            "判断",
+            "词性 + 搭配"
+          ]
+        ],
+        "gram": [
+          "开放填空"
+        ],
+        "tr": "填 took。"
+      }
+    },
+    {
+      "n": 30,
+      "tag": "30",
+      "gap": "30",
+      "answer": "There",
+      "prompt": "第 30 题 —— 这个空填什么词？（在输入框里写一个词）",
+      "why": "存在句「有……」→ There。官方：30 There。",
+      "clues": [
+        "There"
+      ],
+      "others": [
+        [
+          "They",
+          "They were … 也能成句，但这里指「有一些衣服」，用 There were。"
+        ],
+        [
+          "It",
+          "It were 不成（单复数也不对）。"
+        ]
+      ],
+      "tip": "填完把整句读一遍 —— 通顺、语法对才算对。",
+      "ana": {
+        "parts": [
+          [
+            "答案",
+            "There"
+          ],
+          [
+            "判断",
+            "词性 + 搭配"
+          ]
+        ],
+        "gram": [
+          "开放填空"
+        ],
+        "tr": "填 There。"
+      }
+    },
+    {
+      "n": 31,
+      "tag": "31",
+      "gap": "31",
+      "answer": "by",
+      "prompt": "第 31 题 —— 这个空填什么词？（在输入框里写一个词）",
+      "why": "被动「由……创作」→ by。官方：31 by。",
+      "clues": [
+        "by"
+      ],
+      "others": [
+        [
+          "from",
+          "created from 指材料来源 —— 这里指创作者。"
+        ],
+        [
+          "with",
+          "created with 指工具 —— 这里指人。"
+        ]
+      ],
+      "tip": "填完把整句读一遍 —— 通顺、语法对才算对。",
+      "ana": {
+        "parts": [
+          [
+            "答案",
+            "by"
+          ],
+          [
+            "判断",
+            "词性 + 搭配"
+          ]
+        ],
+        "gram": [
+          "开放填空"
+        ],
+        "tr": "填 by。"
+      }
+    },
+    {
+      "n": 32,
+      "tag": "32",
+      "gap": "32",
+      "answer": "no",
+      "prompt": "第 32 题 —— 这个空填什么词？（在输入框里写一个词）",
+      "why": "「毫无疑问」→ there's no doubt。官方：32 no。",
+      "clues": [
+        "no"
+      ],
+      "others": [
+        [
+          "not",
+          "not doubt 不成表达（no doubt 才行）。"
+        ],
+        [
+          "any",
+          "absolutely any doubt 意思相反（任何疑问）。"
+        ]
+      ],
+      "tip": "填完把整句读一遍 —— 通顺、语法对才算对。",
+      "ana": {
+        "parts": [
+          [
+            "答案",
+            "no"
+          ],
+          [
+            "判断",
+            "词性 + 搭配"
+          ]
+        ],
+        "gram": [
+          "开放填空"
+        ],
+        "tr": "填 no。"
+      }
+    }
+  ],
+  "summaryTip": "Part 6 的解法：先判断每个空缺的「词性」（冠词？代词？介词？关系词？动词形式？），再从搭配和句意里定词 —— 最后把全文读一遍。"
+}

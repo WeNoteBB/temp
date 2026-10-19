@@ -1530,7 +1530,7 @@
     "frightened": {
       "pos": "adj.",
       "ipa": "/ˈfraɪtnd/",
-      "cn": "害怕的",
+      "cn": "害怕的（形容人）；frightening 令人害怕的",
       "note": "be frightened of sth 害怕某物。"
     },
     "fond": {
@@ -1554,7 +1554,7 @@
     "ashamed": {
       "pos": "adj.",
       "ipa": "/əˈʃeɪmd/",
-      "cn": "羞愧的",
+      "cn": "羞愧的，感到羞耻的",
       "note": "be ashamed of sth 为…感到羞愧。"
     },
     "satisfied": {
@@ -1625,12 +1625,12 @@
       "pos": "adj.",
       "ipa": "/kiːn/",
       "cn": "热衷的；渴望的",
-      "note": "be keen on sth/doing sth 热衷于…。"
+      "note": "be keen on sth/doing sth 热衷于……。"
     },
     "love": {
-      "pos": "v.",
+      "pos": "v./n.",
       "ipa": "/lʌv/",
-      "cn": "爱；喜欢",
+      "cn": "爱；喜爱",
       "note": "love doing sth 喜欢做某事。"
     },
     "born": {
@@ -1749,9 +1749,9 @@
       "cn": "锦标赛"
     },
     "over": {
-      "pos": "prep.",
+      "pos": "prep./adv.",
       "ipa": "/ˈəʊvə/",
-      "cn": "超过；在…上方"
+      "cn": "超过；在……上方"
     },
     "artist": {
       "pos": "n.",
@@ -1766,7 +1766,7 @@
     "spectacular": {
       "pos": "adj.",
       "ipa": "/spekˈtækjələ/",
-      "cn": "壮观的；令人惊叹的"
+      "cn": "壮观的，令人惊叹的，惊人的"
     },
     "visitor": {
       "pos": "n.",
@@ -1781,12 +1781,14 @@
     "through": {
       "pos": "prep.",
       "ipa": "/θruː/",
-      "cn": "穿过；透过"
+      "cn": "穿过；透过；通过",
+      "note": "through research 通过研究。"
     },
     "individual": {
       "pos": "adj.",
       "ipa": "/ˌɪndɪˈvɪdʒuəl/",
-      "cn": "单个的；个别的"
+      "cn": "单独的；个别的；一对一的",
+      "note": "individual classes 一对一课程。"
     },
     "special": {
       "pos": "adj.",
@@ -1796,10 +1798,10 @@
     "everything": {
       "pos": "pron.",
       "ipa": "/ˈevriθɪŋ/",
-      "cn": "所有事物；一切"
+      "cn": "一切；所有事物"
     },
     "favourite": {
-      "pos": "adj.",
+      "pos": "adj./n.",
       "ipa": "/ˈfeɪvərɪt/",
       "cn": "最喜欢的",
       "note": "英式拼写 favourite（美式 favorite）。"
@@ -1818,7 +1820,7 @@
     "depressed": {
       "pos": "adj.",
       "ipa": "/dɪˈprest/",
-      "cn": "沮丧的；抑郁的"
+      "cn": "沮丧的，抑郁的；depressing 令人沮丧的"
     },
     "stressed": {
       "pos": "adj.",
@@ -1853,12 +1855,12 @@
       "pos": "v.",
       "ipa": "/pʊt/",
       "cn": "放；放置",
-      "note": "put off doing sth 拖延。"
+      "note": "put off doing sth 拖延；put … into 放进……里；put on 穿上、系上。"
     },
     "delay": {
-      "pos": "v.",
+      "pos": "v./n.",
       "ipa": "/dɪˈleɪ/",
-      "cn": "推迟；拖延",
+      "cn": "推迟；延误",
       "note": "delay doing sth 推迟做某事（不接 off）。"
     },
     "delighted": {
@@ -1887,7 +1889,7 @@
     "develop": {
       "pos": "v.",
       "ipa": "/dɪˈveləp/",
-      "cn": "发展；开发"
+      "cn": "发展；开发；加工、冲洗（照片）"
     },
     "rise": {
       "pos": "v.",
@@ -1931,7 +1933,7 @@
     "heavy": {
       "pos": "adj.",
       "ipa": "/ˈhevi/",
-      "cn": "重的"
+      "cn": "重的（heavy snow 大雪）"
     },
     "large": {
       "pos": "adj.",
@@ -1946,7 +1948,7 @@
     "thick": {
       "pos": "adj.",
       "ipa": "/θɪk/",
-      "cn": "厚的",
+      "cn": "厚的，浓的",
       "note": "one metre thick 一米厚。"
     },
     "occasion": {
@@ -1956,9 +1958,9 @@
       "note": "a special occasion 特殊场合。"
     },
     "benefit": {
-      "pos": "n.",
+      "pos": "n./v.",
       "ipa": "/ˈbenɪfɪt/",
-      "cn": "好处；利益",
+      "cn": "好处，益处",
       "note": "the benefit of sth …的好处。"
     },
     "ability": {
@@ -2000,7 +2002,7 @@
     "at the end of": {
       "pos": "词组",
       "ipa": "/ət ði end əv/",
-      "cn": "在…的末尾；在…结束时"
+      "cn": "在……的末尾；在……结束时"
     },
     "a great place to visit": {
       "pos": "词组",

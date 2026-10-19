@@ -45,6 +45,14 @@ const ENGINE_SIG = assets.map(a => a.name + ":" + a.hash).join("|") + "|template
 const coreGlossary = readJSON(P("data", "glossary.core.json"));
 const manifest = readJSON(P("data", "manifest.json"));
 
+/* 顶栏那个「字号缩放」条：所有固定页面都用这一份（文章页的模板里另有一份同样的）
+   —— 样式在 .zoom，逻辑在 store.js 的 mountZoom()。
+   ⚠ 必须定义在 PAGES 之前：PAGES 的 render 在模块顶层就会跑（TDZ 坑）。 */
+const ZOOM_HTML = `<label class="zoom" title="字号缩放：只放大页面内容，顶栏不跟着动">
+      <span id="zoomLabel">1x</span>
+      <input type="range" id="zoomRange" min="1" max="5" step="0.5" value="1">
+    </label>`;
+
 /* ---------- 页面注册表 ----------
    dist/ 顶层所有 .html 都归这里管：构建时逐个重写，孤儿清理时整批豁免。
    登录/注册没有独立页面了 —— 首页左上角圆圈点开弹框（engine/home.js）。 */
@@ -52,7 +60,9 @@ const PAGES = [
   { out: "index.html", render: () => renderIndex(manifest, present) },
   { out: "mistakes.html", render: () => renderMistakes(manifest, present) },
   { out: "words.html", render: () => renderWords(manifest, present) },
-  { out: "synonyms.html", render: () => renderSynonyms(manifest) }
+  { out: "synonyms.html", render: () => renderSynonyms(manifest) },
+  { out: "collocations.html", render: () => renderCollocations(manifest) },
+  { out: "phrases.html", render: () => renderPhrases(manifest) }
 ];
 const PAGE_OUTS = new Set(PAGES.map(p => p.out));
 
@@ -309,6 +319,7 @@ ${THEME_HEAD}
       <p>${escHTML(man.site.tagline || "")}</p>
     </div>
     <button class="tool" id="tglTheme" type="button" title="主题：跟随系统">◐ 跟随</button>
+    ${ZOOM_HTML}
   </header>
 
   <div class="home-ask" id="homeAsk" hidden>
@@ -322,6 +333,7 @@ ${THEME_HEAD}
       <a class="tile" data-go="words" href="words.html"><span class="tile-ico">📖</span><span class="tile-lab">我的词书</span></a>
       <a class="tile" data-go="read" id="tileRead" href="#"><span class="tile-ico">📕</span><span class="tile-lab">PET 阅读理解</span></a>
       <a class="tile" data-go="syn" href="synonyms.html"><span class="tile-ico">🔀</span><span class="tile-lab">PET 同义替换</span></a>
+      <a class="tile" data-go="coll" href="phrases.html"><span class="tile-ico">🧩</span><span class="tile-lab">PET 词组库</span></a>
       <a class="tile soon" data-go="speak" href="#"><span class="tile-ico">🗣</span><span class="tile-lab">PET 口语</span></a>
       <a class="tile soon" data-go="listen" href="#"><span class="tile-ico">🎧</span><span class="tile-lab">PET 听力</span></a>
       <a class="tile soon" data-go="write" href="#"><span class="tile-ico">✍</span><span class="tile-lab">PET 写作</span></a>
@@ -411,6 +423,7 @@ ${THEME_HEAD}
     <h1 class="page-title">${escHTML(opts.title)}</h1>
     <span class="who" id="who" hidden></span>
     <button class="tool" id="tglTheme" type="button" title="主题：跟随系统">◐ 跟随</button>
+    ${ZOOM_HTML}
   </header>
   <p class="page-sub">${escHTML(opts.sub)}</p>
   <div class="listbox" id="listBox"><div class="list-empty">加载中…</div></div>
@@ -463,6 +476,7 @@ ${THEME_HEAD}
     <h1 class="page-title">PET 同义替换</h1>
     <span class="who" id="who" hidden></span>
     <button class="tool" id="tglTheme" type="button" title="主题：跟随系统">◐ 跟随</button>
+    ${ZOOM_HTML}
   </header>
   <p class="page-sub">${(D.groups || []).length} 组「原文 ⇄ 同义替换」：点英文单词听读音、☆ 收藏进词书；切到「连线题」按书上的玩法练。</p>
   <p class="syn-credit" id="synCredit"></p>
@@ -483,6 +497,250 @@ ${THEME_HEAD}
 </div>
 <script>window.PET_SYN = ${inlineJSON(D)};</script>
 <script src="engine/syn.js?v=${assetV("syn.js")}"></script>
+</body>
+</html>`;
+}
+
+/* ============================================================
+   固定搭配页（collocations.html · 内部资料）
+   内容 data/phrases.json 整份内联（同义替换页一个路子：纯静态、登录门禁后面）。
+   一组一屏：短语卡 + 同组填空练习，10 个一组（和书上一样）。
+   文件不在时构建给出空数据页（不报错）—— 换机器别让整站构建挂掉。
+   ============================================================ */
+function renderCollocations(man) {
+  const src = P("data", "phrases.json");
+  let D;
+  try { D = readJSON(src); }
+  catch (e) {
+    console.error("! 读不到 data/phrases.json（固定搭配页会是空页）：" + e.message);
+    D = { title: "PET 必会固定搭配", credit: "", note: "", items: [] };
+  }
+  const cnt = (D.items || []).length;
+  return `<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>${escHTML(D.title || "PET 必会固定搭配")} · ${escHTML(man.site.title)}</title>
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#eef1f6">
+${THEME_HEAD}
+<link rel="stylesheet" href="engine/style.css?v=${assetV("style.css")}">
+<script src="engine/store.js?v=${assetV("store.js")}"></script>
+<!-- 门禁：和文章页同一道（存储不可用时放行，见 store.js） -->
+<script>PETStore.guard().catch(function(){});</script>
+</head>
+<body class="page-body">
+<div class="page-wrap col-wrap">
+  <header class="page-top">
+    <a class="page-back" href="index.html">← 首页</a>
+    <h1 class="page-title">PET 固定搭配</h1>
+    <span class="who" id="who" hidden></span>
+    <button class="tool" id="tglTheme" type="button" title="主题：跟随系统">◐ 跟随</button>
+    ${ZOOM_HTML}
+  </header>
+  <p class="page-sub">${escHTML(D.note || "")}</p>
+  <p class="col-credit" id="colCredit"></p>
+  <div class="col-bar">
+    <div class="col-groups" id="colGroups"></div>
+    <a class="btn col-jump" href="#colPractice">本组练习 ↓</a>
+  </div>
+  <h2 class="col-h2" id="colCardsH">短语卡</h2>
+  <div class="col-cards" id="colCards"></div>
+  <section class="col-practice" id="colPractice">
+    <div class="col-phead">
+      <span class="col-ptitle" id="colPH">练习</span>
+      <span class="col-pscore" id="colScore"></span>
+      <span class="col-pnav">
+        <button class="btn" id="colReveal" type="button">对答案</button>
+        <button class="btn" id="colReset" type="button">重做本组</button>
+      </span>
+    </div>
+    <div class="col-done" id="colDone" hidden></div>
+    <div class="col-bank" id="colBank"></div>
+    <p class="col-ptip">先点句子里的横线、再点短语库里的短语；直接点短语也能填到第一个空。</p>
+    <div class="col-qlist" id="colQs"></div>
+    <div class="col-pfoot">
+      <button class="btn" id="colPrev" type="button">← 上一组</button>
+      <button class="btn" id="colNext" type="button">下一组 →</button>
+      <span class="col-pcount">${cnt} 条 · 每 10 个一组</span>
+    </div>
+  </section>
+</div>
+<script>window.PET_COL = ${inlineJSON(D)};</script>
+<script src="engine/col.js?v=${assetV("col.js")}"></script>
+</body>
+</html>`;
+}
+
+/* ============================================================
+   词组库（phrases.html · 内部资料）
+   两种模式 + 一张速查表：
+     · 精读模式（engine/phrase.js）—— 一次一张卡、点词组看小黑板、点单词听读音、☆ 收藏
+     · 小霸王模式（engine/xbw.js）—— 自动播放 → 连线 → 选择题 → 自动批改（错题进错题本）
+     · 速查表 = 老页面 collocations.html（10 个一组的清单 + 填空练习），从组页里链过去
+   内容 data/phrases.json 整份内联；随页带一份「例句里出现的词」的小词典（dict），
+   点单词就能出释义（没命中的显示「词义待补」—— 词典分批补，往 glossary.core.json 里加词）。
+   ============================================================ */
+
+/* 从共享词库（glossary.core.json）里挑出「词组例句里用到的词」，
+   顺手做一遍屈折回退（与 app.js lookup() 同一口径），命中的才带上。
+   这就是「词典分批补」的落点：往 glossary.core.json 加词，页面自动变厚。 */
+function phraseDict(items) {
+  const dict = {};
+  const wordRe = /[A-Za-z]+(?:['’\-][A-Za-z]+)*/g;
+  const cands = w => {
+    const out = [w];
+    const add = x => { if (x && x.length > 1 && out.indexOf(x) < 0) out.push(x); };
+    if (/[’']s$/.test(w)) add(w.replace(/[’']s$/, ""));
+    if (w.slice(-3) === "ies") add(w.slice(0, -3) + "y");
+    if (w.slice(-4) === "ives") add(w.slice(0, -4) + "ife");
+    if (w.slice(-2) === "es") add(w.slice(0, -2));
+    if (w.slice(-1) === "s") add(w.slice(0, -1));
+    if (w.slice(-3) === "ing") {
+      add(w.slice(0, -3)); add(w.slice(0, -3) + "e");
+      if (/([bdfglmnprt])\1$/.test(w.slice(0, -3))) add(w.slice(0, -4));
+    }
+    if (w.slice(-2) === "ed") {
+      add(w.slice(0, -2)); add(w.slice(0, -1));
+      if (/([bdfglmnprt])\1$/.test(w.slice(0, -2))) add(w.slice(0, -3));
+    }
+    if (w.slice(-2) === "er") { add(w.slice(0, -2)); if (/([bdfglmnprt])\1$/.test(w.slice(0, -2))) add(w.slice(0, -3)); }
+    if (w.slice(-3) === "est") { add(w.slice(0, -3)); if (/([bdfglmnprt])\1$/.test(w.slice(0, -3))) add(w.slice(0, -4)); }
+    return out;
+  };
+  const words = new Set();
+  (items || []).forEach(it => {
+    (String(it.ex || "").match(wordRe) || []).forEach(w => words.add(w.toLowerCase()));
+  });
+  words.forEach(w => {
+    for (const c of cands(w)) {
+      const e = coreGlossary[c];
+      if (e) {
+        dict[w] = { w: c, ipa: e.ipa || "", pos: e.pos || "", cn: e.cn || "" };
+        return;
+      }
+    }
+  });
+  return dict;
+}
+
+function renderPhrases(man) {
+  const src = P("data", "phrases.json");
+  let D;
+  try { D = readJSON(src); }
+  catch (e) {
+    console.error("! 读不到 data/phrases.json（词组库会是空页）：" + e.message);
+    D = { title: "PET 词组库", credit: "", note: "", items: [] };
+  }
+  const items = D.items || [];
+  const cnt = items.length;
+  /* 随页带的小词典：例句里出现的词（核心词库命中）+ data/phrases.dict.json 里补的词。
+     「词典分批补」= 往 phrases.dict.json 加词（每批上线时把这批例句里的生词补齐）。 */
+  let extra = {};
+  try {
+    const x = readJSON(P("data", "phrases.dict.json"));
+    Object.keys(x.words || {}).forEach(k => {
+      const e = x.words[k] || {};
+      extra[String(k).toLowerCase()] = { w: k, ipa: e.ipa || "", pos: e.pos || "", cn: e.cn || "" };
+    });
+  } catch (e) { /* 没有这份文件也能跑：词典只少几条 */ }
+  const dict = Object.assign({}, phraseDict(items), extra);
+  const payload = { title: D.title || "PET 词组库", credit: D.credit || "", note: D.note || "",
+                    items: items, dict: dict };
+  return `<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>${escHTML(D.title || "PET 词组库")} · ${escHTML(man.site.title)}</title>
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#eef1f6">
+${THEME_HEAD}
+<link rel="stylesheet" href="engine/style.css?v=${assetV("style.css")}">
+<script src="engine/store.js?v=${assetV("store.js")}"></script>
+<!-- 门禁：和文章页同一道（存储不可用时放行，见 store.js） -->
+<script>PETStore.guard().catch(function(){});</script>
+</head>
+<body class="page-body ph-body">
+<div class="topbar">
+  <a class="page-back" href="index.html">← 首页</a>
+  <div class="brand">PET 词组库<small>${cnt} 条 · 每 10 个一组</small></div>
+  <div class="tabs">
+    <button class="tab on" data-phview="list" type="button">分组</button>
+    <button class="tab" data-phview="read" type="button">📖 精读模式</button>
+    <button class="tab" data-phview="xbw" type="button">🕹 小霸王模式</button>
+    <button class="tab" data-phview="srs" type="button">🔁 复习</button>
+  </div>
+  <div class="spacer"></div>
+  <div class="tools">
+    <button class="tool" id="tglVoice" type="button" title="挑跟读的音色（英文 / 中文）">🎙 音色</button>
+    <button class="tool" id="tglHist" type="button" title="显示 / 隐藏历史浮动面板">▣ 历史</button>
+    <span class="who" id="who" hidden></span>
+    <button class="tool" id="tglTheme" type="button" title="主题：跟随系统">◐ 跟随</button>
+    ${ZOOM_HTML}
+  </div>
+</div>
+
+<main class="ph-main">
+  <p class="col-credit" id="phCredit"></p>
+  <p class="page-sub" id="phNote"></p>
+
+  <!-- 分组列表 -->
+  <section id="viewList">
+    <div class="ph-groups" id="phGroups"></div>
+  </section>
+
+  <!-- 精读模式：左卡片 / 右小黑板（窄屏小黑板是底部抽屉） -->
+  <section id="viewRead" hidden>
+    <div class="cols" id="cols">
+      <div class="col" id="col1">
+        <div class="col-head">
+          <span id="phCardTitle">词组卡</span>
+          <span class="hint">点<b>词组</b>看小黑板 · 点<b>单词</b>听读音</span>
+        </div>
+        <div class="col-body" id="cardBox">
+          <div id="phCard"></div>
+        </div>
+      </div>
+      <div class="col" id="colAna">
+        <div class="col-head">
+          <span>小黑板</span>
+          <span class="hint" id="anaHint">点卡片上的词组或单词</span>
+          <button class="collapse" id="anaCollapse" type="button" title="收起小黑板">✕</button>
+        </div>
+        <div class="col-body" id="analysis"></div>
+      </div>
+    </div>
+    <div class="scrim" id="phScrim"></div>
+    <aside class="hist-float" id="histFloat" hidden>
+      <div class="hist-head">
+        <span>历史</span>
+        <span class="hist-hint">点过的都记在这 · 重复点击置顶</span>
+        <button class="hist-close" id="histClose" type="button" title="收起历史">✕</button>
+      </div>
+      <div class="hist-body" id="history"></div>
+    </aside>
+  </section>
+
+  <!-- 小霸王模式：三关 + 总结 -->
+  <section id="viewXbw" hidden>
+    <div class="xbw" id="xbw"></div>
+  </section>
+
+  <!-- 复习（间隔重复）：今天到期的词组 + 没练过的 -->
+  <section id="viewSrs" hidden>
+    <div class="xbw" id="srs"></div>
+  </section>
+</main>
+
+<!-- 音色面板（点顶栏「🎙 音色」） -->
+<div class="syn-pop" id="voicePanel" hidden></div>
+
+<script>window.PET_PHRASES = ${inlineJSON(payload)};</script>
+<script src="engine/phrase.js?v=${assetV("phrase.js")}"></script>
+<script src="engine/xbw.js?v=${assetV("xbw.js")}"></script>
+<script src="engine/srs.js?v=${assetV("srs.js")}"></script>
 </body>
 </html>`;
 }

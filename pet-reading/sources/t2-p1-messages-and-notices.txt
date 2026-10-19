@@ -1,0 +1,77 @@
+title: Training Test 2
+label: Reading Part 1
+
+# 素材来源
+原题: 剑桥PET 官方模考题精讲讲练 _53-56.pdf（书内页码 P52–P55 = 该 PDF 第 1–4 页，偏移 +1）；
+      文字先取同名 .docx（OCR），再逐页对照 4 倍渲染图校对。
+带笔记: PET Trainers精讲精练带笔记.pdf —— ⚠ **页码要按内容核对，别信文件名**：
+      扫描版从 Test 2 起与书的印刷页码有偏移（书 P52–55 = 扫描第 69–72 页，偏移 +17）。
+      用户切的分段文件按「扫描页码」命名（如 `_53-56.pdf` 其实是听力内容）——找笔记时
+      认书页 footer（右下角印的才是书页码）。两本书内容/印刷页码完全一致，只是扫描偏移。
+答案: 书后 P198 Teacher's Notes & Keys（全本 PDF 第 199 页）；训练①–⑥ + 真题 1–5 全部核对。
+图片: 从 _53-56.pdf 4 倍渲染图裁出，存 assets/img/
+  · t2-p1-sign-turn.png   书 P53 ⑥-1 转弯标志  裁自第 2 页 x185,y1590 320×325
+  · t2-p1-sign-diving.png 书 P53 ⑥-2 禁跳水    裁自第 2 页 x862,y1583 305×310
+  · t2-p1-sign-pool.png   书 P53 ⑥-3 泳池+相机 裁自第 2 页 x1568,y1575 663×428
+  · t2-p1-sign-skate.png  书 P53 ⑥-4 禁滑板    裁自第 2 页 x230,y2350 260×260
+  · t2-p1-sign-train.png  书 P53 ⑥-5 车厢场景  裁自第 2 页 x850,y2215 500×480
+  · t2-p1-sign-eating.png 书 P53 ⑥-6 禁饮食    裁自第 2 页 x1632,y2350 275×260
+  · t2-p1-icon-car.png    书 P52 ②-4 禁机动车标志 裁自第 1 页 x505,y2005 160×150
+转写注意: 训练题空位一律写省略号 …………（⑥ 例外：开放填空写 {130}–{135}，渲染成输入框）；
+  真题正文无空位（题在选项行）；英文撇号用 ’、破折号用 –。
+
+# 训练部分（书 P52–P53，答案见 P198）
+① 近义表达配对：1 d（禁止拍照 ↔ must not use your camera）/ 2 a（8 点后不再开 ↔ changing
+   opening hours）/ 3 b（新买且好用 ↔ good condition and almost new）/ 4 e（侧门关了走正门 ↔
+   go in a different way）/ 5 c（12 岁以下随行打折 ↔ lower prices for some children）
+② 六段小文本的类型（含「在哪儿能见到」）：
+   1 e notice（学校走廊）· 2 b label（衣服洗涤说明）· 3 a email（电脑或手机）· 4 f road sign
+   （道路入口）· 5 d note（家里桌上）· 6 c advertisement（布告栏小广告）
+③ 六个答案句对应文本：a→4（You must not drive here）/ b→6（first class 免费）/ c→2（别机洗、
+   别热水）/ d→3（她该尽快安排出行）/ e→5（她钱不够想借点）/ f→1（别关那门）
+④ 祈使句填空：1 Stop / 2 camping / 3 Use / 4 standing / 5 running / 6 Put on
+⑤ ⑥处提示语常见于哪儿：1 d 街上 / 2 b 乡下 / 3 a 电影院 / 4 f 公交车上 / 5 e 教学楼里 / 6 c 飞机上
+⑥ 看图写动词（开放）：1 Turn / 2 diving / 3 take / 4 skateboarding / 5 Let / 6 eating
+Remember 框（书上的中文提示，两条）：
+  A. 我们用祈使动词发出指示或命令：Listen! Don't talk! 我们也可以用 no + -ing 来告诉某人
+     不要做某事：No parking on the grass.
+  B. 我们可以说：allow someone to do something 或者 let someone do something（没有 to）。
+
+# 真题（书 P54–P55，答案见 P198）
+1 C —— 官方：A 错在说「一定会晚」（原文只说 delays possible）；B 错在说雪「正在下」（原文是
+  expected overnight）；C 对：check websites ↔ watch for announcements、schools may be closed ↔
+  unable to attend classes。
+2 A —— 官方：A 对（bring books they've already read ↔ share books they no longer want）；B 错
+  （不是去打听别人喜欢什么书）；C 错（不是带一本好书来讨论）。
+3 B —— 官方：B 对（要迟到 ↔ probably going to be late）；A 错（不是提醒 Joanna 交通问题）；
+  C 错（不是不确定时间）。
+4 C —— 官方：C 对（next time let's beat them ↔ encouraging…in a future match）；A 错（没赢）；
+  B 错（感谢支持者，但没提「正向影响」）。
+5 A —— 官方：A 对（regular dishes 之外还有 today's specials ↔ more food apart from the menu）；
+  B 错（看菜单就够了，不必去看板）；C 错（原文没让你去柜台点单）。
+
+# 批注整理（手写笔记 → 融合方式，沿用全站约定：词组/单词进 ana.note，讲解类进 summary）
+书 P52：be permitted 被允许 / 艺术画廊 / 状况，条件，状态 / 最近 / 侧门 / 主入口 /
+  陪伴的，伴随的 / 标签 / at all times 始终，一直，总是 / short of 欠缺，缺少 / register 注册 /
+  支付 / ought to do sth. 应该做某事 / 理由
+书 P53：安全带（seatbelts）
+书 P54：heavy snow 大雪 / overnight 在夜间，在晚上的 / delay 延迟，延误 / regularly 定期地，
+  有规律地 / 公共交通 / 引起（cause）/ 通知，宣告（announcements）/ 以防万一（in case）/
+  be unable to do sth. 不能做某事 / attend classes 上课 / exchange 交换 / no longer 不再 /
+  be supposed to do sth. 应该做某事（表示按规定、计划或者期望）/ warn sb. about sth. 提醒某人
+  关于某事 / let sb. know sth. 让某人知道某事 / 可能（probably）
+书 P55：league winner 联赛冠军 / recent 近期的 / congratulate sb. 祝贺某人 / 正向的影响
+  （positive effect）/ encourage 鼓励 / even 甚至 / in a future match 在未来的比赛中 /
+  apart from 除了 / 在柜台旁（by the counter）/ speak to sb. 向某人说话 / at the counter 在柜台
+
+# 数据备注（给以后的自己）
+- 训练题号：① 101–105、② 106–111、③ 112–117、④ 118–123、⑤ 124–129、⑥ 130–135（开放填空，
+  正文里 {130}–{135} 渲染成输入框；verify 从 P6 起已放宽：cloze 题必须有 {n}、{n} 必须有题）。
+- ② 的六段小文本 = q + n 徽章 + frame 盒；4 号加汽车图标（img 浮左）。
+- ③ 的作答胶囊是数字 1–6（opts 值给「text 1」…避免空值；胶囊显示 `<b>1</b> text 1`）。
+   —— 见下方修正：最终用空文本 + 数字胶囊（smoke 卡片断言同步放宽）。
+- ④ 词框 = o + frame（standing/put on/stop/running/use/camping，键 A–F）。
+- ⑤ 六排「1–6 → [a]…[f]」用一块 pick:[124…129]（行号自动取 tag 尾号）。
+- 真题 1–5 = optsInline（整行 A/B/C + optsAna）；书 P54 的 Tip 放真题抬头，P55 的收尾 Tip 放
+  Q5 段上。
+- 五段小文本照书顺序、一页一段；标题/要求/提示照旧「整段一个译」。

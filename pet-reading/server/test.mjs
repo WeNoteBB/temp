@@ -10,7 +10,7 @@
 import { createApp } from "./server.mjs";
 import { sha256Hex, fitText, fitChars, validPhone, normPhone, normWord, normSentence,
          normNickname, validNickname, validPassword, hashPassword, verifyPassword,
-         levelColor, LEVEL_COLORS, SLUG_RE } from "./lib.mjs";
+         levelColor, LEVEL_COLORS, SLUG_RE, srsNext } from "./lib.mjs";
 
 let nPass = 0, nFail = 0;
 const failures = [];
@@ -55,8 +55,7 @@ function eq(a, b, msg) {
   ok(!validNickname("   "), "全空白昵称被拒");
   ok(!validNickname("x".repeat(17)), "17 字昵称被拒");
 
-  ok(validPassword("secret123"), "6 位以上密码可以");
-  ok(validPassword("密".repeat(64)), "64 位密码可以");
+  ok(validPassword("secret123"), "6 位以上密码可以");  ok(validPassword("密".repeat(64)), "64 位密码可以");
   ok(!validPassword("12345"), "5 位密码被拒");
   ok(!validPassword("x".repeat(65)), "65 位密码被拒");
 
@@ -78,6 +77,19 @@ function eq(a, b, msg) {
   ok(!SLUG_RE.test("T1-P4"), "大写 slug 被拒");
   ok(!SLUG_RE.test("-lead"), "连字符开头被拒");
   ok(!SLUG_RE.test("a".repeat(65)), "超长 slug 被拒");
+
+  /* ---- 词组复习的间隔重复（srsNext） ---- */
+  eq(srsNext(1, true), { level: 2, days: 2 }, "答对：1 级 → 2 级，2 天后再来");
+  eq(srsNext(2, true), { level: 3, days: 4 }, "答对：2 级 → 3 级，4 天后");
+  eq(srsNext(3, true), { level: 4, days: 7 }, "答对：3 级 → 4 级，7 天后");
+  eq(srsNext(4, true), { level: 5, days: 15 }, "答对：4 级 → 5 级，15 天后");
+  eq(srsNext(5, true), { level: 6, days: 30 }, "答对：5 级 → 6 级，30 天后");
+  eq(srsNext(6, true), { level: 6, days: 30 }, "答对：到顶了，仍然 30 天（不再拉长）");
+  eq(srsNext(5, false), { level: 1, days: 1 }, "答错：不管几级都回到 1 级，明天再来");
+  eq(srsNext(0, false), { level: 1, days: 1 }, "没等级的（0）答错也回到 1 级");
+  eq(srsNext(3, true), { level: 4, days: 7 }, "等级是数字字符串也认（'" + "3" + "'）");
+  eq(srsNext("3", true), { level: 4, days: 7 }, "level 传字符串照样算");
+  eq(srsNext(99, true), { level: 6, days: 30 }, "level 超界往上钳到 6");
 }
 
 /* ============================================================
@@ -133,6 +145,21 @@ function fakeDb(opts) {
     async removeWordFav(a) { calls.push(["removeWordFav", a]); return { removed: 1 }; },
     async addSentenceFav(a) { calls.push(["addSentenceFav", a]); return { sentenceId: 9, hash: "h".repeat(64) }; },
     async removeSentenceFav(a) { calls.push(["removeSentenceFav", a]); return { removed: 1 }; },
+    async addPhraseFav(a) { calls.push(["addPhraseFav", a]); return { phraseId: 11 }; },
+    async removePhraseFav(a) { calls.push(["removePhraseFav", a]); return { removed: 1 }; },
+    async addPhraseMistake(a) { calls.push(["addPhraseMistake", a]); return { ok: true }; },
+    async listPhraseMistakes(phone) {
+      calls.push(["listPhraseMistakes", phone]);
+      return { items: [{ no: 3, phrase: "a group of", stem: "We're ＿＿ people…", chosen: "a number of",
+                         correct: "a group of", count: 2, ts: 1 }] };
+    },
+    async addPhraseReview(a) { calls.push(["addPhraseReview", a]); return { ok: true }; },
+    async listPhraseReviews(phone, opts) {
+      calls.push(["listPhraseReviews", phone, opts]);
+      return { items: [{ no: 1, phrase: "a couple of", level: 2, reps: 1, wrongs: 0,
+                         due: "2026-10-20", meaning: "几个", example: "Anyway,…", exampleCn: "不管怎样…",
+                         use: "后接可数名词复数" }] };
+    },
     async addMistake(a) { calls.push(["addMistake", a]); return { ok: true }; },
     async listMistakes(phone) {
       calls.push(["listMistakes", phone]);
@@ -287,8 +314,77 @@ const get = (base, p) =>
     r = await post(base, "/api/favs/add", { phone: "13800138000", kind: "sentence", sentence: "   " });
     ok(r.status === 400, "空句子 → 400");
 
-    r = await post(base, "/api/favs/add", { phone: "13800138000", kind: "phrase", word: "no-one" });
+    /* -- add phrase（词组） -- */
+    r = await post(base, "/api/favs/add", {
+      phone: "13800138000", kind: "phrase", phrase: " a couple of ", no: 1,
+      meaning: "几个；一对；一双", usageNote: "后接可数名词复数",
+      example: "Anyway, a couple of months ago I saw someone playing the piano on TV.",
+      exampleCn: "不管怎样，几个月前我在电视上看到有人弹钢琴。",
+      sourceTitle: "PET 词组库"
+    });
+    ok(r.status === 200 && r.j.ok === true && r.j.phraseId === 11, "add phrase 成功");
+    c = db.calls.filter(x => x[0] === "addPhraseFav").pop()[1];
+    eq([c.phone, c.phrase, c.no], ["13800138000", "a couple of", 1], "phrase trim + 字段透传");
+    eq([c.meaning, c.usageNote], ["几个；一对；一双", "后接可数名词复数"], "词组释义/用法透传");
+    ok(String(c.example).indexOf("Anyway, a couple of") === 0 && String(c.exampleCn).indexOf("不管怎样") === 0,
+      "词组例句原文/翻译透传");
+
+    r = await post(base, "/api/favs/add", { phone: "13800138000", kind: "phrase", phrase: "   " });
+    ok(r.status === 400, "空 phrase → 400");
+
+    r = await post(base, "/api/favs/add", { phone: "13800138000", kind: "phrase", phrase: "x".repeat(129) });
+    ok(r.status === 400, "phrase 超 128 字符 → 400");
+
+    r = await post(base, "/api/favs/add", { phone: "13800138000", kind: "video", word: "no-one" });
     ok(r.status === 400, "未知 kind → 400");
+
+    /* -- 词组错题（选择题：原题 + 选项文本） -- */
+    r = await post(base, "/api/phrase-mistakes", {
+      phone: "13800138000", no: 3, phrase: "a group of",
+      stem: "We're ＿＿ people aged 16–25 who meet every week…",
+      chosen: "a number of", correct: "a group of"
+    });
+    ok(r.status === 200 && r.j.ok === true, "词组错题登记成功");
+    c = db.calls.filter(x => x[0] === "addPhraseMistake").pop()[1];
+    eq([c.no, c.phrase, c.chosen, c.correct], [3, "a group of", "a number of", "a group of"],
+      "词组错题：题号/词组/你选的/正确答案都透传");
+
+    r = await post(base, "/api/phrase-mistakes", { phone: "13800138000", no: 300, phrase: "x", chosen: "a", correct: "b" });
+    ok(r.status === 400, "词组题号超出 1–254 → 400");
+    r = await post(base, "/api/phrase-mistakes", { phone: "13800138000", no: 3, phrase: "", chosen: "a", correct: "b" });
+    ok(r.status === 400, "词组错题缺 phrase → 400");
+
+    r = await get(base, "/api/phrase-mistakes?phone=13800138000");
+    ok(r.status === 200 && r.j.items[0].no === 3 && r.j.items[0].count === 2, "词组错题列表返回 items");
+    r = await get(base, "/api/phrase-mistakes?phone=oops");
+    ok(r.status === 400, "词组错题列表手机号非法 → 400");
+
+    /* -- 词组复习（间隔重复） -- */
+    r = await post(base, "/api/phrase-review", { phone: "13800138000", no: 1, phrase: "a couple of", level: 1, ok: true });
+    ok(r.status === 200 && r.j.ok === true && r.j.level === 2 && r.j.days === 2,
+      "复习答对：接口回 2 级 / 2 天后（服务端算的）");
+    c = db.calls.filter(x => x[0] === "addPhraseReview").pop()[1];
+    eq([c.no, c.phrase, c.level, c.days, c.ok], [1, "a couple of", 2, 2, true], "复习结果透传到 db");
+
+    r = await post(base, "/api/phrase-review", { phone: "13800138000", no: 1, phrase: "a couple of", level: 4, ok: false });
+    ok(r.status === 200 && r.j.level === 1 && r.j.days === 1, "复习答错：回 1 级 / 明天再来");
+    c = db.calls.filter(x => x[0] === "addPhraseReview").pop()[1];
+    eq([c.level, c.days, c.ok], [1, 1, false], "答错也写进 db（对错分开记）");
+
+    r = await post(base, "/api/phrase-review", { phone: "13800138000", no: 0, phrase: "x", ok: true });
+    ok(r.status === 400, "复习题号越界 → 400");
+    r = await post(base, "/api/phrase-review", { phone: "13800138000", no: 1, phrase: "", ok: true });
+    ok(r.status === 400, "复习缺 phrase → 400");
+
+    r = await get(base, "/api/phrase-review?phone=13800138000");
+    ok(r.status === 200 && r.j.items[0].no === 1 && r.j.items[0].level === 2, "复习列表默认只要到期的");
+    c = db.calls.filter(x => x[0] === "listPhraseReviews").pop();
+    eq(c[2], { limit: 0, all: false }, "默认 due=1（只要到期的）");
+    r = await get(base, "/api/phrase-review?phone=13800138000&all=1&limit=20");
+    c = db.calls.filter(x => x[0] === "listPhraseReviews").pop();
+    eq(c[2], { limit: 20, all: true }, "all=1&limit=20 原样传给 db");
+    r = await get(base, "/api/phrase-review?phone=oops");
+    ok(r.status === 400, "复习列表手机号非法 → 400");
 
     /* -- remove -- */
     r = await post(base, "/api/favs/remove", { phone: "13800138000", kind: "word", word: "century" });
@@ -300,6 +396,12 @@ const get = (base, p) =>
 
     r = await post(base, "/api/favs/remove", { phone: "13800138000", kind: "sentence", sentence: "  " });
     ok(r.status === 400, "remove 空句子 → 400");
+
+    r = await post(base, "/api/favs/remove", { phone: "13800138000", kind: "phrase", phrase: "a couple of" });
+    ok(r.status === 200 && r.j.ok === true && r.j.removed === 1, "remove phrase 成功");
+    ok(db.calls.filter(x => x[0] === "removePhraseFav").length === 1, "remove phrase 到达 db");
+    r = await post(base, "/api/favs/remove", { phone: "13800138000", kind: "phrase", phrase: " " });
+    ok(r.status === 400, "remove 空 phrase → 400");
 
     /* -- list -- */
     r = await get(base, "/api/favs?phone=13800138000");

@@ -1,0 +1,73 @@
+# t2-p3-coasteering · 素材与批注存档（2026-10-19）
+
+## 来源
+
+- 原题：`剑桥PET 官方模考题精讲讲练 _60-63.pdf`（4 页 = 书 P59–P62）
+  - 文字提取：`docx-all/剑桥PET 官方模考题精讲讲练 _60-63/word/document.xml` → `t2p3/docx-text.txt`
+  - 4 倍渲染校对：`t2p3/src-1.png`（P59）· `src-2.png`（P60）· `src-3.png`（P61）· `src-4.png`（P62）
+- 笔记（手写批注）：`PET Trainers精讲精练带笔记.pdf` 扫描第 76–79 页（= 书 P59–62，+17 偏移）
+  - 3 倍半页渲染：`t2p3/n3-76..79-top/bot.png`
+- 官方答案：书 P200 = 全本 PDF 第 201 页 → `t2p3/ans-201.png`
+
+## 官方答案（逐题核对）
+
+- 讨论题：1 one long text / 2 four
+- ①（态度形容词）：1 grateful / 2 cheerful / 3 confident / **4 ashamed** / 5 upset / 6 impressed / 7 patient / 8 jealous
+  - ⚠ 词框实为 **8 个词**（ashamed, cheerful, confident, grateful, jealous, impressed, patient, upset）——docx 提取漏了 ashamed，以扫描页为准
+- ②（-ed/-ing）：1 interested / 2 boring / 3 disappointed / 4 shocking / 5 exhausted / 6 annoyed / 7 depressed / 8 exciting
+- ③（改错）：1 tiring→tired / 2 frightened→frightening / 3 正确 / 4 relaxing→relaxed / 5 excited→exciting / 6 worrying→worried / 7 正确 / 8 surprising→surprised
+- ④（划关键词）：1 like most, playing, trumpet / 2 nervous, phone, because / 3 How, feel, new school /
+  4 bored, journey, because / 5 why, decide, new bike / 6 main difference, badminton, tennis
+- ⑤：1 an account of a personal experience / 2 beginning to learn snowboarding /
+  3 enjoying the experience and confident he will make progress
+- ⑦：**B**（confident that he could become good at it）；A、C、D 的官方反证：a bit less tiring than I'd expected /
+  starting to find that it was (fun) / though I didn't mind
+- 真题 11–15：**11 C / 12 A / 13 B / 14 D / 15 A**（官方理由见 ans-201，已逐条写进 why）
+
+## 手写批注清单（→ ana.note）
+
+P59：
+- 词框：ashamed 感到羞愧的，感到羞耻的 / cheerful 高兴的 / confident 自信的 / grateful 感激的 /
+  jealous 嫉妒的 / impressed 印象深刻的 / upset 沮丧的，失落的
+- ①：do well in sth. 在某事上做的好 · be silly of sb. to do sth. 某人做某事很傻 · wait for sb. 等待某人 · 公平
+- ②：be interested in (doing) sth. 对做某事感兴趣 · bored 无聊的；boring 令人感到无聊的 ·
+  disappointed 失望的；disappointing 令人失望的 · shocked 吃惊的，震惊的，愤慨的；shocking 令人震惊的 ·
+  exhausted 筋疲力尽的；exhausting 使人精疲力竭的 · annoyed 恼怒的；annoying 令人恼火的 ·
+  depressed 抑郁的，沮丧的；depressing 令人沮丧的 · excited 兴奋的；exciting 令人兴奋的
+
+P60：
+- ④ 关键词答案（红笔）
+- 雪板段：advanced beginners 先进初学者 · instructor 指导员 · keep doing sth. 持续做某事 ·
+  previously 以前地，先前地 · snowboarding competitions 滑雪比赛
+- ⑥ 问题划 feel/first/snowboarding；⑦ A exhausted 精疲力竭的 · C disappointed 失望的
+
+P61（右栏 8 条 + 文中 20+ 条）：
+- be keen on doing sth. 热衷于做某事 · challenging sports 挑战运动 · it was led by experienced instructors 被有经验的指导员带领 ·
+  sign up 报名 · be allowed to do sth. 被允许做某事 · normally 通常，平常 · ask sb. to go along 请求某人一起去 ·
+  not ... at all 一点也不
+- 探索洞穴 · 陪伴（accompany）· 参加课程（attended a session）· 技巧（techniques）· 被给予头盔（be given helmets）·
+  特殊的防水泳衣/潜水服（special wetsuits）· 个人关注（individual attention）· 整个的旅途（entire trip）· 冰冻的（freezing）·
+  绝对地（absolutely）· 挑战（challenges）· 哪怕（even stuff）· 无论如何（Anyway）· 意识到（realised）· 身体上（physically）·
+  解释（explains）· 之后（afterwards）· 许多（loads of）· 推测（reckon）· 否则（otherwise）
+
+P62：
+- 11 C ✓ + too far away from 与……距离太远 · 13 特别地（particularly）· 努力，尝试（attempt）· 参加（take part in）
+
+## 图片（2 张，4 倍渲染裁图 → assets/img/）
+
+| 文件 | 来源 | 裁切框 (left, top, w, h) |
+|---|---|---|
+| t2-p3-snowboard.png | src-2（P60） | 1690, 1130, 360, 470 |
+| t2-p3-coasteering.png | src-3（P61） | 1600, 890, 610, 750 |
+
+（P59 无图；P62 的 Q15 四个消息框是文字盒，用 optsGrid 渲染。）
+
+## 数据/工程备注
+
+- 训练题号：① 101–108 · ② 109–116 · ③ 117–124 · ⑤ 125–127 · ⑦ 128（= n:"128" + `shade:true` + `optsInline`，
+  同 t1-p3 的 K 法）；真题 11–15。
+- ③ 用「✓ 正确 / ✗ 有错，需要改正」两枚胶囊作答（比 t1-p3 的纯展示更进一步；订正写在解析里）。
+- ④/⑥ 的 ul 一句一划（多关键词取连续跨度，官方划线以解析说明）。
+- ⚠ 句型 chip 的坑：成分标签必须能被句型键匹配（主谓宾→主语/谓语/宾语；主系表→主语/系动词/表语；主谓→主语/谓语），
+  否则 chip 变「静态」不可点（本次修了 16 句：分句 1/分句 2、系表、疑问句等）。
+- 跨篇冲突 65 个词一次统一到全部 9 篇。

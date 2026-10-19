@@ -1,0 +1,5340 @@
+{
+  "slug": "t2-p5-sheep-faces",
+  "book": "剑桥PET 官方模考题精讲讲练",
+  "label": "Reading Part 5",
+  "title": "Training Test 2",
+  "note": "答案为逐题对照书后 P202 官方答案核对一致；训练①–④的答案与解析同 P202；「析」里的笔记来自带手写批注的 PET Trainers 版（书 P66–P67；扫描页码 84–85）（2026-10-19）",
+  "inlineQuiz": true,
+  "passage": {
+    "words": 491,
+    "sentences": 58,
+    "paragraphs": [
+      [
+        {
+          "s": "Training Test 2 · Reading Part 5",
+          "hard": false,
+          "tr": "训练测试 2 · 阅读第 5 部分。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题行：<b>Training Test 2 · Reading Part 5</b>（训练测试 2 · 阅读第 5 部分）",
+            "parts": [
+              [
+                "标题",
+                "Training Test 2 —— 训练测试编号"
+              ],
+              [
+                "标题",
+                "Reading Part 5 —— 阅读第 5 部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式省略句"
+            ],
+            "tip": "这一部分练的是：短文挖六个空，每题四选一（多考搭配和词义）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "How many gaps do you have to fill in?",
+          "hard": false,
+          "tr": "你要填几个空？",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "疑问句：<b>How many gaps do you have to fill in?</b>",
+            "parts": [
+              [
+                "疑问词",
+                "<code>How many gaps</code> —— 多少个空"
+              ],
+              [
+                "谓语",
+                "<code>do you have to fill in</code> —— 你必须填"
+              ]
+            ],
+            "clauses": [
+              "fill in 填写"
+            ],
+            "gram": [
+              "gap 空；fill in 填写"
+            ],
+            "tip": "官方答案：six（六个）。",
+            "note": [
+              {
+                "k": "fill in",
+                "cn": "填写"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "How many words do you choose from for each gap?",
+          "hard": false,
+          "tr": "每个空你要从几个词里选？",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "疑问句：<b>How many words do you choose from for each gap?</b>",
+            "parts": [
+              [
+                "疑问词",
+                "<code>How many words</code> —— 多少个词"
+              ],
+              [
+                "谓语",
+                "<code>do you choose from</code> —— 你从中选择"
+              ]
+            ],
+            "clauses": [
+              "choose from 从……中选"
+            ],
+            "gram": [
+              "choose from 从……中选择"
+            ],
+            "tip": "官方答案：four（四个，A–D）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "VOCABULARY: COLLOCATIONS",
+          "hard": false,
+          "tr": "词汇：搭配。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>VOCABULARY: COLLOCATIONS</b>（词汇：搭配）",
+            "parts": [
+              [
+                "名词",
+                "COLLOCATIONS —— 搭配（词与词的固定组合）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "collocation 搭配"
+            ],
+            "tip": "动词 + 名词的搭配是 Part 5 的核心考点。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "B1 Preliminary candidates often make mistakes with verb/noun collocations.",
+          "hard": false,
+          "tr": "B1 Preliminary 的考生经常在「动词 + 名词」搭配上出错。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>B1 Preliminary candidates often make mistakes with verb/noun collocations.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>B1 Preliminary candidates</code> —— 考生"
+              ],
+              [
+                "谓语",
+                "<code>often make mistakes</code> —— 经常出错"
+              ],
+              [
+                "介词短语",
+                "<code>with verb/noun collocations</code> —— 在动词/名词搭配上"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "verb/noun collocation 动词名词搭配"
+            ],
+            "tip": "do / make / have / take 四个万能动词，各带各的名词。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "① Some words commonly go together. Match each word or phrase in the box with the verb do, make, have or take.",
+          "hard": false,
+          "tr": "① 有些词常一起出现。把方框里的每个词或短语与动词 do、make、have 或 take 配对。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "主谓 + 祈使句：<b>Some words commonly go together.</b>",
+            "parts": [
+              [
+                "分句",
+                "<code>Some words commonly go together</code> —— 有些词常一起出现"
+              ],
+              [
+                "祈使句",
+                "<code>Match each word or phrase in the box with the verb do, make, have or take</code> —— 把方框里的词与四个动词配对"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "go together 常一起出现"
+            ],
+            "tip": "官方注明：有些词可以配两个动词（如 a break 可 have/take），解析里都写了。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "1 a bus",
+          "hard": false,
+          "tr": "1 公交车。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>a bus</b>",
+            "parts": [
+              [
+                "名词",
+                "a bus —— 公交车"
+              ],
+              [
+                "搭配",
+                "→ take a bus（乘公交）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "take a bus 乘公交车"
+            ],
+            "tip": "官方分组：Take。",
+            "note": [
+              {
+                "k": "take a bus",
+                "cn": "乘公交车"
+              }
+            ]
+          }
+        },
+        {
+          "s": "2 a noise",
+          "hard": false,
+          "tr": "2 噪音。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>a noise</b>",
+            "parts": [
+              [
+                "名词",
+                "a noise —— 噪音"
+              ],
+              [
+                "搭配",
+                "→ make a noise（发出噪音）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "make a noise 发出噪音"
+            ],
+            "tip": "官方分组：Make。",
+            "note": [
+              {
+                "k": "make a noise",
+                "cn": "发出噪音"
+              }
+            ]
+          }
+        },
+        {
+          "s": "3 a job",
+          "hard": false,
+          "tr": "3 工作。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>a job</b>",
+            "parts": [
+              [
+                "名词",
+                "a job —— 工作"
+              ],
+              [
+                "搭配",
+                "→ have a job（有工作）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "have a job 有工作"
+            ],
+            "tip": "官方分组：Have。",
+            "note": [
+              {
+                "k": "have a job",
+                "cn": "有工作"
+              }
+            ]
+          }
+        },
+        {
+          "s": "4 a photo",
+          "hard": false,
+          "tr": "4 照片。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>a photo</b>",
+            "parts": [
+              [
+                "名词",
+                "a photo —— 照片"
+              ],
+              [
+                "搭配",
+                "→ take a photo（拍照）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "take a photo 拍照"
+            ],
+            "tip": "官方分组：Take。",
+            "note": [
+              {
+                "k": "take a photo",
+                "cn": "拍照"
+              }
+            ]
+          }
+        },
+        {
+          "s": "5 sport",
+          "hard": false,
+          "tr": "5 运动。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>sport</b>",
+            "parts": [
+              [
+                "名词",
+                "sport —— 运动"
+              ],
+              [
+                "搭配",
+                "→ do sport（做运动）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "do sport 做运动"
+            ],
+            "tip": "官方分组：Do。",
+            "note": [
+              {
+                "k": "do sport",
+                "cn": "做运动"
+              }
+            ]
+          }
+        },
+        {
+          "s": "6 an exercise",
+          "hard": false,
+          "tr": "6 练习。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>an exercise</b>",
+            "parts": [
+              [
+                "名词",
+                "an exercise —— 练习"
+              ],
+              [
+                "搭配",
+                "→ do an exercise（做练习）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "do an exercise 做练习"
+            ],
+            "tip": "官方分组：Do。",
+            "note": [
+              {
+                "k": "do an exercise",
+                "cn": "做练习"
+              }
+            ]
+          }
+        },
+        {
+          "s": "7 an idea",
+          "hard": false,
+          "tr": "7 主意。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>an idea</b>",
+            "parts": [
+              [
+                "名词",
+                "an idea —— 主意"
+              ],
+              [
+                "搭配",
+                "→ have an idea（有主意）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "have an idea 有主意"
+            ],
+            "tip": "官方分组：Have。",
+            "note": [
+              {
+                "k": "have an idea",
+                "cn": "有主意"
+              }
+            ]
+          }
+        },
+        {
+          "s": "8 a break",
+          "hard": false,
+          "tr": "8 休息。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>a break</b>",
+            "parts": [
+              [
+                "名词",
+                "a break —— 休息"
+              ],
+              [
+                "搭配",
+                "→ have/take a break（休息一下）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "have/take a break 休息一下"
+            ],
+            "tip": "官方分组：Have 和 Take 都可以。",
+            "note": [
+              {
+                "k": "have a break",
+                "cn": "休息一下（take a break 也可以）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "9 fun",
+          "hard": false,
+          "tr": "9 乐趣。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>fun</b>",
+            "parts": [
+              [
+                "名词",
+                "fun —— 乐趣"
+              ],
+              [
+                "搭配",
+                "→ have fun（玩得开心）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "have fun 玩得开心"
+            ],
+            "tip": "官方分组：Have。",
+            "note": [
+              {
+                "k": "have fun",
+                "cn": "玩得开心"
+              }
+            ]
+          }
+        },
+        {
+          "s": "10 a party",
+          "hard": false,
+          "tr": "10 派对。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>a party</b>",
+            "parts": [
+              [
+                "名词",
+                "a party —— 派对"
+              ],
+              [
+                "搭配",
+                "→ have a party（办派对）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "have a party 办派对"
+            ],
+            "tip": "官方分组：Have。",
+            "note": [
+              {
+                "k": "have a party",
+                "cn": "办派对"
+              }
+            ]
+          }
+        },
+        {
+          "s": "11 a good time",
+          "hard": false,
+          "tr": "11 开心的时光。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>a good time</b>",
+            "parts": [
+              [
+                "名词",
+                "a good time —— 开心的时光"
+              ],
+              [
+                "搭配",
+                "→ have a good time（玩得开心）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "have a good time 玩得开心"
+            ],
+            "tip": "官方分组：Have。",
+            "note": [
+              {
+                "k": "have a good time",
+                "cn": "玩得开心"
+              }
+            ]
+          }
+        },
+        {
+          "s": "12 a mess",
+          "hard": false,
+          "tr": "12 一团糟。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>a mess</b>",
+            "parts": [
+              [
+                "名词",
+                "a mess —— 一团糟"
+              ],
+              [
+                "搭配",
+                "→ make a mess（弄得一团糟）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "make a mess 弄得一团糟"
+            ],
+            "tip": "官方分组：Make。",
+            "note": [
+              {
+                "k": "make a mess",
+                "cn": "弄得一团糟"
+              }
+            ]
+          }
+        },
+        {
+          "s": "13 a mistake",
+          "hard": false,
+          "tr": "13 错误。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>a mistake</b>",
+            "parts": [
+              [
+                "名词",
+                "a mistake —— 错误"
+              ],
+              [
+                "搭配",
+                "→ make a mistake（犯错）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "make a mistake 犯错"
+            ],
+            "tip": "官方分组：Make。",
+            "note": [
+              {
+                "k": "make a mistake",
+                "cn": "犯错"
+              }
+            ]
+          }
+        },
+        {
+          "s": "14 a shower",
+          "hard": false,
+          "tr": "14 淋浴。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>a shower</b>",
+            "parts": [
+              [
+                "名词",
+                "a shower —— 淋浴"
+              ],
+              [
+                "搭配",
+                "→ have/take a shower（冲个澡）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "have/take a shower 冲个澡"
+            ],
+            "tip": "官方分组：Have 和 Take 都可以。",
+            "note": [
+              {
+                "k": "have a shower",
+                "cn": "冲个澡（take a shower 也可以）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "15 a phone call",
+          "hard": false,
+          "tr": "15 电话。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>a phone call</b>",
+            "parts": [
+              [
+                "名词",
+                "a phone call —— 电话"
+              ],
+              [
+                "搭配",
+                "→ make/take a phone call（打电话）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "make a phone call 打电话"
+            ],
+            "tip": "官方分组：Make 和 Take 都可以（make 更常用）。",
+            "note": [
+              {
+                "k": "make a phone call",
+                "cn": "打电话（take a phone call 接电话也可以）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "16 an exam",
+          "hard": false,
+          "tr": "16 考试。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>an exam</b>",
+            "parts": [
+              [
+                "名词",
+                "an exam —— 考试"
+              ],
+              [
+                "搭配",
+                "→ do/have/take an exam（参加考试）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "do/have/take an exam 参加考试"
+            ],
+            "tip": "官方分组：Do、Have、Take 都可以（英式常说 do an exam）。",
+            "note": [
+              {
+                "k": "take an exam",
+                "cn": "参加考试（do/have an exam 也可以）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "17 friends",
+          "hard": false,
+          "tr": "17 朋友。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>friends</b>",
+            "parts": [
+              [
+                "名词",
+                "friends —— 朋友"
+              ],
+              [
+                "搭配",
+                "→ make/have friends（交朋友/有朋友）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "make friends 交朋友"
+            ],
+            "tip": "官方分组：Make 和 Have 都可以。",
+            "note": [
+              {
+                "k": "make friends",
+                "cn": "交朋友（have friends 有朋友也可以）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "18 an English course",
+          "hard": false,
+          "tr": "18 英语课程。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>an English course</b>",
+            "parts": [
+              [
+                "名词",
+                "an English course —— 英语课程"
+              ],
+              [
+                "搭配",
+                "→ do an English course（上英语课）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "do an English course 上英语课"
+            ],
+            "tip": "官方分组：Do。",
+            "note": [
+              {
+                "k": "do an English course",
+                "cn": "上英语课"
+              }
+            ]
+          }
+        },
+        {
+          "s": "19 my homework",
+          "hard": false,
+          "tr": "19 我的作业。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>my homework</b>",
+            "parts": [
+              [
+                "名词",
+                "my homework —— 我的作业"
+              ],
+              [
+                "搭配",
+                "→ do my homework（做作业）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "do one's homework 做作业"
+            ],
+            "tip": "官方分组：Do。",
+            "note": [
+              {
+                "k": "do my homework",
+                "cn": "做作业"
+              }
+            ]
+          }
+        },
+        {
+          "s": "20 notes",
+          "hard": false,
+          "tr": "20 笔记。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>notes</b>",
+            "parts": [
+              [
+                "名词",
+                "notes —— 笔记"
+              ],
+              [
+                "搭配",
+                "→ take/make notes（记笔记）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "take notes 记笔记"
+            ],
+            "tip": "官方分组：Make 和 Take 都可以（take notes 更常用）。",
+            "note": [
+              {
+                "k": "take notes",
+                "cn": "记笔记（make notes 也可以）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "21 lunch at school",
+          "hard": false,
+          "tr": "21 在学校吃午饭。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>lunch at school</b>",
+            "parts": [
+              [
+                "名词",
+                "lunch at school —— 在学校吃午饭"
+              ],
+              [
+                "搭配",
+                "→ have lunch at school（在学校吃午饭）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "have lunch 吃午饭"
+            ],
+            "tip": "官方分组：Have。",
+            "note": [
+              {
+                "k": "have lunch",
+                "cn": "吃午饭"
+              }
+            ]
+          }
+        },
+        {
+          "s": "22 some shopping",
+          "hard": false,
+          "tr": "22 购物。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "搭配：<b>some shopping</b>",
+            "parts": [
+              [
+                "名词",
+                "some shopping —— 购物"
+              ],
+              [
+                "搭配",
+                "→ do some shopping（去购物）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "do some shopping 去购物"
+            ],
+            "tip": "官方分组：Do。",
+            "note": [
+              {
+                "k": "do some shopping",
+                "cn": "去购物"
+              }
+            ]
+          }
+        }
+      ],
+      [],
+      [
+        {
+          "s": "② Find and correct the mistakes in these sentences. Use verbs from Exercise 1.",
+          "hard": false,
+          "tr": "② 找出并改正这些句子里的错误。用练习 1 里的动词。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Find and correct the mistakes in these sentences.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Find and correct</code> —— 找出并改正"
+              ],
+              [
+                "宾语",
+                "<code>the mistakes in these sentences</code> —— 这些句子里的错误"
+              ],
+              [
+                "补充",
+                "<code>Use verbs from Exercise 1</code> —— 用练习 1 的动词"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "correct 改正"
+            ],
+            "tip": "学习英语中常见的「动词 + 名词」搭配很有用。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "I can't go out because I haven't made my homework yet.",
+          "hard": false,
+          "tr": "我不能出去，因为我还没做作业。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>I haven't made my homework yet.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>haven't made</code> —— 还没做（这里错了）"
+              ],
+              [
+                "宾语",
+                "<code>my homework</code> —— 我的作业"
+              ]
+            ],
+            "clauses": [
+              "because 原因从句"
+            ],
+            "gram": [
+              "do one's homework 做作业"
+            ],
+            "tip": "有错：作业用 do → done。官方：1 made → done。",
+            "note": [
+              {
+                "k": "do my homework",
+                "cn": "做作业"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "We passed a really good time during our holidays.",
+          "hard": false,
+          "tr": "我们假期里玩得非常开心。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>We passed a really good time during our holidays.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>passed</code> —— 度过（这里错了）"
+              ],
+              [
+                "宾语",
+                "<code>a really good time</code> —— 非常开心的时光"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "have a good time 玩得开心"
+            ],
+            "tip": "有错：玩得开心用 have → had。官方：2 passed → had。",
+            "note": [
+              {
+                "k": "have a good time",
+                "cn": "玩得开心"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "My friend Marta is making a party on Saturday evening.",
+          "hard": false,
+          "tr": "我朋友 Marta 周六晚上要办派对。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>My friend Marta is making a party on Saturday evening.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>is making</code> —— 正在办（这里错了）"
+              ],
+              [
+                "宾语",
+                "<code>a party</code> —— 派对"
+              ]
+            ],
+            "clauses": [
+              "现在进行时表将来"
+            ],
+            "gram": [
+              "have a party 办派对"
+            ],
+            "tip": "有错：办派对用 have → having。官方：3 making → having。",
+            "note": [
+              {
+                "k": "have a party",
+                "cn": "办派对"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "I'm feeling tired, so I'm going to do a short break.",
+          "hard": false,
+          "tr": "我觉得累了，所以打算休息一会儿。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>I'm going to do a short break.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>going to do</code> —— 打算做（这里错了）"
+              ],
+              [
+                "宾语",
+                "<code>a short break</code> —— 短暂的休息"
+              ]
+            ],
+            "clauses": [
+              "be going to 表打算"
+            ],
+            "gram": [
+              "have/take a break 休息一下"
+            ],
+            "tip": "有错：休息用 have/take → have。官方：4 do → have/take。",
+            "note": [
+              {
+                "k": "have a break",
+                "cn": "休息一下（take a break 也可以）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "I'm sure you'll soon know new friends when you change school.",
+          "hard": false,
+          "tr": "我相信你转学后很快就会交到新朋友。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>you'll soon know new friends when you change school.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>'ll soon know</code> —— 很快就会认识（这里错了）"
+              ],
+              [
+                "宾语",
+                "<code>new friends</code> —— 新朋友"
+              ],
+              [
+                "时间从句",
+                "<code>when you change school</code> —— 当你转学时"
+              ]
+            ],
+            "clauses": [
+              "when 时间从句"
+            ],
+            "gram": [
+              "make friends 交朋友"
+            ],
+            "tip": "有错：交朋友用 make → make。官方：5 know → make。",
+            "note": [
+              {
+                "k": "make friends",
+                "cn": "交朋友"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "The primary school kids were doing a lot of noise.",
+          "hard": false,
+          "tr": "小学生们闹得很吵。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>The primary school kids were doing a lot of noise.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>were doing</code> —— 正在制造（这里错了）"
+              ],
+              [
+                "宾语",
+                "<code>a lot of noise</code> —— 很多噪音"
+              ]
+            ],
+            "clauses": [
+              "过去进行时"
+            ],
+            "gram": [
+              "make a noise 发出噪音"
+            ],
+            "tip": "有错：制造噪音用 make → making。官方：6 doing → making。",
+            "note": [
+              {
+                "k": "make a noise",
+                "cn": "发出噪音"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "I want to learn Chinese, so I'm giving lessons every week.",
+          "hard": false,
+          "tr": "我想学中文，所以我每周上课。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>I'm giving lessons every week.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>'m giving</code> —— 正在给（这里错了）"
+              ],
+              [
+                "宾语",
+                "<code>lessons</code> —— 课"
+              ]
+            ],
+            "clauses": [
+              "so 结果"
+            ],
+            "gram": [
+              "take/do lessons 上课"
+            ],
+            "tip": "有错：上课（学生）用 take → taking。官方：7 giving → taking/doing。",
+            "note": [
+              {
+                "k": "take lessons",
+                "cn": "上课（do lessons 也可以）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Try not to do any mistakes in this exercise!",
+          "hard": false,
+          "tr": "尽量在这道练习里别犯错！",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Try not to do any mistakes in this exercise!</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Try not to do</code> —— 尽量别犯（这里错了）"
+              ],
+              [
+                "宾语",
+                "<code>any mistakes</code> —— 任何错误"
+              ]
+            ],
+            "clauses": [
+              "try to do sth"
+            ],
+            "gram": [
+              "make a mistake 犯错"
+            ],
+            "tip": "有错：犯错用 make → make。官方：8 do → make。",
+            "note": [
+              {
+                "k": "make a mistake",
+                "cn": "犯错"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "FOCUS: USING COLLOCATIONS AS CLUES",
+          "hard": false,
+          "tr": "重点：用搭配当线索。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>FOCUS: USING COLLOCATIONS AS CLUES</b>",
+            "parts": [
+              [
+                "动名词",
+                "<code>USING COLLOCATIONS</code> —— 用搭配"
+              ],
+              [
+                "介词短语",
+                "<code>AS CLUES</code> —— 作为线索"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "clue 线索"
+            ],
+            "tip": "空前后常有「只跟某个选项搭」的词 —— 那就是答案。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "③ Quickly read the text in Exercise 4 below, without looking at options A, B, C and D or filling in any gaps. What kind of text is it and what is it about?",
+          "hard": false,
+          "tr": "③ 快速读下面练习 4 的文章，不要看选项 A、B、C、D，也不要填空。它是什么类型的文本？讲的什么？",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句 + 疑问句：<b>Quickly read the text in Exercise 4 below … What kind of text is it and what is it about?</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Quickly read the text in Exercise 4 below</code> —— 快速读练习 4 的文章"
+              ],
+              [
+                "补充",
+                "<code>without looking at options A, B, C and D or filling in any gaps</code> —— 不看选项也不填空"
+              ],
+              [
+                "疑问句",
+                "<code>What kind of text is it and what is it about?</code> —— 什么类型、讲的什么"
+              ]
+            ],
+            "clauses": [
+              "without + doing"
+            ],
+            "gram": [
+              "kind of text 文本类型"
+            ],
+            "tip": "官方答案：article or blog entry（文章/博客）；a visit to Barcelona（巴塞罗那之行）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "1 What kind of text is it?",
+          "hard": false,
+          "tr": "1 这是什么类型的文本？",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "疑问句：<b>What kind of text is it?</b>",
+            "parts": [
+              [
+                "疑问词",
+                "<code>What kind of text</code> —— 什么类型的文本"
+              ],
+              [
+                "主语",
+                "it —— 它"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "kind 种类"
+            ],
+            "tip": "官方：article or blog entry。"
+          }
+        },
+        {
+          "s": "2 What is it about?",
+          "hard": false,
+          "tr": "2 它讲的是什么？",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "疑问句：<b>What is it about?</b>",
+            "parts": [
+              [
+                "疑问词",
+                "What —— 什么"
+              ],
+              [
+                "表语",
+                "<code>is it about</code> —— 关于什么"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "be about 关于"
+            ],
+            "tip": "官方：a visit to Barcelona。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "④ Choose the best word, A, B, C or D, for each gap. Underline any words before or after the gap that often go with one of those options.",
+          "hard": true,
+          "tr": "④ 为每个空选出最好的词（A、B、C 或 D）。划出空前后常与某个选项搭配的词。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Choose the best word … for each gap. Underline any words …</b>",
+            "parts": [
+              [
+                "谓语 1",
+                "<code>Choose the best word, A, B, C or D, for each gap</code> —— 为每个空选最好的词"
+              ],
+              [
+                "谓语 2",
+                "<code>Underline any words before or after the gap that often go with one of those options</code> —— 划出常与选项搭配的词"
+              ]
+            ],
+            "clauses": [
+              "that 定语从句"
+            ],
+            "gram": [
+              "go with 与……搭配"
+            ],
+            "tip": "先划搭配词，再排除不搭的选项。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Last March my friends and I (1) …………… some free time, so we decided to go abroad.",
+          "hard": false,
+          "tr": "去年三月，我和朋友们有一些空闲时间，所以我们决定出国。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>my friends and I (1) ____ some free time, so we decided to go abroad.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>my friends and I</code> —— 我和朋友们"
+              ],
+              [
+                "谓语（空 1）",
+                "<code>…………… some free time</code> —— 有一些空闲时间"
+              ],
+              [
+                "结果",
+                "<code>so we decided to go abroad</code> —— 所以决定出国"
+              ]
+            ],
+            "clauses": [
+              "so 结果"
+            ],
+            "gram": [
+              "have free time 有空闲时间"
+            ],
+            "tip": "「有时间」用 have → 1 had（B）。官方：1 B。",
+            "note": [
+              {
+                "k": "free time",
+                "cn": "空闲时间"
+              },
+              {
+                "k": "go abroad",
+                "cn": "出国"
+              }
+            ]
+          }
+        },
+        {
+          "s": "We (2) …………… a week in the wonderful city of Barcelona, seeing the sights, eating wonderful meals and (3) …………… some great shopping!",
+          "hard": false,
+          "tr": "我们在美妙的巴塞罗那待了一周，看景点、吃美食，还大肆购物！",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>We (2) ____ a week in the wonderful city of Barcelona … and (3) ____ some great shopping!</b>",
+            "parts": [
+              [
+                "谓语（空 2）",
+                "<code>…………… a week</code> —— 待一周"
+              ],
+              [
+                "地点",
+                "<code>in the wonderful city of Barcelona</code> —— 在巴塞罗那"
+              ],
+              [
+                "伴随",
+                "<code>seeing the sights, eating wonderful meals</code> —— 看景点、吃美食"
+              ],
+              [
+                "谓语（空 3）",
+                "<code>…………… some great shopping</code> —— 大肆购物"
+              ]
+            ],
+            "clauses": [
+              "现在分词作伴随"
+            ],
+            "gram": [
+              "spend a week 待一周；do some shopping 购物"
+            ],
+            "tip": "「度过一周」用 spend → 2 spent（D）；「购物」用 do → 3 doing（C）。官方：2 D / 3 C。",
+            "note": [
+              {
+                "k": "spend",
+                "cn": "度过，花费"
+              },
+              {
+                "k": "the sights",
+                "cn": "景点"
+              }
+            ]
+          }
+        },
+        {
+          "s": "While we were there, we (4) …………… the underground train and then a cable car right to the top of Montjuïc Hill, where we (5) …………… the most amazing views across the city.",
+          "hard": true,
+          "tr": "在那里时，我们坐了地铁，又坐缆车一直到蒙特惠奇山山顶，在那里看到了全城最壮观的景色。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>we (4) ____ the underground train and then a cable car … where we (5) …………… the most amazing views across the city.</b>",
+            "parts": [
+              [
+                "时间从句",
+                "<code>While we were there</code> —— 我们在那里时"
+              ],
+              [
+                "谓语（空 4）",
+                "<code>…………… the underground train</code> —— 坐地铁"
+              ],
+              [
+                "补充",
+                "<code>and then a cable car right to the top of Montjuïc Hill</code> —— 然后坐缆车到山顶"
+              ],
+              [
+                "定语从句",
+                "<code>where we (5) …………… the most amazing views across the city</code> —— 在那里看到全城最美的景色"
+              ]
+            ],
+            "clauses": [
+              "while / where 从句"
+            ],
+            "gram": [
+              "take the underground 坐地铁；see the views 看景色"
+            ],
+            "tip": "「坐车」用 take → 4 took（A）；「看景色」用 see → 5 saw（A）。官方：4 A / 5 A。",
+            "note": [
+              {
+                "k": "underground",
+                "cn": "地铁（英式）"
+              },
+              {
+                "k": "cable car",
+                "cn": "缆车"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Exam Practice Test 2 · Reading Part 5",
+          "hard": false,
+          "tr": "考试实践测试 2 · 阅读第 5 部分。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题行：<b>Exam Practice Test 2 · Reading Part 5</b>",
+            "parts": [
+              [
+                "标题",
+                "Exam Practice Test 2 —— 考试实践测试编号"
+              ],
+              [
+                "标题",
+                "Reading Part 5 —— 阅读第 5 部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式省略句"
+            ],
+            "tip": "判断每个空格的四个选项分别是什么词性，如名词、动词等。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Questions 21–26",
+          "hard": false,
+          "tr": "第 21–26 题。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题：<b>Questions 21–26</b>（第 21–26 题）",
+            "parts": [
+              [
+                "名词",
+                "Questions —— 题目"
+              ],
+              [
+                "数字",
+                "21–26 —— 第 21 到第 26 题"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "真题部分题号连续编号"
+            ],
+            "tip": "六道题 = 六个空。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "For each question, choose the correct answer.",
+          "hard": false,
+          "tr": "每题选出一个正确答案。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>choose the correct answer</b>（选出正确答案）",
+            "parts": [
+              [
+                "状语",
+                "<code>For each question</code> —— 对每一道题"
+              ],
+              [
+                "谓语",
+                "choose —— 选择"
+              ],
+              [
+                "宾语",
+                "<code>the correct answer</code> —— 正确的答案"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "祈使句"
+            ],
+            "tip": "先看空前后跟什么词，再选搭配得上的。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Many people think sheep aren't very intelligent creatures.",
+          "hard": false,
+          "tr": "很多人认为羊不是很聪明的动物。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>Many people think sheep aren't very intelligent creatures.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Many people</code> —— 很多人"
+              ],
+              [
+                "谓语",
+                "think —— 认为"
+              ],
+              [
+                "宾语从句",
+                "<code>sheep aren't very intelligent creatures</code> —— 羊不是很聪明的动物"
+              ]
+            ],
+            "clauses": [
+              "that 省略的宾语从句"
+            ],
+            "gram": [
+              "intelligent 聪明的；creature 生物"
+            ],
+            "tip": "开头是「大家以为」—— 后面会有反转。",
+            "note": [
+              {
+                "k": "intelligent",
+                "cn": "聪明的，有智能的"
+              },
+              {
+                "k": "creature",
+                "cn": "生物，动物，人"
+              }
+            ]
+          }
+        },
+        {
+          "s": "But in fact, 【21】 to new research, they may be cleverer than we think.",
+          "hard": false,
+          "tr": "但事实上，根据新研究，它们可能比我们想的更聪明。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>they may be cleverer than we think.</b>",
+            "parts": [
+              [
+                "状语",
+                "<code>But in fact</code> —— 但事实上"
+              ],
+              [
+                "状语（空 21）",
+                "<code>【21】 to new research</code> —— 根据新研究"
+              ],
+              [
+                "表语",
+                "<code>may be cleverer than we think</code> —— 可能比我们想的更聪明"
+              ]
+            ],
+            "clauses": [
+              "比较级 than"
+            ],
+            "gram": [
+              "according to 根据……的说法"
+            ],
+            "tip": "只有 according 后面能接 to → 21 选 D according。官方：21 D。"
+          }
+        },
+        {
+          "s": "For example, sheep can actually be trained to recognise human faces from photographs!",
+          "hard": false,
+          "tr": "例如，羊其实可以被训练来从照片上识别人类的面孔！",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "被动句：<b>sheep can actually be trained to recognise human faces from photographs!</b>",
+            "parts": [
+              [
+                "主语",
+                "sheep —— 羊"
+              ],
+              [
+                "谓语",
+                "<code>can actually be trained</code> —— 可以被训练"
+              ],
+              [
+                "目的",
+                "<code>to recognise human faces from photographs</code> —— 从照片识别人类面孔"
+              ]
+            ],
+            "clauses": [
+              "被动语态；be trained to do sth"
+            ],
+            "gram": [
+              "recognise 识别"
+            ],
+            "tip": "「识别面孔」—— 全文的主题句。",
+            "note": [
+              {
+                "k": "recognise",
+                "cn": "识别，认出"
+              },
+              {
+                "k": "human faces",
+                "cn": "人类的面孔"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Recognising faces is an important human social 【22】.",
+          "hard": false,
+          "tr": "识别面孔是一项重要的人类社交技能。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>Recognising faces is an important human social 【22】.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>Recognising faces</code> —— 识别面孔"
+              ],
+              [
+                "系动词",
+                "is —— 是"
+              ],
+              [
+                "表语（空 22）",
+                "<code>an important human social 【22】</code> —— 一项重要的人类社交……」"
+              ]
+            ],
+            "clauses": [
+              "动名词作主语"
+            ],
+            "gram": [
+              "social skill 社交技能"
+            ],
+            "tip": "「社交技能」是固定说法 → 22 选 A skill。官方：22 A。"
+          }
+        },
+        {
+          "s": "However, it seems that sheep are also social animals that can recognise other sheep as well as 【23】 humans.",
+          "hard": true,
+          "tr": "然而，羊似乎也是社交动物，它们既能认出其他羊，也能认出熟悉的人类。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>it seems that sheep are also social animals …</b>",
+            "parts": [
+              [
+                "转折",
+                "However —— 然而"
+              ],
+              [
+                "主语从句",
+                "<code>it seems that sheep are also social animals</code> —— 羊似乎也是社交动物"
+              ],
+              [
+                "定语从句",
+                "<code>that can recognise other sheep as well as 【23】 humans</code> —— 能认出其他羊和……的人类"
+              ]
+            ],
+            "clauses": [
+              "it seems that…；that 定语从句；as well as"
+            ],
+            "gram": [
+              "familiar 熟悉的"
+            ],
+            "tip": "「熟悉的人类」（见过的面孔）→ 23 选 C familiar。官方：23 C。",
+            "note": [
+              {
+                "k": "social animals",
+                "cn": "社交动物"
+              }
+            ]
+          }
+        },
+        {
+          "s": "In experiments, researchers trained eight sheep to recognise the faces of celebrities from photographs.",
+          "hard": false,
+          "tr": "在实验中，研究人员训练了八只羊从照片上认出名人的面孔。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>researchers trained eight sheep to recognise the faces of celebrities from photographs.</b>",
+            "parts": [
+              [
+                "状语",
+                "<code>In experiments</code> —— 在实验中"
+              ],
+              [
+                "谓语",
+                "<code>trained eight sheep</code> —— 训练了八只羊"
+              ],
+              [
+                "目的",
+                "<code>to recognise the faces of celebrities from photographs</code> —— 从照片认出名人的面孔"
+              ]
+            ],
+            "clauses": [
+              "train sb to do sth"
+            ],
+            "gram": [
+              "celebrity 名人"
+            ],
+            "tip": "「名人的面孔」—— 实验的具体设定。",
+            "note": [
+              {
+                "k": "celebrity",
+                "cn": "名人"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Training involved getting the sheep to 【24】 decisions about the photos they saw.",
+          "hard": false,
+          "tr": "训练包括让羊对看到的照片做决定。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>Training involved getting the sheep to 【24】 decisions about the photos they saw.</b>",
+            "parts": [
+              [
+                "主语",
+                "Training —— 训练"
+              ],
+              [
+                "谓语",
+                "<code>involved</code> —— 包括"
+              ],
+              [
+                "宾语",
+                "<code>getting the sheep to 【24】 decisions about the photos they saw</code> —— 让羊对看到的照片做决定"
+              ]
+            ],
+            "clauses": [
+              "get sb to do sth"
+            ],
+            "gram": [
+              "make a decision 做决定"
+            ],
+            "tip": "「做决定」用 make → 24 选 B make。官方：24 B。",
+            "note": [
+              {
+                "k": "involved",
+                "cn": "涉及，包含"
+              },
+              {
+                "k": "make a decision",
+                "cn": "做决定"
+              }
+            ]
+          }
+        },
+        {
+          "s": "At one end of a room, they would see two different photographs, and would receive a 【25】 of food for approaching the photograph of the celebrity; if they approached the wrong photograph, they got nothing.",
+          "hard": true,
+          "tr": "在房间的一端，它们会看到两张不同的照片；走近名人照片会得到一份食物奖励；如果走近错误的照片，就什么也得不到。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>they would see two different photographs, and would receive a 【25】 of food …</b>",
+            "parts": [
+              [
+                "地点",
+                "<code>At one end of a room</code> —— 在房间的一端"
+              ],
+              [
+                "谓语 1",
+                "<code>would see two different photographs</code> —— 会看到两张照片"
+              ],
+              [
+                "谓语 2",
+                "<code>would receive a 【25】 of food for approaching the photograph of the celebrity</code> —— 走近名人照片会得到一份食物……"
+              ],
+              [
+                "条件从句",
+                "<code>if they approached the wrong photograph, they got nothing</code> —— 走近错照片就什么都没有"
+              ]
+            ],
+            "clauses": [
+              "if 条件从句"
+            ],
+            "gram": [
+              "reward 奖励；approach 走近"
+            ],
+            "tip": "「一份食物奖励」→ 25 选 A reward。官方：25 A。",
+            "note": [
+              {
+                "k": "approaching",
+                "cn": "靠近，临近，接洽，处理"
+              },
+              {
+                "k": "reward",
+                "cn": "奖励，回报"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Over time, they learned to 【26】 getting food with the celebrity's photograph.",
+          "hard": false,
+          "tr": "随着时间推移，它们学会了把得到食物和名人照片联系起来。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>they learned to 【26】 getting food with the celebrity's photograph.</b>",
+            "parts": [
+              [
+                "时间",
+                "<code>Over time</code> —— 随着时间推移"
+              ],
+              [
+                "谓语",
+                "<code>learned to 【26】</code> —— 学会……"
+              ],
+              [
+                "宾语",
+                "<code>getting food with the celebrity's photograph</code> —— 把得到食物和名人照片（联系起来）"
+              ]
+            ],
+            "clauses": [
+              "learn to do sth"
+            ],
+            "gram": [
+              "connect A with B 把 A 与 B 联系起来"
+            ],
+            "tip": "「把 A 和 B 联系起来」用 connect → 26 选 D connect。官方：26 D。",
+            "note": [
+              {
+                "k": "over time",
+                "cn": "随着时间的推移"
+              },
+              {
+                "k": "connect",
+                "cn": "连接，想通，使接通"
+              }
+            ]
+          }
+        },
+        {
+          "s": "And after training, the sheep correctly chose the celebrity's face eight times out of ten!",
+          "hard": false,
+          "tr": "训练之后，羊能十次中八次正确地选出名人的面孔！",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>the sheep correctly chose the celebrity's face eight times out of ten!</b>",
+            "parts": [
+              [
+                "时间",
+                "<code>after training</code> —— 训练之后"
+              ],
+              [
+                "谓语",
+                "<code>correctly chose</code> —— 正确地选出"
+              ],
+              [
+                "宾语",
+                "<code>the celebrity's face</code> —— 名人的面孔"
+              ],
+              [
+                "频率",
+                "<code>eight times out of ten</code> —— 十次中八次"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "out of ten 在十次中"
+            ],
+            "tip": "十次对八次 —— 实验成功的收尾。",
+            "note": [
+              {
+                "k": "out of ten",
+                "cn": "在十次中"
+              }
+            ]
+          }
+        }
+      ]
+    ],
+    "blocks": [
+      {
+        "r": "h",
+        "head": {
+          "l": "Training Test 2",
+          "r": "Reading Part 5"
+        },
+        "badge": "答案见 P202"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "o",
+        "frame": true
+      },
+      {
+        "r": "q",
+        "pick": [
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122
+        ]
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "n": "1",
+        "pick": [
+          123
+        ]
+      },
+      {
+        "r": "q",
+        "n": "2",
+        "pick": [
+          124
+        ]
+      },
+      {
+        "r": "q",
+        "n": "3",
+        "pick": [
+          125
+        ]
+      },
+      {
+        "r": "q",
+        "n": "4",
+        "pick": [
+          126
+        ]
+      },
+      {
+        "r": "q",
+        "n": "5",
+        "pick": [
+          127
+        ]
+      },
+      {
+        "r": "q",
+        "n": "6",
+        "pick": [
+          128
+        ]
+      },
+      {
+        "r": "q",
+        "n": "7",
+        "pick": [
+          129
+        ]
+      },
+      {
+        "r": "q",
+        "n": "8",
+        "pick": [
+          130
+        ]
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "o",
+        "pick": [
+          131,
+          132
+        ]
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "img": {
+          "src": "assets/img/t2-p5-barcelona.png",
+          "alt": "巴塞罗那的照片（原书 P66）",
+          "side": "left",
+          "w": 300
+        },
+        "pick": [
+          133,
+          134,
+          135,
+          136,
+          137
+        ]
+      },
+      {
+        "r": "h",
+        "head": {
+          "l": "Exam Practice Test 2",
+          "r": "Reading Part 5"
+        },
+        "badge": "答案见 P202"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "img": {
+          "src": "assets/img/t2-p5-sheep.png",
+          "alt": "绵羊的照片（原书 P67）",
+          "side": "left",
+          "w": 280
+        },
+        "pick": [
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ]
+      }
+    ]
+  },
+  "phrases": [
+    "a bus",
+    "a noise",
+    "a job",
+    "a photo",
+    "an exercise",
+    "an idea",
+    "a break",
+    "a good time",
+    "a mess",
+    "a mistake",
+    "a shower",
+    "a phone call",
+    "an exam",
+    "an English course",
+    "my homework",
+    "some shopping",
+    "a party",
+    "free time",
+    "go abroad",
+    "the sights",
+    "wonderful meals",
+    "the underground train",
+    "a cable car",
+    "the most amazing views",
+    "intelligent creatures",
+    "human faces",
+    "social animals",
+    "out of ten"
+  ],
+  "glossary": {
+    "reading": {
+      "pos": "n.",
+      "ipa": "/ˈriːdɪŋ/",
+      "cn": "阅读"
+    },
+    "do sport": {
+      "pos": "词组",
+      "ipa": "/ˌduː ˈspɔːt/",
+      "cn": "做运动"
+    },
+    "have fun": {
+      "pos": "词组",
+      "ipa": "/ˌhæv ˈfʌn/",
+      "cn": "玩得开心"
+    },
+    "take an exam": {
+      "pos": "词组",
+      "ipa": "/ˌteɪk ən ɪɡˈzæm/",
+      "cn": "参加考试（do/have an exam 也可以）"
+    },
+    "make friends": {
+      "pos": "词组",
+      "ipa": "/ˌmeɪk ˈfrendz/",
+      "cn": "交朋友（have friends 有朋友也可以）"
+    },
+    "do my homework": {
+      "pos": "词组",
+      "ipa": "/ˌduː maɪ ˈhəʊmwɜːk/",
+      "cn": "做作业"
+    },
+    "have a party": {
+      "pos": "词组",
+      "ipa": "/ˌhæv ə ˈpɑːti/",
+      "cn": "办派对"
+    },
+    "make a mistake": {
+      "pos": "词组",
+      "ipa": "/ˌmeɪk ə mɪˈsteɪk/",
+      "cn": "犯错"
+    },
+    "creature": {
+      "pos": "n.",
+      "ipa": "/ˈkriːtʃə/",
+      "cn": "生物，动物，人"
+    },
+    "a mistake": {
+      "pos": "词组",
+      "ipa": "/ə mɪˈsteɪk/",
+      "cn": "一个错误"
+    },
+    "an exam": {
+      "pos": "词组",
+      "ipa": "/ən ɪɡˈzæm/",
+      "cn": "一场考试"
+    },
+    "an english course": {
+      "pos": "词组",
+      "ipa": "/ən ˈɪŋɡlɪʃ kɔːs/",
+      "cn": "英语课程（do an English course 上英语课）"
+    },
+    "my homework": {
+      "pos": "词组",
+      "ipa": "/maɪ ˈhəʊmwɜːk/",
+      "cn": "我的作业"
+    },
+    "a party": {
+      "pos": "词组",
+      "ipa": "/ə ˈpɑːti/",
+      "cn": "一场派对"
+    },
+    "a cable car": {
+      "pos": "词组",
+      "ipa": "/ə ˈkeɪbl kɑː/",
+      "cn": "一辆缆车"
+    },
+    "gaps": {
+      "pos": "n.",
+      "ipa": "/ɡæps/",
+      "cn": "空，缺口（gap 的复数）"
+    },
+    "gap": {
+      "pos": "n.",
+      "ipa": "/ɡæp/",
+      "cn": "空，缺口"
+    },
+    "fill": {
+      "pos": "v.",
+      "ipa": "/fɪl/",
+      "cn": "填满；装满",
+      "note": "fill in a gap 填空。"
+    },
+    "fill in": {
+      "pos": "词组",
+      "ipa": "/ˌfɪl ˈɪn/",
+      "cn": "填写"
+    },
+    "words": {
+      "pos": "n.",
+      "ipa": "/wɜːdz/",
+      "cn": "词（word 的复数）"
+    },
+    "vocabulary": {
+      "pos": "n.",
+      "ipa": "/vəˈkæbjələri/",
+      "cn": "词汇"
+    },
+    "collocations": {
+      "pos": "n.",
+      "ipa": "/ˌkɒləˈkeɪʃnz/",
+      "cn": "搭配（collocation 的复数）"
+    },
+    "candidates": {
+      "pos": "n.",
+      "ipa": "/ˈkændɪdəts/",
+      "cn": "考生（candidate 的复数）"
+    },
+    "mistakes": {
+      "pos": "n.",
+      "ipa": "/mɪˈsteɪks/",
+      "cn": "错误（mistake 的复数）"
+    },
+    "noun": {
+      "pos": "n.",
+      "ipa": "/naʊn/",
+      "cn": "名词"
+    },
+    "commonly": {
+      "pos": "adv.",
+      "ipa": "/ˈkɒmənli/",
+      "cn": "通常，普遍地"
+    },
+    "phrase": {
+      "pos": "n.",
+      "ipa": "/freɪz/",
+      "cn": "短语"
+    },
+    "box": {
+      "pos": "n.",
+      "ipa": "/bɒks/",
+      "cn": "盒子，方框"
+    },
+    "bus": {
+      "pos": "n.",
+      "ipa": "/bʌs/",
+      "cn": "公交车，公共汽车"
+    },
+    "a bus": {
+      "pos": "词组",
+      "ipa": "/ə ˈbʌs/",
+      "cn": "公交车（take a bus 乘公交）"
+    },
+    "take a bus": {
+      "pos": "词组",
+      "ipa": "/ˌteɪk ə ˈbʌs/",
+      "cn": "乘公交车"
+    },
+    "noise": {
+      "pos": "n.",
+      "ipa": "/nɔɪz/",
+      "cn": "噪音"
+    },
+    "a noise": {
+      "pos": "词组",
+      "ipa": "/ə ˈnɔɪz/",
+      "cn": "噪音（make a noise 发出噪音）"
+    },
+    "make a noise": {
+      "pos": "词组",
+      "ipa": "/ˌmeɪk ə ˈnɔɪz/",
+      "cn": "发出噪音"
+    },
+    "job": {
+      "pos": "n.",
+      "ipa": "/dʒɒb/",
+      "cn": "工作，活儿，任务",
+      "note": "可数。指具体的「一份活儿」；work 泛指「工作」，不可数。"
+    },
+    "a job": {
+      "pos": "词组",
+      "ipa": "/ə ˈdʒɒb/",
+      "cn": "工作（have a job 有工作）"
+    },
+    "have a job": {
+      "pos": "词组",
+      "ipa": "/ˌhæv ə ˈdʒɒb/",
+      "cn": "有工作"
+    },
+    "photo": {
+      "pos": "n.",
+      "ipa": "/ˈfəʊtəʊ/",
+      "cn": "照片"
+    },
+    "a photo": {
+      "pos": "词组",
+      "ipa": "/ə ˈfəʊtəʊ/",
+      "cn": "照片（take a photo 拍照）"
+    },
+    "take a photo": {
+      "pos": "词组",
+      "ipa": "/ˌteɪk ə ˈfəʊtəʊ/",
+      "cn": "拍照"
+    },
+    "exercise": {
+      "pos": "n.",
+      "ipa": "/ˈeksəsaɪz/",
+      "cn": "练习；运动"
+    },
+    "an exercise": {
+      "pos": "词组",
+      "ipa": "/ən ˈeksəsaɪz/",
+      "cn": "练习（do an exercise 做练习）"
+    },
+    "do an exercise": {
+      "pos": "词组",
+      "ipa": "/ˌduː ən ˈeksəsaɪz/",
+      "cn": "做练习"
+    },
+    "idea": {
+      "pos": "n.",
+      "ipa": "/aɪˈdɪə/",
+      "cn": "想法，主意（have no idea 完全不知道）"
+    },
+    "an idea": {
+      "pos": "词组",
+      "ipa": "/ən aɪˈdɪə/",
+      "cn": "主意（have an idea 有主意）"
+    },
+    "have an idea": {
+      "pos": "词组",
+      "ipa": "/ˌhæv ən aɪˈdɪə/",
+      "cn": "有主意"
+    },
+    "break": {
+      "pos": "n./v.",
+      "ipa": "/breɪk/",
+      "cn": "休息；打破",
+      "note": "have a break 休息一下。"
+    },
+    "a break": {
+      "pos": "词组",
+      "ipa": "/ə ˈbreɪk/",
+      "cn": "休息（have/take a break）"
+    },
+    "have a break": {
+      "pos": "词组",
+      "ipa": "/ˌhæv ə ˈbreɪk/",
+      "cn": "休息一下（take a break 也可以）"
+    },
+    "good": {
+      "pos": "adj.",
+      "ipa": "/ɡʊd/",
+      "cn": "好的"
+    },
+    "a good time": {
+      "pos": "词组",
+      "ipa": "/ə ˌɡʊd ˈtaɪm/",
+      "cn": "开心的时光（have a good time 玩得开心）"
+    },
+    "have a good time": {
+      "pos": "词组",
+      "ipa": "/ˌhæv ə ˌɡʊd ˈtaɪm/",
+      "cn": "玩得开心"
+    },
+    "mess": {
+      "pos": "n.",
+      "ipa": "/mes/",
+      "cn": "脏乱，一团糟"
+    },
+    "a mess": {
+      "pos": "词组",
+      "ipa": "/ə ˈmes/",
+      "cn": "一团糟（make a mess 弄得一团糟）"
+    },
+    "make a mess": {
+      "pos": "词组",
+      "ipa": "/ˌmeɪk ə ˈmes/",
+      "cn": "弄得一团糟"
+    },
+    "shower": {
+      "pos": "n.",
+      "ipa": "/ˈʃaʊə/",
+      "cn": "淋浴"
+    },
+    "a shower": {
+      "pos": "词组",
+      "ipa": "/ə ˈʃaʊə/",
+      "cn": "淋浴（have/take a shower）"
+    },
+    "have a shower": {
+      "pos": "词组",
+      "ipa": "/ˌhæv ə ˈʃaʊə/",
+      "cn": "冲个澡（take a shower 也可以）"
+    },
+    "call": {
+      "pos": "n./v.",
+      "ipa": "/kɔːl/",
+      "cn": "电话；打电话；叫（call sb 给某人打电话）"
+    },
+    "a phone call": {
+      "pos": "词组",
+      "ipa": "/ə ˈfəʊn kɔːl/",
+      "cn": "电话（make/take a phone call）"
+    },
+    "make a phone call": {
+      "pos": "词组",
+      "ipa": "/ˌmeɪk ə ˈfəʊn kɔːl/",
+      "cn": "打电话（take a phone call 接电话也可以）"
+    },
+    "english": {
+      "pos": "n./adj.",
+      "ipa": "/ˈɪŋɡlɪʃ/",
+      "cn": "英语（的）"
+    },
+    "do an English course": {
+      "pos": "词组",
+      "ipa": "/ˌduː ən ˈɪŋɡlɪʃ kɔːs/",
+      "cn": "上英语课"
+    },
+    "course": {
+      "pos": "n.",
+      "ipa": "/kɔːs/",
+      "cn": "课程"
+    },
+    "notes": {
+      "pos": "n.",
+      "ipa": "/nəʊts/",
+      "cn": "笔记（note 的复数）"
+    },
+    "take notes": {
+      "pos": "词组",
+      "ipa": "/ˌteɪk ˈnəʊts/",
+      "cn": "记笔记（make notes 也可以）"
+    },
+    "lunch": {
+      "pos": "n.",
+      "ipa": "/lʌntʃ/",
+      "cn": "午餐"
+    },
+    "have lunch": {
+      "pos": "词组",
+      "ipa": "/ˌhæv ˈlʌntʃ/",
+      "cn": "吃午饭"
+    },
+    "shopping": {
+      "pos": "n.",
+      "ipa": "/ˈʃɒpɪŋ/",
+      "cn": "购物"
+    },
+    "some shopping": {
+      "pos": "词组",
+      "ipa": "/səm ˈʃɒpɪŋ/",
+      "cn": "购物（do some shopping 去购物）"
+    },
+    "do some shopping": {
+      "pos": "词组",
+      "ipa": "/ˌduː səm ˈʃɒpɪŋ/",
+      "cn": "去购物"
+    },
+    "sentences": {
+      "pos": "n.",
+      "ipa": "/ˈsentənsɪz/",
+      "cn": "句子（sentence 的复数）"
+    },
+    "verbs": {
+      "pos": "n.",
+      "ipa": "/vɜːbz/",
+      "cn": "动词（verb 的复数）"
+    },
+    "can't": {
+      "pos": "contr.",
+      "ipa": "/kɑːnt/",
+      "cn": "不能（= cannot）"
+    },
+    "haven't": {
+      "pos": "contr.",
+      "ipa": "/ˈhævnt/",
+      "cn": "= have not"
+    },
+    "yet": {
+      "pos": "adv.",
+      "ipa": "/jet/",
+      "cn": "还（用于否定/疑问）"
+    },
+    "passed": {
+      "pos": "v.",
+      "ipa": "/pɑːst/",
+      "cn": "经过，通过（pass 的过去式）"
+    },
+    "holidays": {
+      "pos": "n.",
+      "ipa": "/ˈhɒlədeɪz/",
+      "cn": "假期（holiday 的复数）"
+    },
+    "marta": {
+      "pos": "n.",
+      "ipa": "/ˈmɑːtə/",
+      "cn": "Marta（女子名）"
+    },
+    "making": {
+      "pos": "v.",
+      "ipa": "/ˈmeɪkɪŋ/",
+      "cn": "做，制造（make 的现在分词）"
+    },
+    "saturday": {
+      "pos": "n.",
+      "ipa": "/ˈsætədeɪ/",
+      "cn": "星期六"
+    },
+    "evening": {
+      "pos": "n.",
+      "ipa": "/ˈiːvnɪŋ/",
+      "cn": "晚上；傍晚"
+    },
+    "going": {
+      "pos": "v.",
+      "ipa": "/ˈɡəʊɪŋ/",
+      "cn": "去；be going to 将要"
+    },
+    "you'll": {
+      "pos": "contr.",
+      "ipa": "/juːl/",
+      "cn": "= you will（你将会）"
+    },
+    "change": {
+      "pos": "v./n.",
+      "ipa": "/tʃeɪndʒ/",
+      "cn": "改变；换；零钱"
+    },
+    "primary": {
+      "pos": "adj.",
+      "ipa": "/ˈpraɪməri/",
+      "cn": "初级的（primary school 小学）"
+    },
+    "kids": {
+      "pos": "n.",
+      "ipa": "/kɪdz/",
+      "cn": "孩子们（kid 的复数）"
+    },
+    "chinese": {
+      "pos": "n./adj.",
+      "ipa": "/ˌtʃaɪˈniːz/",
+      "cn": "中文；中国的"
+    },
+    "giving": {
+      "pos": "v.",
+      "ipa": "/ˈɡɪvɪŋ/",
+      "cn": "给（give 的现在分词）"
+    },
+    "lessons": {
+      "pos": "n.",
+      "ipa": "/ˈlesnz/",
+      "cn": "课、课程（lesson 的复数）"
+    },
+    "take lessons": {
+      "pos": "词组",
+      "ipa": "/ˌteɪk ˈlesnz/",
+      "cn": "上课（do lessons 也可以）"
+    },
+    "week": {
+      "pos": "n.",
+      "ipa": "/wiːk/",
+      "cn": "星期；周"
+    },
+    "using": {
+      "pos": "v.",
+      "ipa": "/ˈjuːzɪŋ/",
+      "cn": "使用（use 的现在分词）"
+    },
+    "clues": {
+      "pos": "n.",
+      "ipa": "/kluːz/",
+      "cn": "线索（clue 的复数）"
+    },
+    "quickly": {
+      "pos": "adv.",
+      "ipa": "/ˈkwɪkli/",
+      "cn": "快速地"
+    },
+    "options": {
+      "pos": "n.",
+      "ipa": "/ˈɒpʃnz/",
+      "cn": "选项（option 的复数）"
+    },
+    "filling": {
+      "pos": "v.",
+      "ipa": "/ˈfɪlɪŋ/",
+      "cn": "填（fill 的现在分词）"
+    },
+    "underline": {
+      "pos": "v.",
+      "ipa": "/ˌʌndəˈlaɪn/",
+      "cn": "划下划线（在……下面划线）"
+    },
+    "those": {
+      "pos": "pron./det.",
+      "ipa": "/ðəʊz/",
+      "cn": "那些（that 的复数）"
+    },
+    "march": {
+      "pos": "n.",
+      "ipa": "/mɑːtʃ/",
+      "cn": "三月"
+    },
+    "free": {
+      "pos": "adj.",
+      "ipa": "/friː/",
+      "cn": "免费的；自由的；空闲的"
+    },
+    "free time": {
+      "pos": "词组",
+      "ipa": "/ˌfriː ˈtaɪm/",
+      "cn": "空闲时间"
+    },
+    "decided": {
+      "pos": "v.",
+      "ipa": "/dɪˈsaɪdɪd/",
+      "cn": "决定（decide 的过去式）"
+    },
+    "abroad": {
+      "pos": "adv.",
+      "ipa": "/əˈbrɔːd/",
+      "cn": "在国外；到国外",
+      "note": "go/study abroad 出国——abroad 前不加 to。"
+    },
+    "go abroad": {
+      "pos": "词组",
+      "ipa": "/ˌɡəʊ əˈbrɔːd/",
+      "cn": "出国"
+    },
+    "wonderful": {
+      "pos": "adj.",
+      "ipa": "/ˈwʌndəfl/",
+      "cn": "美妙的；极好的"
+    },
+    "barcelona": {
+      "pos": "n.",
+      "ipa": "/ˌbɑːsəˈləʊnə/",
+      "cn": "Barcelona（巴塞罗那，西班牙城市）"
+    },
+    "seeing": {
+      "pos": "v.",
+      "ipa": "/ˈsiːɪŋ/",
+      "cn": "看（see 的现在分词）"
+    },
+    "sights": {
+      "pos": "n.",
+      "ipa": "/saɪts/",
+      "cn": "景物、景点（sight 的复数）"
+    },
+    "the sights": {
+      "pos": "词组",
+      "ipa": "/ðə ˈsaɪts/",
+      "cn": "景点"
+    },
+    "eating": {
+      "pos": "v.",
+      "ipa": "/ˈiːtɪŋ/",
+      "cn": "吃（eat 的现在分词）"
+    },
+    "meals": {
+      "pos": "n.",
+      "ipa": "/miːlz/",
+      "cn": "餐（meal 的复数）"
+    },
+    "wonderful meals": {
+      "pos": "词组",
+      "ipa": "/ˌwʌndəfl ˈmiːlz/",
+      "cn": "美味佳肴"
+    },
+    "while": {
+      "pos": "conj./n.",
+      "ipa": "/waɪl/",
+      "cn": "一会儿；当……的时候"
+    },
+    "underground": {
+      "pos": "n./adj.",
+      "ipa": "/ˈʌndəɡraʊnd/",
+      "cn": "地铁（英式）；地下的"
+    },
+    "the underground train": {
+      "pos": "词组",
+      "ipa": "/ði ˈʌndəɡraʊnd treɪn/",
+      "cn": "地铁"
+    },
+    "train": {
+      "pos": "n./v.",
+      "ipa": "/treɪn/",
+      "cn": "火车；训练",
+      "note": "作动词是「训练、培训」。"
+    },
+    "cable": {
+      "pos": "n.",
+      "ipa": "/ˈkeɪbl/",
+      "cn": "缆绳"
+    },
+    "car": {
+      "pos": "n.",
+      "ipa": "/kɑː/",
+      "cn": "汽车"
+    },
+    "cable car": {
+      "pos": "词组",
+      "ipa": "/ˈkeɪbl kɑː/",
+      "cn": "缆车"
+    },
+    "top": {
+      "pos": "n./adj.",
+      "ipa": "/tɒp/",
+      "cn": "顶部；顶部的；顶级的"
+    },
+    "montju": {
+      "pos": "n.",
+      "ipa": "/mɒntˈʒuːiːk/",
+      "cn": "Montjuïc（蒙特惠奇山，巴塞罗那）"
+    },
+    "hill": {
+      "pos": "n.",
+      "ipa": "/hɪl/",
+      "cn": "山丘"
+    },
+    "most": {
+      "pos": "adv./det.",
+      "ipa": "/məʊst/",
+      "cn": "最（最高级）；最多；大多数",
+      "note": "the most exciting 最激动人心的（最高级）。"
+    },
+    "amazing": {
+      "pos": "adj.",
+      "ipa": "/əˈmeɪzɪŋ/",
+      "cn": "令人惊叹的；很棒的"
+    },
+    "views": {
+      "pos": "n.",
+      "ipa": "/vjuːz/",
+      "cn": "景色（view 的复数）"
+    },
+    "the most amazing views": {
+      "pos": "词组",
+      "ipa": "/ðə ˌməʊst əˈmeɪzɪŋ ˈvjuːz/",
+      "cn": "最壮观的景色"
+    },
+    "across": {
+      "pos": "prep.",
+      "ipa": "/əˈkrɒs/",
+      "cn": "穿过；遍及"
+    },
+    "questions": {
+      "pos": "n.",
+      "ipa": "/ˈkwestʃənz/",
+      "cn": "题目（question 的复数）"
+    },
+    "sheep": {
+      "pos": "n.",
+      "ipa": "/ʃiːp/",
+      "cn": "绵羊（单复数同形）"
+    },
+    "intelligent": {
+      "pos": "adj.",
+      "ipa": "/ɪnˈtelɪdʒənt/",
+      "cn": "聪明的，有智能的"
+    },
+    "intelligent creatures": {
+      "pos": "词组",
+      "ipa": "/ɪnˌtelɪdʒənt ˈkriːtʃəz/",
+      "cn": "聪明的动物"
+    },
+    "creatures": {
+      "pos": "n.",
+      "ipa": "/ˈkriːtʃəz/",
+      "cn": "生物，动物，人（creature 的复数）"
+    },
+    "research": {
+      "pos": "n./v.",
+      "ipa": "/rɪˈsɜːtʃ/",
+      "cn": "研究；调查",
+      "note": "do (some) research 做研究——动词用 do，不用 make。"
+    },
+    "may": {
+      "pos": "modal",
+      "ipa": "/meɪ/",
+      "cn": "可能；可以"
+    },
+    "cleverer": {
+      "pos": "adj.",
+      "ipa": "/ˈklevərə/",
+      "cn": "更聪明的（clever 的比较级）"
+    },
+    "trained": {
+      "pos": "v.",
+      "ipa": "/treɪnd/",
+      "cn": "训练（train 的过去式/过去分词）"
+    },
+    "recognise": {
+      "pos": "v.",
+      "ipa": "/ˈrekəɡnaɪz/",
+      "cn": "识别，认出"
+    },
+    "human": {
+      "pos": "adj./n.",
+      "ipa": "/ˈhjuːmən/",
+      "cn": "人类的；人类"
+    },
+    "faces": {
+      "pos": "n.",
+      "ipa": "/ˈfeɪsɪz/",
+      "cn": "面孔（face 的复数）"
+    },
+    "human faces": {
+      "pos": "词组",
+      "ipa": "/ˌhjuːmən ˈfeɪsɪz/",
+      "cn": "人类的面孔"
+    },
+    "photographs": {
+      "pos": "n.",
+      "ipa": "/ˈfəʊtəɡrɑːfs/",
+      "cn": "照片（photograph 的复数）"
+    },
+    "recognising": {
+      "pos": "v.",
+      "ipa": "/ˈrekəɡnaɪzɪŋ/",
+      "cn": "识别（recognise 的现在分词）"
+    },
+    "important": {
+      "pos": "adj.",
+      "ipa": "/ɪmˈpɔːtnt/",
+      "cn": "重要的"
+    },
+    "social": {
+      "pos": "adj.",
+      "ipa": "/ˈsəʊʃl/",
+      "cn": "社交的，社会的"
+    },
+    "social animals": {
+      "pos": "词组",
+      "ipa": "/ˌsəʊʃl ˈænɪmlz/",
+      "cn": "社交动物"
+    },
+    "seems": {
+      "pos": "v.",
+      "ipa": "/siːmz/",
+      "cn": "似乎（seem 的第三人称单数）"
+    },
+    "animals": {
+      "pos": "n.",
+      "ipa": "/ˈænɪmlz/",
+      "cn": "动物（animal 的复数）"
+    },
+    "well": {
+      "pos": "adv.",
+      "ipa": "/wel/",
+      "cn": "好；很",
+      "note": "well worth 非常值得。"
+    },
+    "humans": {
+      "pos": "n.",
+      "ipa": "/ˈhjuːmənz/",
+      "cn": "人类（human 的复数）"
+    },
+    "experiments": {
+      "pos": "n.",
+      "ipa": "/ɪkˈsperɪmənts/",
+      "cn": "实验（experiment 的复数）"
+    },
+    "researchers": {
+      "pos": "n.",
+      "ipa": "/rɪˈsɜːtʃəz/",
+      "cn": "研究人员（researcher 的复数）"
+    },
+    "eight": {
+      "pos": "num.",
+      "ipa": "/eɪt/",
+      "cn": "八"
+    },
+    "celebrities": {
+      "pos": "n.",
+      "ipa": "/səˈlebrətiz/",
+      "cn": "名人（celebrity 的复数）"
+    },
+    "celebrity": {
+      "pos": "n.",
+      "ipa": "/səˈlebrəti/",
+      "cn": "名人"
+    },
+    "involved": {
+      "pos": "v.",
+      "ipa": "/ɪnˈvɒlvd/",
+      "cn": "包含，涉及（be involved in 参与；involve 的过去分词）"
+    },
+    "getting": {
+      "pos": "v.",
+      "ipa": "/ˈɡetɪŋ/",
+      "cn": "变得；让（get 的现在分词）"
+    },
+    "decisions": {
+      "pos": "n.",
+      "ipa": "/dɪˈsɪʒnz/",
+      "cn": "决定（decision 的复数）"
+    },
+    "make a decision": {
+      "pos": "词组",
+      "ipa": "/ˌmeɪk ə dɪˈsɪʒn/",
+      "cn": "做决定"
+    },
+    "make decisions": {
+      "pos": "词组",
+      "ipa": "/ˌmeɪk dɪˈsɪʒnz/",
+      "cn": "做决定（复数）"
+    },
+    "photos": {
+      "pos": "n.",
+      "ipa": "/ˈfəʊtəʊz/",
+      "cn": "照片（photo 的复数）"
+    },
+    "saw": {
+      "pos": "v.",
+      "ipa": "/sɔː/",
+      "cn": "看见（see 的过去式）"
+    },
+    "two": {
+      "pos": "num.",
+      "ipa": "/tuː/",
+      "cn": "二"
+    },
+    "receive": {
+      "pos": "v.",
+      "ipa": "/rɪˈsiːv/",
+      "cn": "收到，得到"
+    },
+    "food": {
+      "pos": "n.",
+      "ipa": "/fuːd/",
+      "cn": "食物"
+    },
+    "approaching": {
+      "pos": "v.",
+      "ipa": "/əˈprəʊtʃɪŋ/",
+      "cn": "靠近，临近（approach 的现在分词）"
+    },
+    "photograph": {
+      "pos": "n.",
+      "ipa": "/ˈfəʊtəɡrɑːf/",
+      "cn": "照片"
+    },
+    "celebrity's": {
+      "pos": "n.",
+      "ipa": "/səˈlebrətiz/",
+      "cn": "名人的（celebrity 的所有格）"
+    },
+    "approached": {
+      "pos": "v.",
+      "ipa": "/əˈprəʊtʃt/",
+      "cn": "靠近（approach 的过去式）"
+    },
+    "wrong": {
+      "pos": "adj.",
+      "ipa": "/rɒŋ/",
+      "cn": "错误的；不对的"
+    },
+    "nothing": {
+      "pos": "pron.",
+      "ipa": "/ˈnʌθɪŋ/",
+      "cn": "没有什么，什么都没有"
+    },
+    "over": {
+      "pos": "prep./adv.",
+      "ipa": "/ˈəʊvə/",
+      "cn": "超过；在……上方"
+    },
+    "over time": {
+      "pos": "词组",
+      "ipa": "/ˌəʊvə ˈtaɪm/",
+      "cn": "随着时间的推移"
+    },
+    "learned": {
+      "pos": "v.",
+      "ipa": "/lɜːnd/",
+      "cn": "学会（learn 的过去式/过去分词）"
+    },
+    "correctly": {
+      "pos": "adv.",
+      "ipa": "/kəˈrektli/",
+      "cn": "正确地"
+    },
+    "chose": {
+      "pos": "v.",
+      "ipa": "/tʃəʊz/",
+      "cn": "选择（choose 的过去式）"
+    },
+    "face": {
+      "pos": "n.",
+      "ipa": "/feɪs/",
+      "cn": "脸，面孔"
+    },
+    "times": {
+      "pos": "n.",
+      "ipa": "/taɪmz/",
+      "cn": "次；时候（time 的复数）"
+    },
+    "ten": {
+      "pos": "num.",
+      "ipa": "/ten/",
+      "cn": "十"
+    },
+    "out of ten": {
+      "pos": "词组",
+      "ipa": "/ˌaʊt əv ˈten/",
+      "cn": "在十次中"
+    },
+    "article": {
+      "pos": "n.",
+      "ipa": "/ˈɑːtɪkl/",
+      "cn": "文章；报道"
+    },
+    "blog": {
+      "pos": "n.",
+      "ipa": "/blɒɡ/",
+      "cn": "博客"
+    },
+    "entry": {
+      "pos": "n.",
+      "ipa": "/ˈentri/",
+      "cn": "条目（博客的一篇）"
+    },
+    "email": {
+      "pos": "n.",
+      "ipa": "/ˈiːmeɪl/",
+      "cn": "电子邮件"
+    },
+    "trip": {
+      "pos": "n.",
+      "ipa": "/trɪp/",
+      "cn": "旅行，出行"
+    },
+    "spain": {
+      "pos": "n.",
+      "ipa": "/speɪn/",
+      "cn": "西班牙"
+    },
+    "journey": {
+      "pos": "n.",
+      "ipa": "/ˈdʒɜːni/",
+      "cn": "旅程，旅行"
+    },
+    "through": {
+      "pos": "prep.",
+      "ipa": "/θruː/",
+      "cn": "穿过；透过；通过",
+      "note": "through research 通过研究。"
+    },
+    "tips": {
+      "pos": "n.",
+      "ipa": "/tɪps/",
+      "cn": "提示、小费（tip 的复数）"
+    },
+    "tourists": {
+      "pos": "n.",
+      "ipa": "/ˈtʊərɪsts/",
+      "cn": "游客（tourist 的复数）"
+    },
+    "did": {
+      "pos": "v.",
+      "ipa": "/dɪd/",
+      "cn": "做（do 的过去式）；助动词"
+    },
+    "took": {
+      "pos": "v.",
+      "ipa": "/tʊk/",
+      "cn": "拿、乘坐（take 的过去式）"
+    },
+    "paid": {
+      "pos": "v.",
+      "ipa": "/peɪd/",
+      "cn": "付（pay 的过去式/过去分词）"
+    },
+    "spent": {
+      "pos": "v.",
+      "ipa": "/spent/",
+      "cn": "度过、花费（spend 的过去式/过去分词）"
+    },
+    "spend": {
+      "pos": "v.",
+      "ipa": "/spend/",
+      "cn": "度过，花费"
+    },
+    "buying": {
+      "pos": "v.",
+      "ipa": "/ˈbaɪɪŋ/",
+      "cn": "买（buy 的现在分词）"
+    },
+    "having": {
+      "pos": "v.",
+      "ipa": "/ˈhævɪŋ/",
+      "cn": "有、吃（have 的现在分词）"
+    },
+    "arrived": {
+      "pos": "v.",
+      "ipa": "/əˈraɪvd/",
+      "cn": "到达（arrive 的过去式）"
+    },
+    "travelled": {
+      "pos": "v.",
+      "ipa": "/ˈtrævld/",
+      "cn": "旅行（travel 的过去式/过去分词）"
+    },
+    "caught": {
+      "pos": "v.",
+      "ipa": "/kɔːt/",
+      "cn": "抓住、赶上（catch 的过去式/过去分词）"
+    },
+    "gave": {
+      "pos": "v.",
+      "ipa": "/ɡeɪv/",
+      "cn": "给（give 的过去式）"
+    },
+    "regarding": {
+      "pos": "prep.",
+      "ipa": "/rɪˈɡɑːdɪŋ/",
+      "cn": "关于，就……而言"
+    },
+    "following": {
+      "pos": "prep./adj.",
+      "ipa": "/ˈfɒləʊɪŋ/",
+      "cn": "跟随；下列的"
+    },
+    "resulting": {
+      "pos": "v.",
+      "ipa": "/rɪˈzʌltɪŋ/",
+      "cn": "发生，产生，导致（result 的现在分词）"
+    },
+    "according": {
+      "pos": "v.",
+      "ipa": "/əˈkɔːdɪŋ/",
+      "cn": "according to 根据……的说法"
+    },
+    "skill": {
+      "pos": "n.",
+      "ipa": "/skɪl/",
+      "cn": "技能，技巧"
+    },
+    "talent": {
+      "pos": "n.",
+      "ipa": "/ˈtælənt/",
+      "cn": "天赋，才能"
+    },
+    "knowledge": {
+      "pos": "n.",
+      "ipa": "/ˈnɒlɪdʒ/",
+      "cn": "知识"
+    },
+    "method": {
+      "pos": "n.",
+      "ipa": "/ˈmeθəd/",
+      "cn": "方法，方式"
+    },
+    "ordinary": {
+      "pos": "adj.",
+      "ipa": "/ˈɔːdnri/",
+      "cn": "普通的，平常的，平淡无奇的",
+      "note": "= common, usual。反义：extraordinary 非凡的。"
+    },
+    "usual": {
+      "pos": "adj.",
+      "ipa": "/ˈjuːʒuəl/",
+      "cn": "通常的；惯常的",
+      "note": "as usual 像往常一样；一般不说 very usual。"
+    },
+    "familiar": {
+      "pos": "adj.",
+      "ipa": "/fəˈmɪliə/",
+      "cn": "熟悉的"
+    },
+    "frequent": {
+      "pos": "adj.",
+      "ipa": "/ˈfriːkwənt/",
+      "cn": "频繁的"
+    },
+    "set": {
+      "pos": "v./n.",
+      "ipa": "/set/",
+      "cn": "设置；一套；布景",
+      "note": "set out 出发。"
+    },
+    "reward": {
+      "pos": "n./v.",
+      "ipa": "/rɪˈwɔːd/",
+      "cn": "奖励，回报"
+    },
+    "benefit": {
+      "pos": "n./v.",
+      "ipa": "/ˈbenɪfɪt/",
+      "cn": "好处，益处",
+      "note": "the benefit of sth …的好处。"
+    },
+    "tip": {
+      "pos": "n.",
+      "ipa": "/tɪp/",
+      "cn": "小费；建议；提示"
+    },
+    "goal": {
+      "pos": "n.",
+      "ipa": "/ɡəʊl/",
+      "cn": "目标，目的，球门，进球得分"
+    },
+    "attach": {
+      "pos": "v.",
+      "ipa": "/əˈtætʃ/",
+      "cn": "系上，贴上，连接（attach … to …）"
+    },
+    "join": {
+      "pos": "v.",
+      "ipa": "/dʒɔɪn/",
+      "cn": "加入，参加；连接"
+    },
+    "add": {
+      "pos": "v.",
+      "ipa": "/æd/",
+      "cn": "添加（add details 添加细节；add … to …）"
+    },
+    "connect": {
+      "pos": "v.",
+      "ipa": "/kəˈnekt/",
+      "cn": "连接，想通，使接通（connect A with B）"
+    }
+  },
+  "questions": [
+    {
+      "n": 101,
+      "tag": "①-1",
+      "answer": "D",
+      "prompt": "训练①-1 ——「a bus」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>take a bus 乘公交</b>。",
+      "clues": [
+        "take a bus 乘公交"
+      ],
+      "others": [
+        [
+          "A",
+          "「do a bus」不成固定搭配。"
+        ],
+        [
+          "B",
+          "「make a bus」不成固定搭配。"
+        ],
+        [
+          "C",
+          "「have a bus」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "take a bus"
+          ],
+          [
+            "意思",
+            "take a bus 乘公交"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "take a bus 乘公交。"
+      }
+    },
+    {
+      "n": 102,
+      "tag": "①-2",
+      "answer": "B",
+      "prompt": "训练①-2 ——「a noise」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>make a noise 发出噪音</b>。",
+      "clues": [
+        "make a noise 发出噪音"
+      ],
+      "others": [
+        [
+          "A",
+          "「do a noise」不成固定搭配。"
+        ],
+        [
+          "C",
+          "「have a noise」不成固定搭配。"
+        ],
+        [
+          "D",
+          "「take a noise」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "make a noise"
+          ],
+          [
+            "意思",
+            "make a noise 发出噪音"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "make a noise 发出噪音。"
+      }
+    },
+    {
+      "n": 103,
+      "tag": "①-3",
+      "answer": "C",
+      "prompt": "训练①-3 ——「a job」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>have a job 有工作</b>。",
+      "clues": [
+        "have a job 有工作"
+      ],
+      "others": [
+        [
+          "A",
+          "「do a job」不成固定搭配。"
+        ],
+        [
+          "B",
+          "「make a job」不成固定搭配。"
+        ],
+        [
+          "D",
+          "「take a job」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "have a job"
+          ],
+          [
+            "意思",
+            "have a job 有工作"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "have a job 有工作。"
+      }
+    },
+    {
+      "n": 104,
+      "tag": "①-4",
+      "answer": "D",
+      "prompt": "训练①-4 ——「a photo」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>take a photo 拍照</b>。",
+      "clues": [
+        "take a photo 拍照"
+      ],
+      "others": [
+        [
+          "A",
+          "「do a photo」不成固定搭配。"
+        ],
+        [
+          "B",
+          "「make a photo」不成固定搭配。"
+        ],
+        [
+          "C",
+          "「have a photo」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "take a photo"
+          ],
+          [
+            "意思",
+            "take a photo 拍照"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "take a photo 拍照。"
+      }
+    },
+    {
+      "n": 105,
+      "tag": "①-5",
+      "answer": "A",
+      "prompt": "训练①-5 ——「sport」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>do sport 做运动</b>。",
+      "clues": [
+        "do sport 做运动"
+      ],
+      "others": [
+        [
+          "B",
+          "「make sport」不成固定搭配。"
+        ],
+        [
+          "C",
+          "「have sport」不成固定搭配。"
+        ],
+        [
+          "D",
+          "「take sport」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "do sport"
+          ],
+          [
+            "意思",
+            "do sport 做运动"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "do sport 做运动。"
+      }
+    },
+    {
+      "n": 106,
+      "tag": "①-6",
+      "answer": "A",
+      "prompt": "训练①-6 ——「an exercise」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>do an exercise 做练习</b>。",
+      "clues": [
+        "do an exercise 做练习"
+      ],
+      "others": [
+        [
+          "B",
+          "「make an exercise」不成固定搭配。"
+        ],
+        [
+          "C",
+          "「have an exercise」不成固定搭配。"
+        ],
+        [
+          "D",
+          "「take an exercise」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "do an exercise"
+          ],
+          [
+            "意思",
+            "do an exercise 做练习"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "do an exercise 做练习。"
+      }
+    },
+    {
+      "n": 107,
+      "tag": "①-7",
+      "answer": "C",
+      "prompt": "训练①-7 ——「an idea」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>have an idea 有主意</b>。",
+      "clues": [
+        "have an idea 有主意"
+      ],
+      "others": [
+        [
+          "A",
+          "「do an idea」不成固定搭配。"
+        ],
+        [
+          "B",
+          "「make an idea」不成固定搭配。"
+        ],
+        [
+          "D",
+          "「take an idea」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "have an idea"
+          ],
+          [
+            "意思",
+            "have an idea 有主意"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "have an idea 有主意。"
+      }
+    },
+    {
+      "n": 108,
+      "tag": "①-8",
+      "answer": "C",
+      "prompt": "训练①-8 ——「a break」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>have a break 休息一下</b>。⚠ take a break 也可以（官方两组都收）。",
+      "clues": [
+        "have a break 休息一下"
+      ],
+      "others": [
+        [
+          "A",
+          "「do a break」不成固定搭配。"
+        ],
+        [
+          "B",
+          "「make a break」不成固定搭配。"
+        ],
+        [
+          "D",
+          "「take a break」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "have a break"
+          ],
+          [
+            "意思",
+            "have a break 休息一下"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "have a break 休息一下。"
+      }
+    },
+    {
+      "n": 109,
+      "tag": "①-9",
+      "answer": "C",
+      "prompt": "训练①-9 ——「fun」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>have fun 玩得开心</b>。",
+      "clues": [
+        "have fun 玩得开心"
+      ],
+      "others": [
+        [
+          "A",
+          "「do fun」不成固定搭配。"
+        ],
+        [
+          "B",
+          "「make fun」不成固定搭配。"
+        ],
+        [
+          "D",
+          "「take fun」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "have fun"
+          ],
+          [
+            "意思",
+            "have fun 玩得开心"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "have fun 玩得开心。"
+      }
+    },
+    {
+      "n": 110,
+      "tag": "①-10",
+      "answer": "C",
+      "prompt": "训练①-10 ——「a party」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>have a party 办派对</b>。",
+      "clues": [
+        "have a party 办派对"
+      ],
+      "others": [
+        [
+          "A",
+          "「do a party」不成固定搭配。"
+        ],
+        [
+          "B",
+          "「make a party」不成固定搭配。"
+        ],
+        [
+          "D",
+          "「take a party」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "have a party"
+          ],
+          [
+            "意思",
+            "have a party 办派对"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "have a party 办派对。"
+      }
+    },
+    {
+      "n": 111,
+      "tag": "①-11",
+      "answer": "C",
+      "prompt": "训练①-11 ——「a good time」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>have a good time 玩得开心</b>。",
+      "clues": [
+        "have a good time 玩得开心"
+      ],
+      "others": [
+        [
+          "A",
+          "「do a good time」不成固定搭配。"
+        ],
+        [
+          "B",
+          "「make a good time」不成固定搭配。"
+        ],
+        [
+          "D",
+          "「take a good time」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "have a good time"
+          ],
+          [
+            "意思",
+            "have a good time 玩得开心"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "have a good time 玩得开心。"
+      }
+    },
+    {
+      "n": 112,
+      "tag": "①-12",
+      "answer": "B",
+      "prompt": "训练①-12 ——「a mess」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>make a mess 弄得一团糟</b>。",
+      "clues": [
+        "make a mess 弄得一团糟"
+      ],
+      "others": [
+        [
+          "A",
+          "「do a mess」不成固定搭配。"
+        ],
+        [
+          "C",
+          "「have a mess」不成固定搭配。"
+        ],
+        [
+          "D",
+          "「take a mess」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "make a mess"
+          ],
+          [
+            "意思",
+            "make a mess 弄得一团糟"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "make a mess 弄得一团糟。"
+      }
+    },
+    {
+      "n": 113,
+      "tag": "①-13",
+      "answer": "B",
+      "prompt": "训练①-13 ——「a mistake」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>make a mistake 犯错</b>。",
+      "clues": [
+        "make a mistake 犯错"
+      ],
+      "others": [
+        [
+          "A",
+          "「do a mistake」不成固定搭配。"
+        ],
+        [
+          "C",
+          "「have a mistake」不成固定搭配。"
+        ],
+        [
+          "D",
+          "「take a mistake」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "make a mistake"
+          ],
+          [
+            "意思",
+            "make a mistake 犯错"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "make a mistake 犯错。"
+      }
+    },
+    {
+      "n": 114,
+      "tag": "①-14",
+      "answer": "C",
+      "prompt": "训练①-14 ——「a shower」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>have a shower 冲个澡</b>。⚠ take a shower 也可以（官方两组都收）。",
+      "clues": [
+        "have a shower 冲个澡"
+      ],
+      "others": [
+        [
+          "A",
+          "「do a shower」不成固定搭配。"
+        ],
+        [
+          "B",
+          "「make a shower」不成固定搭配。"
+        ],
+        [
+          "D",
+          "「take a shower」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "have a shower"
+          ],
+          [
+            "意思",
+            "have a shower 冲个澡"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "have a shower 冲个澡。"
+      }
+    },
+    {
+      "n": 115,
+      "tag": "①-15",
+      "answer": "B",
+      "prompt": "训练①-15 ——「a phone call」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>make a phone call 打电话</b>。⚠ take a phone call 也可以（接电话）。",
+      "clues": [
+        "make a phone call 打电话"
+      ],
+      "others": [
+        [
+          "A",
+          "「do a phone call」不成固定搭配。"
+        ],
+        [
+          "C",
+          "「have a phone call」不成固定搭配。"
+        ],
+        [
+          "D",
+          "「take a phone call」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "make a phone call"
+          ],
+          [
+            "意思",
+            "make a phone call 打电话"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "make a phone call 打电话。"
+      }
+    },
+    {
+      "n": 116,
+      "tag": "①-16",
+      "answer": "D",
+      "prompt": "训练①-16 ——「an exam」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>take an exam 参加考试</b>。⚠ do / have an exam 也可以（英式常说 do an exam）。",
+      "clues": [
+        "take an exam 参加考试"
+      ],
+      "others": [
+        [
+          "A",
+          "「do an exam」不成固定搭配。"
+        ],
+        [
+          "B",
+          "「make an exam」不成固定搭配。"
+        ],
+        [
+          "C",
+          "「have an exam」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "take an exam"
+          ],
+          [
+            "意思",
+            "take an exam 参加考试"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "take an exam 参加考试。"
+      }
+    },
+    {
+      "n": 117,
+      "tag": "①-17",
+      "answer": "B",
+      "prompt": "训练①-17 ——「friends」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>make friends 交朋友</b>。⚠ have friends 也可以（有朋友）。",
+      "clues": [
+        "make friends 交朋友"
+      ],
+      "others": [
+        [
+          "A",
+          "「do friends」不成固定搭配。"
+        ],
+        [
+          "C",
+          "「have friends」不成固定搭配。"
+        ],
+        [
+          "D",
+          "「take friends」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "make friends"
+          ],
+          [
+            "意思",
+            "make friends 交朋友"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "make friends 交朋友。"
+      }
+    },
+    {
+      "n": 118,
+      "tag": "①-18",
+      "answer": "A",
+      "prompt": "训练①-18 ——「an English course」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>do an English course 上英语课</b>。",
+      "clues": [
+        "do an English course 上英语课"
+      ],
+      "others": [
+        [
+          "B",
+          "「make an English course」不成固定搭配。"
+        ],
+        [
+          "C",
+          "「have an English course」不成固定搭配。"
+        ],
+        [
+          "D",
+          "「take an English course」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "do an English course"
+          ],
+          [
+            "意思",
+            "do an English course 上英语课"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "do an English course 上英语课。"
+      }
+    },
+    {
+      "n": 119,
+      "tag": "①-19",
+      "answer": "A",
+      "prompt": "训练①-19 ——「my homework」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>do my homework 做作业</b>。",
+      "clues": [
+        "do my homework 做作业"
+      ],
+      "others": [
+        [
+          "B",
+          "「make my homework」不成固定搭配。"
+        ],
+        [
+          "C",
+          "「have my homework」不成固定搭配。"
+        ],
+        [
+          "D",
+          "「take my homework」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "do my homework"
+          ],
+          [
+            "意思",
+            "do my homework 做作业"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "do my homework 做作业。"
+      }
+    },
+    {
+      "n": 120,
+      "tag": "①-20",
+      "answer": "D",
+      "prompt": "训练①-20 ——「notes」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>take notes 记笔记</b>。⚠ make notes 也可以（官方两组都收）。",
+      "clues": [
+        "take notes 记笔记"
+      ],
+      "others": [
+        [
+          "A",
+          "「do notes」不成固定搭配。"
+        ],
+        [
+          "B",
+          "「make notes」不成固定搭配。"
+        ],
+        [
+          "C",
+          "「have notes」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "take notes"
+          ],
+          [
+            "意思",
+            "take notes 记笔记"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "take notes 记笔记。"
+      }
+    },
+    {
+      "n": 121,
+      "tag": "①-21",
+      "answer": "C",
+      "prompt": "训练①-21 ——「lunch at school」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>have lunch at school 在学校吃午饭</b>。",
+      "clues": [
+        "have lunch at school 在学校吃午饭"
+      ],
+      "others": [
+        [
+          "A",
+          "「do lunch at school」不成固定搭配。"
+        ],
+        [
+          "B",
+          "「make lunch at school」不成固定搭配。"
+        ],
+        [
+          "D",
+          "「take lunch at school」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "have lunch at school"
+          ],
+          [
+            "意思",
+            "have lunch at school 在学校吃午饭"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "have lunch at school 在学校吃午饭。"
+      }
+    },
+    {
+      "n": 122,
+      "tag": "①-22",
+      "answer": "A",
+      "prompt": "训练①-22 ——「some shopping」配哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方分组：<b>do some shopping 去购物</b>。",
+      "clues": [
+        "do some shopping 去购物"
+      ],
+      "others": [
+        [
+          "B",
+          "「make some shopping」不成固定搭配。"
+        ],
+        [
+          "C",
+          "「have some shopping」不成固定搭配。"
+        ],
+        [
+          "D",
+          "「take some shopping」不成固定搭配。"
+        ]
+      ],
+      "tip": "把「动词 + 名词」当成一个整块来记。",
+      "ana": {
+        "parts": [
+          [
+            "搭配",
+            "do some shopping"
+          ],
+          [
+            "意思",
+            "do some shopping 去购物"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "do some shopping 去购物。"
+      }
+    },
+    {
+      "n": 123,
+      "tag": "②-1",
+      "answer": "A",
+      "prompt": "训练②-1 ——「I can't go out because I haven't made my homework yet.」应该用哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方答案 <b>do</b>（made → done）。作业用 do：haven't done my homework。官方：1 made → done。",
+      "clues": [
+        "made → done"
+      ],
+      "others": [
+        [
+          "B",
+          "用 make 和句子里的名词搭配不上（done 才是正确搭配）。"
+        ],
+        [
+          "C",
+          "用 have 和句子里的名词搭配不上（done 才是正确搭配）。"
+        ],
+        [
+          "D",
+          "用 take 和句子里的名词搭配不上（done 才是正确搭配）。"
+        ]
+      ],
+      "tip": "先看句子里动词后的名词，再想它该配哪个万能动词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "I can't go out because I haven't made my homework yet."
+          ],
+          [
+            "改正",
+            "made → done"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "made → done。"
+      }
+    },
+    {
+      "n": 124,
+      "tag": "②-2",
+      "answer": "C",
+      "prompt": "训练②-2 ——「We passed a really good time during our holidays.」应该用哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方答案 <b>have</b>（passed → had）。玩得开心用 have：had a really good time。官方：2 passed → had。",
+      "clues": [
+        "passed → had"
+      ],
+      "others": [
+        [
+          "A",
+          "用 do 和句子里的名词搭配不上（had 才是正确搭配）。"
+        ],
+        [
+          "B",
+          "用 make 和句子里的名词搭配不上（had 才是正确搭配）。"
+        ],
+        [
+          "D",
+          "用 take 和句子里的名词搭配不上（had 才是正确搭配）。"
+        ]
+      ],
+      "tip": "先看句子里动词后的名词，再想它该配哪个万能动词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "We passed a really good time during our holidays."
+          ],
+          [
+            "改正",
+            "passed → had"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "passed → had。"
+      }
+    },
+    {
+      "n": 125,
+      "tag": "②-3",
+      "answer": "C",
+      "prompt": "训练②-3 ——「My friend Marta is making a party on Saturday evening.」应该用哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方答案 <b>have</b>（making → having）。办派对用 have：is having a party。官方：3 making → having。",
+      "clues": [
+        "making → having"
+      ],
+      "others": [
+        [
+          "A",
+          "用 do 和句子里的名词搭配不上（having 才是正确搭配）。"
+        ],
+        [
+          "B",
+          "用 make 和句子里的名词搭配不上（having 才是正确搭配）。"
+        ],
+        [
+          "D",
+          "用 take 和句子里的名词搭配不上（having 才是正确搭配）。"
+        ]
+      ],
+      "tip": "先看句子里动词后的名词，再想它该配哪个万能动词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "My friend Marta is making a party on Saturday evening."
+          ],
+          [
+            "改正",
+            "making → having"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "making → having。"
+      }
+    },
+    {
+      "n": 126,
+      "tag": "②-4",
+      "answer": "C",
+      "prompt": "训练②-4 ——「I'm feeling tired, so I'm going to do a short break.」应该用哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方答案 <b>have</b>（do → have）。休息用 have/take：have a short break。官方：4 do → have/take（take 也可以）。",
+      "clues": [
+        "do → have"
+      ],
+      "others": [
+        [
+          "A",
+          "用 do 和句子里的名词搭配不上（have 才是正确搭配）。"
+        ],
+        [
+          "B",
+          "用 make 和句子里的名词搭配不上（have 才是正确搭配）。"
+        ],
+        [
+          "D",
+          "用 take 和句子里的名词搭配不上（have 才是正确搭配）。"
+        ]
+      ],
+      "tip": "先看句子里动词后的名词，再想它该配哪个万能动词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "I'm feeling tired, so I'm going to do a short break."
+          ],
+          [
+            "改正",
+            "do → have"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "do → have。"
+      }
+    },
+    {
+      "n": 127,
+      "tag": "②-5",
+      "answer": "B",
+      "prompt": "训练②-5 ——「I'm sure you'll soon know new friends when you change school.」应该用哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方答案 <b>make</b>（know → make）。交朋友用 make：make new friends。官方：5 know → make。",
+      "clues": [
+        "know → make"
+      ],
+      "others": [
+        [
+          "A",
+          "用 do 和句子里的名词搭配不上（make 才是正确搭配）。"
+        ],
+        [
+          "C",
+          "用 have 和句子里的名词搭配不上（make 才是正确搭配）。"
+        ],
+        [
+          "D",
+          "用 take 和句子里的名词搭配不上（make 才是正确搭配）。"
+        ]
+      ],
+      "tip": "先看句子里动词后的名词，再想它该配哪个万能动词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "I'm sure you'll soon know new friends when you change school."
+          ],
+          [
+            "改正",
+            "know → make"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "know → make。"
+      }
+    },
+    {
+      "n": 128,
+      "tag": "②-6",
+      "answer": "B",
+      "prompt": "训练②-6 ——「The primary school kids were doing a lot of noise.」应该用哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方答案 <b>make</b>（doing → making）。制造噪音用 make：making a lot of noise。官方：6 doing → making。",
+      "clues": [
+        "doing → making"
+      ],
+      "others": [
+        [
+          "A",
+          "用 do 和句子里的名词搭配不上（making 才是正确搭配）。"
+        ],
+        [
+          "C",
+          "用 have 和句子里的名词搭配不上（making 才是正确搭配）。"
+        ],
+        [
+          "D",
+          "用 take 和句子里的名词搭配不上（making 才是正确搭配）。"
+        ]
+      ],
+      "tip": "先看句子里动词后的名词，再想它该配哪个万能动词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "The primary school kids were doing a lot of noise."
+          ],
+          [
+            "改正",
+            "doing → making"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "doing → making。"
+      }
+    },
+    {
+      "n": 129,
+      "tag": "②-7",
+      "answer": "D",
+      "prompt": "训练②-7 ——「I want to learn Chinese, so I'm giving lessons every week.」应该用哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方答案 <b>take</b>（giving → taking）。上课（学生）用 take：taking lessons。官方：7 giving → taking/doing（do 也可以）。",
+      "clues": [
+        "giving → taking"
+      ],
+      "others": [
+        [
+          "A",
+          "用 do 和句子里的名词搭配不上（taking 才是正确搭配）。"
+        ],
+        [
+          "B",
+          "用 make 和句子里的名词搭配不上（taking 才是正确搭配）。"
+        ],
+        [
+          "C",
+          "用 have 和句子里的名词搭配不上（taking 才是正确搭配）。"
+        ]
+      ],
+      "tip": "先看句子里动词后的名词，再想它该配哪个万能动词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "I want to learn Chinese, so I'm giving lessons every week."
+          ],
+          [
+            "改正",
+            "giving → taking"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "giving → taking。"
+      }
+    },
+    {
+      "n": 130,
+      "tag": "②-8",
+      "answer": "B",
+      "prompt": "训练②-8 ——「Try not to do any mistakes in this exercise!」应该用哪个动词？",
+      "opts": {
+        "A": "do",
+        "B": "make",
+        "C": "have",
+        "D": "take"
+      },
+      "why": "官方答案 <b>make</b>（do → make）。犯错用 make：make any mistakes。官方：8 do → make。",
+      "clues": [
+        "do → make"
+      ],
+      "others": [
+        [
+          "A",
+          "用 do 和句子里的名词搭配不上（make 才是正确搭配）。"
+        ],
+        [
+          "C",
+          "用 have 和句子里的名词搭配不上（make 才是正确搭配）。"
+        ],
+        [
+          "D",
+          "用 take 和句子里的名词搭配不上（make 才是正确搭配）。"
+        ]
+      ],
+      "tip": "先看句子里动词后的名词，再想它该配哪个万能动词。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "Try not to do any mistakes in this exercise!"
+          ],
+          [
+            "改正",
+            "do → make"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "do → make。"
+      }
+    },
+    {
+      "n": 131,
+      "tag": "③-1",
+      "answer": "B",
+      "prompt": "训练③-1 —— 这段是什么类型的文本？",
+      "opts": {
+        "A": "an advertisement",
+        "B": "an article or blog entry",
+        "C": "a news report",
+        "D": "an email"
+      },
+      "why": "官方答案 <b>B</b>（article or blog entry 文章/博客）。第一人称讲自己的经历（my friends and I），语气轻松 —— 不是广告、新闻或邮件。",
+      "clues": [
+        "第一人称 + 讲述经历"
+      ],
+      "others": [
+        [
+          "A",
+          "广告会劝你购买/报名 —— 这段没有。"
+        ],
+        [
+          "C",
+          "新闻讲「发生了什么大事」—— 这段是个人经历。"
+        ],
+        [
+          "D",
+          "邮件有收件人和落款 —— 这段没有。"
+        ]
+      ],
+      "tip": "看人称和语气判断文本类型。",
+      "ana": {
+        "parts": [
+          [
+            "文本类型",
+            "article / blog entry"
+          ],
+          [
+            "标志",
+            "第一人称讲经历"
+          ]
+        ],
+        "gram": [
+          "text type"
+        ],
+        "tr": "B —— 文章/博客。"
+      }
+    },
+    {
+      "n": 132,
+      "tag": "③-2",
+      "answer": "B",
+      "prompt": "训练③-2 —— 它讲的是什么？",
+      "opts": {
+        "A": "a school trip to Spain",
+        "B": "a visit to Barcelona",
+        "C": "a train journey through Spain",
+        "D": "shopping tips for tourists"
+      },
+      "why": "官方答案 <b>B</b>（a visit to Barcelona 巴塞罗那之行）。全文讲去年三月和朋友去巴塞罗那玩了一周（spent a week in Barcelona）。",
+      "clues": [
+        "spent a week in the wonderful city of Barcelona"
+      ],
+      "others": [
+        [
+          "A",
+          "不是学校旅行 —— 是「我和朋友们」自己去的。"
+        ],
+        [
+          "C",
+          "不是火车之旅 —— 火车（underground）只是市内交通。"
+        ],
+        [
+          "D",
+          "购物只是行程的一部分（did some shopping），不是主题。"
+        ]
+      ],
+      "tip": "主题看开头：决定出国 → 在巴塞罗那待了一周。",
+      "ana": {
+        "parts": [
+          [
+            "主题",
+            "a visit to Barcelona"
+          ]
+        ],
+        "gram": [
+          "main idea"
+        ],
+        "tr": "B —— 巴塞罗那之行。"
+      }
+    },
+    {
+      "n": 133,
+      "tag": "④-1",
+      "answer": "B",
+      "prompt": "训练④-1 ——「Last March my friends and I (1) … some free time」选哪个？",
+      "opts": {
+        "A": "did",
+        "B": "had",
+        "C": "made",
+        "D": "went"
+      },
+      "why": "官方答案 <b>B</b>（have free time 有空闲时间）。「有时间」用 have → had。官方：1 B。",
+      "clues": [
+        "have free time 有空闲时间"
+      ],
+      "others": [
+        [
+          "A",
+          "did free time 不成搭配。"
+        ],
+        [
+          "C",
+          "made free time 不成搭配。"
+        ],
+        [
+          "D",
+          "went 后要接 to（went abroad 才是「出国」）。"
+        ]
+      ],
+      "tip": "先划空前后的搭配词（free time / a week / shopping…），再排除不搭的。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "Last March my friends and I (1) … some free time"
+          ],
+          [
+            "答案",
+            "B（make）"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "have free time 有空闲时间。"
+      }
+    },
+    {
+      "n": 134,
+      "tag": "④-2",
+      "answer": "D",
+      "prompt": "训练④-2 ——「We (2) … a week in the wonderful city of Barcelona」选哪个？",
+      "opts": {
+        "A": "passed",
+        "B": "took",
+        "C": "paid",
+        "D": "spent"
+      },
+      "why": "官方答案 <b>D</b>（spend a week 待一周）。「度过一周」用 spend → spent。官方：2 D（passed a good time 正是练习 2 刚改过的错误）。",
+      "clues": [
+        "spend a week 待一周"
+      ],
+      "others": [
+        [
+          "A",
+          "pass 不用于「度过时间」（中式错误）。"
+        ],
+        [
+          "B",
+          "take a week 要接 off（休假），语义不同。"
+        ],
+        [
+          "C",
+          "pay 是「付钱」—— 后面不接时间。"
+        ]
+      ],
+      "tip": "先划空前后的搭配词（free time / a week / shopping…），再排除不搭的。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "We (2) … a week in the wonderful city of Barcelona"
+          ],
+          [
+            "答案",
+            "D（take）"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "spend a week 待一周。"
+      }
+    },
+    {
+      "n": 135,
+      "tag": "④-3",
+      "answer": "C",
+      "prompt": "训练④-3 ——「and (3) … some great shopping!」选哪个？",
+      "opts": {
+        "A": "making",
+        "B": "buying",
+        "C": "doing",
+        "D": "having"
+      },
+      "why": "官方答案 <b>C</b>（do some shopping 购物）。「购物」用 do → doing（和 seeing / eating 并列）。官方：3 C。",
+      "clues": [
+        "do some shopping 购物"
+      ],
+      "others": [
+        [
+          "A",
+          "make 不和 shopping 搭配。"
+        ],
+        [
+          "B",
+          "buying shopping 重复（shopping 本身就是购物）。"
+        ],
+        [
+          "D",
+          "have 不和 shopping 搭配。"
+        ]
+      ],
+      "tip": "先划空前后的搭配词（free time / a week / shopping…），再排除不搭的。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "and (3) … some great shopping!"
+          ],
+          [
+            "答案",
+            "C（have）"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "do some shopping 购物。"
+      }
+    },
+    {
+      "n": 136,
+      "tag": "④-4",
+      "answer": "A",
+      "prompt": "训练④-4 ——「we (4) … the underground train」选哪个？",
+      "opts": {
+        "A": "took",
+        "B": "arrived",
+        "C": "brought",
+        "D": "travelled"
+      },
+      "why": "官方答案 <b>A</b>（take the underground 坐地铁）。「坐地铁」用 take → took。官方：4 A。",
+      "clues": [
+        "take the underground 坐地铁"
+      ],
+      "others": [
+        [
+          "B",
+          "arrive 后接 at/in，不直接接 the train。"
+        ],
+        [
+          "C",
+          "bring 是「带来」，方向不对。"
+        ],
+        [
+          "D",
+          "travel 要接 by train（travelled by train）。"
+        ]
+      ],
+      "tip": "先划空前后的搭配词（free time / a week / shopping…），再排除不搭的。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "we (4) … the underground train"
+          ],
+          [
+            "答案",
+            "A（do）"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "take the underground 坐地铁。"
+      }
+    },
+    {
+      "n": 137,
+      "tag": "④-5",
+      "answer": "A",
+      "prompt": "训练④-5 ——「where we (5) … the most amazing views」选哪个？",
+      "opts": {
+        "A": "saw",
+        "B": "caught",
+        "C": "got",
+        "D": "gave"
+      },
+      "why": "官方答案 <b>A</b>（see the views 看景色）。「看景色」用 see → saw。官方：5 A。",
+      "clues": [
+        "see the views 看景色"
+      ],
+      "others": [
+        [
+          "B",
+          "catch 用于「赶车、抓住」。"
+        ],
+        [
+          "C",
+          "get a view 不常见（get 是「得到」）。"
+        ],
+        [
+          "D",
+          "give 是「给」，方向反了。"
+        ]
+      ],
+      "tip": "先划空前后的搭配词（free time / a week / shopping…），再排除不搭的。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "where we (5) … the most amazing views"
+          ],
+          [
+            "答案",
+            "A（do）"
+          ]
+        ],
+        "gram": [
+          "动词名词搭配"
+        ],
+        "tr": "see the views 看景色。"
+      }
+    },
+    {
+      "n": 21,
+      "tag": "21",
+      "answer": "D",
+      "prompt": "第 21 题 —— 选哪个？",
+      "opts": {
+        "A": "regarding",
+        "B": "following",
+        "C": "resulting",
+        "D": "according"
+      },
+      "why": "官方：D。只有 according 后面能接 to（according to new research 根据新研究）；regarding = 关于（不接 to）；following = 跟随；resulting 要接 in/from。",
+      "clues": [
+        "according to 根据……的说法"
+      ],
+      "others": [
+        [
+          "A",
+          "regarding 是「关于」，后面不接 to。"
+        ],
+        [
+          "B",
+          "following 是「跟随」—— 接不上 to。"
+        ],
+        [
+          "C",
+          "resulting 要接 in/from（resulting in 导致）。"
+        ]
+      ],
+      "tip": "先看空后接的词（to / of / with…），再选搭配得上的。",
+      "ana": {
+        "parts": [
+          [
+            "答案",
+            "D —— according to 根据……的说法"
+          ],
+          [
+            "线索",
+            "空后的介词/搭配词"
+          ]
+        ],
+        "gram": [
+          "搭配与词义"
+        ],
+        "tr": "D —— according to 根据……的说法"
+      }
+    },
+    {
+      "n": 22,
+      "tag": "22",
+      "answer": "A",
+      "prompt": "第 22 题 —— 选哪个？",
+      "opts": {
+        "A": "skill",
+        "B": "talent",
+        "C": "knowledge",
+        "D": "method"
+      },
+      "why": "官方：A。social skill 是固定搭配（社交技能）；talent 天赋、knowledge 知识、method 方法 —— 都不与 social 这样搭配。",
+      "clues": [
+        "social skill 社交技能"
+      ],
+      "others": [
+        [
+          "B",
+          "talent 是「天赋」—— 识别面孔是练出来的技能。"
+        ],
+        [
+          "C",
+          "knowledge 是「知识」—— 不指这种能力。"
+        ],
+        [
+          "D",
+          "method 是「方法」—— 识别面孔本身不是方法。"
+        ]
+      ],
+      "tip": "先看空后接的词（to / of / with…），再选搭配得上的。",
+      "ana": {
+        "parts": [
+          [
+            "答案",
+            "A —— social skill 社交技能"
+          ],
+          [
+            "线索",
+            "空后的介词/搭配词"
+          ]
+        ],
+        "gram": [
+          "搭配与词义"
+        ],
+        "tr": "A —— social skill 社交技能"
+      }
+    },
+    {
+      "n": 23,
+      "tag": "23",
+      "answer": "C",
+      "prompt": "第 23 题 —— 选哪个？",
+      "opts": {
+        "A": "ordinary",
+        "B": "usual",
+        "C": "familiar",
+        "D": "frequent"
+      },
+      "why": "官方：C。familiar human faces（熟悉的人类面孔）—— 训练时见过的人；ordinary/usual 是「普通/通常」，frequent 是「频繁的」，都不指「认得出的」。",
+      "clues": [
+        "familiar 熟悉的"
+      ],
+      "others": [
+        [
+          "A",
+          "ordinary 是「普通的」—— 不表示「认得出」。"
+        ],
+        [
+          "B",
+          "usual 是「通常的」—— 同上。"
+        ],
+        [
+          "D",
+          "frequent 是「频繁的」—— 和「熟悉」不同。"
+        ]
+      ],
+      "tip": "先看空后接的词（to / of / with…），再选搭配得上的。",
+      "ana": {
+        "parts": [
+          [
+            "答案",
+            "C —— familiar 熟悉的"
+          ],
+          [
+            "线索",
+            "空后的介词/搭配词"
+          ]
+        ],
+        "gram": [
+          "搭配与词义"
+        ],
+        "tr": "C —— familiar 熟悉的"
+      }
+    },
+    {
+      "n": 24,
+      "tag": "24",
+      "answer": "B",
+      "prompt": "第 24 题 —— 选哪个？",
+      "opts": {
+        "A": "set",
+        "B": "make",
+        "C": "have",
+        "D": "do"
+      },
+      "why": "官方：B。make a decision（做决定）—— 固定搭配；set 要接 set a goal；have/do 都不与 decision 这样搭。",
+      "clues": [
+        "make a decision 做决定"
+      ],
+      "others": [
+        [
+          "A",
+          "set 用于 set a goal（定目标）等。"
+        ],
+        [
+          "C",
+          "have a decision 不成搭配。"
+        ],
+        [
+          "D",
+          "do a decision 不成搭配。"
+        ]
+      ],
+      "tip": "先看空后接的词（to / of / with…），再选搭配得上的。",
+      "ana": {
+        "parts": [
+          [
+            "答案",
+            "B —— make a decision 做决定"
+          ],
+          [
+            "线索",
+            "空后的介词/搭配词"
+          ]
+        ],
+        "gram": [
+          "搭配与词义"
+        ],
+        "tr": "B —— make a decision 做决定"
+      }
+    },
+    {
+      "n": 25,
+      "tag": "25",
+      "answer": "A",
+      "prompt": "第 25 题 —— 选哪个？",
+      "opts": {
+        "A": "reward",
+        "B": "benefit",
+        "C": "tip",
+        "D": "goal"
+      },
+      "why": "官方：A。a reward of food（作为奖励的食物）—— 得到食物作为奖励；benefit 好处、tip 小费、goal 目标，都不指具体奖励物。",
+      "clues": [
+        "a reward of food 一份食物奖励"
+      ],
+      "others": [
+        [
+          "B",
+          "benefit 是「好处」—— 不指发下来的东西。"
+        ],
+        [
+          "C",
+          "tip 是「小费/建议」。"
+        ],
+        [
+          "D",
+          "goal 是「目标」—— 不是奖励。"
+        ]
+      ],
+      "tip": "先看空后接的词（to / of / with…），再选搭配得上的。",
+      "ana": {
+        "parts": [
+          [
+            "答案",
+            "A —— a reward of food 一份食物奖励"
+          ],
+          [
+            "线索",
+            "空后的介词/搭配词"
+          ]
+        ],
+        "gram": [
+          "搭配与词义"
+        ],
+        "tr": "A —— a reward of food 一份食物奖励"
+      }
+    },
+    {
+      "n": 26,
+      "tag": "26",
+      "answer": "D",
+      "prompt": "第 26 题 —— 选哪个？",
+      "opts": {
+        "A": "attach",
+        "B": "join",
+        "C": "add",
+        "D": "connect"
+      },
+      "why": "官方：D。connect getting food with the photograph（把得到食物和照片联系起来）；attach 要接 to、join 是「加入」、add 是「添加」。",
+      "clues": [
+        "connect A with B 把 A 与 B 联系起来"
+      ],
+      "others": [
+        [
+          "A",
+          "attach 接 to（attach … to …）。"
+        ],
+        [
+          "B",
+          "join 是「加入」（join a club）。"
+        ],
+        [
+          "C",
+          "add 是「添加」（add … to …）。"
+        ]
+      ],
+      "tip": "先看空后接的词（to / of / with…），再选搭配得上的。",
+      "ana": {
+        "parts": [
+          [
+            "答案",
+            "D —— connect A with B 把 A 与 B 联系起来"
+          ],
+          [
+            "线索",
+            "空后的介词/搭配词"
+          ]
+        ],
+        "gram": [
+          "搭配与词义"
+        ],
+        "tr": "D —— connect A with B 把 A 与 B 联系起来"
+      }
+    }
+  ],
+  "summaryTip": "Part 5 的两把钥匙：① 动词 + 名词搭配（do/make/have/take 各带各的名词）；② 空后的介词（to / of / with）—— 搭配定生死。"
+}

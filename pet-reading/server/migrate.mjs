@@ -1,9 +1,11 @@
 /* PET 精读 · 数据库迁移（幂等，可以反复跑）
    ================================================================
-   干三件事：
+   干这些事：
      ① 建 pet_user_level 表，写入 18 行等级颜色（1=蓝 … 18=金）
      ② 给 user 表加三列：nickname / pass_hash / user_level（已经有了就跳过）
-     ③ 建 pet_mistake 错题记录表
+     ③ 建 pet_mistake 错题记录表（阅读理解）
+     ④ 建词组库三张表：pet_phrase（内容镜像）/ user_phrase（用户收藏）/ pet_phrase_mistake（词组错题）
+     ⑤ 建 pet_phrase_review 词组复习表（间隔重复：等级 1-6 → 1/2/4/7/15/30 天）
 
    用法（在能连上 MySQL 的机器上跑，比如部署后的 ECS）：
      node --env-file=.env migrate.mjs         真的执行
@@ -118,6 +120,121 @@ try {
           "KEY `idx_mistake_user` (`user_id`)" +
         ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='PET 阅读理解错题记录'");
       log("建表 pet_mistake");
+      changed++;
+    }
+  }
+
+  /* ---------- ④ 词组库三张表（词组 / 用户收藏 / 词组错题） ---------- */
+  if (await tableExists("pet_phrase")) {
+    skip("表 pet_phrase 已存在");
+  } else {
+    plan("建表 pet_phrase（词组库内容镜像：真源是 data/phrases.json）");
+    if (!DRY) {
+      await pool.query(
+        "CREATE TABLE `pet_phrase` (" +
+          "`id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT," +
+          "`no` SMALLINT UNSIGNED NOT NULL COMMENT '书上序号 1-254'," +
+          "`grp` TINYINT UNSIGNED NOT NULL COMMENT '组号（10 个一组）'," +
+          "`phrase` VARCHAR(128) NOT NULL COMMENT '词组'," +
+          "`alt` VARCHAR(128) NOT NULL DEFAULT '' COMMENT '等价说法（= groups of）'," +
+          "`meaning` VARCHAR(255) NOT NULL DEFAULT '' COMMENT '中文意思'," +
+          "`usage_note` VARCHAR(255) NOT NULL DEFAULT '' COMMENT '用法（中文提示）'," +
+          "`example` VARCHAR(512) NOT NULL DEFAULT '' COMMENT '例句'," +
+          "`example_cn` VARCHAR(512) NOT NULL DEFAULT '' COMMENT '例句翻译'," +
+          "`blank` VARCHAR(128) NOT NULL DEFAULT '' COMMENT '题干里挖掉的那一块'," +
+          "`quest` JSON NULL COMMENT '答案分析：{why, trap}'," +
+          "`status` TINYINT NOT NULL DEFAULT 0 COMMENT '0 草稿 / 1 已审'," +
+          "`created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP," +
+          "`updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP," +
+          "PRIMARY KEY (`id`)," +
+          "UNIQUE KEY `uk_phrase_no` (`no`)," +
+          "UNIQUE KEY `uk_phrase_text` (`phrase`)," +
+          "KEY `idx_phrase_grp` (`grp`)" +
+        ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='PET 词组库（内容镜像，真源 data/phrases.json）'");
+      log("建表 pet_phrase");
+      changed++;
+    }
+  }
+
+  if (await tableExists("user_phrase")) {
+    skip("表 user_phrase 已存在");
+  } else {
+    plan("建表 user_phrase（用户收藏的词组：词组/中文/例句/例句翻译 都带快照）");
+    if (!DRY) {
+      await pool.query(
+        "CREATE TABLE `user_phrase` (" +
+          "`id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT," +
+          "`user_id` BIGINT UNSIGNED NOT NULL COMMENT 'user.id'," +
+          "`phrase_id` BIGINT UNSIGNED NOT NULL COMMENT 'pet_phrase.id'," +
+          "`level` VARCHAR(16) NOT NULL DEFAULT 'PET' COMMENT '等级'," +
+          "`phrase` VARCHAR(128) NOT NULL COMMENT '词组（快照）'," +
+          "`meaning` VARCHAR(255) NOT NULL DEFAULT '' COMMENT '中文意思（快照）'," +
+          "`example` VARCHAR(512) NOT NULL DEFAULT '' COMMENT '例句（快照）'," +
+          "`example_cn` VARCHAR(512) NOT NULL DEFAULT '' COMMENT '例句翻译（快照）'," +
+          "`source_type` TINYINT NOT NULL DEFAULT 3 COMMENT '3=词组'," +
+          "`source_title` VARCHAR(255) NULL COMMENT '来源（哪本书）'," +
+          "`created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP," +
+          "PRIMARY KEY (`id`)," +
+          "UNIQUE KEY `uk_user_phrase` (`user_id`, `level`, `phrase_id`)," +
+          "KEY `idx_user_phrase_user` (`user_id`)" +
+        ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='用户收藏的词组（带内容快照）'");
+      log("建表 user_phrase");
+      changed++;
+    }
+  }
+
+  if (await tableExists("pet_phrase_mistake")) {
+    skip("表 pet_phrase_mistake 已存在");
+  } else {    plan("建表 pet_phrase_mistake（用户id + 原题 + 选择项，同题重复错只计数）");
+    if (!DRY) {
+      await pool.query(
+        "CREATE TABLE `pet_phrase_mistake` (" +
+          "`id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT," +
+          "`user_id` BIGINT UNSIGNED NOT NULL COMMENT 'user.id'," +
+          "`phrase_id` BIGINT UNSIGNED NOT NULL COMMENT 'pet_phrase.id'," +
+          "`phrase_no` SMALLINT UNSIGNED NOT NULL COMMENT '书上序号'," +
+          "`phrase` VARCHAR(128) NOT NULL COMMENT '词组（快照）'," +
+          "`stem` VARCHAR(512) NOT NULL COMMENT '原题（挖空后的句子）'," +
+          "`chosen` VARCHAR(128) NOT NULL COMMENT '学生选的那个（选项文本）'," +
+          "`chosen_k` CHAR(1) NOT NULL DEFAULT '' COMMENT '选项字母（词组题没有字母，留空）'," +
+          "`correct` VARCHAR(128) NOT NULL COMMENT '正确选项文本'," +
+          "`correct_k` CHAR(1) NOT NULL DEFAULT '' COMMENT '正确选项字母'," +
+          "`wrong_count` INT UNSIGNED NOT NULL DEFAULT 1 COMMENT '同题错了几次'," +
+          "`created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP," +
+          "`updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP," +
+          "PRIMARY KEY (`id`)," +
+          "UNIQUE KEY `uk_ph_mistake` (`user_id`, `phrase_id`)," +
+          "KEY `idx_ph_mistake_user` (`user_id`)" +
+        ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='词组选择题错题记录'");
+      log("建表 pet_phrase_mistake");
+      changed++;
+    }
+  }
+
+  /* ---------- ⑤ pet_phrase_review（词组复习的间隔重复） ---------- */
+  if (await tableExists("pet_phrase_review")) {
+    skip("表 pet_phrase_review 已存在");
+  } else {
+    plan("建表 pet_phrase_review（user_id + 词组 + 等级 + 到期日，间隔重复）");
+    if (!DRY) {
+      await pool.query(
+        "CREATE TABLE `pet_phrase_review` (" +
+          "`id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT," +
+          "`user_id` BIGINT UNSIGNED NOT NULL COMMENT 'user.id'," +
+          "`phrase_id` BIGINT UNSIGNED NOT NULL COMMENT 'pet_phrase.id'," +
+          "`phrase_no` SMALLINT UNSIGNED NOT NULL COMMENT '书上序号'," +
+          "`phrase` VARCHAR(128) NOT NULL COMMENT '词组（快照）'," +
+          "`level` TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '复习等级 1-6（间隔 1/2/4/7/15/30 天）'," +
+          "`reps` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '一共复习过几次'," +
+          "`wrongs` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '其中错过几次'," +
+          "`due_at` DATE NOT NULL COMMENT '下次到期日（当天 0 点起算）'," +
+          "`created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP," +
+          "`updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP," +
+          "PRIMARY KEY (`id`)," +
+          "UNIQUE KEY `uk_phrase_review` (`user_id`, `phrase_id`)," +
+          "KEY `idx_review_due` (`user_id`, `due_at`)" +
+        ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='词组复习（间隔重复）'");
+      log("建表 pet_phrase_review");
       changed++;
     }
   }

@@ -123,3 +123,18 @@ export function fitChars(v, n) {
 export function byteLen(v) {
   return Buffer.byteLength(String(v == null ? "" : v), "utf8");
 }
+
+
+/* ---------- 词组复习的间隔重复（SM-2 简化版） ----------
+   答对：升一级，间隔按 1 / 2 / 4 / 7 / 15 / 30 天；
+   答错：回到 1 级，明天再来（错过的当天记进错题本，这里只管「什么时候再问」）。
+   纯函数，服务端算完把 level + days 写库；单测在 test.mjs。 */
+export const SRS_DAYS = [1, 2, 4, 7, 15, 30];
+export const SRS_LEVEL_MAX = SRS_DAYS.length;
+
+export function srsNext(level, ok) {
+  const lv = Math.max(1, Math.min(SRS_LEVEL_MAX, parseInt(level, 10) || 1));
+  if (!ok) return { level: 1, days: SRS_DAYS[0] };
+  const next = Math.min(SRS_LEVEL_MAX, lv + 1);
+  return { level: next, days: SRS_DAYS[next - 1] };
+}

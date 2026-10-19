@@ -1,0 +1,121 @@
+﻿鏀逛簡 115 澶勶紙璺宠繃 0 澶勶級锛?  .ask-big  鈫? 20px
+  .ask-sub  鈫? 13.5px
+  .tile-ico  鈫? 22px
+  .tile-lab  鈫? 13px
+  /* 銆屾í绾垮垝寮€銆嶄袱涓儴鍒?*/
+.home-sec-t  鈫? 14px
+  .list-empty  鈫? 13.5px
+  .list-empty .big  鈫? 26px
+  .list-h  鈫? 14px
+  .mrow-t  鈫? 15px
+  .mrow-m  鈫? 12.5px
+  .wkey  鈫? 15px
+  .wcn  鈫? 13.5px
+  .wrow.s .wkey  鈫? 14px
+  .wrow .wcaret  鈫? 11px
+  .wd-word  鈫? 17px
+  .wd-sent  鈫? 14px
+  .wd-ipa  鈫? 13.5px
+  .wd-spk  鈫? 13px
+  .wd-sec  鈫? 13.5px
+  .wd-t  鈫? 12.5px
+  .syn-credit,.col-credit  鈫? 12.5px
+  .syn-sec-h  鈫? 12.5px
+  .syn-n  鈫? 12px
+  .syn-en  鈫? 14px
+  .syn-cn  鈫? 12.5px
+  .syn-arrow  鈫? 12px
+  /* 閬綇鍚屼箟鏇挎崲锛堣嚜娴嬶級锛氬彸渚ц棌璧锋潵锛岀偣涓€涓嬪绛旀 */
+.syn-tap  鈫? 12px
+  .syn-empty  鈫? 13.5px
+  .syn-empty .big  鈫? 26px
+  .syn-foot  鈫? 12px
+  .syn-qtitle  鈫? 14px
+  .syn-score  鈫? 13px
+  .syn-score b  鈫? 15px
+  .syn-done  鈫? 13.5px
+  .syn-qitem  鈫? 13.5px
+  .syn-qcn  鈫? 12px
+  .syn-qtip  鈫? 12.5px
+  .syn-pop-w  鈫? 19px
+  .syn-pop-x  鈫? 12px
+  .syn-pop-from  鈫? 12.5px
+  .syn-pop-g  鈫? 13.5px
+  .syn-pop-tip  鈫? 12px
+  .col-h2  鈫? 14px
+  .col-n  鈫? 11.5px
+  .col-ph  鈫? 15.5px
+  .col-alt  鈫? 12.5px
+  .col-cn  鈫? 13px
+  .col-spk  鈫? 12px
+  .col-use  鈫? 12.5px
+  .col-usek  鈫? 11.5px
+  .col-ex  鈫? 14px
+  .col-extr  鈫? 12.5px
+  .col-ptitle  鈫? 14px
+  .col-pscore  鈫? 13px
+  .col-pscore b  鈫? 15px
+  .col-done  鈫? 13.5px
+  .col-banklab  鈫? 12px
+  .col-chip  鈫? 13px
+  .col-ptip  鈫? 12.5px
+  .col-qn  鈫? 12px
+  .col-qclue  鈫? 13.5px
+  .col-quse  鈫? 11.5px
+  .col-qsent  鈫? 14px
+  .col-qans  鈫? 12.5px
+  .col-pcount  鈫? 12px
+  .ph-nav .btn  鈫? 12.5px
+  .ph-pos  鈫? 12.5px
+  .ph-n  鈫? 11.5px
+  .ph-mainph  鈫? 19px
+  .ph-alt  鈫? 12.5px
+  .ph-cn  鈫? 14px
+  .ph-use  鈫? 12.5px
+  .ph-usek  鈫? 11.5px
+  .ph-ex  鈫? 15px
+  .ph-excn  鈫? 12.5px
+  .ph-tools .btn  鈫? 12.5px
+  .ph-empty  鈫? 13.5px
+  /* ---------- 灏忛粦鏉块噷鐨勮瘝缁勬潯 / 鍗曡瘝鏉?---------- */
+.ana-sec  鈫? 13.5px
+  .ana-h  鈫? 17px
+  .ana-k  鈫? 12.5px
+  .ana-tr  鈫? 12.5px
+  .xbw-stage  鈫? 14px
+  .xbw-gtag  鈫? 12.5px
+  .xbw-prog  鈫? 13px
+  .xbw-prog b  鈫? 15px
+  .xbw-audio-k  鈫? 12.5px
+  .xbw-tip  鈫? 12.5px
+  .xbw-cn-n  鈫? 12px
+  .xbw-ph  鈫? 21px
+  .xbw-ccc  鈫? 14.5px
+  .xbw-cuse  鈫? 13px
+  .xbw-cex  鈫? 16px
+  .xbw-ctr  鈫? 13px
+  .xbw-li  鈫? 13.5px
+  .xbw-clue  鈫? 14px
+  .xbw-use  鈫? 11.5px
+  .xbw-stem  鈫? 16px
+  .xbw-opt  鈫? 13.5px
+  .xbw-fb  鈫? 13.5px
+  /* 鎬荤粨 */
+.xbw-done  鈫? 14px
+  .xbw-h3  鈫? 14px
+  .xbw-mq  鈫? 14.5px
+  .xbw-mn  鈫? 12px
+  .xbw-ma  鈫? 13px
+  .xbw-mwhy  鈫? 13px
+  /* 澶嶄範锛圫RS锛夐〉闈細閫夋嫨棰橀偅濂楀舰鐘剁洿鎺ュ鐢?.xbw-*锛岃繖閲屽彧鍔犱竴鍙ユ彁绀虹殑闂磋窛 */
+.srs-tip  鈫? 12.5px
+  /* ---------- 闊宠壊闈㈡澘锛堥《鏍忋€岎煄?闊宠壊銆嶏級---------- */
+.vp-h  鈫? 13px
+  .vp-pick  鈫? 13px
+  .vp-radio  鈫? 12px
+  .vp-lang  鈫? 11.5px
+  .vp-say  鈫? 12.5px
+  .vp-auto  鈫? 12.5px
+  .vp-cur  鈫? 12.5px
+  .vp-tips  鈫? 12px
+  .vp-none  鈫? 13px

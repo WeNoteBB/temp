@@ -1,0 +1,70 @@
+# t2-p2-film-studios · 素材与批注存档（2026-10-19）
+
+## 来源
+
+- 原题：`剑桥PET 官方模考题精讲讲练 _57-59.pdf`（3 页 = 书 P56–P58）
+  - 文字提取：`docx-all/剑桥PET 官方模考题精讲讲练 _57-59/word/document.xml` → `t2p2/docx-text.txt`
+  - 4 倍渲染校对：`t2p2/src-1.png`（P56）· `src-2.png`（P57）· `src-3.png`（P58）
+- 笔记（手写批注）：`PET Trainers精讲精练带笔记.pdf`
+  - ⚠ **扫描页码 = 书页 +17**（书 P56–58 = 扫描第 73–75 页）；认书页 footer，别信文件名
+  - 3 倍半页渲染：`t2p2/n3-73-top/bot.png` · `n3-74-top/bot.png` · `n3-75-top/bot.png`
+- 官方答案：书 P199 = 全本 PDF 第 200 页 → `t2p2/ans-200.png`
+
+## 官方答案（逐题核对）
+
+- 讨论题：1 five / 2 eight
+- ①：1 fancy / 2 keen / 3 stand / 4 prefer / 5 rather / 6 fond / 7 mind
+- ②：a fancy, keen (on), fond (of)；b rather；c (can't) stand；d (don't) mind（prefer 官方未列）
+- ③ 划线：every day / doesn't mind / fancies / prefers
+- ④：**B**（Topfitness：daily + membership £20/month + lessons + reserved online 四条全对上）
+- 真题 6–10：**6 C / 7 H / 8 E / 9 B / 10 F**（官方 P199 给了每题思路 + 干扰项点名：
+  6 → A/D/E；7 → D/E/F/G；8 → A/D/H；9 → A/C/G；10 → B/C/G）
+- 手写页边答案与官方一致（n3-74 页边：C/H/E/B/F）
+
+## 手写批注清单（约 40 条 → ana.note）
+
+P56：
+- ①词框：fancy doing / be keen on / be fond of / can't stand doing（无法忍受）/ prefer to（更喜欢）/
+  would rather（宁愿）/ mind doing、don't mind
+- ④：charge（收费，要价，充电）· gym（健身房）· squash courts（壁球场）· be reserved（被预定）·
+  Facilities（设备）
+
+P57：
+- 6 Tom：look around（看看演播室）· at one's own speed（以某人自己的速度）· actual sets（实际的布景）
+- 7 Ingrid：costumes（服装）· worn（穿过）· appeared（出现）· originally（起初，原来）· souvenir（纪念品）
+- 9 Simone：science fiction（科学小说（虚构）故事）· prefer doing sth.（更喜欢做某事）·
+  digital displays（数字显示屏）· achieve（达到）
+- 10 Ben：scenes（场面，情节，布景）
+
+P58：
+- A：allow（允许）· be ready to do sth.（准备好做某事）· direct sb. to sp.（指引某人去某地）·
+  sight（景物，景象）· in advance（提前）
+- B：turn into（转变成）· make-up（化妆）· filming techniques（电影技巧）· as though（仿佛，好像）
+- C：plenty of（许多）· offer（提供）· as much time as you want（你想多长时间都可）
+- D：century（世纪）· wear-wore-worn · digital guide（数码向导）
+- E：through（通过）· avoid long queues（避免长队）· selection（选择）· on sale（在售）· souvenir（纪念品）
+- F：realistic（现实的）· historical sites（历史的遗址）· surrounding area（周边地区）· staff member（职员，员工）
+- G：huge（庞大的，巨大的）· original（原先的，古老的）· digital displays（数码显示屏）
+- H：a collection of（一组，一系列）
+
+## 图片（6 张，4 倍渲染裁图 → assets/img/）
+
+| 文件 | 来源 | 裁切框 (left, top, w, h) |
+|---|---|---|
+| t2-p2-ethan.png | src-1（P56） | 1800, 2020, 420, 440 |
+| t2-p2-tom.png | src-2（P57） | 235, 795, 390, 415 |
+| t2-p2-ingrid.png | src-2 | 235, 1250, 390, 385 |
+| t2-p2-roberto.png | src-2 | 235, 1680, 390, 400 |
+| t2-p2-simone.png | src-2 | 235, 2090, 400, 370 |
+| t2-p2-ben.png | src-2 | 235, 2505, 400, 385 |
+
+（P58 八厂文本页无插图。）
+
+## 数据/工程备注
+
+- 训练题号：① 101–107 · ② 108–113（官方只列 6 个词，prefer 不设题）· ④ 114；真题 6–10。
+- ① 正文的 7 个空用省略号 `……………`（parts 里片段必须**原样复制**，写 `____` 会标不红）。
+- ② 的 6 排作答行标 = tag 尾（`②-rather` → 显示「rather」）。
+- `img.side` 只支持 `left`（引擎口径）。
+- 真题 8 选项 → `others` 写满 7 条（官方点名 3–4 个，其余自补理由）。
+- 跨篇冲突 86 个词一次统一到全部 8 篇（脚本口径同 t2-p1）。

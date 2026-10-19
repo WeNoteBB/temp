@@ -1,0 +1,65 @@
+# t2-p4-carrot-and-ring · 素材与批注存档（2026-10-19）
+
+## 来源
+
+- 原题：`剑桥PET 官方模考题精讲讲练 _64-66.pdf`（3 页 = 书 P63–P65）
+  - 文字提取：`docx-all/剑桥PET 官方模考题精讲讲练 _64-66/word/document.xml` → `t2p4/docx-text.txt`
+  - 4 倍渲染校对：`t2p4/src-1.png`（P63）· `src-2.png`（P64）· `src-3.png`（P65）
+- 笔记（手写批注）：`PET Trainers精讲精练带笔记.pdf`
+  - ⚠ 扫描页码：P63 = 扫描 80；**扫描 81 = 整页手写语法讲解（another/other + although/in spite of）**；P64 = 扫描 82；P65 = 扫描 83
+  - 3 倍半页渲染：`t2p4/n3-80/82/83-top/bot.png`、`n3-81-top/bot.png`（手写页）
+- 官方答案：书 P201 = 全本 PDF 第 202 页 → `t2p4/ans-202.png`
+
+## 官方答案（逐题核对）
+
+- 讨论题：1 five / 2 eight
+- ① 12 对（⚠ docx 漏了 4 个短语，以扫描页为准）：
+  a lack of / not enough · get better / improve · get in touch / contact · hardly ever / almost never ·
+  in the end / finally · make your mind up / decide · on your own / by yourself · rather than / instead of ·
+  so far / until now · take care of / look after · take it easy / relax · up-to-date / modern
+- ②：1 Another / 2 In spite of / 3 What / 4 However / 5 Instead / 6 Otherwise
+- ③：1→C / 2→D / 3→A；B 用不上（That was why 没有理由支撑）
+- 真题 16–20：**16 C / 17 H / 18 A / 19 F / 20 D**（官方理由已逐条写进 why：拔植物=掉戒指、another one=新戒指、
+  She=Colleen、only two women=只可能属于一个人、So=切开胡萝卜的下一步）
+
+## 手写批注清单
+
+P63：
+- A 栏 12 短语中文：缺少 / 变得更好 / 取得联络 / 几乎从不 / 最终 / 决定，做出决定 / 你自己 /
+  而不是 / 到目前为止 / 照顾 / 放轻松 / 最新的，最近的
+- B 栏 12 意思中文：几乎从不，几乎没有 / 你自己 / 联系 / 决定 / 最终 / 提高，改善 / 代替，而不是 /
+  照顾 / 现代的 / 不够 / 放松 / 至今，直到现在
+- ③ 连线讲解（Lucas↔his/plans/Sunday、So↔asked/replied、by himself↔on his own；B 没有理由）→ 写进题目解析
+
+手写页（扫描 81，→ summary 两条）：
+- another 和 other 的区别（other 作主语/宾语/定语、others/the other/the others；another = an + other 只接单数可数名词）
+- although 和 in spite of 的区别（although + 从句、不能指假设、不能作副词放句尾；in spite of + 名词/动名词）
+
+P64：
+- be precious to sb. 对某人来说很珍贵 · Sth. happen to sb. 某事情发生在某人身上 · wear-wore-worn 穿，戴 ·
+  engagement ring 订婚戒指 · more than 超过 · century 世纪，百年 · pull out sth. 拔出某物 ·
+  search for sth. 搜索某物 · give up 放弃 · apart from 除了 · replace 代替 · jeweller 珠宝商，宝石匠 ·
+  in fact 实际上，事实上 · be similar 相似的 · original ring 原始的戒指 · eventually 最终，结果 ·
+  daughter-in-law 儿媳妇 · a bit 有一点，修饰形容词 · belong to 属于 · return to sb. 归还某人 ·
+  remove sth. from sth. 把某物从某物拿开 · fit 合适
+
+P65：
+- dig up 挖掘，找到 · come off 脱落 · manage to do sth. 设法做成某事
+
+## 图片（2 张，4 倍渲染裁图 → assets/img/）
+
+| 文件 | 来源 | 裁切框 (left, top, w, h) |
+|---|---|---|
+| t2-p4-fog.png | src-1（P63） | 1780, 2020, 580, 650 |
+| t2-p4-hands-ring.png | src-2（P64） | 1640, 730, 760, 355 |
+
+## 数据/工程备注
+
+- 训练题号：① 101–112（12 排，行号 1–12）· ② 113–118（每题 2 枚胶囊）· ③ 119–121（4 枚整句胶囊）；真题 16–20。
+- **真题 5 个空 = 开放填空（cloze）**：正文里 `{16}`–`{20}` 渲染成输入框，学生填字母（C/H/A/F/D，忽略大小写）；
+  A–H 八句做 o 段选项池（徽章 A–H）；段尾自动「N 解析」。
+- ⚠ **引擎小改**：选项清单行的字母提取正则从 `[A-Ha-h]` 放宽到 `[A-Ha-l]`（B 栏 12 个字母 a–l 需要；
+  大写 I 会和代词 I 冲突，故只放宽小写；语料里 0 个以小写 i/j/k/l 开头的句子）。
+- ⚠ docx 又漏词：①的 4 个短语（in the end / rather than / so far / take care of）docx 没有 —— 以扫描页为准。
+- ⚠ 句型 chip 静态坑：本次修 6 句（②的「主句」拆成 主语/谓语/表语；31-2、32-1 同）。
+- 跨篇冲突 31 个词一次统一到全部 10 篇。

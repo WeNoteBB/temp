@@ -1,0 +1,7563 @@
+{
+  "slug": "t2-p1-messages-and-notices",
+  "book": "剑桥PET 官方模考题精讲讲练",
+  "label": "Reading Part 1",
+  "title": "Training Test 2",
+  "note": "答案为逐题对照书后 P198 官方答案核对一致；训练①–⑥的答案与解析同 P198；「析」里的笔记来自带手写批注的 PET Trainers 版（书 P52–P55；扫描页码 69–72）（2026-10-19）",
+  "inlineQuiz": true,
+  "passage": {
+    "words": 618,
+    "sentences": 92,
+    "paragraphs": [
+      [
+        {
+          "s": "Training Test 2 · Reading Part 1",
+          "hard": false,
+          "tr": "训练测试 2 · 阅读第 1 部分。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题行：<b>Training Test 2 · Reading Part 1</b>（训练测试 2 · 阅读第 1 部分）",
+            "parts": [
+              [
+                "标题",
+                "Training Test 2 —— 训练测试编号"
+              ],
+              [
+                "标题",
+                "Reading Part 1 —— 阅读第 1 部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式省略句"
+            ],
+            "tip": "这一部分练的是：五段短文本各选一个意思相同的选项（A/B/C）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "How many texts do you have to read in Part 1?",
+          "hard": false,
+          "tr": "在第 1 部分里，你要读几段文本？",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "疑问句：<b>How many texts do you have to read …?</b>",
+            "parts": [
+              [
+                "疑问词",
+                "<code>How many texts</code> —— 多少段文本"
+              ],
+              [
+                "谓语",
+                "<code>do you have to read</code> —— 你必须读"
+              ],
+              [
+                "状语",
+                "in Part 1 —— 在第 1 部分"
+              ]
+            ],
+            "clauses": [
+              "have to 的疑问形式：do you have to …"
+            ],
+            "gram": [
+              "How many + 复数名词：多少……"
+            ],
+            "tip": "官方答案：六段（six）—— 五道题各配一段，外加一段是干扰。",
+            "note": [
+              {
+                "k": "how many",
+                "cn": "多少（后接可数名词复数）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "What do you have to decide when you look at A, B and C?",
+          "hard": false,
+          "tr": "当你看着 A、B 和 C 三个选项时，要判断什么？",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "疑问句：<b>What do you have to decide …?</b>",
+            "parts": [
+              [
+                "疑问词",
+                "What —— 什么"
+              ],
+              [
+                "谓语",
+                "<code>do you have to decide</code> —— 你要判断"
+              ],
+              [
+                "时间从句",
+                "<code>when you look at A, B and C</code> —— 当你看 A、B、C 三个选项时"
+              ]
+            ],
+            "clauses": [
+              "when 引导时间状语从句"
+            ],
+            "gram": [
+              "decide + 宾语从句：判断……"
+            ],
+            "tip": "官方答案：哪个选项和文本「说的是同一个意思」（which of them means the same as the text）。",
+            "note": [
+              {
+                "k": "decide",
+                "cn": "判断，决定"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "FOCUS: WORDS WITH SIMILAR MEANING",
+          "hard": false,
+          "tr": "重点：意思相近的词。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>FOCUS: WORDS WITH SIMILAR MEANING</b>（重点：近义词）",
+            "parts": [
+              [
+                "名词",
+                "WORDS —— 词"
+              ],
+              [
+                "后置修饰",
+                "<code>WITH SIMILAR MEANING</code> —— 意思相近的"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "similar 相似的；meaning 意思"
+            ],
+            "tip": "Part 1 的核心技能：认出「换了一种说法」的同义表达。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "① Match expressions 1–5 with the expressions a–e that have similar meanings.",
+          "hard": false,
+          "tr": "① 把 1–5 的表达与意思相近的 a–e 表达配对。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Match expressions 1–5 with the expressions a–e …</b>",
+            "parts": [
+              [
+                "宾语",
+                "<code>expressions 1–5</code> —— 1–5 的表达"
+              ],
+              [
+                "介词短语",
+                "<code>with the expressions a–e</code> —— 与 a–e 的表达"
+              ],
+              [
+                "定语从句",
+                "<code>that have similar meanings</code> —— 意思相近的"
+              ]
+            ],
+            "clauses": [
+              "that 引导定语从句"
+            ],
+            "gram": [
+              "match A with B：把 A 与 B 配对"
+            ],
+            "tip": "先读左栏五句「说的是什么事」，再去右栏找换一种说法的。",
+            "note": [
+              {
+                "k": "expression",
+                "cn": "表达（方式）；说法"
+              },
+              {
+                "k": "meaning",
+                "cn": "意思，含义"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "a It is changing its opening hours.",
+          "hard": false,
+          "tr": "a 它正在更改营业时间。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>It is changing its opening hours.</b>",
+            "parts": [
+              [
+                "主语",
+                "It —— 它（指游泳馆）"
+              ],
+              [
+                "谓语",
+                "<code>is changing</code> —— 正在更改"
+              ],
+              [
+                "宾语",
+                "<code>its opening hours</code> —— 它的营业时间"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "opening hours 营业时间"
+            ],
+            "tip": "对应第 2 句：8 点后不再开放 = 正在改营业时间。",
+            "note": [
+              {
+                "k": "opening hours",
+                "cn": "营业时间"
+              }
+            ]
+          }
+        },
+        {
+          "s": "b It’s in good condition and is almost new.",
+          "hard": false,
+          "tr": "b 它状况良好，几乎是新的。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "并列系表：<b>It’s in good condition and is almost new.</b>",
+            "parts": [
+              [
+                "系动词",
+                "It’s —— 它是"
+              ],
+              [
+                "表语",
+                "<code>in good condition</code> —— 状况良好"
+              ],
+              [
+                "表语 2",
+                "<code>almost new</code> —— 几乎是新的"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "in good condition 状况良好；almost 几乎"
+            ],
+            "tip": "对应第 3 句：新买且好用 = 状况良好、几乎全新。",
+            "note": [
+              {
+                "k": "in good condition",
+                "cn": "状况良好"
+              },
+              {
+                "k": "almost",
+                "cn": "几乎"
+              }
+            ]
+          }
+        },
+        {
+          "s": "c Lower prices for some children if they are with their mother or father.",
+          "hard": false,
+          "tr": "c 一些孩子如果有父母陪同，价格更低。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "名词短语 + 条件：<b>Lower prices for some children if …</b>",
+            "parts": [
+              [
+                "名词短语",
+                "<code>Lower prices</code> —— 更低的价格"
+              ],
+              [
+                "对象",
+                "<code>for some children</code> —— 对某些孩子"
+              ],
+              [
+                "条件从句",
+                "<code>if they are with their mother or father</code> —— 如果和父母在一起"
+              ]
+            ],
+            "clauses": [
+              "if 条件句"
+            ],
+            "gram": [
+              "lower（low 的比较级）：更低的"
+            ],
+            "tip": "对应第 5 句：12 岁以下随行打折 = 有父母陪同价格更低。",
+            "note": [
+              {
+                "k": "lower",
+                "cn": "更低的（low 的比较级）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "d You must not use your camera here.",
+          "hard": false,
+          "tr": "d 你不能在这里使用相机。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "否定谓语：<b>You must not use your camera here.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>must not use</code> —— 不许使用"
+              ],
+              [
+                "宾语",
+                "<code>your camera</code> —— 你的相机"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "must not：不许、禁止"
+            ],
+            "tip": "对应第 1 句：禁止拍照 = 不能使用相机。",
+            "note": [
+              {
+                "k": "camera",
+                "cn": "相机"
+              }
+            ]
+          }
+        },
+        {
+          "s": "e You may have to go in a different way.",
+          "hard": false,
+          "tr": "e 你可能得走另一条路。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "谓语：<b>may have to go in a different way</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>may have to go</code> —— 可能得去（may 表可能 + have to 表必须）"
+              ],
+              [
+                "方式",
+                "<code>in a different way</code> —— 走另一条路"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "may have to：可能必须"
+            ],
+            "tip": "对应第 4 句：侧门关了走正门 = 可能要换一条路。",
+            "note": [
+              {
+                "k": "different",
+                "cn": "不同的"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Photography is not permitted in the art gallery.",
+          "hard": false,
+          "tr": "美术馆里不允许摄影。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "被动句：<b>Photography is not permitted</b>（摄影不被允许）",
+            "parts": [
+              [
+                "主语",
+                "Photography —— 摄影"
+              ],
+              [
+                "谓语",
+                "<code>is not permitted</code> —— 不被允许（被动语态）"
+              ],
+              [
+                "地点",
+                "<code>in the art gallery</code> —— 在美术馆里"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "permit（动词）→ be permitted 被允许",
+              "photography 摄影"
+            ],
+            "tip": "同义替换：not permitted ↔ must not（禁止）→ 答案 d。",
+            "note": [
+              {
+                "k": "be permitted",
+                "cn": "被允许"
+              },
+              {
+                "k": "art gallery",
+                "cn": "艺术画廊，美术馆"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "The swimming pool will no longer be open after 8 p.m.",
+          "hard": false,
+          "tr": "游泳池晚上 8 点后将不再开放。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主干：<b>The swimming pool will no longer be open …</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>The swimming pool</code> —— 游泳池"
+              ],
+              [
+                "表语",
+                "<code>no longer be open</code> —— 不再开放"
+              ],
+              [
+                "时间",
+                "<code>after 8 p.m.</code> —— 晚 8 点以后"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "no longer：不再",
+              "p.m. 下午/晚上"
+            ],
+            "tip": "同义替换：no longer open after 8 ↔ changing its opening hours → 答案 a。",
+            "note": [
+              {
+                "k": "no longer",
+                "cn": "不再"
+              },
+              {
+                "k": "swimming pool",
+                "cn": "游泳池"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "The printer was bought recently and works perfectly.",
+          "hard": false,
+          "tr": "这台打印机是最近买的，运转得非常好。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "并列谓语：<b>The printer was bought recently and works perfectly.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>The printer</code> —— 打印机"
+              ],
+              [
+                "谓语 1",
+                "<code>was bought recently</code> —— 最近被买（被动）"
+              ],
+              [
+                "谓语 2",
+                "<code>works perfectly</code> —— 运转得非常好"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "recently 最近",
+              "works perfectly 运转得很好"
+            ],
+            "tip": "同义替换：bought recently + works perfectly ↔ almost new + in good condition → 答案 b。",
+            "note": [
+              {
+                "k": "recently",
+                "cn": "最近"
+              },
+              {
+                "k": "perfectly",
+                "cn": "完美地，非常好"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "If the side entrance is closed, please use the main entrance.",
+          "hard": false,
+          "tr": "如果侧门关了，请走正门。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "条件句：<b>If the side entrance is closed, please use the main entrance.</b>",
+            "parts": [
+              [
+                "条件从句",
+                "<code>If the side entrance is closed</code> —— 如果侧门关着"
+              ],
+              [
+                "谓语",
+                "<code>please use</code> —— 请使用"
+              ],
+              [
+                "宾语",
+                "<code>the main entrance</code> —— 正门"
+              ]
+            ],
+            "clauses": [
+              "if 条件句"
+            ],
+            "gram": [
+              "side entrance 侧门；main entrance 正门"
+            ],
+            "tip": "同义替换：走另一个门 ↔ go in a different way → 答案 e。",
+            "note": [
+              {
+                "k": "side entrance",
+                "cn": "侧门"
+              },
+              {
+                "k": "main entrance",
+                "cn": "主入口，正门"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Discount for under-12s when accompanied by a parent.",
+          "hard": false,
+          "tr": "12 岁以下儿童在家长陪同下可享折扣。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "名词短语：<b>Discount for under-12s …</b>（给 12 岁以下的折扣）",
+            "parts": [
+              [
+                "名词",
+                "Discount —— 折扣"
+              ],
+              [
+                "对象",
+                "<code>for under-12s</code> —— 给 12 岁以下的人"
+              ],
+              [
+                "时间状语",
+                "<code>when accompanied by a parent</code> —— 在有家长陪同的时候"
+              ]
+            ],
+            "clauses": [
+              "when + 过去分词（省略 they are）"
+            ],
+            "gram": [
+              "discount 折扣",
+              "accompanied by 由……陪同"
+            ],
+            "tip": "同义替换：under-12s + accompanied by a parent ↔ lower prices with mother or father → 答案 c。",
+            "note": [
+              {
+                "k": "discount",
+                "cn": "打折，折扣"
+              },
+              {
+                "k": "accompanied",
+                "cn": "陪伴的，伴随的（accompanied by 由…陪同）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "FOCUS: TEXT TYPES, CONTEXT AND FUNCTION",
+          "hard": false,
+          "tr": "重点：文本类型、场景和用途。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>FOCUS: TEXT TYPES, CONTEXT AND FUNCTION</b>",
+            "parts": [
+              [
+                "名词",
+                "TEXT TYPES —— 文本类型"
+              ],
+              [
+                "名词",
+                "CONTEXT —— 场景、语境"
+              ],
+              [
+                "名词",
+                "FUNCTION —— 用途"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "context 语境；function 功能、用途"
+            ],
+            "tip": "看到一段文字先问：它长什么样、在哪儿出现、想干什么。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "② Look at the six short texts. Match 1–6 with text types a–f and say where you might see them.",
+          "hard": true,
+          "tr": "② 看这六段短文。把 1–6 与文本类型 a–f 配对，并说说你可能在哪儿见到它们。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Look at the six short texts. Match 1–6 … and say where …</b>",
+            "parts": [
+              [
+                "谓语 1",
+                "<code>Look at the six short texts</code> —— 看这六段短文"
+              ],
+              [
+                "谓语 2",
+                "<code>Match 1–6 with text types a–f</code> —— 把 1–6 与类型 a–f 配对"
+              ],
+              [
+                "谓语 3",
+                "<code>and say where you might see them</code> —— 说说可能在哪儿见到"
+              ]
+            ],
+            "clauses": [
+              "where 引导宾语从句；might 表可能"
+            ],
+            "gram": [
+              "text type 文本类型；might 可能"
+            ],
+            "tip": "文本的「长相」（标签、便签、告示）和出现的地方都是线索。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "a email",
+          "hard": false,
+          "tr": "a 电子邮件。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "类型：<b>email</b>（电子邮件）",
+            "parts": [
+              [
+                "名词",
+                "email —— 电子邮件"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "email 电子邮件"
+            ],
+            "tip": "看抬头/称呼/落款，多出现在电脑或手机上。",
+            "note": [
+              {
+                "k": "email",
+                "cn": "电子邮件"
+              }
+            ]
+          }
+        },
+        {
+          "s": "b label",
+          "hard": false,
+          "tr": "b 标签。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "类型：<b>label</b>（标签）",
+            "parts": [
+              [
+                "名词",
+                "label —— 标签"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "label 标签、标牌"
+            ],
+            "tip": "贴在物品上的说明（如衣服洗涤说明）。",
+            "note": [
+              {
+                "k": "label",
+                "cn": "标签"
+              }
+            ]
+          }
+        },
+        {
+          "s": "c advertisement",
+          "hard": false,
+          "tr": "c 广告。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "类型：<b>advertisement</b>（广告）",
+            "parts": [
+              [
+                "名词",
+                "advertisement —— 广告"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "advertisement 广告（缩写 ad）"
+            ],
+            "tip": "有价格、催你行动（register by Friday）。",
+            "note": [
+              {
+                "k": "advertisement",
+                "cn": "广告"
+              }
+            ]
+          }
+        },
+        {
+          "s": "d note",
+          "hard": false,
+          "tr": "d 便条。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "类型：<b>note</b>（便条）",
+            "parts": [
+              [
+                "名词",
+                "note —— 便条"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "note 便条、字条"
+            ],
+            "tip": "留给家里人的短消息，通常在家里桌上。",
+            "note": [
+              {
+                "k": "note",
+                "cn": "便条，字条"
+              }
+            ]
+          }
+        },
+        {
+          "s": "e notice",
+          "hard": false,
+          "tr": "e 告示。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "类型：<b>notice</b>（告示、通知）",
+            "parts": [
+              [
+                "名词",
+                "notice —— 告示"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "notice 告示、通知"
+            ],
+            "tip": "贴在公共场所的提醒或规定。",
+            "note": [
+              {
+                "k": "notice",
+                "cn": "告示，通知"
+              }
+            ]
+          }
+        },
+        {
+          "s": "f road sign",
+          "hard": false,
+          "tr": "f 道路标志。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "类型：<b>road sign</b>（道路标志）",
+            "parts": [
+              [
+                "名词",
+                "road sign —— 道路标志"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "road sign 道路标志"
+            ],
+            "tip": "立在路边、多为图形+短句。",
+            "note": [
+              {
+                "k": "road sign",
+                "cn": "道路标志"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "These doors must be kept open at all times.",
+          "hard": false,
+          "tr": "这些门必须始终保持开着。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "被动句：<b>These doors must be kept open at all times.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>These doors</code> —— 这些门"
+              ],
+              [
+                "谓语",
+                "<code>must be kept open</code> —— 必须被保持开着"
+              ],
+              [
+                "时间状语",
+                "<code>at all times</code> —— 始终、任何时候"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "keep sth open：让……保持开着（被动 be kept open）",
+              "at all times 始终"
+            ],
+            "tip": "类型 = notice（告示）：学校走廊里的规定；③ 的 f「Do not close them」说的就是它。",
+            "note": [
+              {
+                "k": "at all times",
+                "cn": "始终，一直，总是"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Wash sweater by hand only, at low temperature.",
+          "hard": false,
+          "tr": "毛衣只能手洗，用低温。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Wash sweater by hand only, at low temperature.</b>",
+            "parts": [
+              [
+                "谓语",
+                "Wash —— 洗"
+              ],
+              [
+                "宾语",
+                "sweater —— 毛衣"
+              ],
+              [
+                "方式",
+                "<code>by hand only</code> —— 只能用手"
+              ],
+              [
+                "条件",
+                "<code>at low temperature</code> —— 低温"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "by hand 用手工",
+              "at low temperature 低温下"
+            ],
+            "tip": "类型 = label（衣服洗涤说明）；③ 的 c「别机洗、别热水」说的就是它。",
+            "note": [
+              {
+                "k": "by hand",
+                "cn": "用手（手工）"
+              },
+              {
+                "k": "low temperature",
+                "cn": "低温"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Hi Molly",
+          "hard": false,
+          "tr": "你好 Molly。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "称呼：<b>Hi Molly</b>（邮件抬头）",
+            "parts": [
+              [
+                "称呼",
+                "Hi Molly —— 你好，Molly"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "邮件的开头称呼"
+            ],
+            "tip": "有称呼、有落款 —— 这是 email。",
+            "note": [
+              {
+                "k": "hi",
+                "cn": "嗨，你好"
+              }
+            ]
+          }
+        },
+        {
+          "s": "I hope you’re coming to see us next month! You should book your train tickets quickly if you are.",
+          "hard": false,
+          "tr": "我希望你下个月会来看我们！如果是的话，你应该快点订火车票。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "宾语从句：<b>I hope you’re coming to see us next month!</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>I hope</code> —— 我希望"
+              ],
+              [
+                "宾语从句",
+                "<code>you’re coming to see us next month</code> —— 你下个月来看我们"
+              ],
+              [
+                "建议",
+                "<code>You should book your train tickets quickly if you are</code> —— 如果是的话要快点订票"
+              ]
+            ],
+            "clauses": [
+              "hope + 宾语从句；if you are 省略（coming）"
+            ],
+            "gram": [
+              "book tickets 订票",
+              "train tickets 火车票"
+            ],
+            "tip": "类型 = email；③ 的 d「她该尽快安排出行」说的就是它。",
+            "note": [
+              {
+                "k": "train tickets",
+                "cn": "火车票"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Alice",
+          "hard": false,
+          "tr": "Alice（落款）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "落款：<b>Alice</b>（邮件署名）",
+            "parts": [
+              [
+                "署名",
+                "Alice —— 发信人"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "邮件结尾的署名"
+            ],
+            "tip": "落款 + 称呼 = email 的标志。",
+            "note": [
+              {
+                "k": "alice",
+                "cn": "Alice（女子名）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "No motor vehicles allowed in this part of the village.",
+          "hard": false,
+          "tr": "村子的这一片不允许机动车通行。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "省略句：<b>No motor vehicles allowed …</b>（不允许机动车）",
+            "parts": [
+              [
+                "名词",
+                "<code>No motor vehicles</code> —— 禁止机动车"
+              ],
+              [
+                "补充",
+                "<code>allowed in this part of the village</code> —— 允许在村庄的这一片"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "motor vehicle 机动车",
+              "allow 允许"
+            ],
+            "tip": "类型 = road sign（道路标志）；③ 的 a「You must not drive here」说的就是它。",
+            "note": [
+              {
+                "k": "motor vehicle",
+                "cn": "机动车"
+              },
+              {
+                "k": "allow",
+                "cn": "允许"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Mum,",
+          "hard": false,
+          "tr": "妈妈，",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "称呼：<b>Mum,</b>（便条的称呼）",
+            "parts": [
+              [
+                "称呼",
+                "Mum —— 妈妈"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "给家人的便条称呼"
+            ],
+            "tip": "便条的典型开头。",
+            "note": [
+              {
+                "k": "mum",
+                "cn": "妈妈（称呼）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "I’m a little short of cash.",
+          "hard": false,
+          "tr": "我手头有点缺钱。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>I’m a little short of cash.</b>",
+            "parts": [
+              [
+                "系动词",
+                "I’m —— 我是"
+              ],
+              [
+                "表语",
+                "<code>a little short of cash</code> —— 有点缺钱"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "be short of：缺少……",
+              "cash 现金"
+            ],
+            "tip": "③ 的 e「她钱不够想借点」说的就是它。",
+            "note": [
+              {
+                "k": "short of",
+                "cn": "欠缺，缺少"
+              },
+              {
+                "k": "cash",
+                "cn": "现金"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Can you lend me a bit until the weekend? Back home soon.",
+          "hard": false,
+          "tr": "你能借我一点钱到周末吗？很快就回家。",
+          "ana": {
+            "pat": [
+              "主谓双宾"
+            ],
+            "frame": "请求：<b>Can you lend me a bit …?</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>lend me</code> —— 借给我"
+              ],
+              [
+                "宾语",
+                "<code>a bit</code> —— 一点（钱）"
+              ],
+              [
+                "时间",
+                "<code>until the weekend</code> —— 到周末"
+              ],
+              [
+                "补充",
+                "<code>Back home soon</code> —— 很快回家"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "lend sb sth：借给某人某物",
+              "a bit 一点"
+            ],
+            "tip": "类型 = note（便条）；借东西 + 落款 = 家里的便条。",
+            "note": [
+              {
+                "k": "lend",
+                "cn": "借给（lend sb sth）"
+              },
+              {
+                "k": "a bit",
+                "cn": "一点"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Isabelle",
+          "hard": false,
+          "tr": "Isabelle（落款）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "落款：<b>Isabelle</b>（便条署名）",
+            "parts": [
+              [
+                "署名",
+                "Isabelle —— 留便条的人"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "便条结尾署名"
+            ],
+            "tip": "称呼 + 落款 = note。",
+            "note": [
+              {
+                "k": "isabelle",
+                "cn": "Isabelle（女子名）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "LEARN TO COOK",
+          "hard": false,
+          "tr": "学做饭。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "广告标题：<b>LEARN TO COOK</b>（学做饭）",
+            "parts": [
+              [
+                "动词短语",
+                "LEARN TO COOK —— 学做饭"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "learn to do sth 学做某事"
+            ],
+            "tip": "大写标题 + 感叹号 = 广告的腔调。",
+            "note": [
+              {
+                "k": "cook",
+                "cn": "做饭，烹饪"
+              }
+            ]
+          }
+        },
+        {
+          "s": "for just £20 a week!",
+          "hard": false,
+          "tr": "每周只要 20 英镑！",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "价格短语：<b>for just £20 a week!</b>",
+            "parts": [
+              [
+                "价格",
+                "<code>for just £20</code> —— 只要 20 英镑"
+              ],
+              [
+                "周期",
+                "<code>a week</code> —— 每周"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "£20 a week：每周 20 镑"
+            ],
+            "tip": "报价格 = advertisement 的标志。",
+            "note": [
+              {
+                "k": "pound",
+                "cn": "英镑（£）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "First lesson free if you register by this Friday.",
+          "hard": false,
+          "tr": "本周五前报名，第一节课免费。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表 + 条件：<b>First lesson free if you register by this Friday.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>First lesson</code> —— 第一节课"
+              ],
+              [
+                "表语",
+                "free —— 免费的（省略 is）"
+              ],
+              [
+                "条件从句",
+                "<code>if you register by this Friday</code> —— 如果你在本周五前报名"
+              ]
+            ],
+            "clauses": [
+              "if 条件句"
+            ],
+            "gram": [
+              "free 免费的",
+              "register 报名、注册"
+            ],
+            "tip": "类型 = advertisement；③ 的 b「报名早就免第一节课费」说的就是它。",
+            "note": [
+              {
+                "k": "register",
+                "cn": "报名，注册"
+              },
+              {
+                "k": "free",
+                "cn": "免费的"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "③ Match answers a–f with short texts 1–6 in Exercise 2.",
+          "hard": false,
+          "tr": "③ 把答案 a–f 与练习 2 里的短文 1–6 配对。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Match answers a–f with short texts 1–6 …</b>",
+            "parts": [
+              [
+                "宾语",
+                "<code>answers a–f</code> —— 答案 a–f"
+              ],
+              [
+                "介词短语",
+                "<code>with short texts 1–6</code> —— 与短文 1–6"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "match A with B：把 A 与 B 配对"
+            ],
+            "tip": "六个句子各描述一段文本的意思 —— 换一种说法找原文。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "You must not drive here.",
+          "hard": false,
+          "tr": "你不能在这里开车。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "否定谓语：<b>You must not drive here.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>must not drive</code> —— 不许驾驶"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "must not：禁止"
+            ],
+            "tip": "同义替换：must not drive ↔ No motor vehicles → 对应文本 4。",
+            "note": [
+              {
+                "k": "drive",
+                "cn": "驾驶，开车"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "You don’t have to pay for your first class if you join before the weekend.",
+          "hard": false,
+          "tr": "如果你在周末前加入，第一节课不用付费。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "否定谓语 + 条件：<b>You don’t have to pay … if you join before the weekend.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>don’t have to pay</code> —— 不必付钱"
+              ],
+              [
+                "对象",
+                "<code>for your first class</code> —— 你的第一节课"
+              ],
+              [
+                "条件从句",
+                "<code>if you join before the weekend</code> —— 如果你在周末前加入"
+              ]
+            ],
+            "clauses": [
+              "if 条件句"
+            ],
+            "gram": [
+              "don’t have to：不必",
+              "join 加入、参加"
+            ],
+            "tip": "同义替换：don’t have to pay ↔ First lesson free → 对应文本 6。",
+            "note": [
+              {
+                "k": "pay",
+                "cn": "支付，付费"
+              },
+              {
+                "k": "join",
+                "cn": "加入，参加"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Do not put in washing machine or use hot water.",
+          "hard": false,
+          "tr": "不要放进洗衣机，也不要使用热水。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "否定祈使：<b>Do not put in washing machine or use hot water.</b>",
+            "parts": [
+              [
+                "谓语 1",
+                "<code>Do not put in</code> —— 不要放进"
+              ],
+              [
+                "宾语",
+                "<code>washing machine</code> —— 洗衣机"
+              ],
+              [
+                "谓语 2",
+                "<code>or use hot water</code> —— 或使用热水"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "washing machine 洗衣机",
+              "hot water 热水"
+            ],
+            "tip": "同义替换：别机洗、别热水 ↔ Wash by hand only, at low temperature → 对应文本 2。",
+            "note": [
+              {
+                "k": "washing machine",
+                "cn": "洗衣机"
+              },
+              {
+                "k": "hot water",
+                "cn": "热水"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "She ought to make travel arrangements soon if she’s going to visit.",
+          "hard": false,
+          "tr": "如果她打算来访，应该尽快安排出行。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "建议：<b>She ought to make travel arrangements soon …</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>ought to make</code> —— 应该做（ought to 表建议）"
+              ],
+              [
+                "宾语",
+                "<code>travel arrangements</code> —— 出行安排"
+              ],
+              [
+                "条件从句",
+                "<code>if she’s going to visit</code> —— 如果她打算来访"
+              ]
+            ],
+            "clauses": [
+              "if 条件句"
+            ],
+            "gram": [
+              "ought to do sth：应该做某事",
+              "make arrangements 做安排"
+            ],
+            "tip": "同义替换：make travel arrangements soon ↔ should book your train tickets quickly → 对应文本 3。",
+            "note": [
+              {
+                "k": "ought to",
+                "cn": "应该（ought to do sth）"
+              },
+              {
+                "k": "travel arrangements",
+                "cn": "出行安排"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "She hasn’t got much money and wants to borrow some.",
+          "hard": false,
+          "tr": "她钱不多，想借一点。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "并列谓语：<b>She hasn’t got much money and wants to borrow some.</b>",
+            "parts": [
+              [
+                "谓语 1",
+                "<code>hasn’t got much money</code> —— 没有很多钱"
+              ],
+              [
+                "谓语 2",
+                "<code>wants to borrow some</code> —— 想借一些"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "borrow 借入（对比 lend 借出）"
+            ],
+            "tip": "同义替换：hasn’t got much money ↔ short of cash；borrow some ↔ Can you lend me a bit → 对应文本 5。",
+            "note": [
+              {
+                "k": "borrow",
+                "cn": "借入（borrow sth from sb）"
+              },
+              {
+                "k": "money",
+                "cn": "钱（不可数）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Do not close them for any reason.",
+          "hard": false,
+          "tr": "任何理由都不要关上它们。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "否定祈使：<b>Do not close them for any reason.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Do not close</code> —— 不要关闭"
+              ],
+              [
+                "宾语",
+                "them —— 它们（那些门）"
+              ],
+              [
+                "状语",
+                "<code>for any reason</code> —— 以任何理由"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "for any reason 以任何理由"
+            ],
+            "tip": "同义替换：do not close ↔ must be kept open at all times → 对应文本 1。",
+            "note": [
+              {
+                "k": "reason",
+                "cn": "理由，原因"
+              },
+              {
+                "k": "close",
+                "cn": "关闭"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "GRAMMAR: IMPERATIVES AND 'NO + -ING' FORMS",
+          "hard": false,
+          "tr": "语法：祈使句和 no + -ing 形式。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>GRAMMAR: IMPERATIVES AND 'NO + -ING' FORMS</b>",
+            "parts": [
+              [
+                "名词",
+                "IMPERATIVES —— 祈使句"
+              ],
+              [
+                "名词",
+                "'NO + -ING' FORMS —— no + 动名词的形式"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "imperative 祈使句；-ing form 动名词形式"
+            ],
+            "tip": "这一页主角：怎么下命令（Do…）和怎么禁止（No …ing / Don’t …）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "④ Complete the orders with words from the box.",
+          "hard": false,
+          "tr": "④ 用方框里的词补全这些命令。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Complete the orders with words from the box.</b>",
+            "parts": [
+              [
+                "谓语",
+                "Complete —— 补全"
+              ],
+              [
+                "宾语",
+                "<code>the orders</code> —— 那些命令"
+              ],
+              [
+                "介词短语",
+                "<code>with words from the box</code> —— 用方框里的词"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "order 命令、指示"
+            ],
+            "tip": "先看每句缺的是动词还是 -ing 形式，再从框里挑。",
+            "note": [
+              {
+                "k": "complete",
+                "cn": "补全，完成"
+              },
+              {
+                "k": "order",
+                "cn": "命令，指示"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "A standing",
+          "hard": false,
+          "tr": "A 站立（stand 的 -ing 形式）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "词框：<b>standing</b>（站立）",
+            "parts": [
+              [
+                "词",
+                "standing —— 站立（stand 的 -ing 形式）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "stand → standing"
+            ],
+            "tip": "「No + -ing」结构里用。",
+            "note": [
+              {
+                "k": "standing",
+                "cn": "站立（stand 的 -ing 形式）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "B put on",
+          "hard": false,
+          "tr": "B 穿上、系上。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "词框：<b>put on</b>（穿上、系上）",
+            "parts": [
+              [
+                "短语",
+                "put on —— 穿上、戴上、系上"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "put on 系上（安全带等）"
+            ],
+            "tip": "祈使句直接用原形：Put on your seatbelts.",
+            "note": [
+              {
+                "k": "put on",
+                "cn": "穿上，系上"
+              }
+            ]
+          }
+        },
+        {
+          "s": "C stop",
+          "hard": false,
+          "tr": "C 停下。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "词框：<b>stop</b>（停下）",
+            "parts": [
+              [
+                "词",
+                "stop —— 停下"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "stop 停下"
+            ],
+            "tip": "祈使句：Stop here. 在这儿停。",
+            "note": [
+              {
+                "k": "stop",
+                "cn": "停下"
+              }
+            ]
+          }
+        },
+        {
+          "s": "D running",
+          "hard": false,
+          "tr": "D 奔跑（run 的 -ing 形式）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "词框：<b>running</b>（奔跑）",
+            "parts": [
+              [
+                "词",
+                "running —— 奔跑（run 的 -ing 形式）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "run → running（双写 n）"
+            ],
+            "tip": "No running = 禁止奔跑。",
+            "note": [
+              {
+                "k": "running",
+                "cn": "奔跑（run 的 -ing 形式）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "E use",
+          "hard": false,
+          "tr": "E 使用。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "词框：<b>use</b>（使用）",
+            "parts": [
+              [
+                "词",
+                "use —— 使用"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "use 使用"
+            ],
+            "tip": "祈使句：Use this exit. 走这个出口。",
+            "note": [
+              {
+                "k": "use",
+                "cn": "使用"
+              }
+            ]
+          }
+        },
+        {
+          "s": "F camping",
+          "hard": false,
+          "tr": "F 露营（camp 的 -ing 形式）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "词框：<b>camping</b>（露营）",
+            "parts": [
+              [
+                "词",
+                "camping —— 露营（camp 的 -ing 形式）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "camp → camping"
+            ],
+            "tip": "No camping = 禁止露营。",
+            "note": [
+              {
+                "k": "camping",
+                "cn": "露营"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "…………… here when traffic lights are red.",
+          "hard": false,
+          "tr": "红灯时在这里……（停下）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>____ here when traffic lights are red.</b>",
+            "parts": [
+              [
+                "谓语（空）",
+                "填 stop —— 停下"
+              ],
+              [
+                "时间从句",
+                "<code>when traffic lights are red</code> —— 当交通灯是红色时"
+              ]
+            ],
+            "clauses": [
+              "when 引导时间状语从句"
+            ],
+            "gram": [
+              "祈使句用动词原形",
+              "traffic lights 交通灯"
+            ],
+            "tip": "红灯 = 停下 → Stop。官方答案：Stop。",
+            "note": [
+              {
+                "k": "traffic lights",
+                "cn": "交通灯，红绿灯"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "No …………… in the nature park.",
+          "hard": false,
+          "tr": "自然公园里禁止……（露营）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "No + -ing：<b>No ____ in the nature park.</b>",
+            "parts": [
+              [
+                "空",
+                "填 camping —— 露营"
+              ],
+              [
+                "地点",
+                "<code>in the nature park</code> —— 在自然公园里"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "No + -ing：禁止做某事"
+            ],
+            "tip": "公园里禁止露营 → camping。官方答案：camping。",
+            "note": [
+              {
+                "k": "nature park",
+                "cn": "自然公园"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "…………… this exit when film ends.",
+          "hard": false,
+          "tr": "电影结束时……（走）这个出口。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>____ this exit when film ends.</b>",
+            "parts": [
+              [
+                "谓语（空）",
+                "填 Use —— 使用"
+              ],
+              [
+                "宾语",
+                "<code>this exit</code> —— 这个出口"
+              ],
+              [
+                "时间从句",
+                "<code>when film ends</code> —— 电影结束时"
+              ]
+            ],
+            "clauses": [
+              "when 引导时间状语从句"
+            ],
+            "gram": [
+              "exit 出口"
+            ],
+            "tip": "出口要用「使用」→ Use。官方答案：Use。",
+            "note": [
+              {
+                "k": "exit",
+                "cn": "出口"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "No …………… near the driver or the doors.",
+          "hard": false,
+          "tr": "司机旁或车门旁禁止……（站立）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "No + -ing：<b>No ____ near the driver or the doors.</b>",
+            "parts": [
+              [
+                "空",
+                "填 standing —— 站立"
+              ],
+              [
+                "地点",
+                "<code>near the driver or the doors</code> —— 在司机或车门附近"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "near 在……附近"
+            ],
+            "tip": "公交车上不许站在司机/车门旁 → standing。官方答案：standing。",
+            "note": [
+              {
+                "k": "driver",
+                "cn": "司机"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "No …………… on the stairs.",
+          "hard": false,
+          "tr": "楼梯上禁止……（奔跑）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "No + -ing：<b>No ____ on the stairs.</b>",
+            "parts": [
+              [
+                "空",
+                "填 running —— 奔跑"
+              ],
+              [
+                "地点",
+                "<code>on the stairs</code> —— 在楼梯上"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "stairs 楼梯"
+            ],
+            "tip": "楼梯上不许跑 → running。官方答案：running。",
+            "note": [
+              {
+                "k": "stairs",
+                "cn": "楼梯"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "…………… your seatbelts for landing.",
+          "hard": false,
+          "tr": "着陆时……（系好）你的安全带。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>____ your seatbelts for landing.</b>",
+            "parts": [
+              [
+                "谓语（空）",
+                "填 Put on —— 系上"
+              ],
+              [
+                "宾语",
+                "<code>your seatbelts</code> —— 你的安全带"
+              ],
+              [
+                "目的",
+                "<code>for landing</code> —— 为了着陆"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "seatbelt 安全带；landing 着陆"
+            ],
+            "tip": "系安全带 → Put on。官方答案：Put on。",
+            "note": [
+              {
+                "k": "seatbelt",
+                "cn": "安全带"
+              }
+            ]
+          }
+        }
+      ],
+      [],
+      [
+        {
+          "s": "⑤ Where would you see orders 1–6 from Exercise 4? Match them with a–f below.",
+          "hard": false,
+          "tr": "⑤ 练习 4 里的命令 1–6，你会在哪里见到？把它们与下面的 a–f 配对。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "疑问 + 祈使：<b>Where would you see orders 1–6 …? Match them with a–f below.</b>",
+            "parts": [
+              [
+                "疑问句",
+                "<code>Where would you see orders 1–6</code> —— 你会在哪儿见到命令 1–6"
+              ],
+              [
+                "谓语",
+                "<code>Match them with a–f below</code> —— 把它们与下面 a–f 配对"
+              ]
+            ],
+            "clauses": [
+              "would 表推测"
+            ],
+            "gram": [
+              "Where would you see …? 你会在哪儿见到……？"
+            ],
+            "tip": "想一想每个标志/提示语出现的场所：街口、公园、电影院……"
+          }
+        }
+      ],
+      [
+        {
+          "s": "a in a cinema",
+          "hard": false,
+          "tr": "a 在电影院里。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "地点：<b>in a cinema</b>（在电影院）",
+            "parts": [
+              [
+                "地点",
+                "in a cinema —— 在电影院里"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "cinema 电影院"
+            ],
+            "tip": "散场走出口（Use this exit）的地方。",
+            "note": [
+              {
+                "k": "cinema",
+                "cn": "电影院"
+              }
+            ]
+          }
+        },
+        {
+          "s": "b in the countryside",
+          "hard": false,
+          "tr": "b 在乡村。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "地点：<b>in the countryside</b>（在乡下）",
+            "parts": [
+              [
+                "地点",
+                "in the countryside —— 在乡村"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "countryside 乡村"
+            ],
+            "tip": "自然公园在乡下 —— 禁止露营的地方。",
+            "note": [
+              {
+                "k": "countryside",
+                "cn": "乡村，乡下"
+              }
+            ]
+          }
+        },
+        {
+          "s": "c on a plane",
+          "hard": false,
+          "tr": "c 在飞机上。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "地点：<b>on a plane</b>（在飞机上）",
+            "parts": [
+              [
+                "地点",
+                "on a plane —— 在飞机上"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "plane 飞机"
+            ],
+            "tip": "系安全带着陆 —— 飞机上。",
+            "note": [
+              {
+                "k": "plane",
+                "cn": "飞机"
+              }
+            ]
+          }
+        },
+        {
+          "s": "d in the street",
+          "hard": false,
+          "tr": "d 在街上。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "地点：<b>in the street</b>（在街上）",
+            "parts": [
+              [
+                "地点",
+                "in the street —— 在街上"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "street 街道"
+            ],
+            "tip": "交通灯、路口 —— 街上。",
+            "note": [
+              {
+                "k": "street",
+                "cn": "街道"
+              }
+            ]
+          }
+        },
+        {
+          "s": "e inside a school building",
+          "hard": false,
+          "tr": "e 在学校楼里。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "地点：<b>inside a school building</b>（在教学楼里）",
+            "parts": [
+              [
+                "地点",
+                "inside a school building —— 学校楼内"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "inside 在……里面"
+            ],
+            "tip": "楼梯上不许跑 —— 教学楼里。",
+            "note": [
+              {
+                "k": "inside",
+                "cn": "在……里面"
+              }
+            ]
+          }
+        },
+        {
+          "s": "f on a bus",
+          "hard": false,
+          "tr": "f 在公交车上。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "地点：<b>on a bus</b>（在公交车上）",
+            "parts": [
+              [
+                "地点",
+                "on a bus —— 在公交车上"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "bus 公交车"
+            ],
+            "tip": "司机旁、车门旁 —— 公交车上。",
+            "note": [
+              {
+                "k": "bus",
+                "cn": "公交车"
+              }
+            ]
+          }
+        }
+      ],
+      [],
+      [],
+      [
+        {
+          "s": "⑥ In pairs, complete 1–6 using the correct form of suitable verbs.",
+          "hard": false,
+          "tr": "⑥ 两人一组，用合适动词的正确形式补全 1–6。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>complete 1–6 using the correct form of suitable verbs.</b>",
+            "parts": [
+              [
+                "状语",
+                "<code>In pairs</code> —— 两人一组"
+              ],
+              [
+                "谓语",
+                "<code>complete 1–6</code> —— 补全 1–6"
+              ],
+              [
+                "方式",
+                "<code>using the correct form of suitable verbs</code> —— 用合适动词的正确形式"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "suitable 合适的；correct form 正确形式"
+            ],
+            "tip": "看图想场景，再决定用祈使句（Do…）还是 No + -ing。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "{130} right at the end of this road.",
+          "hard": false,
+          "tr": "在这条路的尽头向右转。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>____ right at the end of this road.</b>",
+            "parts": [
+              [
+                "谓语（空）",
+                "填 Turn —— 转弯"
+              ],
+              [
+                "方向",
+                "<code>right</code> —— 向右"
+              ],
+              [
+                "地点",
+                "<code>at the end of this road</code> —— 在这条路的尽头"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "turn right 向右转",
+              "at the end of 在……尽头"
+            ],
+            "tip": "图上是个右转弯标志 → Turn。官方答案：Turn。",
+            "note": [
+              {
+                "k": "at the end of",
+                "cn": "在……的尽头"
+              },
+              {
+                "k": "turn",
+                "cn": "转弯；转动"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "No {131}. Dangerous rocks in water.",
+          "hard": false,
+          "tr": "禁止跳水。水里有危险的礁石。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "No + -ing：<b>No ____ . Dangerous rocks in water.</b>",
+            "parts": [
+              [
+                "空",
+                "填 diving —— 跳水"
+              ],
+              [
+                "警示",
+                "<code>Dangerous rocks in water</code> —— 水中有危险的礁石"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "dive → diving（跳水）"
+            ],
+            "tip": "图上禁止跳水 → diving。官方答案：diving。",
+            "note": [
+              {
+                "k": "dangerous",
+                "cn": "危险的"
+              },
+              {
+                "k": "rock",
+                "cn": "岩石，礁石"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Please don’t {132} photos in the swimming pool area.",
+          "hard": false,
+          "tr": "请不要在泳池区域拍照。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "否定祈使：<b>Please don’t ____ photos in the swimming pool area.</b>",
+            "parts": [
+              [
+                "谓语（空）",
+                "填 take —— 拍（take photos）"
+              ],
+              [
+                "宾语",
+                "<code>photos</code> —— 照片"
+              ],
+              [
+                "地点",
+                "<code>in the swimming pool area</code> —— 在泳池区域"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "take photos 拍照",
+              "swimming pool area 泳池区域"
+            ],
+            "tip": "拍照用 take → take。官方答案：take。",
+            "note": [
+              {
+                "k": "swimming pool area",
+                "cn": "泳池区域"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "No {133} in this park except at weekends.",
+          "hard": false,
+          "tr": "这个公园里除周末外禁止滑板。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "No + -ing：<b>No ____ in this park except at weekends.</b>",
+            "parts": [
+              [
+                "空",
+                "填 skateboarding —— 滑板"
+              ],
+              [
+                "例外",
+                "<code>except at weekends</code> —— 除了周末"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "except 除……之外",
+              "at weekends 在周末"
+            ],
+            "tip": "图上禁止滑板 → skateboarding。官方答案：skateboarding。",
+            "note": [
+              {
+                "k": "skateboarding",
+                "cn": "滑板运动"
+              },
+              {
+                "k": "at weekends",
+                "cn": "在周末"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "{134} passengers leave the train before you board.",
+          "hard": false,
+          "tr": "让乘客先下车，你再上车。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>____ passengers leave the train before you board.</b>",
+            "parts": [
+              [
+                "谓语（空）",
+                "填 Let —— 让"
+              ],
+              [
+                "宾语+补语",
+                "<code>passengers leave the train</code> —— 乘客下火车"
+              ],
+              [
+                "时间从句",
+                "<code>before you board</code> —— 在你上车之前"
+              ]
+            ],
+            "clauses": [
+              "let sb do sth（没有 to）；before 时间从句"
+            ],
+            "gram": [
+              "let sb do sth 让某人做某事",
+              "board 上车"
+            ],
+            "tip": "「让」用 Let（后面不加 to）→ Let。官方答案：Let。",
+            "note": [
+              {
+                "k": "let",
+                "cn": "让（let sb do sth，没有 to）"
+              },
+              {
+                "k": "board",
+                "cn": "上车，登机"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "No {135} in this area.",
+          "hard": false,
+          "tr": "此区域禁止饮食。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "No + -ing：<b>No ____ in this area.</b>",
+            "parts": [
+              [
+                "空",
+                "填 eating —— 吃东西"
+              ],
+              [
+                "地点",
+                "<code>in this area</code> —— 在这个区域"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "eat → eating（吃）"
+            ],
+            "tip": "图上刀叉被划掉 → eating。官方答案：eating。",
+            "note": [
+              {
+                "k": "eat",
+                "cn": "吃"
+              },
+              {
+                "k": "area",
+                "cn": "区域"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Exam Practice Test 2 · Reading Part 1",
+          "hard": false,
+          "tr": "考试实践测试 2 · 阅读第 1 部分。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题行：<b>Exam Practice Test 2 · Reading Part 1</b>",
+            "parts": [
+              [
+                "标题",
+                "Exam Practice Test 2 —— 考试实践测试编号"
+              ],
+              [
+                "标题",
+                "Reading Part 1 —— 阅读第 1 部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式省略句"
+            ],
+            "tip": "下面就是真题：五段短文本各选一个意思相同的选项。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Questions 1–5",
+          "hard": false,
+          "tr": "第 1–5 题。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题：<b>Questions 1–5</b>（第 1–5 题）",
+            "parts": [
+              [
+                "名词",
+                "Questions —— 题目"
+              ],
+              [
+                "数字",
+                "1–5 —— 第 1 到第 5 题"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "真题部分题号连续编号"
+            ],
+            "tip": "五道题，每题在 A/B/C 中选一个。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "For each question, choose the correct answer.",
+          "hard": false,
+          "tr": "每题选出一个正确答案。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>choose the correct answer</b>（选出正确答案）",
+            "parts": [
+              [
+                "状语",
+                "<code>For each question</code> —— 对每一道题"
+              ],
+              [
+                "谓语",
+                "choose —— 选择"
+              ],
+              [
+                "宾语",
+                "<code>the correct answer</code> —— 正确的答案"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "祈使句"
+            ],
+            "tip": "正确答案 = 和文本「说的是同一个意思」的那个。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "HEAVY SNOW EXPECTED OVERNIGHT",
+          "hard": false,
+          "tr": "预计夜间有大雪。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "通知标题：<b>HEAVY SNOW EXPECTED OVERNIGHT</b>",
+            "parts": [
+              [
+                "名词",
+                "<code>HEAVY SNOW</code> —— 大雪"
+              ],
+              [
+                "补充",
+                "<code>EXPECTED OVERNIGHT</code> —— 预计在夜间（省略 is）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "heavy snow 大雪",
+              "overnight 在夜间"
+            ],
+            "tip": "注意是 expected（预计），不是正在下 —— 选项 B 的陷阱。",
+            "note": [
+              {
+                "k": "heavy snow",
+                "cn": "大雪"
+              },
+              {
+                "k": "overnight",
+                "cn": "在夜间，在晚上的"
+              }
+            ]
+          }
+        },
+        {
+          "s": "TRAIN AND BUS DELAYS POSSIBLE",
+          "hard": false,
+          "tr": "火车和公交可能延误。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "通知：<b>TRAIN AND BUS DELAYS POSSIBLE</b>（可能延误）",
+            "parts": [
+              [
+                "名词",
+                "<code>TRAIN AND BUS DELAYS</code> —— 火车和公交的延误"
+              ],
+              [
+                "补充",
+                "POSSIBLE —— 可能的（省略 are）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "delay 延误",
+              "possible 可能的（只说可能，不说一定）"
+            ],
+            "tip": "possible 是关键词：选项 A 说 will make late（一定会晚）—— 说过头了。",
+            "note": [
+              {
+                "k": "delay",
+                "cn": "延迟，延误"
+              }
+            ]
+          }
+        },
+        {
+          "s": "CHECK WEBSITES REGULARLY – SOME SCHOOLS AND OFFICES MAY BE CLOSED TOMORROW",
+          "hard": false,
+          "tr": "定期查看网站——明天一些学校和办公室可能关闭。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句 + 说明：<b>CHECK WEBSITES REGULARLY</b> … <b>SOME SCHOOLS AND OFFICES MAY BE CLOSED TOMORROW</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>CHECK WEBSITES REGULARLY</code> —— 定期查网站"
+              ],
+              [
+                "主句",
+                "<code>SOME SCHOOLS AND OFFICES MAY BE CLOSED TOMORROW</code> —— 一些学校和办公室明天可能关闭"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "regularly 定期地",
+              "may be closed 可能被关闭"
+            ],
+            "tip": "check websites ↔ watch for announcements；schools may be closed ↔ unable to attend classes —— 答案 C 的两组同义替换。",
+            "note": [
+              {
+                "k": "check websites",
+                "cn": "查看网站"
+              },
+              {
+                "k": "regularly",
+                "cn": "定期地，有规律地"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Have you got books you’ve already read?",
+          "hard": false,
+          "tr": "你有已经读过的书吗？",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "疑问句：<b>Have you got books …?</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Have you got</code> —— 你有"
+              ],
+              [
+                "宾语",
+                "books —— 书"
+              ],
+              [
+                "定语从句",
+                "<code>you’ve already read</code> —— 你已经读过的"
+              ]
+            ],
+            "clauses": [
+              "you’ve already read 是省略 that 的定语从句"
+            ],
+            "gram": [
+              "have got 有",
+              "already 已经"
+            ],
+            "tip": "关键词 books you’ve already read = 不再需要的书。",
+            "note": [
+              {
+                "k": "already",
+                "cn": "已经"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Bring them to our Book Exchange on Friday – other students might enjoy them!",
+          "hard": false,
+          "tr": "周五把它们带到我们的图书交换活动来——其他同学也许会喜欢！",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Bring them to our Book Exchange on Friday …</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Bring them</code> —— 把它们带来"
+              ],
+              [
+                "地点",
+                "<code>to our Book Exchange</code> —— 到我们的图书交换处"
+              ],
+              [
+                "时间",
+                "<code>on Friday</code> —— 在周五"
+              ],
+              [
+                "补充",
+                "<code>other students might enjoy them</code> —— 其他同学也许会喜欢"
+              ]
+            ],
+            "clauses": [
+              "might 表可能"
+            ],
+            "gram": [
+              "Book Exchange 图书交换",
+              "bring 带来（对比 take 带走）"
+            ],
+            "tip": "bring books + other students enjoy ↔ share books they no longer want —— 答案 A。",
+            "note": [
+              {
+                "k": "book exchange",
+                "cn": "图书交换"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Mrs Jones",
+          "hard": false,
+          "tr": "Mrs Jones（署名）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "落款：<b>Mrs Jones</b>",
+            "parts": [
+              [
+                "署名",
+                "Mrs Jones —— 发通知的老师"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "Mrs 夫人（已婚女士称呼）"
+            ],
+            "tip": "落款是老师 —— 她在让学生们做什么？",
+            "note": [
+              {
+                "k": "mrs",
+                "cn": "夫人（Mrs）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Billy,",
+          "hard": false,
+          "tr": "Billy，",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "称呼：<b>Billy,</b>",
+            "parts": [
+              [
+                "称呼",
+                "Billy —— 收信人"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "留言开头称呼"
+            ],
+            "tip": "谁写给谁：Sophie 写给 Billy。",
+            "note": [
+              {
+                "k": "billy",
+                "cn": "Billy（男子名）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Have you got Joanna’s number?",
+          "hard": false,
+          "tr": "你有 Joanna 的电话号码吗？",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "疑问句：<b>Have you got Joanna’s number?</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Have you got</code> —— 你有"
+              ],
+              [
+                "宾语",
+                "<code>Joanna’s number</code> —— Joanna 的电话号码"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "名词所有格 's"
+            ],
+            "tip": "她想联系 Joanna —— 但没有号码。",
+            "note": [
+              {
+                "k": "number",
+                "cn": "号码（电话号码）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "I’m supposed to meet her at the cinema in 10 minutes, but Dad’s driving me into town and we’re in a huge traffic jam!",
+          "hard": true,
+          "tr": "我本该 10 分钟后在电影院和她见面，但爸爸正开车送我去镇上，我们堵得厉害！",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "并列句：<b>I’m supposed to meet her … but … we’re in a huge traffic jam!</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>I’m supposed to meet her</code> —— 我本该见她（按计划）"
+              ],
+              [
+                "时间",
+                "<code>at the cinema in 10 minutes</code> —— 10 分钟后在电影院"
+              ],
+              [
+                "转折",
+                "<code>but Dad’s driving me into town</code> —— 但爸爸正开车送我进城"
+              ],
+              [
+                "表语",
+                "<code>we’re in a huge traffic jam</code> —— 我们堵得厉害（主系表结构）"
+              ]
+            ],
+            "clauses": [
+              "be supposed to do sth 表「按计划应该」"
+            ],
+            "gram": [
+              "be supposed to do sth 应该做某事",
+              "traffic jam 堵车"
+            ],
+            "tip": "be supposed to（本该）+ traffic jam（堵车）→ 她会迟到，答案 B。",
+            "note": [
+              {
+                "k": "be supposed to",
+                "cn": "应该（表示按规定、计划或者期望做某事）"
+              },
+              {
+                "k": "traffic jam",
+                "cn": "交通堵塞"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Thanks!",
+          "hard": false,
+          "tr": "谢谢！",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "省略句：<b>Thanks!</b>",
+            "parts": [
+              [
+                "感叹",
+                "Thanks —— 谢谢"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "口语省略句"
+            ],
+            "tip": "留言的客套结尾。",
+            "note": [
+              {
+                "k": "thanks",
+                "cn": "谢谢"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Sophie",
+          "hard": false,
+          "tr": "Sophie（署名）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "落款：<b>Sophie</b>",
+            "parts": [
+              [
+                "署名",
+                "Sophie —— 发留言的人"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "留言结尾署名"
+            ],
+            "tip": "Sophie 需要让 Joanna 知道她会迟到。",
+            "note": [
+              {
+                "k": "sophie",
+                "cn": "Sophie（女子名）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "New message.",
+          "hard": false,
+          "tr": "新消息。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "消息窗口标题：<b>New message.</b>",
+            "parts": [
+              [
+                "名词",
+                "New message —— 新消息"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "message 消息、信息"
+            ],
+            "tip": "手机/邮箱里的消息。",
+            "note": [
+              {
+                "k": "message",
+                "cn": "消息，信息"
+              }
+            ]
+          }
+        },
+        {
+          "s": "From: Coach.",
+          "hard": false,
+          "tr": "发件人：教练。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "发件人：<b>From: Coach.</b>",
+            "parts": [
+              [
+                "标签",
+                "From —— 来自"
+              ],
+              [
+                "发件人",
+                "Coach —— 教练"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "coach 教练"
+            ],
+            "tip": "谁写的？教练。",
+            "note": [
+              {
+                "k": "coach",
+                "cn": "教练"
+              }
+            ]
+          }
+        },
+        {
+          "s": "To: Rugby club.",
+          "hard": false,
+          "tr": "收件人：橄榄球俱乐部。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "收件人：<b>To: Rugby club.</b>",
+            "parts": [
+              [
+                "标签",
+                "To —— 致"
+              ],
+              [
+                "收件人",
+                "Rugby club —— 橄榄球俱乐部"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "rugby 橄榄球"
+            ],
+            "tip": "写给谁？全体队员和球迷。",
+            "note": [
+              {
+                "k": "rugby",
+                "cn": "橄榄球"
+              },
+              {
+                "k": "club",
+                "cn": "俱乐部"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Just wanted to thank players in Saturday’s match, and people who supported them.",
+          "hard": false,
+          "tr": "只是想感谢周六比赛中的球员们，以及支持他们的人。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "省略主语：<b>(I) Just wanted to thank players …</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Just wanted to thank</code> —— 只是想感谢"
+              ],
+              [
+                "宾语",
+                "<code>players in Saturday’s match</code> —— 周六比赛里的球员"
+              ],
+              [
+                "宾语 2",
+                "<code>and people who supported them</code> —— 以及支持他们的人"
+              ]
+            ],
+            "clauses": [
+              "who 引导定语从句"
+            ],
+            "gram": [
+              "thank sb 感谢某人",
+              "support 支持"
+            ],
+            "tip": "感谢球员和支持者 —— 注意没提「赢了」。",
+            "note": [
+              {
+                "k": "player",
+                "cn": "球员，选手"
+              },
+              {
+                "k": "support",
+                "cn": "支持"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Remember, the other side were league winners, so all wasn’t bad – but next time let’s beat them!",
+          "hard": true,
+          "tr": "记住，对手是联赛冠军，所以结果还不算糟——但下次我们要打败他们！",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "并列句：<b>the other side were league winners, so all wasn’t bad – but next time let’s beat them!</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>the other side</code> —— 对方"
+              ],
+              [
+                "表语",
+                "<code>league winners</code> —— 联赛冠军"
+              ],
+              [
+                "结果",
+                "<code>so all wasn’t bad</code> —— 所以还不算糟"
+              ],
+              [
+                "转折",
+                "<code>but next time let’s beat them</code> —— 但下次我们打败他们"
+              ]
+            ],
+            "clauses": [
+              "let’s = let us 表建议"
+            ],
+            "gram": [
+              "league winner 联赛冠军",
+              "beat sb 打败某人",
+              "next time 下次"
+            ],
+            "tip": "next time let’s beat them ↔ encouraging … in a future match —— 答案 C（鼓劲）。",
+            "note": [
+              {
+                "k": "league winner",
+                "cn": "联赛冠军"
+              },
+              {
+                "k": "beat",
+                "cn": "打败，战胜"
+              },
+              {
+                "k": "next time",
+                "cn": "下次"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Café Menu",
+          "hard": false,
+          "tr": "咖啡馆菜单。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题：<b>Café Menu</b>（咖啡馆菜单）",
+            "parts": [
+              [
+                "名词",
+                "Café Menu —— 咖啡馆菜单"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "café 咖啡馆；menu 菜单"
+            ],
+            "tip": "菜单卡上的说明。",
+            "note": [
+              {
+                "k": "café",
+                "cn": "咖啡馆"
+              },
+              {
+                "k": "menu",
+                "cn": "菜单"
+              }
+            ]
+          }
+        },
+        {
+          "s": "See below for our regular dishes – or for today’s 'specials' go inside to see the board by the counter!",
+          "hard": true,
+          "tr": "常规菜品见下方——或者想看今天的「特供」，进去看柜台边的板子！",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>See below for our regular dishes – or … go inside to see the board by the counter!</b>",
+            "parts": [
+              [
+                "谓语 1",
+                "<code>See below for our regular dishes</code> —— 常规菜品见下面"
+              ],
+              [
+                "选择",
+                "<code>or for today’s 'specials'</code> —— 或者今天的特供"
+              ],
+              [
+                "谓语 2",
+                "<code>go inside to see the board by the counter</code> —— 进去看柜台旁的板子"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "regular dishes 常规菜；specials 特供菜",
+              "by the counter 在柜台旁"
+            ],
+            "tip": "菜单之外还有 specials ↔ more food apart from the menu —— 答案 A。",
+            "note": [
+              {
+                "k": "regular",
+                "cn": "常规的，普通的"
+              },
+              {
+                "k": "dish",
+                "cn": "菜肴"
+              },
+              {
+                "k": "by the counter",
+                "cn": "在柜台旁"
+              }
+            ]
+          }
+        }
+      ]
+    ],
+    "blocks": [
+      {
+        "r": "h",
+        "head": {
+          "l": "Training Test 2",
+          "r": "Reading Part 1"
+        },
+        "badge": "答案见 P198"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "o",
+        "frame": true
+      },
+      {
+        "r": "q",
+        "n": "1",
+        "pick": [
+          101
+        ]
+      },
+      {
+        "r": "q",
+        "n": "2",
+        "pick": [
+          102
+        ]
+      },
+      {
+        "r": "q",
+        "n": "3",
+        "pick": [
+          103
+        ]
+      },
+      {
+        "r": "q",
+        "n": "4",
+        "pick": [
+          104
+        ]
+      },
+      {
+        "r": "q",
+        "n": "5",
+        "pick": [
+          105
+        ]
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "o"
+      },
+      {
+        "r": "q",
+        "n": "1",
+        "frame": true,
+        "pick": [
+          106
+        ]
+      },
+      {
+        "r": "q",
+        "n": "2",
+        "frame": true,
+        "pick": [
+          107
+        ]
+      },
+      {
+        "r": "q",
+        "n": "3",
+        "frame": true,
+        "pick": [
+          108
+        ]
+      },
+      {
+        "r": "q",
+        "n": "4",
+        "frame": true,
+        "pick": [
+          109
+        ],
+        "img": {
+          "src": "assets/img/t2-p1-icon-car.png",
+          "alt": "禁止机动车标志（原书 P52）",
+          "side": "left",
+          "w": 90
+        }
+      },
+      {
+        "r": "q",
+        "n": "5",
+        "frame": true,
+        "pick": [
+          110
+        ]
+      },
+      {
+        "r": "q",
+        "n": "6",
+        "frame": true,
+        "pick": [
+          111
+        ]
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "n": "a",
+        "pick": [
+          112
+        ]
+      },
+      {
+        "r": "q",
+        "n": "b",
+        "pick": [
+          113
+        ]
+      },
+      {
+        "r": "q",
+        "n": "c",
+        "pick": [
+          114
+        ]
+      },
+      {
+        "r": "q",
+        "n": "d",
+        "pick": [
+          115
+        ]
+      },
+      {
+        "r": "q",
+        "n": "e",
+        "pick": [
+          116
+        ]
+      },
+      {
+        "r": "q",
+        "n": "f",
+        "pick": [
+          117
+        ]
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "o",
+        "frame": true
+      },
+      {
+        "r": "q",
+        "n": "1",
+        "pick": [
+          118
+        ]
+      },
+      {
+        "r": "q",
+        "n": "2",
+        "pick": [
+          119
+        ]
+      },
+      {
+        "r": "q",
+        "n": "3",
+        "pick": [
+          120
+        ]
+      },
+      {
+        "r": "q",
+        "n": "4",
+        "pick": [
+          121
+        ]
+      },
+      {
+        "r": "q",
+        "n": "5",
+        "pick": [
+          122
+        ]
+      },
+      {
+        "r": "q",
+        "n": "6",
+        "pick": [
+          123
+        ]
+      },
+      {
+        "r": "i",
+        "rmb": "我们用祈使动词发出指示或命令：Listen! Don’t talk! 我们也可以用 no + -ing 来告诉某人不要做某事：No parking on the grass。"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "o"
+      },
+      {
+        "r": "q",
+        "pick": [
+          124,
+          125,
+          126,
+          127,
+          128,
+          129
+        ]
+      },
+      {
+        "r": "i",
+        "rmb": "我们可以说：allow someone to do something 或者 let someone do something（没有 to）。"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "img": {
+          "src": "assets/img/t2-p1-sign-turn.png",
+          "alt": "右转弯标志（原书 P53）",
+          "side": "left",
+          "w": 130
+        }
+      },
+      {
+        "r": "q",
+        "img": {
+          "src": "assets/img/t2-p1-sign-diving.png",
+          "alt": "禁止跳水标志（原书 P53）",
+          "side": "left",
+          "w": 130
+        }
+      },
+      {
+        "r": "q",
+        "img": {
+          "src": "assets/img/t2-p1-sign-pool.png",
+          "alt": "泳池与相机图标（原书 P53）",
+          "side": "left",
+          "w": 230
+        }
+      },
+      {
+        "r": "q",
+        "img": {
+          "src": "assets/img/t2-p1-sign-skate.png",
+          "alt": "禁止滑板标志（原书 P53）",
+          "side": "left",
+          "w": 130
+        }
+      },
+      {
+        "r": "q",
+        "img": {
+          "src": "assets/img/t2-p1-sign-train.png",
+          "alt": "车厢场景插图（原书 P53）",
+          "side": "left",
+          "w": 200
+        }
+      },
+      {
+        "r": "q",
+        "img": {
+          "src": "assets/img/t2-p1-sign-eating.png",
+          "alt": "禁止饮食标志（原书 P53）",
+          "side": "left",
+          "w": 130
+        }
+      },
+      {
+        "r": "h",
+        "head": {
+          "l": "Exam Practice Test 2",
+          "r": "Reading Part 1"
+        },
+        "badge": "答案见 P198",
+        "tip": "圈出文本中的关键词，在选项 A、B 和 C 中找出与关键词词义相近的表达。"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "n": "1",
+        "frame": true,
+        "optsInline": true
+      },
+      {
+        "r": "q",
+        "n": "2",
+        "frame": true,
+        "optsInline": true
+      },
+      {
+        "r": "q",
+        "n": "3",
+        "optsInline": true
+      },
+      {
+        "r": "q",
+        "n": "4",
+        "optsInline": true
+      },
+      {
+        "r": "q",
+        "n": "5",
+        "frame": true,
+        "optsInline": true,
+        "tip": "将已选的答案与文本相比较，确认选项与文本表达的意思一致。"
+      }
+    ]
+  },
+  "phrases": [
+    "art gallery",
+    "opening hours",
+    "in good condition",
+    "at all times",
+    "by hand",
+    "low temperature",
+    "train tickets",
+    "short of",
+    "first lesson",
+    "washing machine",
+    "travel arrangements",
+    "traffic lights",
+    "nature park",
+    "at weekends",
+    "on the stairs",
+    "put on",
+    "at the end of",
+    "swimming pool",
+    "heavy snow",
+    "check websites",
+    "book exchange",
+    "traffic jam",
+    "league winners",
+    "next time",
+    "by the counter",
+    "no longer",
+    "in case",
+    "attend classes",
+    "public transport",
+    "main entrance",
+    "side entrance",
+    "motor vehicles",
+    "in a different way"
+  ],
+  "glossary": {
+    "reading": {
+      "pos": "n.",
+      "ipa": "/ˈriːdɪŋ/",
+      "cn": "阅读"
+    },
+    "texts": {
+      "pos": "n.",
+      "ipa": "/teksts/",
+      "cn": "文本、短文（text 的复数）"
+    },
+    "words": {
+      "pos": "n.",
+      "ipa": "/wɜːdz/",
+      "cn": "词（word 的复数）"
+    },
+    "similar": {
+      "pos": "adj.",
+      "ipa": "/ˈsɪmələ/",
+      "cn": "相似的"
+    },
+    "meaning": {
+      "pos": "n.",
+      "ipa": "/ˈmiːnɪŋ/",
+      "cn": "意思，含义"
+    },
+    "meanings": {
+      "pos": "n.",
+      "ipa": "/ˈmiːnɪŋz/",
+      "cn": "意思（meaning 的复数）"
+    },
+    "expressions": {
+      "pos": "n.",
+      "ipa": "/ɪkˈspreʃnz/",
+      "cn": "表达、说法（expression 的复数）"
+    },
+    "expression": {
+      "pos": "n.",
+      "ipa": "/ɪkˈspreʃn/",
+      "cn": "表达（方式）；说法，用语"
+    },
+    "changing": {
+      "pos": "v.",
+      "ipa": "/ˈtʃeɪndʒɪŋ/",
+      "cn": "改变（change 的现在分词）"
+    },
+    "opening": {
+      "pos": "n.",
+      "ipa": "/ˈəʊpənɪŋ/",
+      "cn": "开始；开放",
+      "note": "opening hours 营业时间"
+    },
+    "hours": {
+      "pos": "n.",
+      "ipa": "/ˈaʊəz/",
+      "cn": "小时（hour 的复数）"
+    },
+    "opening hours": {
+      "pos": "词组",
+      "ipa": "/ˈəʊpənɪŋ ˈaʊəz/",
+      "cn": "营业时间"
+    },
+    "it’s": {
+      "pos": "contr.",
+      "ipa": "/ɪts/",
+      "cn": "= it is 或 it has"
+    },
+    "good": {
+      "pos": "adj.",
+      "ipa": "/ɡʊd/",
+      "cn": "好的"
+    },
+    "condition": {
+      "pos": "n.",
+      "ipa": "/kənˈdɪʃn/",
+      "cn": "状况；条件；成色"
+    },
+    "in good condition": {
+      "pos": "词组",
+      "ipa": "/ɪn ˌɡʊd kənˈdɪʃn/",
+      "cn": "状况良好"
+    },
+    "almost": {
+      "pos": "adv.",
+      "ipa": "/ˈɔːlməʊst/",
+      "cn": "几乎"
+    },
+    "lower": {
+      "pos": "adj.",
+      "ipa": "/ˈləʊə/",
+      "cn": "更低的（low 的比较级）"
+    },
+    "prices": {
+      "pos": "n.",
+      "ipa": "/ˈpraɪsɪz/",
+      "cn": "价格（price 的复数）"
+    },
+    "mother": {
+      "pos": "n.",
+      "ipa": "/ˈmʌðə/",
+      "cn": "母亲"
+    },
+    "father": {
+      "pos": "n.",
+      "ipa": "/ˈfɑːðə/",
+      "cn": "父亲，爸爸"
+    },
+    "must": {
+      "pos": "modal",
+      "ipa": "/mʌst/",
+      "cn": "必须；must not 不许"
+    },
+    "camera": {
+      "pos": "n.",
+      "ipa": "/ˈkæmrə/",
+      "cn": "相机"
+    },
+    "may": {
+      "pos": "modal",
+      "ipa": "/meɪ/",
+      "cn": "可能；可以"
+    },
+    "photography": {
+      "pos": "n.",
+      "ipa": "/fəˈtɒɡrəfi/",
+      "cn": "摄影"
+    },
+    "permitted": {
+      "pos": "v.",
+      "ipa": "/pəˈmɪtɪd/",
+      "cn": "被允许（permit 的过去分词）"
+    },
+    "be permitted": {
+      "pos": "词组",
+      "ipa": "/biː pəˈmɪtɪd/",
+      "cn": "被允许"
+    },
+    "art": {
+      "pos": "n.",
+      "ipa": "/ɑːt/",
+      "cn": "艺术；美术"
+    },
+    "gallery": {
+      "pos": "n.",
+      "ipa": "/ˈɡæləri/",
+      "cn": "美术馆，画廊"
+    },
+    "art gallery": {
+      "pos": "词组",
+      "ipa": "/ˌɑːt ˈɡæləri/",
+      "cn": "艺术画廊，美术馆"
+    },
+    "swimming": {
+      "pos": "n.",
+      "ipa": "/ˈswɪmɪŋ/",
+      "cn": "游泳"
+    },
+    "pool": {
+      "pos": "n.",
+      "ipa": "/puːl/",
+      "cn": "水池；泳池"
+    },
+    "swimming pool": {
+      "pos": "词组",
+      "ipa": "/ˈswɪmɪŋ puːl/",
+      "cn": "游泳池"
+    },
+    "will": {
+      "pos": "modal",
+      "ipa": "/wɪl/",
+      "cn": "将要（助动词）"
+    },
+    "no": {
+      "pos": "adv./det.",
+      "ipa": "/nəʊ/",
+      "cn": "不；没有（No + -ing 禁止做某事）"
+    },
+    "longer": {
+      "pos": "adv.",
+      "ipa": "/ˈlɒŋɡə/",
+      "cn": "更久（long 的比较级）"
+    },
+    "no longer": {
+      "pos": "词组",
+      "ipa": "/ˌnəʊ ˈlɒŋɡə/",
+      "cn": "不再"
+    },
+    "open": {
+      "pos": "adj./v.",
+      "ipa": "/ˈəʊpən/",
+      "cn": "开着的；营业的；打开"
+    },
+    "p": {
+      "pos": "n.",
+      "ipa": "/piː/",
+      "cn": "字母 p（p.m. = 下午）"
+    },
+    "m": {
+      "pos": "n.",
+      "ipa": "/em/",
+      "cn": "字母 m（p.m. = 下午；a.m. = 上午）"
+    },
+    "printer": {
+      "pos": "n.",
+      "ipa": "/ˈprɪntə/",
+      "cn": "打印机"
+    },
+    "bought": {
+      "pos": "v.",
+      "ipa": "/bɔːt/",
+      "cn": "买（buy 的过去式/过去分词）"
+    },
+    "works": {
+      "pos": "v./n.",
+      "ipa": "/wɜːks/",
+      "cn": "工作、运转（第三人称单数）；作品"
+    },
+    "perfectly": {
+      "pos": "adv.",
+      "ipa": "/ˈpɜːfɪktli/",
+      "cn": "完美地，非常好"
+    },
+    "side": {
+      "pos": "n./adj.",
+      "ipa": "/saɪd/",
+      "cn": "侧面；旁边的"
+    },
+    "entrance": {
+      "pos": "n.",
+      "ipa": "/ˈentrəns/",
+      "cn": "入口"
+    },
+    "side entrance": {
+      "pos": "词组",
+      "ipa": "/ˈsaɪd ˌentrəns/",
+      "cn": "侧门"
+    },
+    "closed": {
+      "pos": "adj.",
+      "ipa": "/kləʊzd/",
+      "cn": "关着的（close 的过去分词）"
+    },
+    "please": {
+      "pos": "int.",
+      "ipa": "/pliːz/",
+      "cn": "请"
+    },
+    "main": {
+      "pos": "adj.",
+      "ipa": "/meɪn/",
+      "cn": "主要的（main entrance 正门）"
+    },
+    "main entrance": {
+      "pos": "词组",
+      "ipa": "/ˌmeɪn ˈentrəns/",
+      "cn": "主入口，正门"
+    },
+    "discount": {
+      "pos": "n.",
+      "ipa": "/ˈdɪskaʊnt/",
+      "cn": "折扣；打折（的）"
+    },
+    "s": {
+      "pos": "n.",
+      "ipa": "/es/",
+      "cn": "字母 s（40s = 40 年代；under-12s = 12 岁以下）"
+    },
+    "accompanied": {
+      "pos": "v.",
+      "ipa": "/əˈkʌmpənid/",
+      "cn": "陪伴的，伴随的（accompanied by 由……陪同）"
+    },
+    "types": {
+      "pos": "n.",
+      "ipa": "/taɪps/",
+      "cn": "类型（type 的复数）"
+    },
+    "context": {
+      "pos": "n.",
+      "ipa": "/ˈkɒntekst/",
+      "cn": "语境，场景"
+    },
+    "function": {
+      "pos": "n.",
+      "ipa": "/ˈfʌŋkʃn/",
+      "cn": "功能；用途"
+    },
+    "f": {
+      "pos": "n.",
+      "ipa": "/ef/",
+      "cn": "字母 f（选项/编号的标记）"
+    },
+    "might": {
+      "pos": "modal",
+      "ipa": "/maɪt/",
+      "cn": "可能（may 的过去式）"
+    },
+    "email": {
+      "pos": "n.",
+      "ipa": "/ˈiːmeɪl/",
+      "cn": "电子邮件"
+    },
+    "label": {
+      "pos": "n.",
+      "ipa": "/ˈleɪbl/",
+      "cn": "标签"
+    },
+    "note": {
+      "pos": "n.",
+      "ipa": "/nəʊt/",
+      "cn": "便条，字条"
+    },
+    "notice": {
+      "pos": "n.",
+      "ipa": "/ˈnəʊtɪs/",
+      "cn": "通知；告示；（v. 注意到）"
+    },
+    "sign": {
+      "pos": "n.",
+      "ipa": "/saɪn/",
+      "cn": "标识牌，标志；（也作 v. 签名）"
+    },
+    "road sign": {
+      "pos": "词组",
+      "ipa": "/ˈrəʊd saɪn/",
+      "cn": "道路标志"
+    },
+    "doors": {
+      "pos": "n.",
+      "ipa": "/dɔːz/",
+      "cn": "门（door 的复数）"
+    },
+    "times": {
+      "pos": "n.",
+      "ipa": "/taɪmz/",
+      "cn": "次；时候（time 的复数）"
+    },
+    "at all times": {
+      "pos": "词组",
+      "ipa": "/ət ˌɔːl ˈtaɪmz/",
+      "cn": "始终，一直，总是"
+    },
+    "wash": {
+      "pos": "v.",
+      "ipa": "/wɒʃ/",
+      "cn": "洗"
+    },
+    "sweater": {
+      "pos": "n.",
+      "ipa": "/ˈswetə/",
+      "cn": "毛衣"
+    },
+    "low": {
+      "pos": "adj.",
+      "ipa": "/ləʊ/",
+      "cn": "低的；低价的"
+    },
+    "temperature": {
+      "pos": "n.",
+      "ipa": "/ˈtemprətʃə/",
+      "cn": "温度；气温"
+    },
+    "low temperature": {
+      "pos": "词组",
+      "ipa": "/ˌləʊ ˈtemprətʃə/",
+      "cn": "低温"
+    },
+    "by hand": {
+      "pos": "词组",
+      "ipa": "/baɪ ˈhænd/",
+      "cn": "用手工（对比 by machine）"
+    },
+    "molly": {
+      "pos": "n.",
+      "ipa": "/ˈmɒli/",
+      "cn": "Molly（女子名）"
+    },
+    "you’re": {
+      "pos": "contr.",
+      "ipa": "/jɔː/",
+      "cn": "= you are"
+    },
+    "coming": {
+      "pos": "v.",
+      "ipa": "/ˈkʌmɪŋ/",
+      "cn": "来（come 的现在分词）"
+    },
+    "month": {
+      "pos": "n.",
+      "ipa": "/mʌnθ/",
+      "cn": "月；月份"
+    },
+    "train": {
+      "pos": "n./v.",
+      "ipa": "/treɪn/",
+      "cn": "火车；训练",
+      "note": "作动词是「训练、培训」。"
+    },
+    "tickets": {
+      "pos": "n.",
+      "ipa": "/ˈtɪkɪts/",
+      "cn": "票（ticket 的复数）"
+    },
+    "train tickets": {
+      "pos": "词组",
+      "ipa": "/ˈtreɪn ˌtɪkɪts/",
+      "cn": "火车票"
+    },
+    "quickly": {
+      "pos": "adv.",
+      "ipa": "/ˈkwɪkli/",
+      "cn": "快速地"
+    },
+    "alice": {
+      "pos": "n.",
+      "ipa": "/ˈælɪs/",
+      "cn": "Alice（女子名）"
+    },
+    "motor": {
+      "pos": "n./adj.",
+      "ipa": "/ˈməʊtə/",
+      "cn": "机动（的）"
+    },
+    "vehicles": {
+      "pos": "n.",
+      "ipa": "/ˈviːəklz/",
+      "cn": "车辆（vehicle 的复数）"
+    },
+    "motor vehicles": {
+      "pos": "词组",
+      "ipa": "/ˌməʊtə ˈviːəklz/",
+      "cn": "机动车"
+    },
+    "motor vehicle": {
+      "pos": "n.",
+      "ipa": "/ˌməʊtə ˈviːəkl/",
+      "cn": "机动车"
+    },
+    "allowed": {
+      "pos": "v.",
+      "ipa": "/əˈlaʊd/",
+      "cn": "被允许（allow 的过去分词）"
+    },
+    "allow": {
+      "pos": "v.",
+      "ipa": "/əˈlaʊ/",
+      "cn": "允许；留出（时间）"
+    },
+    "village": {
+      "pos": "n.",
+      "ipa": "/ˈvɪlɪdʒ/",
+      "cn": "村庄"
+    },
+    "i’m": {
+      "pos": "contr.",
+      "ipa": "/aɪm/",
+      "cn": "= I am"
+    },
+    "little": {
+      "pos": "adj./det.",
+      "ipa": "/ˈlɪtl/",
+      "cn": "小的；一点（a little 一点）"
+    },
+    "cash": {
+      "pos": "n.",
+      "ipa": "/kæʃ/",
+      "cn": "现金"
+    },
+    "short of": {
+      "pos": "词组",
+      "ipa": "/ˈʃɔːt əv/",
+      "cn": "欠缺，缺少（be short of）"
+    },
+    "lend": {
+      "pos": "v.",
+      "ipa": "/lend/",
+      "cn": "借出；借给",
+      "note": "lend sb sth 借给某人某物；对比 borrow 借入。"
+    },
+    "bit": {
+      "pos": "n.",
+      "ipa": "/bɪt/",
+      "cn": "一点，少量",
+      "note": "a bit 有点儿；a bit of + 不可数名词。"
+    },
+    "a bit": {
+      "pos": "phr.",
+      "ipa": "/ə ˈbɪt/",
+      "cn": "一点儿，稍微（有一点，修饰形容词）",
+      "note": "修饰形容词或动词，语气比 a little 更口语。a bit of + 不可数名词。"
+    },
+    "until": {
+      "pos": "prep./conj.",
+      "ipa": "/ənˈtɪl/",
+      "cn": "直到……为止"
+    },
+    "weekend": {
+      "pos": "n.",
+      "ipa": "/ˌwiːkˈend/",
+      "cn": "周末"
+    },
+    "isabelle": {
+      "pos": "n.",
+      "ipa": "/ˈɪzəbel/",
+      "cn": "Isabelle（女子名）"
+    },
+    "cook": {
+      "pos": "v./n.",
+      "ipa": "/kʊk/",
+      "cn": "做饭，烹饪；厨师"
+    },
+    "week": {
+      "pos": "n.",
+      "ipa": "/wiːk/",
+      "cn": "星期；周"
+    },
+    "lesson": {
+      "pos": "n.",
+      "ipa": "/ˈlesn/",
+      "cn": "课"
+    },
+    "first lesson": {
+      "pos": "词组",
+      "ipa": "/ˌfɜːst ˈlesn/",
+      "cn": "第一节课"
+    },
+    "free": {
+      "pos": "adj.",
+      "ipa": "/friː/",
+      "cn": "免费的；自由的；空闲的"
+    },
+    "register": {
+      "pos": "v.",
+      "ipa": "/ˈredʒɪstə/",
+      "cn": "报名，注册"
+    },
+    "answers": {
+      "pos": "n.",
+      "ipa": "/ˈɑːnsəz/",
+      "cn": "答案（answer 的复数）"
+    },
+    "exercise": {
+      "pos": "n.",
+      "ipa": "/ˈeksəsaɪz/",
+      "cn": "练习；运动"
+    },
+    "don’t": {
+      "pos": "contr.",
+      "ipa": "/dəʊnt/",
+      "cn": "= do not"
+    },
+    "pay": {
+      "pos": "v.",
+      "ipa": "/peɪ/",
+      "cn": "支付；付钱",
+      "note": "pay sb back 把钱还给某人。"
+    },
+    "join": {
+      "pos": "v.",
+      "ipa": "/dʒɔɪn/",
+      "cn": "加入，参加；连接"
+    },
+    "put": {
+      "pos": "v.",
+      "ipa": "/pʊt/",
+      "cn": "放；放置",
+      "note": "put off doing sth 拖延；put … into 放进……里；put on 穿上、系上。"
+    },
+    "washing": {
+      "pos": "n.",
+      "ipa": "/ˈwɒʃɪŋ/",
+      "cn": "洗（wash 的动名词）"
+    },
+    "machine": {
+      "pos": "n.",
+      "ipa": "/məˈʃiːn/",
+      "cn": "机器"
+    },
+    "washing machine": {
+      "pos": "词组",
+      "ipa": "/ˈwɒʃɪŋ məˌʃiːn/",
+      "cn": "洗衣机"
+    },
+    "hot": {
+      "pos": "adj.",
+      "ipa": "/hɒt/",
+      "cn": "热的"
+    },
+    "hot water": {
+      "pos": "词组",
+      "ipa": "/ˌhɒt ˈwɔːtə/",
+      "cn": "热水"
+    },
+    "in case": {
+      "pos": "词组",
+      "ipa": "/ɪn ˈkeɪs/",
+      "cn": "以防万一",
+      "note": "in case + 从句（以防…会发生）；in case of + 名词。"
+    },
+    "on the stairs": {
+      "pos": "词组",
+      "ipa": "/ɒn ðə ˈsteəz/",
+      "cn": "在楼梯上"
+    },
+    "ought": {
+      "pos": "modal",
+      "ipa": "/ɔːt/",
+      "cn": "应该（ought to do sth）"
+    },
+    "ought to": {
+      "pos": "词组",
+      "ipa": "/ˈɔːt tə/",
+      "cn": "应该（ought to do sth）"
+    },
+    "arrangements": {
+      "pos": "n.",
+      "ipa": "/əˈreɪndʒmənts/",
+      "cn": "安排（arrangement 的复数）"
+    },
+    "travel arrangements": {
+      "pos": "词组",
+      "ipa": "/ˈtrævl əˌreɪndʒmənts/",
+      "cn": "出行安排"
+    },
+    "she’s": {
+      "pos": "contr.",
+      "ipa": "/ʃiːz/",
+      "cn": "= she has 或 she is"
+    },
+    "going": {
+      "pos": "v.",
+      "ipa": "/ˈɡəʊɪŋ/",
+      "cn": "去；be going to 将要"
+    },
+    "hasn’t": {
+      "pos": "contr.",
+      "ipa": "/ˈhæznt/",
+      "cn": "= has not"
+    },
+    "money": {
+      "pos": "n.",
+      "ipa": "/ˈmʌni/",
+      "cn": "钱（不可数）"
+    },
+    "wants": {
+      "pos": "v.",
+      "ipa": "/wɒnts/",
+      "cn": "想要（want 的第三人称单数）"
+    },
+    "borrow": {
+      "pos": "v.",
+      "ipa": "/ˈbɒrəʊ/",
+      "cn": "借入（borrow sth from sb）"
+    },
+    "close": {
+      "pos": "v./adj.",
+      "ipa": "/kləʊz/",
+      "cn": "关闭；近的",
+      "note": "closed 关闭的"
+    },
+    "reason": {
+      "pos": "n.",
+      "ipa": "/ˈriːzn/",
+      "cn": "理由，原因"
+    },
+    "imperatives": {
+      "pos": "n.",
+      "ipa": "/ɪmˈperətɪvz/",
+      "cn": "祈使句（imperative 的复数）"
+    },
+    "ing": {
+      "pos": "n.",
+      "ipa": "/ɪŋ/",
+      "cn": "-ing 后缀（动名词；形容词表事物性质）"
+    },
+    "forms": {
+      "pos": "n.",
+      "ipa": "/fɔːmz/",
+      "cn": "形式（form 的复数）"
+    },
+    "orders": {
+      "pos": "n.",
+      "ipa": "/ˈɔːdəz/",
+      "cn": "命令（order 的复数）"
+    },
+    "order": {
+      "pos": "n./v.",
+      "ipa": "/ˈɔːdə/",
+      "cn": "顺序；命令；点（菜）",
+      "note": "in order to do sth 为了做某事。"
+    },
+    "complete": {
+      "pos": "v.",
+      "ipa": "/kəmˈpliːt/",
+      "cn": "补全，完成"
+    },
+    "box": {
+      "pos": "n.",
+      "ipa": "/bɒks/",
+      "cn": "盒子，方框"
+    },
+    "standing": {
+      "pos": "n.",
+      "ipa": "/ˈstændɪŋ/",
+      "cn": "站立（stand 的 -ing 形式）"
+    },
+    "stop": {
+      "pos": "n./v.",
+      "ipa": "/stɒp/",
+      "cn": "停靠站；车站；停下"
+    },
+    "running": {
+      "pos": "n.",
+      "ipa": "/ˈrʌnɪŋ/",
+      "cn": "奔跑（run 的 -ing 形式）"
+    },
+    "camping": {
+      "pos": "n.",
+      "ipa": "/ˈkæmpɪŋ/",
+      "cn": "露营（camp 的 -ing 形式）"
+    },
+    "put on": {
+      "pos": "词组",
+      "ipa": "/ˌpʊt ˈɒn/",
+      "cn": "穿上，系上"
+    },
+    "traffic": {
+      "pos": "n.",
+      "ipa": "/ˈtræfɪk/",
+      "cn": "交通；路上行驶的车辆",
+      "note": "because of the traffic 因为交通（拥堵）。"
+    },
+    "lights": {
+      "pos": "n.",
+      "ipa": "/laɪts/",
+      "cn": "灯（light 的复数）"
+    },
+    "traffic lights": {
+      "pos": "词组",
+      "ipa": "/ˈtræfɪk ˌlaɪts/",
+      "cn": "交通灯，红绿灯"
+    },
+    "red": {
+      "pos": "adj.",
+      "ipa": "/red/",
+      "cn": "红色的"
+    },
+    "nature": {
+      "pos": "n.",
+      "ipa": "/ˈneɪtʃə/",
+      "cn": "大自然"
+    },
+    "nature park": {
+      "pos": "词组",
+      "ipa": "/ˈneɪtʃə pɑːk/",
+      "cn": "自然公园"
+    },
+    "exit": {
+      "pos": "n.",
+      "ipa": "/ˈeksɪt/",
+      "cn": "出口"
+    },
+    "film": {
+      "pos": "n./v.",
+      "ipa": "/fɪlm/",
+      "cn": "电影；拍摄"
+    },
+    "ends": {
+      "pos": "v.",
+      "ipa": "/endz/",
+      "cn": "结束（end 的第三人称单数）"
+    },
+    "driver": {
+      "pos": "n.",
+      "ipa": "/ˈdraɪvə/",
+      "cn": "司机，驾驶者"
+    },
+    "stairs": {
+      "pos": "n.",
+      "ipa": "/steəz/",
+      "cn": "楼梯"
+    },
+    "seatbelts": {
+      "pos": "n.",
+      "ipa": "/ˈsiːtbəlts/",
+      "cn": "安全带（seatbelt 的复数）"
+    },
+    "seatbelt": {
+      "pos": "n.",
+      "ipa": "/ˈsiːtbelt/",
+      "cn": "安全带"
+    },
+    "landing": {
+      "pos": "n.",
+      "ipa": "/ˈlændɪŋ/",
+      "cn": "着陆，降落"
+    },
+    "cinema": {
+      "pos": "n.",
+      "ipa": "/ˈsɪnəmə/",
+      "cn": "电影院"
+    },
+    "countryside": {
+      "pos": "n.",
+      "ipa": "/ˈkʌntrisaɪd/",
+      "cn": "乡村，乡下"
+    },
+    "plane": {
+      "pos": "n.",
+      "ipa": "/pleɪn/",
+      "cn": "飞机"
+    },
+    "street": {
+      "pos": "n.",
+      "ipa": "/striːt/",
+      "cn": "街道"
+    },
+    "inside": {
+      "pos": "adv./prep.",
+      "ipa": "/ˌɪnˈsaɪd/",
+      "cn": "在里面；在……里面"
+    },
+    "building": {
+      "pos": "n.",
+      "ipa": "/ˈbɪldɪŋ/",
+      "cn": "建筑，楼"
+    },
+    "bus": {
+      "pos": "n.",
+      "ipa": "/bʌs/",
+      "cn": "公交车，公共汽车"
+    },
+    "using": {
+      "pos": "v.",
+      "ipa": "/ˈjuːzɪŋ/",
+      "cn": "使用（use 的现在分词）"
+    },
+    "use": {
+      "pos": "v./n.",
+      "ipa": "/juːz/",
+      "cn": "使用",
+      "note": "动词读 /juːz/；名词读 /juːs/（for customers' use 供顾客使用）。"
+    },
+    "form": {
+      "pos": "n.",
+      "ipa": "/fɔːm/",
+      "cn": "形式"
+    },
+    "suitable": {
+      "pos": "adj.",
+      "ipa": "/ˈsuːtəbl/",
+      "cn": "合适的；the most suitable for 对……最合适的"
+    },
+    "verbs": {
+      "pos": "n.",
+      "ipa": "/vɜːbz/",
+      "cn": "动词（verb 的复数）"
+    },
+    "dangerous": {
+      "pos": "adj.",
+      "ipa": "/ˈdeɪndʒərəs/",
+      "cn": "危险的"
+    },
+    "rocks": {
+      "pos": "n.",
+      "ipa": "/rɒks/",
+      "cn": "岩石，礁石（rock 的复数）"
+    },
+    "rock": {
+      "pos": "n.",
+      "ipa": "/rɒk/",
+      "cn": "岩石，礁石"
+    },
+    "photos": {
+      "pos": "n.",
+      "ipa": "/ˈfəʊtəʊz/",
+      "cn": "照片（photo 的复数）"
+    },
+    "except": {
+      "pos": "prep.",
+      "ipa": "/ɪkˈsept/",
+      "cn": "除……之外",
+      "note": "except 后面不接 from；except for 才带 for。"
+    },
+    "weekends": {
+      "pos": "n.",
+      "ipa": "/ˌwiːkˈendz/",
+      "cn": "周末（weekend 的复数）"
+    },
+    "at weekends": {
+      "pos": "词组",
+      "ipa": "/ət ˌwiːkˈendz/",
+      "cn": "在周末"
+    },
+    "passengers": {
+      "pos": "n.",
+      "ipa": "/ˈpæsɪndʒəz/",
+      "cn": "乘客（passenger 的复数）"
+    },
+    "board": {
+      "pos": "v./n.",
+      "ipa": "/bɔːd/",
+      "cn": "上车，登机；板子"
+    },
+    "let": {
+      "pos": "v.",
+      "ipa": "/let/",
+      "cn": "让（let sb do sth，没有 to）"
+    },
+    "questions": {
+      "pos": "n.",
+      "ipa": "/ˈkwestʃənz/",
+      "cn": "题目（question 的复数）"
+    },
+    "heavy": {
+      "pos": "adj.",
+      "ipa": "/ˈhevi/",
+      "cn": "重的（heavy snow 大雪）"
+    },
+    "snow": {
+      "pos": "n./v.",
+      "ipa": "/snəʊ/",
+      "cn": "雪；下雪"
+    },
+    "heavy snow": {
+      "pos": "词组",
+      "ipa": "/ˌhevi ˈsnəʊ/",
+      "cn": "大雪"
+    },
+    "overnight": {
+      "pos": "adv./adj.",
+      "ipa": "/ˌəʊvəˈnaɪt/",
+      "cn": "在夜间，在晚上的"
+    },
+    "delays": {
+      "pos": "n.",
+      "ipa": "/dɪˈleɪz/",
+      "cn": "延误（delay 的复数）"
+    },
+    "delay": {
+      "pos": "v./n.",
+      "ipa": "/dɪˈleɪ/",
+      "cn": "推迟；延误",
+      "note": "delay doing sth 推迟做某事（不接 off）。"
+    },
+    "possible": {
+      "pos": "adj.",
+      "ipa": "/ˈpɒsəbl/",
+      "cn": "可能的"
+    },
+    "websites": {
+      "pos": "n.",
+      "ipa": "/ˈwebsaɪts/",
+      "cn": "网站（website 的复数）"
+    },
+    "check websites": {
+      "pos": "词组",
+      "ipa": "/ˌtʃek ˈwebsaɪts/",
+      "cn": "查看网站"
+    },
+    "regularly": {
+      "pos": "adv.",
+      "ipa": "/ˈreɡjələli/",
+      "cn": "定期地，有规律地"
+    },
+    "schools": {
+      "pos": "n.",
+      "ipa": "/skuːlz/",
+      "cn": "学校（school 的复数）"
+    },
+    "offices": {
+      "pos": "n.",
+      "ipa": "/ˈɒfɪsɪz/",
+      "cn": "办公室（office 的复数）"
+    },
+    "tomorrow": {
+      "pos": "adv./n.",
+      "ipa": "/təˈmɒrəʊ/",
+      "cn": "明天"
+    },
+    "books": {
+      "pos": "n.",
+      "ipa": "/bʊks/",
+      "cn": "书（book 的复数）"
+    },
+    "you’ve": {
+      "pos": "contr.",
+      "ipa": "/juːv/",
+      "cn": "= you have"
+    },
+    "already": {
+      "pos": "adv.",
+      "ipa": "/ɔːlˈredi/",
+      "cn": "已经"
+    },
+    "bring": {
+      "pos": "v.",
+      "ipa": "/brɪŋ/",
+      "cn": "带来"
+    },
+    "exchange": {
+      "pos": "n./v.",
+      "ipa": "/ɪksˈtʃeɪndʒ/",
+      "cn": "交换"
+    },
+    "book exchange": {
+      "pos": "词组",
+      "ipa": "/ˈbʊk ɪksˌtʃeɪndʒ/",
+      "cn": "图书交换"
+    },
+    "students": {
+      "pos": "n.",
+      "ipa": "/ˈstjuːdnts/",
+      "cn": "学生（student 的复数）"
+    },
+    "mrs": {
+      "pos": "n.",
+      "ipa": "/ˈmɪsɪz/",
+      "cn": "夫人（已婚女士的称呼）"
+    },
+    "jones": {
+      "pos": "n.",
+      "ipa": "/dʒəʊnz/",
+      "cn": "Jones（姓氏）"
+    },
+    "billy": {
+      "pos": "n.",
+      "ipa": "/ˈbɪli/",
+      "cn": "Billy（男子名）"
+    },
+    "joanna’s": {
+      "pos": "n.",
+      "ipa": "/dʒəʊˈænəz/",
+      "cn": "Joanna 的（所有格）"
+    },
+    "joanna": {
+      "pos": "n.",
+      "ipa": "/dʒəʊˈænə/",
+      "cn": "Joanna（女子名）"
+    },
+    "supposed": {
+      "pos": "v.",
+      "ipa": "/səˈpəʊzd/",
+      "cn": "be supposed to 应该（按计划）"
+    },
+    "be supposed to": {
+      "pos": "词组",
+      "ipa": "/biː səˈpəʊzd tə/",
+      "cn": "应该（表示按规定、计划或者期望做某事）"
+    },
+    "meet": {
+      "pos": "v.",
+      "ipa": "/miːt/",
+      "cn": "见面；遇见；结识"
+    },
+    "minutes": {
+      "pos": "n.",
+      "ipa": "/ˈmɪnɪts/",
+      "cn": "分钟（minute 的复数）"
+    },
+    "dad’s": {
+      "pos": "n.",
+      "ipa": "/dædz/",
+      "cn": "爸爸的（Dad 的所有格）"
+    },
+    "driving": {
+      "pos": "v.",
+      "ipa": "/ˈdraɪvɪŋ/",
+      "cn": "开车（drive 的现在分词）"
+    },
+    "we’re": {
+      "pos": "contr.",
+      "ipa": "/wɪə/",
+      "cn": "= we are"
+    },
+    "huge": {
+      "pos": "adj.",
+      "ipa": "/hjuːdʒ/",
+      "cn": "庞大的，巨大的"
+    },
+    "jam": {
+      "pos": "n.",
+      "ipa": "/dʒæm/",
+      "cn": "堵塞；果酱"
+    },
+    "traffic jam": {
+      "pos": "词组",
+      "ipa": "/ˈtræfɪk dʒæm/",
+      "cn": "交通堵塞"
+    },
+    "thanks": {
+      "pos": "int.",
+      "ipa": "/θæŋks/",
+      "cn": "谢谢"
+    },
+    "sophie": {
+      "pos": "n.",
+      "ipa": "/ˈsəʊfi/",
+      "cn": "Sophie（女子名）"
+    },
+    "message": {
+      "pos": "n.",
+      "ipa": "/ˈmesɪdʒ/",
+      "cn": "留言；消息，信息"
+    },
+    "coach": {
+      "pos": "n.",
+      "ipa": "/kəʊtʃ/",
+      "cn": "教练"
+    },
+    "rugby": {
+      "pos": "n.",
+      "ipa": "/ˈrʌɡbi/",
+      "cn": "橄榄球"
+    },
+    "club": {
+      "pos": "n.",
+      "ipa": "/klʌb/",
+      "cn": "俱乐部"
+    },
+    "wanted": {
+      "pos": "v.",
+      "ipa": "/ˈwɒntɪd/",
+      "cn": "想要（want 的过去式）"
+    },
+    "thank": {
+      "pos": "v.",
+      "ipa": "/θæŋk/",
+      "cn": "感谢"
+    },
+    "players": {
+      "pos": "n.",
+      "ipa": "/ˈpleɪəz/",
+      "cn": "球员（player 的复数）"
+    },
+    "player": {
+      "pos": "n.",
+      "ipa": "/ˈpleɪə/",
+      "cn": "球员，选手"
+    },
+    "saturday’s": {
+      "pos": "n.",
+      "ipa": "/ˈsætədeɪz/",
+      "cn": "周六的（Saturday 的所有格）"
+    },
+    "supported": {
+      "pos": "v.",
+      "ipa": "/səˈpɔːtɪd/",
+      "cn": "支持（support 的过去式/过去分词）"
+    },
+    "support": {
+      "pos": "v./n.",
+      "ipa": "/səˈpɔːt/",
+      "cn": "支持（support his application 支持他的申请）"
+    },
+    "league": {
+      "pos": "n.",
+      "ipa": "/liːɡ/",
+      "cn": "联赛，联盟"
+    },
+    "winners": {
+      "pos": "n.",
+      "ipa": "/ˈwɪnəz/",
+      "cn": "获胜者（winner 的复数）"
+    },
+    "league winners": {
+      "pos": "词组",
+      "ipa": "/ˈliːɡ ˌwɪnəz/",
+      "cn": "联赛冠军"
+    },
+    "league winner": {
+      "pos": "n.",
+      "ipa": "/ˈliːɡ ˌwɪnə/",
+      "cn": "联赛冠军"
+    },
+    "wasn’t": {
+      "pos": "contr.",
+      "ipa": "/ˈwɒznt/",
+      "cn": "= was not"
+    },
+    "bad": {
+      "pos": "adj.",
+      "ipa": "/bæd/",
+      "cn": "坏的；不好的",
+      "note": "比较级 worse，最高级 worst。"
+    },
+    "let’s": {
+      "pos": "contr.",
+      "ipa": "/lets/",
+      "cn": "= let us 让我们（表建议）"
+    },
+    "beat": {
+      "pos": "v.",
+      "ipa": "/biːt/",
+      "cn": "打败，战胜"
+    },
+    "next time": {
+      "pos": "词组",
+      "ipa": "/ˌnekst ˈtaɪm/",
+      "cn": "下次"
+    },
+    "café": {
+      "pos": "n.",
+      "ipa": "/ˈkæfeɪ/",
+      "cn": "咖啡馆"
+    },
+    "caf": {
+      "pos": "n.",
+      "ipa": "/ˈkæfeɪ/",
+      "cn": "咖啡馆（Café 一词的字母部分——é 是重音字母）"
+    },
+    "menu": {
+      "pos": "n.",
+      "ipa": "/ˈmenjuː/",
+      "cn": "菜单"
+    },
+    "regular": {
+      "pos": "adj.",
+      "ipa": "/ˈreɡjələ/",
+      "cn": "定期的，规律的；常规的"
+    },
+    "dishes": {
+      "pos": "n.",
+      "ipa": "/ˈdɪʃɪz/",
+      "cn": "菜肴（dish 的复数）"
+    },
+    "dish": {
+      "pos": "n.",
+      "ipa": "/dɪʃ/",
+      "cn": "菜肴"
+    },
+    "today’s": {
+      "pos": "n.",
+      "ipa": "/təˈdeɪz/",
+      "cn": "今天的（today 的所有格）"
+    },
+    "specials": {
+      "pos": "n.",
+      "ipa": "/ˈspeʃlz/",
+      "cn": "特供菜（special 的复数）"
+    },
+    "counter": {
+      "pos": "n.",
+      "ipa": "/ˈkaʊntə/",
+      "cn": "柜台"
+    },
+    "by the counter": {
+      "pos": "词组",
+      "ipa": "/baɪ ðə ˈkaʊntə/",
+      "cn": "在柜台旁"
+    },
+    "it's": {
+      "pos": "contr.",
+      "ipa": "/ɪts/",
+      "cn": "= it is 或 it has"
+    },
+    "weather": {
+      "pos": "n.",
+      "ipa": "/ˈweðə/",
+      "cn": "天气"
+    },
+    "public": {
+      "pos": "adj.",
+      "ipa": "/ˈpʌblɪk/",
+      "cn": "公共的"
+    },
+    "transport": {
+      "pos": "n.",
+      "ipa": "/ˈtrænspɔːt/",
+      "cn": "交通；公共交通"
+    },
+    "public transport": {
+      "pos": "词组",
+      "ipa": "/ˌpʌblɪk ˈtrænspɔːt/",
+      "cn": "公共交通（公交、地铁等）"
+    },
+    "falling": {
+      "pos": "v.",
+      "ipa": "/ˈfɔːlɪŋ/",
+      "cn": "落下（fall 的现在分词）"
+    },
+    "cause": {
+      "pos": "v./n.",
+      "ipa": "/kɔːz/",
+      "cn": "引起，导致；原因"
+    },
+    "problems": {
+      "pos": "n.",
+      "ipa": "/ˈprɒbləmz/",
+      "cn": "问题（problem 的复数）"
+    },
+    "announcements": {
+      "pos": "n.",
+      "ipa": "/əˈnaʊnsmənts/",
+      "cn": "通知（announcement 的复数）"
+    },
+    "announcement": {
+      "pos": "n.",
+      "ipa": "/əˈnaʊnsmənt/",
+      "cn": "通知，宣告"
+    },
+    "unable": {
+      "pos": "adj.",
+      "ipa": "/ʌnˈeɪbl/",
+      "cn": "不能的（be unable to do sth）"
+    },
+    "be unable to": {
+      "pos": "词组",
+      "ipa": "/biː ʌnˈeɪbl tə/",
+      "cn": "不能做某事（be unable to do sth）"
+    },
+    "attend": {
+      "pos": "v.",
+      "ipa": "/əˈtend/",
+      "cn": "参加、出席",
+      "note": "attend a course 参加课程；attend classes 上课。"
+    },
+    "classes": {
+      "pos": "n.",
+      "ipa": "/ˈklɑːsɪz/",
+      "cn": "课程、班级（class 的复数）"
+    },
+    "attend classes": {
+      "pos": "词组",
+      "ipa": "/əˌtend ˈklɑːsɪz/",
+      "cn": "上课"
+    },
+    "share": {
+      "pos": "v.",
+      "ipa": "/ʃeə/",
+      "cn": "分享（share sth with sb 与某人分享某物）"
+    },
+    "schoolmates": {
+      "pos": "n.",
+      "ipa": "/ˈskuːlmeɪts/",
+      "cn": "同学（schoolmate 的复数）"
+    },
+    "they’ve": {
+      "pos": "contr.",
+      "ipa": "/ðeɪv/",
+      "cn": "= they have"
+    },
+    "enjoyed": {
+      "pos": "v.",
+      "ipa": "/ɪnˈdʒɔɪd/",
+      "cn": "喜欢（enjoy 的过去式/过去分词）"
+    },
+    "contact": {
+      "pos": "v./n.",
+      "ipa": "/ˈkɒntækt/",
+      "cn": "联系"
+    },
+    "needs": {
+      "pos": "v.",
+      "ipa": "/niːdz/",
+      "cn": "需要（need 的第三人称单数）"
+    },
+    "probably": {
+      "pos": "adv.",
+      "ipa": "/ˈprɒbəbli/",
+      "cn": "大概，很可能",
+      "note": "形容词 probable + ly。位置在实义动词前、be 动词后。"
+    },
+    "sophie’s": {
+      "pos": "n.",
+      "ipa": "/ˈsəʊfiz/",
+      "cn": "Sophie 的（所有格）"
+    },
+    "congratulating": {
+      "pos": "v.",
+      "ipa": "/kənˈɡrætʃuleɪtɪŋ/",
+      "cn": "祝贺（congratulate 的现在分词）"
+    },
+    "congratulate": {
+      "pos": "v.",
+      "ipa": "/kənˈɡrætʃuleɪt/",
+      "cn": "祝贺某人（congratulate sb on sth）"
+    },
+    "team": {
+      "pos": "n.",
+      "ipa": "/tiːm/",
+      "cn": "团队，队",
+      "note": "英式英语里 team 可作单数也可作复数：The team is/are playing well."
+    },
+    "most": {
+      "pos": "adv./det.",
+      "ipa": "/məʊst/",
+      "cn": "最（最高级）；最多；大多数",
+      "note": "the most exciting 最激动人心的（最高级）。"
+    },
+    "recent": {
+      "pos": "adj.",
+      "ipa": "/ˈriːsnt/",
+      "cn": "近期的"
+    },
+    "recently": {
+      "pos": "adv.",
+      "ipa": "/ˈriːsntli/",
+      "cn": "最近"
+    },
+    "win": {
+      "pos": "v./n.",
+      "ipa": "/wɪn/",
+      "cn": "赢，获胜"
+    },
+    "letting": {
+      "pos": "v.",
+      "ipa": "/ˈletɪŋ/",
+      "cn": "让（let 的现在分词）"
+    },
+    "team’s": {
+      "pos": "n.",
+      "ipa": "/tiːmz/",
+      "cn": "队伍的（team 的所有格）"
+    },
+    "fans": {
+      "pos": "n.",
+      "ipa": "/fænz/",
+      "cn": "粉丝，球迷（fan 的复数）"
+    },
+    "positive": {
+      "pos": "adj.",
+      "ipa": "/ˈpɒzətɪv/",
+      "cn": "正向的，积极的"
+    },
+    "effect": {
+      "pos": "n.",
+      "ipa": "/ɪˈfekt/",
+      "cn": "影响，效果"
+    },
+    "positive effect": {
+      "pos": "词组",
+      "ipa": "/ˌpɒzətɪv ɪˈfekt/",
+      "cn": "正向的影响"
+    },
+    "encouraging": {
+      "pos": "v.",
+      "ipa": "/ɪnˈkʌrɪdʒɪŋ/",
+      "cn": "鼓励（encourage 的现在分词）"
+    },
+    "encourage": {
+      "pos": "v.",
+      "ipa": "/ɪnˈkʌrɪdʒ/",
+      "cn": "鼓励（encourage sb to do sth）"
+    },
+    "future": {
+      "pos": "n./adj.",
+      "ipa": "/ˈfjuːtʃə/",
+      "cn": "未来；将来的",
+      "note": "in future 今后（= from now on）。"
+    },
+    "in a future match": {
+      "pos": "词组",
+      "ipa": "/ɪn ə ˌfjuːtʃə ˈmætʃ/",
+      "cn": "在未来的比赛中"
+    },
+    "food": {
+      "pos": "n.",
+      "ipa": "/fuːd/",
+      "cn": "食物"
+    },
+    "available": {
+      "pos": "adj.",
+      "ipa": "/əˈveɪləbl/",
+      "cn": "可获得的；可用的；有空的"
+    },
+    "apart": {
+      "pos": "adv.",
+      "ipa": "/əˈpɑːt/",
+      "cn": "分开；隔开",
+      "note": "apart from = 除了……之外。"
+    },
+    "what’s": {
+      "pos": "contr.",
+      "ipa": "/wɒts/",
+      "cn": "= what is 或 what has"
+    },
+    "written": {
+      "pos": "v.",
+      "ipa": "/ˈrɪtn/",
+      "cn": "写（write 的过去分词）"
+    },
+    "eat": {
+      "pos": "v.",
+      "ipa": "/iːt/",
+      "cn": "吃"
+    },
+    "speak": {
+      "pos": "v.",
+      "ipa": "/spiːk/",
+      "cn": "说话（speak to sb 与某人说话）"
+    },
+    "speak to": {
+      "pos": "词组",
+      "ipa": "/ˈspiːk tə/",
+      "cn": "向某人说话"
+    },
+    "at the counter": {
+      "pos": "词组",
+      "ipa": "/ət ðə ˈkaʊntə/",
+      "cn": "在柜台"
+    },
+    "in a different way": {
+      "pos": "词组",
+      "ipa": "/ɪn ə ˌdɪfrənt ˈweɪ/",
+      "cn": "用另一种方式（走另一条路）"
+    },
+    "different": {
+      "pos": "adj.",
+      "ipa": "/ˈdɪfrənt/",
+      "cn": "不同的"
+    },
+    "how many": {
+      "pos": "词组",
+      "ipa": "/ˌhaʊ ˈmeni/",
+      "cn": "多少（后接可数名词复数）"
+    },
+    "decide": {
+      "pos": "v.",
+      "ipa": "/dɪˈsaɪd/",
+      "cn": "判断，决定"
+    },
+    "remember": {
+      "pos": "v.",
+      "ipa": "/rɪˈmembə/",
+      "cn": "记住"
+    },
+    "drive": {
+      "pos": "v.",
+      "ipa": "/draɪv/",
+      "cn": "驾驶，开车"
+    },
+    "at the end of": {
+      "pos": "词组",
+      "ipa": "/ət ði end əv/",
+      "cn": "在……的末尾；在……结束时"
+    },
+    "turn": {
+      "pos": "v./n.",
+      "ipa": "/tɜːn/",
+      "cn": "转，转弯；变成",
+      "note": "turn out 结果是；turn on/off 开关。"
+    },
+    "swimming pool area": {
+      "pos": "词组",
+      "ipa": "/ˈswɪmɪŋ puːl ˌeəriə/",
+      "cn": "泳池区域"
+    },
+    "skateboarding": {
+      "pos": "n.",
+      "ipa": "/ˈskeɪtbɔːdɪŋ/",
+      "cn": "滑板运动"
+    },
+    "area": {
+      "pos": "n.",
+      "ipa": "/ˈeəriə/",
+      "cn": "区域"
+    },
+    "hi": {
+      "pos": "int.",
+      "ipa": "/haɪ/",
+      "cn": "嗨，你好"
+    },
+    "mum": {
+      "pos": "n.",
+      "ipa": "/mʌm/",
+      "cn": "妈妈（称呼）"
+    },
+    "number": {
+      "pos": "n.",
+      "ipa": "/ˈnʌmbə/",
+      "cn": "号码（电话号码）"
+    },
+    "pound": {
+      "pos": "n.",
+      "ipa": "/paʊnd/",
+      "cn": "英镑（£）"
+    },
+    "night": {
+      "pos": "n.",
+      "ipa": "/naɪt/",
+      "cn": "夜晚"
+    }
+  },
+  "questions": [
+    {
+      "n": 101,
+      "tag": "①-1",
+      "answer": "d",
+      "prompt": "训练①-1 ——「Photography is not permitted in the art gallery.」应该配「d」里的哪一条？",
+      "opts": {
+        "a": "It is changing its opening hours.",
+        "b": "It’s in good condition and is almost new.",
+        "c": "Lower prices for some children if they are with their mother or father.",
+        "d": "You must not use your camera here.",
+        "e": "You may have to go in a different way."
+      },
+      "why": "官方答案 <b>d</b>。「禁止摄影」=「不能使用相机」——not permitted（不被允许）和 must not（不许）是一对。",
+      "clues": [
+        "not permitted ↔ must not use"
+      ],
+      "others": [
+        [
+          "a",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "b",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "c",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "e",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ]
+      ],
+      "tip": "配对先问「这段文字长什么样、在哪儿出现」，再找同义替换。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "Photography is not permitted in the art gallery."
+          ],
+          [
+            "对应",
+            "d You must not use your camera here."
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "d You must not use your camera here.。"
+      }
+    },
+    {
+      "n": 102,
+      "tag": "①-2",
+      "answer": "a",
+      "prompt": "训练①-2 ——「The swimming pool will no longer be open after 8 p.m.」应该配「a」里的哪一条？",
+      "opts": {
+        "a": "It is changing its opening hours.",
+        "b": "It’s in good condition and is almost new.",
+        "c": "Lower prices for some children if they are with their mother or father.",
+        "d": "You must not use your camera here.",
+        "e": "You may have to go in a different way."
+      },
+      "why": "官方答案 <b>a</b>。「8 点后不再开」就是「正在改营业时间」。",
+      "clues": [
+        "no longer open after 8 ↔ changing its opening hours"
+      ],
+      "others": [
+        [
+          "b",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "c",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "d",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "e",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ]
+      ],
+      "tip": "配对先问「这段文字长什么样、在哪儿出现」，再找同义替换。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "The swimming pool will no longer be open after 8 p.m."
+          ],
+          [
+            "对应",
+            "a It is changing its opening hours."
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "a It is changing its opening hours.。"
+      }
+    },
+    {
+      "n": 103,
+      "tag": "①-3",
+      "answer": "b",
+      "prompt": "训练①-3 ——「The printer was bought recently and works perfectly.」应该配「b」里的哪一条？",
+      "opts": {
+        "a": "It is changing its opening hours.",
+        "b": "It’s in good condition and is almost new.",
+        "c": "Lower prices for some children if they are with their mother or father.",
+        "d": "You must not use your camera here.",
+        "e": "You may have to go in a different way."
+      },
+      "why": "官方答案 <b>b</b>。「最近买的、运转很好」=「几乎全新、状况良好」。",
+      "clues": [
+        "bought recently + works perfectly ↔ almost new + in good condition"
+      ],
+      "others": [
+        [
+          "a",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "c",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "d",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "e",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ]
+      ],
+      "tip": "配对先问「这段文字长什么样、在哪儿出现」，再找同义替换。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "The printer was bought recently and works perfectly."
+          ],
+          [
+            "对应",
+            "b It’s in good condition and is almost new."
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "b It’s in good condition and is almost new.。"
+      }
+    },
+    {
+      "n": 104,
+      "tag": "①-4",
+      "answer": "e",
+      "prompt": "训练①-4 ——「If the side entrance is closed, please use the main entrance.」应该配「e」里的哪一条？",
+      "opts": {
+        "a": "It is changing its opening hours.",
+        "b": "It’s in good condition and is almost new.",
+        "c": "Lower prices for some children if they are with their mother or father.",
+        "d": "You must not use your camera here.",
+        "e": "You may have to go in a different way."
+      },
+      "why": "官方答案 <b>e</b>。「侧门关了走正门」=「可能得换一条路走」。",
+      "clues": [
+        "use the main entrance ↔ go in a different way"
+      ],
+      "others": [
+        [
+          "a",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "b",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "c",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "d",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ]
+      ],
+      "tip": "配对先问「这段文字长什么样、在哪儿出现」，再找同义替换。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "If the side entrance is closed, please use the main entrance."
+          ],
+          [
+            "对应",
+            "e You may have to go in a different way."
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "e You may have to go in a different way.。"
+      }
+    },
+    {
+      "n": 105,
+      "tag": "①-5",
+      "answer": "c",
+      "prompt": "训练①-5 ——「Discount for under-12s when accompanied by a parent.」应该配「c」里的哪一条？",
+      "opts": {
+        "a": "It is changing its opening hours.",
+        "b": "It’s in good condition and is almost new.",
+        "c": "Lower prices for some children if they are with their mother or father.",
+        "d": "You must not use your camera here.",
+        "e": "You may have to go in a different way."
+      },
+      "why": "官方答案 <b>c</b>。「12 岁以下随行打折」=「有父母陪同价格更低」。",
+      "clues": [
+        "Discount for under-12s + accompanied by a parent ↔ Lower prices + with their mother or father"
+      ],
+      "others": [
+        [
+          "a",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "b",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "d",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "e",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ]
+      ],
+      "tip": "配对先问「这段文字长什么样、在哪儿出现」，再找同义替换。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "Discount for under-12s when accompanied by a parent."
+          ],
+          [
+            "对应",
+            "c Lower prices for some children if they are with their mother or father."
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "c Lower prices for some children if they are with their mother or father.。"
+      }
+    },
+    {
+      "n": 106,
+      "tag": "②-1",
+      "answer": "e",
+      "prompt": "训练②-1 ——「These doors must be kept open at all times.」应该配「e」里的哪一条？",
+      "opts": {
+        "a": "email",
+        "b": "label",
+        "c": "advertisement",
+        "d": "note",
+        "e": "notice",
+        "f": "road sign"
+      },
+      "why": "官方答案 <b>e</b>。官方：notice（告示），见于学校走廊。门必须一直开着 = 告示的规定。",
+      "clues": [
+        "kept open at all times ↔ 学校走廊的告示"
+      ],
+      "others": [
+        [
+          "a",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "b",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "c",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "d",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "f",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ]
+      ],
+      "tip": "配对先问「这段文字长什么样、在哪儿出现」，再找同义替换。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "These doors must be kept open at all times."
+          ],
+          [
+            "对应",
+            "e notice"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "e notice。"
+      }
+    },
+    {
+      "n": 107,
+      "tag": "②-2",
+      "answer": "b",
+      "prompt": "训练②-2 ——「Wash sweater by hand only, at low temperature.」应该配「b」里的哪一条？",
+      "opts": {
+        "a": "email",
+        "b": "label",
+        "c": "advertisement",
+        "d": "note",
+        "e": "notice",
+        "f": "road sign"
+      },
+      "why": "官方答案 <b>b</b>。官方：label（标签），衣服的洗涤说明。",
+      "clues": [
+        "washing instructions ↔ 衣服上的标签"
+      ],
+      "others": [
+        [
+          "a",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "c",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "d",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "e",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "f",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ]
+      ],
+      "tip": "配对先问「这段文字长什么样、在哪儿出现」，再找同义替换。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "Wash sweater by hand only, at low temperature."
+          ],
+          [
+            "对应",
+            "b label"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "b label。"
+      }
+    },
+    {
+      "n": 108,
+      "tag": "②-3",
+      "answer": "a",
+      "prompt": "训练②-3 ——「I hope you’re coming to see us next month! …」应该配「a」里的哪一条？",
+      "opts": {
+        "a": "email",
+        "b": "label",
+        "c": "advertisement",
+        "d": "note",
+        "e": "notice",
+        "f": "road sign"
+      },
+      "why": "官方答案 <b>a</b>。官方：email，见于电脑或手机。有称呼（Hi Molly）和落款（Alice）。",
+      "clues": [
+        "称呼 + 落款 ↔ 电子邮件"
+      ],
+      "others": [
+        [
+          "b",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "c",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "d",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "e",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "f",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ]
+      ],
+      "tip": "配对先问「这段文字长什么样、在哪儿出现」，再找同义替换。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "I hope you’re coming to see us next month! …"
+          ],
+          [
+            "对应",
+            "a email"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "a email。"
+      }
+    },
+    {
+      "n": 109,
+      "tag": "②-4",
+      "answer": "f",
+      "prompt": "训练②-4 ——「No motor vehicles allowed in this part of the village.」应该配「f」里的哪一条？",
+      "opts": {
+        "a": "email",
+        "b": "label",
+        "c": "advertisement",
+        "d": "note",
+        "e": "notice",
+        "f": "road sign"
+      },
+      "why": "官方答案 <b>f</b>。官方：road sign（道路标志），立在道路入口。",
+      "clues": [
+        "no motor vehicles ↔ 道路标志"
+      ],
+      "others": [
+        [
+          "a",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "b",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "c",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "d",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "e",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ]
+      ],
+      "tip": "配对先问「这段文字长什么样、在哪儿出现」，再找同义替换。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "No motor vehicles allowed in this part of the village."
+          ],
+          [
+            "对应",
+            "f road sign"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "f road sign。"
+      }
+    },
+    {
+      "n": 110,
+      "tag": "②-5",
+      "answer": "d",
+      "prompt": "训练②-5 ——「I’m a little short of cash. Can you lend me a bit until the weekend? …」应该配「d」里的哪一条？",
+      "opts": {
+        "a": "email",
+        "b": "label",
+        "c": "advertisement",
+        "d": "note",
+        "e": "notice",
+        "f": "road sign"
+      },
+      "why": "官方答案 <b>d</b>。官方：note（便条），在家里的桌上。写给妈妈、要借钱。",
+      "clues": [
+        "借东西 + 落款 ↔ 便条"
+      ],
+      "others": [
+        [
+          "a",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "b",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "c",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "e",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "f",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ]
+      ],
+      "tip": "配对先问「这段文字长什么样、在哪儿出现」，再找同义替换。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "I’m a little short of cash. Can you lend me a bit until the weekend? …"
+          ],
+          [
+            "对应",
+            "d note"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "d note。"
+      }
+    },
+    {
+      "n": 111,
+      "tag": "②-6",
+      "answer": "c",
+      "prompt": "训练②-6 ——「LEARN TO COOK for just £20 a week! …」应该配「c」里的哪一条？",
+      "opts": {
+        "a": "email",
+        "b": "label",
+        "c": "advertisement",
+        "d": "note",
+        "e": "notice",
+        "f": "road sign"
+      },
+      "why": "官方答案 <b>c</b>。官方：advertisement（广告），布告栏上的小广告。有价格和报名截止。",
+      "clues": [
+        "价格 + 催报名 ↔ 广告"
+      ],
+      "others": [
+        [
+          "a",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "b",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "d",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "e",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "f",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ]
+      ],
+      "tip": "配对先问「这段文字长什么样、在哪儿出现」，再找同义替换。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "LEARN TO COOK for just £20 a week! …"
+          ],
+          [
+            "对应",
+            "c advertisement"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "c advertisement。"
+      }
+    },
+    {
+      "n": 112,
+      "tag": "③-a",
+      "answer": "4",
+      "prompt": "训练③-a ——「You must not drive here.」应该配「4」里的哪一条？",
+      "opts": {
+        "1": "text 1",
+        "2": "text 2",
+        "3": "text 3",
+        "4": "text 4",
+        "5": "text 5",
+        "6": "text 6"
+      },
+      "why": "官方答案 <b>4</b>。文本 4 的「禁止机动车」= 不能在这里开车。",
+      "clues": [
+        "must not drive ↔ No motor vehicles"
+      ],
+      "others": [
+        [
+          "1",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "2",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "3",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "5",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "6",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ]
+      ],
+      "tip": "配对先问「这句说的是什么事」，再一条条排除。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "You must not drive here."
+          ],
+          [
+            "对应",
+            "4 text 4"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "4 text 4。"
+      }
+    },
+    {
+      "n": 113,
+      "tag": "③-b",
+      "answer": "6",
+      "prompt": "训练③-b ——「You don’t have to pay for your first class if you join before the weekend.」应该配「6」里的哪一条？",
+      "opts": {
+        "1": "text 1",
+        "2": "text 2",
+        "3": "text 3",
+        "4": "text 4",
+        "5": "text 5",
+        "6": "text 6"
+      },
+      "why": "官方答案 <b>6</b>。文本 6 的广告：「周五前报名第一节课免费」。",
+      "clues": [
+        "first class 免费 + 周末前报名 ↔ register by this Friday"
+      ],
+      "others": [
+        [
+          "1",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "2",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "3",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "4",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "5",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ]
+      ],
+      "tip": "配对先问「这句说的是什么事」，再一条条排除。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "You don’t have to pay for your first class if you join before the weekend."
+          ],
+          [
+            "对应",
+            "6 text 6"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "6 text 6。"
+      }
+    },
+    {
+      "n": 114,
+      "tag": "③-c",
+      "answer": "2",
+      "prompt": "训练③-c ——「Do not put in washing machine or use hot water.」应该配「2」里的哪一条？",
+      "opts": {
+        "1": "text 1",
+        "2": "text 2",
+        "3": "text 3",
+        "4": "text 4",
+        "5": "text 5",
+        "6": "text 6"
+      },
+      "why": "官方答案 <b>2</b>。文本 2 的洗涤标签：只能手洗、低温。",
+      "clues": [
+        "别机洗、别热水 ↔ by hand only, at low temperature"
+      ],
+      "others": [
+        [
+          "1",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "3",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "4",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "5",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "6",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ]
+      ],
+      "tip": "配对先问「这句说的是什么事」，再一条条排除。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "Do not put in washing machine or use hot water."
+          ],
+          [
+            "对应",
+            "2 text 2"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "2 text 2。"
+      }
+    },
+    {
+      "n": 115,
+      "tag": "③-d",
+      "answer": "3",
+      "prompt": "训练③-d ——「She ought to make travel arrangements soon if she’s going to visit.」应该配「3」里的哪一条？",
+      "opts": {
+        "1": "text 1",
+        "2": "text 2",
+        "3": "text 3",
+        "4": "text 4",
+        "5": "text 5",
+        "6": "text 6"
+      },
+      "why": "官方答案 <b>3</b>。文本 3 的邮件：要来就快点订火车票。",
+      "clues": [
+        "尽快安排出行 ↔ book your train tickets quickly"
+      ],
+      "others": [
+        [
+          "1",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "2",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "4",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "5",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "6",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ]
+      ],
+      "tip": "配对先问「这句说的是什么事」，再一条条排除。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "She ought to make travel arrangements soon if she’s going to visit."
+          ],
+          [
+            "对应",
+            "3 text 3"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "3 text 3。"
+      }
+    },
+    {
+      "n": 116,
+      "tag": "③-e",
+      "answer": "5",
+      "prompt": "训练③-e ——「She hasn’t got much money and wants to borrow some.」应该配「5」里的哪一条？",
+      "opts": {
+        "1": "text 1",
+        "2": "text 2",
+        "3": "text 3",
+        "4": "text 4",
+        "5": "text 5",
+        "6": "text 6"
+      },
+      "why": "官方答案 <b>5</b>。文本 5 的便条：手头缺钱，想借一点。",
+      "clues": [
+        "钱不多、想借 ↔ short of cash, Can you lend me a bit"
+      ],
+      "others": [
+        [
+          "1",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "2",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "3",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "4",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "6",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ]
+      ],
+      "tip": "配对先问「这句说的是什么事」，再一条条排除。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "She hasn’t got much money and wants to borrow some."
+          ],
+          [
+            "对应",
+            "5 text 5"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "5 text 5。"
+      }
+    },
+    {
+      "n": 117,
+      "tag": "③-f",
+      "answer": "1",
+      "prompt": "训练③-f ——「Do not close them for any reason.」应该配「1」里的哪一条？",
+      "opts": {
+        "1": "text 1",
+        "2": "text 2",
+        "3": "text 3",
+        "4": "text 4",
+        "5": "text 5",
+        "6": "text 6"
+      },
+      "why": "官方答案 <b>1</b>。文本 1 的告示：这些门必须一直开着。",
+      "clues": [
+        "别关它们 ↔ must be kept open at all times"
+      ],
+      "others": [
+        [
+          "2",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "3",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "4",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "5",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ],
+        [
+          "6",
+          "和别的条目更配（或意思对不上），配过的划掉。"
+        ]
+      ],
+      "tip": "配对先问「这句说的是什么事」，再一条条排除。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "Do not close them for any reason."
+          ],
+          [
+            "对应",
+            "1 text 1"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "1 text 1。"
+      }
+    },
+    {
+      "n": 118,
+      "tag": "④-1",
+      "answer": "C",
+      "prompt": "训练④-1 ——「…………… here when traffic lights are red.」应该配「C」里的哪一条？",
+      "opts": {
+        "A": "standing",
+        "B": "put on",
+        "C": "stop",
+        "D": "running",
+        "E": "use",
+        "F": "camping"
+      },
+      "why": "官方答案 <b>C</b>。红灯亮时在这里停下 —— 祈使句用原形 Stop。",
+      "clues": [
+        "红灯 ↔ stop（停下）"
+      ],
+      "others": [
+        [
+          "A",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "B",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "D",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "E",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "F",
+          "与这条命令的场景对不上。"
+        ]
+      ],
+      "tip": "配对先问「这句说的是什么事」，再一条条排除。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "…………… here when traffic lights are red."
+          ],
+          [
+            "对应",
+            "C stop"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "C stop。"
+      }
+    },
+    {
+      "n": 119,
+      "tag": "④-2",
+      "answer": "F",
+      "prompt": "训练④-2 ——「No …………… in the nature park.」应该配「F」里的哪一条？",
+      "opts": {
+        "A": "standing",
+        "B": "put on",
+        "C": "stop",
+        "D": "running",
+        "E": "use",
+        "F": "camping"
+      },
+      "why": "官方答案 <b>F</b>。自然公园里禁止露营 —— No camping。",
+      "clues": [
+        "No + -ing ↔ camping（露营）"
+      ],
+      "others": [
+        [
+          "A",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "B",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "C",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "D",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "E",
+          "与这条命令的场景对不上。"
+        ]
+      ],
+      "tip": "配对先问「这句说的是什么事」，再一条条排除。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "No …………… in the nature park."
+          ],
+          [
+            "对应",
+            "F camping"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "F camping。"
+      }
+    },
+    {
+      "n": 120,
+      "tag": "④-3",
+      "answer": "E",
+      "prompt": "训练④-3 ——「…………… this exit when film ends.」应该配「E」里的哪一条？",
+      "opts": {
+        "A": "standing",
+        "B": "put on",
+        "C": "stop",
+        "D": "running",
+        "E": "use",
+        "F": "camping"
+      },
+      "why": "官方答案 <b>E</b>。电影结束时走这个出口 —— Use this exit。",
+      "clues": [
+        "电影散场走出口 ↔ use（使用）"
+      ],
+      "others": [
+        [
+          "A",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "B",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "C",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "D",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "F",
+          "与这条命令的场景对不上。"
+        ]
+      ],
+      "tip": "配对先问「这句说的是什么事」，再一条条排除。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "…………… this exit when film ends."
+          ],
+          [
+            "对应",
+            "E use"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "E use。"
+      }
+    },
+    {
+      "n": 121,
+      "tag": "④-4",
+      "answer": "A",
+      "prompt": "训练④-4 ——「No …………… near the driver or the doors.」应该配「A」里的哪一条？",
+      "opts": {
+        "A": "standing",
+        "B": "put on",
+        "C": "stop",
+        "D": "running",
+        "E": "use",
+        "F": "camping"
+      },
+      "why": "官方答案 <b>A</b>。公交车上不许站在司机和车门旁 —— No standing。",
+      "clues": [
+        "司机/车门旁 ↔ standing（站立）"
+      ],
+      "others": [
+        [
+          "B",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "C",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "D",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "E",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "F",
+          "与这条命令的场景对不上。"
+        ]
+      ],
+      "tip": "配对先问「这句说的是什么事」，再一条条排除。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "No …………… near the driver or the doors."
+          ],
+          [
+            "对应",
+            "A standing"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "A standing。"
+      }
+    },
+    {
+      "n": 122,
+      "tag": "④-5",
+      "answer": "D",
+      "prompt": "训练④-5 ——「No …………… on the stairs.」应该配「D」里的哪一条？",
+      "opts": {
+        "A": "standing",
+        "B": "put on",
+        "C": "stop",
+        "D": "running",
+        "E": "use",
+        "F": "camping"
+      },
+      "why": "官方答案 <b>D</b>。楼梯上不许奔跑 —— No running。",
+      "clues": [
+        "楼梯上 ↔ running（奔跑）"
+      ],
+      "others": [
+        [
+          "A",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "B",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "C",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "E",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "F",
+          "与这条命令的场景对不上。"
+        ]
+      ],
+      "tip": "配对先问「这句说的是什么事」，再一条条排除。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "No …………… on the stairs."
+          ],
+          [
+            "对应",
+            "D running"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "D running。"
+      }
+    },
+    {
+      "n": 123,
+      "tag": "④-6",
+      "answer": "B",
+      "prompt": "训练④-6 ——「…………… your seatbelts for landing.」应该配「B」里的哪一条？",
+      "opts": {
+        "A": "standing",
+        "B": "put on",
+        "C": "stop",
+        "D": "running",
+        "E": "use",
+        "F": "camping"
+      },
+      "why": "官方答案 <b>B</b>。着陆前系好安全带 —— Put on your seatbelts。",
+      "clues": [
+        "系安全带 ↔ put on（系上）"
+      ],
+      "others": [
+        [
+          "A",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "C",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "D",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "E",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "F",
+          "与这条命令的场景对不上。"
+        ]
+      ],
+      "tip": "配对先问「这句说的是什么事」，再一条条排除。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "…………… your seatbelts for landing."
+          ],
+          [
+            "对应",
+            "B put on"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "B put on。"
+      }
+    },
+    {
+      "n": 124,
+      "tag": "⑤-1",
+      "answer": "d",
+      "prompt": "训练⑤-1 ——「1（红灯停）」应该配「d」里的哪一条？",
+      "opts": {
+        "a": "in a cinema",
+        "b": "in the countryside",
+        "c": "on a plane",
+        "d": "in the street",
+        "e": "inside a school building",
+        "f": "on a bus"
+      },
+      "why": "官方答案 <b>d</b>。命令 1 管交通灯 —— 出现在街上。",
+      "clues": [
+        "交通灯 ↔ 街上"
+      ],
+      "others": [
+        [
+          "a",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "b",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "c",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "e",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "f",
+          "与这条命令的场景对不上。"
+        ]
+      ],
+      "tip": "配对先问「这句说的是什么事」，再一条条排除。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "1（红灯停）"
+          ],
+          [
+            "对应",
+            "d in the street"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "d in the street。"
+      }
+    },
+    {
+      "n": 125,
+      "tag": "⑤-2",
+      "answer": "b",
+      "prompt": "训练⑤-2 ——「2（No camping）」应该配「b」里的哪一条？",
+      "opts": {
+        "a": "in a cinema",
+        "b": "in the countryside",
+        "c": "on a plane",
+        "d": "in the street",
+        "e": "inside a school building",
+        "f": "on a bus"
+      },
+      "why": "官方答案 <b>b</b>。禁止露营 —— 乡下/自然公园。",
+      "clues": [
+        "自然公园 ↔ 乡下"
+      ],
+      "others": [
+        [
+          "a",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "c",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "d",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "e",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "f",
+          "与这条命令的场景对不上。"
+        ]
+      ],
+      "tip": "配对先问「这句说的是什么事」，再一条条排除。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "2（No camping）"
+          ],
+          [
+            "对应",
+            "b in the countryside"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "b in the countryside。"
+      }
+    },
+    {
+      "n": 126,
+      "tag": "⑤-3",
+      "answer": "a",
+      "prompt": "训练⑤-3 ——「3（Use this exit）」应该配「a」里的哪一条？",
+      "opts": {
+        "a": "in a cinema",
+        "b": "in the countryside",
+        "c": "on a plane",
+        "d": "in the street",
+        "e": "inside a school building",
+        "f": "on a bus"
+      },
+      "why": "官方答案 <b>a</b>。电影散场走的出口 —— 电影院。",
+      "clues": [
+        "散场出口 ↔ 电影院"
+      ],
+      "others": [
+        [
+          "b",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "c",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "d",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "e",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "f",
+          "与这条命令的场景对不上。"
+        ]
+      ],
+      "tip": "配对先问「这句说的是什么事」，再一条条排除。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "3（Use this exit）"
+          ],
+          [
+            "对应",
+            "a in a cinema"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "a in a cinema。"
+      }
+    },
+    {
+      "n": 127,
+      "tag": "⑤-4",
+      "answer": "f",
+      "prompt": "训练⑤-4 ——「4（No standing）」应该配「f」里的哪一条？",
+      "opts": {
+        "a": "in a cinema",
+        "b": "in the countryside",
+        "c": "on a plane",
+        "d": "in the street",
+        "e": "inside a school building",
+        "f": "on a bus"
+      },
+      "why": "官方答案 <b>f</b>。司机和车门旁不许站 —— 公交车上。",
+      "clues": [
+        "司机、车门 ↔ 公交车"
+      ],
+      "others": [
+        [
+          "a",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "b",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "c",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "d",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "e",
+          "与这条命令的场景对不上。"
+        ]
+      ],
+      "tip": "配对先问「这句说的是什么事」，再一条条排除。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "4（No standing）"
+          ],
+          [
+            "对应",
+            "f on a bus"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "f on a bus。"
+      }
+    },
+    {
+      "n": 128,
+      "tag": "⑤-5",
+      "answer": "e",
+      "prompt": "训练⑤-5 ——「5（No running）」应该配「e」里的哪一条？",
+      "opts": {
+        "a": "in a cinema",
+        "b": "in the countryside",
+        "c": "on a plane",
+        "d": "in the street",
+        "e": "inside a school building",
+        "f": "on a bus"
+      },
+      "why": "官方答案 <b>e</b>。楼梯上不许跑 —— 教学楼里。",
+      "clues": [
+        "楼梯 ↔ 教学楼"
+      ],
+      "others": [
+        [
+          "a",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "b",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "c",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "d",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "f",
+          "与这条命令的场景对不上。"
+        ]
+      ],
+      "tip": "配对先问「这句说的是什么事」，再一条条排除。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "5（No running）"
+          ],
+          [
+            "对应",
+            "e inside a school building"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "e inside a school building。"
+      }
+    },
+    {
+      "n": 129,
+      "tag": "⑤-6",
+      "answer": "c",
+      "prompt": "训练⑤-6 ——「6（Put on your seatbelts）」应该配「c」里的哪一条？",
+      "opts": {
+        "a": "in a cinema",
+        "b": "in the countryside",
+        "c": "on a plane",
+        "d": "in the street",
+        "e": "inside a school building",
+        "f": "on a bus"
+      },
+      "why": "官方答案 <b>c</b>。着陆前系安全带 —— 飞机上。",
+      "clues": [
+        "着陆、安全带 ↔ 飞机上"
+      ],
+      "others": [
+        [
+          "a",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "b",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "d",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "e",
+          "与这条命令的场景对不上。"
+        ],
+        [
+          "f",
+          "与这条命令的场景对不上。"
+        ]
+      ],
+      "tip": "配对先问「这句说的是什么事」，再一条条排除。",
+      "ana": {
+        "parts": [
+          [
+            "题目",
+            "6（Put on your seatbelts）"
+          ],
+          [
+            "对应",
+            "c on a plane"
+          ]
+        ],
+        "gram": [
+          "同义替换配对"
+        ],
+        "tr": "c on a plane。"
+      }
+    },
+    {
+      "n": 130,
+      "tag": "⑥-1",
+      "gap": "1",
+      "answer": "turn",
+      "prompt": "训练⑥-1 —— 看「右转弯标志」，填一个合适的动词（正确形式）。",
+      "why": "官方答案 <b>Turn</b>。图上是个向右转的箭头 → Turn。",
+      "clues": [
+        "右转弯标志"
+      ],
+      "others": [
+        [
+          "go",
+          "「走」没有方向——标志是转弯箭头。"
+        ]
+      ],
+      "tip": "看图想场景：祈使句用动词原形，No 后面用 -ing 形式。",
+      "ana": {
+        "parts": [
+          [
+            "谓语（空）",
+            "填 Turn —— 转弯"
+          ],
+          [
+            "方向",
+            "right —— 向右"
+          ],
+          [
+            "地点",
+            "at the end of this road —— 在路的尽头"
+          ]
+        ],
+        "gram": [
+          "祈使句 / No + -ing"
+        ],
+        "tr": "答案：Turn。"
+      }
+    },
+    {
+      "n": 131,
+      "tag": "⑥-2",
+      "gap": "2",
+      "answer": "diving",
+      "prompt": "训练⑥-2 —— 看「禁止跳水标志」，填一个合适的动词（正确形式）。",
+      "why": "官方答案 <b>diving</b>。图上有人跳水被划掉 → diving。",
+      "clues": [
+        "禁止跳水标志"
+      ],
+      "others": [
+        [
+          "swimming",
+          "水里游泳不违规——被禁止的是跳水（dangerous rocks 礁石）。"
+        ]
+      ],
+      "tip": "看图想场景：祈使句用动词原形，No 后面用 -ing 形式。",
+      "ana": {
+        "parts": [
+          [
+            "空",
+            "填 diving —— 跳水"
+          ],
+          [
+            "警示",
+            "Dangerous rocks in water —— 水中有危险礁石"
+          ]
+        ],
+        "gram": [
+          "祈使句 / No + -ing"
+        ],
+        "tr": "答案：diving。"
+      }
+    },
+    {
+      "n": 132,
+      "tag": "⑥-3",
+      "gap": "3",
+      "answer": "take",
+      "prompt": "训练⑥-3 —— 看「泳池+相机图标」，填一个合适的动词（正确形式）。",
+      "why": "官方答案 <b>take</b>。拍照用 take photos → take。",
+      "clues": [
+        "泳池+相机图标"
+      ],
+      "others": [
+        [
+          "make",
+          "拍照不说 make photos——固定搭配是 take photos。"
+        ]
+      ],
+      "tip": "看图想场景：祈使句用动词原形，No 后面用 -ing 形式。",
+      "ana": {
+        "parts": [
+          [
+            "谓语（空）",
+            "填 take —— 拍（take photos）"
+          ],
+          [
+            "地点",
+            "in the swimming pool area —— 在泳池区域"
+          ]
+        ],
+        "gram": [
+          "祈使句 / No + -ing"
+        ],
+        "tr": "答案：take。"
+      }
+    },
+    {
+      "n": 133,
+      "tag": "⑥-4",
+      "gap": "4",
+      "answer": "skateboarding",
+      "prompt": "训练⑥-4 —— 看「禁止滑板标志」，填一个合适的动词（正确形式）。",
+      "why": "官方答案 <b>skateboarding</b>。图上滑板被划掉 → skateboarding。",
+      "clues": [
+        "禁止滑板标志"
+      ],
+      "others": [
+        [
+          "skating",
+          "滑冰和滑板不同——图标上是滑板。"
+        ]
+      ],
+      "tip": "看图想场景：祈使句用动词原形，No 后面用 -ing 形式。",
+      "ana": {
+        "parts": [
+          [
+            "空",
+            "填 skateboarding —— 滑板"
+          ],
+          [
+            "例外",
+            "except at weekends —— 除了周末"
+          ]
+        ],
+        "gram": [
+          "祈使句 / No + -ing"
+        ],
+        "tr": "答案：skateboarding。"
+      }
+    },
+    {
+      "n": 134,
+      "tag": "⑥-5",
+      "gap": "5",
+      "answer": "let",
+      "prompt": "训练⑥-5 —— 看「车厢场景（乘客先下后上）」，填一个合适的动词（正确形式）。",
+      "why": "官方答案 <b>Let</b>。「让某人做」用 Let（后不加 to）→ Let。",
+      "clues": [
+        "车厢场景（乘客先下后上）"
+      ],
+      "others": [
+        [
+          "allow",
+          "allow 要加 to（allow passengers to leave）——空后面直接跟 leave，只能用 Let。"
+        ]
+      ],
+      "tip": "看图想场景：祈使句用动词原形，No 后面用 -ing 形式。",
+      "ana": {
+        "parts": [
+          [
+            "谓语（空）",
+            "填 Let —— 让"
+          ],
+          [
+            "宾语+补语",
+            "passengers leave the train —— 乘客下车"
+          ],
+          [
+            "时间从句",
+            "before you board —— 在你上车前"
+          ]
+        ],
+        "gram": [
+          "祈使句 / No + -ing"
+        ],
+        "tr": "答案：Let。"
+      }
+    },
+    {
+      "n": 135,
+      "tag": "⑥-6",
+      "gap": "6",
+      "answer": "eating",
+      "prompt": "训练⑥-6 —— 看「禁止饮食标志」，填一个合适的动词（正确形式）。",
+      "why": "官方答案 <b>eating</b>。图上刀叉被划掉 → eating。",
+      "clues": [
+        "禁止饮食标志"
+      ],
+      "others": [
+        [
+          "food",
+          "No 后面要 -ing 形式——No eating 才是「禁止饮食」。"
+        ]
+      ],
+      "tip": "看图想场景：祈使句用动词原形，No 后面用 -ing 形式。",
+      "ana": {
+        "parts": [
+          [
+            "空",
+            "填 eating —— 吃东西"
+          ],
+          [
+            "地点",
+            "in this area —— 在这个区域"
+          ]
+        ],
+        "gram": [
+          "祈使句 / No + -ing"
+        ],
+        "tr": "答案：eating。"
+      }
+    },
+    {
+      "n": 1,
+      "answer": "C",
+      "prompt": "第 1 题 —— 选出与文本意思相同的选项（A/B/C）。",
+      "opts": {
+        "A": "The bad weather will make a lot of public transport late tomorrow.",
+        "B": "Snow that is falling will cause a number of problems tomorrow.",
+        "C": "Students should watch for announcements in case they are unable to attend classes tomorrow."
+      },
+      "why": "官方答案 <b>C</b>。官方：A 错 —— 选项说「一定会晚」，原文只说 delays <b>possible</b>（可能延误）；B 错 —— 选项说雪「正在下」，原文是 <b>EXPECTED</b> overnight（预计夜间）；C 对 —— <b>check websites ↔ watch for announcements</b>、<b>schools may be closed ↔ unable to attend classes</b>。",
+      "clues": [
+        "check websites ↔ watch for announcements",
+        "schools may be closed ↔ unable to attend classes"
+      ],
+      "others": [
+        [
+          "A",
+          "says that there will definitely be problems, whereas the notice only says that delays are possible —— 「一定」说过头了。"
+        ],
+        [
+          "B",
+          "says that the snow is falling, but the notice tells us it’s expected in the future (overnight – tonight) —— 时态方向反了。"
+        ]
+      ],
+      "tip": "先圈关键词：HEAVY SNOW（大雪）、DELAYS POSSIBLE（可能延误）、CHECK WEBSITES（查网站）、SCHOOLS MAY BE CLOSED（学校可能关）。",
+      "ana": {
+        "parts": [
+          [
+            "通知",
+            "HEAVY SNOW EXPECTED OVERNIGHT / TRAIN AND BUS DELAYS POSSIBLE / CHECK WEBSITES …"
+          ],
+          [
+            "选项 C",
+            "watch for announcements（留意通知）↔ CHECK WEBSITES；unable to attend classes ↔ SCHOOLS MAY BE CLOSED"
+          ]
+        ],
+        "gram": [
+          "Part 1：关键词 ↔ 同义替换"
+        ],
+        "tr": "学生应当留意通知，以防明天无法上课（学校可能关闭）。"
+      },
+      "optsAna": {
+        "A": {
+          "parts": [
+            [
+              "主语",
+              "The bad weather —— 恶劣天气"
+            ],
+            [
+              "谓语",
+              "<code>will make</code> —— 将会使（一定会）"
+            ],
+            [
+              "宾语",
+              "a lot of public transport late tomorrow —— 很多公共交通明天晚点"
+            ]
+          ],
+          "gram": [
+            "will 表一定会（原文只说 possible 可能）"
+          ],
+          "tr": "恶劣天气会让很多公共交通明天晚点。"
+        },
+        "B": {
+          "parts": [
+            [
+              "主语",
+              "Snow that is falling —— 正在下的雪"
+            ],
+            [
+              "谓语",
+              "<code>will cause</code> —— 将会引起"
+            ],
+            [
+              "宾语",
+              "a number of problems tomorrow —— 明天的一系列问题"
+            ]
+          ],
+          "gram": [
+            "that is falling 定语从句（正在下）；cause 引起"
+          ],
+          "tr": "正在下的雪明天会引起一系列问题。"
+        },
+        "C": {
+          "parts": [
+            [
+              "主语",
+              "Students —— 学生们"
+            ],
+            [
+              "谓语",
+              "<code>should watch for</code> —— 应当留意"
+            ],
+            [
+              "宾语",
+              "announcements —— 通知"
+            ],
+            [
+              "状语从句",
+              "<code>in case they are unable to attend classes tomorrow</code> —— 以防明天没法来上课"
+            ]
+          ],
+          "gram": [
+            "watch for 留意；in case 以防万一；be unable to do 不能做"
+          ],
+          "tr": "学生应当留意通知，以防明天无法来上课。"
+        }
+      }
+    },
+    {
+      "n": 2,
+      "answer": "A",
+      "prompt": "第 2 题 —— 选出与文本意思相同的选项（A/B/C）。",
+      "opts": {
+        "A": "share books they no longer want with their schoolmates",
+        "B": "find out from other students which books they’ve enjoyed",
+        "C": "bring in a good book to talk about on Friday"
+      },
+      "why": "官方答案 <b>A</b>。官方：A 对 —— <b>Bring them to our Book Exchange</b>（把它们带到图书交换处）+ <b>other students might enjoy them</b> = 把不再要的书分享给同学；B 错 —— 不是去打听别人喜欢什么书；C 错 —— 不是带一本好书来讨论。",
+      "clues": [
+        "books you’ve already read ↔ books they no longer want",
+        "other students might enjoy them ↔ share with their schoolmates"
+      ],
+      "others": [
+        [
+          "B",
+          "The Book Exchange isn’t for finding out what other students have enjoyed —— 交换的是书，不是「打听喜好」。"
+        ],
+        [
+          "C",
+          "Students don’t bring a book to talk about —— 带来是为了让别的同学读，不是讨论。"
+        ]
+      ],
+      "tip": "问「Mrs Jones 让学生做什么」——把动作词圈出来：Bring them、Book Exchange、enjoy。",
+      "ana": {
+        "parts": [
+          [
+            "文本",
+            "Have you got books you’ve already read? Bring them to our Book Exchange on Friday …"
+          ],
+          [
+            "选项 A",
+            "share books they no longer want ↔ Bring them / other students might enjoy them"
+          ]
+        ],
+        "gram": [
+          "Part 1：关键词 ↔ 同义替换"
+        ],
+        "tr": "把不再需要的书带来分享给同学们。"
+      },
+      "optsAna": {
+        "A": {
+          "parts": [
+            [
+              "谓语",
+              "<code>share</code> —— 分享"
+            ],
+            [
+              "宾语",
+              "<code>books they no longer want</code> —— 他们不再要的书"
+            ],
+            [
+              "介词短语",
+              "<code>with their schoolmates</code> —— 与同学们"
+            ]
+          ],
+          "gram": [
+            "share sth with sb 与某人分享"
+          ],
+          "tr": "把不再要的书分享给同学们。"
+        },
+        "B": {
+          "parts": [
+            [
+              "谓语",
+              "<code>find out</code> —— 打听，弄清楚"
+            ],
+            [
+              "来源",
+              "<code>from other students</code> —— 从其他学生那里"
+            ],
+            [
+              "宾语从句",
+              "<code>which books they’ve enjoyed</code> —— 他们喜欢哪些书"
+            ]
+          ],
+          "gram": [
+            "find out 查明；which 引导宾语从句"
+          ],
+          "tr": "从其他学生那里打听他们喜欢过哪些书。"
+        },
+        "C": {
+          "parts": [
+            [
+              "谓语",
+              "<code>bring in</code> —— 带来"
+            ],
+            [
+              "宾语",
+              "<code>a good book</code> —— 一本好书"
+            ],
+            [
+              "目的",
+              "<code>to talk about on Friday</code> —— 周五用来讨论"
+            ]
+          ],
+          "gram": [
+            "bring in 带进来；不定式表目的"
+          ],
+          "tr": "带一本好书来在周五讨论。"
+        }
+      }
+    },
+    {
+      "n": 3,
+      "answer": "B",
+      "prompt": "第 3 题 —— 选出与文本意思相同的选项（A/B/C）。",
+      "opts": {
+        "A": "Sophie wants Billy to contact Joanna and warn her about traffic problems in town.",
+        "B": "Sophie needs to let Joanna know that she’s probably going to be late.",
+        "C": "Sophie’s not sure when she’s supposed to meet Joanna to see a film."
+      },
+      "why": "官方答案 <b>B</b>。官方：B 对 —— <b>I’m supposed to meet her at the cinema in 10 minutes</b> + <b>in a huge traffic jam</b> = 她很可能要迟到，想让 Billy 告诉 Joanna；A 错 —— 不需要提醒 Joanna 交通问题；C 错 —— 她清楚时间（10 minutes），只是堵车。",
+      "clues": [
+        "I’m supposed to meet her … in a huge traffic jam ↔ probably going to be late",
+        "Have you got Joanna’s number? ↔ let Joanna know"
+      ],
+      "others": [
+        [
+          "A",
+          "Sophie doesn’t need to warn Joanna about traffic problems —— 目的是「让 Joanna 知道我要迟到」。"
+        ],
+        [
+          "C",
+          "She’s not unsure when to meet —— 「in 10 minutes」说得很清楚。"
+        ]
+      ],
+      "tip": "留言题的三个问题：谁写的、为什么写、想让对方做什么。",
+      "ana": {
+        "parts": [
+          [
+            "文本",
+            "I’m supposed to meet her at the cinema in 10 minutes, but … we’re in a huge traffic jam!"
+          ],
+          [
+            "选项 B",
+            "let Joanna know ↔ Have you got Joanna’s number?（帮忙传话）；probably going to be late ↔ in a huge traffic jam"
+          ]
+        ],
+        "gram": [
+          "Part 1：关键词 ↔ 同义替换"
+        ],
+        "tr": "Sophie 需要让 Joanna 知道她可能要迟到。"
+      },
+      "optsAna": {
+        "A": {
+          "parts": [
+            [
+              "主语",
+              "Sophie —— 人名"
+            ],
+            [
+              "谓语",
+              "<code>wants Billy to contact Joanna</code> —— 想让 Billy 联系 Joanna"
+            ],
+            [
+              "目的",
+              "<code>and warn her about traffic problems in town</code> —— 并提醒她镇上的交通问题"
+            ]
+          ],
+          "gram": [
+            "want sb to do sth；warn sb about sth 提醒某人某事"
+          ],
+          "tr": "Sophie 想让 Billy 联系 Joanna，提醒她镇上的交通问题。"
+        },
+        "B": {
+          "parts": [
+            [
+              "主语",
+              "Sophie —— 人名"
+            ],
+            [
+              "谓语",
+              "<code>needs to let Joanna know</code> —— 需要让 Joanna 知道"
+            ],
+            [
+              "宾语从句",
+              "<code>that sh’ probably going to be late</code> —— 她可能要迟到"
+            ]
+          ],
+          "gram": [
+            "let sb know sth 让某人知道；probably 很可能"
+          ],
+          "tr": "Sophie 需要让 Joanna 知道她可能要迟到。"
+        },
+        "C": {
+          "parts": [
+            [
+              "主语",
+              "Sophie —— 人名"
+            ],
+            [
+              "表语",
+              "<code>not sure</code> —— 不确定"
+            ],
+            [
+              "从句",
+              "<code>when she’s supposed to meet Joanna to see a film</code> —— 她该什么时候见 Joanna 看电影"
+            ]
+          ],
+          "gram": [
+            "be not sure when … 不确定什么时候；be supposed to 本该"
+          ],
+          "tr": "Sophie 不确定她该什么时候见 Joanna 看电影。"
+        }
+      }
+    },
+    {
+      "n": 4,
+      "answer": "C",
+      "prompt": "第 4 题 —— 选出与文本意思相同的选项（A/B/C）。",
+      "opts": {
+        "A": "congratulating the team on their most recent win",
+        "B": "letting the team’s fans know the positive effect of their support",
+        "C": "encouraging the team to play even better in a future match"
+      },
+      "why": "官方答案 <b>C</b>。官方：C 对 —— <b>but next time let’s beat them!</b>（下次打败他们）= 鼓励球队以后打得更好；A 错 —— 球队没赢（the other side were league winners）；B 错 —— 教练感谢了支持者，但没提「正向影响」。",
+      "clues": [
+        "next time let’s beat them ↔ encouraging … in a future match",
+        "the other side were league winners ↔ the team didn’t win"
+      ],
+      "others": [
+        [
+          "A",
+          "The team didn’t win —— 对手才是联赛冠军（the other side were league winners）。"
+        ],
+        [
+          "B",
+          "The coach is thanking the supporters, but doesn’t mention any positive effect —— 只道谢，没说影响。"
+        ]
+      ],
+      "tip": "看语气：thank（感谢）之外，结尾的 next time let’s beat them 才是重点。",
+      "ana": {
+        "parts": [
+          [
+            "文本",
+            "Just wanted to thank players … Remember, the other side were league winners … but next time let’s beat them!"
+          ],
+          [
+            "选项 C",
+            "encouraging the team ↔ let’s beat them（鼓劲）；in a future match ↔ next time"
+          ]
+        ],
+        "gram": [
+          "Part 1：关键词 ↔ 同义替换"
+        ],
+        "tr": "教练在鼓励球队下次打得更好。"
+      },
+      "optsAna": {
+        "A": {
+          "parts": [
+            [
+              "谓语",
+              "<code>congratulating the team</code> —— 祝贺球队"
+            ],
+            [
+              "介词短语",
+              "<code>on their most recent win</code> —— 为最近的一场胜利"
+            ]
+          ],
+          "gram": [
+            "congratulate sb on sth 祝贺某人某事"
+          ],
+          "tr": "祝贺球队最近的一场胜利。"
+        },
+        "B": {
+          "parts": [
+            [
+              "谓语",
+              "<code>letting the team’s fans know</code> —— 让球迷们知道"
+            ],
+            [
+              "宾语",
+              "<code>the positive effect of their support</code> —— 他们支持的正向影响"
+            ]
+          ],
+          "gram": [
+            "let sb know 让某人知道；positive effect 正向影响"
+          ],
+          "tr": "让球迷们知道他们的支持带来的正向影响。"
+        },
+        "C": {
+          "parts": [
+            [
+              "谓语",
+              "<code>encouraging the team</code> —— 鼓励球队"
+            ],
+            [
+              "不定式",
+              "<code>to play even better in a future match</code> —— 在以后的比赛里打得更好"
+            ]
+          ],
+          "gram": [
+            "encourage sb to do sth 鼓励某人做某事；in a future match 在未来的比赛中"
+          ],
+          "tr": "鼓励球队在以后的比赛里打得更好。"
+        }
+      }
+    },
+    {
+      "n": 5,
+      "answer": "A",
+      "prompt": "第 5 题 —— 选出与文本意思相同的选项（A/B/C）。",
+      "opts": {
+        "A": "We have more food available, apart from what’s written on the menu.",
+        "B": "To decide what to eat, you must go and look at the board inside.",
+        "C": "Speak to someone at the counter when you want to order your food."
+      },
+      "why": "官方答案 <b>A</b>。官方：A 对 —— <b>See below for our regular dishes – or for today’s 'specials' go inside …</b> = 菜单之外还有特供（more food apart from the menu）；B 错 —— 看菜单就够了，不必去看板；C 错 —— 原文没让你去柜台点单。",
+      "clues": [
+        "today’s 'specials' ↔ more food",
+        "regular dishes + specials ↔ apart from what’s written on the menu"
+      ],
+      "others": [
+        [
+          "B",
+          "You can just look at the menu. You don’t have to look at the board —— 菜单本身就能点菜。"
+        ],
+        [
+          "C",
+          "The text doesn’t give you this instruction —— 原文没提去柜台点单。"
+        ]
+      ],
+      "tip": "注意 or（或者）：常规菜在菜单上，特供在里面的板子上——两条路。",
+      "ana": {
+        "parts": [
+          [
+            "文本",
+            "See below for our regular dishes – or for today’s 'specials' go inside to see the board by the counter!"
+          ],
+          [
+            "选项 A",
+            "more food available ↔ today’s 'specials'；apart from what’s written on the menu ↔ regular dishes"
+          ]
+        ],
+        "gram": [
+          "Part 1：关键词 ↔ 同义替换"
+        ],
+        "tr": "菜单之外还有更多吃的（特供）。"
+      },
+      "optsAna": {
+        "A": {
+          "parts": [
+            [
+              "主语",
+              "We —— 我们"
+            ],
+            [
+              "谓语",
+              "<code>have</code> —— 有"
+            ],
+            [
+              "宾语",
+              "<code>more food available</code> —— 更多可供应的食物"
+            ],
+            [
+              "补充",
+              "<code>apart from what’s written on the menu</code> —— 除了菜单上写的以外"
+            ]
+          ],
+          "gram": [
+            "apart from 除……之外（还有）；available 可获得的"
+          ],
+          "tr": "除了菜单上写的，我们还有更多吃的。"
+        },
+        "B": {
+          "parts": [
+            [
+              "目的",
+              "<code>To decide what to eat</code> —— 为了决定吃什么"
+            ],
+            [
+              "谓语",
+              "<code>you must go and look at the board inside</code> —— 你必须进去看板子"
+            ]
+          ],
+          "gram": [
+            "to do 表目的；must 必须（原文没这个要求）"
+          ],
+          "tr": "要决定吃什么，你必须进去看板子。"
+        },
+        "C": {
+          "parts": [
+            [
+              "谓语",
+              "<code>Speak to someone at the counter</code> —— 跟柜台的人说"
+            ],
+            [
+              "时间从句",
+              "<code>when you want to order your food</code> —— 当你想点餐时"
+            ]
+          ],
+          "gram": [
+            "speak to sb 跟某人说话；at the counter 在柜台"
+          ],
+          "tr": "想点餐时就跟柜台的人说。"
+        }
+      }
+    }
+  ],
+  "summaryTip": "第 1 部分的关键词永远在「同义替换」上：圈出文本里的关键词，再看哪个选项换了一种说法说了同一件事。"
+}

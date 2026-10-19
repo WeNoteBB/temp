@@ -2675,10 +2675,10 @@
       "cn": "成年人；成年的"
     },
     "advance": {
-      "pos": "n.",
+      "pos": "n./v.",
       "ipa": "/ədˈvɑːns/",
       "cn": "前进；提前",
-      "note": "in advance 提前"
+      "note": "in advance 提前。"
     },
     "age": {
       "pos": "n.",
@@ -2711,7 +2711,7 @@
       "pos": "v./n.",
       "ipa": "/beɪs/",
       "cn": "以…为基础；基础",
-      "note": "be based on 以…为基础/改编自"
+      "note": "be based on 以…为基础/改编自；base A on B 把 A 建立在 B 上。"
     },
     "basketball": {
       "pos": "n.",
@@ -2727,12 +2727,13 @@
     "ben": {
       "pos": "n.",
       "ipa": "/ben/",
-      "cn": "Ben（人名）"
+      "cn": "Ben（人名，男子名）"
     },
     "bring": {
       "pos": "v.",
       "ipa": "/brɪŋ/",
-      "cn": "带来（bring sth to sb）"
+      "cn": "带来",
+      "note": "bring sth to sb 带给某人；bring along 带上。"
     },
     "certain": {
       "pos": "adj.",
@@ -2780,9 +2781,9 @@
       "cn": "小说（虚构作品）"
     },
     "film": {
-      "pos": "n.",
+      "pos": "n./v.",
       "ipa": "/fɪlm/",
-      "cn": "电影"
+      "cn": "电影；拍摄"
     },
     "hire": {
       "pos": "v./n.",
@@ -2793,7 +2794,7 @@
     "holiday": {
       "pos": "n.",
       "ipa": "/ˈhɒlədeɪ/",
-      "cn": "假期"
+      "cn": "假期；on holiday 度假"
     },
     "hoskins": {
       "pos": "n.",
@@ -2813,7 +2814,7 @@
     "lost": {
       "pos": "adj./v.",
       "ipa": "/lɒst/",
-      "cn": "丢失的；（lose 的过去式）"
+      "cn": "丢失的；迷路的；输掉（lose 的过去式/过去分词）"
     },
     "may": {
       "pos": "modal",
@@ -2823,7 +2824,7 @@
     "message": {
       "pos": "n.",
       "ipa": "/ˈmesɪdʒ/",
-      "cn": "留言；消息"
+      "cn": "留言；消息，信息"
     },
     "mrs": {
       "pos": "n.",
@@ -2833,7 +2834,7 @@
     "must": {
       "pos": "modal",
       "ipa": "/mʌst/",
-      "cn": "必须"
+      "cn": "必须；must not 不许"
     },
     "nicola": {
       "pos": "n.",
@@ -2846,14 +2847,14 @@
       "cn": "小说"
     },
     "outside": {
-      "pos": "prep./adv.",
+      "pos": "adv./prep.",
       "ipa": "/ˌaʊtˈsaɪd/",
-      "cn": "在…外面"
+      "cn": "在外面；在……外面"
     },
     "owner": {
       "pos": "n.",
       "ipa": "/ˈəʊnə/",
-      "cn": "主人；物主"
+      "cn": "主人，所有者"
     },
     "per": {
       "pos": "prep.",
@@ -2892,9 +2893,9 @@
       "cn": "归还；返回"
     },
     "ring": {
-      "pos": "v.",
+      "pos": "n./v.",
       "ipa": "/rɪŋ/",
-      "cn": "打电话（英式 = call）"
+      "cn": "戒指；铃声；打电话（英式 = call）"
     },
     "round": {
       "pos": "adv.",
@@ -2910,7 +2911,7 @@
     "suitable": {
       "pos": "adj.",
       "ipa": "/ˈsuːtəbl/",
-      "cn": "合适的"
+      "cn": "合适的；the most suitable for 对……最合适的"
     },
     "summer": {
       "pos": "n.",
@@ -2991,7 +2992,7 @@
     "sign": {
       "pos": "n.",
       "ipa": "/saɪn/",
-      "cn": "标识牌；（也作 v. 签名）"
+      "cn": "标识牌，标志；（也作 v. 签名）"
     },
     "notice": {
       "pos": "n.",
@@ -3025,9 +3026,9 @@
     },
     "opening": {
       "pos": "n.",
-      "ipa": "/ˈəʊpnɪŋ/",
+      "ipa": "/ˈəʊpənɪŋ/",
       "cn": "开始；开放",
-      "note": "opening hours 开放时间"
+      "note": "opening hours 营业时间"
     },
     "hour": {
       "pos": "n.",
@@ -3090,7 +3091,7 @@
     "condition": {
       "pos": "n.",
       "ipa": "/kənˈdɪʃn/",
-      "cn": "状况；成色"
+      "cn": "状况；条件；成色"
     },
     "sell": {
       "pos": "v.",
@@ -3114,14 +3115,14 @@
     },
     "you're": {
       "pos": "contr.",
-      "ipa": "/jʊə/",
-      "cn": "你是（= you are）"
+      "ipa": "/jɔː/",
+      "cn": "= you are（你是）"
     },
     "break": {
       "pos": "n./v.",
       "ipa": "/breɪk/",
-      "cn": "休息；（v. 打破）",
-      "note": "have a break 休息一下"
+      "cn": "休息；打破",
+      "note": "have a break 休息一下。"
     },
     "pupil": {
       "pos": "n.",
@@ -3132,7 +3133,7 @@
       "pos": "n.",
       "ipa": "/nɔɪz/",
       "cn": "噪音",
-      "note": "make a noise 发出声响"
+      "note": "make a noise 发出声响；dislikes noise 不喜欢吵。"
     },
     "polite": {
       "pos": "adj.",
@@ -3162,7 +3163,7 @@
     "receive": {
       "pos": "v.",
       "ipa": "/rɪˈsiːv/",
-      "cn": "收到"
+      "cn": "收到，得到"
     },
     "why": {
       "pos": "adv.",
@@ -3177,7 +3178,7 @@
     "jake": {
       "pos": "n.",
       "ipa": "/dʒeɪk/",
-      "cn": "Jake（人名）"
+      "cn": "Jake（人名，男子名）"
     },
     "shopping": {
       "pos": "n.",
@@ -3192,7 +3193,7 @@
     "meet": {
       "pos": "v.",
       "ipa": "/miːt/",
-      "cn": "见面；遇见"
+      "cn": "见面；遇见；结识"
     },
     "cinema": {
       "pos": "n.",
@@ -3227,7 +3228,7 @@
     "francesca": {
       "pos": "n.",
       "ipa": "/frænˈtʃeskə/",
-      "cn": "Francesca（人名）"
+      "cn": "Francesca（人名，女子名）"
     },
     "lewis": {
       "pos": "n.",

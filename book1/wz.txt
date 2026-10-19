@@ -1,0 +1,4 @@
+﻿鉁?娌℃壘鍒帮細    ok(!doc.getElementById("who").hidden && /灏忔槑/.t
+鉁?娌℃壘鍒帮細    ok(/phrases\.html\?g=1&mode=read/.test(pdet.qu
+鉁?娌℃壘鍒帮細    ok(rows[0] && rows[0].querySelector("a").getAt
+鎻掑叆 4 澶?

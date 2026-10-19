@@ -105,20 +105,53 @@
     return h;
   }
 
+  /* 词组（词组库收藏过来的）：释义 / 用法 / 例句（连翻译）+ 回词组库 */
+  function phraseDetail(p) {
+    var h = '<div class="wd-head"><span class="wd-word">' + esc(p.key) + "</span>" + spk(p.key);
+    if (p.no) h += '<span class="wd-ipa">第 ' + p.no + " 条</span>";
+    h += "</div>";
+    if (p.cn) h += '<div class="wd-sec"><span class="wd-t">释义</span><div class="wd-b">' + esc(p.cn) + "</div></div>";
+    if (p.use) h += '<div class="wd-sec"><span class="wd-t">用法</span><div class="wd-b">' + esc(p.use) + "</div></div>";
+    if (p.ex) {
+      h += '<div class="wd-sec"><span class="wd-t">例句</span><div class="wd-b">' +
+        '<div class="wd-ex"><span>' + esc(p.ex) + "</span>" + spk(p.ex) + "</div>" +
+        (p.exTr ? '<div class="wd-extr">' + esc(p.exTr) + "</div>" : "") +
+        "</div></div>";
+    }
+    h += '<div class="wd-sec"><span class="wd-t">出处</span><div class="wd-b">' +
+      '<a class="lnk" href="phrases.html?g=' + Math.max(1, Math.ceil((p.no || 1) / 10)) + '&mode=read">词组库里看 →</a>' +
+      "</div></div>";
+    return h;
+  }
+
   function render(items) {
-    var words = [], sents = [];
+    var words = [], sents = [], phrases = [];
     (items || []).forEach(function (x) {
       if (x.type === "s") sents.push(x);
+      else if (x.type === "p") phrases.push(x);
       else if (x.type === "w") words.push(x);
     });
     var box = $("listBox");
-    if (!words.length && !sents.length) {
+    if (!words.length && !sents.length && !phrases.length) {
       box.innerHTML = '<div class="list-empty"><span class="big">📖</span>' +
-        "词书还是空的。<br>在文章里点开一个词或句子，按行尾的 ☆ 收藏，就会汇到这里。" +
+        "词书还是空的。<br>在文章里点开一个词或句子、在词组库里点开一个词组，按行尾的 ☆ 收藏，就会汇到这里。" +
         '<div class="list-cta"><a class="btn pri" href="index.html">回首页去阅读</a></div></div>';
       return;
     }
     var h = "";
+    if (phrases.length) {
+      h += '<h2 class="list-h">词组 · ' + phrases.length + "</h2>";
+      phrases.forEach(function (p, i) {
+        h += '<div class="wentry" data-kind="p" data-i="' + i + '">' +
+          '<button type="button" class="wrow" aria-expanded="false">' +
+            '<span class="wkey">' + esc(p.key) + "</span>" +
+            '<span class="wcn">' + esc(p.cn || "—") + "</span>" +
+            '<span class="wcaret" aria-hidden="true">▸</span>' +
+          "</button>" +
+          '<div class="wdetail" hidden>' + phraseDetail(p) + "</div>" +
+          "</div>";
+      });
+    }
     if (words.length) {
       h += '<h2 class="list-h">单词 · ' + words.length + "</h2>";
       words.forEach(function (w, i) {
@@ -168,6 +201,7 @@
 
   S.mountWho($("who"));
   if (S.mountTheme) S.mountTheme($("tglTheme"));
+  if (S.mountZoom) S.mountZoom();
 
   S.listFav().then(render).catch(function () {
     $("listBox").innerHTML = '<div class="list-empty">加载失败：连不上服务器。<br>检查网络后刷新试试。</div>';

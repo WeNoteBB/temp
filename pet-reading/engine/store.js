@@ -335,8 +335,10 @@ window.PETStore = (function () {
      条目形状（服务器返回的也是这个形状）：
        单词 { type:"w", key:"century", cn:"世纪", title?, ts? }
        句子 { type:"s", key:"<完整句子文本>", cn:"<翻译>", ana?, title?, ref?, slug?, ts? }
+       词组 { type:"p", key:"a couple of", cn:"几个", use?, ex?, exTr?, no?, title?, ts? }
      id = 类型 + key。单词的 key 是词典原形（点 centuries 收的是 century），
-     句子的 key 是句子文本 —— 服务端按 sha256(句子) 去重，两边同一把钥匙。
+     句子的 key 是句子文本 —— 服务端按 sha256(句子) 去重，两边同一把钥匙；
+     词组的 key 是词组原文（服务端按 pet_phrase.phrase 去重）。
   */
 
   function favId(it) {
@@ -354,6 +356,7 @@ window.PETStore = (function () {
   function pushOp(phone, op) {
     var it = op.it || {};
     var isSent = it.type === "s";
+    var isPhrase = it.type === "p";
     if (op.op === "add") {
       if (isSent) {
         return api("/favs/add", { method: "POST", body: {
@@ -363,6 +366,13 @@ window.PETStore = (function () {
           translation: it.cn || "",
           analysis: it.ana ? JSON.stringify(it.ana) : "",
           sourceTitle: it.title || ""
+        } });
+      }
+      if (isPhrase) {
+        return api("/favs/add", { method: "POST", body: {
+          phone: phone, kind: "phrase", phrase: it.key, meaning: it.cn || "",
+          usageNote: it.use || "", example: it.ex || "", exampleCn: it.exTr || "",
+          no: it.no || 0, sourceTitle: it.title || ""
         } });
       }
       return api("/favs/add", { method: "POST", body: {
@@ -376,6 +386,9 @@ window.PETStore = (function () {
     }
     if (isSent) {
       return api("/favs/remove", { method: "POST", body: { phone: phone, kind: "sentence", sentence: it.key } });
+    }
+    if (isPhrase) {
+      return api("/favs/remove", { method: "POST", body: { phone: phone, kind: "phrase", phrase: it.key } });
     }
     return api("/favs/remove", { method: "POST", body: { phone: phone, kind: "word", word: it.key } });
   }
@@ -565,6 +578,46 @@ window.PETStore = (function () {
     el.addEventListener("click", function () { nextTheme().then(paintBtn); });
   }
 
+  /* ---------- 字号缩放 ----------
+     全站共用一个值（键 pet:zoom:v1，和文章页 app.js 的 LS_ZOOM 同名同范围），
+     顶栏那个缩放条由各页面调 PETStore.mountZoom() 装上（id 约定 #zoomRange / #zoomLabel）。
+     ⚠ 文章页（app.js）留了自己的一份 applyZoom —— 它额外要重排页边按钮；
+     数值范围（1–5，步长 0.5）和存储键两边保持一致，不会走岔。 */
+  var K_ZOOM = "pet:zoom:v1";
+
+  async function getZoom() {
+    var v = 0;
+    try { v = Number(localStorage.getItem(K_ZOOM)); } catch (e) { v = 0; }   // 文章页存的是裸数字 "2"
+    if (!(v >= 1 && v <= 5)) v = Number(_mem[K_ZOOM]) || 1;                  // 存储不可用时用内存那份
+    return (v >= 1 && v <= 5) ? v : 1;
+  }
+
+  async function setZoom(z) {
+    z = Math.min(5, Math.max(1, Number(z) || 1));
+    /* ⚠ 存「数字」而不是字符串：JSON.stringify(2) === "2"，
+       和文章页 app.js 的 localStorage.setItem(LS_ZOOM, String(z)) 同一口径
+       （不然两边一个存 "\"2\""、一个存 "2"，换页面缩放就丢）。 */
+    writeKey(K_ZOOM, z);
+    paintZoom(z);
+    return z;
+  }
+
+  function paintZoom(z) {
+    document.documentElement.style.setProperty("--zoom", z);
+    var lab = document.getElementById("zoomLabel");
+    if (lab) lab.textContent = (z % 1 ? z.toFixed(1) : z) + "x";
+    var r = document.getElementById("zoomRange");
+    if (r && Number(r.value) !== z) r.value = String(z);
+  }
+
+  /* 固定页面（首页/错题/词书/同义替换/固定搭配/词组库）装缩放条 */
+  function mountZoom() {
+    var r = document.getElementById("zoomRange");
+    if (!r) return;
+    r.addEventListener("input", function () { setZoom(r.value); });
+    getZoom().then(paintZoom);
+  }
+
   /* ---------- 错题 ----------
      登记走直连（不排队）：错了就报一次，报不上先算了 —— 错题本要的是
      「哪几道错了」这个事实，漏一次比拦着学生做题强。列表页（mistakes.html）
@@ -591,6 +644,64 @@ window.PETStore = (function () {
     var u = await getUser();
     if (!u || !u.phone || typeof fetch !== "function") return [];
     var r = await api("/mistakes?phone=" + encodeURIComponent(u.phone));
+    return Array.isArray(r.items) ? r.items : [];
+  }
+
+  /* ---------- 词组错题 ----------
+     和阅读错题同一套口径：登记直连不排队（错了就报一次，报不上先算了），
+     列表每次现拉（换设备也能看到）。 */
+  async function addPhraseMistake(item) {
+    var u = await getUser();
+    if (!u || !u.phone || typeof fetch !== "function") return { ok: false, offline: true };
+    try {
+      await api("/phrase-mistakes", { method: "POST", body: {
+        phone: u.phone,
+        no: item && item.no,
+        phrase: item && item.phrase,
+        stem: item && item.stem,
+        chosen: item && item.chosen,
+        correct: item && item.correct
+      } });
+      return { ok: true };
+    } catch (e) {
+      return { ok: false, err: (e && e.message) || "登记失败" };
+    }
+  }
+
+  async function listPhraseMistakes() {
+    var u = await getUser();
+    if (!u || !u.phone || typeof fetch !== "function") return [];
+    var r = await api("/phrase-mistakes?phone=" + encodeURIComponent(u.phone));
+    return Array.isArray(r.items) ? r.items : [];
+  }
+
+  /* ---------- 词组复习（间隔重复） ----------
+     答完一题就报一次（对/错 + 当时的等级），服务端算下一级和到期日；
+     报不上就算了（跟错题一个口径：漏记一次比拦着学生做题强）。 */
+  async function addPhraseReview(item) {
+    var u = await getUser();
+    if (!u || !u.phone || typeof fetch !== "function") return { ok: false, offline: true };
+    try {
+      var r = await api("/phrase-review", { method: "POST", body: {
+        phone: u.phone,
+        no: item && item.no,
+        phrase: item && item.phrase,
+        level: item && item.level,
+        ok: !!(item && item.ok)
+      } });
+      return { ok: true, level: r && r.level, days: r && r.days };
+    } catch (e) {
+      return { ok: false, err: (e && e.message) || "登记失败" };
+    }
+  }
+
+  /* due=1（默认）只要到期的；all=1 拉全部（页面自己算「没练过的」） */
+  async function listPhraseReviews(opts) {
+    var u = await getUser();
+    if (!u || !u.phone || typeof fetch !== "function") return [];
+    var q = "/phrase-review?phone=" + encodeURIComponent(u.phone) +
+      (opts && opts.all ? "&all=1" : "") + (opts && opts.limit ? "&limit=" + opts.limit : "");
+    var r = await api(q);
     return Array.isArray(r.items) ? r.items : [];
   }
 
@@ -700,6 +811,9 @@ window.PETStore = (function () {
     safeNext: safeNext,
     mountWho: mountWho,
     mountTheme: mountTheme,
+    mountZoom: mountZoom,
+    getZoom: getZoom,
+    setZoom: setZoom,
     favId: favId,
     listFav: listFav,
     isFav: isFav,
@@ -707,6 +821,10 @@ window.PETStore = (function () {
     syncFavs: syncFavs,
     addMistake: addMistake,
     listMistakes: listMistakes,
+    addPhraseMistake: addPhraseMistake,
+    listPhraseMistakes: listPhraseMistakes,
+    addPhraseReview: addPhraseReview,
+    listPhraseReviews: listPhraseReviews,
     getLastRead: getLastRead,
     setLastRead: setLastRead,
     getTheme: getTheme,

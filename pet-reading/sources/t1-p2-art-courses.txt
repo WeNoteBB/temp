@@ -1,0 +1,51 @@
+title: Training Test 1
+label: Reading Part 2
+
+# 素材来源
+PDF: 剑桥PET 官方模考题精讲讲练 _15-17.pdf（书内页码 P14–P16 = 该 PDF 第 1–3 页，偏移 +1）
+带笔记: PET Trainers精讲精练带笔记.pdf 第 14–16 页（页码 = 书页码，偏移 0；批注为手写，已逐条整理并进 ana.note / summary）
+答案: 书后 P183 Teacher's Notes & Keys（Test 1 Reading Part 2；逐题核对一致）
+图片: 从 _15-17.pdf 4 倍渲染图裁出（灰度 JPEG q88），存 assets/img/
+  · t1-p2-hannah.jpg  书 P14 ② 页右人物照    裁自第 1 页 x1855,y1480 465×458
+  · t1-p2-rafa.jpg    书 P15 第 6 题人物照   裁自第 2 页 x300,y800  280×420
+  · t1-p2-simona.jpg  书 P15 第 7 题人物照   裁自第 2 页 x300,y1265 280×410
+  · t1-p2-andrei.jpg  书 P15 第 8 题人物照   裁自第 2 页 x300,y1690 280×420
+  · t1-p2-nicola.jpg  书 P15 第 9 题人物照   裁自第 2 页 x300,y2110 280×420
+  · t1-p2-karl.jpg    书 P15 第 10 题人物照  裁自第 2 页 x300,y2530 280×420
+转写注意: ① 的两栏清单书上无编号/字母 —— 本页为可作答加了编号（人物 1–6）和字母（公寓 a–f，照右栏顺序）；
+  ② 的划线答案（书 P183 官方）：Hannah 句 1 划「really lively place where everything stays open late」、
+  句 2 划「top-class cultural attractions and high-quality accommodation」；
+  ④ 的答案 = C 文里的对应表达（笔记版有手写划线），用 ul 划出（每句一段连续span）。
+
+# 训练部分（书 P14，答案见 P183）
+① 配对（人物 ↔ 公寓信息）：
+  1 always uses public transport → e bus stop nearby
+  2 cannot afford to spend much → a extremely low prices
+  3 dislikes noise → c is in a quiet neighbourhood
+  4 is very sociable → f opportunities to meet new people
+  5 likes to keep fit → b has its own gym
+  6 works until 5.30 p.m. → d next to a leisure centre open every evening
+② 关键句划线（见上，Hannah 两句）
+③ 三选一：答案 c（City breaks：豪华酒店/最激动人心的城市/现代艺术馆/百老汇剧院/不夜城 ↔ 热闹、店开得晚、高端文化景点、高质量住宿）
+④ 在选对的文本里划出对应表达（答案 = C 文，笔记版有手写划线）
+
+# 真题（书 P15–P16，答案见 P183）
+6 B Get Artistic   （官方干扰项 C、E；Rafa：写故事想出书、想把画加进去、不用电脑、还要支持美院申请 → B 是「基于自己的写作、不用科技、做成小书」）
+7 H The Studio     （官方干扰项 B、C、E；Simona：电脑做艺术、改进海报、把作品分享给同学 → H「数字设计、屏幕上加细节、把作品传上工作室网站给同学看」）
+8 D Create!        （官方干扰项 A、E、F、G；Andrei：尝试不同绘画技巧、看名家作品找灵感、户外画 → D「工作室或公园、画廊参观、名作研究、各种风格方法」）
+9 F Art Workshop   （官方干扰项 A、B、C、H；Nicola：手工印制、把图案印到不同材料（妈妈做衣服）、学基础印刷在家用 → F「简单方法课后自己用、转印到棉和丝绸、缝纫项目」）
+10 A Get Artistic  （官方干扰项 C、D、E、H；Karl：用家人照片作为创作基础、要私人课程 → A「肖像课、one-to-one sessions 一对一」）
+
+# 批注整理（手写笔记 → 融合方式）
+- 词组/单词类（词表里能建条目的）→ ana.note（并进「本句词组」，中文取笔记原文；已按页逐条录入）
+- 非词组类：Which 非限制性定语从句（P15 Q6 句 2）、digital design 数字设计的概念解释（P16 H 句 1）
+  → 顶层 summary 分组里的纯文字行（带 at 徽章与 ref 指回原句）
+- summaryTip：「先圈出每个人的关键需求，再到文本里找『换了一种说法』的表达——答案永远是同义替换。」
+
+# 数据备注（给以后的自己）
+- 训练题号 101–106（①）、107（③）；②④是划线/配对练习，不设题。
+- ① 公寓清单 = o 段（frame 方框）+ 六个人物条目各一块 q + pick（横排胶囊 a–f）。
+- ③ 三段假期文本 = q + n:"A/B/C"，作答胶囊单独一段 pick:[107]。
+- 真题五个人的题（6–10）：q + n + 人物照浮左 + pick（八个课程字母胶囊）；课程文本 A–H = q + n 字母徽章。
+- ② 的划线用 sentence.ul（每句一段）；④ 的划线标在 C 文的三句上。
+- inlineQuiz: true；标题/要求/提示照旧「整段一个译」。

@@ -1,0 +1,2825 @@
+{
+  "note": "词组库的随身小词典（分批补：这一批补的是第 1 组例句里核心词库没收的词）。key = 例句里出现的词形（小写），构建时并进词组库页面的 dict；命中优先于 glossary.core.json。",
+  "words": {
+    "absolutely": {
+      "ipa": "/ˌæbsəˈluːtli/",
+      "pos": "adv.",
+      "cn": "绝对地；完全地"
+    },
+    "advises": {
+      "ipa": "/ədˈvaɪzɪz/",
+      "pos": "v.",
+      "cn": "advise 的第三人称单数：建议（advise sb. to do sth）"
+    },
+    "aged": {
+      "ipa": "/eɪdʒd/",
+      "pos": "adj.",
+      "cn": "……岁的（aged 16–25：16 到 25 岁）"
+    },
+    "ago": {
+      "ipa": "/əˈɡəʊ/",
+      "pos": "adv.",
+      "cn": "以前（a couple of months ago 几个月前）"
+    },
+    "although": {
+      "ipa": "/ɔːlˈðəʊ/",
+      "pos": "conj.",
+      "cn": "尽管；虽然"
+    },
+    "anyway": {
+      "ipa": "/ˈeniweɪ/",
+      "pos": "adv.",
+      "cn": "不管怎样；无论如何"
+    },
+    "brilliant": {
+      "ipa": "/ˈbrɪliənt/",
+      "pos": "adj.",
+      "cn": "出色的；极好的"
+    },
+    "chat": {
+      "ipa": "/tʃæt/",
+      "pos": "n./v.",
+      "cn": "聊天；闲谈"
+    },
+    "couple": {
+      "ipa": "/ˈkʌpl/",
+      "pos": "n.",
+      "cn": "一对；一双（a couple of 几个）"
+    },
+    "culture": {
+      "ipa": "/ˈkʌltʃə/",
+      "pos": "n.",
+      "cn": "文化"
+    },
+    "doctor": {
+      "ipa": "/ˈdɒktə/",
+      "pos": "n.",
+      "cn": "医生"
+    },
+    "excellent": {
+      "ipa": "/ˈeksələnt/",
+      "pos": "adj.",
+      "cn": "极好的；出色的"
+    },
+    "exercise": {
+      "ipa": "/ˈeksəsaɪz/",
+      "pos": "v./n.",
+      "cn": "锻炼；练习"
+    },
+    "expressing": {
+      "ipa": "/ɪkˈspresɪŋ/",
+      "pos": "v.",
+      "cn": "express 的动名词：表达（a way of doing sth）"
+    },
+    "fair": {
+      "ipa": "/feə/",
+      "pos": "n.",
+      "cn": "集市；展览会（book fair 书展）"
+    },
+    "fantastic": {
+      "ipa": "/fænˈtæstɪk/",
+      "pos": "adj.",
+      "cn": "极好的；了不起的"
+    },
+    "felt": {
+      "ipa": "/felt/",
+      "pos": "v.",
+      "cn": "feel 的过去式：觉得"
+    },
+    "fit": {
+      "ipa": "/fɪt/",
+      "pos": "adj.",
+      "cn": "健康的（keep fit 保持健康）"
+    },
+    "good": {
+      "ipa": "/ɡʊd/",
+      "pos": "adj.",
+      "cn": "好的"
+    },
+    "group": {
+      "ipa": "/ɡruːp/",
+      "pos": "n.",
+      "cn": "组；群（a group of 一群、一组）"
+    },
+    "hours": {
+      "ipa": "/ˈaʊəz/",
+      "pos": "n.",
+      "cn": "hour 的复数：小时"
+    },
+    "jake": {
+      "ipa": "/dʒeɪk/",
+      "pos": "n.",
+      "cn": "杰克（人名）"
+    },
+    "journal": {
+      "ipa": "/ˈdʒɜːnl/",
+      "pos": "n.",
+      "cn": "日记；期刊（write in a journal 写日记）"
+    },
+    "learnt": {
+      "ipa": "/lɜːnt/",
+      "pos": "v.",
+      "cn": "learn 的过去分词：学到（英式拼法）"
+    },
+    "meet": {
+      "ipa": "/miːt/",
+      "pos": "v.",
+      "cn": "见面；聚集"
+    },
+    "months": {
+      "ipa": "/mʌnθs/",
+      "pos": "n.",
+      "cn": "month 的复数：月"
+    },
+    "piano": {
+      "ipa": "/piˈænəʊ/",
+      "pos": "n.",
+      "cn": "钢琴（play the piano 弹钢琴）"
+    },
+    "prefer": {
+      "ipa": "/prɪˈfɜː/",
+      "pos": "v.",
+      "cn": "更喜欢"
+    },
+    "range": {
+      "ipa": "/reɪndʒ/",
+      "pos": "n.",
+      "cn": "范围（a wide range of 各种各样的）"
+    },
+    "regularly": {
+      "ipa": "/ˈreɡjələli/",
+      "pos": "adv.",
+      "cn": "定期地；经常"
+    },
+    "saw": {
+      "ipa": "/sɔː/",
+      "pos": "v.",
+      "cn": "see 的过去式：看见"
+    },
+    "seem": {
+      "ipa": "/siːm/",
+      "pos": "v.",
+      "cn": "似乎；好像"
+    },
+    "sold": {
+      "ipa": "/səʊld/",
+      "pos": "v.",
+      "cn": "sell 的过去式和过去分词：卖"
+    },
+    "spanish": {
+      "ipa": "/ˈspænɪʃ/",
+      "pos": "n./adj.",
+      "cn": "西班牙语；西班牙的"
+    },
+    "temperatures": {
+      "ipa": "/ˈtemprətʃəz/",
+      "pos": "n.",
+      "cn": "temperature 的复数：温度"
+    },
+    "tolerate": {
+      "ipa": "/ˈtɒləreɪt/",
+      "pos": "v.",
+      "cn": "忍受；容忍"
+    },
+    "tour": {
+      "ipa": "/tʊə/",
+      "pos": "n.",
+      "cn": "旅行；参观（a fantastic tour 一次很棒的旅行）"
+    },
+    "tv": {
+      "ipa": "/ˌtiː ˈviː/",
+      "pos": "n.",
+      "cn": "电视（television 的缩写）"
+    },
+    "two": {
+      "ipa": "/tuː/",
+      "pos": "num.",
+      "cn": "二；两个"
+    },
+    "unfortunately": {
+      "ipa": "/ʌnˈfɔːtʃənətli/",
+      "pos": "adv.",
+      "cn": "不幸的是"
+    },
+    "warmer": {
+      "ipa": "/ˈwɔːmə/",
+      "pos": "adj.",
+      "cn": "warm 的比较级：更温暖的"
+    },
+    "we'd": {
+      "ipa": "/wiːd/",
+      "pos": "缩写",
+      "cn": "= we had / we would"
+    },
+    "we're": {
+      "ipa": "/wɪə/",
+      "pos": "缩写",
+      "cn": "= we are"
+    },
+    "weather": {
+      "ipa": "/ˈweðə/",
+      "pos": "n.",
+      "cn": "天气"
+    },
+    "week": {
+      "ipa": "/wiːk/",
+      "pos": "n.",
+      "cn": "周；星期"
+    },
+    "wide": {
+      "ipa": "/waɪd/",
+      "pos": "adj.",
+      "cn": "宽的；广泛的"
+    },
+    "able": {
+      "ipa": "/ˈeɪbl/",
+      "pos": "adj.",
+      "cn": "能够的（be able to do sth. 能做某事）"
+    },
+    "across": {
+      "ipa": "/əˈkrɒs/",
+      "pos": "prep.",
+      "cn": "穿过；横过"
+    },
+    "activities": {
+      "ipa": "/ækˈtɪvətiz/",
+      "pos": "n.",
+      "cn": "activity 的复数：活动"
+    },
+    "activity": {
+      "ipa": "/ækˈtɪvəti/",
+      "pos": "n.",
+      "cn": "活动"
+    },
+    "added": {
+      "ipa": "/ˈædɪd/",
+      "pos": "v.",
+      "cn": "add 的过去式/过去分词：添加"
+    },
+    "addition": {
+      "ipa": "/əˈdɪʃn/",
+      "pos": "n.",
+      "cn": "增加（in addition 此外）"
+    },
+    "advantage": {
+      "ipa": "/ədˈvɑːntɪdʒ/",
+      "pos": "n.",
+      "cn": "优势（an advantage over 比……有优势）"
+    },
+    "affected": {
+      "ipa": "/əˈfektɪd/",
+      "pos": "v.",
+      "cn": "affect 的过去分词：影响"
+    },
+    "agreed": {
+      "ipa": "/əˈɡriːd/",
+      "pos": "v.",
+      "cn": "agree 的过去式：同意"
+    },
+    "alexander": {
+      "ipa": "/ˌælɪɡˈzɑːndə/",
+      "pos": "n.",
+      "cn": "亚历山大（人名）"
+    },
+    "allowing": {
+      "ipa": "/əˈlaʊɪŋ/",
+      "pos": "v.",
+      "cn": "allow 的现在分词：允许"
+    },
+    "alone": {
+      "ipa": "/əˈləʊn/",
+      "pos": "adv.",
+      "cn": "独自"
+    },
+    "amazing": {
+      "ipa": "/əˈmeɪzɪŋ/",
+      "pos": "adj.",
+      "cn": "令人惊叹的"
+    },
+    "amazon": {
+      "ipa": "/ˈæməzən/",
+      "pos": "n.",
+      "cn": "亚马逊（河）"
+    },
+    "angry": {
+      "ipa": "/ˈæŋɡri/",
+      "pos": "adj.",
+      "cn": "生气的"
+    },
+    "another": {
+      "ipa": "/əˈnʌðə/",
+      "pos": "det.",
+      "cn": "另一个"
+    },
+    "anyone": {
+      "ipa": "/ˈeniwʌn/",
+      "pos": "pron.",
+      "cn": "任何人"
+    },
+    "apart": {
+      "ipa": "/əˈpɑːt/",
+      "pos": "adv.",
+      "cn": "分开（apart from 除……之外）"
+    },
+    "appear": {
+      "ipa": "/əˈpɪə/",
+      "pos": "v.",
+      "cn": "出现；显得"
+    },
+    "arrangements": {
+      "ipa": "/əˈreɪndʒmənts/",
+      "pos": "n.",
+      "cn": "arrangement 的复数：安排"
+    },
+    "arrived": {
+      "ipa": "/əˈraɪvd/",
+      "pos": "v.",
+      "cn": "arrive 的过去式：到达"
+    },
+    "art": {
+      "ipa": "/ɑːt/",
+      "pos": "n.",
+      "cn": "艺术"
+    },
+    "arum": {
+      "ipa": "/ˈeərəm/",
+      "pos": "n.",
+      "cn": "Titan Arum 泰坦魔芋（一种花）"
+    },
+    "atkins": {
+      "ipa": "/ˈætkɪnz/",
+      "pos": "n.",
+      "cn": "阿特金斯（人名）"
+    },
+    "atlantic": {
+      "ipa": "/ətˈlæntɪk/",
+      "pos": "n./adj.",
+      "cn": "大西洋（的）"
+    },
+    "attend": {
+      "ipa": "/əˈtend/",
+      "pos": "v.",
+      "cn": "参加；上（学）"
+    },
+    "attractive": {
+      "ipa": "/əˈtræktɪv/",
+      "pos": "adj.",
+      "cn": "迷人的；有吸引力的"
+    },
+    "australia": {
+      "ipa": "/ɒˈstreɪliə/",
+      "pos": "n.",
+      "cn": "澳大利亚"
+    },
+    "autumn": {
+      "ipa": "/ˈɔːtəm/",
+      "pos": "n.",
+      "cn": "秋天"
+    },
+    "available": {
+      "ipa": "/əˈveɪləbl/",
+      "pos": "adj.",
+      "cn": "可获得的；可用的"
+    },
+    "avon": {
+      "ipa": "/ˈeɪvən/",
+      "pos": "n.",
+      "cn": "埃文（河名）"
+    },
+    "backgrounds": {
+      "ipa": "/ˈbækɡraʊndz/",
+      "pos": "n.",
+      "cn": "background 的复数：背景"
+    },
+    "bad": {
+      "ipa": "/bæd/",
+      "pos": "adj.",
+      "cn": "坏的；不好的"
+    },
+    "baffling": {
+      "ipa": "/ˈbæflɪŋ/",
+      "pos": "adj.",
+      "cn": "令人困惑的"
+    },
+    "bags": {
+      "ipa": "/bæɡz/",
+      "pos": "n.",
+      "cn": "bag 的复数：包"
+    },
+    "based": {
+      "ipa": "/beɪst/",
+      "pos": "v.",
+      "cn": "base 的过去式：以……为基础"
+    },
+    "basically": {
+      "ipa": "/ˈbeɪsɪkli/",
+      "pos": "adv.",
+      "cn": "基本上"
+    },
+    "beautiful": {
+      "ipa": "/ˈbjuːtɪfl/",
+      "pos": "adj.",
+      "cn": "美丽的"
+    },
+    "become": {
+      "ipa": "/bɪˈkʌm/",
+      "pos": "v.",
+      "cn": "变成；成为"
+    },
+    "began": {
+      "ipa": "/bɪˈɡæn/",
+      "pos": "v.",
+      "cn": "begin 的过去式：开始"
+    },
+    "beginners": {
+      "ipa": "/bɪˈɡɪnəz/",
+      "pos": "n.",
+      "cn": "beginner 的复数：初学者"
+    },
+    "beginning": {
+      "ipa": "/bɪˈɡɪnɪŋ/",
+      "pos": "n.",
+      "cn": "开始（at the beginning of）"
+    },
+    "bell": {
+      "ipa": "/bel/",
+      "pos": "n.",
+      "cn": "贝尔（人名；也是「铃」）"
+    },
+    "bigger": {
+      "ipa": "/ˈbɪɡə/",
+      "pos": "adj.",
+      "cn": "big 的比较级：更大的"
+    },
+    "bird": {
+      "ipa": "/bɜːd/",
+      "pos": "n.",
+      "cn": "鸟"
+    },
+    "birds": {
+      "ipa": "/bɜːdz/",
+      "pos": "n.",
+      "cn": "bird 的复数：鸟"
+    },
+    "bits": {
+      "ipa": "/bɪts/",
+      "pos": "n.",
+      "cn": "bit 的复数：小块；碎片"
+    },
+    "black": {
+      "ipa": "/blæk/",
+      "pos": "adj.",
+      "cn": "黑色的"
+    },
+    "boat": {
+      "ipa": "/bəʊt/",
+      "pos": "n.",
+      "cn": "船"
+    },
+    "bottom": {
+      "ipa": "/ˈbɒtəm/",
+      "pos": "n.",
+      "cn": "底部（at the bottom of）"
+    },
+    "box": {
+      "ipa": "/bɒks/",
+      "pos": "n.",
+      "cn": "盒子"
+    },
+    "brand": {
+      "ipa": "/brænd/",
+      "pos": "n.",
+      "cn": "品牌（brand new 崭新的）"
+    },
+    "break": {
+      "ipa": "/breɪk/",
+      "pos": "n./v.",
+      "cn": "休息；打破"
+    },
+    "breaks": {
+      "ipa": "/breɪks/",
+      "pos": "n.",
+      "cn": "break 的复数：休息时间"
+    },
+    "bring": {
+      "ipa": "/brɪŋ/",
+      "pos": "v.",
+      "cn": "带来"
+    },
+    "brings": {
+      "ipa": "/brɪŋz/",
+      "pos": "v.",
+      "cn": "bring 的第三人称单数：带来"
+    },
+    "bristol": {
+      "ipa": "/ˈbrɪstl/",
+      "pos": "n.",
+      "cn": "布里斯托尔（英国城市）"
+    },
+    "broken": {
+      "ipa": "/ˈbrəʊkən/",
+      "pos": "adj.",
+      "cn": "坏了的"
+    },
+    "brother": {
+      "ipa": "/ˈbrʌðə/",
+      "pos": "n.",
+      "cn": "兄弟"
+    },
+    "built": {
+      "ipa": "/bɪlt/",
+      "pos": "v.",
+      "cn": "build 的过去式/过去分词：建造"
+    },
+    "busy": {
+      "ipa": "/ˈbɪzi/",
+      "pos": "adj.",
+      "cn": "忙碌的"
+    },
+    "cabin": {
+      "ipa": "/ˈkæbɪn/",
+      "pos": "n.",
+      "cn": "船舱；小屋"
+    },
+    "cafe": {
+      "ipa": "/ˈkæfeɪ/",
+      "pos": "n.",
+      "cn": "咖啡馆"
+    },
+    "cake": {
+      "ipa": "/keɪk/",
+      "pos": "n.",
+      "cn": "蛋糕"
+    },
+    "california": {
+      "ipa": "/ˌkælɪˈfɔːniə/",
+      "pos": "n.",
+      "cn": "加利福尼亚"
+    },
+    "called": {
+      "ipa": "/kɔːld/",
+      "pos": "v.",
+      "cn": "call 的过去分词：被称为"
+    },
+    "canal": {
+      "ipa": "/kəˈnæl/",
+      "pos": "n.",
+      "cn": "运河"
+    },
+    "cancel": {
+      "ipa": "/ˈkænsl/",
+      "pos": "v.",
+      "cn": "取消"
+    },
+    "cannot": {
+      "ipa": "/ˈkænɒt/",
+      "pos": "v.",
+      "cn": "不能（= can not）"
+    },
+    "capital": {
+      "ipa": "/ˈkæpɪtl/",
+      "pos": "n.",
+      "cn": "首都"
+    },
+    "captain": {
+      "ipa": "/ˈkæptɪn/",
+      "pos": "n.",
+      "cn": "船长；队长"
+    },
+    "carefully": {
+      "ipa": "/ˈkeəfəli/",
+      "pos": "adv.",
+      "cn": "仔细地"
+    },
+    "carpet": {
+      "ipa": "/ˈkɑːpɪt/",
+      "pos": "n.",
+      "cn": "地毯"
+    },
+    "carry": {
+      "ipa": "/ˈkæri/",
+      "pos": "v.",
+      "cn": "携带"
+    },
+    "carrying": {
+      "ipa": "/ˈkæriɪŋ/",
+      "pos": "v.",
+      "cn": "carry 的现在分词：提着"
+    },
+    "central": {
+      "ipa": "/ˈsentrəl/",
+      "pos": "adj.",
+      "cn": "中央的"
+    },
+    "century": {
+      "ipa": "/ˈsentʃəri/",
+      "pos": "n.",
+      "cn": "世纪"
+    },
+    "certain": {
+      "ipa": "/ˈsɜːtn/",
+      "pos": "adj.",
+      "cn": "确定的（be certain about 对……有把握）"
+    },
+    "certainly": {
+      "ipa": "/ˈsɜːtnli/",
+      "pos": "adv.",
+      "cn": "当然"
+    },
+    "change": {
+      "ipa": "/tʃeɪndʒ/",
+      "pos": "v./n.",
+      "cn": "改变；零钱"
+    },
+    "childhood": {
+      "ipa": "/ˈtʃaɪldhʊd/",
+      "pos": "n.",
+      "cn": "童年"
+    },
+    "chosen": {
+      "ipa": "/ˈtʃəʊzn/",
+      "pos": "v.",
+      "cn": "choose 的过去分词：选择"
+    },
+    "cinema": {
+      "ipa": "/ˈsɪnəmə/",
+      "pos": "n.",
+      "cn": "电影院"
+    },
+    "classmates": {
+      "ipa": "/ˈklɑːsmeɪts/",
+      "pos": "n.",
+      "cn": "classmate 的复数：同学"
+    },
+    "cleaners": {
+      "ipa": "/ˈkliːnəz/",
+      "pos": "n.",
+      "cn": "cleaner 的复数：清洁工"
+    },
+    "clearly": {
+      "ipa": "/ˈklɪəli/",
+      "pos": "adv.",
+      "cn": "清楚地"
+    },
+    "climate": {
+      "ipa": "/ˈklaɪmət/",
+      "pos": "n.",
+      "cn": "气候"
+    },
+    "clouds": {
+      "ipa": "/klaʊdz/",
+      "pos": "n.",
+      "cn": "cloud 的复数：云"
+    },
+    "cloudy": {
+      "ipa": "/ˈklaʊdi/",
+      "pos": "adj.",
+      "cn": "多云的"
+    },
+    "club": {
+      "ipa": "/klʌb/",
+      "pos": "n.",
+      "cn": "俱乐部"
+    },
+    "clubs": {
+      "ipa": "/klʌbz/",
+      "pos": "n.",
+      "cn": "club 的复数：俱乐部"
+    },
+    "coast": {
+      "ipa": "/kəʊst/",
+      "pos": "n.",
+      "cn": "海岸（off the coast 在海岸附近）"
+    },
+    "cod": {
+      "ipa": "/kɒd/",
+      "pos": "n.",
+      "cn": "鳕鱼"
+    },
+    "coffee": {
+      "ipa": "/ˈkɒfi/",
+      "pos": "n.",
+      "cn": "咖啡"
+    },
+    "collect": {
+      "ipa": "/kəˈlekt/",
+      "pos": "v.",
+      "cn": "收集"
+    },
+    "college": {
+      "ipa": "/ˈkɒlɪdʒ/",
+      "pos": "n.",
+      "cn": "学院；大学"
+    },
+    "color": {
+      "ipa": "/ˈkʌlə/",
+      "pos": "n.",
+      "cn": "颜色（美式拼法，英式 colour）"
+    },
+    "colorful": {
+      "ipa": "/ˈkʌləfl/",
+      "pos": "adj.",
+      "cn": "色彩斑斓的"
+    },
+    "comfortable": {
+      "ipa": "/ˈkʌmftəbl/",
+      "pos": "adj.",
+      "cn": "舒适的"
+    },
+    "comments": {
+      "ipa": "/ˈkɒments/",
+      "pos": "n.",
+      "cn": "comment 的复数：评论"
+    },
+    "communicate": {
+      "ipa": "/kəˈmjuːnɪkeɪt/",
+      "pos": "v.",
+      "cn": "交流"
+    },
+    "communicates": {
+      "ipa": "/kəˈmjuːnɪkeɪts/",
+      "pos": "v.",
+      "cn": "communicate 的第三人称单数：交流"
+    },
+    "communication": {
+      "ipa": "/kəˌmjuːnɪˈkeɪʃn/",
+      "pos": "n.",
+      "cn": "通信；交流"
+    },
+    "company": {
+      "ipa": "/ˈkʌmpəni/",
+      "pos": "n.",
+      "cn": "陪伴；公司"
+    },
+    "compared": {
+      "ipa": "/kəmˈpeəd/",
+      "pos": "v.",
+      "cn": "compare 的过去式：比较"
+    },
+    "competition": {
+      "ipa": "/ˌkɒmpəˈtɪʃn/",
+      "pos": "n.",
+      "cn": "比赛"
+    },
+    "complained": {
+      "ipa": "/kəmˈpleɪnd/",
+      "pos": "v.",
+      "cn": "complain 的过去式：抱怨"
+    },
+    "computer": {
+      "ipa": "/kəmˈpjuːtə/",
+      "pos": "n.",
+      "cn": "电脑"
+    },
+    "concentrate": {
+      "ipa": "/ˈkɒnsntreɪt/",
+      "pos": "v.",
+      "cn": "集中注意力（concentrate on）"
+    },
+    "concert": {
+      "ipa": "/ˈkɒnsət/",
+      "pos": "n.",
+      "cn": "音乐会"
+    },
+    "conditions": {
+      "ipa": "/kənˈdɪʃnz/",
+      "pos": "n.",
+      "cn": "condition 的复数：条件（in normal conditions）"
+    },
+    "connects": {
+      "ipa": "/kəˈnekts/",
+      "pos": "v.",
+      "cn": "connect 的第三人称单数：连接"
+    },
+    "continue": {
+      "ipa": "/kənˈtɪnjuː/",
+      "pos": "v.",
+      "cn": "继续"
+    },
+    "controlled": {
+      "ipa": "/kənˈtrəʊld/",
+      "pos": "v.",
+      "cn": "control 的过去分词：控制"
+    },
+    "cooking": {
+      "ipa": "/ˈkʊkɪŋ/",
+      "pos": "n.",
+      "cn": "烹饪"
+    },
+    "cooler": {
+      "ipa": "/ˈkuːlə/",
+      "pos": "adj.",
+      "cn": "cool 的比较级：更凉爽的"
+    },
+    "copenhagen": {
+      "ipa": "/ˌkəʊpənˈheɪɡən/",
+      "pos": "n.",
+      "cn": "哥本哈根（丹麦首都）"
+    },
+    "cost": {
+      "ipa": "/kɒst/",
+      "pos": "n./v.",
+      "cn": "费用；花费"
+    },
+    "countryside": {
+      "ipa": "/ˈkʌntrisaɪd/",
+      "pos": "n.",
+      "cn": "乡下（in the countryside 在乡下）"
+    },
+    "course": {
+      "ipa": "/kɔːs/",
+      "pos": "n.",
+      "cn": "课程；一道菜"
+    },
+    "covering": {
+      "ipa": "/ˈkʌvərɪŋ/",
+      "pos": "v.",
+      "cn": "cover 的现在分词：覆盖"
+    },
+    "created": {
+      "ipa": "/kriˈeɪtɪd/",
+      "pos": "v.",
+      "cn": "create 的过去分词：造成"
+    },
+    "creatures": {
+      "ipa": "/ˈkriːtʃəz/",
+      "pos": "n.",
+      "cn": "creature 的复数：生物"
+    },
+    "crops": {
+      "ipa": "/krɒps/",
+      "pos": "n.",
+      "cn": "crop 的复数：作物"
+    },
+    "crowded": {
+      "ipa": "/ˈkraʊdɪd/",
+      "pos": "adj.",
+      "cn": "拥挤的"
+    },
+    "crum": {
+      "ipa": "/krʌm/",
+      "pos": "n.",
+      "cn": "克拉姆（人名）"
+    },
+    "cushion": {
+      "ipa": "/ˈkʊʃn/",
+      "pos": "n.",
+      "cn": "垫子"
+    },
+    "customer": {
+      "ipa": "/ˈkʌstəmə/",
+      "pos": "n.",
+      "cn": "顾客"
+    },
+    "cut": {
+      "ipa": "/kʌt/",
+      "pos": "v.",
+      "cn": "切（cut–cut–cut）"
+    },
+    "damaged": {
+      "ipa": "/ˈdæmɪdʒd/",
+      "pos": "v.",
+      "cn": "damage 的过去分词：破坏"
+    },
+    "dance": {
+      "ipa": "/dɑːns/",
+      "pos": "v./n.",
+      "cn": "跳舞"
+    },
+    "danish": {
+      "ipa": "/ˈdeɪnɪʃ/",
+      "pos": "adj.",
+      "cn": "丹麦的"
+    },
+    "deal": {
+      "ipa": "/diːl/",
+      "pos": "v.",
+      "cn": "处理（deal with）"
+    },
+    "decision": {
+      "ipa": "/dɪˈsɪʒn/",
+      "pos": "n.",
+      "cn": "决定（make a decision）"
+    },
+    "delighted": {
+      "ipa": "/dɪˈlaɪtɪd/",
+      "pos": "adj.",
+      "cn": "高兴的"
+    },
+    "denmark": {
+      "ipa": "/ˈdenmɑːk/",
+      "pos": "n.",
+      "cn": "丹麦"
+    },
+    "desk": {
+      "ipa": "/desk/",
+      "pos": "n.",
+      "cn": "书桌"
+    },
+    "destination": {
+      "ipa": "/ˌdestɪˈneɪʃn/",
+      "pos": "n.",
+      "cn": "目的地"
+    },
+    "details": {
+      "ipa": "/ˈdiːteɪlz/",
+      "pos": "n.",
+      "cn": "detail 的复数：细节"
+    },
+    "developed": {
+      "ipa": "/dɪˈveləpt/",
+      "pos": "v.",
+      "cn": "develop 的过去分词：开发；发展"
+    },
+    "difficult": {
+      "ipa": "/ˈdɪfɪkəlt/",
+      "pos": "adj.",
+      "cn": "困难的"
+    },
+    "dinner": {
+      "ipa": "/ˈdɪnə/",
+      "pos": "n.",
+      "cn": "晚餐"
+    },
+    "discovered": {
+      "ipa": "/dɪˈskʌvəd/",
+      "pos": "v.",
+      "cn": "discover 的过去式：发现"
+    },
+    "discovers": {
+      "ipa": "/dɪˈskʌvəz/",
+      "pos": "v.",
+      "cn": "discover 的第三人称单数：发现"
+    },
+    "disgusting": {
+      "ipa": "/dɪsˈɡʌstɪŋ/",
+      "pos": "adj.",
+      "cn": "令人作呕的"
+    },
+    "distance": {
+      "ipa": "/ˈdɪstəns/",
+      "pos": "n.",
+      "cn": "距离（in the distance 在远处）"
+    },
+    "distances": {
+      "ipa": "/ˈdɪstənsɪz/",
+      "pos": "n.",
+      "cn": "distance 的复数：距离"
+    },
+    "dolphin": {
+      "ipa": "/ˈdɒlfɪn/",
+      "pos": "n.",
+      "cn": "海豚"
+    },
+    "dolphins": {
+      "ipa": "/ˈdɒlfɪnz/",
+      "pos": "n.",
+      "cn": "dolphin 的复数：海豚"
+    },
+    "down": {
+      "ipa": "/daʊn/",
+      "pos": "adv.",
+      "cn": "向下（sit down 坐下）"
+    },
+    "drama": {
+      "ipa": "/ˈdrɑːmə/",
+      "pos": "n.",
+      "cn": "戏剧"
+    },
+    "drink": {
+      "ipa": "/drɪŋk/",
+      "pos": "n./v.",
+      "cn": "饮料；喝"
+    },
+    "drops": {
+      "ipa": "/drɒps/",
+      "pos": "n.",
+      "cn": "drop 的复数：水滴"
+    },
+    "drums": {
+      "ipa": "/drʌmz/",
+      "pos": "n.",
+      "cn": "drum 的复数：鼓"
+    },
+    "due": {
+      "ipa": "/djuː/",
+      "pos": "adj.",
+      "cn": "由于（due to 因为）"
+    },
+    "easily": {
+      "ipa": "/ˈiːzəli/",
+      "pos": "adv.",
+      "cn": "容易地"
+    },
+    "eat": {
+      "ipa": "/iːt/",
+      "pos": "v.",
+      "cn": "吃"
+    },
+    "eaten": {
+      "ipa": "/ˈiːtn/",
+      "pos": "v.",
+      "cn": "eat 的过去分词：吃"
+    },
+    "education": {
+      "ipa": "/ˌedʒuˈkeɪʃn/",
+      "pos": "n.",
+      "cn": "教育"
+    },
+    "effect": {
+      "ipa": "/ɪˈfekt/",
+      "pos": "n.",
+      "cn": "效果（have the effect of 有……的效果）"
+    },
+    "eggs": {
+      "ipa": "/eɡz/",
+      "pos": "n.",
+      "cn": "egg 的复数：卵"
+    },
+    "either": {
+      "ipa": "/ˈaɪðə/",
+      "pos": "adv.",
+      "cn": "也（either…or 要么……要么）"
+    },
+    "electric": {
+      "ipa": "/ɪˈlektrɪk/",
+      "pos": "adj.",
+      "cn": "电的"
+    },
+    "electricians": {
+      "ipa": "/ɪˌlekˈtrɪʃnz/",
+      "pos": "n.",
+      "cn": "electrician 的复数：电工"
+    },
+    "electricity": {
+      "ipa": "/ɪˌlekˈtrɪsəti/",
+      "pos": "n.",
+      "cn": "电"
+    },
+    "emma": {
+      "ipa": "/ˈemə/",
+      "pos": "n.",
+      "cn": "艾玛（人名）"
+    },
+    "employs": {
+      "ipa": "/ɪmˈplɔɪz/",
+      "pos": "v.",
+      "cn": "employ 的第三人称单数：雇用"
+    },
+    "engineering": {
+      "ipa": "/ˌendʒɪˈnɪərɪŋ/",
+      "pos": "n.",
+      "cn": "工程学"
+    },
+    "england": {
+      "ipa": "/ˈɪŋɡlənd/",
+      "pos": "n.",
+      "cn": "英格兰"
+    },
+    "english": {
+      "ipa": "/ˈɪŋɡlɪʃ/",
+      "pos": "n./adj.",
+      "cn": "英语（的）"
+    },
+    "enormous": {
+      "ipa": "/ɪˈnɔːməs/",
+      "pos": "adj.",
+      "cn": "巨大的"
+    },
+    "especially": {
+      "ipa": "/ɪˈspeʃəli/",
+      "pos": "adv.",
+      "cn": "尤其"
+    },
+    "ever": {
+      "ipa": "/ˈevə/",
+      "pos": "adv.",
+      "cn": "曾经"
+    },
+    "everything": {
+      "ipa": "/ˈevriθɪŋ/",
+      "pos": "pron.",
+      "cn": "一切"
+    },
+    "exact": {
+      "ipa": "/ɪɡˈzækt/",
+      "pos": "adj.",
+      "cn": "确切的"
+    },
+    "exhibitions": {
+      "ipa": "/ˌeksɪˈbɪʃnz/",
+      "pos": "n.",
+      "cn": "exhibition 的复数：展览"
+    },
+    "expect": {
+      "ipa": "/ɪkˈspekt/",
+      "pos": "v.",
+      "cn": "期望"
+    },
+    "experiments": {
+      "ipa": "/ɪkˈsperɪmənts/",
+      "pos": "n.",
+      "cn": "experiment 的复数：实验"
+    },
+    "extra": {
+      "ipa": "/ˈekstrə/",
+      "pos": "adj.",
+      "cn": "额外的"
+    },
+    "extremely": {
+      "ipa": "/ɪkˈstriːmli/",
+      "pos": "adv.",
+      "cn": "极其"
+    },
+    "fall": {
+      "ipa": "/fɔːl/",
+      "pos": "v.",
+      "cn": "落下"
+    },
+    "familiar": {
+      "ipa": "/fəˈmɪliə/",
+      "pos": "adj.",
+      "cn": "熟悉的（be familiar with）"
+    },
+    "fast": {
+      "ipa": "/fɑːst/",
+      "pos": "adv./adj.",
+      "cn": "快地；快的"
+    },
+    "faster": {
+      "ipa": "/ˈfɑːstə/",
+      "pos": "adv.",
+      "cn": "fast 的比较级：更快"
+    },
+    "father": {
+      "ipa": "/ˈfɑːðə/",
+      "pos": "n.",
+      "cn": "父亲"
+    },
+    "feel": {
+      "ipa": "/fiːl/",
+      "pos": "v.",
+      "cn": "感觉"
+    },
+    "fields": {
+      "ipa": "/fiːldz/",
+      "pos": "n.",
+      "cn": "field 的复数：田野"
+    },
+    "film": {
+      "ipa": "/fɪlm/",
+      "pos": "n.",
+      "cn": "电影"
+    },
+    "fin": {
+      "ipa": "/fɪn/",
+      "pos": "n.",
+      "cn": "鳍"
+    },
+    "finally": {
+      "ipa": "/ˈfaɪnəli/",
+      "pos": "adv.",
+      "cn": "终于"
+    },
+    "fish": {
+      "ipa": "/fɪʃ/",
+      "pos": "n.",
+      "cn": "鱼"
+    },
+    "flavours": {
+      "ipa": "/ˈfleɪvəz/",
+      "pos": "n.",
+      "cn": "flavour 的复数：口味"
+    },
+    "flower": {
+      "ipa": "/ˈflaʊə/",
+      "pos": "n.",
+      "cn": "花"
+    },
+    "flowering": {
+      "ipa": "/ˈflaʊərɪŋ/",
+      "pos": "adj.",
+      "cn": "开花的"
+    },
+    "flowers": {
+      "ipa": "/ˈflaʊəz/",
+      "pos": "n.",
+      "cn": "flower 的复数：花"
+    },
+    "food": {
+      "ipa": "/fuːd/",
+      "pos": "n.",
+      "cn": "食物"
+    },
+    "forecast": {
+      "ipa": "/ˈfɔːkɑːst/",
+      "pos": "n.",
+      "cn": "预报"
+    },
+    "forget": {
+      "ipa": "/fəˈɡet/",
+      "pos": "v.",
+      "cn": "忘记"
+    },
+    "forgot": {
+      "ipa": "/fəˈɡɒt/",
+      "pos": "v.",
+      "cn": "forget 的过去式：忘记"
+    },
+    "forward": {
+      "ipa": "/ˈfɔːwəd/",
+      "pos": "adv.",
+      "cn": "向前（look forward to 期待）"
+    },
+    "fourteen": {
+      "ipa": "/ˌfɔːˈtiːn/",
+      "pos": "num.",
+      "cn": "十四"
+    },
+    "free": {
+      "ipa": "/friː/",
+      "pos": "adj.",
+      "cn": "免费的；自由的（for free 免费）"
+    },
+    "fried": {
+      "ipa": "/fraɪd/",
+      "pos": "adj.",
+      "cn": "油炸的"
+    },
+    "front": {
+      "ipa": "/frʌnt/",
+      "pos": "n.",
+      "cn": "前面（the front of）"
+    },
+    "future": {
+      "ipa": "/ˈfjuːtʃə/",
+      "pos": "n.",
+      "cn": "将来"
+    },
+    "games": {
+      "ipa": "/ɡeɪmz/",
+      "pos": "n.",
+      "cn": "game 的复数：游戏；比赛"
+    },
+    "gandhi": {
+      "ipa": "/ˈɡɑːndi/",
+      "pos": "n.",
+      "cn": "甘地（人名）"
+    },
+    "garden": {
+      "ipa": "/ˈɡɑːdn/",
+      "pos": "n.",
+      "cn": "花园"
+    },
+    "gave": {
+      "ipa": "/ɡeɪv/",
+      "pos": "v.",
+      "cn": "give 的过去式：给"
+    },
+    "glass": {
+      "ipa": "/ɡlɑːs/",
+      "pos": "n.",
+      "cn": "玻璃"
+    },
+    "graham": {
+      "ipa": "/ˈɡreɪəm/",
+      "pos": "n.",
+      "cn": "格雷厄姆（人名）"
+    },
+    "grandmother": {
+      "ipa": "/ˈɡrænmʌðə/",
+      "pos": "n.",
+      "cn": "祖母"
+    },
+    "ground": {
+      "ipa": "/ɡraʊnd/",
+      "pos": "n.",
+      "cn": "地面"
+    },
+    "grow": {
+      "ipa": "/ɡrəʊ/",
+      "pos": "v.",
+      "cn": "生长；种植"
+    },
+    "grown": {
+      "ipa": "/ɡrəʊn/",
+      "pos": "v.",
+      "cn": "grow 的过去分词：生长"
+    },
+    "grows": {
+      "ipa": "/ɡrəʊz/",
+      "pos": "v.",
+      "cn": "grow 的第三人称单数：生长"
+    },
+    "guest": {
+      "ipa": "/ɡest/",
+      "pos": "n.",
+      "cn": "客人"
+    },
+    "guests": {
+      "ipa": "/ɡests/",
+      "pos": "n.",
+      "cn": "guest 的复数：客人"
+    },
+    "guitar": {
+      "ipa": "/ɡɪˈtɑː/",
+      "pos": "n.",
+      "cn": "吉他"
+    },
+    "guitarists": {
+      "ipa": "/ɡɪˈtɑːrɪsts/",
+      "pos": "n.",
+      "cn": "guitarist 的复数：吉他手"
+    },
+    "hairs": {
+      "ipa": "/heəz/",
+      "pos": "n.",
+      "cn": "hair 的复数：毛发"
+    },
+    "hamlet": {
+      "ipa": "/ˈhæmlət/",
+      "pos": "n.",
+      "cn": "《哈姆雷特》（莎士比亚戏剧）"
+    },
+    "happy": {
+      "ipa": "/ˈhæpi/",
+      "pos": "adj.",
+      "cn": "高兴的"
+    },
+    "hard": {
+      "ipa": "/hɑːd/",
+      "pos": "adj./adv.",
+      "cn": "困难的；努力地"
+    },
+    "hardest": {
+      "ipa": "/ˈhɑːdɪst/",
+      "pos": "adj.",
+      "cn": "hard 的最高级：最难的"
+    },
+    "harrier": {
+      "ipa": "/ˈhæriə/",
+      "pos": "n.",
+      "cn": "鹞（一种鸟）"
+    },
+    "hasn't": {
+      "ipa": "/ˈhæznt/",
+      "pos": "缩写",
+      "cn": "= has not"
+    },
+    "hate": {
+      "ipa": "/heɪt/",
+      "pos": "v.",
+      "cn": "讨厌；不愿意"
+    },
+    "he'd": {
+      "ipa": "/hiːd/",
+      "pos": "缩写",
+      "cn": "= he had / he would"
+    },
+    "he'll": {
+      "ipa": "/hiːl/",
+      "pos": "缩写",
+      "cn": "= he will"
+    },
+    "heads": {
+      "ipa": "/hedz/",
+      "pos": "n.",
+      "cn": "head 的复数：头"
+    },
+    "healthier": {
+      "ipa": "/ˈhelθiə/",
+      "pos": "adj.",
+      "cn": "healthy 的比较级：更健康的"
+    },
+    "heavy": {
+      "ipa": "/ˈhevi/",
+      "pos": "adj.",
+      "cn": "重的"
+    },
+    "height": {
+      "ipa": "/haɪt/",
+      "pos": "n.",
+      "cn": "高度"
+    },
+    "heights": {
+      "ipa": "/haɪts/",
+      "pos": "n.",
+      "cn": "height 的复数：高度"
+    },
+    "higher": {
+      "ipa": "/ˈhaɪə/",
+      "pos": "adj.",
+      "cn": "high 的比较级：更高的"
+    },
+    "highest": {
+      "ipa": "/ˈhaɪɪst/",
+      "pos": "adj.",
+      "cn": "high 的最高级：最高的"
+    },
+    "hike": {
+      "ipa": "/haɪk/",
+      "pos": "n./v.",
+      "cn": "徒步"
+    },
+    "historical": {
+      "ipa": "/hɪˈstɒrɪkl/",
+      "pos": "adj.",
+      "cn": "历史的"
+    },
+    "hold": {
+      "ipa": "/həʊld/",
+      "pos": "v.",
+      "cn": "举办；握住"
+    },
+    "holding": {
+      "ipa": "/ˈhəʊldɪŋ/",
+      "pos": "v.",
+      "cn": "hold 的现在分词：举办"
+    },
+    "holiday": {
+      "ipa": "/ˈhɒlədeɪ/",
+      "pos": "n.",
+      "cn": "假期"
+    },
+    "honest": {
+      "ipa": "/ˈɒnɪst/",
+      "pos": "adj.",
+      "cn": "诚实的（to be honest 老实说）"
+    },
+    "honey": {
+      "ipa": "/ˈhʌni/",
+      "pos": "n.",
+      "cn": "蜂蜜"
+    },
+    "hot": {
+      "ipa": "/hɒt/",
+      "pos": "adj.",
+      "cn": "热的"
+    },
+    "hotel": {
+      "ipa": "/həʊˈtel/",
+      "pos": "n.",
+      "cn": "酒店"
+    },
+    "hour": {
+      "ipa": "/ˈaʊə/",
+      "pos": "n.",
+      "cn": "小时"
+    },
+    "house": {
+      "ipa": "/haʊs/",
+      "pos": "n.",
+      "cn": "房子"
+    },
+    "houses": {
+      "ipa": "/ˈhaʊzɪz/",
+      "pos": "n.",
+      "cn": "house 的复数：房子"
+    },
+    "humpback": {
+      "ipa": "/ˈhʌmpbæk/",
+      "pos": "n.",
+      "cn": "座头（鲸）"
+    },
+    "hyperion": {
+      "ipa": "/haɪˈpɪəriən/",
+      "pos": "n.",
+      "cn": "亥伯龙（一棵红杉的名字）"
+    },
+    "idea": {
+      "ipa": "/aɪˈdɪə/",
+      "pos": "n.",
+      "cn": "主意；想法"
+    },
+    "immediately": {
+      "ipa": "/ɪˈmiːdiətli/",
+      "pos": "adv.",
+      "cn": "立刻"
+    },
+    "important": {
+      "ipa": "/ɪmˈpɔːtnt/",
+      "pos": "adj.",
+      "cn": "重要的"
+    },
+    "increasing": {
+      "ipa": "/ɪnˈkriːsɪŋ/",
+      "pos": "v.",
+      "cn": "increase 的现在分词：增加"
+    },
+    "insects": {
+      "ipa": "/ˈɪnsekts/",
+      "pos": "n.",
+      "cn": "insect 的复数：昆虫"
+    },
+    "instrument": {
+      "ipa": "/ˈɪnstrəmənt/",
+      "pos": "n.",
+      "cn": "乐器；仪器"
+    },
+    "instruments": {
+      "ipa": "/ˈɪnstrəmənts/",
+      "pos": "n.",
+      "cn": "instrument 的复数：乐器"
+    },
+    "intelligent": {
+      "ipa": "/ɪnˈtelɪdʒənt/",
+      "pos": "adj.",
+      "cn": "聪明的"
+    },
+    "intended": {
+      "ipa": "/ɪnˈtendɪd/",
+      "pos": "v.",
+      "cn": "intend 的过去分词：打算（be intended to 旨在）"
+    },
+    "interests": {
+      "ipa": "/ˈɪntrəsts/",
+      "pos": "n.",
+      "cn": "interest 的复数：兴趣"
+    },
+    "invented": {
+      "ipa": "/ɪnˈventɪd/",
+      "pos": "v.",
+      "cn": "invent 的过去分词：发明"
+    },
+    "invention": {
+      "ipa": "/ɪnˈvenʃn/",
+      "pos": "n.",
+      "cn": "发明"
+    },
+    "invitation": {
+      "ipa": "/ˌɪnvɪˈteɪʃn/",
+      "pos": "n.",
+      "cn": "邀请（函）"
+    },
+    "involved": {
+      "ipa": "/ɪnˈvɒlvd/",
+      "pos": "v.",
+      "cn": "involve 的过去分词：参与（be involved in）"
+    },
+    "islands": {
+      "ipa": "/ˈaɪləndz/",
+      "pos": "n.",
+      "cn": "island 的复数：岛"
+    },
+    "issue": {
+      "ipa": "/ˈɪʃuː/",
+      "pos": "n.",
+      "cn": "问题（a serious issue 严重的问题）"
+    },
+    "italy": {
+      "ipa": "/ˈɪtəli/",
+      "pos": "n.",
+      "cn": "意大利"
+    },
+    "jagdish": {
+      "ipa": "/ˈdʒʌɡdɪʃ/",
+      "pos": "n.",
+      "cn": "贾格迪什（人名）"
+    },
+    "jazz": {
+      "ipa": "/dʒæz/",
+      "pos": "n.",
+      "cn": "爵士乐"
+    },
+    "job": {
+      "ipa": "/dʒɒb/",
+      "pos": "n.",
+      "cn": "工作"
+    },
+    "joining": {
+      "ipa": "/ˈdʒɔɪnɪŋ/",
+      "pos": "v.",
+      "cn": "join 的现在分词：加入"
+    },
+    "jon": {
+      "ipa": "/dʒɒn/",
+      "pos": "n.",
+      "cn": "乔恩（人名）"
+    },
+    "jones": {
+      "ipa": "/dʒəʊnz/",
+      "pos": "n.",
+      "cn": "琼斯（人名）"
+    },
+    "journey": {
+      "ipa": "/ˈdʒɜːni/",
+      "pos": "n.",
+      "cn": "旅程"
+    },
+    "kennet": {
+      "ipa": "/ˈkenɪt/",
+      "pos": "n.",
+      "cn": "肯尼特（河名）"
+    },
+    "keys": {
+      "ipa": "/kiːz/",
+      "pos": "n.",
+      "cn": "key 的复数：琴键；钥匙"
+    },
+    "kilometres": {
+      "ipa": "/ˈkɪləmiːtəz/",
+      "pos": "n.",
+      "cn": "kilometre 的复数：公里"
+    },
+    "laboratory": {
+      "ipa": "/ləˈbɒrətri/",
+      "pos": "n.",
+      "cn": "实验室"
+    },
+    "languages": {
+      "ipa": "/ˈlæŋɡwɪdʒɪz/",
+      "pos": "n.",
+      "cn": "language 的复数：语言"
+    },
+    "large": {
+      "ipa": "/lɑːdʒ/",
+      "pos": "adj.",
+      "cn": "大的"
+    },
+    "largest": {
+      "ipa": "/ˈlɑːdʒɪst/",
+      "pos": "adj.",
+      "cn": "large 的最高级：最大的"
+    },
+    "least": {
+      "ipa": "/liːst/",
+      "pos": "adv.",
+      "cn": "最少（at least 至少）"
+    },
+    "lessons": {
+      "ipa": "/ˈlesnz/",
+      "pos": "n.",
+      "cn": "lesson 的复数：课"
+    },
+    "library": {
+      "ipa": "/ˈlaɪbrəri/",
+      "pos": "n.",
+      "cn": "图书馆"
+    },
+    "life": {
+      "ipa": "/laɪf/",
+      "pos": "n.",
+      "cn": "生活；生命"
+    },
+    "light": {
+      "ipa": "/laɪt/",
+      "pos": "n.",
+      "cn": "灯；光"
+    },
+    "literature": {
+      "ipa": "/ˈlɪtrətʃə/",
+      "pos": "n.",
+      "cn": "文学"
+    },
+    "loads": {
+      "ipa": "/ləʊdz/",
+      "pos": "n.",
+      "cn": "许多（loads of = a lot of）"
+    },
+    "local": {
+      "ipa": "/ˈləʊkl/",
+      "pos": "adj.",
+      "cn": "当地的"
+    },
+    "location": {
+      "ipa": "/ləʊˈkeɪʃn/",
+      "pos": "n.",
+      "cn": "位置"
+    },
+    "london": {
+      "ipa": "/ˈlʌndən/",
+      "pos": "n.",
+      "cn": "伦敦"
+    },
+    "lost": {
+      "ipa": "/lɒst/",
+      "pos": "adj.",
+      "cn": "迷路的（get lost 迷路）"
+    },
+    "love": {
+      "ipa": "/lʌv/",
+      "pos": "v.",
+      "cn": "爱；喜欢"
+    },
+    "luck": {
+      "ipa": "/lʌk/",
+      "pos": "n.",
+      "cn": "运气（Good luck 祝好运）"
+    },
+    "lunch": {
+      "ipa": "/lʌntʃ/",
+      "pos": "n.",
+      "cn": "午饭"
+    },
+    "main": {
+      "ipa": "/meɪn/",
+      "pos": "adj.",
+      "cn": "主要的"
+    },
+    "mainly": {
+      "ipa": "/ˈmeɪnli/",
+      "pos": "adv.",
+      "cn": "主要地"
+    },
+    "major": {
+      "ipa": "/ˈmeɪdʒə/",
+      "pos": "n.",
+      "cn": "专业（换专业 change one's major）"
+    },
+    "maybe": {
+      "ipa": "/ˈmeɪbi/",
+      "pos": "adv.",
+      "cn": "也许"
+    },
+    "members": {
+      "ipa": "/ˈmembəz/",
+      "pos": "n.",
+      "cn": "member 的复数：成员"
+    },
+    "memories": {
+      "ipa": "/ˈmeməriz/",
+      "pos": "n.",
+      "cn": "memory 的复数：记忆"
+    },
+    "methods": {
+      "ipa": "/ˈmeθədz/",
+      "pos": "n.",
+      "cn": "method 的复数：方法"
+    },
+    "moment": {
+      "ipa": "/ˈməʊmənt/",
+      "pos": "n.",
+      "cn": "时刻（at the moment 此刻）"
+    },
+    "money": {
+      "ipa": "/ˈmʌni/",
+      "pos": "n.",
+      "cn": "钱"
+    },
+    "month": {
+      "ipa": "/mʌnθ/",
+      "pos": "n.",
+      "cn": "月"
+    },
+    "mountains": {
+      "ipa": "/ˈmaʊntɪnz/",
+      "pos": "n.",
+      "cn": "mountain 的复数：山"
+    },
+    "move": {
+      "ipa": "/muːv/",
+      "pos": "v.",
+      "cn": "移动；搬家"
+    },
+    "movie": {
+      "ipa": "/ˈmuːvi/",
+      "pos": "n.",
+      "cn": "电影（美式）"
+    },
+    "music": {
+      "ipa": "/ˈmjuːzɪk/",
+      "pos": "n.",
+      "cn": "音乐"
+    },
+    "musical": {
+      "ipa": "/ˈmjuːzɪkl/",
+      "pos": "adj.",
+      "cn": "音乐的"
+    },
+    "name": {
+      "ipa": "/neɪm/",
+      "pos": "n.",
+      "cn": "名字"
+    },
+    "national": {
+      "ipa": "/ˈnæʃnəl/",
+      "pos": "adj.",
+      "cn": "国家的（National Park 国家公园）"
+    },
+    "nearly": {
+      "ipa": "/ˈnɪəli/",
+      "pos": "adv.",
+      "cn": "将近"
+    },
+    "negative": {
+      "ipa": "/ˈneɡətɪv/",
+      "pos": "adj.",
+      "cn": "负面的"
+    },
+    "night": {
+      "ipa": "/naɪt/",
+      "pos": "n.",
+      "cn": "夜晚"
+    },
+    "noises": {
+      "ipa": "/nɔɪzɪz/",
+      "pos": "n.",
+      "cn": "noise 的复数：声音；噪音"
+    },
+    "normal": {
+      "ipa": "/ˈnɔːml/",
+      "pos": "adj.",
+      "cn": "正常的"
+    },
+    "noses": {
+      "ipa": "/ˈnəʊzɪz/",
+      "pos": "n.",
+      "cn": "nose 的复数：鼻子"
+    },
+    "notes": {
+      "ipa": "/nəʊts/",
+      "pos": "n.",
+      "cn": "note 的复数：音符；笔记"
+    },
+    "noticed": {
+      "ipa": "/ˈnəʊtɪst/",
+      "pos": "v.",
+      "cn": "notice 的过去式：注意到"
+    },
+    "oceans": {
+      "ipa": "/ˈəʊʃnz/",
+      "pos": "n.",
+      "cn": "ocean 的复数：海洋"
+    },
+    "offer": {
+      "ipa": "/ˈɒfə/",
+      "pos": "v.",
+      "cn": "提供"
+    },
+    "old": {
+      "ipa": "/əʊld/",
+      "pos": "adj.",
+      "cn": "旧的；老的"
+    },
+    "order": {
+      "ipa": "/ˈɔːdə/",
+      "pos": "v./n.",
+      "cn": "订购；顺序（in order to 为了）"
+    },
+    "organized": {
+      "ipa": "/ˈɔːɡənaɪzd/",
+      "pos": "v.",
+      "cn": "organize 的过去分词：组织"
+    },
+    "outdoor": {
+      "ipa": "/ˈaʊtdɔː/",
+      "pos": "adj.",
+      "cn": "户外的"
+    },
+    "owners": {
+      "ipa": "/ˈəʊnəz/",
+      "pos": "n.",
+      "cn": "owner 的复数：主人"
+    },
+    "pacific": {
+      "ipa": "/pəˈsɪfɪk/",
+      "pos": "n./adj.",
+      "cn": "太平洋（的）"
+    },
+    "page": {
+      "ipa": "/peɪdʒ/",
+      "pos": "n.",
+      "cn": "页"
+    },
+    "paper": {
+      "ipa": "/ˈpeɪpə/",
+      "pos": "n.",
+      "cn": "纸（paper-thin 薄如纸的）"
+    },
+    "particularly": {
+      "ipa": "/pəˈtɪkjələli/",
+      "pos": "adv.",
+      "cn": "特别地"
+    },
+    "past": {
+      "ipa": "/pɑːst/",
+      "pos": "n./prep.",
+      "cn": "过去（in the past 在过去）"
+    },
+    "pay": {
+      "ipa": "/peɪ/",
+      "pos": "v.",
+      "cn": "支付（pay for 为……付款）"
+    },
+    "peas": {
+      "ipa": "/piːz/",
+      "pos": "n.",
+      "cn": "pea 的复数：豌豆"
+    },
+    "penguins": {
+      "ipa": "/ˈpeŋɡwɪnz/",
+      "pos": "n.",
+      "cn": "penguin 的复数：企鹅"
+    },
+    "per": {
+      "ipa": "/pɜː/",
+      "pos": "prep.",
+      "cn": "每（per hour 每小时）"
+    },
+    "perform": {
+      "ipa": "/pəˈfɔːm/",
+      "pos": "v.",
+      "cn": "表演"
+    },
+    "perhaps": {
+      "ipa": "/pəˈhæps/",
+      "pos": "adv.",
+      "cn": "也许"
+    },
+    "persuade": {
+      "ipa": "/pəˈsweɪd/",
+      "pos": "v.",
+      "cn": "说服（persuade sb. to do sth.）"
+    },
+    "picnic": {
+      "ipa": "/ˈpɪknɪk/",
+      "pos": "n.",
+      "cn": "野餐"
+    },
+    "pink": {
+      "ipa": "/pɪŋk/",
+      "pos": "adj.",
+      "cn": "粉红色的"
+    },
+    "pizzas": {
+      "ipa": "/ˈpiːtsəz/",
+      "pos": "n.",
+      "cn": "pizza 的复数：披萨"
+    },
+    "plan": {
+      "ipa": "/plæn/",
+      "pos": "n./v.",
+      "cn": "计划（plan to do sth.）"
+    },
+    "planet": {
+      "ipa": "/ˈplænɪt/",
+      "pos": "n.",
+      "cn": "行星；星球"
+    },
+    "plant": {
+      "ipa": "/plɑːnt/",
+      "pos": "n./v.",
+      "cn": "植物；种植"
+    },
+    "plastic": {
+      "ipa": "/ˈplæstɪk/",
+      "pos": "n./adj.",
+      "cn": "塑料（的）"
+    },
+    "please": {
+      "ipa": "/pliːz/",
+      "pos": "v.",
+      "cn": "使高兴（difficult-to-please 难伺候的）"
+    },
+    "plenty": {
+      "ipa": "/ˈplenti/",
+      "pos": "n.",
+      "cn": "大量（plenty of 许多）"
+    },
+    "politics": {
+      "ipa": "/ˈpɒlətɪks/",
+      "pos": "n.",
+      "cn": "政治"
+    },
+    "pool": {
+      "ipa": "/puːl/",
+      "pos": "n.",
+      "cn": "水池"
+    },
+    "popular": {
+      "ipa": "/ˈpɒpjələ/",
+      "pos": "adj.",
+      "cn": "受欢迎的（be popular with）"
+    },
+    "possible": {
+      "ipa": "/ˈpɒsəbl/",
+      "pos": "adj.",
+      "cn": "可能的（make it possible for sb. to do sth.）"
+    },
+    "potato": {
+      "ipa": "/pəˈteɪtəʊ/",
+      "pos": "n.",
+      "cn": "土豆"
+    },
+    "potatoes": {
+      "ipa": "/pəˈteɪtəʊz/",
+      "pos": "n.",
+      "cn": "potato 的复数：土豆"
+    },
+    "practise": {
+      "ipa": "/ˈpræktɪs/",
+      "pos": "v.",
+      "cn": "练习（英式拼法）"
+    },
+    "predict": {
+      "ipa": "/prɪˈdɪkt/",
+      "pos": "v.",
+      "cn": "预测"
+    },
+    "preparation": {
+      "ipa": "/ˌprepəˈreɪʃn/",
+      "pos": "n.",
+      "cn": "准备（a preparation for sth.）"
+    },
+    "presenting": {
+      "ipa": "/prɪˈzentɪŋ/",
+      "pos": "v.",
+      "cn": "present 的现在分词：主持；展示"
+    },
+    "pretty": {
+      "ipa": "/ˈprɪti/",
+      "pos": "adj./adv.",
+      "cn": "漂亮的；相当"
+    },
+    "prevent": {
+      "ipa": "/prɪˈvent/",
+      "pos": "v.",
+      "cn": "阻止（prevent sb. from doing sth.）"
+    },
+    "previously": {
+      "ipa": "/ˈpriːviəsli/",
+      "pos": "adv.",
+      "cn": "先前"
+    },
+    "prices": {
+      "ipa": "/ˈpraɪsɪz/",
+      "pos": "n.",
+      "cn": "price 的复数：价格"
+    },
+    "prizes": {
+      "ipa": "/ˈpraɪzɪz/",
+      "pos": "n.",
+      "cn": "prize 的复数：奖品"
+    },
+    "probably": {
+      "ipa": "/ˈprɒbəbli/",
+      "pos": "adv.",
+      "cn": "很可能"
+    },
+    "produced": {
+      "ipa": "/prəˈdjuːst/",
+      "pos": "v.",
+      "cn": "produce 的过去分词：生产；培育"
+    },
+    "production": {
+      "ipa": "/prəˈdʌkʃn/",
+      "pos": "n.",
+      "cn": "生产（food production 粮食生产）"
+    },
+    "progress": {
+      "ipa": "/ˈprəʊɡres/",
+      "pos": "n.",
+      "cn": "进步（make progress 取得进步）"
+    },
+    "project": {
+      "ipa": "/ˈprɒdʒekt/",
+      "pos": "n.",
+      "cn": "项目"
+    },
+    "proud": {
+      "ipa": "/praʊd/",
+      "pos": "adj.",
+      "cn": "骄傲的（be proud of）"
+    },
+    "pupils": {
+      "ipa": "/ˈpjuːplz/",
+      "pos": "n.",
+      "cn": "pupil 的复数：学生"
+    },
+    "put": {
+      "ipa": "/pʊt/",
+      "pos": "v.",
+      "cn": "放（put in 装进）"
+    },
+    "radio": {
+      "ipa": "/ˈreɪdiəʊ/",
+      "pos": "n.",
+      "cn": "广播；收音机"
+    },
+    "rain": {
+      "ipa": "/reɪn/",
+      "pos": "n./v.",
+      "cn": "雨；下雨"
+    },
+    "ran": {
+      "ipa": "/ræn/",
+      "pos": "v.",
+      "cn": "run 的过去式：跑"
+    },
+    "rather": {
+      "ipa": "/ˈrɑːðə/",
+      "pos": "adv.",
+      "cn": "宁愿（would rather 宁愿）"
+    },
+    "reach": {
+      "ipa": "/riːtʃ/",
+      "pos": "v.",
+      "cn": "到达；达到"
+    },
+    "reason": {
+      "ipa": "/ˈriːzn/",
+      "pos": "n.",
+      "cn": "原因（the reason for）"
+    },
+    "recall": {
+      "ipa": "/rɪˈkɔːl/",
+      "pos": "v.",
+      "cn": "回忆起"
+    },
+    "receive": {
+      "ipa": "/rɪˈsiːv/",
+      "pos": "v.",
+      "cn": "收到"
+    },
+    "recognise": {
+      "ipa": "/ˈrekəɡnaɪz/",
+      "pos": "v.",
+      "cn": "辨认出（英式拼法）"
+    },
+    "recognize": {
+      "ipa": "/ˈrekəɡnaɪz/",
+      "pos": "v.",
+      "cn": "辨认出（美式拼法）"
+    },
+    "recordings": {
+      "ipa": "/rɪˈkɔːdɪŋz/",
+      "pos": "n.",
+      "cn": "recording 的复数：录音"
+    },
+    "redwoods": {
+      "ipa": "/ˈredwʊdz/",
+      "pos": "n.",
+      "cn": "红杉（树）"
+    },
+    "research": {
+      "ipa": "/rɪˈsɜːtʃ/",
+      "pos": "n.",
+      "cn": "研究（do research 做研究）"
+    },
+    "restaurants": {
+      "ipa": "/ˈrestrɒnts/",
+      "pos": "n.",
+      "cn": "restaurant 的复数：餐馆"
+    },
+    "river": {
+      "ipa": "/ˈrɪvə/",
+      "pos": "n.",
+      "cn": "河"
+    },
+    "rose": {
+      "ipa": "/rəʊz/",
+      "pos": "v.",
+      "cn": "rise 的过去式：升起"
+    },
+    "round": {
+      "ipa": "/raʊnd/",
+      "pos": "prep.",
+      "cn": "环绕（sail round the world 环球航行）"
+    },
+    "rowing": {
+      "ipa": "/ˈrəʊɪŋ/",
+      "pos": "n.",
+      "cn": "划船（go rowing 去划船）"
+    },
+    "sail": {
+      "ipa": "/seɪl/",
+      "pos": "v.",
+      "cn": "航行"
+    },
+    "sat": {
+      "ipa": "/sæt/",
+      "pos": "v.",
+      "cn": "sit 的过去式：坐"
+    },
+    "save": {
+      "ipa": "/seɪv/",
+      "pos": "v.",
+      "cn": "存（钱）；节省"
+    },
+    "scene": {
+      "ipa": "/siːn/",
+      "pos": "n.",
+      "cn": "场景"
+    },
+    "scenery": {
+      "ipa": "/ˈsiːnəri/",
+      "pos": "n.",
+      "cn": "风景"
+    },
+    "scientists": {
+      "ipa": "/ˈsaɪəntɪsts/",
+      "pos": "n.",
+      "cn": "scientist 的复数：科学家"
+    },
+    "score": {
+      "ipa": "/skɔː/",
+      "pos": "v./n.",
+      "cn": "得分"
+    },
+    "sea": {
+      "ipa": "/siː/",
+      "pos": "n.",
+      "cn": "海（in the sea 在海里）"
+    },
+    "search": {
+      "ipa": "/sɜːtʃ/",
+      "pos": "v.",
+      "cn": "搜寻（search for 寻找）"
+    },
+    "seats": {
+      "ipa": "/siːts/",
+      "pos": "n.",
+      "cn": "seat 的复数：座位"
+    },
+    "secret": {
+      "ipa": "/ˈsiːkrət/",
+      "pos": "n./adj.",
+      "cn": "秘密（keep sth. secret 保密）"
+    },
+    "section": {
+      "ipa": "/ˈsekʃn/",
+      "pos": "n.",
+      "cn": "一段；部分"
+    },
+    "send": {
+      "ipa": "/send/",
+      "pos": "v.",
+      "cn": "送；发送"
+    },
+    "sent": {
+      "ipa": "/sent/",
+      "pos": "v.",
+      "cn": "send 的过去式/过去分词：送入"
+    },
+    "serious": {
+      "ipa": "/ˈsɪəriəs/",
+      "pos": "adj.",
+      "cn": "严重的；认真的"
+    },
+    "service": {
+      "ipa": "/ˈsɜːvɪs/",
+      "pos": "n.",
+      "cn": "服务"
+    },
+    "serving": {
+      "ipa": "/ˈsɜːvɪŋ/",
+      "pos": "v.",
+      "cn": "serve 的现在分词：提供（食物）"
+    },
+    "session": {
+      "ipa": "/ˈseʃn/",
+      "pos": "n.",
+      "cn": "一次活动；一节课"
+    },
+    "set": {
+      "ipa": "/set/",
+      "pos": "v.",
+      "cn": "建立（set up 创办）"
+    },
+    "several": {
+      "ipa": "/ˈsevrəl/",
+      "pos": "det.",
+      "cn": "几个"
+    },
+    "shakespeare": {
+      "ipa": "/ˈʃeɪkspɪə/",
+      "pos": "n.",
+      "cn": "莎士比亚"
+    },
+    "shaped": {
+      "ipa": "/ʃeɪpt/",
+      "pos": "adj.",
+      "cn": "……形状的（sword-shaped 剑状的）"
+    },
+    "shopping": {
+      "ipa": "/ˈʃɒpɪŋ/",
+      "pos": "n.",
+      "cn": "购物（go shopping）"
+    },
+    "side": {
+      "ipa": "/saɪd/",
+      "pos": "n.",
+      "cn": "边（from side to side 左右）"
+    },
+    "sight": {
+      "ipa": "/saɪt/",
+      "pos": "n.",
+      "cn": "景象"
+    },
+    "similar": {
+      "ipa": "/ˈsɪmələ/",
+      "pos": "adj.",
+      "cn": "相似的（be similar to）"
+    },
+    "since": {
+      "ipa": "/sɪns/",
+      "pos": "conj.",
+      "cn": "自从（since then 从那时起）"
+    },
+    "sing": {
+      "ipa": "/sɪŋ/",
+      "pos": "v.",
+      "cn": "唱歌"
+    },
+    "sit": {
+      "ipa": "/sɪt/",
+      "pos": "v.",
+      "cn": "坐"
+    },
+    "skills": {
+      "ipa": "/skɪlz/",
+      "pos": "n.",
+      "cn": "skill 的复数：技能"
+    },
+    "sky": {
+      "ipa": "/skaɪ/",
+      "pos": "n.",
+      "cn": "天空（in the sky）"
+    },
+    "slices": {
+      "ipa": "/ˈslaɪsɪz/",
+      "pos": "n.",
+      "cn": "slice 的复数：薄片"
+    },
+    "smell": {
+      "ipa": "/smel/",
+      "pos": "n./v.",
+      "cn": "气味；闻"
+    },
+    "snack": {
+      "ipa": "/snæk/",
+      "pos": "n.",
+      "cn": "小吃"
+    },
+    "software": {
+      "ipa": "/ˈsɒftweə/",
+      "pos": "n.",
+      "cn": "软件"
+    },
+    "sometimes": {
+      "ipa": "/ˈsʌmtaɪmz/",
+      "pos": "adv.",
+      "cn": "有时"
+    },
+    "song": {
+      "ipa": "/sɒŋ/",
+      "pos": "n.",
+      "cn": "歌"
+    },
+    "southwest": {
+      "ipa": "/ˌsaʊθˈwest/",
+      "pos": "n.",
+      "cn": "西南（in the southwest of）"
+    },
+    "space": {
+      "ipa": "/speɪs/",
+      "pos": "n.",
+      "cn": "太空；空间"
+    },
+    "speak": {
+      "ipa": "/spiːk/",
+      "pos": "v.",
+      "cn": "说"
+    },
+    "special": {
+      "ipa": "/ˈspeʃl/",
+      "pos": "adj.",
+      "cn": "特别的"
+    },
+    "species": {
+      "ipa": "/ˈspiːʃiːz/",
+      "pos": "n.",
+      "cn": "物种（单复数同形）"
+    },
+    "speed": {
+      "ipa": "/spiːd/",
+      "pos": "n.",
+      "cn": "速度"
+    },
+    "spite": {
+      "ipa": "/spaɪt/",
+      "pos": "n.",
+      "cn": "恶意（in spite of 尽管）"
+    },
+    "spoil": {
+      "ipa": "/spɔɪl/",
+      "pos": "v.",
+      "cn": "破坏……的兴致"
+    },
+    "spoken": {
+      "ipa": "/ˈspəʊkən/",
+      "pos": "v.",
+      "cn": "speak 的过去分词：说"
+    },
+    "staff": {
+      "ipa": "/stɑːf/",
+      "pos": "n.",
+      "cn": "员工（总称）"
+    },
+    "stand": {
+      "ipa": "/stænd/",
+      "pos": "v.",
+      "cn": "忍受；站（can't stand doing 受不了做某事）"
+    },
+    "stay": {
+      "ipa": "/steɪ/",
+      "pos": "v.",
+      "cn": "待；停留"
+    },
+    "stop": {
+      "ipa": "/stɒp/",
+      "pos": "v.",
+      "cn": "停止"
+    },
+    "stories": {
+      "ipa": "/ˈstɔːriz/",
+      "pos": "n.",
+      "cn": "story 的复数：故事"
+    },
+    "studios": {
+      "ipa": "/ˈstjuːdiəʊz/",
+      "pos": "n.",
+      "cn": "studio 的复数：录音室"
+    },
+    "stuff": {
+      "ipa": "/stʌf/",
+      "pos": "n.",
+      "cn": "东西；物品"
+    },
+    "succeeded": {
+      "ipa": "/səkˈsiːdɪd/",
+      "pos": "v.",
+      "cn": "succeed 的过去式：成功"
+    },
+    "sugar": {
+      "ipa": "/ˈʃʊɡə/",
+      "pos": "n.",
+      "cn": "糖"
+    },
+    "suggestions": {
+      "ipa": "/səˈdʒestʃənz/",
+      "pos": "n.",
+      "cn": "suggestion 的复数：建议"
+    },
+    "suggests": {
+      "ipa": "/səˈdʒests/",
+      "pos": "v.",
+      "cn": "suggest 的第三人称单数：建议"
+    },
+    "summer": {
+      "ipa": "/ˈsʌmə/",
+      "pos": "n.",
+      "cn": "夏天"
+    },
+    "sun": {
+      "ipa": "/sʌn/",
+      "pos": "n.",
+      "cn": "太阳"
+    },
+    "surprises": {
+      "ipa": "/səˈpraɪzɪz/",
+      "pos": "n.",
+      "cn": "surprise 的复数：惊喜"
+    },
+    "swim": {
+      "ipa": "/swɪm/",
+      "pos": "v.",
+      "cn": "游泳"
+    },
+    "sword": {
+      "ipa": "/sɔːd/",
+      "pos": "n.",
+      "cn": "剑（sword-shaped 剑状的）"
+    },
+    "swordfish": {
+      "ipa": "/ˈsɔːdfɪʃ/",
+      "pos": "n.",
+      "cn": "剑鱼"
+    },
+    "system": {
+      "ipa": "/ˈsɪstəm/",
+      "pos": "n.",
+      "cn": "系统"
+    },
+    "taken": {
+      "ipa": "/ˈteɪkən/",
+      "pos": "v.",
+      "cn": "take 的过去分词：拿；拆（take out）"
+    },
+    "tallest": {
+      "ipa": "/ˈtɔːlɪst/",
+      "pos": "adj.",
+      "cn": "tall 的最高级：最高的"
+    },
+    "taste": {
+      "ipa": "/teɪst/",
+      "pos": "n./v.",
+      "cn": "味道；品尝（taste test 品尝测试）"
+    },
+    "tea": {
+      "ipa": "/tiː/",
+      "pos": "n.",
+      "cn": "茶"
+    },
+    "teaching": {
+      "ipa": "/ˈtiːtʃɪŋ/",
+      "pos": "v.",
+      "cn": "teach 的现在分词：教"
+    },
+    "team": {
+      "ipa": "/tiːm/",
+      "pos": "n.",
+      "cn": "队；团队"
+    },
+    "technical": {
+      "ipa": "/ˈteknɪkl/",
+      "pos": "adj.",
+      "cn": "技术的"
+    },
+    "technique": {
+      "ipa": "/tekˈniːk/",
+      "pos": "n.",
+      "cn": "技术；方法"
+    },
+    "teenagers": {
+      "ipa": "/ˈtiːneɪdʒəz/",
+      "pos": "n.",
+      "cn": "teenager 的复数：青少年"
+    },
+    "telephone": {
+      "ipa": "/ˈtelɪfəʊn/",
+      "pos": "n.",
+      "cn": "电话（on the telephone 在电话里）"
+    },
+    "term": {
+      "ipa": "/tɜːm/",
+      "pos": "n.",
+      "cn": "学期（end-of-term 期末）"
+    },
+    "terrible": {
+      "ipa": "/ˈterəbl/",
+      "pos": "adj.",
+      "cn": "可怕的；极糟的"
+    },
+    "theatre": {
+      "ipa": "/ˈθɪətə/",
+      "pos": "n.",
+      "cn": "剧院（英式拼法）"
+    },
+    "thin": {
+      "ipa": "/θɪn/",
+      "pos": "adj.",
+      "cn": "薄的"
+    },
+    "things": {
+      "ipa": "/θɪŋz/",
+      "pos": "n.",
+      "cn": "thing 的复数：东西"
+    },
+    "ticket": {
+      "ipa": "/ˈtɪkɪt/",
+      "pos": "n.",
+      "cn": "票"
+    },
+    "titan": {
+      "ipa": "/ˈtaɪtn/",
+      "pos": "n.",
+      "cn": "泰坦（Titan Arum 泰坦魔芋）"
+    },
+    "today": {
+      "ipa": "/təˈdeɪ/",
+      "pos": "adv.",
+      "cn": "今天"
+    },
+    "tomorrow": {
+      "ipa": "/təˈmɒrəʊ/",
+      "pos": "adv.",
+      "cn": "明天"
+    },
+    "tourists": {
+      "ipa": "/ˈtʊərɪsts/",
+      "pos": "n.",
+      "cn": "tourist 的复数：游客"
+    },
+    "tournament": {
+      "ipa": "/ˈtʊənəmənt/",
+      "pos": "n.",
+      "cn": "锦标赛"
+    },
+    "towards": {
+      "ipa": "/təˈwɔːdz/",
+      "pos": "prep.",
+      "cn": "朝向"
+    },
+    "travelled": {
+      "ipa": "/ˈtrævld/",
+      "pos": "v.",
+      "cn": "travel 的过去式：旅行"
+    },
+    "trees": {
+      "ipa": "/triːz/",
+      "pos": "n.",
+      "cn": "tree 的复数：树"
+    },
+    "trip": {
+      "ipa": "/trɪp/",
+      "pos": "n.",
+      "cn": "旅行（go on a trip）"
+    },
+    "true": {
+      "ipa": "/truː/",
+      "pos": "adj.",
+      "cn": "真的"
+    },
+    "trumpet": {
+      "ipa": "/ˈtrʌmpɪt/",
+      "pos": "n.",
+      "cn": "小号"
+    },
+    "tuesday": {
+      "ipa": "/ˈtjuːzdeɪ/",
+      "pos": "n.",
+      "cn": "星期二"
+    },
+    "twice": {
+      "ipa": "/twaɪs/",
+      "pos": "adv.",
+      "cn": "两次"
+    },
+    "typical": {
+      "ipa": "/ˈtɪpɪkl/",
+      "pos": "adj.",
+      "cn": "典型的"
+    },
+    "understand": {
+      "ipa": "/ˌʌndəˈstænd/",
+      "pos": "v.",
+      "cn": "理解"
+    },
+    "unfamiliar": {
+      "ipa": "/ˌʌnfəˈmɪliə/",
+      "pos": "adj.",
+      "cn": "不熟悉的（be unfamiliar with）"
+    },
+    "unhappy": {
+      "ipa": "/ʌnˈhæpi/",
+      "pos": "adj.",
+      "cn": "不高兴的"
+    },
+    "university": {
+      "ipa": "/ˌjuːnɪˈvɜːsəti/",
+      "pos": "n.",
+      "cn": "大学（at university 上大学）"
+    },
+    "unlucky": {
+      "ipa": "/ʌnˈlʌki/",
+      "pos": "adj.",
+      "cn": "运气不好的"
+    },
+    "usually": {
+      "ipa": "/ˈjuːʒuəli/",
+      "pos": "adv.",
+      "cn": "通常"
+    },
+    "variety": {
+      "ipa": "/vəˈraɪəti/",
+      "pos": "n.",
+      "cn": "多种多样（a variety of 各种各样的）"
+    },
+    "video": {
+      "ipa": "/ˈvɪdiəʊ/",
+      "pos": "n.",
+      "cn": "视频（video game 电子游戏）"
+    },
+    "village": {
+      "ipa": "/ˈvɪlɪdʒ/",
+      "pos": "n.",
+      "cn": "村庄"
+    },
+    "visitors": {
+      "ipa": "/ˈvɪzɪtəz/",
+      "pos": "n.",
+      "cn": "visitor 的复数：游客"
+    },
+    "vote": {
+      "ipa": "/vəʊt/",
+      "pos": "v.",
+      "cn": "投票（vote on sth.）"
+    },
+    "waste": {
+      "ipa": "/weɪst/",
+      "pos": "n.",
+      "cn": "垃圾；浪费（plastic waste 塑料垃圾）"
+    },
+    "waterfall": {
+      "ipa": "/ˈwɔːtəfɔːl/",
+      "pos": "n.",
+      "cn": "瀑布"
+    },
+    "weekend": {
+      "ipa": "/ˌwiːkˈend/",
+      "pos": "n.",
+      "cn": "周末"
+    },
+    "welcome": {
+      "ipa": "/ˈwelkəm/",
+      "pos": "v.",
+      "cn": "欢迎（welcome to 欢迎来到）"
+    },
+    "well": {
+      "ipa": "/wel/",
+      "pos": "adv.",
+      "cn": "好地（as well 也）"
+    },
+    "westway": {
+      "ipa": "/ˈwestweɪ/",
+      "pos": "n.",
+      "cn": "韦斯特韦（电影院名）"
+    },
+    "whale": {
+      "ipa": "/weɪl/",
+      "pos": "n.",
+      "cn": "鲸"
+    },
+    "wildlife": {
+      "ipa": "/ˈwaɪldlaɪf/",
+      "pos": "n.",
+      "cn": "野生动物"
+    },
+    "winners": {
+      "ipa": "/ˈwɪnəz/",
+      "pos": "n.",
+      "cn": "winner 的复数：获胜者"
+    },
+    "world": {
+      "ipa": "/wɜːld/",
+      "pos": "n.",
+      "cn": "世界"
+    },
+    "worst": {
+      "ipa": "/wɜːst/",
+      "pos": "adj.",
+      "cn": "bad 的最高级：最坏（at worst 在最坏的情况下）"
+    },
+    "worth": {
+      "ipa": "/wɜːθ/",
+      "pos": "adj.",
+      "cn": "值得（be worth doing）"
+    },
+    "wrong": {
+      "ipa": "/rɒŋ/",
+      "pos": "adj.",
+      "cn": "错的"
+    },
+    "yes": {
+      "ipa": "/jes/",
+      "pos": "adv.",
+      "cn": "是；对"
+    },
+    "you'll": {
+      "ipa": "/juːl/",
+      "pos": "缩写",
+      "cn": "= you will"
+    },
+    "young": {
+      "ipa": "/jʌŋ/",
+      "pos": "adj.",
+      "cn": "年轻的"
+    },
+    "yourself": {
+      "ipa": "/jɔːˈself/",
+      "pos": "pron.",
+      "cn": "你自己"
+    },
+    "around": {
+      "ipa": "/əˈraʊnd/",
+      "pos": "prep.",
+      "cn": "大约；在……周围"
+    },
+    "memory": {
+      "ipa": "/ˈmeməri/",
+      "pos": "n.",
+      "cn": "记忆力；记忆（have a good memory）"
+    },
+    "produces": {
+      "ipa": "/prəˈdjuːsɪz/",
+      "pos": "v.",
+      "cn": "produce 的第三人称单数：产生；开出（花）"
+    },
+    "story": {
+      "ipa": "/ˈstɔːri/",
+      "pos": "n.",
+      "cn": "故事"
+    },
+    "travelling": {
+      "ipa": "/ˈtrævlɪŋ/",
+      "pos": "v.",
+      "cn": "travel 的现在分词：旅行（travel round 环游）"
+    },
+    "ship's": {
+      "ipa": "/ʃɪp/",
+      "pos": "n.",
+      "cn": "船的；ship 的所有格（a ship's captain 一位船长）"
+    }
+  }
+}

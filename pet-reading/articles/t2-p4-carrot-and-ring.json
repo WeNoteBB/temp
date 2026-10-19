@@ -1,0 +1,5684 @@
+{
+  "slug": "t2-p4-carrot-and-ring",
+  "book": "剑桥PET 官方模考题精讲讲练",
+  "label": "Reading Part 4",
+  "title": "Training Test 2",
+  "note": "答案为逐题对照书后 P201 官方答案核对一致；训练①–③的答案与解析同 P201；「析」里的笔记来自带手写批注的 PET Trainers 版（书 P63–P65；扫描页码 80–83，其中第 81 页为整页手写语法讲解）（2026-10-19）",
+  "inlineQuiz": true,
+  "passage": {
+    "words": 746,
+    "sentences": 74,
+    "paragraphs": [
+      [
+        {
+          "s": "Training Test 2 · Reading Part 4",
+          "hard": false,
+          "tr": "训练测试 2 · 阅读第 4 部分。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题行：<b>Training Test 2 · Reading Part 4</b>（训练测试 2 · 阅读第 4 部分）",
+            "parts": [
+              [
+                "标题",
+                "Training Test 2 —— 训练测试编号"
+              ],
+              [
+                "标题",
+                "Reading Part 4 —— 阅读第 4 部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式省略句"
+            ],
+            "tip": "这一部分练的是：一篇长文挖掉五句，从 A–H 八句里选（三句用不上）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "How many gaps are there in the text?",
+          "hard": false,
+          "tr": "文章里有几个空？",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "疑问句：<b>How many gaps are there in the text?</b>",
+            "parts": [
+              [
+                "疑问词",
+                "<code>How many gaps</code> —— 多少个空"
+              ],
+              [
+                "状语",
+                "<code>in the text</code> —— 在文章里"
+              ]
+            ],
+            "clauses": [
+              "there be 句型"
+            ],
+            "gram": [
+              "gap 空，缺口"
+            ],
+            "tip": "官方答案：five（五个）。",
+            "note": [
+              {
+                "k": "gap",
+                "cn": "空，缺口"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "How many sentences must you choose from?",
+          "hard": false,
+          "tr": "你要从多少句里选？",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "疑问句：<b>How many sentences must you choose from?</b>",
+            "parts": [
+              [
+                "疑问词",
+                "<code>How many sentences</code> —— 多少句话"
+              ],
+              [
+                "谓语",
+                "<code>must you choose from</code> —— 你必须从中选择"
+              ]
+            ],
+            "clauses": [
+              "choose from 从……中选"
+            ],
+            "gram": [
+              "choose from 从……中选择"
+            ],
+            "tip": "官方答案：eight（八句，A–H）—— 但有三句用不上。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "VOCABULARY: SYNONYMS",
+          "hard": false,
+          "tr": "词汇：同义词。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>VOCABULARY: SYNONYMS</b>（词汇：同义词）",
+            "parts": [
+              [
+                "名词",
+                "VOCABULARY —— 词汇"
+              ],
+              [
+                "名词",
+                "SYNONYMS —— 同义词"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "synonym 同义词"
+            ],
+            "tip": "Part 4 的第一把钥匙：认出「换了一种说法」。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "① Match the common phrases in box A with their meanings in box B.",
+          "hard": false,
+          "tr": "① 把 A 栏的常用短语与 B 栏的意思配对。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Match the common phrases in box A with their meanings in box B.</b>",
+            "parts": [
+              [
+                "谓语",
+                "Match —— 配对"
+              ],
+              [
+                "宾语",
+                "<code>the common phrases in box A</code> —— A 栏的常用短语"
+              ],
+              [
+                "介词短语",
+                "<code>with their meanings in box B</code> —— 与 B 栏的意思"
+              ]
+            ],
+            "clauses": [
+              "match A with B 把 A 与 B 配对"
+            ],
+            "gram": [
+              "common phrase 常用短语",
+              "meaning 意思"
+            ],
+            "tip": "12 对 1:1 配对，官方答案在解析里。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "1 a lack of",
+          "hard": false,
+          "tr": "1 缺少。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "短语：<b>a lack of</b>（缺少）",
+            "parts": [
+              [
+                "短语",
+                "a lack of —— 缺少"
+              ],
+              [
+                "配对",
+                "→ not enough（不够）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "a lack of 缺少"
+            ],
+            "tip": "官方配对：a lack of = not enough（不够）。",
+            "note": [
+              {
+                "k": "a lack of",
+                "cn": "缺少"
+              }
+            ]
+          }
+        },
+        {
+          "s": "2 get better",
+          "hard": false,
+          "tr": "2 变得更好。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "短语：<b>get better</b>（变得更好）",
+            "parts": [
+              [
+                "短语",
+                "get better —— 变得更好"
+              ],
+              [
+                "配对",
+                "→ improve（提高，改善）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "get better 好转"
+            ],
+            "tip": "官方配对：get better = improve（提高，改善）。",
+            "note": [
+              {
+                "k": "get better",
+                "cn": "变得更好"
+              }
+            ]
+          }
+        },
+        {
+          "s": "3 get in touch",
+          "hard": false,
+          "tr": "3 取得联系。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "短语：<b>get in touch</b>（取得联系）",
+            "parts": [
+              [
+                "短语",
+                "get in touch —— 取得联络"
+              ],
+              [
+                "配对",
+                "→ contact（联系）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "get in touch 取得联系"
+            ],
+            "tip": "官方配对：get in touch = contact（联系）。",
+            "note": [
+              {
+                "k": "get in touch",
+                "cn": "取得联络"
+              }
+            ]
+          }
+        },
+        {
+          "s": "4 hardly ever",
+          "hard": false,
+          "tr": "4 几乎从不。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "短语：<b>hardly ever</b>（几乎从不）",
+            "parts": [
+              [
+                "短语",
+                "hardly ever —— 几乎从不"
+              ],
+              [
+                "配对",
+                "→ almost never（几乎从不）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "hardly ever 几乎从不"
+            ],
+            "tip": "官方配对：hardly ever = almost never。",
+            "note": [
+              {
+                "k": "hardly ever",
+                "cn": "几乎从不"
+              }
+            ]
+          }
+        },
+        {
+          "s": "5 in the end",
+          "hard": false,
+          "tr": "5 最终。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "短语：<b>in the end</b>（最终）",
+            "parts": [
+              [
+                "短语",
+                "in the end —— 最终"
+              ],
+              [
+                "配对",
+                "→ finally（最终）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "in the end 最终"
+            ],
+            "tip": "官方配对：in the end = finally。",
+            "note": [
+              {
+                "k": "in the end",
+                "cn": "最终"
+              }
+            ]
+          }
+        },
+        {
+          "s": "6 make your mind up",
+          "hard": false,
+          "tr": "6 下定决心。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "短语：<b>make your mind up</b>（下定决心）",
+            "parts": [
+              [
+                "短语",
+                "make your mind up —— 决定，做出决定"
+              ],
+              [
+                "配对",
+                "→ decide（决定）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "make one's mind up 下定决心"
+            ],
+            "tip": "官方配对：make your mind up = decide（决定）。",
+            "note": [
+              {
+                "k": "make your mind up",
+                "cn": "决定，做出决定"
+              }
+            ]
+          }
+        },
+        {
+          "s": "7 on your own",
+          "hard": false,
+          "tr": "7 独自。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "短语：<b>on your own</b>（独自）",
+            "parts": [
+              [
+                "短语",
+                "on your own —— 你自己，独自"
+              ],
+              [
+                "配对",
+                "→ by yourself（你自己）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "on one's own 独自"
+            ],
+            "tip": "官方配对：on your own = by yourself。",
+            "note": [
+              {
+                "k": "on your own",
+                "cn": "你自己，独自"
+              }
+            ]
+          }
+        },
+        {
+          "s": "8 rather than",
+          "hard": false,
+          "tr": "8 而不是。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "短语：<b>rather than</b>（而不是）",
+            "parts": [
+              [
+                "短语",
+                "rather than —— 而不是"
+              ],
+              [
+                "配对",
+                "→ instead of（代替，而不是）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "rather than 而不是"
+            ],
+            "tip": "官方配对：rather than = instead of。",
+            "note": [
+              {
+                "k": "rather than",
+                "cn": "而不是"
+              }
+            ]
+          }
+        },
+        {
+          "s": "9 so far",
+          "hard": false,
+          "tr": "9 到目前为止。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "短语：<b>so far</b>（到目前为止）",
+            "parts": [
+              [
+                "短语",
+                "so far —— 到目前为止"
+              ],
+              [
+                "配对",
+                "→ until now（至今，直到现在）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "so far 到目前为止"
+            ],
+            "tip": "官方配对：so far = until now。",
+            "note": [
+              {
+                "k": "so far",
+                "cn": "到目前为止"
+              }
+            ]
+          }
+        },
+        {
+          "s": "10 take care of",
+          "hard": false,
+          "tr": "10 照顾。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "短语：<b>take care of</b>（照顾）",
+            "parts": [
+              [
+                "短语",
+                "take care of —— 照顾"
+              ],
+              [
+                "配对",
+                "→ look after（照顾）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "take care of 照顾"
+            ],
+            "tip": "官方配对：take care of = look after。",
+            "note": [
+              {
+                "k": "take care of",
+                "cn": "照顾"
+              }
+            ]
+          }
+        },
+        {
+          "s": "11 take it easy",
+          "hard": false,
+          "tr": "11 放轻松。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "短语：<b>take it easy</b>（放轻松）",
+            "parts": [
+              [
+                "短语",
+                "take it easy —— 放轻松"
+              ],
+              [
+                "配对",
+                "→ relax（放松）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "take it easy 放轻松"
+            ],
+            "tip": "官方配对：take it easy = relax（放松）。",
+            "note": [
+              {
+                "k": "take it easy",
+                "cn": "放轻松"
+              }
+            ]
+          }
+        },
+        {
+          "s": "12 up-to-date",
+          "hard": false,
+          "tr": "12 最新的。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "短语：<b>up-to-date</b>（最新的）",
+            "parts": [
+              [
+                "短语",
+                "up-to-date —— 最新的，最近的"
+              ],
+              [
+                "配对",
+                "→ modern（现代的）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "up-to-date 最新的"
+            ],
+            "tip": "官方配对：up-to-date = modern（现代的）。",
+            "note": [
+              {
+                "k": "up-to-date",
+                "cn": "最新的，最近的"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "a almost never",
+          "hard": false,
+          "tr": "a 几乎从不。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "意思：<b>almost never</b>（几乎从不）",
+            "parts": [
+              [
+                "副词短语",
+                "almost never —— 几乎从不，几乎没有"
+              ],
+              [
+                "配对",
+                "← hardly ever"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "almost never 几乎从不"
+            ],
+            "tip": "对应 4 hardly ever。",
+            "note": [
+              {
+                "k": "almost never",
+                "cn": "几乎从不，几乎没有"
+              }
+            ]
+          }
+        },
+        {
+          "s": "b by yourself",
+          "hard": false,
+          "tr": "b 你自己。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "意思：<b>by yourself</b>（你自己）",
+            "parts": [
+              [
+                "短语",
+                "by yourself —— 你自己，独自"
+              ],
+              [
+                "配对",
+                "← on your own"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "by oneself 独自"
+            ],
+            "tip": "对应 7 on your own。",
+            "note": [
+              {
+                "k": "by yourself",
+                "cn": "你自己，独自"
+              }
+            ]
+          }
+        },
+        {
+          "s": "c contact",
+          "hard": false,
+          "tr": "c 联系。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "意思：<b>contact</b>（联系）",
+            "parts": [
+              [
+                "动词",
+                "contact —— 联系"
+              ],
+              [
+                "配对",
+                "← get in touch"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "contact 联系"
+            ],
+            "tip": "对应 3 get in touch。",
+            "note": [
+              {
+                "k": "contact",
+                "cn": "联系"
+              }
+            ]
+          }
+        },
+        {
+          "s": "d decide",
+          "hard": false,
+          "tr": "d 决定。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "意思：<b>decide</b>（决定）",
+            "parts": [
+              [
+                "动词",
+                "decide —— 决定"
+              ],
+              [
+                "配对",
+                "← make your mind up"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "decide 决定"
+            ],
+            "tip": "对应 6 make your mind up。",
+            "note": [
+              {
+                "k": "decide",
+                "cn": "决定"
+              }
+            ]
+          }
+        },
+        {
+          "s": "e finally",
+          "hard": false,
+          "tr": "e 最终。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "意思：<b>finally</b>（最终）",
+            "parts": [
+              [
+                "副词",
+                "finally —— 最终"
+              ],
+              [
+                "配对",
+                "← in the end"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "finally 最终"
+            ],
+            "tip": "对应 5 in the end。",
+            "note": [
+              {
+                "k": "finally",
+                "cn": "最终"
+              }
+            ]
+          }
+        },
+        {
+          "s": "f improve",
+          "hard": false,
+          "tr": "f 提高，改善。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "意思：<b>improve</b>（提高，改善）",
+            "parts": [
+              [
+                "动词",
+                "improve —— 提高，改善"
+              ],
+              [
+                "配对",
+                "← get better"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "improve 提高，改善"
+            ],
+            "tip": "对应 2 get better。",
+            "note": [
+              {
+                "k": "improve",
+                "cn": "提高，改善"
+              }
+            ]
+          }
+        },
+        {
+          "s": "g instead of",
+          "hard": false,
+          "tr": "g 代替，而不是。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "意思：<b>instead of</b>（代替，而不是）",
+            "parts": [
+              [
+                "介词短语",
+                "instead of —— 代替，而不是"
+              ],
+              [
+                "配对",
+                "← rather than"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "instead of 代替"
+            ],
+            "tip": "对应 8 rather than。",
+            "note": [
+              {
+                "k": "instead of",
+                "cn": "代替，而不是"
+              }
+            ]
+          }
+        },
+        {
+          "s": "h look after",
+          "hard": false,
+          "tr": "h 照顾。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "意思：<b>look after</b>（照顾）",
+            "parts": [
+              [
+                "短语",
+                "look after —— 照顾"
+              ],
+              [
+                "配对",
+                "← take care of"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "look after 照顾"
+            ],
+            "tip": "对应 10 take care of。",
+            "note": [
+              {
+                "k": "look after",
+                "cn": "照顾"
+              }
+            ]
+          }
+        },
+        {
+          "s": "i modern",
+          "hard": false,
+          "tr": "i 现代的。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "意思：<b>modern</b>（现代的）",
+            "parts": [
+              [
+                "形容词",
+                "modern —— 现代的"
+              ],
+              [
+                "配对",
+                "← up-to-date"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "modern 现代的"
+            ],
+            "tip": "对应 12 up-to-date。",
+            "note": [
+              {
+                "k": "modern",
+                "cn": "现代的"
+              }
+            ]
+          }
+        },
+        {
+          "s": "j not enough",
+          "hard": false,
+          "tr": "j 不够。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "意思：<b>not enough</b>（不够）",
+            "parts": [
+              [
+                "短语",
+                "not enough —— 不够"
+              ],
+              [
+                "配对",
+                "← a lack of"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "not enough 不够"
+            ],
+            "tip": "对应 1 a lack of。",
+            "note": [
+              {
+                "k": "not enough",
+                "cn": "不够"
+              }
+            ]
+          }
+        },
+        {
+          "s": "k relax",
+          "hard": false,
+          "tr": "k 放松。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "意思：<b>relax</b>（放松）",
+            "parts": [
+              [
+                "动词",
+                "relax —— 放松"
+              ],
+              [
+                "配对",
+                "← take it easy"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "relax 放松"
+            ],
+            "tip": "对应 11 take it easy。",
+            "note": [
+              {
+                "k": "relax",
+                "cn": "放松"
+              }
+            ]
+          }
+        },
+        {
+          "s": "l until now",
+          "hard": false,
+          "tr": "l 直到现在。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "意思：<b>until now</b>（至今，直到现在）",
+            "parts": [
+              [
+                "短语",
+                "until now —— 至今，直到现在"
+              ],
+              [
+                "配对",
+                "← so far"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "until now 直到现在"
+            ],
+            "tip": "对应 9 so far。",
+            "note": [
+              {
+                "k": "until now",
+                "cn": "至今，直到现在"
+              }
+            ]
+          }
+        }
+      ],
+      [],
+      [
+        {
+          "s": "GRAMMAR: LINKING EXPRESSIONS",
+          "hard": false,
+          "tr": "语法：连接表达。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>GRAMMAR: LINKING EXPRESSIONS</b>（语法：连接表达）",
+            "parts": [
+              [
+                "名词",
+                "LINKING EXPRESSIONS —— 连接表达"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "linking expression 连接词、衔接语"
+            ],
+            "tip": "连接词是 Part 4 的第二把钥匙：看上下句的逻辑关系。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "B1 Preliminary candidates often make mistakes with expressions that link sentences.",
+          "hard": false,
+          "tr": "B1 Preliminary 的考生经常在连接句子的表达上出错。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>B1 Preliminary candidates often make mistakes with expressions that link sentences.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>B1 Preliminary candidates</code> —— 考生"
+              ],
+              [
+                "谓语",
+                "<code>often make mistakes</code> —— 经常出错"
+              ],
+              [
+                "介词短语",
+                "<code>with expressions that link sentences</code> —— 在连接句子的表达上"
+              ]
+            ],
+            "clauses": [
+              "that 引导定语从句"
+            ],
+            "gram": [
+              "link 连接"
+            ],
+            "tip": "转折、结果、递进 —— 每种关系都有固定的信号词。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "② Choose the correct word or phrase in these sentences.",
+          "hard": false,
+          "tr": "② 选出这些句子里正确的词或短语。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Choose the correct word or phrase in these sentences.</b>",
+            "parts": [
+              [
+                "谓语",
+                "Choose —— 选择"
+              ],
+              [
+                "宾语",
+                "<code>the correct word or phrase</code> —— 正确的词或短语"
+              ],
+              [
+                "范围",
+                "<code>in these sentences</code> —— 在这些句子里"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "correct 正确的"
+            ],
+            "tip": "先判断两句之间的逻辑关系，再选连接词。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "We decided not to buy that car because it was too big. Another/Other reason was that it was too expensive.",
+          "hard": false,
+          "tr": "我们决定不买那辆车，因为它太大。另一个原因是它太贵。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾 + 原因：<b>Another reason was that it was too expensive.</b>",
+            "parts": [
+              [
+                "分句 1",
+                "<code>We decided not to buy that car because it was too big</code> —— 我们因为车太大决定不买"
+              ],
+              [
+                "主语（空）",
+                "<code>Another</code> —— 选 Another（另一个）"
+              ],
+              [
+                "表语从句",
+                "<code>that it was too expensive</code> —— 它太贵"
+              ]
+            ],
+            "clauses": [
+              "because 原因从句；that 表语从句"
+            ],
+            "gram": [
+              "another + 单数名词 另一个"
+            ],
+            "tip": "reason 是单数名词 → another（另一个）。官方：1 Another。",
+            "note": [
+              {
+                "k": "another",
+                "cn": "（再）一个（+ 单数可数名词）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "It was the middle of the night. Although/In spite of that, the streets were crowded with people.",
+          "hard": false,
+          "tr": "那是半夜。尽管如此，街上还是挤满了人。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "让步：<b>____ that, the streets were crowded with people.</b>",
+            "parts": [
+              [
+                "背景",
+                "<code>It was the middle of the night</code> —— 那是半夜"
+              ],
+              [
+                "让步（空）",
+                "<code>In spite of that</code> —— 尽管如此"
+              ],
+              [
+                "主语",
+                "<code>the streets</code> —— 街上"
+              ],
+              [
+                "表语",
+                "<code>were crowded with people</code> —— 挤满了人"
+              ]
+            ],
+            "clauses": [
+              "让步状语"
+            ],
+            "gram": [
+              "in spite of + 名词（that 指前句）；although + 从句"
+            ],
+            "tip": "后面是 that（名词性），不是从句 → In spite of。官方：2 In spite of。",
+            "note": [
+              {
+                "k": "in spite of",
+                "cn": "尽管（+ 名词/动名词，不跟从句）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "There was writing on the wall of the cave. What/Which it said was impossible to read.",
+          "hard": false,
+          "tr": "洞穴墙上有字。上面写的是什么没法看清。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主语从句：<b>____ it said was impossible to read.</b>",
+            "parts": [
+              [
+                "背景",
+                "<code>There was writing on the wall of the cave</code> —— 洞壁上有字"
+              ],
+              [
+                "主语从句（空）",
+                "<code>What</code> —— 选 What（它说的内容）"
+              ],
+              [
+                "表语",
+                "<code>was impossible to read</code> —— 没法看清"
+              ]
+            ],
+            "clauses": [
+              "主语从句作主语"
+            ],
+            "gram": [
+              "what 引导主语从句（which 需有选择范围）"
+            ],
+            "tip": "「它说的内容」没有选择范围 → What。官方：3 What。",
+            "note": [
+              {
+                "k": "what",
+                "cn": "什么（引导主语/宾语从句）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "The morning was sunny and hot. So/However, in the afternoon it became cold and wet.",
+          "hard": false,
+          "tr": "早上又晴又热。然而，下午变得又冷又湿。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "转折：<b>____, in the afternoon it became cold and wet.</b>",
+            "parts": [
+              [
+                "背景",
+                "<code>The morning was sunny and hot</code> —— 早上又晴又热"
+              ],
+              [
+                "转折（空）",
+                "<code>However</code> —— 选 However（然而）"
+              ],
+              [
+                "主语",
+                "<code>it</code> —— 天气"
+              ],
+              [
+                "系动词",
+                "<code>became</code> —— 变得"
+              ],
+              [
+                "表语",
+                "<code>cold and wet</code> —— 又冷又湿"
+              ]
+            ],
+            "clauses": [
+              "转折副词"
+            ],
+            "gram": [
+              "however 然而（前后对比）；so 表结果"
+            ],
+            "tip": "晴热 ↔ 冷湿是对比 → However。官方：4 However。",
+            "note": [
+              {
+                "k": "however",
+                "cn": "然而（转折副词，后面加逗号）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Our plan was to get to the station early, but we missed the train. Also/Instead, we went by bus.",
+          "hard": false,
+          "tr": "我们本打算早点到车站，但错过了火车。于是我们改坐巴士。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "替代：<b>____, we went by bus.</b>",
+            "parts": [
+              [
+                "背景",
+                "<code>Our plan was to get to the station early, but we missed the train</code> —— 本想早到但错过火车"
+              ],
+              [
+                "替代（空）",
+                "<code>Instead</code> —— 选 Instead（改为）"
+              ],
+              [
+                "主语",
+                "<code>we</code> —— 我们"
+              ],
+              [
+                "谓语",
+                "<code>went by bus</code> —— 坐巴士去了"
+              ]
+            ],
+            "clauses": [
+              "instead 表替代"
+            ],
+            "gram": [
+              "instead 反而、改为（单独用）；instead of + 名词"
+            ],
+            "tip": "火车没赶上 → 改为坐巴士 → Instead。官方：5 Instead。",
+            "note": [
+              {
+                "k": "instead",
+                "cn": "反而，代替（单独用；instead of + 名词）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "We'd better get some food. Therefore/Otherwise, we'll be hungry later.",
+          "hard": false,
+          "tr": "我们最好弄点吃的。否则，等会儿会饿。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "否则：<b>____, we'll be hungry later.</b>",
+            "parts": [
+              [
+                "背景",
+                "<code>We'd better get some food</code> —— 最好弄点吃的"
+              ],
+              [
+                "否则（空）",
+                "<code>Otherwise</code> —— 选 Otherwise（否则）"
+              ],
+              [
+                "主语",
+                "<code>we</code> —— 我们"
+              ],
+              [
+                "谓语",
+                "<code>'ll be hungry later</code> —— 等会儿会饿"
+              ]
+            ],
+            "clauses": [
+              "otherwise 表反面条件"
+            ],
+            "gram": [
+              "otherwise 否则（= if not）；therefore 因此"
+            ],
+            "tip": "「不弄吃的 → 就会饿」是反面条件 → Otherwise。官方：6 Otherwise。",
+            "note": [
+              {
+                "k": "otherwise",
+                "cn": "否则"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "FOCUS: USING SYNONYMS AND LINKING EXPRESSIONS AS CLUES",
+          "hard": false,
+          "tr": "重点：用同义词和连接词当线索。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>FOCUS: USING SYNONYMS AND LINKING EXPRESSIONS AS CLUES</b>",
+            "parts": [
+              [
+                "动名词",
+                "<code>USING SYNONYMS AND LINKING EXPRESSIONS</code> —— 用同义词和连接词"
+              ],
+              [
+                "介词短语",
+                "<code>AS CLUES</code> —— 作为线索"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "clue 线索"
+            ],
+            "tip": "选句题：上一句的同义词和连接词告诉你下一句该接什么。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "③ Match sentences 1–3 with sentences A–D to form a complete paragraph. There's one sentence which you don't need to use. Look for synonyms and linking expressions to help you.",
+          "hard": true,
+          "tr": "③ 把句子 1–3 与 A–D 配成一段完整的段落。有一句你不需要用。找同义词和连接词来帮你。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Match sentences 1–3 with sentences A–D to form a complete paragraph.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Match sentences 1–3 with sentences A–D</code> —— 把 1–3 与 A–D 配对"
+              ],
+              [
+                "目的",
+                "<code>to form a complete paragraph</code> —— 组成完整段落"
+              ],
+              [
+                "补充",
+                "<code>There's one sentence which you don't need to use</code> —— 有一句不用"
+              ],
+              [
+                "谓语 2",
+                "<code>Look for synonyms and linking expressions</code> —— 找同义词和连接词"
+              ]
+            ],
+            "clauses": [
+              "which 定语从句"
+            ],
+            "gram": [
+              "paragraph 段落"
+            ],
+            "tip": "答案：1→C / 2→D / 3→A；B 用不上（没有理由句）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "1 Lucas was hoping to spend the morning taking it easy at home.",
+          "hard": false,
+          "tr": "1 Lucas 本希望上午在家放松地度过。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>Lucas was hoping to spend the morning taking it easy at home.</b>",
+            "parts": [
+              [
+                "主语",
+                "Lucas —— 人名"
+              ],
+              [
+                "谓语",
+                "<code>was hoping to spend</code> —— 希望度过"
+              ],
+              [
+                "宾语",
+                "<code>the morning taking it easy at home</code> —— 上午在家放松地过"
+              ]
+            ],
+            "clauses": [
+              "hope to do sth；spend … doing"
+            ],
+            "gram": [
+              "take it easy 放轻松"
+            ],
+            "tip": "「在家放松」→ C 的 his plans for a relaxing Sunday（他的放松计划）是同义替换。官方：1→C。",
+            "note": [
+              {
+                "k": "take it easy",
+                "cn": "放轻松"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "2 It was from Jake, who was walking in the countryside, and he sounded worried.",
+          "hard": false,
+          "tr": "2 是 Jake 打来的，他正在乡间徒步，听起来很担心。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>It was from Jake, who was walking in the countryside, and he sounded worried.</b>",
+            "parts": [
+              [
+                "主语",
+                "It —— 它（电话）"
+              ],
+              [
+                "表语",
+                "<code>was from Jake</code> —— 是 Jake 打来的"
+              ],
+              [
+                "定语从句",
+                "<code>who was walking in the countryside</code> —— 正在乡间徒步"
+              ],
+              [
+                "并列分句",
+                "<code>and he sounded worried</code> —— 听起来很担心"
+              ]
+            ],
+            "clauses": [
+              "who 非限制性定语从句"
+            ],
+            "gram": [
+              "sound worried 听起来担心"
+            ],
+            "tip": "「他听起来担心」→ D 的 So Lucas asked him what was wrong（问他怎么了）。官方：2→D。",
+            "note": [
+              {
+                "k": "countryside",
+                "cn": "乡村，乡下"
+              },
+              {
+                "k": "worried",
+                "cn": "担心的"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "3 Jake replied that he was by himself in cold, thick fog and was completely lost.",
+          "hard": false,
+          "tr": "3 Jake 回答说，他一个人身处又冷又浓的雾里，完全迷路了。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>Jake replied that he was by himself in cold, thick fog and was completely lost.</b>",
+            "parts": [
+              [
+                "主语",
+                "Jake —— 人名"
+              ],
+              [
+                "谓语",
+                "replied —— 回答"
+              ],
+              [
+                "宾语从句",
+                "<code>he was by himself in cold, thick fog and was completely lost</code> —— 他独自在浓雾里、完全迷路"
+              ]
+            ],
+            "clauses": [
+              "that 宾语从句"
+            ],
+            "gram": [
+              "by himself 独自",
+              "thick fog 浓雾",
+              "lost 迷路的"
+            ],
+            "tip": "「独自、迷路」→ A 的 his friend out there on his own（朋友独自在外）。官方：3→A。",
+            "note": [
+              {
+                "k": "thick fog",
+                "cn": "浓雾"
+              },
+              {
+                "k": "lost",
+                "cn": "丢失的；迷路的"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Work in pairs. Highlight the linking expressions, synonyms and reference words that help link each correct sentence A–D with 1–3. Which words tell you why one of them doesn't fit any of 1–3?",
+          "hard": true,
+          "tr": "两人一组。标出帮助把 A–D 与 1–3 连起来的连接词、同义词和指代词。哪些词告诉你为什么有一句不适合 1–3 里的任何一句？",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句 + 疑问句：<b>Highlight the linking expressions, synonyms and reference words …</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Highlight the linking expressions, synonyms and reference words</code> —— 标出连接词、同义词和指代词"
+              ],
+              [
+                "定语从句",
+                "<code>that help link each correct sentence A–D with 1–3</code> —— 帮助把 A–D 与 1–3 连起来的"
+              ],
+              [
+                "疑问句",
+                "<code>Which words tell you why one of them doesn't fit any of 1–3?</code> —— 哪些词说明有一句不适合？"
+              ]
+            ],
+            "clauses": [
+              "that 定语从句"
+            ],
+            "gram": [
+              "reference word 指代词（he/that/it…）"
+            ],
+            "tip": "B（That was why he was alone in the hills in winter）没有理由支撑 —— 前文没说「他为什么会在那儿」。",
+            "note": [
+              {
+                "k": "highlight",
+                "cn": "标出，高亮"
+              },
+              {
+                "k": "reference",
+                "cn": "指代，引用"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Exam Practice Test 2 · Reading Part 4",
+          "hard": false,
+          "tr": "考试实践测试 2 · 阅读第 4 部分。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题行：<b>Exam Practice Test 2 · Reading Part 4</b>",
+            "parts": [
+              [
+                "标题",
+                "Exam Practice Test 2 —— 考试实践测试编号"
+              ],
+              [
+                "标题",
+                "Reading Part 4 —— 阅读第 4 部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式省略句"
+            ],
+            "tip": "文章挖掉 5 句（16–20），从 A–H 里选，三句用不上。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Questions 16–20",
+          "hard": false,
+          "tr": "第 16–20 题。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题：<b>Questions 16–20</b>（第 16–20 题）",
+            "parts": [
+              [
+                "名词",
+                "Questions —— 题目"
+              ],
+              [
+                "数字",
+                "16–20 —— 第 16 到第 20 题"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "真题部分题号连续编号"
+            ],
+            "tip": "五道题 = 五个空。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Five sentences have been removed from the text below. For each question, choose the correct answer. There are three extra sentences which you do not need to use.",
+          "hard": false,
+          "tr": "下面这篇文章被拿掉了五句话。每题选出一个正确答案。有三句多余的句子不需要用。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "被动句 + 祈使句：<b>Five sentences have been removed from the text below.</b>",
+            "parts": [
+              [
+                "分句 1",
+                "<code>Five sentences have been removed from the text below</code> —— 五句话被从下面的文章里拿掉"
+              ],
+              [
+                "祈使句",
+                "<code>choose the correct answer</code> —— 选出正确答案"
+              ],
+              [
+                "补充",
+                "<code>There are three extra sentences which you do not need to use</code> —— 有三句多余的不用"
+              ]
+            ],
+            "clauses": [
+              "现在完成时被动；which 定语从句"
+            ],
+            "gram": [
+              "remove 拿掉，移除"
+            ],
+            "tip": "选句三看：看同义词、看连接词、看指代词（it/he/that…）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "The story of the carrot and the ring",
+          "hard": false,
+          "tr": "胡萝卜和戒指的故事。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题：<b>The story of the carrot and the ring</b>（胡萝卜和戒指的故事）",
+            "parts": [
+              [
+                "名词",
+                "The story —— 故事"
+              ],
+              [
+                "主题",
+                "<code>the carrot and the ring</code> —— 胡萝卜和戒指"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "carrot 胡萝卜"
+            ],
+            "tip": "预告：胡萝卜和戒指怎么会扯上关系？",
+            "note": [
+              {
+                "k": "carrot",
+                "cn": "胡萝卜"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Have you ever lost something that was precious to you, and thought you'd never see it again?",
+          "hard": false,
+          "tr": "你有没有丢过对你来说很珍贵的东西，还以为再也见不到了？",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "疑问句：<b>Have you ever lost something that was precious to you …?</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Have you ever lost</code> —— 你有没有丢过"
+              ],
+              [
+                "宾语",
+                "<code>something that was precious to you</code> —— 对你很珍贵的东西"
+              ],
+              [
+                "并列谓语",
+                "<code>and thought you'd never see it again</code> —— 还以为再也见不到它"
+              ]
+            ],
+            "clauses": [
+              "that 定语从句"
+            ],
+            "gram": [
+              "be precious to sb. 对某人来说很珍贵"
+            ],
+            "tip": "开场提问 —— 引出「失而复得」的主题。",
+            "note": [
+              {
+                "k": "precious",
+                "cn": "珍贵的（be precious to sb. 对某人来说很珍贵）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "That's what happened to Mary Grams from Canada.",
+          "hard": false,
+          "tr": "这就是加拿大 Mary Grams 遇到的事。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>That's what happened to Mary Grams from Canada.</b>",
+            "parts": [
+              [
+                "主语",
+                "That —— 那（丢东西）"
+              ],
+              [
+                "表语从句",
+                "<code>what happened to Mary Grams from Canada</code> —— 发生在加拿大 Mary Grams 身上的事"
+              ]
+            ],
+            "clauses": [
+              "what 表语从句"
+            ],
+            "gram": [
+              "happen to sb. 发生在某人身上"
+            ],
+            "tip": "引出主角 Mary。",
+            "note": [
+              {
+                "k": "happen to",
+                "cn": "发生在某人身上（Sth. happen to sb. 某事情发生在某人身上）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Mary had worn her engagement ring for more than half a century when she suddenly lost it.",
+          "hard": false,
+          "tr": "Mary 的订婚戒指戴了半个多世纪，有一天她突然把它弄丢了。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>Mary had worn her engagement ring for more than half a century when she suddenly lost it.</b>",
+            "parts": [
+              [
+                "主语",
+                "Mary —— 人名"
+              ],
+              [
+                "谓语",
+                "<code>had worn</code> —— 戴了（过去完成时）"
+              ],
+              [
+                "宾语",
+                "<code>her engagement ring</code> —— 她的订婚戒指"
+              ],
+              [
+                "时间",
+                "<code>for more than half a century</code> —— 半个多世纪"
+              ],
+              [
+                "时间从句",
+                "<code>when she suddenly lost it</code> —— 当她突然弄丢它时"
+              ]
+            ],
+            "clauses": [
+              "when 时间从句；过去完成时"
+            ],
+            "gram": [
+              "engagement ring 订婚戒指",
+              "century 世纪"
+            ],
+            "tip": "「戴了半个多世纪」—— 戒指很有纪念意义。",
+            "note": [
+              {
+                "k": "engagement ring",
+                "cn": "订婚戒指"
+              },
+              {
+                "k": "more than",
+                "cn": "超过"
+              },
+              {
+                "k": "century",
+                "cn": "世纪，百年"
+              },
+              {
+                "k": "wear",
+                "cn": "穿，戴（wear-wore-worn）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "She was working in her garden on the family farm one day, pulling out a plant. {16}",
+          "hard": false,
+          "tr": "有一天她在家里的农场花园里干活，正拔一棵植物。〔16〕",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "过去进行时：<b>She was working in her garden on the family farm one day, pulling out a plant.</b>",
+            "parts": [
+              [
+                "主语",
+                "She —— 她"
+              ],
+              [
+                "谓语",
+                "<code>was working in her garden on the family farm</code> —— 在农场花园里干活"
+              ],
+              [
+                "伴随",
+                "<code>pulling out a plant</code> —— 拔一棵植物"
+              ],
+              [
+                "空位",
+                "{16} —— 从 A–H 里选一句"
+              ]
+            ],
+            "clauses": [
+              "过去进行时；现在分词作伴随"
+            ],
+            "gram": [
+              "pull out 拔出"
+            ],
+            "tip": "「拔植物」正是掉戒指的瞬间 → 16 选 C（And that was probably when the ring came off her finger）。",
+            "note": [
+              {
+                "k": "pull out",
+                "cn": "拔出某物（pull out sth.）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "When she discovered it was missing, she searched everywhere for it for days, before finally giving up.",
+          "hard": false,
+          "tr": "当她发现戒指不见了，她到处找了好几天，最后只好放弃。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "主谓：<b>she searched everywhere for it for days, before finally giving up.</b>",
+            "parts": [
+              [
+                "时间从句",
+                "<code>When she discovered it was missing</code> —— 当她发现它不见了"
+              ],
+              [
+                "谓语",
+                "<code>searched everywhere for it for days</code> —— 到处找了好几天"
+              ],
+              [
+                "时间",
+                "<code>before finally giving up</code> —— 在最终放弃之前"
+              ]
+            ],
+            "clauses": [
+              "when 时间从句；before + doing"
+            ],
+            "gram": [
+              "search for 搜索",
+              "give up 放弃"
+            ],
+            "tip": "「找了几天、放弃」—— 衬托后面的惊喜。",
+            "note": [
+              {
+                "k": "search for",
+                "cn": "搜索某物"
+              },
+              {
+                "k": "give up",
+                "cn": "放弃"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Mary realised she probably wasn't going to find the ring again.",
+          "hard": false,
+          "tr": "Mary 意识到她大概再也找不回那枚戒指了。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>Mary realised she probably wasn't going to find the ring again.</b>",
+            "parts": [
+              [
+                "主语",
+                "Mary —— 人名"
+              ],
+              [
+                "谓语",
+                "realised —— 意识到"
+              ],
+              [
+                "宾语从句",
+                "<code>she probably wasn't going to find the ring again</code> —— 她大概再也找不到了"
+              ]
+            ],
+            "clauses": [
+              "that 省略的宾语从句"
+            ],
+            "gram": [
+              "realise 意识到"
+            ],
+            "tip": "找不到 → 接下来要想办法。",
+            "note": [
+              {
+                "k": "realise",
+                "cn": "意识到"
+              }
+            ]
+          }
+        },
+        {
+          "s": "So she decided not to tell anyone about what had happened, apart from her son.",
+          "hard": false,
+          "tr": "所以她决定除了儿子，不把这件事告诉任何人。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>she decided not to tell anyone about what had happened, apart from her son.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>decided not to tell anyone</code> —— 决定不告诉任何人"
+              ],
+              [
+                "宾语从句",
+                "<code>what had happened</code> —— 发生了什么"
+              ],
+              [
+                "补充",
+                "<code>apart from her son</code> —— 除了她儿子"
+              ]
+            ],
+            "clauses": [
+              "what 宾语从句"
+            ],
+            "gram": [
+              "apart from 除了"
+            ],
+            "tip": "「只告诉儿子」—— 为后文家人不知情埋伏笔。",
+            "note": [
+              {
+                "k": "apart from",
+                "cn": "除了"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Instead, she thought she would replace it with a much cheaper ring from a jeweller's. {17}",
+          "hard": false,
+          "tr": "于是她想，不如去珠宝店买一枚便宜得多的戒指来代替它。〔17〕",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>she thought she would replace it with a much cheaper ring from a jeweller's.</b>",
+            "parts": [
+              [
+                "状语",
+                "Instead —— 改为"
+              ],
+              [
+                "谓语",
+                "<code>she thought</code> —— 她想"
+              ],
+              [
+                "宾语从句",
+                "<code>she would replace it with a much cheaper ring from a jeweller's</code> —— 用珠宝店买来的便宜戒指替换它"
+              ]
+            ],
+            "clauses": [
+              "that 省略的宾语从句"
+            ],
+            "gram": [
+              "replace 代替",
+              "jeweller 珠宝商"
+            ],
+            "tip": "「买便宜戒指替代」→ 17 选 H（Luckily, she managed to find another one that looked just like it）。",
+            "note": [
+              {
+                "k": "replace",
+                "cn": "代替"
+              },
+              {
+                "k": "jeweller",
+                "cn": "珠宝商，宝石匠"
+              }
+            ]
+          }
+        },
+        {
+          "s": "In fact, it was so similar that no-one else in her family even knew her original ring was missing.",
+          "hard": false,
+          "tr": "事实上，那枚戒指太像了，家里其他人甚至不知道她的原戒指丢了。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表 + 结果：<b>it was so similar that no-one else in her family even knew her original ring was missing.</b>",
+            "parts": [
+              [
+                "状语",
+                "<code>In fact</code> —— 事实上"
+              ],
+              [
+                "表语",
+                "<code>so similar</code> —— 如此相似"
+              ],
+              [
+                "结果从句",
+                "<code>that no-one else in her family even knew her original ring was missing</code> —— 以至于家里没人知道原戒指丢了"
+              ]
+            ],
+            "clauses": [
+              "so … that 结果从句"
+            ],
+            "gram": [
+              "be similar 相似",
+              "original 原来的"
+            ],
+            "tip": "「太像了」← 指代 H 的 another one（新戒指）。",
+            "note": [
+              {
+                "k": "in fact",
+                "cn": "实际上，事实上"
+              },
+              {
+                "k": "be similar",
+                "cn": "相似的"
+              },
+              {
+                "k": "original ring",
+                "cn": "原始的戒指"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "But the story has a happy ending.",
+          "hard": false,
+          "tr": "但这个故事有一个快乐的结局。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>But the story has a happy ending.</b>",
+            "parts": [
+              [
+                "转折",
+                "But —— 但是"
+              ],
+              [
+                "主语",
+                "<code>the story</code> —— 故事"
+              ],
+              [
+                "谓语",
+                "has —— 有"
+              ],
+              [
+                "宾语",
+                "<code>a happy ending</code> —— 快乐的结局"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "happy ending 快乐的结局"
+            ],
+            "tip": "转折句 —— 提醒下面要反转了。"
+          }
+        },
+        {
+          "s": "Mary eventually got her engagement ring back – 13 years after it was lost!",
+          "hard": false,
+          "tr": "Mary 最终找回了她的订婚戒指——在丢失 13 年之后！",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>Mary eventually got her engagement ring back – 13 years after it was lost!</b>",
+            "parts": [
+              [
+                "主语",
+                "Mary —— 人名"
+              ],
+              [
+                "谓语",
+                "<code>eventually got her engagement ring back</code> —— 最终拿回"
+              ],
+              [
+                "宾语",
+                "<code>her engagement ring</code> —— 她的订婚戒指"
+              ],
+              [
+                "时间",
+                "<code>13 years after it was lost</code> —— 丢失 13 年后"
+              ]
+            ],
+            "clauses": [
+              "after 时间从句；被动语态"
+            ],
+            "gram": [
+              "eventually 最终"
+            ],
+            "tip": "13 年后失而复得 —— 怎么找到的？往下看。",
+            "note": [
+              {
+                "k": "eventually",
+                "cn": "最终，结果"
+              }
+            ]
+          }
+        },
+        {
+          "s": "One day Mary's daughter-in-law Colleen was working in the same garden where Mary had been all those years ago. {18}",
+          "hard": true,
+          "tr": "有一天，Mary 的儿媳 Colleen 在 Mary 多年前待过的同一个花园里干活。〔18〕",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "过去进行时：<b>Colleen was working in the same garden where Mary had been all those years ago.</b>",
+            "parts": [
+              [
+                "时间",
+                "<code>One day</code> —— 有一天"
+              ],
+              [
+                "主语",
+                "<code>Mary's daughter-in-law Colleen</code> —— Mary 的儿媳 Colleen"
+              ],
+              [
+                "谓语",
+                "<code>was working in the same garden</code> —— 在同一个花园干活"
+              ],
+              [
+                "定语从句",
+                "<code>where Mary had been all those years ago</code> —— Mary 多年前待过的地方"
+              ],
+              [
+                "空位",
+                "{18} —— 从 A–H 里选一句"
+              ]
+            ],
+            "clauses": [
+              "where 定语从句；过去完成时"
+            ],
+            "gram": [
+              "daughter-in-law 儿媳妇"
+            ],
+            "tip": "「在同一个花园干活」→ 18 选 A（She was digging up vegetables there when she discovered the ring）。",
+            "note": [
+              {
+                "k": "daughter-in-law",
+                "cn": "儿媳妇"
+              }
+            ]
+          }
+        },
+        {
+          "s": "But this time it looked a bit different – because there was a carrot growing right through the middle of it!",
+          "hard": false,
+          "tr": "但这次它看起来有点不一样——因为有一根胡萝卜正好从它中间长了出来！",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表 + 原因：<b>it looked a bit different – because there was a carrot growing right through the middle of it!</b>",
+            "parts": [
+              [
+                "主语",
+                "it —— 它（戒指）"
+              ],
+              [
+                "表语",
+                "<code>looked a bit different</code> —— 看起来有点不一样"
+              ],
+              [
+                "原因从句",
+                "<code>because there was a carrot growing right through the middle of it</code> —— 因为一根胡萝卜从它中间长出来"
+              ]
+            ],
+            "clauses": [
+              "because 原因从句"
+            ],
+            "gram": [
+              "a bit 有一点（修饰形容词）"
+            ],
+            "tip": "「戒指中间长出胡萝卜」—— 标题的谜底。",
+            "note": [
+              {
+                "k": "a bit",
+                "cn": "有一点（修饰形容词）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "As soon as Colleen saw the ring, she knew immediately who the owner was.",
+          "hard": false,
+          "tr": "Colleen 一看到戒指，立刻就知道主人是谁。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>As soon as Colleen saw the ring, she knew immediately who the owner was.</b>",
+            "parts": [
+              [
+                "时间从句",
+                "<code>As soon as Colleen saw the ring</code> —— 一看到戒指"
+              ],
+              [
+                "谓语",
+                "<code>knew immediately</code> —— 立刻知道"
+              ],
+              [
+                "宾语从句",
+                "<code>who the owner was</code> —— 主人是谁"
+              ]
+            ],
+            "clauses": [
+              "as soon as 一……就；who 宾语从句"
+            ],
+            "gram": [
+              "owner 主人"
+            ],
+            "tip": "「立刻知道主人是谁」—— 为什么这么确定？",
+            "note": [
+              {
+                "k": "owner",
+                "cn": "主人，所有者"
+              }
+            ]
+          }
+        },
+        {
+          "s": "The farm had been in the family for over 100 years. {19}",
+          "hard": false,
+          "tr": "这个农场属于这个家族已经超过 100 年。〔19〕",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表（过去完成时）：<b>The farm had been in the family for over 100 years.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>The farm</code> —— 农场"
+              ],
+              [
+                "系动词",
+                "<code>had been in the family</code> —— 一直属于这个家族"
+              ],
+              [
+                "时间",
+                "<code>for over 100 years</code> —— 超过 100 年"
+              ],
+              [
+                "空位",
+                "{19} —— 从 A–H 里选一句"
+              ]
+            ],
+            "clauses": [
+              "过去完成时"
+            ],
+            "gram": [
+              "over 100 years 超过 100 年"
+            ],
+            "tip": "「100 多年」→ 19 选 F（And only two women had lived there in all that time）。"
+          }
+        },
+        {
+          "s": "So when Colleen discovered the story of the lost ring, it became clear there was only one person it could possibly have belonged to, and the ring was returned to Mary.",
+          "hard": true,
+          "tr": "所以当 Colleen 得知丢戒指的故事后，很明显只可能属于一个人，戒指就这样还给了 Mary。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "结果句：<b>it became clear there was only one person it could possibly have belonged to, and the ring was returned to Mary.</b>",
+            "parts": [
+              [
+                "时间从句",
+                "<code>when Colleen discovered the story of the lost ring</code> —— 当 Colleen 得知丢戒指的故事"
+              ],
+              [
+                "分句",
+                "<code>it became clear there was only one person it could possibly have belonged to</code> —— 很明显只可能属于一个人"
+              ],
+              [
+                "主语",
+                "<code>the ring</code> —— 戒指"
+              ],
+              [
+                "谓语",
+                "<code>was returned to Mary</code> —— 还给了 Mary"
+              ]
+            ],
+            "clauses": [
+              "it became clear that…；定语从句；被动语态"
+            ],
+            "gram": [
+              "belong to 属于",
+              "return to 归还"
+            ],
+            "tip": "「只可能属于一个人」← 指代 F 的 only two women（两个女人中的另一个）。",
+            "note": [
+              {
+                "k": "belong to",
+                "cn": "属于"
+              },
+              {
+                "k": "return to",
+                "cn": "归还某人（return to sb.）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Mary decided to remove her ring from the carrot and wear it again. {20}",
+          "hard": false,
+          "tr": "Mary 决定把戒指从胡萝卜上取下来重新戴上。〔20〕",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>Mary decided to remove her ring from the carrot and wear it again.</b>",
+            "parts": [
+              [
+                "主语",
+                "Mary —— 人名"
+              ],
+              [
+                "谓语",
+                "<code>decided to remove her ring from the carrot and wear it again</code> —— 决定取下并戴上"
+              ],
+              [
+                "宾语",
+                "<code>her ring from the carrot</code> —— 戒指从胡萝卜上"
+              ],
+              [
+                "空位",
+                "{20} —— 从 A–H 里选一句"
+              ]
+            ],
+            "clauses": [
+              "decide to do sth"
+            ],
+            "gram": [
+              "remove sth. from sth. 把某物从某物拿开"
+            ],
+            "tip": "「取下戒指」→ 20 选 D（So she carefully cut the carrot in half）。",
+            "note": [
+              {
+                "k": "remove",
+                "cn": "拿开（remove sth. from sth. 把某物从某物拿开）"
+              }
+            ]
+          }
+        },
+        {
+          "s": "Then the ring was washed, and Mary put it back on her finger – and it still fitted perfectly!",
+          "hard": false,
+          "tr": "然后戒指被洗干净，Mary 把它重新戴回手指——它依然完美贴合！",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "被动 + 并列：<b>the ring was washed, and Mary put it back on her finger – and it still fitted perfectly!</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>the ring</code> —— 戒指"
+              ],
+              [
+                "谓语",
+                "<code>was washed</code> —— 被洗净"
+              ],
+              [
+                "分句 2",
+                "<code>and Mary put it back on her finger</code> —— Mary 把它戴回手指"
+              ],
+              [
+                "分句 3",
+                "<code>and it still fitted perfectly</code> —— 依然完美贴合"
+              ]
+            ],
+            "clauses": [
+              "被动语态"
+            ],
+            "gram": [
+              "fit 合适"
+            ],
+            "tip": "「依然完美贴合」—— 故事的圆满收尾。",
+            "note": [
+              {
+                "k": "fit",
+                "cn": "合适"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "A She was digging up vegetables there when she discovered the ring.",
+          "hard": false,
+          "tr": "A 她正在那里挖菜，这时发现了那枚戒指。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "过去进行时：<b>She was digging up vegetables there when she discovered the ring.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>was digging up vegetables there</code> —— 在那里挖菜"
+              ],
+              [
+                "时间从句",
+                "<code>when she discovered the ring</code> —— 这时发现了戒指"
+              ]
+            ],
+            "clauses": [
+              "when 时间从句"
+            ],
+            "gram": [
+              "dig up 挖掘"
+            ],
+            "tip": "对应 18（同一个花园干活 → 挖出戒指）。",
+            "note": [
+              {
+                "k": "dig up",
+                "cn": "挖掘，找到"
+              }
+            ]
+          }
+        },
+        {
+          "s": "B That gave her a very good idea about what to do with the carrot.",
+          "hard": false,
+          "tr": "B 这给了她一个处理胡萝卜的好主意。",
+          "ana": {
+            "pat": [
+              "主谓双宾"
+            ],
+            "frame": "主谓双宾：<b>That gave her a very good idea about what to do with the carrot.</b>",
+            "parts": [
+              [
+                "主语",
+                "That —— 那（戒指长在胡萝卜里）"
+              ],
+              [
+                "谓语",
+                "gave —— 给了"
+              ],
+              [
+                "间接宾语",
+                "her —— 她"
+              ],
+              [
+                "直接宾语",
+                "<code>a very good idea about what to do with the carrot</code> —— 一个处理胡萝卜的好主意"
+              ]
+            ],
+            "clauses": [
+              "what 宾语从句"
+            ],
+            "gram": [
+              "do with 处理"
+            ],
+            "tip": "多余句 ✗：文章里没有「给主意」的上下文。"
+          }
+        },
+        {
+          "s": "C And that was probably when the ring came off her finger.",
+          "hard": false,
+          "tr": "C 那大概就是戒指从她手指上脱落的时候。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表：<b>And that was probably when the ring came off her finger.</b>",
+            "parts": [
+              [
+                "主语",
+                "that —— 那（拔植物的瞬间）"
+              ],
+              [
+                "表语从句",
+                "<code>when the ring came off her finger</code> —— 戒指脱落的时候"
+              ]
+            ],
+            "clauses": [
+              "when 表语从句"
+            ],
+            "gram": [
+              "come off 脱落"
+            ],
+            "tip": "对应 16（拔植物 = 戒指脱落的瞬间）。",
+            "note": [
+              {
+                "k": "come off",
+                "cn": "脱落"
+              }
+            ]
+          }
+        },
+        {
+          "s": "D So she carefully cut the carrot in half.",
+          "hard": false,
+          "tr": "D 于是她小心地把胡萝卜切成两半。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>So she carefully cut the carrot in half.</b>",
+            "parts": [
+              [
+                "状语",
+                "So —— 于是"
+              ],
+              [
+                "主语",
+                "she —— 她"
+              ],
+              [
+                "谓语",
+                "<code>carefully cut</code> —— 小心地切"
+              ],
+              [
+                "宾语",
+                "<code>the carrot</code> —— 胡萝卜"
+              ],
+              [
+                "补充",
+                "<code>in half</code> —— 成两半"
+              ]
+            ],
+            "clauses": [
+              "so 结果"
+            ],
+            "gram": [
+              "in half 成两半"
+            ],
+            "tip": "对应 20（取下戒指 → 切开胡萝卜）。"
+          }
+        },
+        {
+          "s": "E She had never seen anything like it before.",
+          "hard": false,
+          "tr": "E 她以前从没见过这样的东西。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>She had never seen anything like it before.</b>",
+            "parts": [
+              [
+                "主语",
+                "She —— 她"
+              ],
+              [
+                "谓语",
+                "<code>had never seen</code> —— 从没见过"
+              ],
+              [
+                "宾语",
+                "<code>anything like it</code> —— 像它这样的东西"
+              ],
+              [
+                "时间",
+                "before —— 以前"
+              ]
+            ],
+            "clauses": [
+              "过去完成时"
+            ],
+            "gram": [
+              "anything like it 像这样的东西"
+            ],
+            "tip": "多余句 ✗：文章里没有「从没见过」的语境（Colleen 认得戒指）。"
+          }
+        },
+        {
+          "s": "F And only two women had lived there in all that time.",
+          "hard": false,
+          "tr": "F 而在那段时间里，只有两个女人在那里住过。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "主谓：<b>only two women had lived there in all that time.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>only two women</code> —— 只有两个女人"
+              ],
+              [
+                "谓语",
+                "<code>had lived there</code> —— 在那里住过"
+              ],
+              [
+                "时间",
+                "<code>in all that time</code> —— 在那整个时期里"
+              ]
+            ],
+            "clauses": [
+              "过去完成时"
+            ],
+            "gram": [
+              "in all that time 在那整个时期里"
+            ],
+            "tip": "对应 19（100 多年 → 只住过两个女人）。"
+          }
+        },
+        {
+          "s": "G It was tiring work, as some of them were very big.",
+          "hard": false,
+          "tr": "G 这活儿很累人，因为有些个头很大。",
+          "ana": {
+            "pat": [
+              "主系表"
+            ],
+            "frame": "主系表 + 原因：<b>It was tiring work, as some of them were very big.</b>",
+            "parts": [
+              [
+                "表语",
+                "<code>tiring work</code> —— 累人的活儿"
+              ],
+              [
+                "原因从句",
+                "<code>as some of them were very big</code> —— 因为有些（胡萝卜）很大"
+              ]
+            ],
+            "clauses": [
+              "as 原因从句"
+            ],
+            "gram": [
+              "tiring 累人的"
+            ],
+            "tip": "多余句 ✗：文章没提「活儿累、个头大」。"
+          }
+        },
+        {
+          "s": "H Luckily, she managed to find another one that looked just like it.",
+          "hard": false,
+          "tr": "H 幸运的是，她设法找到了一枚看起来一模一样的。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>she managed to find another one that looked just like it.</b>",
+            "parts": [
+              [
+                "状语",
+                "Luckily —— 幸运的是"
+              ],
+              [
+                "谓语",
+                "<code>managed to find</code> —— 设法找到"
+              ],
+              [
+                "宾语",
+                "<code>another one that looked just like it</code> —— 一枚看起来一模一样的戒指"
+              ]
+            ],
+            "clauses": [
+              "that 定语从句"
+            ],
+            "gram": [
+              "manage to do sth. 设法做成某事"
+            ],
+            "tip": "对应 17（买便宜戒指 → 找到很像的）。",
+            "note": [
+              {
+                "k": "manage to",
+                "cn": "设法做成某事（manage to do sth.）"
+              }
+            ]
+          }
+        }
+      ]
+    ],
+    "blocks": [
+      {
+        "r": "h",
+        "head": {
+          "l": "Training Test 2",
+          "r": "Reading Part 4"
+        },
+        "badge": "答案见 P201"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "o",
+        "frame": true
+      },
+      {
+        "r": "o",
+        "frame": true
+      },
+      {
+        "r": "q",
+        "pick": [
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112
+        ]
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "n": "1",
+        "pick": [
+          113
+        ]
+      },
+      {
+        "r": "q",
+        "n": "2",
+        "pick": [
+          114
+        ]
+      },
+      {
+        "r": "q",
+        "n": "3",
+        "pick": [
+          115
+        ]
+      },
+      {
+        "r": "q",
+        "n": "4",
+        "pick": [
+          116
+        ]
+      },
+      {
+        "r": "q",
+        "n": "5",
+        "pick": [
+          117
+        ]
+      },
+      {
+        "r": "q",
+        "n": "6",
+        "pick": [
+          118
+        ]
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "n": "1",
+        "img": {
+          "src": "assets/img/t2-p4-fog.png",
+          "alt": "雾中迷路的男孩插图（原书 P63）",
+          "side": "left",
+          "w": 240
+        },
+        "pick": [
+          119
+        ]
+      },
+      {
+        "r": "q",
+        "n": "2",
+        "pick": [
+          120
+        ]
+      },
+      {
+        "r": "q",
+        "n": "3",
+        "pick": [
+          121
+        ]
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "h",
+        "head": {
+          "l": "Exam Practice Test 2",
+          "r": "Reading Part 4"
+        },
+        "badge": "答案见 P201"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "h",
+        "center": true,
+        "img": {
+          "src": "assets/img/t2-p4-hands-ring.png",
+          "alt": "双手拿着戒指的插图（原书 P64）",
+          "side": "left",
+          "w": 300
+        },
+        "tip": "检查所选句子中动词的形态及单数或复数名词是否与正文相匹配。"
+      },
+      {
+        "r": "p"
+      },
+      {
+        "r": "p"
+      },
+      {
+        "r": "p"
+      },
+      {
+        "r": "p"
+      },
+      {
+        "r": "p"
+      },
+      {
+        "r": "p"
+      },
+      {
+        "r": "o",
+        "tip": "选完所有答案后，检查全文是否通顺。"
+      }
+    ]
+  },
+  "phrases": [
+    "a lack of",
+    "get better",
+    "get in touch",
+    "hardly ever",
+    "in the end",
+    "make your mind up",
+    "on your own",
+    "rather than",
+    "so far",
+    "take care of",
+    "take it easy",
+    "up-to-date",
+    "almost never",
+    "by yourself",
+    "instead of",
+    "look after",
+    "not enough",
+    "until now",
+    "in spite of",
+    "thick fog",
+    "engagement ring",
+    "more than",
+    "searched everywhere",
+    "apart from",
+    "in fact",
+    "a bit",
+    "no-one else",
+    "happy ending",
+    "daughter-in-law",
+    "fitted perfectly",
+    "came off"
+  ],
+  "glossary": {
+    "reading": {
+      "pos": "n.",
+      "ipa": "/ˈriːdɪŋ/",
+      "cn": "阅读"
+    },
+    "gaps": {
+      "pos": "n.",
+      "ipa": "/ɡæps/",
+      "cn": "空，缺口（gap 的复数）"
+    },
+    "gap": {
+      "pos": "n.",
+      "ipa": "/ɡæp/",
+      "cn": "空，缺口"
+    },
+    "sentences": {
+      "pos": "n.",
+      "ipa": "/ˈsentənsɪz/",
+      "cn": "句子（sentence 的复数）"
+    },
+    "must": {
+      "pos": "modal",
+      "ipa": "/mʌst/",
+      "cn": "必须；must not 不许"
+    },
+    "vocabulary": {
+      "pos": "n.",
+      "ipa": "/vəˈkæbjələri/",
+      "cn": "词汇"
+    },
+    "synonyms": {
+      "pos": "n.",
+      "ipa": "/ˈsɪnənɪmz/",
+      "cn": "同义词（synonym 的复数）"
+    },
+    "phrases": {
+      "pos": "n.",
+      "ipa": "/ˈfreɪzɪz/",
+      "cn": "短语（phrase 的复数）"
+    },
+    "phrase": {
+      "pos": "n.",
+      "ipa": "/freɪz/",
+      "cn": "短语"
+    },
+    "box": {
+      "pos": "n.",
+      "ipa": "/bɒks/",
+      "cn": "盒子，方框"
+    },
+    "meanings": {
+      "pos": "n.",
+      "ipa": "/ˈmiːnɪŋz/",
+      "cn": "意思（meaning 的复数）"
+    },
+    "lack": {
+      "pos": "n./v.",
+      "ipa": "/læk/",
+      "cn": "缺少（a lack of 缺少）",
+      "note": "lack of water 缺水。"
+    },
+    "a lack of": {
+      "pos": "词组",
+      "ipa": "/ə ˈlæk əv/",
+      "cn": "缺少"
+    },
+    "hardly": {
+      "pos": "adv.",
+      "ipa": "/ˈhɑːdli/",
+      "cn": "几乎不"
+    },
+    "hardly ever": {
+      "pos": "词组",
+      "ipa": "/ˌhɑːdli ˈevə/",
+      "cn": "几乎从不"
+    },
+    "ever": {
+      "pos": "adv.",
+      "ipa": "/ˈevə/",
+      "cn": "曾经；史上（best … ever 史上最好的）；ever 与 hardly 连用表「几乎从不」"
+    },
+    "mind": {
+      "pos": "v./n.",
+      "ipa": "/maɪnd/",
+      "cn": "介意（mind doing sth；don't mind 不介意）；头脑；make one's mind up 下定决心"
+    },
+    "make your mind up": {
+      "pos": "词组",
+      "ipa": "/ˌmeɪk jɔː ˈmaɪnd ʌp/",
+      "cn": "决定，做出决定"
+    },
+    "rather": {
+      "pos": "adv.",
+      "ipa": "/ˈrɑːðə/",
+      "cn": "相当，颇；宁愿（would rather do sth 宁愿做某事）",
+      "note": "rather basic 相当基础（常带委婉的贬义）；would rather 宁愿。"
+    },
+    "rather than": {
+      "pos": "词组",
+      "ipa": "/ˈrɑːðə ðæn/",
+      "cn": "而不是"
+    },
+    "care": {
+      "pos": "v./n.",
+      "ipa": "/keə/",
+      "cn": "关心；照料"
+    },
+    "take care of": {
+      "pos": "词组",
+      "ipa": "/ˌteɪk ˈkeər əv/",
+      "cn": "照顾"
+    },
+    "take it easy": {
+      "pos": "词组",
+      "ipa": "/ˌteɪk ɪt ˈiːzi/",
+      "cn": "放轻松"
+    },
+    "up-to-date": {
+      "pos": "adj.",
+      "ipa": "/ˌʌp tə ˈdeɪt/",
+      "cn": "最新的，最近的"
+    },
+    "almost": {
+      "pos": "adv.",
+      "ipa": "/ˈɔːlməʊst/",
+      "cn": "几乎"
+    },
+    "almost never": {
+      "pos": "词组",
+      "ipa": "/ˌɔːlməʊst ˈnevə/",
+      "cn": "几乎从不，几乎没有"
+    },
+    "never": {
+      "pos": "adv.",
+      "ipa": "/ˈnevə/",
+      "cn": "从不，绝不"
+    },
+    "yourself": {
+      "pos": "pron.",
+      "ipa": "/jɔːˈself/",
+      "cn": "你自己"
+    },
+    "by yourself": {
+      "pos": "词组",
+      "ipa": "/baɪ jɔːˈself/",
+      "cn": "你自己，独自"
+    },
+    "contact": {
+      "pos": "v./n.",
+      "ipa": "/ˈkɒntækt/",
+      "cn": "联系"
+    },
+    "finally": {
+      "pos": "adv.",
+      "ipa": "/ˈfaɪnəli/",
+      "cn": "最终"
+    },
+    "f": {
+      "pos": "n.",
+      "ipa": "/ef/",
+      "cn": "字母 f（选项/编号的标记）"
+    },
+    "improve": {
+      "pos": "v.",
+      "ipa": "/ɪmˈpruːv/",
+      "cn": "提高，改进（improve the posters 提高海报水平）"
+    },
+    "g": {
+      "pos": "n.",
+      "ipa": "/dʒiː/",
+      "cn": "字母 g（选项/编号的标记）"
+    },
+    "h": {
+      "pos": "n.",
+      "ipa": "/eɪtʃ/",
+      "cn": "字母 h（选项/编号的标记）"
+    },
+    "modern": {
+      "pos": "adj.",
+      "ipa": "/ˈmɒdn/",
+      "cn": "现代的；Modern Art 现代艺术"
+    },
+    "j": {
+      "pos": "n.",
+      "ipa": "/dʒeɪ/",
+      "cn": "字母 j（选项/编号的标记）"
+    },
+    "enough": {
+      "pos": "det./adv.",
+      "ipa": "/ɪˈnʌf/",
+      "cn": "足够的（not enough 不够）"
+    },
+    "not enough": {
+      "pos": "词组",
+      "ipa": "/ˌnɒt ɪˈnʌf/",
+      "cn": "不够"
+    },
+    "k": {
+      "pos": "n.",
+      "ipa": "/keɪ/",
+      "cn": "字母 k（选项/编号的标记）"
+    },
+    "relax": {
+      "pos": "v.",
+      "ipa": "/rɪˈlæks/",
+      "cn": "放松"
+    },
+    "l": {
+      "pos": "n.",
+      "ipa": "/el/",
+      "cn": "字母 l（选项/编号的标记）"
+    },
+    "until": {
+      "pos": "prep./conj.",
+      "ipa": "/ənˈtɪl/",
+      "cn": "直到……为止"
+    },
+    "until now": {
+      "pos": "词组",
+      "ipa": "/ənˌtɪl ˈnaʊ/",
+      "cn": "至今，直到现在"
+    },
+    "linking": {
+      "pos": "n.",
+      "ipa": "/ˈlɪŋkɪŋ/",
+      "cn": "连接（link 的动名词）"
+    },
+    "expressions": {
+      "pos": "n.",
+      "ipa": "/ɪkˈspreʃnz/",
+      "cn": "表达、说法（expression 的复数）"
+    },
+    "candidates": {
+      "pos": "n.",
+      "ipa": "/ˈkændɪdəts/",
+      "cn": "考生（candidate 的复数）"
+    },
+    "mistakes": {
+      "pos": "n.",
+      "ipa": "/mɪˈsteɪks/",
+      "cn": "错误（mistake 的复数）"
+    },
+    "link": {
+      "pos": "v./n.",
+      "ipa": "/lɪŋk/",
+      "cn": "连接；联系",
+      "note": "linking words 连接词。"
+    },
+    "decided": {
+      "pos": "v.",
+      "ipa": "/dɪˈsaɪdɪd/",
+      "cn": "决定（decide 的过去式）"
+    },
+    "car": {
+      "pos": "n.",
+      "ipa": "/kɑː/",
+      "cn": "汽车"
+    },
+    "another": {
+      "pos": "det./pron.",
+      "ipa": "/əˈnʌðə/",
+      "cn": "另一个；再一个（+ 单数可数名词）"
+    },
+    "reason": {
+      "pos": "n.",
+      "ipa": "/ˈriːzn/",
+      "cn": "理由，原因"
+    },
+    "expensive": {
+      "pos": "adj.",
+      "ipa": "/ɪkˈspensɪv/",
+      "cn": "昂贵的"
+    },
+    "middle": {
+      "pos": "n./adj.",
+      "ipa": "/ˈmɪdl/",
+      "cn": "中间（的）"
+    },
+    "night": {
+      "pos": "n.",
+      "ipa": "/naɪt/",
+      "cn": "夜晚"
+    },
+    "although": {
+      "pos": "conj.",
+      "ipa": "/ɔːlˈðəʊ/",
+      "cn": "虽然，尽管"
+    },
+    "spite": {
+      "pos": "n.",
+      "ipa": "/spaɪt/",
+      "cn": "恶意（in spite of 尽管）"
+    },
+    "in spite of": {
+      "pos": "词组",
+      "ipa": "/ɪn ˈspaɪt əv/",
+      "cn": "尽管（+ 名词/动名词，不跟从句）"
+    },
+    "streets": {
+      "pos": "n.",
+      "ipa": "/striːts/",
+      "cn": "街道（street 的复数）"
+    },
+    "crowded": {
+      "pos": "adj.",
+      "ipa": "/ˈkraʊdɪd/",
+      "cn": "拥挤的"
+    },
+    "writing": {
+      "pos": "n.",
+      "ipa": "/ˈraɪtɪŋ/",
+      "cn": "写作；文字作品"
+    },
+    "wall": {
+      "pos": "n.",
+      "ipa": "/wɔːl/",
+      "cn": "墙"
+    },
+    "cave": {
+      "pos": "n.",
+      "ipa": "/keɪv/",
+      "cn": "洞穴"
+    },
+    "impossible": {
+      "pos": "adj.",
+      "ipa": "/ɪmˈpɒsəbl/",
+      "cn": "不可能的"
+    },
+    "sunny": {
+      "pos": "adj.",
+      "ipa": "/ˈsʌni/",
+      "cn": "晴朗的"
+    },
+    "hot": {
+      "pos": "adj.",
+      "ipa": "/hɒt/",
+      "cn": "热的"
+    },
+    "cold": {
+      "pos": "adj./n.",
+      "ipa": "/kəʊld/",
+      "cn": "冷的；寒冷"
+    },
+    "wet": {
+      "pos": "adj.",
+      "ipa": "/wet/",
+      "cn": "潮湿的"
+    },
+    "plan": {
+      "pos": "n./v.",
+      "ipa": "/plæn/",
+      "cn": "计划"
+    },
+    "station": {
+      "pos": "n.",
+      "ipa": "/ˈsteɪʃn/",
+      "cn": "车站"
+    },
+    "missed": {
+      "pos": "v.",
+      "ipa": "/mɪst/",
+      "cn": "错过（miss 的过去式）"
+    },
+    "train": {
+      "pos": "n./v.",
+      "ipa": "/treɪn/",
+      "cn": "火车；训练",
+      "note": "作动词是「训练、培训」。"
+    },
+    "bus": {
+      "pos": "n.",
+      "ipa": "/bʌs/",
+      "cn": "公交车，公共汽车"
+    },
+    "we'd": {
+      "pos": "contr.",
+      "ipa": "/wɪd/",
+      "cn": "= we would 或 we had"
+    },
+    "food": {
+      "pos": "n.",
+      "ipa": "/fuːd/",
+      "cn": "食物"
+    },
+    "therefore": {
+      "pos": "adv.",
+      "ipa": "/ˈðeəfɔː/",
+      "cn": "因此"
+    },
+    "otherwise": {
+      "pos": "adv.",
+      "ipa": "/ˈʌðəwaɪz/",
+      "cn": "否则"
+    },
+    "hungry": {
+      "pos": "adj.",
+      "ipa": "/ˈhʌŋɡri/",
+      "cn": "饥饿的"
+    },
+    "using": {
+      "pos": "v.",
+      "ipa": "/ˈjuːzɪŋ/",
+      "cn": "使用（use 的现在分词）"
+    },
+    "clues": {
+      "pos": "n.",
+      "ipa": "/kluːz/",
+      "cn": "线索（clue 的复数）"
+    },
+    "form": {
+      "pos": "n.",
+      "ipa": "/fɔːm/",
+      "cn": "形式"
+    },
+    "paragraph": {
+      "pos": "n.",
+      "ipa": "/ˈpærəɡrɑːf/",
+      "cn": "段落"
+    },
+    "there's": {
+      "pos": "contr.",
+      "ipa": "/ðeəz/",
+      "cn": "= there is"
+    },
+    "lucas": {
+      "pos": "n.",
+      "ipa": "/ˈluːkəs/",
+      "cn": "Lucas（男子名）"
+    },
+    "hoping": {
+      "pos": "v.",
+      "ipa": "/ˈhəʊpɪŋ/",
+      "cn": "希望（hope 的现在分词）"
+    },
+    "taking": {
+      "pos": "v.",
+      "ipa": "/ˈteɪkɪŋ/",
+      "cn": "拿、度过、拍（take 的现在分词）"
+    },
+    "jake": {
+      "pos": "n.",
+      "ipa": "/dʒeɪk/",
+      "cn": "Jake（人名，男子名）"
+    },
+    "walking": {
+      "pos": "v.",
+      "ipa": "/ˈwɔːkɪŋ/",
+      "cn": "走路（walk 的现在分词）"
+    },
+    "countryside": {
+      "pos": "n.",
+      "ipa": "/ˈkʌntrisaɪd/",
+      "cn": "乡村，乡下"
+    },
+    "replied": {
+      "pos": "v.",
+      "ipa": "/rɪˈplaɪd/",
+      "cn": "回答（reply 的过去式）"
+    },
+    "himself": {
+      "pos": "pron.",
+      "ipa": "/hɪmˈself/",
+      "cn": "他自己"
+    },
+    "thick": {
+      "pos": "adj.",
+      "ipa": "/θɪk/",
+      "cn": "厚的，浓的",
+      "note": "one metre thick 一米厚。"
+    },
+    "fog": {
+      "pos": "n.",
+      "ipa": "/fɒɡ/",
+      "cn": "雾"
+    },
+    "thick fog": {
+      "pos": "词组",
+      "ipa": "/ˌθɪk ˈfɒɡ/",
+      "cn": "浓雾"
+    },
+    "lost": {
+      "pos": "adj./v.",
+      "ipa": "/lɒst/",
+      "cn": "丢失的；迷路的；输掉（lose 的过去式/过去分词）"
+    },
+    "highlight": {
+      "pos": "v.",
+      "ipa": "/ˈhaɪlaɪt/",
+      "cn": "标出，高亮"
+    },
+    "reference": {
+      "pos": "n.",
+      "ipa": "/ˈrefrəns/",
+      "cn": "指代，引用"
+    },
+    "words": {
+      "pos": "n.",
+      "ipa": "/wɜːdz/",
+      "cn": "词（word 的复数）"
+    },
+    "why": {
+      "pos": "adv.",
+      "ipa": "/waɪ/",
+      "cn": "为什么"
+    },
+    "fit": {
+      "pos": "adj./v.",
+      "ipa": "/fɪt/",
+      "cn": "健康的；合身；合适"
+    },
+    "questions": {
+      "pos": "n.",
+      "ipa": "/ˈkwestʃənz/",
+      "cn": "题目（question 的复数）"
+    },
+    "removed": {
+      "pos": "v.",
+      "ipa": "/rɪˈmuːvd/",
+      "cn": "拿掉（remove 的过去分词）"
+    },
+    "three": {
+      "pos": "num.",
+      "ipa": "/θriː/",
+      "cn": "三"
+    },
+    "extra": {
+      "pos": "adj.",
+      "ipa": "/ˈekstrə/",
+      "cn": "多余的，额外的"
+    },
+    "story": {
+      "pos": "n.",
+      "ipa": "/ˈstɔːri/",
+      "cn": "故事"
+    },
+    "carrot": {
+      "pos": "n.",
+      "ipa": "/ˈkærət/",
+      "cn": "胡萝卜"
+    },
+    "ring": {
+      "pos": "n./v.",
+      "ipa": "/rɪŋ/",
+      "cn": "戒指；铃声；打电话（英式 = call）"
+    },
+    "precious": {
+      "pos": "adj.",
+      "ipa": "/ˈpreʃəs/",
+      "cn": "珍贵的（be precious to sb. 对某人来说很珍贵）"
+    },
+    "you'd": {
+      "pos": "contr.",
+      "ipa": "/juːd/",
+      "cn": "= you would 或 you had",
+      "note": "you'd better = you had better 你最好。"
+    },
+    "that's": {
+      "pos": "contr.",
+      "ipa": "/ðæts/",
+      "cn": "= that is"
+    },
+    "happened": {
+      "pos": "v.",
+      "ipa": "/ˈhæpənd/",
+      "cn": "发生（happen 的过去式）"
+    },
+    "happen to": {
+      "pos": "词组",
+      "ipa": "/ˈhæpən tə/",
+      "cn": "发生在某人身上（Sth. happen to sb. 某事情发生在某人身上）"
+    },
+    "mary": {
+      "pos": "n.",
+      "ipa": "/ˈmeəri/",
+      "cn": "Mary（女子名）"
+    },
+    "grams": {
+      "pos": "n.",
+      "ipa": "/ɡræmz/",
+      "cn": "Grams（姓氏）"
+    },
+    "canada": {
+      "pos": "n.",
+      "ipa": "/ˈkænədə/",
+      "cn": "加拿大"
+    },
+    "worn": {
+      "pos": "v.",
+      "ipa": "/wɔːn/",
+      "cn": "穿过（wear 的过去分词）"
+    },
+    "engagement": {
+      "pos": "n.",
+      "ipa": "/ɪnˈɡeɪdʒmənt/",
+      "cn": "订婚"
+    },
+    "engagement ring": {
+      "pos": "词组",
+      "ipa": "/ɪnˈɡeɪdʒmənt rɪŋ/",
+      "cn": "订婚戒指"
+    },
+    "half": {
+      "pos": "n./det.",
+      "ipa": "/hɑːf/",
+      "cn": "一半"
+    },
+    "century": {
+      "pos": "n.",
+      "ipa": "/ˈsentʃəri/",
+      "cn": "世纪，一百年"
+    },
+    "suddenly": {
+      "pos": "adv.",
+      "ipa": "/ˈsʌdənli/",
+      "cn": "突然"
+    },
+    "working": {
+      "pos": "v.",
+      "ipa": "/ˈwɜːkɪŋ/",
+      "cn": "工作、做（work 的现在分词）"
+    },
+    "garden": {
+      "pos": "n.",
+      "ipa": "/ˈɡɑːdn/",
+      "cn": "花园"
+    },
+    "farm": {
+      "pos": "n.",
+      "ipa": "/fɑːm/",
+      "cn": "农场"
+    },
+    "pulling": {
+      "pos": "v.",
+      "ipa": "/ˈpʊlɪŋ/",
+      "cn": "拔，拉（pull 的现在分词）"
+    },
+    "plant": {
+      "pos": "n./v.",
+      "ipa": "/plɑːnt/",
+      "cn": "植物；种植"
+    },
+    "discovered": {
+      "pos": "v.",
+      "ipa": "/dɪˈskʌvəd/",
+      "cn": "发现（discover 的过去式）"
+    },
+    "missing": {
+      "pos": "adj.",
+      "ipa": "/ˈmɪsɪŋ/",
+      "cn": "不见的，丢失的"
+    },
+    "searched": {
+      "pos": "v.",
+      "ipa": "/sɜːtʃt/",
+      "cn": "搜索（search 的过去式）"
+    },
+    "everywhere": {
+      "pos": "adv.",
+      "ipa": "/ˈevriweə/",
+      "cn": "到处"
+    },
+    "searched everywhere": {
+      "pos": "词组",
+      "ipa": "/ˌsɜːtʃt ˈevriweə/",
+      "cn": "到处找"
+    },
+    "days": {
+      "pos": "n.",
+      "ipa": "/deɪz/",
+      "cn": "天（day 的复数）"
+    },
+    "giving": {
+      "pos": "v.",
+      "ipa": "/ˈɡɪvɪŋ/",
+      "cn": "给（give 的现在分词）"
+    },
+    "give up": {
+      "pos": "词组",
+      "ipa": "/ˌɡɪv ˈʌp/",
+      "cn": "放弃"
+    },
+    "realised": {
+      "pos": "v.",
+      "ipa": "/ˈriːəlaɪzd/",
+      "cn": "意识到（realise 的过去式/过去分词）"
+    },
+    "realise": {
+      "pos": "v.",
+      "ipa": "/ˈriːəlaɪz/",
+      "cn": "意识到"
+    },
+    "probably": {
+      "pos": "adv.",
+      "ipa": "/ˈprɒbəbli/",
+      "cn": "大概，很可能"
+    },
+    "going": {
+      "pos": "v.",
+      "ipa": "/ˈɡəʊɪŋ/",
+      "cn": "去；be going to 将要"
+    },
+    "anyone": {
+      "pos": "pron.",
+      "ipa": "/ˈeniwʌn/",
+      "cn": "任何人"
+    },
+    "apart": {
+      "pos": "adv.",
+      "ipa": "/əˈpɑːt/",
+      "cn": "分开；隔开",
+      "note": "apart from = 除了……之外。"
+    },
+    "apart from": {
+      "pos": "词组",
+      "ipa": "/əˈpɑːt frəm/",
+      "cn": "除了……（之外）",
+      "note": "= except；Nothing except / apart from a table and chairs."
+    },
+    "son": {
+      "pos": "n.",
+      "ipa": "/sʌn/",
+      "cn": "儿子"
+    },
+    "replace": {
+      "pos": "v.",
+      "ipa": "/rɪˈpleɪs/",
+      "cn": "代替"
+    },
+    "cheaper": {
+      "pos": "adj.",
+      "ipa": "/ˈtʃiːpə/",
+      "cn": "更便宜的（cheap 的比较级）"
+    },
+    "jeweller's": {
+      "pos": "n.",
+      "ipa": "/ˈdʒuːələz/",
+      "cn": "珠宝店（jeweller 的店）"
+    },
+    "jeweller": {
+      "pos": "n.",
+      "ipa": "/ˈdʒuːələ/",
+      "cn": "珠宝商，宝石匠"
+    },
+    "similar": {
+      "pos": "adj.",
+      "ipa": "/ˈsɪmələ/",
+      "cn": "相似的"
+    },
+    "be similar": {
+      "pos": "词组",
+      "ipa": "/biː ˈsɪmələ/",
+      "cn": "相似的"
+    },
+    "no-one": {
+      "pos": "pron.",
+      "ipa": "/ˈnəʊ wʌn/",
+      "cn": "没有人"
+    },
+    "no-one else": {
+      "pos": "词组",
+      "ipa": "/ˌnəʊ wʌn ˈels/",
+      "cn": "没有其他人"
+    },
+    "else": {
+      "pos": "adv.",
+      "ipa": "/els/",
+      "cn": "别的，其他的（else 常接在 someone/anyone 后）"
+    },
+    "original": {
+      "pos": "adj.",
+      "ipa": "/əˈrɪdʒənl/",
+      "cn": "原先的，古老的"
+    },
+    "original ring": {
+      "pos": "词组",
+      "ipa": "/əˌrɪdʒənl ˈrɪŋ/",
+      "cn": "原始的戒指"
+    },
+    "happy": {
+      "pos": "adj.",
+      "ipa": "/ˈhæpi/",
+      "cn": "高兴的；满意的",
+      "note": "be happy with/about sth。"
+    },
+    "ending": {
+      "pos": "n.",
+      "ipa": "/ˈendɪŋ/",
+      "cn": "结尾，结局"
+    },
+    "happy ending": {
+      "pos": "词组",
+      "ipa": "/ˌhæpi ˈendɪŋ/",
+      "cn": "快乐的结局"
+    },
+    "eventually": {
+      "pos": "adv.",
+      "ipa": "/ɪˈventʃuəli/",
+      "cn": "最终，结果"
+    },
+    "years": {
+      "pos": "n.",
+      "ipa": "/jɪəz/",
+      "cn": "年（year 的复数）"
+    },
+    "mary's": {
+      "pos": "n.",
+      "ipa": "/ˈmeəriz/",
+      "cn": "Mary 的（所有格）"
+    },
+    "daughter-in-law": {
+      "pos": "n.",
+      "ipa": "/ˈdɔːtər ɪn lɔː/",
+      "cn": "儿媳妇"
+    },
+    "colleen": {
+      "pos": "n.",
+      "ipa": "/ˈkɒliːn/",
+      "cn": "Colleen（女子名）"
+    },
+    "those": {
+      "pos": "pron./det.",
+      "ipa": "/ðəʊz/",
+      "cn": "那些（that 的复数）"
+    },
+    "ago": {
+      "pos": "adv.",
+      "ipa": "/əˈɡəʊ/",
+      "cn": "以前"
+    },
+    "looked": {
+      "pos": "v.",
+      "ipa": "/lʊkt/",
+      "cn": "看起来（look 的过去式）"
+    },
+    "bit": {
+      "pos": "n.",
+      "ipa": "/bɪt/",
+      "cn": "一点，少量",
+      "note": "a bit 有点儿；a bit of + 不可数名词。"
+    },
+    "a bit": {
+      "pos": "phr.",
+      "ipa": "/ə ˈbɪt/",
+      "cn": "一点儿，稍微（有一点，修饰形容词）",
+      "note": "修饰形容词或动词，语气比 a little 更口语。a bit of + 不可数名词。"
+    },
+    "growing": {
+      "pos": "v.",
+      "ipa": "/ˈɡrəʊɪŋ/",
+      "cn": "生长（grow 的现在分词）"
+    },
+    "through": {
+      "pos": "prep.",
+      "ipa": "/θruː/",
+      "cn": "穿过；透过；通过",
+      "note": "through research 通过研究。"
+    },
+    "saw": {
+      "pos": "v.",
+      "ipa": "/sɔː/",
+      "cn": "看见（see 的过去式）"
+    },
+    "immediately": {
+      "pos": "adv.",
+      "ipa": "/ɪˈmiːdiətli/",
+      "cn": "立刻"
+    },
+    "owner": {
+      "pos": "n.",
+      "ipa": "/ˈəʊnə/",
+      "cn": "主人，所有者"
+    },
+    "over": {
+      "pos": "prep./adv.",
+      "ipa": "/ˈəʊvə/",
+      "cn": "超过；在……上方"
+    },
+    "person": {
+      "pos": "n.",
+      "ipa": "/ˈpɜːsn/",
+      "cn": "人（复数 people）"
+    },
+    "possibly": {
+      "pos": "adv.",
+      "ipa": "/ˈpɒsəbli/",
+      "cn": "可能地"
+    },
+    "belonged": {
+      "pos": "v.",
+      "ipa": "/bɪˈlɒŋd/",
+      "cn": "属于（belong 的过去式/过去分词）"
+    },
+    "belong to": {
+      "pos": "词组",
+      "ipa": "/bɪˈlɒŋ tə/",
+      "cn": "属于"
+    },
+    "returned": {
+      "pos": "v.",
+      "ipa": "/rɪˈtɜːnd/",
+      "cn": "归还（return 的过去式/过去分词）"
+    },
+    "return to": {
+      "pos": "词组",
+      "ipa": "/rɪˈtɜːn tə/",
+      "cn": "归还某人（return to sb.）"
+    },
+    "remove": {
+      "pos": "v.",
+      "ipa": "/rɪˈmuːv/",
+      "cn": "移走，清除，去掉（remove sth. from sth. 把某物从某物拿开）"
+    },
+    "wear": {
+      "pos": "v.",
+      "ipa": "/weə/",
+      "cn": "穿；戴（wore / worn）"
+    },
+    "washed": {
+      "pos": "v.",
+      "ipa": "/wɒʃt/",
+      "cn": "洗（wash 的过去分词）"
+    },
+    "put": {
+      "pos": "v.",
+      "ipa": "/pʊt/",
+      "cn": "放；放置",
+      "note": "put off doing sth 拖延；put … into 放进……里；put on 穿上、系上。"
+    },
+    "finger": {
+      "pos": "n.",
+      "ipa": "/ˈfɪŋɡə/",
+      "cn": "手指"
+    },
+    "fitted": {
+      "pos": "v.",
+      "ipa": "/ˈfɪtɪd/",
+      "cn": "合身（fit 的过去式）"
+    },
+    "fitted perfectly": {
+      "pos": "词组",
+      "ipa": "/ˌfɪtɪd ˈpɜːfɪktli/",
+      "cn": "完美贴合"
+    },
+    "perfectly": {
+      "pos": "adv.",
+      "ipa": "/ˈpɜːfɪktli/",
+      "cn": "完美地，非常好"
+    },
+    "digging": {
+      "pos": "v.",
+      "ipa": "/ˈdɪɡɪŋ/",
+      "cn": "挖（dig 的现在分词）"
+    },
+    "dig up": {
+      "pos": "词组",
+      "ipa": "/ˌdɪɡ ˈʌp/",
+      "cn": "挖出，掘出（挖掘，找到）",
+      "note": "动词 + 副词型短语。代词作宾语要夹中间：dig it up。"
+    },
+    "vegetables": {
+      "pos": "n.",
+      "ipa": "/ˈvedʒtəblz/",
+      "cn": "蔬菜（vegetable 的复数）"
+    },
+    "gave": {
+      "pos": "v.",
+      "ipa": "/ɡeɪv/",
+      "cn": "给（give 的过去式）"
+    },
+    "good": {
+      "pos": "adj.",
+      "ipa": "/ɡʊd/",
+      "cn": "好的"
+    },
+    "idea": {
+      "pos": "n.",
+      "ipa": "/aɪˈdɪə/",
+      "cn": "想法，主意（have no idea 完全不知道）"
+    },
+    "came": {
+      "pos": "v.",
+      "ipa": "/keɪm/",
+      "cn": "来（come 的过去式）"
+    },
+    "come off": {
+      "pos": "词组",
+      "ipa": "/ˌkʌm ˈɒf/",
+      "cn": "脱落"
+    },
+    "carefully": {
+      "pos": "adv.",
+      "ipa": "/ˈkeəfəli/",
+      "cn": "小心地，仔细地",
+      "note": "形容词 careful + ly。"
+    },
+    "cut": {
+      "pos": "v./n.",
+      "ipa": "/kʌt/",
+      "cn": "切，剪"
+    },
+    "seen": {
+      "pos": "v.",
+      "ipa": "/siːn/",
+      "cn": "看见（see 的过去分词）"
+    },
+    "two": {
+      "pos": "num.",
+      "ipa": "/tuː/",
+      "cn": "二"
+    },
+    "women": {
+      "pos": "n.",
+      "ipa": "/ˈwɪmɪn/",
+      "cn": "女人（woman 的复数）"
+    },
+    "tiring": {
+      "pos": "adj.",
+      "ipa": "/ˈtaɪərɪŋ/",
+      "cn": "累人的（形容事物）"
+    },
+    "luckily": {
+      "pos": "adv.",
+      "ipa": "/ˈlʌkɪli/",
+      "cn": "幸运的是"
+    },
+    "managed": {
+      "pos": "v.",
+      "ipa": "/ˈmænɪdʒd/",
+      "cn": "设法做成（manage 的过去式）"
+    },
+    "manage to": {
+      "pos": "词组",
+      "ipa": "/ˈmænɪdʒ tə/",
+      "cn": "设法做成某事（manage to do sth.）"
+    },
+    "heard": {
+      "pos": "v.",
+      "ipa": "/hɜːd/",
+      "cn": "听见，听说（hear 的过去式/过去分词）"
+    },
+    "alone": {
+      "pos": "adj./adv.",
+      "ipa": "/əˈləʊn/",
+      "cn": "独自的；独自"
+    },
+    "hills": {
+      "pos": "n.",
+      "ipa": "/hɪlz/",
+      "cn": "山丘（hill 的复数）"
+    },
+    "plans": {
+      "pos": "n.",
+      "ipa": "/plænz/",
+      "cn": "计划（plan 的复数）"
+    },
+    "relaxing": {
+      "pos": "adj.",
+      "ipa": "/rɪˈlæksɪŋ/",
+      "cn": "令人放松的（形容事物；也作 relax 的动名词）"
+    },
+    "sunday": {
+      "pos": "n.",
+      "ipa": "/ˈsʌndeɪ/",
+      "cn": "星期日"
+    },
+    "ended": {
+      "pos": "v.",
+      "ipa": "/ˈendɪd/",
+      "cn": "结束（end 的过去式）"
+    },
+    "received": {
+      "pos": "v.",
+      "ipa": "/rɪˈsiːvd/",
+      "cn": "收到（receive 的过去式）"
+    },
+    "call": {
+      "pos": "n./v.",
+      "ipa": "/kɔːl/",
+      "cn": "电话；打电话；叫（call sb 给某人打电话）"
+    },
+    "asked": {
+      "pos": "v.",
+      "ipa": "/ɑːskt/",
+      "cn": "请求，问（ask 的过去式）"
+    },
+    "wrong": {
+      "pos": "adj.",
+      "ipa": "/rɒŋ/",
+      "cn": "错误的；不对的"
+    },
+    "more than": {
+      "pos": "词组",
+      "ipa": "/ˈmɔː ðæn/",
+      "cn": "超过"
+    },
+    "pull out": {
+      "pos": "词组",
+      "ipa": "/ˌpʊl ˈaʊt/",
+      "cn": "拔出某物（pull out sth.）"
+    },
+    "search for": {
+      "pos": "词组",
+      "ipa": "/ˈsɜːtʃ fɔː/",
+      "cn": "搜索某物"
+    },
+    "in fact": {
+      "pos": "词组",
+      "ipa": "/ɪn ˈfækt/",
+      "cn": "事实上，其实（实际上）",
+      "note": "用来补充或纠正前面的说法，是重要的逻辑衔接词。"
+    },
+    "get better": {
+      "pos": "词组",
+      "ipa": "/ˌɡet ˈbetə/",
+      "cn": "变得更好"
+    },
+    "get in touch": {
+      "pos": "词组",
+      "ipa": "/ˌɡet ɪn ˈtʌtʃ/",
+      "cn": "取得联络"
+    },
+    "in the end": {
+      "pos": "词组",
+      "ipa": "/ɪn ði ˈend/",
+      "cn": "最后，终于",
+      "note": "= finally。注意区分 at the end of（在…的末尾，后接名词）。"
+    },
+    "on your own": {
+      "pos": "词组",
+      "ipa": "/ɒn jɔːr ˈəʊn/",
+      "cn": "你自己，独自"
+    },
+    "so far": {
+      "pos": "词组",
+      "ipa": "/ˌsəʊ ˈfɑː/",
+      "cn": "到目前为止"
+    },
+    "look after": {
+      "pos": "词组",
+      "ipa": "/ˌlʊk ˈɑːftə/",
+      "cn": "照顾"
+    },
+    "came off": {
+      "pos": "词组",
+      "ipa": "/ˌkeɪm ˈɒf/",
+      "cn": "脱落（come off 的过去式）"
+    }
+  },
+  "questions": [
+    {
+      "n": 101,
+      "tag": "①-1",
+      "answer": "j",
+      "prompt": "训练①-1 ——「a lack of」（缺少）的意思是哪个？",
+      "opts": {
+        "a": "almost never",
+        "b": "by yourself",
+        "c": "contact",
+        "d": "decide",
+        "e": "finally",
+        "f": "improve",
+        "g": "instead of",
+        "h": "look after",
+        "i": "modern",
+        "j": "not enough",
+        "k": "relax",
+        "l": "until now"
+      },
+      "why": "官方配对：<b>a lack of = not enough</b>（不够）。",
+      "clues": [
+        "缺少"
+      ],
+      "others": [
+        [
+          "a",
+          "「almost never」表示「几乎从不，几乎没有」，和「缺少」对不上。"
+        ],
+        [
+          "b",
+          "「by yourself」表示「你自己，独自」，和「缺少」对不上。"
+        ],
+        [
+          "c",
+          "「contact」表示「联系」，和「缺少」对不上。"
+        ],
+        [
+          "d",
+          "「decide」表示「决定」，和「缺少」对不上。"
+        ],
+        [
+          "e",
+          "「finally」表示「最终」，和「缺少」对不上。"
+        ],
+        [
+          "f",
+          "「improve」表示「提高，改善」，和「缺少」对不上。"
+        ],
+        [
+          "g",
+          "「instead of」表示「代替，而不是」，和「缺少」对不上。"
+        ],
+        [
+          "h",
+          "「look after」表示「照顾」，和「缺少」对不上。"
+        ],
+        [
+          "i",
+          "「modern」表示「现代的」，和「缺少」对不上。"
+        ],
+        [
+          "k",
+          "「relax」表示「放松」，和「缺少」对不上。"
+        ],
+        [
+          "l",
+          "「until now」表示「至今，直到现在」，和「缺少」对不上。"
+        ]
+      ],
+      "tip": "先在心里翻译 A 栏短语，再找意思最接近的那个。",
+      "ana": {
+        "parts": [
+          [
+            "短语",
+            "a lack of"
+          ],
+          [
+            "意思",
+            "not enough（不够）"
+          ]
+        ],
+        "gram": [
+          "同义词配对"
+        ],
+        "tr": "a lack of = not enough。"
+      }
+    },
+    {
+      "n": 102,
+      "tag": "①-2",
+      "answer": "f",
+      "prompt": "训练①-2 ——「get better」（变得更好）的意思是哪个？",
+      "opts": {
+        "a": "almost never",
+        "b": "by yourself",
+        "c": "contact",
+        "d": "decide",
+        "e": "finally",
+        "f": "improve",
+        "g": "instead of",
+        "h": "look after",
+        "i": "modern",
+        "j": "not enough",
+        "k": "relax",
+        "l": "until now"
+      },
+      "why": "官方配对：<b>get better = improve</b>（提高，改善）。",
+      "clues": [
+        "变得更好"
+      ],
+      "others": [
+        [
+          "a",
+          "「almost never」表示「几乎从不，几乎没有」，和「变得更好」对不上。"
+        ],
+        [
+          "b",
+          "「by yourself」表示「你自己，独自」，和「变得更好」对不上。"
+        ],
+        [
+          "c",
+          "「contact」表示「联系」，和「变得更好」对不上。"
+        ],
+        [
+          "d",
+          "「decide」表示「决定」，和「变得更好」对不上。"
+        ],
+        [
+          "e",
+          "「finally」表示「最终」，和「变得更好」对不上。"
+        ],
+        [
+          "g",
+          "「instead of」表示「代替，而不是」，和「变得更好」对不上。"
+        ],
+        [
+          "h",
+          "「look after」表示「照顾」，和「变得更好」对不上。"
+        ],
+        [
+          "i",
+          "「modern」表示「现代的」，和「变得更好」对不上。"
+        ],
+        [
+          "j",
+          "「not enough」表示「不够」，和「变得更好」对不上。"
+        ],
+        [
+          "k",
+          "「relax」表示「放松」，和「变得更好」对不上。"
+        ],
+        [
+          "l",
+          "「until now」表示「至今，直到现在」，和「变得更好」对不上。"
+        ]
+      ],
+      "tip": "先在心里翻译 A 栏短语，再找意思最接近的那个。",
+      "ana": {
+        "parts": [
+          [
+            "短语",
+            "get better"
+          ],
+          [
+            "意思",
+            "improve（提高，改善）"
+          ]
+        ],
+        "gram": [
+          "同义词配对"
+        ],
+        "tr": "get better = improve。"
+      }
+    },
+    {
+      "n": 103,
+      "tag": "①-3",
+      "answer": "c",
+      "prompt": "训练①-3 ——「get in touch」（取得联络）的意思是哪个？",
+      "opts": {
+        "a": "almost never",
+        "b": "by yourself",
+        "c": "contact",
+        "d": "decide",
+        "e": "finally",
+        "f": "improve",
+        "g": "instead of",
+        "h": "look after",
+        "i": "modern",
+        "j": "not enough",
+        "k": "relax",
+        "l": "until now"
+      },
+      "why": "官方配对：<b>get in touch = contact</b>（联系）。",
+      "clues": [
+        "取得联络"
+      ],
+      "others": [
+        [
+          "a",
+          "「almost never」表示「几乎从不，几乎没有」，和「取得联络」对不上。"
+        ],
+        [
+          "b",
+          "「by yourself」表示「你自己，独自」，和「取得联络」对不上。"
+        ],
+        [
+          "d",
+          "「decide」表示「决定」，和「取得联络」对不上。"
+        ],
+        [
+          "e",
+          "「finally」表示「最终」，和「取得联络」对不上。"
+        ],
+        [
+          "f",
+          "「improve」表示「提高，改善」，和「取得联络」对不上。"
+        ],
+        [
+          "g",
+          "「instead of」表示「代替，而不是」，和「取得联络」对不上。"
+        ],
+        [
+          "h",
+          "「look after」表示「照顾」，和「取得联络」对不上。"
+        ],
+        [
+          "i",
+          "「modern」表示「现代的」，和「取得联络」对不上。"
+        ],
+        [
+          "j",
+          "「not enough」表示「不够」，和「取得联络」对不上。"
+        ],
+        [
+          "k",
+          "「relax」表示「放松」，和「取得联络」对不上。"
+        ],
+        [
+          "l",
+          "「until now」表示「至今，直到现在」，和「取得联络」对不上。"
+        ]
+      ],
+      "tip": "先在心里翻译 A 栏短语，再找意思最接近的那个。",
+      "ana": {
+        "parts": [
+          [
+            "短语",
+            "get in touch"
+          ],
+          [
+            "意思",
+            "contact（联系）"
+          ]
+        ],
+        "gram": [
+          "同义词配对"
+        ],
+        "tr": "get in touch = contact。"
+      }
+    },
+    {
+      "n": 104,
+      "tag": "①-4",
+      "answer": "a",
+      "prompt": "训练①-4 ——「hardly ever」（几乎从不）的意思是哪个？",
+      "opts": {
+        "a": "almost never",
+        "b": "by yourself",
+        "c": "contact",
+        "d": "decide",
+        "e": "finally",
+        "f": "improve",
+        "g": "instead of",
+        "h": "look after",
+        "i": "modern",
+        "j": "not enough",
+        "k": "relax",
+        "l": "until now"
+      },
+      "why": "官方配对：<b>hardly ever = almost never</b>（几乎从不，几乎没有）。",
+      "clues": [
+        "几乎从不"
+      ],
+      "others": [
+        [
+          "b",
+          "「by yourself」表示「你自己，独自」，和「几乎从不」对不上。"
+        ],
+        [
+          "c",
+          "「contact」表示「联系」，和「几乎从不」对不上。"
+        ],
+        [
+          "d",
+          "「decide」表示「决定」，和「几乎从不」对不上。"
+        ],
+        [
+          "e",
+          "「finally」表示「最终」，和「几乎从不」对不上。"
+        ],
+        [
+          "f",
+          "「improve」表示「提高，改善」，和「几乎从不」对不上。"
+        ],
+        [
+          "g",
+          "「instead of」表示「代替，而不是」，和「几乎从不」对不上。"
+        ],
+        [
+          "h",
+          "「look after」表示「照顾」，和「几乎从不」对不上。"
+        ],
+        [
+          "i",
+          "「modern」表示「现代的」，和「几乎从不」对不上。"
+        ],
+        [
+          "j",
+          "「not enough」表示「不够」，和「几乎从不」对不上。"
+        ],
+        [
+          "k",
+          "「relax」表示「放松」，和「几乎从不」对不上。"
+        ],
+        [
+          "l",
+          "「until now」表示「至今，直到现在」，和「几乎从不」对不上。"
+        ]
+      ],
+      "tip": "先在心里翻译 A 栏短语，再找意思最接近的那个。",
+      "ana": {
+        "parts": [
+          [
+            "短语",
+            "hardly ever"
+          ],
+          [
+            "意思",
+            "almost never（几乎从不，几乎没有）"
+          ]
+        ],
+        "gram": [
+          "同义词配对"
+        ],
+        "tr": "hardly ever = almost never。"
+      }
+    },
+    {
+      "n": 105,
+      "tag": "①-5",
+      "answer": "e",
+      "prompt": "训练①-5 ——「in the end」（最终）的意思是哪个？",
+      "opts": {
+        "a": "almost never",
+        "b": "by yourself",
+        "c": "contact",
+        "d": "decide",
+        "e": "finally",
+        "f": "improve",
+        "g": "instead of",
+        "h": "look after",
+        "i": "modern",
+        "j": "not enough",
+        "k": "relax",
+        "l": "until now"
+      },
+      "why": "官方配对：<b>in the end = finally</b>（最终）。",
+      "clues": [
+        "最终"
+      ],
+      "others": [
+        [
+          "a",
+          "「almost never」表示「几乎从不，几乎没有」，和「最终」对不上。"
+        ],
+        [
+          "b",
+          "「by yourself」表示「你自己，独自」，和「最终」对不上。"
+        ],
+        [
+          "c",
+          "「contact」表示「联系」，和「最终」对不上。"
+        ],
+        [
+          "d",
+          "「decide」表示「决定」，和「最终」对不上。"
+        ],
+        [
+          "f",
+          "「improve」表示「提高，改善」，和「最终」对不上。"
+        ],
+        [
+          "g",
+          "「instead of」表示「代替，而不是」，和「最终」对不上。"
+        ],
+        [
+          "h",
+          "「look after」表示「照顾」，和「最终」对不上。"
+        ],
+        [
+          "i",
+          "「modern」表示「现代的」，和「最终」对不上。"
+        ],
+        [
+          "j",
+          "「not enough」表示「不够」，和「最终」对不上。"
+        ],
+        [
+          "k",
+          "「relax」表示「放松」，和「最终」对不上。"
+        ],
+        [
+          "l",
+          "「until now」表示「至今，直到现在」，和「最终」对不上。"
+        ]
+      ],
+      "tip": "先在心里翻译 A 栏短语，再找意思最接近的那个。",
+      "ana": {
+        "parts": [
+          [
+            "短语",
+            "in the end"
+          ],
+          [
+            "意思",
+            "finally（最终）"
+          ]
+        ],
+        "gram": [
+          "同义词配对"
+        ],
+        "tr": "in the end = finally。"
+      }
+    },
+    {
+      "n": 106,
+      "tag": "①-6",
+      "answer": "d",
+      "prompt": "训练①-6 ——「make your mind up」（决定，做出决定）的意思是哪个？",
+      "opts": {
+        "a": "almost never",
+        "b": "by yourself",
+        "c": "contact",
+        "d": "decide",
+        "e": "finally",
+        "f": "improve",
+        "g": "instead of",
+        "h": "look after",
+        "i": "modern",
+        "j": "not enough",
+        "k": "relax",
+        "l": "until now"
+      },
+      "why": "官方配对：<b>make your mind up = decide</b>（决定）。",
+      "clues": [
+        "决定，做出决定"
+      ],
+      "others": [
+        [
+          "a",
+          "「almost never」表示「几乎从不，几乎没有」，和「决定，做出决定」对不上。"
+        ],
+        [
+          "b",
+          "「by yourself」表示「你自己，独自」，和「决定，做出决定」对不上。"
+        ],
+        [
+          "c",
+          "「contact」表示「联系」，和「决定，做出决定」对不上。"
+        ],
+        [
+          "e",
+          "「finally」表示「最终」，和「决定，做出决定」对不上。"
+        ],
+        [
+          "f",
+          "「improve」表示「提高，改善」，和「决定，做出决定」对不上。"
+        ],
+        [
+          "g",
+          "「instead of」表示「代替，而不是」，和「决定，做出决定」对不上。"
+        ],
+        [
+          "h",
+          "「look after」表示「照顾」，和「决定，做出决定」对不上。"
+        ],
+        [
+          "i",
+          "「modern」表示「现代的」，和「决定，做出决定」对不上。"
+        ],
+        [
+          "j",
+          "「not enough」表示「不够」，和「决定，做出决定」对不上。"
+        ],
+        [
+          "k",
+          "「relax」表示「放松」，和「决定，做出决定」对不上。"
+        ],
+        [
+          "l",
+          "「until now」表示「至今，直到现在」，和「决定，做出决定」对不上。"
+        ]
+      ],
+      "tip": "先在心里翻译 A 栏短语，再找意思最接近的那个。",
+      "ana": {
+        "parts": [
+          [
+            "短语",
+            "make your mind up"
+          ],
+          [
+            "意思",
+            "decide（决定）"
+          ]
+        ],
+        "gram": [
+          "同义词配对"
+        ],
+        "tr": "make your mind up = decide。"
+      }
+    },
+    {
+      "n": 107,
+      "tag": "①-7",
+      "answer": "b",
+      "prompt": "训练①-7 ——「on your own」（你自己）的意思是哪个？",
+      "opts": {
+        "a": "almost never",
+        "b": "by yourself",
+        "c": "contact",
+        "d": "decide",
+        "e": "finally",
+        "f": "improve",
+        "g": "instead of",
+        "h": "look after",
+        "i": "modern",
+        "j": "not enough",
+        "k": "relax",
+        "l": "until now"
+      },
+      "why": "官方配对：<b>on your own = by yourself</b>（你自己，独自）。",
+      "clues": [
+        "你自己"
+      ],
+      "others": [
+        [
+          "a",
+          "「almost never」表示「几乎从不，几乎没有」，和「你自己」对不上。"
+        ],
+        [
+          "c",
+          "「contact」表示「联系」，和「你自己」对不上。"
+        ],
+        [
+          "d",
+          "「decide」表示「决定」，和「你自己」对不上。"
+        ],
+        [
+          "e",
+          "「finally」表示「最终」，和「你自己」对不上。"
+        ],
+        [
+          "f",
+          "「improve」表示「提高，改善」，和「你自己」对不上。"
+        ],
+        [
+          "g",
+          "「instead of」表示「代替，而不是」，和「你自己」对不上。"
+        ],
+        [
+          "h",
+          "「look after」表示「照顾」，和「你自己」对不上。"
+        ],
+        [
+          "i",
+          "「modern」表示「现代的」，和「你自己」对不上。"
+        ],
+        [
+          "j",
+          "「not enough」表示「不够」，和「你自己」对不上。"
+        ],
+        [
+          "k",
+          "「relax」表示「放松」，和「你自己」对不上。"
+        ],
+        [
+          "l",
+          "「until now」表示「至今，直到现在」，和「你自己」对不上。"
+        ]
+      ],
+      "tip": "先在心里翻译 A 栏短语，再找意思最接近的那个。",
+      "ana": {
+        "parts": [
+          [
+            "短语",
+            "on your own"
+          ],
+          [
+            "意思",
+            "by yourself（你自己，独自）"
+          ]
+        ],
+        "gram": [
+          "同义词配对"
+        ],
+        "tr": "on your own = by yourself。"
+      }
+    },
+    {
+      "n": 108,
+      "tag": "①-8",
+      "answer": "g",
+      "prompt": "训练①-8 ——「rather than」（而不是）的意思是哪个？",
+      "opts": {
+        "a": "almost never",
+        "b": "by yourself",
+        "c": "contact",
+        "d": "decide",
+        "e": "finally",
+        "f": "improve",
+        "g": "instead of",
+        "h": "look after",
+        "i": "modern",
+        "j": "not enough",
+        "k": "relax",
+        "l": "until now"
+      },
+      "why": "官方配对：<b>rather than = instead of</b>（代替，而不是）。",
+      "clues": [
+        "而不是"
+      ],
+      "others": [
+        [
+          "a",
+          "「almost never」表示「几乎从不，几乎没有」，和「而不是」对不上。"
+        ],
+        [
+          "b",
+          "「by yourself」表示「你自己，独自」，和「而不是」对不上。"
+        ],
+        [
+          "c",
+          "「contact」表示「联系」，和「而不是」对不上。"
+        ],
+        [
+          "d",
+          "「decide」表示「决定」，和「而不是」对不上。"
+        ],
+        [
+          "e",
+          "「finally」表示「最终」，和「而不是」对不上。"
+        ],
+        [
+          "f",
+          "「improve」表示「提高，改善」，和「而不是」对不上。"
+        ],
+        [
+          "h",
+          "「look after」表示「照顾」，和「而不是」对不上。"
+        ],
+        [
+          "i",
+          "「modern」表示「现代的」，和「而不是」对不上。"
+        ],
+        [
+          "j",
+          "「not enough」表示「不够」，和「而不是」对不上。"
+        ],
+        [
+          "k",
+          "「relax」表示「放松」，和「而不是」对不上。"
+        ],
+        [
+          "l",
+          "「until now」表示「至今，直到现在」，和「而不是」对不上。"
+        ]
+      ],
+      "tip": "先在心里翻译 A 栏短语，再找意思最接近的那个。",
+      "ana": {
+        "parts": [
+          [
+            "短语",
+            "rather than"
+          ],
+          [
+            "意思",
+            "instead of（代替，而不是）"
+          ]
+        ],
+        "gram": [
+          "同义词配对"
+        ],
+        "tr": "rather than = instead of。"
+      }
+    },
+    {
+      "n": 109,
+      "tag": "①-9",
+      "answer": "l",
+      "prompt": "训练①-9 ——「so far」（到目前为止）的意思是哪个？",
+      "opts": {
+        "a": "almost never",
+        "b": "by yourself",
+        "c": "contact",
+        "d": "decide",
+        "e": "finally",
+        "f": "improve",
+        "g": "instead of",
+        "h": "look after",
+        "i": "modern",
+        "j": "not enough",
+        "k": "relax",
+        "l": "until now"
+      },
+      "why": "官方配对：<b>so far = until now</b>（至今，直到现在）。",
+      "clues": [
+        "到目前为止"
+      ],
+      "others": [
+        [
+          "a",
+          "「almost never」表示「几乎从不，几乎没有」，和「到目前为止」对不上。"
+        ],
+        [
+          "b",
+          "「by yourself」表示「你自己，独自」，和「到目前为止」对不上。"
+        ],
+        [
+          "c",
+          "「contact」表示「联系」，和「到目前为止」对不上。"
+        ],
+        [
+          "d",
+          "「decide」表示「决定」，和「到目前为止」对不上。"
+        ],
+        [
+          "e",
+          "「finally」表示「最终」，和「到目前为止」对不上。"
+        ],
+        [
+          "f",
+          "「improve」表示「提高，改善」，和「到目前为止」对不上。"
+        ],
+        [
+          "g",
+          "「instead of」表示「代替，而不是」，和「到目前为止」对不上。"
+        ],
+        [
+          "h",
+          "「look after」表示「照顾」，和「到目前为止」对不上。"
+        ],
+        [
+          "i",
+          "「modern」表示「现代的」，和「到目前为止」对不上。"
+        ],
+        [
+          "j",
+          "「not enough」表示「不够」，和「到目前为止」对不上。"
+        ],
+        [
+          "k",
+          "「relax」表示「放松」，和「到目前为止」对不上。"
+        ]
+      ],
+      "tip": "先在心里翻译 A 栏短语，再找意思最接近的那个。",
+      "ana": {
+        "parts": [
+          [
+            "短语",
+            "so far"
+          ],
+          [
+            "意思",
+            "until now（至今，直到现在）"
+          ]
+        ],
+        "gram": [
+          "同义词配对"
+        ],
+        "tr": "so far = until now。"
+      }
+    },
+    {
+      "n": 110,
+      "tag": "①-10",
+      "answer": "h",
+      "prompt": "训练①-10 ——「take care of」（照顾）的意思是哪个？",
+      "opts": {
+        "a": "almost never",
+        "b": "by yourself",
+        "c": "contact",
+        "d": "decide",
+        "e": "finally",
+        "f": "improve",
+        "g": "instead of",
+        "h": "look after",
+        "i": "modern",
+        "j": "not enough",
+        "k": "relax",
+        "l": "until now"
+      },
+      "why": "官方配对：<b>take care of = look after</b>（照顾）。",
+      "clues": [
+        "照顾"
+      ],
+      "others": [
+        [
+          "a",
+          "「almost never」表示「几乎从不，几乎没有」，和「照顾」对不上。"
+        ],
+        [
+          "b",
+          "「by yourself」表示「你自己，独自」，和「照顾」对不上。"
+        ],
+        [
+          "c",
+          "「contact」表示「联系」，和「照顾」对不上。"
+        ],
+        [
+          "d",
+          "「decide」表示「决定」，和「照顾」对不上。"
+        ],
+        [
+          "e",
+          "「finally」表示「最终」，和「照顾」对不上。"
+        ],
+        [
+          "f",
+          "「improve」表示「提高，改善」，和「照顾」对不上。"
+        ],
+        [
+          "g",
+          "「instead of」表示「代替，而不是」，和「照顾」对不上。"
+        ],
+        [
+          "i",
+          "「modern」表示「现代的」，和「照顾」对不上。"
+        ],
+        [
+          "j",
+          "「not enough」表示「不够」，和「照顾」对不上。"
+        ],
+        [
+          "k",
+          "「relax」表示「放松」，和「照顾」对不上。"
+        ],
+        [
+          "l",
+          "「until now」表示「至今，直到现在」，和「照顾」对不上。"
+        ]
+      ],
+      "tip": "先在心里翻译 A 栏短语，再找意思最接近的那个。",
+      "ana": {
+        "parts": [
+          [
+            "短语",
+            "take care of"
+          ],
+          [
+            "意思",
+            "look after（照顾）"
+          ]
+        ],
+        "gram": [
+          "同义词配对"
+        ],
+        "tr": "take care of = look after。"
+      }
+    },
+    {
+      "n": 111,
+      "tag": "①-11",
+      "answer": "k",
+      "prompt": "训练①-11 ——「take it easy」（放轻松）的意思是哪个？",
+      "opts": {
+        "a": "almost never",
+        "b": "by yourself",
+        "c": "contact",
+        "d": "decide",
+        "e": "finally",
+        "f": "improve",
+        "g": "instead of",
+        "h": "look after",
+        "i": "modern",
+        "j": "not enough",
+        "k": "relax",
+        "l": "until now"
+      },
+      "why": "官方配对：<b>take it easy = relax</b>（放松）。",
+      "clues": [
+        "放轻松"
+      ],
+      "others": [
+        [
+          "a",
+          "「almost never」表示「几乎从不，几乎没有」，和「放轻松」对不上。"
+        ],
+        [
+          "b",
+          "「by yourself」表示「你自己，独自」，和「放轻松」对不上。"
+        ],
+        [
+          "c",
+          "「contact」表示「联系」，和「放轻松」对不上。"
+        ],
+        [
+          "d",
+          "「decide」表示「决定」，和「放轻松」对不上。"
+        ],
+        [
+          "e",
+          "「finally」表示「最终」，和「放轻松」对不上。"
+        ],
+        [
+          "f",
+          "「improve」表示「提高，改善」，和「放轻松」对不上。"
+        ],
+        [
+          "g",
+          "「instead of」表示「代替，而不是」，和「放轻松」对不上。"
+        ],
+        [
+          "h",
+          "「look after」表示「照顾」，和「放轻松」对不上。"
+        ],
+        [
+          "i",
+          "「modern」表示「现代的」，和「放轻松」对不上。"
+        ],
+        [
+          "j",
+          "「not enough」表示「不够」，和「放轻松」对不上。"
+        ],
+        [
+          "l",
+          "「until now」表示「至今，直到现在」，和「放轻松」对不上。"
+        ]
+      ],
+      "tip": "先在心里翻译 A 栏短语，再找意思最接近的那个。",
+      "ana": {
+        "parts": [
+          [
+            "短语",
+            "take it easy"
+          ],
+          [
+            "意思",
+            "relax（放松）"
+          ]
+        ],
+        "gram": [
+          "同义词配对"
+        ],
+        "tr": "take it easy = relax。"
+      }
+    },
+    {
+      "n": 112,
+      "tag": "①-12",
+      "answer": "i",
+      "prompt": "训练①-12 ——「up-to-date」（最新的，最近的）的意思是哪个？",
+      "opts": {
+        "a": "almost never",
+        "b": "by yourself",
+        "c": "contact",
+        "d": "decide",
+        "e": "finally",
+        "f": "improve",
+        "g": "instead of",
+        "h": "look after",
+        "i": "modern",
+        "j": "not enough",
+        "k": "relax",
+        "l": "until now"
+      },
+      "why": "官方配对：<b>up-to-date = modern</b>（现代的）。",
+      "clues": [
+        "最新的，最近的"
+      ],
+      "others": [
+        [
+          "a",
+          "「almost never」表示「几乎从不，几乎没有」，和「最新的，最近的」对不上。"
+        ],
+        [
+          "b",
+          "「by yourself」表示「你自己，独自」，和「最新的，最近的」对不上。"
+        ],
+        [
+          "c",
+          "「contact」表示「联系」，和「最新的，最近的」对不上。"
+        ],
+        [
+          "d",
+          "「decide」表示「决定」，和「最新的，最近的」对不上。"
+        ],
+        [
+          "e",
+          "「finally」表示「最终」，和「最新的，最近的」对不上。"
+        ],
+        [
+          "f",
+          "「improve」表示「提高，改善」，和「最新的，最近的」对不上。"
+        ],
+        [
+          "g",
+          "「instead of」表示「代替，而不是」，和「最新的，最近的」对不上。"
+        ],
+        [
+          "h",
+          "「look after」表示「照顾」，和「最新的，最近的」对不上。"
+        ],
+        [
+          "j",
+          "「not enough」表示「不够」，和「最新的，最近的」对不上。"
+        ],
+        [
+          "k",
+          "「relax」表示「放松」，和「最新的，最近的」对不上。"
+        ],
+        [
+          "l",
+          "「until now」表示「至今，直到现在」，和「最新的，最近的」对不上。"
+        ]
+      ],
+      "tip": "先在心里翻译 A 栏短语，再找意思最接近的那个。",
+      "ana": {
+        "parts": [
+          [
+            "短语",
+            "up-to-date"
+          ],
+          [
+            "意思",
+            "modern（现代的）"
+          ]
+        ],
+        "gram": [
+          "同义词配对"
+        ],
+        "tr": "up-to-date = modern。"
+      }
+    },
+    {
+      "n": 113,
+      "tag": "②-1",
+      "answer": "A",
+      "prompt": "训练②-1 ——「We decided not to buy that car because it was too big. Another/Other reason was that it was too expensive.」选哪个？",
+      "opts": {
+        "A": "Another",
+        "B": "Other"
+      },
+      "why": "官方答案 <b>A</b>（Another）。reason 是单数名词 → another（另一个）。官方：1 Another。",
+      "clues": [
+        "两句之间的逻辑关系"
+      ],
+      "others": [
+        [
+          "B",
+          "Other 后面通常接复数名词或不可数名词（other reasons / other information）。"
+        ]
+      ],
+      "tip": "先判断关系：并列？转折？结果？反面条件？",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "We decided not to buy that car because it was too big. Another/Other reason was that it was too expensive."
+          ],
+          [
+            "答案",
+            "Another"
+          ]
+        ],
+        "gram": [
+          "连接词"
+        ],
+        "tr": "Another。"
+      }
+    },
+    {
+      "n": 114,
+      "tag": "②-2",
+      "answer": "B",
+      "prompt": "训练②-2 ——「It was the middle of the night. Although/In spite of that, the streets were crowded with people.」选哪个？",
+      "opts": {
+        "A": "Although",
+        "B": "In spite of"
+      },
+      "why": "官方答案 <b>B</b>（In spite of）。空后是 that（名词性指代），不是从句 → In spite of that（尽管如此）。官方：2 In spite of。",
+      "clues": [
+        "两句之间的逻辑关系"
+      ],
+      "others": [
+        [
+          "A",
+          "Although 后面要跟完整的从句（Although it was the middle of the night…），不能直接接 that。"
+        ]
+      ],
+      "tip": "先判断关系：并列？转折？结果？反面条件？",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "It was the middle of the night. Although/In spite of that, the streets were crowded with people."
+          ],
+          [
+            "答案",
+            "In spite of"
+          ]
+        ],
+        "gram": [
+          "连接词"
+        ],
+        "tr": "In spite of。"
+      }
+    },
+    {
+      "n": 115,
+      "tag": "②-3",
+      "answer": "A",
+      "prompt": "训练②-3 ——「There was writing on the wall of the cave. What/Which it said was impossible to read.」选哪个？",
+      "opts": {
+        "A": "What",
+        "B": "Which"
+      },
+      "why": "官方答案 <b>A</b>（What）。「它说的内容」没有选择范围 → What 引导主语从句。官方：3 What。",
+      "clues": [
+        "两句之间的逻辑关系"
+      ],
+      "others": [
+        [
+          "B",
+          "Which 需要「在某个范围里选」，这里没有范围。"
+        ]
+      ],
+      "tip": "先判断关系：并列？转折？结果？反面条件？",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "There was writing on the wall of the cave. What/Which it said was impossible to read."
+          ],
+          [
+            "答案",
+            "What"
+          ]
+        ],
+        "gram": [
+          "连接词"
+        ],
+        "tr": "What。"
+      }
+    },
+    {
+      "n": 116,
+      "tag": "②-4",
+      "answer": "B",
+      "prompt": "训练②-4 ——「The morning was sunny and hot. So/However, in the afternoon it became cold and wet.」选哪个？",
+      "opts": {
+        "A": "So",
+        "B": "However"
+      },
+      "why": "官方答案 <b>B</b>（However）。晴热 ↔ 冷湿是对比 → However（然而）。官方：4 However。",
+      "clues": [
+        "两句之间的逻辑关系"
+      ],
+      "others": [
+        [
+          "A",
+          "So 表结果：晴热所以变冷湿 —— 逻辑不通。"
+        ]
+      ],
+      "tip": "先判断关系：并列？转折？结果？反面条件？",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "The morning was sunny and hot. So/However, in the afternoon it became cold and wet."
+          ],
+          [
+            "答案",
+            "However"
+          ]
+        ],
+        "gram": [
+          "连接词"
+        ],
+        "tr": "However。"
+      }
+    },
+    {
+      "n": 117,
+      "tag": "②-5",
+      "answer": "B",
+      "prompt": "训练②-5 ——「Our plan was to get to the station early, but we missed the train. Also/Instead, we went by bus.」选哪个？",
+      "opts": {
+        "A": "Also",
+        "B": "Instead"
+      },
+      "why": "官方答案 <b>B</b>（Instead）。错过火车 → 改为坐巴士 → Instead（改为、反而）。官方：5 Instead。",
+      "clues": [
+        "两句之间的逻辑关系"
+      ],
+      "others": [
+        [
+          "A",
+          "Also 表递进（还、也）—— 但「坐巴士」是替代方案，不是补充。"
+        ]
+      ],
+      "tip": "先判断关系：并列？转折？结果？反面条件？",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "Our plan was to get to the station early, but we missed the train. Also/Instead, we went by bus."
+          ],
+          [
+            "答案",
+            "Instead"
+          ]
+        ],
+        "gram": [
+          "连接词"
+        ],
+        "tr": "Instead。"
+      }
+    },
+    {
+      "n": 118,
+      "tag": "②-6",
+      "answer": "B",
+      "prompt": "训练②-6 ——「We'd better get some food. Therefore/Otherwise, we'll be hungry later.」选哪个？",
+      "opts": {
+        "A": "Therefore",
+        "B": "Otherwise"
+      },
+      "why": "官方答案 <b>B</b>（Otherwise）。「不弄吃的 → 就会饿」是反面条件 → Otherwise（否则）。官方：6 Otherwise。",
+      "clues": [
+        "两句之间的逻辑关系"
+      ],
+      "others": [
+        [
+          "A",
+          "Therefore 表结果（因此）——「弄吃的所以会饿」逻辑不通。"
+        ]
+      ],
+      "tip": "先判断关系：并列？转折？结果？反面条件？",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "We'd better get some food. Therefore/Otherwise, we'll be hungry later."
+          ],
+          [
+            "答案",
+            "Otherwise"
+          ]
+        ],
+        "gram": [
+          "连接词"
+        ],
+        "tr": "Otherwise。"
+      }
+    },
+    {
+      "n": 119,
+      "tag": "③-1",
+      "answer": "C",
+      "prompt": "训练③-1 ——「1 Lucas was hoping to spend the morning taking it easy at home.」后面接哪一句？",
+      "opts": {
+        "A": "As soon as he heard that, Lucas knew he couldn't leave his friend out there on his own.",
+        "B": "That was why he was alone in the hills in winter.",
+        "C": "However, his plans for a relaxing Sunday ended when he received a phone call.",
+        "D": "So Lucas asked him what was wrong."
+      },
+      "why": "官方答案 <b>C</b>。同义替换：taking it easy ↔ a relaxing Sunday；hoping to spend the morning ↔ his plans … ended。However 转折引出变化。官方：1→C。",
+      "clues": [
+        "同义词 + 连接词 + 指代词"
+      ],
+      "others": [
+        [
+          "A",
+          "这句接在 1 后面不成立（连接词/指代词对不上）。"
+        ],
+        [
+          "B",
+          "B 是多余句：文章里没有「他为什么会在那儿」的理由 —— That was why 没有着落。"
+        ],
+        [
+          "D",
+          "这句接在 1 后面不成立（连接词/指代词对不上）。"
+        ]
+      ],
+      "tip": "逐条查：同义词、连接词（However/So）、指代词（he/that）是否接得上。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "1 Lucas was hoping to spend the morning taking it easy at home."
+          ],
+          [
+            "接续",
+            "However, his plans for a relaxing Sunday ended when he received a phone call."
+          ]
+        ],
+        "gram": [
+          "同义词与连接词线索"
+        ],
+        "tr": "C —— However, his plans for a relaxing Sunday ended when he received a phone call."
+      }
+    },
+    {
+      "n": 120,
+      "tag": "③-2",
+      "answer": "D",
+      "prompt": "训练③-2 ——「2 It was from Jake, who was walking in the countryside, and he sounded worried.」后面接哪一句？",
+      "opts": {
+        "A": "As soon as he heard that, Lucas knew he couldn't leave his friend out there on his own.",
+        "B": "That was why he was alone in the hills in winter.",
+        "C": "However, his plans for a relaxing Sunday ended when he received a phone call.",
+        "D": "So Lucas asked him what was wrong."
+      },
+      "why": "官方答案 <b>D</b>。「听起来担心」→ So 引出反应：问他怎么了。而且下一句 Jake replied 正好回答 asked。官方：2→D。",
+      "clues": [
+        "同义词 + 连接词 + 指代词"
+      ],
+      "others": [
+        [
+          "A",
+          "这句接在 2 后面不成立（连接词/指代词对不上）。"
+        ],
+        [
+          "B",
+          "B 是多余句：文章里没有「他为什么会在那儿」的理由 —— That was why 没有着落。"
+        ],
+        [
+          "C",
+          "这句接在 2 后面不成立（连接词/指代词对不上）。"
+        ]
+      ],
+      "tip": "逐条查：同义词、连接词（However/So）、指代词（he/that）是否接得上。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "2 It was from Jake, who was walking in the countryside, and he sounded worried."
+          ],
+          [
+            "接续",
+            "So Lucas asked him what was wrong."
+          ]
+        ],
+        "gram": [
+          "同义词与连接词线索"
+        ],
+        "tr": "D —— So Lucas asked him what was wrong."
+      }
+    },
+    {
+      "n": 121,
+      "tag": "③-3",
+      "answer": "A",
+      "prompt": "训练③-3 ——「3 Jake replied that he was by himself in cold, thick fog and was completely lost.」后面接哪一句？",
+      "opts": {
+        "A": "As soon as he heard that, Lucas knew he couldn't leave his friend out there on his own.",
+        "B": "That was why he was alone in the hills in winter.",
+        "C": "However, his plans for a relaxing Sunday ended when he received a phone call.",
+        "D": "So Lucas asked him what was wrong."
+      },
+      "why": "官方答案 <b>A</b>。同义替换：by himself ↔ on his own；completely lost ↔ couldn't leave his friend out there。官方：3→A。",
+      "clues": [
+        "同义词 + 连接词 + 指代词"
+      ],
+      "others": [
+        [
+          "B",
+          "B 是多余句：文章里没有「他为什么会在那儿」的理由 —— That was why 没有着落。"
+        ],
+        [
+          "C",
+          "这句接在 3 后面不成立（连接词/指代词对不上）。"
+        ],
+        [
+          "D",
+          "这句接在 3 后面不成立（连接词/指代词对不上）。"
+        ]
+      ],
+      "tip": "逐条查：同义词、连接词（However/So）、指代词（he/that）是否接得上。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "3 Jake replied that he was by himself in cold, thick fog and was completely lost."
+          ],
+          [
+            "接续",
+            "As soon as he heard that, Lucas knew he couldn't leave his friend out there on his own."
+          ]
+        ],
+        "gram": [
+          "同义词与连接词线索"
+        ],
+        "tr": "A —— As soon as he heard that, Lucas knew he couldn't leave his friend out there on his own."
+      }
+    },
+    {
+      "n": 16,
+      "tag": "16",
+      "gap": "16",
+      "answer": "C",
+      "prompt": "第 16 题 —— 这个空填哪一句？（在输入框里填字母）",
+      "why": "官方：C。依据：空前的 pulling out a plant（拔植物）正是「戒指脱落」的瞬间；空后 When she discovered it was missing 里的 it 指代戒指。",
+      "clues": [
+        "And that was probably when the ring came off her finger."
+      ],
+      "others": [
+        [
+          "B",
+          "B 说「给了她一个好主意」—— 和「拔植物丢戒指」的瞬间对不上。"
+        ],
+        [
+          "G",
+          "G 说的是「挖菜很累、个头大」—— 没给出丢戒指的时机。"
+        ]
+      ],
+      "tip": "填完字母后，把整段连起来读一遍 —— 通顺才成立。",
+      "ana": {
+        "parts": [
+          [
+            "答案",
+            "C —— And that was probably when the ring came off her finger."
+          ],
+          [
+            "检查",
+            "动词形态、单复数、指代词"
+          ]
+        ],
+        "gram": [
+          "选句三看：同义词 / 连接词 / 指代词"
+        ],
+        "tr": "C —— And that was probably when the ring came off her finger."
+      }
+    },
+    {
+      "n": 17,
+      "tag": "17",
+      "gap": "17",
+      "answer": "H",
+      "prompt": "第 17 题 —— 这个空填哪一句？（在输入框里填字母）",
+      "why": "官方：H。依据：空前说想买一枚便宜戒指替代（replace it with a much cheaper ring），H 的 another one 正是那枚新戒指；空后 it was so similar 里的 it 指代新戒指。",
+      "clues": [
+        "Luckily, she managed to find another one that looked just like it."
+      ],
+      "others": [
+        [
+          "B",
+          "B 的「好主意」后文没有呼应。"
+        ],
+        [
+          "E",
+          "E「从没见过这样的东西」和「买一枚很像的」对不上。"
+        ]
+      ],
+      "tip": "填完字母后，把整段连起来读一遍 —— 通顺才成立。",
+      "ana": {
+        "parts": [
+          [
+            "答案",
+            "H —— Luckily, she managed to find another one that looked just like it."
+          ],
+          [
+            "检查",
+            "动词形态、单复数、指代词"
+          ]
+        ],
+        "gram": [
+          "选句三看：同义词 / 连接词 / 指代词"
+        ],
+        "tr": "H —— Luckily, she managed to find another one that looked just like it."
+      }
+    },
+    {
+      "n": 18,
+      "tag": "18",
+      "gap": "18",
+      "answer": "A",
+      "prompt": "第 18 题 —— 这个空填哪一句？（在输入框里填字母）",
+      "why": "官方：A。依据：空前说 Colleen 在同一个花园干活（was working in the same garden），A 的 She 指 Colleen、there 指那个花园；空后 But this time it looked a bit different 的对比由此成立。",
+      "clues": [
+        "She was digging up vegetables there when she discovered the ring."
+      ],
+      "others": [
+        [
+          "E",
+          "E「从没见过这样的东西」—— 文章里 Colleen 认得这枚戒指。"
+        ],
+        [
+          "G",
+          "G「活儿累、个头大」没有上下文。"
+        ]
+      ],
+      "tip": "填完字母后，把整段连起来读一遍 —— 通顺才成立。",
+      "ana": {
+        "parts": [
+          [
+            "答案",
+            "A —— She was digging up vegetables there when she discovered the ring."
+          ],
+          [
+            "检查",
+            "动词形态、单复数、指代词"
+          ]
+        ],
+        "gram": [
+          "选句三看：同义词 / 连接词 / 指代词"
+        ],
+        "tr": "A —— She was digging up vegetables there when she discovered the ring."
+      }
+    },
+    {
+      "n": 19,
+      "tag": "19",
+      "gap": "19",
+      "answer": "F",
+      "prompt": "第 19 题 —— 这个空填哪一句？（在输入框里填字母）",
+      "why": "官方：F。依据：空前的 over 100 years 对应 F 的 in all that time；空后 So 引出的结论「只可能属于一个人」正建立在「只住过两个女人」上。",
+      "clues": [
+        "And only two women had lived there in all that time."
+      ],
+      "others": [
+        [
+          "B",
+          "B「好主意」和「100 年」这个数字接不上。"
+        ],
+        [
+          "E",
+          "E「从没见过」不接数字信息。"
+        ]
+      ],
+      "tip": "填完字母后，把整段连起来读一遍 —— 通顺才成立。",
+      "ana": {
+        "parts": [
+          [
+            "答案",
+            "F —— And only two women had lived there in all that time."
+          ],
+          [
+            "检查",
+            "动词形态、单复数、指代词"
+          ]
+        ],
+        "gram": [
+          "选句三看：同义词 / 连接词 / 指代词"
+        ],
+        "tr": "F —— And only two women had lived there in all that time."
+      }
+    },
+    {
+      "n": 20,
+      "tag": "20",
+      "gap": "20",
+      "answer": "D",
+      "prompt": "第 20 题 —— 这个空填哪一句？（在输入框里填字母）",
+      "why": "官方：D。依据：空前说想把戒指从胡萝卜上取下来（remove her ring from the carrot），So 引出做法「把胡萝卜切成两半」；空后 Then the ring was washed 是下一步。",
+      "clues": [
+        "So she carefully cut the carrot in half."
+      ],
+      "others": [
+        [
+          "B",
+          "B「好主意」和「切开」的下一步不搭。"
+        ],
+        [
+          "G",
+          "G「活儿累」没有呼应。"
+        ]
+      ],
+      "tip": "填完字母后，把整段连起来读一遍 —— 通顺才成立。",
+      "ana": {
+        "parts": [
+          [
+            "答案",
+            "D —— So she carefully cut the carrot in half."
+          ],
+          [
+            "检查",
+            "动词形态、单复数、指代词"
+          ]
+        ],
+        "gram": [
+          "选句三看：同义词 / 连接词 / 指代词"
+        ],
+        "tr": "D —— So she carefully cut the carrot in half."
+      }
+    }
+  ],
+  "summary": {
+    "title": "书上批注 · 要点速览",
+    "groups": [
+      {
+        "t": "语法 / 讲解（非词组类批注）",
+        "items": [
+          {
+            "cn": "another 和 other 的区别：① other 可作主语/宾语/定语（作定语时后接复数名词或不可数名词）；作名词时有复数 others（泛指「别人/别的东西」），the other 指「两者中的另一个」，the others 指「其余的全部」。② another 由 an + other 构成，只能代替或修饰「单数可数名词」，前面不再用冠词：Would you like another cup of coffee?（再来一杯咖啡？）",
+            "at": "1",
+            "ref": "11-0"
+          },
+          {
+            "cn": "although 和 in spite of 的区别：① although 后面跟从句（Although he was tired, he went on working.）；注意 although 不能用来指「假设的情况」、不能当并列连词、也不能像 however 那样作副词放句尾。② in spite of 后面跟名词或动名词，不跟从句（In spite of her never having acted before, her first performance was excellent.）。",
+            "at": "2",
+            "ref": "12-0"
+          }
+        ]
+      }
+    ]
+  },
+  "summaryTip": "Part 4 的钥匙有两把：同义词（换一种说法）和连接词（However / So / Instead…）；再把 it / he / that 这些指代词顺着读一遍，句子就各归其位。"
+}

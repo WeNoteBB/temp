@@ -659,7 +659,7 @@
         } else if (role === "o") {
           /* 选项清单行：「A advertisement」——行首字母拎出来做选项徽章。
              字母壳上仍带 .w（词数对账按词形算），但 .plain 里不响应点击。 */
-          var mm = String(sent.s).match(/^([A-Ha-h])[\s.、:：]+/);
+          var mm = String(sent.s).match(/^([A-Ha-l])[\s.、:：]+/);
           if (mm) {
             /* 徽章后面要留一个空格：.sent-txt 的 textContent 仍与原文逐字一致 */
             inner = '<span class="opletter w" data-w="' + esc(mm[1]) + '">' + esc(mm[1]) + "</span> " +
@@ -1073,18 +1073,20 @@
     }
     if (ref.indexOf("blk:") === 0) {
       /* 整段引用 "blk:段号"（标题 / 题目要求 / 提示这类 h/i 段落）：
-         不给逐句拆解，只给整段原文 + 整段翻译 + 解析（各句 tip 去重拼接）。 */
+         不给逐句拆解，只给整段原文 + 整段翻译 + 解析（各句 tip 去重拼接）
+         + 本句词组（写在段内句子上的笔记，让要求行上的批注也能点开查）。 */
       var bp = (C.passage.paragraphs || [])[+ref.slice(4)] || [];
       if (!bp.length) return null;
-      var tips = [], seenT = {};
+      var tips = [], seenT = {}, noteItems = [];
       bp.forEach(function (x) {
         var t = x.ana && x.ana.tip;
         if (t && !seenT[t]) { seenT[t] = 1; tips.push(t); }
+        ((x.ana && x.ana.note) || []).forEach(function (it) { noteItems.push(it); });
       });
       return {
         s: bp.map(function (x) { return x.s; }).join(" "),
         tr: bp.map(function (x) { return x.tr || ""; }).filter(Boolean).join(" "),
-        ana: null, tips: tips, blk: true, hard: false
+        ana: null, tips: tips, noteItems: noteItems, blk: true, hard: false
       };
     }
     return findSent(ref) || null;
@@ -1318,7 +1320,8 @@
     h += '<div class="ana-sent">' + anaRawHTML + "</div>";
     h += "</div>";
 
-    /* 标题 / 题目要求 / 提示（整段引用）：只要整段翻译和解析，不做逐句拆解 */
+    /* 标题 / 题目要求 / 提示（整段引用）：只要整段翻译和解析，不做逐句拆解；
+       段内句子上的笔记照旧并进「本句词组」（和句子面板同一套渲染）。 */
     if (s.blk) {
       if (s.tr) {
         h += '<div class="sec"><div class="sec-t">翻译</div><div class="sec-b">' + esc(s.tr) + "</div></div>";
@@ -1326,6 +1329,34 @@
       if (s.tips && s.tips.length) {
         h += '<div class="sec"><div class="sec-t">解析</div><div class="sec-b">' +
           s.tips.map(function (t) { return esc(t); }).join("<br>") + "</div></div>";
+      }
+      if (s.noteItems && s.noteItems.length) {
+        var seenK = {}, rows = [];
+        s.noteItems.forEach(function (it) {
+          var nk = typeof it === "string" ? it : String((it && it.k) || "");
+          if (!nk) return;
+          var r = lookup(nk) || lookupPhrase(nk.toLowerCase());
+          var dedupe = normPhrase((r && r.key) || nk);
+          if (seenK[dedupe]) return;
+          seenK[dedupe] = 1;
+          var e = (r && r.entry) || {};
+          rows.push({
+            k: nk,
+            disp: (it && typeof it === "object" && it.t) || nk,
+            cn: (it && typeof it === "object" && it.cn) ? it.cn : (e.cn || "")
+          });
+        });
+        if (rows.length) {
+          h += '<div class="sec"><div class="sec-t">本句词组</div><div class="notes">';
+          rows.forEach(function (r2) {
+            h += '<div class="noterow">';
+            h += '<button class="chip ph2 nkey" data-note="' + esc(r2.k) + '" data-noteref="' + esc(ref) +
+              '" title="点一下看词条">' + esc(r2.disp) + "</button>";
+            if (r2.cn) h += '<span class="ncn">' + esc(stripTags(r2.cn)) + "</span>";
+            h += "</div>";
+          });
+          h += "</div></div>";
+        }
       }
       h += "</div>";
       elAna.innerHTML = h;

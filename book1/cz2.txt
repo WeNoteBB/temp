@@ -1,0 +1,6 @@
+﻿index.html           缂╂斁鏉? true  | --zoom 鐢ㄥ埌鐨?calc 鏁伴噺: 0
+mistakes.html        缂╂斁鏉? true  | --zoom 鐢ㄥ埌鐨?calc 鏁伴噺: 0
+words.html           缂╂斁鏉? true  | --zoom 鐢ㄥ埌鐨?calc 鏁伴噺: 0
+synonyms.html        缂╂斁鏉? true  | --zoom 鐢ㄥ埌鐨?calc 鏁伴噺: 0
+collocations.html    缂╂斁鏉? true  | --zoom 鐢ㄥ埌鐨?calc 鏁伴噺: 0
+phrases.html         缂╂斁鏉? true  | --zoom 鐢ㄥ埌鐨?calc 鏁伴噺: 0

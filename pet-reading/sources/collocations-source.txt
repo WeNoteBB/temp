@@ -1,0 +1,91 @@
+title: PET 必会固定搭配 254 组（现在是「PET 词组库」的内容）
+label: 内部资料 · 首页「PET 词组库」入口（phrases.html）
+数据文件:
+  data/phrases.json       items = { n, grp, ph, alt?, cn, use, ex, exCn, blank, why, trap }
+  data/phrases.dict.json  随身小词典的补充词（每批上线时补该批例句里核心词库没收的词）
+  （2026-10-18 晚之前叫 data/collocations.json，字段一样、没有 grp/why/trap）
+
+# 素材来源（本机路径，不走 OCR）
+D:\BaiduNetdiskDownload\6301  PET备考全家桶(2026版)\4-PET阅读\2-PET固定搭配254组\
+  - 1. 254个PET阅读固定搭配-总表.xlsx   ← 实际用的就是从这份解的（表格结构最干净，254 行齐全）
+  - 1. …-总表.docx / 2. …-练习题.docx    ← 对着核前几组（练习题 = 总表挖掉「短语」列 + 号里面挖空）
+  - 1./2. …pdf                            ← 扫描件，无文字层；用来对着核了几页
+  - 音频\254个PET阅读固定搭配1-10.mp3 …    ← 每 10 个一组的跟读音频（暂未接进页面）
+页脚署名：@Daniel老师KP成长营 · 版权登记，翻版必究
+
+# 提取方法（2026-10-18）
+xlsx 就是 zip：解出 xl/sharedStrings.xml + xl/worksheets/sheet1.xml →
+把 <si> 展开成字符串表，按 <row>/<c> 还原单元格，再按列取值。
+表里有 26 张「表格头 + 10 行数据」的表（每 10 个一组），另有若干只挂了图片的空行要跳过。
+
+⚠ **列位会漂移**：前几组的「短语用法」在 F、例句在 I、翻译在 K；
+  后面的组漂到 E / H / K 或 D / G / J。取值按候选列依次取第一个非空（D→E→F / G→H→I / J→K），
+  按固定列取会在第 71 条之后全空。
+
+# 清洗（只做排版级修正，不改意思）
+- 英文标点后补空格：`Anyway,a couple of` → `Anyway, a couple of`
+- 拆词修正：`agol saw` → `ago I saw`（原稿的 l/I 混淆）、`Isaw` → `I saw`、`dosth` → `do sth`、
+  `wa y` → `way`、`16- 25` → `16–25`（范围号用 en dash）
+- 中文里的字间空格去掉（`各种 各样的` → `各种各样的`）；数字与中文之间按站里惯例留空格（`16 到 25 岁`）
+- 「短语」列里的等价说法（`a group of= groups of`）拆成 `ph` + `alt`（卡片上排成小字，不进练习答案）
+- 短语内部的写法统一：`sb.` / `sth.` 前后留空格（`advise sb.to do sth` → `advise sb. to do sth`）
+
+# 答案分析（why / trap，每批上线时写）
+原稿只给了「中文 + 用法 + 挖空句」，没有解析。数字版的「选择题」要判完分能讲清楚，所以每条多两句：
+- `why`：为什么是它 —— 交代空后/空前的形态（可数名词复数？动名词？动词原形？）+ 句意线索
+- `trap`：最容易被选走的那个为什么不成立（第 1 组里主要是 a couple of / a number of / a group of /
+  a wide range of 这四个「数量表达」之间的区别，以及 a way of doing sth / a way to do sth 的动名词-不定式之分）
+- 写的时候先用「同组的其他 9 条」当反向选项过一遍：如果两条都能填，就不是好题，得改 why 或换挖空位置
+
+# 随身小词典（data/phrases.dict.json，分批补）
+词组页点单词要能给读音/释义。词源优先级：`glossary.core.json`（全站共享词库）→ `phrases.dict.json`。
+第 1 组补了 46 个词（核心词库没收录的：piano / brilliant / journal / tolerate / temperatures / we're …），
+IPA 用英音、词性用 `n./v./adj./adv.` 这类缩写，中文尽量带上「它在哪条词组里」的提示。
+
+# 练习 / 选择题（页面上的两种玩法）
+原稿练习题 = 总表挖掉「短语」列、句子里把短语那块挖空。数字版沿用这个思路，做成两种：
+- **速查表页（collocations.html）**：短语库点选填入，对绿错红、配错记一次、可对答案/重做
+- **词组库·小霸王第三关（phrases.html）**：本组 10 个词组当选项，点一个立刻判分并自动进下一题；
+  答错的进「词组错题本」（pet_phrase_mistake：user_id + 原题 + 选择项 + 正确项 + 错次）
+两处共用一个数据字段：`blank`（必须是 `ex` 的子串；短语在句中变形时挖变形那一块，如
+`advise sb. to do sth` → 挖 `advises me to`）。
+
+# 254 条全量的清洗与出题（2026-10-19，脚本在临时目录，规则记在这）
+- **标点**：逗号/分号/冒号/问号/叹号后面补空格；`p.m.and` → `p.m. and`；数字与序数词尾保住（`18th` 不拆）
+- **破折号**：只把「两边有空格的连字符」转成 en dash（`TV - he` → `TV – he`），
+  复合词里的连字符原样保留（`sword-shaped`、`difficult-to-please`）
+- **断词/错字**（逐条对着 PDF 核过）：`wa y`→`way`、`agol`→`ago I`、`Isaw`→`I saw`、`Ihoped`→`I hoped`、
+  `lm`/`l`/`lmade`→`I`、`Ihad`/`Iwould`/`Iwon't`…→`I had`…、`waterfallto`→`waterfall to`、
+  `eachotherr`→`each other`、`sametime`→`same time`、`thesea`→`the sea`、`along way`→`a long way`、
+  `19977`→`in 1977`、`test'and`→`test' and`、`andl`→`and I`、`redwoods'great`→`redwoods' great`
+- **中文**：去掉字间空格（`各种 各样的` → `各种各样的`），中英之间留一个空格，句末补句号
+- **挖空**：按「词形 + 屈折」在句子里定位短语那一块（`advises me to` ← advise sb. to do sth）；
+  不规则动词/缩写定位不到的 56 条人工填 `blank`（went/got/taken/has/began/found/would like…）
+- **解析**：254 条每条手写 `why`（空前后是什么形态 + 句意线索），254 条都有 `trap`
+  （同组里最容易被选走的那个为什么不成立）——写的时候用同组其他 9 条当反向选项过一遍，
+  两条都能填的就换挖空位置或改解析
+- **合理解围**：原稿把 120（go on a theatre trip）的例句复制给了 122（go on a trip），
+  122 换了一句新例句（Last summer we went on a trip to the seaside…），其余例句都照原稿
+- **小词典**：例句里 941 个词形，补到只剩 `redwoods'great`（排版产物）；功能词（the/and/is…）
+  故意不收，页面点它们显示「词义待补」
+- **例句复用**：原稿里不同词组共用同一句例句（比如 1/11/199/208 都用 piano 那句），
+  跨组重复没关系（选择题只在组内出题）；**同组内**只有 106/107（for example / for free）和
+  138/140（have fun with / have similar interests to）两处共用一句，但挖空位置不同、题干不同，
+  组内不会出现两个答案都能填的情况
+
+# 跟读音频（原稿附的，2026-10-19 接入；当晚改版成 TTS）
+source: 同一个文件夹的 `音频\254个PET阅读固定搭配1-10.mp3` … `…251-254.mp3`（26 个，共 13.8MB，64kbps 上下）
+落位: assets/audio/phrases-<起>-<止>.mp3（按书中编号重命名）→ 构建时拷进 dist/assets/audio/
+现状: **页面不挂这些 mp3 了**（2026-10-19 深夜改版：跟读改成逐卡 TTS —— 词组→中文→例句→例句翻译，
+      英音 + 中文女声、0.75 倍速；小霸王念完停 1 秒自动翻卡）。文件留在仓库里备着，
+      想挂回来（比如精读模式加一条「原稿录音」）随时可以 —— 内容做过的切分实验见下。
+切分实验（当晚做过，未采用）: 用 WebAudio 解出每组音频的 RMS，发现录音结构是
+      「每条约 3 个语音块：词组(英) / 中文意思 / 例句(英)」，块间停顿 ~0.85s、
+      条与条之间也是 ~0.85s（没有更长的分隔）→ 自动切条不可靠（贪心合并会串条），
+      加上逐卡跟读还要带中文（录音里没有例句翻译），所以最终选了 TTS 方案。
+
+# 使用与版权（重要）
+- 第三方内部资料：页面放登录门禁后面 + 「内部资料 · 请勿外传」+ 来源说明，不宣传、不索引。
+- 数据进仓库的前提是**仓库私有**。
+- 目前只上线第 1 组（1–10），其余按 10 个一组续写 `data/phrases.json` 的 `items`
+  （每批顺手补 `phrases.dict.json` 的词、跑 `tools/import-phrases.mjs --dry` 体检）。

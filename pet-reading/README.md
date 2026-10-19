@@ -25,6 +25,10 @@ pet-reading/
 │   ├── mlist.js                    错题记录页（mistakes.html 的脚本）
 │   ├── words.js                    我的词书页（words.html 的脚本）
 │   ├── syn.js                      同义替换页（synonyms.html 的脚本：列表/搜索/遮住自测/连线题）
+│   ├── col.js                      固定搭配页（collocations.html 的脚本：10 个一组 · 短语卡 + 同组填空练习）
+│   ├── phrase.js                   词组库（phrases.html 的脚本：分组视图 + 精读模式 —— 单卡/小黑板/历史/☆）
+│   ├── xbw.js                      词组库·小霸王模式（自动播放 → 连线 → 选择题 → 自动批改）
+│   ├── srs.js                      词组库·复习（间隔重复：到期列表 / 做题 / 报服务端）
 │   ├── style.css                   样式（亮暗两套配色都在这，走语义令牌）
 │   └── template.html               文章页骨架，带 <!--占位符-->（左边目录列也在这）
 ├── articles/                   ← 内容：一篇一个 JSON，日常只动这里
@@ -41,7 +45,10 @@ pet-reading/
 ├── data/
 │   ├── manifest.json               站点标题 + 书本分组 + 文章顺序（唯一真相源）
 │   ├── glossary.core.json          跨篇共享词库，由 tools/promote.mjs 生成
-│   └── synonyms.json               「PET 阅读同义替换 300 组」（内部资料，来源见 sources/synonyms-source.txt）
+│   ├── synonyms.json               「PET 阅读同义替换 300 组」（内部资料，来源见 sources/synonyms-source.txt）
+│   ├── collocations.json           （已并入 phrases.json，2026-10-18 晚）
+│   ├── phrases.json                「PET 词组库」真源：254 组固定搭配 + 答案分析（10 个一组；来源见 sources/collocations-source.txt）
+│   └── phrases.dict.json           词组库随身小词典的补充词（每批上线时补该批例句里的生词）
 ├── sources/                    ← 素材原文（new.mjs 的输入，建议一起提交）
 ├── tools/
 │   ├── new.mjs                     素材 → 文章骨架
@@ -49,6 +56,7 @@ pet-reading/
 │   ├── smoke.mjs                   构建产物端到端测试（jsdom）
 │   ├── test-store.mjs              store.js 单测（含存储不可用的降级）
 │   ├── promote.mjs                 重复词条上浮到共享词库
+│   ├── import-phrases.mjs          data/phrases.json → pet_phrase 镜像（幂等，带字段体检）
 │   └── migrate-legacy.mjs          旧单文件 HTML → articles/*.json（一次性，已完成使命）
 ├── server/                     ← 收藏后端（Node + express + mysql2，完整文档在 server/README.md）
 │   ├── server.mjs                  HTTP 入口（/api/login、/api/favs…）
@@ -183,6 +191,63 @@ verify 会在两种写法之间对账：正文里的每个 `{n}` 必须有题；
   只放在登录门禁后面自用，不在任何公开渠道宣传/索引；**GitHub 仓库必须保持私有**，
   否则这份数据等于公开（仓库改私有之前不要 push）。
 
+### 「固定搭配」页（collocations.html · 内部资料）
+
+首页入口「PET 词组库」（在同义替换后面）。内容 = `data/phrases.json`
+（`items[]`，来源是第三方内部资料，见 `sources/collocations-source.txt`）。
+
+- **一组一屏**：页首那条横排组号（`第 1 组`…）切组，一屏 = 短语卡 + 同组练习，**10 个一组**
+  （和书上一样，两组之间互不串题）。
+- **短语卡**：`n` 编号 + `ph` 短语（`alt` 是书上的等价说法，如 `= groups of`，排在小字里）
+  + `cn` 中文 + `use` 用法 + `ex` 原文例句（例句里短语标黄，卡片上两个 🔊：读短语 / 读例句）
+  + `exCn` 翻译。
+- **练习**（对应同一组的 10 条）：**短语库点选填入** —— 点句子里的空、再点短语库里的短语
+  （直接点短语也能填到第一个空）；对绿错红、配错记一次；「对答案」全填上、「重做本组」清零。
+  每题给的是 `cn` + `use` 两条线索（和书上练习一样的提示），答案不在题面里出现。
+- **挖空规则**（数据侧 `blank`）：`blank` 必须是 `ex` 的子串（verify 管不着这份数据，
+  smoke 里断言了）。短语在句子里有变形时（`advise sb. to do sth` → `advises me to`），
+  挖的是句中的那一段，填对后旁边补一个「＝ 短语」小注。
+- 门禁、版权说明与同义替换页同一套；⚠ 同样**只在私有仓库里放**。
+- ⚠ 目前只上线了**第 1 组（1–10）**；`data/phrases.json` 往后按 10 个一组续写即可，
+  页面、组号条、练习都会自动跟着长（smoke 里那段「下一组」断言会自己开始生效）。
+
+### 「词组库」页（phrases.html · 内部资料）
+
+首页入口「PET 词组库」（🧩）。内容 = `data/phrases.json`（真源，10 个一组）+ `data/phrases.dict.json`
+（随身小词典，分批补）；设计与三张表见 `docs/词组库-设计方案.md`。
+
+- **分组视图**：一组一张卡（几条 / 收藏几条 / 错题几道），点进**精读模式**或**小霸王模式**；
+  底部链到「速查表」= 老的 `collocations.html`（清单 + 填空练习）。
+- **精读模式**（`engine/phrase.js`）：一次一张卡 —— 词组 / 中文 / 用法 / 例句（**词组标黄可点、
+  单词可点**）/ 翻译 / 🔊×2 / ☆；右侧**小黑板**出词组条（释义/用法/例句/解析/☆）或单词条
+  （读音 + 释义 + **相关词组**）；右侧**历史浮层**记点过的一切（按组隔离 `pet:hist:v1:phrases-N`）；
+  `←/→` 翻卡；窄屏小黑板是底部抽屉（和文章页同一套骨架）。
+- **小霸王模式**（`engine/xbw.js`）：① 自动播放（默认**静音**、可跳过、可调速，TTS 读词组 + 例句）
+  → ② 连线（10 词组 ↔ 10 中文，对绿错红计错次）→ ③ 选择题（题干 = 原句挖空 + 中文/用法线索，
+  **本组 10 个词组当选项，点一个立刻判分并自动进下一题**）→ ④ 批改总结（得分 + 错题清单 + 重做/回看/下一组）。
+  答错的题**自动进词组错题本**（`pet_phrase_mistake`），错题页「去订正」跳回 `phrases.html?g=1&mode=xbw&q=3`。
+- **跟读（本地朗读）**：`engine/phrase.js` 的 `window.PET_READ` —— 逐卡念「词组（英音）→ 中文意思（女声）
+  → 例句（英音）→ 例句翻译（女声）」，全 0.75 倍速（点「语速」在 0.6/0.75/1 之间循环，记在 `pet:ph:rate`）。
+  **小霸王第一关**自动一张接一张（念完停 1 秒翻卡，可暂停 / 重听本卡 / 点小圆点跳卡）；
+  **精读模式全手动**（卡片工具栏「▶ 播放跟读」，翻卡就停）。卡片里的 🔊 已去掉，只留单词条的读音。
+  顶栏 **「🎙 音色」**：列出这台设备的英文/中文音色、可试听可挑（存 `pet:ph:voice`，空 = 自动）；
+  挑法 = 学生挑的 > 好音质（`!localService` 或名字含 natural/online）> 女声 > 任意。
+  设备没英音 / 没中文音时，第一关底部会提示一句（并给出各平台的安装办法）。
+  iPhone/iPad 首次被浏览器拦下时，按钮会变成「▶ 点一下开始跟读」（点一下就能念）。
+- **🔁 复习（间隔重复）**（`engine/srs.js` + `pet_phrase_review` 表）：首页显示「今天有 N 条到期」
+  和「X/254 条进过复习」；做题 = 4 个选项（**从整座库里挑，优先同组**）+ 中文/用法线索 + 挖空句，
+  选一个立刻判分并报服务端（对升级 / 错回 1 级，间隔 1/2/4/7/15/30 天）；答错的同样进错题本。
+  「带我练 10 条没练过的」把新条目领进复习计划。
+- **收藏**：☆ 走 `store.addFav`（`type:"p"`，key = 词组原文）→ 本地立即生效 + 补写队列 →
+  `/api/favs/add {kind:"phrase"}`；「我的词书」里词组独立成段（释义/用法/例句连翻译/回词组库）。
+- **数据侧四张表**（`server/migrate.mjs`）：`pet_phrase`（内容镜像，由 `tools/import-phrases.mjs`
+  从 JSON 幂等导入）/ `user_phrase`（用户词组，带 词组/中文/例句/例句翻译 快照）/
+  `pet_phrase_mistake`（user_id + 原题 + 选择项 + 正确项 + 错次）/ `pet_phrase_review`
+  （复习计划：等级 1-6 + 到期日）。阅读的老表老接口不动。
+- ⚠ **254 条已全部上线（26 组）**：`data/phrases.json` 是真源，`data/phrases.dict.json` 是随身小词典
+  （564 条，例句里出现的词都收录了；the/and/is 这类功能词故意不收，点它们显示「词义待补」）。
+  改内容后跑 `tools/import-phrases.mjs --dry` 体检，再 `--write` 导进 `pet_phrase` 镜像表。
+
 ---
 
 ## 三道防线
@@ -191,9 +256,9 @@ verify 会在两种写法之间对账：正文里的每个 `{n}` 必须有题；
 |---|---|---|
 | `npm run verify` | ①内容：词数/句数对账、每句每选项都有 `ana`、词组字面存在且有词条、100% 词形覆盖、空位与题号对得上、答案唯一、干扰项齐全、**同一词在不同篇里释义不打架**。②引擎：分词正则三处逐字一致、断点两处一致、模板占位符齐全、`:root` 外无彩色字面量、暗色令牌齐全、hover 藏起来的控件都在常显名单里、`<!--V:x-->` 引用的文件都存在 | 秒级 |
 | `npm run build` | 合并共享词库、算引擎哈希、生成全部固定页面、**清理孤儿 HTML**（manifest 里删掉的篇目，dist 里的产物连 `.gz` 一起删）、预压缩 | 秒级 |
-| `npm run smoke` | 真在 jsdom 里跑一遍引擎：**1114 条断言**（每篇 + 首页 + 错题页 + 词书页 + 同义替换页 + 门禁），两种题型（Part 4 共享选项池 / Part 1 每题自带选项）都跑；Part 1 的正文内联作答（答案横排/句内二选一/整行选项/解析按钮/隐藏 tab/标题整段「译」）全链路断言；Part 3 的扉页标题/插图/徽章/Tip/下划线/选项盒；Part 5 的真表格/Remember 框/边框盒/真题空位与 6 排胶囊；Part 6 的开放填空输入框（判分/落盘/同步）、笔记并进「本句词组」（带中文、无单独区块）与**「总结」页**（手写分组/跳原文/☆ → ★、收藏表 +1）；**同义替换页**（300 行/30 段、点词小卡片、收藏回写、搜索、遮住自测、连线题按分组出题与配对对错）；含逐字比对防丢字、点词/点句/点词组/点空格的交互、历史记录、目录列开合、**做题与错题登记、学到哪儿、收藏、词书点开详情、首页按钮、题号徽章、门禁、主题切换、存储不可用时放行** | 数十秒 |
+| `npm run smoke` | 真在 jsdom 里跑一遍引擎：**2726 条断言**（每篇 + 首页 + 错题页 + 词书页 + 同义替换页 + 固定搭配页 + 词组库页），两种题型（Part 4 共享选项池 / Part 1 每题自带选项）都跑；Part 1 的正文内联作答（答案横排/句内二选一/整行选项/解析按钮/隐藏 tab/标题整段「译」）全链路断言；Part 3 的扉页标题/插图/徽章/Tip/下划线/选项盒；Part 5 的真表格/Remember 框/边框盒/真题空位与 6 排胶囊；Part 6 的开放填空输入框（判分/落盘/同步）、笔记并进「本句词组」（带中文、无单独区块）与**「总结」页**（手写分组/跳原文/☆ → ★、收藏表 +1）；**同义替换页**（300 行/30 段、点词小卡片、收藏回写、搜索、遮住自测、连线题按分组出题与配对对错）；**固定搭配页**（10 张短语卡、短语标黄、组号条、短语库乱序、填错记次、填对回填、对答案/重做、门禁）；含逐字比对防丢字、点词/点句/点词组/点空格的交互、历史记录、目录列开合、**做题与错题登记、学到哪儿、收藏、词书点开详情、首页按钮、题号徽章、门禁、主题切换、存储不可用时放行** | 数十秒 |
 | `node tools/test-store.mjs` | `store.js` 单测 **144 条**：注册/登录（含假后端的密码校验分支）、**14 天过期**、手机号校验、收藏去重、**补写队列（离线排队 / 联网推送 / 400 条目丢弃）**、**拉取合并（跨设备星标、本机已删的不复活）**、**错题登记与列表**、**学到哪儿（按手机号分账）**、主题读写、`safeNext` 拒外站、**假一个会抛异常的 localStorage 断言 `available` 返回 false 而不是抛出去** | 毫秒 |
-| `cd server && npm test` | 后端单测 **94 条**：sha256 已知向量、scrypt 散列/校验、昵称/密码/手机号/slug 校验、全部路由的成功与 400 分支、**db 抛异常 → 500 且不透传内部细节**。`selftest.mjs` 打真库，在部署机上跑 | 毫秒 |
+| `cd server && npm test` | 后端单测 **130 条**：sha256 已知向量、scrypt 散列/校验、昵称/密码/手机号/slug 校验、全部路由的成功与 400 分支、**db 抛异常 → 500 且不透传内部细节**。`selftest.mjs` 打真库，在部署机上跑 | 毫秒 |
 
 `npm run check` = 四个连跑（verify → build → smoke → test-store），提交前跑这个。
 
@@ -243,6 +308,8 @@ node tools/promote.mjs --write      # 真的写
 | `dist/mistakes.html` | `build.mjs` 里的 `renderMistakes()`（共用 `renderListPage()` 骨架） | `style.css` + `store.js` + `mlist.js` |
 | `dist/words.html` | `build.mjs` 里的 `renderWords()`（同上） | `style.css` + `store.js` + `words.js` |
 | `dist/synonyms.html` | `build.mjs` 里的 `renderSynonyms()`（内联 `data/synonyms.json`） | `style.css` + `store.js` + `syn.js` |
+| `dist/collocations.html` | `build.mjs` 里的 `renderCollocations()`（内联 `data/phrases.json`） | `style.css` + `store.js` + `col.js` |
+| `dist/phrases.html` | `build.mjs` 里的 `renderPhrases()`（内联 `data/phrases.json` + 随身小词典） | `style.css` + `store.js` + `phrase.js` + `xbw.js` |
 
 **没有单独的登录/注册页** —— 首页左上角那个圆圈（`avatar`）点开是弹框，逻辑全在 `engine/home.js`。
 固定页面**不加载 `app.js`**：`app.js` 开头无条件读 `window.PET_CONTENT`，那些页没有内容数据，一加载就崩。
@@ -350,7 +417,9 @@ window.PETStore = {
 | `pet:lastread:v1` | `{ [手机号]: { slug, ref, ts } }` —— 学到哪篇哪句（将来换 Redis） | 跨篇共享 |
 | `pet:theme:v1` | `"auto"` / `"light"` / `"dark"` | 跨篇共享 |
 | `pet:ui:v2` | `{ ana, vocab }` —— 注意 `ana` 存的是**用户偏好**（`userAna`），不是当前显隐 | 跨篇共享 |
-| `pet:zoom:v1` | 字号倍数 | 跨篇共享 |
+| `pet:zoom:v1` | 字号倍数（1–5，步长 0.5）—— **所有页面共用**：文章页 `app.js` 与固定页面 `store.js 的 mountZoom()` | 跨篇共享 |
+| `pet:ph:rate` | 词组库跟读语速（0.6 / 0.75 / 1） | 跨篇共享（只词组库用） |
+| `pet:ph:voice` | 跟读音色 `{ en, zh }`（空 = 自动挑） | 跨篇共享（只词组库用） |
 | `pet:hist:v1:<slug>` | 该篇的点词/点句历史 | 按篇隔离 |
 | `pet:ans:v1:<slug>` | 该篇做过的答案 `{ 题号: 选项字母 }`（错题登记后刷新还看得见） | 按篇隔离 |
 
@@ -456,7 +525,8 @@ window.PETStore = {
 ### 人工浏览器清单（jsdom 测不到的，改样式后必须过一遍）
 
 jsdom 有两条硬限制：**没有 `matchMedia`**，且 **`getComputedStyle` 完全忽略 `@media` 规则**。
-所以下面这些机器验证不了，只能人眼看：
+再加上**没有 `speechSynthesis`**（跟读一类的朗读逻辑在 jsdom 里不出声、也不会自动往下走，
+真机验证用 CDP 注入假语音，见 CLAUDE.md 第 37 条）。所以下面这些机器验证不了，只能人眼看：
 
 1. **五个宽度 × 亮/暗两主题**逐档看：375 / 744 / 820 / 1194 / 1440。
    暗色要覆盖正文、词组黄底、句子交替底色、三态高亮、题目区、选项对错、小黑板各区块、

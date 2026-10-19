@@ -1,0 +1,58 @@
+# t2-p5-sheep-faces · 素材与批注存档（2026-10-19）
+
+## 来源
+
+- 原题：`剑桥PET 官方模考题精讲讲练 _67-70.pdf` 前 2 页（书 P66–P67）
+  - 文字提取：`docx-all/剑桥PET 官方模考题精讲讲练 _67-70/word/document.xml` → `t2p56/docx-text.txt`
+  - 4 倍渲染校对：`t2p56/src-1.png`（P66）· `src-2.png`（P67）
+- 笔记（手写批注）：扫描第 84–85 页（= 书 P66–67）
+- 官方答案：书 P202 = 全本 PDF 第 203 页 → `t2p56/ans-203.png`
+
+## 官方答案（逐题核对）
+
+- 讨论题：1 six / 2 four
+- ① 22 项分组（⚠ 部分词可配多个动词，官方注明）：
+  - Do：sport, an exercise, an exam, an English course, my homework, some shopping
+  - Make：a noise, a mess, a mistake, a phone call, friends, notes
+  - Have：a job, an idea, a break, fun, a party, a shower, an exam, friends, a good time, lunch at school
+  - Take：a bus, a photo, a break, a shower, a phone call, an exam, notes
+  - 多动词项：an exam（do/have/take）、a break（have/take）、a shower（have/take）、
+    a phone call（make/take）、friends（make/have）、notes（make/take）
+- ②：1 made→done / 2 passed→had / 3 making→having / 4 do→have（take 也可）/ 5 know→make /
+  6 doing→making / 7 giving→taking（doing 也可）/ 8 do→make
+- ③：Text type = article or blog entry；Text topic = a visit to Barcelona
+- ④：1 B had / 2 D spent / 3 C doing / 4 A took / 5 A saw
+- 真题 21–26：**21 D according / 22 A skill / 23 C familiar / 24 B make / 25 A reward / 26 D connect**
+  （官方理由：只有 according 能接 to；social skill 固定搭配；familiar = 见过面的；
+  make a decision；a reward of food；connect A with B）
+
+## 手写批注清单（→ ana.note）
+
+P66：
+- ① 官方分组手写标注（红笔）+ ② 八个改正（绿笔）
+- ③ 手写答案（蓝）：Text type: article or blog entry, text topic: a visit to Barcelona
+- ④ 答案 B/D/C/A/A + Barcelona 巴塞罗那（西班牙）
+
+P67：
+- intelligent 聪明的，有智能的 · creatures 生物，动物，人 · recognise 识别，认出 ·
+  social animals 社交动物 · celebrities 名人 · involved 涉及，包含 · approaching 靠近，临近，接洽，处理 ·
+  Over time 随着时间的推移 · out of ten 在十次中
+- 选项词义：regarding 关于，就…而言 / following 跟随 / resulting 发生，产生，导致 / according 按照，依据，根据 /
+  skill 技巧 / method 方法 / ordinary 普通的，平常的，平淡无奇的 / familiar 熟悉的 / frequent 频繁的 /
+  reward 奖励，回报 / benefit 好处，益处 / goal 目标，目的，球门，进球得分 /
+  attach 系上，贴上，连接 / connect 连接，想通，使接通
+
+## 图片（2 张 → assets/img/）
+
+| 文件 | 来源 | 裁切框 (left, top, w, h) |
+|---|---|---|
+| t2-p5-barcelona.png | src-1（P66） | 1555, 1440, 840, 560 |
+| t2-p5-sheep.png | src-2（P67） | 1590, 770, 810, 560 |
+
+## 数据/工程备注
+
+- 训练题号：① 101–122（22 排，行号 1–22，胶囊 = do/make/have/take）· ② 123–130（每题 4 枚胶囊）·
+  ③ 131–132 · ④ 133–137；真题 21–26（**六排合一块**，行号 21–26）。
+- ① 的框行是「1 a bus」编号行（无字母徽章）；冒烟「选项清单徽章」检查已改成数据驱动（按字母行数对账）。
+- 真题三段合并为一块 → 六排作答带题号 21–26（冒烟卡口要求）。
+- 跨篇冲突 40 个词一次统一到全部 12 篇。
