@@ -110,12 +110,14 @@
     }
     h += '<p class="xbw-tip">一张一张跟读：<b>词组 → 中文 → 例句 → 例句翻译</b>（英音 + 中文女声，' +
       (R ? R.rate() : "0.75") + " 倍速）。一张念完停 1 秒，自动翻到下一张接着念；" +
-      "点小圆点可以跳到任意一张，点「暂停跟读」停下来自己看。音色不合适点顶栏「🎙 音色」换。" +
-      (voiceHint() ? "<br>" + voiceHint() : "") + "</p>";
+      "点小圆点可以跳到任意一张，点「暂停跟读」停下来自己看。有预生成音频的卡直接播文件（音色固定），" +
+      "退回 TTS 的才受顶栏「🎙 音色」影响。" +
+      (voiceHint(readIt()) ? "<br>" + voiceHint(readIt()) : "") + "</p>";
     $("xbw").innerHTML = h;
   }
   /* 这台设备的语音体检：没英音/没中文音时，在第一关提示一句（点「🎙 音色」看办法） */
-  function voiceHint() {
+  function voiceHint(it) {
+    if (it && it.ra) return "";                       // 这一条有预生成音频：设备没 TTS 也照样能念
     if (!window.PET_READ || !window.PET_READ.diagnose) return "";
     var d = window.PET_READ.diagnose();
     if (d.noSpeech) return "⚠ 这台设备/浏览器不支持语音朗读，跟读不会出声（换 Edge / Chrome 试试）。";
@@ -125,11 +127,12 @@
   /* 念当前这张卡；念完 → 停 1 秒 → 翻下一张 → 接着念 */
   function readCard() {
     var R = window.PET_READ;
-    if (!R || !R.has()) return;                       // 没有语音合成（比如 jsdom）就不自动走
-    if (st.readTimer) { clearTimeout(st.readTimer); st.readTimer = null; }
-    st.blocked = false;
+    if (!R) return;
     var it = readIt();
     if (!it) return;
+    if (!R.canPlay(it)) return;                       // 没音频文件、也没语音合成就不自动走
+    if (st.readTimer) { clearTimeout(st.readTimer); st.readTimer = null; }
+    st.blocked = false;
     R.card(it, function () {
       if (!st.play.on || st.stage !== "play") return;  // 中途暂停/切关了就不再往下走
       var list = groupItems(st.g);
@@ -149,6 +152,7 @@
   function readStart(fromI) {
     if (fromI != null) st.play.i = fromI;
     st.play.on = true;
+    st.blocked = false;                               // 用户点了（在手势里重放）→ 拦截提示立刻收掉
     renderPlay();
     readCard();
   }

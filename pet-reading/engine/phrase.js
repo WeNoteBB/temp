@@ -118,7 +118,21 @@
 
   /* 依次念一串句子；mid=每句之间的停顿（毫秒）。
      念完回调 done；等了 700ms 还没出声（iOS 那种「首次必须用户手势」）就回调 onBlocked。 */
+  /* 一条卡的跟读素材：有预生成音频（it.ra）就用文件；否则用 TTS 逐句念。
+     —— 这是「安卓没有 TTS」的解法：音频文件不依赖设备语音。 */
+  var audioEl = null;                 // 复用一个 <audio>，避免每次 new
+                                      // ⚠ iOS 上「解锁」是按元素算的：第一次用户手势里 play() 过它，
+                                      // 之后小霸王自动翻卡再 play()（没有手势）才不会被拦；换元素就重新上锁。
+  function cardAudio(it) {
+    if (!it || !it.ra) return "";
+    return "assets/read/" + it.n + ".mp3";
+  }
+  function stopAudio() {
+    if (audioEl) { try { audioEl.pause(); } catch (e) {} }
+  }
+
   function speakSeq(list, done, mid) {
+    if (!window.speechSynthesis) return;             // 兜底再兜底：连 TTS 都没有就别炸（文件也缺时）
     var my = ++gen;
     var en = pickEn(), zh = pickZh();
     var i = 0, finished = false;
@@ -150,6 +164,7 @@
   }
   function speakCancel() {
     gen++;
+    stopAudio();
     try { if (window.speechSynthesis) window.speechSynthesis.cancel(); } catch (e) {}
   }
   /* 一张卡的跟读内容：词组 → 中文 → 例句 → 例句翻译 */
@@ -162,16 +177,42 @@
   }
   window.PET_READ = {
     has: function () { return !!window.speechSynthesis; },
+    /* 这条能不能念：有预生成音频，或者设备有语音合成 */
+    canPlay: function (it) { return !!(it && it.ra) || !!window.speechSynthesis; },
+    /* 现在这条卡在放的音频地址（空 = 走 TTS 或没在放）；测试/排错用 */
+    nowPlaying: function () { return audioEl && audioEl.src ? audioEl.src : ""; },
+    _audio: function () { return audioEl; },         // 排错/自动化用：拿到 <audio> 本体（可看 currentTime/paused）
     rate: function () { return rate; },
     setRate: function (r) {
       if (RATES.indexOf(r) < 0) return rate;
       rate = r;
       try { localStorage.setItem(K_RATE, String(r)); } catch (e) {}
+      if (audioEl && !audioEl.paused) { try { audioEl.playbackRate = r; } catch (e) {} }
       return rate;
     },
     nextRate: function () { return window.PET_READ.setRate(RATES[(RATES.indexOf(rate) + 1) % RATES.length]); },
     rates: RATES,
-    card: function (it, done) { speakSeq(cardLines(it), done); },
+    /* 一条卡：有文件优先播文件（不依赖设备 TTS），没有才退回逐句 TTS */
+    card: function (it, done) {
+      var src = cardAudio(it);
+      if (!src) { speakSeq(cardLines(it), done); return; }
+      speakCancel();                                  // 文件优先：TTS 全停
+      var my = gen;
+      if (!audioEl) {
+        audioEl = new Audio();
+        audioEl.preload = "auto";
+      }
+      audioEl.src = src;
+      audioEl.playbackRate = rate;                    // 文件按正常语速生成，这里按设置放慢/加快
+      audioEl.onended = function () { if (my === gen && done) done(); };
+      audioEl.onerror = function () {                 // 文件缺失/坏了 → 退回 TTS
+        if (my === gen) speakSeq(cardLines(it), done);
+      };
+      var p = audioEl.play();
+      if (p && p.catch) p.catch(function () {
+        if (my === gen && window.PET_READ.onBlocked) window.PET_READ.onBlocked();
+      });
+    },
     /* 给学生挑音色用：列出这台设备上的音色 + 当前选中的 + 体检提示 */
     voices: function () {
       var pack = function (list) {
@@ -361,10 +402,9 @@
     var it = list[state.i];
     if (!it) return;
     var btn = document.querySelector("[data-playread]");
-    if (!window.PET_READ || !window.PET_READ.has()) {
-      if (btn) {                                  // 浏览器禁用了语音合成：给一句话，不装作在念
-        var old = btn.textContent;
-        btn.textContent = "（这台设备没有语音朗读）";
+    if (!window.PET_READ || !window.PET_READ.canPlay(it)) {
+      if (btn) {                                  // 没文件、也没语音合成：给一句话，不装作在念
+        btn.textContent = "（这台设备没有语音，这条也没有音频）";
         setTimeout(function () { renderCard(); }, 1600);
       }
       return;
@@ -682,10 +722,12 @@
       '<div class="syn-pop-h"><span class="syn-pop-w">🎙 跟读音色</span>' +
         '<button type="button" class="syn-pop-x" data-voice-close="1" title="关闭">✕</button></div>' +
       '<p class="syn-pop-from">这台设备报出 ' + (V.en.length + V.zh.length) + " 个可用音色" +
-        "（跟读速度固定 " + R.rate() + "×，可在第一关/精读卡上单独调）</p>";
+        "（跟读速度固定 " + R.rate() + "×，可在第一关/精读卡上单独调）</p>" +
+      '<p class="syn-pop-from">跟读优先播「预生成音频」（晓晓 / Libby，音色固定、不依赖设备）；' +
+        "只有没有音频的条目才退回下面这套音色。</p>";
     if (!V.en.length && !V.zh.length) {
       h += '<p class="vp-none">这台设备没报出可用音色（可能是浏览器太老或系统没装语音）。' +
-        "跟读按钮会提示；换 Edge / Chrome 一般就有。</p>";
+        "有预生成音频的条目照样能跟读；没音频的条目会念不出来 —— 换 Edge / Chrome 一般就有。</p>";
     } else {
       h += '<h4 class="vp-h">英文（词组 / 例句）</h4>';
       h += '<div class="vp-list">' +

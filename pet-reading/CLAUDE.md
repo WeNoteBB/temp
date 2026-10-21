@@ -586,6 +586,49 @@ Edge 按 375/744/768/820/1194/1440 逐宽度验收：每句「析/🔊」都在�
       test-store 144 / server 130；已部署，截图验收过。
     - **Test 2 阅读六个 Part 全部上线**（t2-p1 ~ t2-p6）。
 
+**2026-10-20（预生成跟读音频 · 安卓没有 TTS 也能跟读）：**
+
+43. **`assets/read/<n>.mp3`（254 条，约 26MB）**：
+    - 起因：安卓的浏览器 / 微信 WebView 经常没有 TTS（或只有机械音），跟读不出声。
+    - 做法：`tools/gen-read-audio.mjs` 用微软 Edge「朗读」接口（`msedge-tts`，服务器端可用）逐条生成
+      4 句 —— 词组（`en-GB-LibbyNeural`）→ 中文（`zh-CN-XiaoxiaoNeural`）→ 例句（英）→ 例句翻译（中），
+      再**按字节拼成一个 mp3**（同格式；实测时长 = 4 段之和 1.9+2.6+6.8+6.2 = 17.5s）。
+    - 一条 ≈ 100KB / 17s；254 条约 26MB。`npm i -D msedge-tts`；脚本支持 `--force` / `--only 1,2`
+      / 断点续跑（已有文件跳过）。
+    - 页面：`build.mjs` 构建期扫 `assets/read/*.mp3` → 条目带 `ra:1`（没文件就照旧走 TTS，页面不用发请求探）；
+      `PET_READ.card` 有文件优先播文件（`ended` → done），`canPlay(it)` 判「有文件或设备有 TTS」；
+      语速靠 `playbackRate`（文件按正常语速生成，0.6/0.75/1 都在这上面调）；`nowPlaying/_audio` 给测试排错用。
+    - 小霸王第一关 `readCard` 的守卫从 `has()`（必须有 TTS）改成 `canPlay(it)`；
+      「念完 → 停 1 秒 → 翻下一张」不变。真机（CDP）实测：`ended` 在 ct=17.2s 触发，
+      t≈+1.0s 时 index 1→2 且 `2.mp3` 已经在播。
+    - ⚠ `msedge-tts` 的 `toFile(dirPath)` **不建目录**（只拼 `dir/audio.mp3` 再写），要自己 `mkdir`；
+      目录别再和临时目录二次 join（会拼成 `TMP\TMP\…`）；文本要 XML 转义（`& < >`）。
+    - ⚠ Windows 自带语音（SAPI）只适合兜底：慧慧 / Zira 是机械音，而且 WAV 未压缩 **1MB/条**
+      （254 条 ≈ 260MB）。
+    - ⚠ jsdom 不会播音频（`play()` 打 “Not implemented: HTMLMediaElement”）：smoke 里过滤这一条日志，
+      断言改看 `PET_READ.nowPlaying()` 是不是 `assets/read/1.mp3`；「iOS 被拦」改成直接调
+      `PET_READ.onBlocked()`（jsdom 的 play 不会 reject，老写法 `state.blocked = true` 已失效）。
+    - 部署：`deploy.sh` 发 `dist/`，音频随 `copyAssets` 一起上去（`assets/read/` 23MB，第一次会慢）。
+      换机器重新生成：`npm i -D msedge-tts && node tools/gen-read-audio.mjs`。
+    - 验收：verify 0 警告 / smoke **2730 全绿**（12 篇）/ test-store 144 / server 130；
+      无头 Chrome 实测精读「播 17.2s 文件、0.75x、念完按钮复位不翻卡」，小霸王「ended 后 1.0s
+      自动到下一张并播 `2.mp3`」，切 1x 后 `playbackRate` 立刻变 1。
+    - ⚠ smoke 现在**每篇跑完打一行耗时**（一共约 25 分钟，最慢 t2-p3 294s）——
+      以前只在最后出结果，看起来像「卡住」；15 分钟的超时其实不够跑完 12 篇。
+
+**2026-10-21（t1-p4 训练页补齐 + 全篇内联化）：**
+
+43. **`t1-p4-digging-into-the-past` 补完**（书 P21–P23）：此前只有真题页（旧结构、无 blocks），
+    训练页（书 P21）一直没做。本次补齐并按新标准全篇内联化：
+    - 训练页：① 指代词 8 句（those/them… 2 枚胶囊，101–108）② 指代对象（写在 tip，官方答案）
+      ③ 连句成段 3 题（1→b / 2→c / 3→a，109–111）④ 划线（连接词写进 tip）；相机照 `t1-p4-camera.jpg`。
+    - 真题页：7 段文章（`{16}`–`{20}` 挖空 → **5 个输入框填字母**）+ A–H 选项池（旧 `options`/
+      `optionsAna` 字段删除，选项池改成正文 o 段）；答案 16 D / 17 F / 18 C / 19 G / 20 A
+      （与官方 P185 核对一致，干扰句 B/E/H）；考古照 `t1-p4-dig.jpg`。
+    - 词表：新增 94 条（训练页）+ 15 个跨篇冲突统一；`note` 改为「已核对」。
+    - ⚠ 冒烟「逐字比对」对 cloze 的期望值从「空格」改成「空串」（填空位渲染为输入框、文本里没有空格）。
+    - 结果：verify 0 警告 / smoke **2773** 全绿 / test-store 144 / server 130；已部署、截图验收过。
+
 **未做 / 待办：**
 
 - **Redis 的「学到哪一篇哪个位置」**（用户明确说放最后单独讨论）——

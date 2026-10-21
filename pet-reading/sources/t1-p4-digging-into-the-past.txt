@@ -1,0 +1,50 @@
+# t1-p4-digging-into-the-past · 素材与批注存档（2026-10-21 补全）
+
+## 来源
+
+- 原题：`_22-24.pdf`（3 页 = 书 P21–P23）
+  - 扫描版无文字层，按 3.2 倍渲染图转写：`t1p4t/src-1.png`（P21 训练页）· `src-2.png`（P22 文章）· `src-3.png`（P23 选项页）
+- 笔记（手写批注）：带批注版扫描第 21–23 页（Test 1 页码偏移 = 0；P21 = 扫描 21）
+  - 3 倍半页：`t1p4t/n3-21-top/bot.png`（训练页）等
+- 官方答案：书 P185 = 全本 PDF 第 186 页 → `t1p4t/ans-186.png`
+  - Teacher's Notes 要点：Training focus = reference words（this / her / they / one / so / do / which）
+
+## 官方答案（逐题核对）
+
+### 训练页（书 P21）
+- ① 8 句（指代词）：1 them / 2 which / 3 did / 4 They / 5 This / 6 one / 7 It / 8 so
+- ② 指代对象：1 Two young children / 2 her letter / 3 saw the car stop outside the house /
+  4 the police / 5 We decided to turn left at the crossroads / 6 (one of the) bikes / 7 Going by bus /
+  8 that the match starts at seven tomorrow
+- ③ 连句成段：1→b / 2→c / 3→a
+- ④ 划线（连接词）：1↔b creative / create, invent something new / do so（marker begin）；
+  2↔c subjects / these, things, studying at school or college；3↔a not enough / also, brilliant idea / it
+
+### 真题（书 P22–23）
+- **16 D / 17 F / 18 C / 19 G / 20 A**（干扰句 B、E、H）
+- 官方理由：16 D（In fact… still covered in grass；it 回指 grass）· 17 F（Some people were a bit
+  disappointed…；But we all knew Dad was right）· 18 C（That way…；So it made sense）·
+  19 G（They probably imagined… gold jewellery；But actually… everyday objects）·
+  20 A（It turned out to be a small figure of a horse；made it 的 it 必须是人造物）
+
+## 手写批注清单（→ ana.note）
+
+- 训练页：reference words → 指代词（红）；① 八题答案打勾；② 指代对象（橙笔，与官方一致）；
+  ③ 连线 1→b / 2→c / 3→a；④ 连接词（绿笔，与官方一致）
+- 真题页：deny?? — 以文章批注为准（此前的 t1-p4 批注记录未单独存档，见书页扫描）
+
+## 图片（2 张 → assets/img/）
+
+| 文件 | 来源 | 裁切框 (left, top, w, h) |
+|---|---|---|
+| t1-p4-camera.jpg | src-1（P21） | 220, 1620, 900, 600（拿摄影机的少年） |
+| t1-p4-dig.jpg | src-2（P22） | 1150, 330, 610, 390（考古现场） |
+
+## 数据/工程备注
+
+- 训练题号：① 101–108（每题 2 枚胶囊）· ③ 109–111（3 枚胶囊 a/b/c）；真题 16–20 = **cloze 填字母**
+  （{16}–{20} 输入框，答案忽略大小写）+ A–H 选项池（正文 o 段）。
+- 旧结构（`options` / `optionsAna` / 无 blocks）已改为内联（inlineQuiz + blocks，34 段）。
+- 冒烟「逐字比对」对 cloze 的期望值改为空串（输入框在文本里不占空格）。
+- 词表：新增 94 条 + 15 个跨篇冲突统一到 12 篇。
+- 测试：verify 0 警告 / smoke 2773 全绿 / test-store 144 / server 130。

@@ -4732,7 +4732,8 @@
     "sale": {
       "pos": "n.",
       "ipa": "/seɪl/",
-      "cn": "出售"
+      "cn": "出售",
+      "note": "for sale 待售。"
     },
     "on sale": {
       "pos": "词组",

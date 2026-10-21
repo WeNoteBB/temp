@@ -3,11 +3,839 @@
   "book": "剑桥PET 官方模考题精讲讲练",
   "label": "Exam Practice Test 1 · Reading Part 4",
   "title": "Digging into the past",
-  "note": "答案为依据上下文推断，请对照书后 P185 核对",
+  "note": "答案为逐题对照书后 P185 官方答案核对一致（训练①②③④ + 真题 16–20）；「析」里的笔记来自带手写批注的 PET Trainers 版（书 P21–P23；扫描页码 21–23）（2026-10-21 补训练页）",
   "passage": {
-    "words": 319,
-    "sentences": 22,
+    "words": 696,
+    "sentences": 56,
     "paragraphs": [
+      [
+        {
+          "s": "Training Test 1 · Reading Part 4",
+          "hard": false,
+          "tr": "训练测试 1 · 阅读第 4 部分。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题行：<b>Training Test 1 · Reading Part 4</b>",
+            "parts": [
+              [
+                "标题",
+                "Training Test 1 —— 训练测试编号"
+              ],
+              [
+                "标题",
+                "Reading Part 4 —— 阅读第 4 部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式省略句"
+            ],
+            "tip": "这一部分练的是：一篇长文挖掉五句，从 A–H 八句里选（三句用不上）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "In this part you:",
+          "hard": false,
+          "tr": "这一部分你要：",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>In this part you:</b>（这一部分你要：）",
+            "parts": [
+              [
+                "短语",
+                "In this part —— 在这一部分"
+              ],
+              [
+                "主语",
+                "you —— 你"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "in this part 在这一部分"
+            ],
+            "tip": "下面两行是这一部分的两个动作。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "read — a text from which five sentences have been removed",
+          "hard": false,
+          "tr": "读——一篇被拿掉五句话的文章。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "说明：<b>read — a text from which five sentences have been removed</b>",
+            "parts": [
+              [
+                "动词",
+                "read —— 读"
+              ],
+              [
+                "宾语",
+                "<code>a text</code> —— 一篇文章"
+              ],
+              [
+                "定语从句",
+                "<code>from which five sentences have been removed</code> —— 从中被拿掉五句话的"
+              ]
+            ],
+            "clauses": [
+              "from which 定语从句；现在完成时被动"
+            ],
+            "gram": [
+              "remove 拿掉"
+            ],
+            "tip": "这就是 Part 4 的题型：挖空选句。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "choose — from a list of eight sentences to replace the missing sentences",
+          "hard": false,
+          "tr": "选——从八句话的列表里选，替换缺失的句子。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "说明：<b>choose — from a list of eight sentences to replace the missing sentences</b>",
+            "parts": [
+              [
+                "动词",
+                "choose —— 选"
+              ],
+              [
+                "来源",
+                "<code>from a list of eight sentences</code> —— 从八句话的列表里"
+              ],
+              [
+                "目的",
+                "<code>to replace the missing sentences</code> —— 替换缺失的句子"
+              ]
+            ],
+            "clauses": [
+              "不定式表目的"
+            ],
+            "gram": [
+              "replace 替换；missing 缺失的"
+            ],
+            "tip": "八句选五句 —— 三句多余。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "GRAMMAR: REFERENCE WORDS",
+          "hard": false,
+          "tr": "语法：指代词。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>GRAMMAR: REFERENCE WORDS</b>（语法：指代词）",
+            "parts": [
+              [
+                "名词",
+                "REFERENCE WORDS —— 指代词（this/they/it/one/so…）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "reference word 指代词"
+            ],
+            "tip": "this / they / it / one / so 这些词指向前面说过的东西 —— 选句题就靠它们。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "B1 Preliminary candidates often make mistakes with reference words.",
+          "hard": false,
+          "tr": "B1 Preliminary 的考生经常在指代词上出错。",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "主谓宾：<b>B1 Preliminary candidates often make mistakes with reference words.</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>B1 Preliminary candidates</code> —— 考生"
+              ],
+              [
+                "谓语",
+                "<code>often make mistakes</code> —— 经常出错"
+              ],
+              [
+                "介词短语",
+                "<code>with reference words</code> —— 在指代词上"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "make mistakes with 在……上出错"
+            ],
+            "tip": "指代词指错对象，句子的意思就断了。",
+            "note": [
+              {
+                "k": "reference words",
+                "cn": "指代词"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "① Choose the correct words in these sentences.",
+          "hard": false,
+          "tr": "① 选出这些句子里正确的词。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Choose the correct words in these sentences.</b>",
+            "parts": [
+              [
+                "谓语",
+                "Choose —— 选择"
+              ],
+              [
+                "宾语",
+                "<code>the correct words</code> —— 正确的词"
+              ],
+              [
+                "范围",
+                "<code>in these sentences</code> —— 在这些句子里"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "correct 正确的"
+            ],
+            "tip": "每题两个选项 —— 看它指代的是前面哪个词。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Two young children asked me where classroom 32 was, so I walked there with those/them.",
+          "hard": false,
+          "tr": "them —— 指代 Two young children（两个小孩）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "选词：<b>them</b>",
+            "parts": [
+              [
+                "选项",
+                "those / them"
+              ],
+              [
+                "答案",
+                "them ↔ 指代 Two young children（两个小孩）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "指代词的呼应"
+            ],
+            "tip": "官方答案：them。them 指前面的 two young children（那些孩子）；those 是「那些」，不能直接指人。",
+            "note": [
+              {
+                "k": "them",
+                "cn": "指代 Two young children（两个小孩）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "When I saw Grace at the party, I thanked her for her letter, it/which had arrived the day before.",
+          "hard": false,
+          "tr": "which —— 指代 her letter（她的信）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "选词：<b>which</b>",
+            "parts": [
+              [
+                "选项",
+                "it / which"
+              ],
+              [
+                "答案",
+                "which ↔ 指代 her letter（她的信）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "指代词的呼应"
+            ],
+            "tip": "官方答案：which。which 引导非限制性定语从句，指 her letter；it 不能这样接在逗号后连接两句。",
+            "note": [
+              {
+                "k": "which",
+                "cn": "指代 her letter（她的信）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Nobody else saw the car stop outside the house, but Emily saw/did.",
+          "hard": false,
+          "tr": "did —— 指代 saw the car stop outside the house（看见车停在屋外）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "选词：<b>did</b>",
+            "parts": [
+              [
+                "选项",
+                "saw / did"
+              ],
+              [
+                "答案",
+                "did ↔ 指代 saw the car stop outside the house（看见车停在屋外）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "指代词的呼应"
+            ],
+            "tip": "官方答案：did。did 代指前面的 saw the car stop（避免重复动词）。",
+            "note": [
+              {
+                "k": "did",
+                "cn": "指代 saw the car stop outside the house（看见车停在屋外）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Somebody phoned the police. It/They arrived in ten minutes and arrested the man.",
+          "hard": false,
+          "tr": "They —— 指代 the police（警察）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "选词：<b>They</b>",
+            "parts": [
+              [
+                "选项",
+                "It / They"
+              ],
+              [
+                "答案",
+                "They ↔ 指代 the police（警察）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "指代词的呼应"
+            ],
+            "tip": "官方答案：They。They 指 the police（警察 —— 复数概念）；It 指单数事物。",
+            "note": [
+              {
+                "k": "they",
+                "cn": "指代 the police（警察）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "We decided to turn left at the crossroads. These/This, we soon found out, was a bad decision.",
+          "hard": false,
+          "tr": "This —— 指代 We decided to turn left at the crossroads（左转这个决定）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "选词：<b>This</b>",
+            "parts": [
+              [
+                "选项",
+                "These / This"
+              ],
+              [
+                "答案",
+                "This ↔ 指代 We decided to turn left at the crossroads（左转这个决定）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "指代词的呼应"
+            ],
+            "tip": "官方答案：This。This 指前面整个决定（左转这件事）；These 指复数。",
+            "note": [
+              {
+                "k": "this",
+                "cn": "指代 We decided to turn left at the crossroads（左转这个决定）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "There were two bikes for sale in the shop. Liam bought the newer one/ones.",
+          "hard": false,
+          "tr": "one —— 指代 (one of the) bikes（其中较新的那辆）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "选词：<b>one</b>",
+            "parts": [
+              [
+                "选项",
+                "one / ones"
+              ],
+              [
+                "答案",
+                "one ↔ 指代 (one of the) bikes（其中较新的那辆）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "指代词的呼应"
+            ],
+            "tip": "官方答案：one。one 代替单数可数名词 bike；ones 是复数。",
+            "note": [
+              {
+                "k": "one",
+                "cn": "指代 (one of the) bikes（其中较新的那辆）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "Going by bus sounds like a good idea. It/They would be cheaper than the train, too.",
+          "hard": false,
+          "tr": "It —— 指代 Going by bus（坐公交）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "选词：<b>It</b>",
+            "parts": [
+              [
+                "选项",
+                "It / They"
+              ],
+              [
+                "答案",
+                "It ↔ 指代 Going by bus（坐公交）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "指代词的呼应"
+            ],
+            "tip": "官方答案：It。It 指 going by bus（坐公交这件事）；They 指复数。",
+            "note": [
+              {
+                "k": "it",
+                "cn": "指代 Going by bus（坐公交）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "I'm not certain that the match starts at seven tomorrow, but I think so/it.",
+          "hard": false,
+          "tr": "so —— 指代 that the match starts at seven tomorrow（比赛明天七点开始）。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "选词：<b>so</b>",
+            "parts": [
+              [
+                "选项",
+                "so / it"
+              ],
+              [
+                "答案",
+                "so ↔ 指代 that the match starts at seven tomorrow（比赛明天七点开始）"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "指代词的呼应"
+            ],
+            "tip": "官方答案：so。so 代替前面整句（比赛七点开始）—— I think so = 我觉得是这样。",
+            "note": [
+              {
+                "k": "so",
+                "cn": "指代 that the match starts at seven tomorrow（比赛明天七点开始）"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "② Work in pairs. What does the correct word in each of 1–8 above refer back to?",
+          "hard": false,
+          "tr": "② 两人一组。1–8 里正确的词各自指回什么？",
+          "ana": {
+            "pat": [
+              "主谓宾"
+            ],
+            "frame": "疑问句：<b>What does the correct word in each of 1–8 above refer back to?</b>",
+            "parts": [
+              [
+                "主语",
+                "<code>the correct word in each of 1–8 above</code> —— 上面 1–8 里正确的词"
+              ],
+              [
+                "谓语",
+                "<code>does … refer back to</code> —— 指回"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "refer back to 指回"
+            ],
+            "tip": "官方答案：1 Two young children / 2 her letter / 3 saw the car stop outside the house / 4 the police / 5 We decided to turn left at the crossroads / 6 (one of the) bikes / 7 Going by bus / 8 that the match starts at seven tomorrow。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "FOCUS: USING REFERENCE WORDS AS CLUES",
+          "hard": false,
+          "tr": "重点：用指代词当线索。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "小标题：<b>FOCUS: USING REFERENCE WORDS AS CLUES</b>",
+            "parts": [
+              [
+                "动名词",
+                "<code>USING REFERENCE WORDS</code> —— 用指代词"
+              ],
+              [
+                "介词短语",
+                "<code>AS CLUES</code> —— 作为线索"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "clue 线索"
+            ],
+            "tip": "选句题：空前后的 this/they/it/one/so 告诉你该和哪句接。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "③ Match sentences 1–3 with sentences a–c to form a complete paragraph. Use reference words to help you.",
+          "hard": false,
+          "tr": "③ 把句子 1–3 与 a–c 配对组成完整段落。用指代词帮你。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>Match sentences 1–3 with sentences a–c to form a complete paragraph.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>Match sentences 1–3 with sentences a–c</code> —— 把 1–3 与 a–c 配对"
+              ],
+              [
+                "目的",
+                "<code>to form a complete paragraph</code> —— 组成完整段落"
+              ],
+              [
+                "补充",
+                "<code>Use reference words to help you</code> —— 用指代词帮忙"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "paragraph 段落"
+            ],
+            "tip": "答案：1→b / 2→c / 3→a。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "If you've got a creative mind, why not invent something new?",
+          "hard": false,
+          "tr": "b —— 创造性的头脑。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "配对：<b>b</b>",
+            "parts": [
+              [
+                "句子",
+                "If you've got a creative mind, why not invent something new?"
+              ],
+              [
+                "接续",
+                "b —— To do so, begin by deciding what you want to create."
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "指代词呼应"
+            ],
+            "tip": "官方：1→b。To do so 指回「invent something new」；begin by deciding… 接着讲第一步。",
+            "note": [
+              {
+                "k": "creative mind",
+                "cn": "创造性的头脑"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "It's best to choose from subjects you already know quite a lot about.",
+          "hard": false,
+          "tr": "c —— 科目。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "配对：<b>c</b>",
+            "parts": [
+              [
+                "句子",
+                "It's best to choose from subjects you already know quite a lot about."
+              ],
+              [
+                "接续",
+                "c —— These could be things you've enjoyed studying at school or college."
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "指代词呼应"
+            ],
+            "tip": "官方：2→c。These 指 subjects；things you've enjoyed studying at school or college 说明是什么科目。",
+            "note": [
+              {
+                "k": "subjects",
+                "cn": "科目"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "It's not enough just to have a brilliant idea.",
+          "hard": false,
+          "tr": "a —— 绝妙的主意。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "配对：<b>a</b>",
+            "parts": [
+              [
+                "句子",
+                "It's not enough just to have a brilliant idea."
+              ],
+              [
+                "接续",
+                "a —— You also need to know how to make it work in practice."
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "指代词呼应"
+            ],
+            "tip": "官方：3→a。not enough 引出「还需要……」；it 指 a brilliant idea（make it work）。",
+            "note": [
+              {
+                "k": "a brilliant idea",
+                "cn": "绝妙的主意"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "s": "④ In pairs, underline the words and phrases that link the sentences in Exercise 3.",
+          "hard": false,
+          "tr": "④ 两人一组，划出练习 3 里连接句子的词和短语。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "祈使句：<b>underline the words and phrases that link the sentences in Exercise 3.</b>",
+            "parts": [
+              [
+                "谓语",
+                "<code>underline the words and phrases</code> —— 划出词和短语"
+              ],
+              [
+                "定语从句",
+                "<code>that link the sentences in Exercise 3</code> —— 连接练习 3 句子的"
+              ]
+            ],
+            "clauses": [
+              "that 定语从句"
+            ],
+            "gram": [
+              "link 连接"
+            ],
+            "tip": "官方划线：1↔b creative / create, invent something new / do so（还有 marker begin）；2↔c subjects / these, things, studying at school or college；3↔a not enough / also, brilliant idea / it。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Exam Practice Test 1 · Reading Part 4",
+          "hard": false,
+          "tr": "考试实践测试 1 · 阅读第 4 部分。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题行：<b>Exam Practice Test 1 · Reading Part 4</b>",
+            "parts": [
+              [
+                "标题",
+                "Exam Practice Test 1 —— 考试实践测试编号"
+              ],
+              [
+                "标题",
+                "Reading Part 4 —— 阅读第 4 部分"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "标题式省略句"
+            ],
+            "tip": "真题：五句挖空 + 八句选项（三句多余）。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Questions 16–20",
+          "hard": false,
+          "tr": "第 16–20 题。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题：<b>Questions 16–20</b>",
+            "parts": [
+              [
+                "名词",
+                "Questions —— 题目"
+              ],
+              [
+                "数字",
+                "16–20 —— 第 16 到第 20 题"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "题号连续编号"
+            ],
+            "tip": "五道题 = 五个空。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Five sentences have been removed from the text below. For each question, choose the correct answer. There are three extra sentences which you do not need to use.",
+          "hard": false,
+          "tr": "下面这篇文章被拿掉了五句话。每题选出一个正确答案。有三句多余的句子不需要用。",
+          "ana": {
+            "pat": [
+              "主谓"
+            ],
+            "frame": "被动句 + 祈使句：<b>Five sentences have been removed from the text below.</b>",
+            "parts": [
+              [
+                "分句 1",
+                "<code>Five sentences have been removed from the text below</code> —— 五句话被从下面文章里拿掉"
+              ],
+              [
+                "祈使句",
+                "<code>choose the correct answer</code> —— 选出正确答案"
+              ],
+              [
+                "补充",
+                "<code>There are three extra sentences which you do not need to use</code> —— 有三句多余的不用"
+              ]
+            ],
+            "clauses": [
+              "现在完成时被动；which 定语从句"
+            ],
+            "gram": [
+              "remove 拿掉"
+            ],
+            "tip": "选句三看：指代词、连接词、同义词。"
+          }
+        }
+      ],
+      [
+        {
+          "s": "Digging into the past",
+          "hard": false,
+          "tr": "挖掘过去。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "标题：<b>Digging into the past</b>（挖掘过去）",
+            "parts": [
+              [
+                "动名词",
+                "<code>Digging</code> —— 挖掘"
+              ],
+              [
+                "宾语",
+                "<code>into the past</code> —— 过去"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "dig into 挖掘"
+            ],
+            "tip": "标题告诉你文章讲考古。"
+          }
+        }
+      ],
       [
         {
           "s": "Last year, Kate Marshall was given a very exciting opportunity – to help her father, who's a history lecturer, at a historical site!",
@@ -1098,7 +1926,389 @@
             ]
           }
         }
+      ],
+      [
+        {
+          "s": "A It turned out to be a small figure of a horse.",
+          "hard": false,
+          "tr": "A 原来是一匹小马的雕像。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "选项 A：<b>It turned out to be a small figure of a horse.</b>",
+            "parts": [
+              [
+                "选项",
+                "A —— It turned out to be a small figure of a horse."
+              ],
+              [
+                "判断",
+                "对应 20（形状奇怪的石头 → 小马雕像）。"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "选句线索"
+            ],
+            "tip": "对应 20（形状奇怪的石头 → 小马雕像）。"
+          }
+        },
+        {
+          "s": "B No-one made that mistake, luckily.",
+          "hard": false,
+          "tr": "B 幸运的是，没人犯那个错误。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "选项 B：<b>No-one made that mistake, luckily.</b>",
+            "parts": [
+              [
+                "选项",
+                "B —— No-one made that mistake, luckily."
+              ],
+              [
+                "判断",
+                "多余句 ✗"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "选句线索"
+            ],
+            "tip": "多余句 ✗：文章里没有「错误」可指代。"
+          }
+        },
+        {
+          "s": "C That way, everyone made sure they didn't miss anything.",
+          "hard": false,
+          "tr": "C 这样一来，每个人都确保没漏掉任何东西。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "选项 C：<b>That way, everyone made sure they didn't miss anything.</b>",
+            "parts": [
+              [
+                "选项",
+                "C —— That way, everyone made sure they didn't miss anything."
+              ],
+              [
+                "判断",
+                "对应 18（小心挖掘 → 不漏东西 → 说得通）。"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "选句线索"
+            ],
+            "tip": "对应 18（小心挖掘 → 不漏东西 → 说得通）。"
+          }
+        },
+        {
+          "s": "D In fact, the whole area was actually still covered in grass.",
+          "hard": false,
+          "tr": "D 事实上，整片区域当时还长满了草。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "选项 D：<b>In fact, the whole area was actually still covered in grass.</b>",
+            "parts": [
+              [
+                "选项",
+                "D —— In fact, the whole area was actually still covered in grass."
+              ],
+              [
+                "判断",
+                "对应 16（现场跟想的不一样 → 其实还长着草 → 先清除）。"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "选句线索"
+            ],
+            "tip": "对应 16（现场跟想的不一样 → 其实还长着草 → 先清除）。"
+          }
+        },
+        {
+          "s": "E It was a bit sad to see it disappear.",
+          "hard": false,
+          "tr": "E 看着它消失有点难过。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "选项 E：<b>It was a bit sad to see it disappear.</b>",
+            "parts": [
+              [
+                "选项",
+                "E —— It was a bit sad to see it disappear."
+              ],
+              [
+                "判断",
+                "多余句 ✗"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "选句线索"
+            ],
+            "tip": "多余句 ✗：it 没有指代对象，逻辑顺序也不对。"
+          }
+        },
+        {
+          "s": "F Some people were a bit disappointed by that news.",
+          "hard": false,
+          "tr": "F 有些人对这个消息有点失望。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "选项 F：<b>Some people were a bit disappointed by that news.</b>",
+            "parts": [
+              [
+                "选项",
+                "F —— Some people were a bit disappointed by that news."
+              ],
+              [
+                "判断",
+                "对应 17（失望 ← that news → 但爸爸是对的）。"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "选句线索"
+            ],
+            "tip": "对应 17（失望 ← that news → 但爸爸是对的）。"
+          }
+        },
+        {
+          "s": "G They probably imagined it was things like gold jewellery.",
+          "hard": false,
+          "tr": "G 他们大概以为是什么金首饰之类的东西。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "选项 G：<b>They probably imagined it was things like gold jewellery.</b>",
+            "parts": [
+              [
+                "选项",
+                "G —— They probably imagined it was things like gold jewellery."
+              ],
+              [
+                "判断",
+                "对应 19（朋友的想象 ↔ 其实只是日常物件）。"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "选句线索"
+            ],
+            "tip": "对应 19（朋友的想象 ↔ 其实只是日常物件）。"
+          }
+        },
+        {
+          "s": "H It was a new experience for me, too.",
+          "hard": false,
+          "tr": "H 对我来说也是一次新经历。",
+          "ana": {
+            "pat": [
+              "省略句"
+            ],
+            "frame": "选项 H：<b>It was a new experience for me, too.</b>",
+            "parts": [
+              [
+                "选项",
+                "H —— It was a new experience for me, too."
+              ],
+              [
+                "判断",
+                "多余句 ✗"
+              ]
+            ],
+            "clauses": [],
+            "gram": [
+              "选句线索"
+            ],
+            "tip": "多余句 ✗：too 要求前文有人也经历过类似的事 —— 没有铺垫。"
+          }
+        }
       ]
+    ],
+    "blocks": [
+      {
+        "r": "h",
+        "head": {
+          "l": "Training Test 1",
+          "r": "Reading Part 4"
+        },
+        "badge": "答案见 P185"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "n": "1",
+        "pick": [
+          101
+        ]
+      },
+      {
+        "r": "q",
+        "n": "2",
+        "pick": [
+          102
+        ]
+      },
+      {
+        "r": "q",
+        "n": "3",
+        "pick": [
+          103
+        ]
+      },
+      {
+        "r": "q",
+        "n": "4",
+        "pick": [
+          104
+        ]
+      },
+      {
+        "r": "q",
+        "n": "5",
+        "pick": [
+          105
+        ]
+      },
+      {
+        "r": "q",
+        "n": "6",
+        "pick": [
+          106
+        ]
+      },
+      {
+        "r": "q",
+        "n": "7",
+        "pick": [
+          107
+        ]
+      },
+      {
+        "r": "q",
+        "n": "8",
+        "pick": [
+          108
+        ]
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "q",
+        "n": "1",
+        "pick": [
+          109
+        ]
+      },
+      {
+        "r": "q",
+        "n": "2",
+        "pick": [
+          110
+        ]
+      },
+      {
+        "r": "q",
+        "n": "3",
+        "pick": [
+          111
+        ]
+      },
+      {
+        "r": "q",
+        "img": {
+          "src": "assets/img/t1-p4-camera.jpg",
+          "alt": "拿摄影机的少年（原书 P21）",
+          "side": "left",
+          "w": 300
+        }
+      },
+      {
+        "r": "h",
+        "head": {
+          "l": "Exam Practice Test 1",
+          "r": "Reading Part 4"
+        },
+        "badge": "答案见 P185"
+      },
+      {
+        "r": "h"
+      },
+      {
+        "r": "i"
+      },
+      {
+        "r": "h",
+        "center": true,
+        "img": {
+          "src": "assets/img/t1-p4-dig.jpg",
+          "alt": "考古现场的照片（原书 P22）",
+          "side": "left",
+          "w": 300
+        }
+      },
+      {
+        "r": "p"
+      },
+      {
+        "r": "p"
+      },
+      {
+        "r": "p"
+      },
+      {
+        "r": "p"
+      },
+      {
+        "r": "p"
+      },
+      {
+        "r": "p"
+      },
+      {
+        "r": "p"
+      },
+      {
+        "r": "o",
+        "tip": "选完所有答案后，检查全文是否通顺。"
+      }
     ]
   },
   "phrases": [
@@ -1832,303 +3042,971 @@
       "pos": "缩写",
       "ipa": "/huːd/",
       "cn": "who had 或 who would 的缩写"
-    }
-  },
-  "options": {
-    "A": "It turned out to be a small figure of a horse.",
-    "B": "No-one made that mistake, luckily.",
-    "C": "That way, everyone made sure they didn't miss anything.",
-    "D": "In fact, the whole area was actually still covered in grass.",
-    "E": "It was a bit sad to see it disappear.",
-    "F": "Some people were a bit disappointed by that news.",
-    "G": "They probably imagined it was things like gold jewellery.",
-    "H": "It was a new experience for me, too."
-  },
-  "optionsAna": {
-    "A": {
-      "pat": [
-        "主系表",
-        "turn out to be"
-      ],
-      "frame": "主干：<b>It turned out to be a figure</b>（原来它是个雕像）",
-      "parts": [
-        [
-          "主语",
-          "It —— 指 Kate 发现的那块「形状奇怪的石头」"
-        ],
-        [
-          "谓语",
-          "<code>turned out</code> —— 结果是，原来是，带「出乎意料」的语气"
-        ],
-        [
-          "表语",
-          "<code>to be a small figure of a horse</code> —— 不定式作表语"
-        ],
-        [
-          "定语",
-          "<code>of a horse</code> —— 修饰 figure，说明雕的是什么"
-        ]
-      ],
-      "clauses": [
-        "turn out to be 结构",
-        "不定式作表语"
-      ],
-      "gram": [
-        "turn out to be",
-        "figure 的一词多义",
-        "不定式作表语"
-      ],
-      "tip": "<b>figure</b> 在这里不是「数字」，是<b>「人像、雕像」</b>——这个多义词正是第 20 题的题眼：只有雕像才说得上 someone had made it。<b>turn out</b> 表示「结果发现是」，暗示和原先以为的不一样。",
-      "tr": "原来它是一匹小马的雕像。"
     },
-    "B": {
-      "pat": [
-        "主谓宾"
-      ],
-      "frame": "主干：<b>No-one made that mistake</b>（没有人犯那个错误）",
-      "parts": [
-        [
-          "主语",
-          "No-one —— 没有人，作主语时谓语用单数"
-        ],
-        [
-          "谓语",
-          "<code>made</code> —— make 的过去式"
-        ],
-        [
-          "宾语",
-          "<code>that mistake</code> —— make a mistake 犯错误"
-        ],
-        [
-          "状语",
-          "<code>luckily</code> —— 幸运的是，评注性状语，放句尾"
-        ]
-      ],
-      "clauses": [
-        "评注性状语 luckily"
-      ],
-      "gram": [
-        "make a mistake",
-        "No-one 作主语用单数",
-        "评注性状语"
-      ],
-      "tip": "<b>that mistake</b> 必须有指代对象——可全文没有提到过任何「错误」。这句接不上任何一个空，是纯粹的干扰项。",
-      "tr": "幸好没有人犯那个错误。"
+    "reading": {
+      "pos": "n.",
+      "ipa": "/ˈriːdɪŋ/",
+      "cn": "阅读"
     },
-    "C": {
-      "pat": [
-        "主谓宾",
-        "宾语从句"
-      ],
-      "frame": "主干：<b>everyone made sure (that)...</b>（每个人都确保……）",
-      "parts": [
-        [
-          "状语",
-          "<code>That way</code> —— 这样一来，回指前文讲过的一种做法"
-        ],
-        [
-          "主语",
-          "everyone —— 作主语时谓语用单数"
-        ],
-        [
-          "谓语",
-          "<code>made sure</code> —— 确保"
-        ],
-        [
-          "宾语从句",
-          "<code>they didn't miss anything</code> —— 省略了 that；anything 用于否定句"
-        ]
-      ],
-      "clauses": [
-        "make sure (that) 宾语从句",
-        "宾语从句省略 that"
-      ],
-      "gram": [
-        "That way 回指前文",
-        "make sure (that)",
-        "anything 用于否定句"
-      ],
-      "tip": "<b>That way</b> 是个「回指」信号——它前面必须已经讲过一种做法。所以这句只能接在「怎么挖」的描写之后，这是第 18 题的关键。",
-      "tr": "这样一来，每个人都能确保自己不会漏掉任何东西。"
+    "sentences": {
+      "pos": "n.",
+      "ipa": "/ˈsentənsɪz/",
+      "cn": "句子（sentence 的复数）"
     },
-    "D": {
-      "pat": [
-        "主系表",
-        "被动语态"
-      ],
-      "frame": "主干：<b>the whole area was covered in grass</b>（整片地还覆盖着草）",
-      "parts": [
-        [
-          "状语",
-          "<code>In fact</code> —— 其实，表解释说明，用来补充或纠正上文"
-        ],
-        [
-          "主语",
-          "<code>the whole area</code> —— whole 前面必须加 the"
-        ],
-        [
-          "系动词",
-          "was"
-        ],
-        [
-          "表语",
-          "<code>covered in grass</code> —— 过去分词短语作表语，表被动的状态"
-        ],
-        [
-          "状语",
-          "<code>actually still</code> —— 两个副词都修饰后面的表语"
-        ]
-      ],
-      "clauses": [
-        "be covered in/with 表状态"
-      ],
-      "gram": [
-        "be covered in",
-        "the whole + 名词",
-        "In fact 的逻辑衔接"
-      ],
-      "tip": "<b>In fact</b> 后面接的一定是用来解释上文的句子。这里的 <b>grass</b> 正是下文 <code>remove it all</code> 里那个 <b>it</b> 的指代对象——这是第 16 题的全部依据。",
-      "tr": "其实，整片区域当时还长满了草。"
+    "removed": {
+      "pos": "v.",
+      "ipa": "/rɪˈmuːvd/",
+      "cn": "拿掉（remove 的过去分词）"
     },
-    "E": {
-      "pat": [
-        "主系表",
-        "形式主语"
-      ],
-      "frame": "主干：<b>It was a bit sad to see it disappear</b>（看着它消失有点难过）",
-      "parts": [
-        [
-          "形式主语",
-          "It —— 真正的主语是后面的不定式，这里只是占位"
-        ],
-        [
-          "系动词 + 表语",
-          "<code>was a bit sad</code> —— a bit 修饰形容词，语气比 very 弱"
-        ],
-        [
-          "真正主语",
-          "<code>to see it disappear</code> —— 不定式后置，才是句子真正的主语"
-        ]
-      ],
-      "clauses": [
-        "It 作形式主语",
-        "不定式作真正主语",
-        "see sth do 结构"
-      ],
-      "gram": [
-        "形式主语 it",
-        "see sth do（不加 to）",
-        "a bit 修饰形容词"
-      ],
-      "tip": "这句有<b>两个 it</b>：第一个是形式主语（真正主语是 to see...），第二个才是实义代词。两个 it 都没有明确的指代对象——这正是判断它为干扰项的依据。",
-      "tr": "看着它消失，有点难过。"
+    "list": {
+      "pos": "n.",
+      "ipa": "/lɪst/",
+      "cn": "列表，清单"
     },
-    "F": {
-      "pat": [
-        "主系表",
-        "that 回指"
-      ],
-      "frame": "主干：<b>Some people were disappointed</b>（有些人很失望）",
-      "parts": [
-        [
-          "主语",
-          "Some people"
-        ],
-        [
-          "系动词 + 表语",
-          "<code>were a bit disappointed</code> —— 系表结构，表状态"
-        ],
-        [
-          "状语",
-          "<code>by that news</code> —— that 回指上文刚提到的消息"
-        ]
-      ],
-      "clauses": [
-        "be disappointed by"
-      ],
-      "gram": [
-        "be disappointed by / at / with",
-        "a bit 修饰形容词",
-        "that 的回指"
-      ],
-      "tip": "<b>by that news</b> 里的 that 是「回指」信号——它要求前面刚出现过一条消息。空后紧跟 <b>But</b> we all knew Dad was right，转折结构正好和「失望」相反，这是第 17 题的依据。",
-      "tr": "有些人对这个消息有点失望。"
+    "eight": {
+      "pos": "num.",
+      "ipa": "/eɪt/",
+      "cn": "八"
     },
-    "G": {
-      "pat": [
-        "主谓宾",
-        "宾语从句"
-      ],
-      "frame": "主干：<b>They imagined (that) it was things</b>（他们想象那是些东西）",
-      "parts": [
-        [
-          "主语",
-          "They —— 指上文的 friends"
-        ],
-        [
-          "状语",
-          "<code>probably</code> —— 表推测，「大概」"
-        ],
-        [
-          "谓语",
-          "<code>imagined</code> —— imagine 后面接从句，表示「想象、猜想」"
-        ],
-        [
-          "宾语从句",
-          "<code>it was things like gold jewellery</code> —— 省略了 that"
-        ],
-        [
-          "例举",
-          "<code>like gold jewellery</code> —— like 在这里是介词「像」，表举例"
-        ]
-      ],
-      "clauses": [
-        "imagine (that) 宾语从句",
-        "like 表举例"
-      ],
-      "gram": [
-        "imagine (that)",
-        "they 的回指",
-        "like 作介词表举例"
-      ],
-      "tip": "<b>They</b> 回指 friends，<b>it</b> 指「我找到的东西」。后文 <b>But actually</b> 正是要纠正这个「金首饰」的想象——前后构成对比，这是第 19 题的依据。",
-      "tr": "他们大概以为是什么金首饰之类的东西。"
+    "replace": {
+      "pos": "v.",
+      "ipa": "/rɪˈpleɪs/",
+      "cn": "替换，代替"
     },
-    "H": {
-      "pat": [
-        "主系表"
-      ],
-      "frame": "主干：<b>It was a new experience</b>（那是一次新经历）",
-      "parts": [
-        [
-          "主语",
-          "It —— 指上文提到的某件事"
-        ],
-        [
-          "系动词 + 表语",
-          "<code>was a new experience</code> —— experience 作「经历」讲时可数"
-        ],
-        [
-          "状语",
-          "<code>for me</code> —— 对我来说"
-        ],
-        [
-          "状语",
-          "<code>too</code> —— 也，用在肯定句末尾"
-        ]
-      ],
-      "clauses": [
-        "too 用于肯定句末尾"
-      ],
-      "gram": [
-        "experience 可数 / 不可数",
-        "too 的位置和用法"
-      ],
-      "tip": "<b>too</b> 表示「也」，它要求前文已经有人经历过类似的事。全文没有任何这样的铺垫——找不到铺垫的 too，就是接不上的信号。",
-      "tr": "对我来说，那也是一次新的经历。"
+    "missing": {
+      "pos": "adj.",
+      "ipa": "/ˈmɪsɪŋ/",
+      "cn": "缺失的，不见的，丢失的"
+    },
+    "reference": {
+      "pos": "n.",
+      "ipa": "/ˈrefrəns/",
+      "cn": "指代，引用"
+    },
+    "reference words": {
+      "pos": "词组",
+      "ipa": "/ˈrefrəns wɜːdz/",
+      "cn": "指代词"
+    },
+    "words": {
+      "pos": "n.",
+      "ipa": "/wɜːdz/",
+      "cn": "词（word 的复数）"
+    },
+    "candidates": {
+      "pos": "n.",
+      "ipa": "/ˈkændɪdəts/",
+      "cn": "考生（candidate 的复数）"
+    },
+    "mistakes": {
+      "pos": "n.",
+      "ipa": "/mɪˈsteɪks/",
+      "cn": "错误（mistake 的复数）"
+    },
+    "two": {
+      "pos": "num.",
+      "ipa": "/tuː/",
+      "cn": "二"
+    },
+    "young": {
+      "pos": "adj.",
+      "ipa": "/jʌŋ/",
+      "cn": "年轻的，年幼的"
+    },
+    "asked": {
+      "pos": "v.",
+      "ipa": "/ɑːskt/",
+      "cn": "请求，问（ask 的过去式）"
+    },
+    "classroom": {
+      "pos": "n.",
+      "ipa": "/ˈklɑːsruːm/",
+      "cn": "教室"
+    },
+    "walked": {
+      "pos": "v.",
+      "ipa": "/wɔːkt/",
+      "cn": "走（walk 的过去式）"
+    },
+    "saw": {
+      "pos": "v.",
+      "ipa": "/sɔː/",
+      "cn": "看见（see 的过去式）"
+    },
+    "grace": {
+      "pos": "n.",
+      "ipa": "/ɡreɪs/",
+      "cn": "Grace（女子名）"
+    },
+    "thanked": {
+      "pos": "v.",
+      "ipa": "/θæŋkt/",
+      "cn": "感谢（thank 的过去式）"
+    },
+    "letter": {
+      "pos": "n.",
+      "ipa": "/ˈletə/",
+      "cn": "信"
+    },
+    "nobody": {
+      "pos": "pron.",
+      "ipa": "/ˈnəʊbədi/",
+      "cn": "没有人"
+    },
+    "else": {
+      "pos": "adv.",
+      "ipa": "/els/",
+      "cn": "别的，其他的（else 常接在 someone/anyone 后）"
+    },
+    "car": {
+      "pos": "n.",
+      "ipa": "/kɑː/",
+      "cn": "汽车"
+    },
+    "stop": {
+      "pos": "n./v.",
+      "ipa": "/stɒp/",
+      "cn": "停靠站；车站；停下"
+    },
+    "outside": {
+      "pos": "adv./prep.",
+      "ipa": "/ˌaʊtˈsaɪd/",
+      "cn": "在外面；在……外面"
+    },
+    "house": {
+      "pos": "n.",
+      "ipa": "/haʊs/",
+      "cn": "房子；家"
+    },
+    "emily": {
+      "pos": "n.",
+      "ipa": "/ˈeməli/",
+      "cn": "Emily（女子名）"
+    },
+    "did": {
+      "pos": "v.",
+      "ipa": "/dɪd/",
+      "cn": "做（do 的过去式）；助动词"
+    },
+    "somebody": {
+      "pos": "pron.",
+      "ipa": "/ˈsʌmbədi/",
+      "cn": "某人"
+    },
+    "phoned": {
+      "pos": "v.",
+      "ipa": "/fəʊnd/",
+      "cn": "打电话（phone 的过去式/过去分词）"
+    },
+    "police": {
+      "pos": "n.",
+      "ipa": "/pəˈliːs/",
+      "cn": "警察（集合名词，作复数）"
+    },
+    "ten": {
+      "pos": "num.",
+      "ipa": "/ten/",
+      "cn": "十"
+    },
+    "minutes": {
+      "pos": "n.",
+      "ipa": "/ˈmɪnɪts/",
+      "cn": "分钟（minute 的复数）"
+    },
+    "arrested": {
+      "pos": "v.",
+      "ipa": "/əˈrestɪd/",
+      "cn": "逮捕（arrest 的过去式）"
+    },
+    "man": {
+      "pos": "n.",
+      "ipa": "/mæn/",
+      "cn": "男人"
+    },
+    "decided": {
+      "pos": "v.",
+      "ipa": "/dɪˈsaɪdɪd/",
+      "cn": "决定（decide 的过去式）"
+    },
+    "crossroads": {
+      "pos": "n.",
+      "ipa": "/ˈkrɒsrəʊdz/",
+      "cn": "十字路口"
+    },
+    "bad": {
+      "pos": "adj.",
+      "ipa": "/bæd/",
+      "cn": "坏的；不好的",
+      "note": "比较级 worse，最高级 worst。"
+    },
+    "decision": {
+      "pos": "n.",
+      "ipa": "/dɪˈsɪʒn/",
+      "cn": "决定"
+    },
+    "bikes": {
+      "pos": "n.",
+      "ipa": "/baɪks/",
+      "cn": "自行车（bike 的复数）"
+    },
+    "sale": {
+      "pos": "n.",
+      "ipa": "/seɪl/",
+      "cn": "出售",
+      "note": "for sale 待售。"
+    },
+    "liam": {
+      "pos": "n.",
+      "ipa": "/ˈliːəm/",
+      "cn": "Liam（男子名）"
+    },
+    "bought": {
+      "pos": "v.",
+      "ipa": "/bɔːt/",
+      "cn": "买（buy 的过去式/过去分词）"
+    },
+    "newer": {
+      "pos": "adj.",
+      "ipa": "/ˈnjuːə/",
+      "cn": "更新的（new 的比较级）"
+    },
+    "ones": {
+      "pos": "pron.",
+      "ipa": "/wʌnz/",
+      "cn": "那些（one 的复数，代替复数名词）"
+    },
+    "going": {
+      "pos": "v.",
+      "ipa": "/ˈɡəʊɪŋ/",
+      "cn": "去；be going to 将要"
+    },
+    "bus": {
+      "pos": "n.",
+      "ipa": "/bʌs/",
+      "cn": "公交车，公共汽车"
+    },
+    "sounds": {
+      "pos": "v.",
+      "ipa": "/saʊndz/",
+      "cn": "听起来（sound 的第三人称单数）"
+    },
+    "good": {
+      "pos": "adj.",
+      "ipa": "/ɡʊd/",
+      "cn": "好的"
+    },
+    "idea": {
+      "pos": "n.",
+      "ipa": "/aɪˈdɪə/",
+      "cn": "想法，主意（have no idea 完全不知道）"
+    },
+    "cheaper": {
+      "pos": "adj.",
+      "ipa": "/ˈtʃiːpə/",
+      "cn": "更便宜的（cheap 的比较级）"
+    },
+    "train": {
+      "pos": "n./v.",
+      "ipa": "/treɪn/",
+      "cn": "火车；训练",
+      "note": "作动词是「训练、培训」。"
+    },
+    "certain": {
+      "pos": "adj.",
+      "ipa": "/ˈsɜːtn/",
+      "cn": "某个；确定的，肯定的"
+    },
+    "starts": {
+      "pos": "v.",
+      "ipa": "/stɑːts/",
+      "cn": "开始（start 的第三人称单数）"
+    },
+    "seven": {
+      "pos": "num.",
+      "ipa": "/ˈsevn/",
+      "cn": "七"
+    },
+    "tomorrow": {
+      "pos": "adv./n.",
+      "ipa": "/təˈmɒrəʊ/",
+      "cn": "明天"
+    },
+    "does": {
+      "pos": "v.",
+      "ipa": "/dʌz/",
+      "cn": "做（do 的第三人称单数）；助动词"
+    },
+    "above": {
+      "pos": "prep./adv.",
+      "ipa": "/əˈbʌv/",
+      "cn": "在上面；上面的"
+    },
+    "refer": {
+      "pos": "v.",
+      "ipa": "/rɪˈfɜː/",
+      "cn": "指的是，指代（refer to）"
+    },
+    "refer back to": {
+      "pos": "词组",
+      "ipa": "/rɪˌfɜː ˈbæk tə/",
+      "cn": "指回（前文）"
+    },
+    "using": {
+      "pos": "v.",
+      "ipa": "/ˈjuːzɪŋ/",
+      "cn": "使用（use 的现在分词）"
+    },
+    "clues": {
+      "pos": "n.",
+      "ipa": "/kluːz/",
+      "cn": "线索（clue 的复数）"
+    },
+    "form": {
+      "pos": "n.",
+      "ipa": "/fɔːm/",
+      "cn": "形式"
+    },
+    "paragraph": {
+      "pos": "n.",
+      "ipa": "/ˈpærəɡrɑːf/",
+      "cn": "段落"
+    },
+    "creative": {
+      "pos": "adj.",
+      "ipa": "/kriˈeɪtɪv/",
+      "cn": "有创意的"
+    },
+    "mind": {
+      "pos": "v./n.",
+      "ipa": "/maɪnd/",
+      "cn": "介意（mind doing sth；don't mind 不介意）；头脑；make one's mind up 下定决心"
+    },
+    "creative mind": {
+      "pos": "词组",
+      "ipa": "/kriˌeɪtɪv ˈmaɪnd/",
+      "cn": "创造性的头脑"
+    },
+    "why": {
+      "pos": "adv.",
+      "ipa": "/waɪ/",
+      "cn": "为什么"
+    },
+    "invent": {
+      "pos": "v.",
+      "ipa": "/ɪnˈvent/",
+      "cn": "发明，创造"
+    },
+    "it's": {
+      "pos": "contr.",
+      "ipa": "/ɪts/",
+      "cn": "= it is 或 it has"
+    },
+    "subjects": {
+      "pos": "n.",
+      "ipa": "/ˈsʌbdʒɪkts/",
+      "cn": "主题；科目（subject 的复数）"
+    },
+    "already": {
+      "pos": "adv.",
+      "ipa": "/ɔːlˈredi/",
+      "cn": "已经"
+    },
+    "enough": {
+      "pos": "det./adv.",
+      "ipa": "/ɪˈnʌf/",
+      "cn": "足够的（not enough 不够）"
+    },
+    "brilliant": {
+      "pos": "adj.",
+      "ipa": "/ˈbrɪliənt/",
+      "cn": "绝妙的，出色的"
+    },
+    "a brilliant idea": {
+      "pos": "词组",
+      "ipa": "/ə ˌbrɪliənt aɪˈdɪə/",
+      "cn": "绝妙的主意"
+    },
+    "underline": {
+      "pos": "v.",
+      "ipa": "/ˌʌndəˈlaɪn/",
+      "cn": "划下划线（在……下面划线）"
+    },
+    "phrases": {
+      "pos": "n.",
+      "ipa": "/ˈfreɪzɪz/",
+      "cn": "短语（phrase 的复数）"
+    },
+    "link": {
+      "pos": "v./n.",
+      "ipa": "/lɪŋk/",
+      "cn": "连接；联系",
+      "note": "linking words 连接词。"
+    },
+    "exercise": {
+      "pos": "n.",
+      "ipa": "/ˈeksəsaɪz/",
+      "cn": "练习；运动"
+    },
+    "questions": {
+      "pos": "n.",
+      "ipa": "/ˈkwestʃənz/",
+      "cn": "题目（question 的复数）"
+    },
+    "three": {
+      "pos": "num.",
+      "ipa": "/θriː/",
+      "cn": "三"
+    },
+    "extra": {
+      "pos": "adj.",
+      "ipa": "/ˈekstrə/",
+      "cn": "多余的，额外的"
+    },
+    "past": {
+      "pos": "n./adj.",
+      "ipa": "/pɑːst/",
+      "cn": "过去（的）"
+    },
+    "dig into": {
+      "pos": "词组",
+      "ipa": "/ˌdɪɡ ˈɪntə/",
+      "cn": "挖掘，钻研"
+    },
+    "says": {
+      "pos": "v.",
+      "ipa": "/sez/",
+      "cn": "说（say 的第三人称单数）"
+    },
+    "kate's": {
+      "pos": "n.",
+      "ipa": "/keɪts/",
+      "cn": "Kate 的（所有格）"
+    },
+    "years": {
+      "pos": "n.",
+      "ipa": "/jɪəz/",
+      "cn": "年（year 的复数）"
+    },
+    "turned": {
+      "pos": "v.",
+      "ipa": "/tɜːnd/",
+      "cn": "变成（turn 的过去分词）"
+    },
+    "f": {
+      "pos": "n.",
+      "ipa": "/ef/",
+      "cn": "字母 f（选项/编号的标记）"
+    },
+    "g": {
+      "pos": "n.",
+      "ipa": "/dʒiː/",
+      "cn": "字母 g（选项/编号的标记）"
+    },
+    "h": {
+      "pos": "n.",
+      "ipa": "/eɪtʃ/",
+      "cn": "字母 h（选项/编号的标记）"
+    },
+    "imagined": {
+      "pos": "v.",
+      "ipa": "/ɪˈmædʒɪnd/",
+      "cn": "想象（imagine 的过去式）"
+    },
+    "begin": {
+      "pos": "v.",
+      "ipa": "/bɪˈɡɪn/",
+      "cn": "开始"
+    },
+    "deciding": {
+      "pos": "v.",
+      "ipa": "/dɪˈsaɪdɪŋ/",
+      "cn": "决定（decide 的现在分词）"
+    },
+    "create": {
+      "pos": "v.",
+      "ipa": "/kriˈeɪt/",
+      "cn": "创造；创作"
+    },
+    "enjoyed": {
+      "pos": "v.",
+      "ipa": "/ɪnˈdʒɔɪd/",
+      "cn": "喜欢（enjoy 的过去式/过去分词）"
+    },
+    "studying": {
+      "pos": "v.",
+      "ipa": "/ˈstʌdiɪŋ/",
+      "cn": "学习（study 的现在分词）"
+    },
+    "college": {
+      "pos": "n.",
+      "ipa": "/ˈkɒlɪdʒ/",
+      "cn": "学院；art college 艺术学院"
+    },
+    "them": {
+      "pos": "pron.",
+      "ipa": "/ðem/",
+      "cn": "他们（宾格）"
+    },
+    "which": {
+      "pos": "pron.",
+      "ipa": "/wɪtʃ/",
+      "cn": "哪一个；这（指代前文）；（关系代词）指代物",
+      "note": "引导非限制性定语从句时可指代<b>整句</b>，前面要有逗号。"
+    },
+    "they": {
+      "pos": "pron.",
+      "ipa": "/ðeɪ/",
+      "cn": "他们，它们"
+    },
+    "this": {
+      "pos": "det./pron.",
+      "ipa": "/ðɪs/",
+      "cn": "这，这个"
+    },
+    "one": {
+      "pos": "num./pron.",
+      "ipa": "/wʌn/",
+      "cn": "一；一个；代替单数名词"
+    },
+    "so": {
+      "pos": "conj./adv.",
+      "ipa": "/səʊ/",
+      "cn": "所以；这样，如此（I think so 我觉得是这样）"
+    },
+    "make it work": {
+      "pos": "词组",
+      "ipa": "/ˌmeɪk ɪt ˈwɜːk/",
+      "cn": "让它行得通"
+    },
+    "in practice": {
+      "pos": "词组",
+      "ipa": "/ɪn ˈpræktɪs/",
+      "cn": "在实践中"
     }
   },
   "questions": [
+    {
+      "n": 101,
+      "tag": "①-1",
+      "answer": "B",
+      "prompt": "训练①-1 ——「those/them」选哪个？",
+      "opts": {
+        "A": "those",
+        "B": "them"
+      },
+      "why": "官方答案 <b>them</b>。them 指前面的 two young children（那些孩子）；those 是「那些」，不能直接指人。",
+      "clues": [
+        "指代 Two young children（两个小孩）"
+      ],
+      "others": [
+        [
+          "A",
+          "「those」在这里指代不上（看它指回哪个词/哪件事）。"
+        ]
+      ],
+      "tip": "先找它指代前面的哪个词/哪件事。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "Two young children asked me where classroom 32 was, so I walked there with those/them."
+          ],
+          [
+            "答案",
+            "them"
+          ]
+        ],
+        "gram": [
+          "指代词"
+        ],
+        "tr": "them。"
+      }
+    },
+    {
+      "n": 102,
+      "tag": "①-2",
+      "answer": "B",
+      "prompt": "训练①-2 ——「it/which」选哪个？",
+      "opts": {
+        "A": "it",
+        "B": "which"
+      },
+      "why": "官方答案 <b>which</b>。which 引导非限制性定语从句，指 her letter；it 不能这样接在逗号后连接两句。",
+      "clues": [
+        "指代 her letter（她的信）"
+      ],
+      "others": [
+        [
+          "A",
+          "「it」在这里指代不上（看它指回哪个词/哪件事）。"
+        ]
+      ],
+      "tip": "先找它指代前面的哪个词/哪件事。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "When I saw Grace at the party, I thanked her for her letter, it/which had arrived the day before."
+          ],
+          [
+            "答案",
+            "which"
+          ]
+        ],
+        "gram": [
+          "指代词"
+        ],
+        "tr": "which。"
+      }
+    },
+    {
+      "n": 103,
+      "tag": "①-3",
+      "answer": "B",
+      "prompt": "训练①-3 ——「saw/did」选哪个？",
+      "opts": {
+        "A": "saw",
+        "B": "did"
+      },
+      "why": "官方答案 <b>did</b>。did 代指前面的 saw the car stop（避免重复动词）。",
+      "clues": [
+        "指代 saw the car stop outside the house（看见车停在屋外）"
+      ],
+      "others": [
+        [
+          "A",
+          "「saw」在这里指代不上（看它指回哪个词/哪件事）。"
+        ]
+      ],
+      "tip": "先找它指代前面的哪个词/哪件事。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "Nobody else saw the car stop outside the house, but Emily saw/did."
+          ],
+          [
+            "答案",
+            "did"
+          ]
+        ],
+        "gram": [
+          "指代词"
+        ],
+        "tr": "did。"
+      }
+    },
+    {
+      "n": 104,
+      "tag": "①-4",
+      "answer": "B",
+      "prompt": "训练①-4 ——「It/They」选哪个？",
+      "opts": {
+        "A": "It",
+        "B": "They"
+      },
+      "why": "官方答案 <b>They</b>。They 指 the police（警察 —— 复数概念）；It 指单数事物。",
+      "clues": [
+        "指代 the police（警察）"
+      ],
+      "others": [
+        [
+          "A",
+          "「It」在这里指代不上（看它指回哪个词/哪件事）。"
+        ]
+      ],
+      "tip": "先找它指代前面的哪个词/哪件事。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "Somebody phoned the police. It/They arrived in ten minutes and arrested the man."
+          ],
+          [
+            "答案",
+            "They"
+          ]
+        ],
+        "gram": [
+          "指代词"
+        ],
+        "tr": "They。"
+      }
+    },
+    {
+      "n": 105,
+      "tag": "①-5",
+      "answer": "B",
+      "prompt": "训练①-5 ——「These/This」选哪个？",
+      "opts": {
+        "A": "These",
+        "B": "This"
+      },
+      "why": "官方答案 <b>This</b>。This 指前面整个决定（左转这件事）；These 指复数。",
+      "clues": [
+        "指代 We decided to turn left at the crossroads（左转这个决定）"
+      ],
+      "others": [
+        [
+          "A",
+          "「These」在这里指代不上（看它指回哪个词/哪件事）。"
+        ]
+      ],
+      "tip": "先找它指代前面的哪个词/哪件事。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "We decided to turn left at the crossroads. These/This, we soon found out, was a bad decision."
+          ],
+          [
+            "答案",
+            "This"
+          ]
+        ],
+        "gram": [
+          "指代词"
+        ],
+        "tr": "This。"
+      }
+    },
+    {
+      "n": 106,
+      "tag": "①-6",
+      "answer": "A",
+      "prompt": "训练①-6 ——「one/ones」选哪个？",
+      "opts": {
+        "A": "one",
+        "B": "ones"
+      },
+      "why": "官方答案 <b>one</b>。one 代替单数可数名词 bike；ones 是复数。",
+      "clues": [
+        "指代 (one of the) bikes（其中较新的那辆）"
+      ],
+      "others": [
+        [
+          "B",
+          "「ones」在这里指代不上（看它指回哪个词/哪件事）。"
+        ]
+      ],
+      "tip": "先找它指代前面的哪个词/哪件事。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "There were two bikes for sale in the shop. Liam bought the newer one/ones."
+          ],
+          [
+            "答案",
+            "one"
+          ]
+        ],
+        "gram": [
+          "指代词"
+        ],
+        "tr": "one。"
+      }
+    },
+    {
+      "n": 107,
+      "tag": "①-7",
+      "answer": "A",
+      "prompt": "训练①-7 ——「It/They」选哪个？",
+      "opts": {
+        "A": "It",
+        "B": "They"
+      },
+      "why": "官方答案 <b>It</b>。It 指 going by bus（坐公交这件事）；They 指复数。",
+      "clues": [
+        "指代 Going by bus（坐公交）"
+      ],
+      "others": [
+        [
+          "B",
+          "「They」在这里指代不上（看它指回哪个词/哪件事）。"
+        ]
+      ],
+      "tip": "先找它指代前面的哪个词/哪件事。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "Going by bus sounds like a good idea. It/They would be cheaper than the train, too."
+          ],
+          [
+            "答案",
+            "It"
+          ]
+        ],
+        "gram": [
+          "指代词"
+        ],
+        "tr": "It。"
+      }
+    },
+    {
+      "n": 108,
+      "tag": "①-8",
+      "answer": "A",
+      "prompt": "训练①-8 ——「so/it」选哪个？",
+      "opts": {
+        "A": "so",
+        "B": "it"
+      },
+      "why": "官方答案 <b>so</b>。so 代替前面整句（比赛七点开始）—— I think so = 我觉得是这样。",
+      "clues": [
+        "指代 that the match starts at seven tomorrow（比赛明天七点开始）"
+      ],
+      "others": [
+        [
+          "B",
+          "「it」在这里指代不上（看它指回哪个词/哪件事）。"
+        ]
+      ],
+      "tip": "先找它指代前面的哪个词/哪件事。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "I'm not certain that the match starts at seven tomorrow, but I think so/it."
+          ],
+          [
+            "答案",
+            "so"
+          ]
+        ],
+        "gram": [
+          "指代词"
+        ],
+        "tr": "so。"
+      }
+    },
+    {
+      "n": 109,
+      "tag": "③-1",
+      "answer": "b",
+      "prompt": "训练③-1 ——「If you've got a creative mind, why not invent something new?」后面接哪一句？",
+      "opts": {
+        "a": "You also need to know how to make it work in practice.",
+        "b": "To do so, begin by deciding what you want to create.",
+        "c": "These could be things you've enjoyed studying at school or college."
+      },
+      "why": "官方答案 <b>b</b>。To do so 指回「invent something new」；begin by deciding… 接着讲第一步。",
+      "clues": [
+        "创造性的头脑"
+      ],
+      "others": [
+        [
+          "a",
+          "接 b 之外的那句，指代词/连接词对不上。"
+        ],
+        [
+          "c",
+          "接 b 之外的那句，指代词/连接词对不上。"
+        ]
+      ],
+      "tip": "查指代词（These / To do so / it）和逻辑连接。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "If you've got a creative mind, why not invent something new?"
+          ],
+          [
+            "接续",
+            "b"
+          ]
+        ],
+        "gram": [
+          "指代词线索"
+        ],
+        "tr": "b —— To do so, begin by deciding what you want to create."
+      }
+    },
+    {
+      "n": 110,
+      "tag": "③-2",
+      "answer": "c",
+      "prompt": "训练③-2 ——「It's best to choose from subjects you already know quite a lot about.」后面接哪一句？",
+      "opts": {
+        "a": "You also need to know how to make it work in practice.",
+        "b": "To do so, begin by deciding what you want to create.",
+        "c": "These could be things you've enjoyed studying at school or college."
+      },
+      "why": "官方答案 <b>c</b>。These 指 subjects；things you've enjoyed studying at school or college 说明是什么科目。",
+      "clues": [
+        "科目"
+      ],
+      "others": [
+        [
+          "a",
+          "接 c 之外的那句，指代词/连接词对不上。"
+        ],
+        [
+          "b",
+          "接 c 之外的那句，指代词/连接词对不上。"
+        ]
+      ],
+      "tip": "查指代词（These / To do so / it）和逻辑连接。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "It's best to choose from subjects you already know quite a lot about."
+          ],
+          [
+            "接续",
+            "c"
+          ]
+        ],
+        "gram": [
+          "指代词线索"
+        ],
+        "tr": "c —— These could be things you've enjoyed studying at school or college."
+      }
+    },
+    {
+      "n": 111,
+      "tag": "③-3",
+      "answer": "a",
+      "prompt": "训练③-3 ——「It's not enough just to have a brilliant idea.」后面接哪一句？",
+      "opts": {
+        "a": "You also need to know how to make it work in practice.",
+        "b": "To do so, begin by deciding what you want to create.",
+        "c": "These could be things you've enjoyed studying at school or college."
+      },
+      "why": "官方答案 <b>a</b>。not enough 引出「还需要……」；it 指 a brilliant idea（make it work）。",
+      "clues": [
+        "绝妙的主意"
+      ],
+      "others": [
+        [
+          "b",
+          "接 a 之外的那句，指代词/连接词对不上。"
+        ],
+        [
+          "c",
+          "接 a 之外的那句，指代词/连接词对不上。"
+        ]
+      ],
+      "tip": "查指代词（These / To do so / it）和逻辑连接。",
+      "ana": {
+        "parts": [
+          [
+            "句子",
+            "It's not enough just to have a brilliant idea."
+          ],
+          [
+            "接续",
+            "a"
+          ]
+        ],
+        "gram": [
+          "指代词线索"
+        ],
+        "tr": "a —— You also need to know how to make it work in practice."
+      }
+    },
     {
       "n": 16,
       "prompt": "第 16 空（段首）—— 前一段结尾是“现场和凯特预想的不太一样”，空后紧跟“So the first job was to remove it all…”",
@@ -2184,7 +4062,9 @@
           "In fact 逻辑衔接"
         ],
         "tr": "其实，整片区域当时还长满了草。"
-      }
+      },
+      "gap": "16",
+      "tag": "16"
     },
     {
       "n": 17,
@@ -2236,7 +4116,9 @@
           "that 的回指"
         ],
         "tr": "有些人对这个消息有点失望。"
-      }
+      },
+      "gap": "17",
+      "tag": "17"
     },
     {
       "n": 18,
@@ -2288,7 +4170,9 @@
           "宾语从句省略 that"
         ],
         "tr": "这样一来，每个人都能确保自己不会漏掉任何东西。"
-      }
+      },
+      "gap": "18",
+      "tag": "18"
     },
     {
       "n": 19,
@@ -2340,7 +4224,9 @@
           "like 表举例"
         ],
         "tr": "他们大概以为是什么金首饰之类的东西。"
-      }
+      },
+      "gap": "19",
+      "tag": "19"
     },
     {
       "n": 20,
@@ -2392,7 +4278,10 @@
           "figure 的一词多义"
         ],
         "tr": "原来它是一匹小马的雕像。"
-      }
+      },
+      "gap": "20",
+      "tag": "20"
     }
-  ]
+  ],
+  "inlineQuiz": true
 }

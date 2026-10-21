@@ -646,8 +646,23 @@ function renderPhrases(man) {
     });
   } catch (e) { /* 没有这份文件也能跑：词典只少几条 */ }
   const dict = Object.assign({}, phraseDict(items), extra);
+  /* 哪些条目已经有「预生成的跟读音频」（assets/read/<n>.mp3）：
+     有就优先播文件（不依赖设备的 TTS），没有才退回 TTS。
+     构建期扫目录，页面不用发请求探文件在不在。 */
+  let haveAudio = new Set();
+  try {
+    const ad = P("assets", "read");
+    if (fs.existsSync(ad)) {
+      fs.readdirSync(ad).forEach(f => {
+        const m = /^(\d+)\.mp3$/.exec(f);
+        if (m) haveAudio.add(Number(m[1]));
+      });
+    }
+  } catch (e) { /* 目录没有也能跑：全部走 TTS */ }
+  const payloadItems = items.map(it => Object.assign({}, it, haveAudio.has(it.n) ? { ra: 1 } : {}));
   const payload = { title: D.title || "PET 词组库", credit: D.credit || "", note: D.note || "",
-                    items: items, dict: dict };
+                    items: payloadItems, dict: dict };
+  console.log("  词组库跟读音频：" + haveAudio.size + "/" + cnt + " 条");
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>

@@ -84,8 +84,22 @@ source: 同一个文件夹的 `音频\254个PET阅读固定搭配1-10.mp3` … `
       条与条之间也是 ~0.85s（没有更长的分隔）→ 自动切条不可靠（贪心合并会串条），
       加上逐卡跟读还要带中文（录音里没有例句翻译），所以最终选了 TTS 方案。
 
+# 预生成跟读音频（2026-10-20；解决「安卓没有 TTS」）
+工具: tools/gen-read-audio.mjs（先 `npm i -D msedge-tts`）
+音色: 英 `en-GB-LibbyNeural` / 中 `zh-CN-XiaoxiaoNeural` —— 微软 Edge「朗读」的在线自然音
+      （服务器端可跑，不需要登录）；48kbps 单声道 mp3（24kHz）
+一条 = 4 段：词组(英) + 中文意思(中) + 例句(英) + 例句翻译(中)
+      → 同格式按字节拼成一个 mp3（实测 1.9+2.6+6.8+6.2 = 17.5s = 拼后时长）
+落位: assets/read/<n>.mp3（254 个，约 26MB；n = 书中编号 1–254）
+页面: 构建期扫目录 → 条目带 `ra:1`；`PET_READ.card` 优先播文件（ended → done），
+      没文件/文件坏了才退回设备 TTS；语速用 playbackRate（0.6/0.75/1，默认 0.75）
+对比: Windows 自带语音（慧慧 / Zira）也能生成，但机械音 + WAV 未压缩 **1MB/条**
+      （254 条 ≈ 260MB），只适合当兜底
+限制: 走的是 Edge「朗读」的公开端点，没登录态；产物只给内部学习用，别公开分发音频文件
+
 # 使用与版权（重要）
 - 第三方内部资料：页面放登录门禁后面 + 「内部资料 · 请勿外传」+ 来源说明，不宣传、不索引。
 - 数据进仓库的前提是**仓库私有**。
-- 目前只上线第 1 组（1–10），其余按 10 个一组续写 `data/phrases.json` 的 `items`
-  （每批顺手补 `phrases.dict.json` 的词、跑 `tools/import-phrases.mjs --dry` 体检）。
+- 254 条已全部上线（26 组，10 个一组）；新增条目按 10 个一组续写 `data/phrases.json` 的 `items`
+  （每批顺手补 `phrases.dict.json` 的词、跑 `tools/import-phrases.mjs --dry` 体检、
+  再跑一次 `tools/gen-read-audio.mjs` 补音频）。

@@ -121,9 +121,14 @@ function loadPage(file, { expectScripts, slug = file, seed = null, query = "", n
       }
     });
     const timer = setTimeout(() => reject(new Error(slug + " 载入超时")), 20000);
+    const t0 = Date.now();
     dom.window.addEventListener("load", () => {
       /* 门禁链路是 await 出来的，load 之后还要再让出几轮微/宏任务才能断言 */
-      setTimeout(() => { clearTimeout(timer); resolve({ dom, logs }); }, 60);
+      setTimeout(() => {
+        clearTimeout(timer);
+        if (process.env.SMOKE_DEBUG) console.log("    [load] " + slug + " " + (Date.now() - t0) + "ms");
+        resolve({ dom, logs });
+      }, 60);
     });
   });
 }
@@ -386,7 +391,7 @@ async function testArticle(slug) {
     const el = passage.querySelector(`[data-sent="${pi}-${si}"] .sent-txt`);
     if (!el) { lost.push(`${pi}-${si} 缺元素`); return; }
     /* «…» 是「句内二选一」的渲染标记（题④③ 那种），不属于文字本身 */
-    const want = norm(s.s.replace(/\{(\d+)\}/g, (m, n) => clozeNs.has(+n) ? " " : n).replace(/[«»]/g, ""));
+    const want = norm(s.s.replace(/\{(\d+)\}/g, (m, n) => clozeNs.has(+n) ? "" : n).replace(/[«»]/g, ""));
     const got = norm(el.textContent);
     if (want !== got) lost.push(`${pi}-${si}\n        期望: ${want.slice(0, 80)}\n        实际: ${got.slice(0, 80)}`);
   }));
@@ -1917,6 +1922,11 @@ async function testPhrasesPage() {
   ok(items.every(x => x.why), `[${S}] 每条都有答案分析 why`);
   ok(items.every(x => !x.blank || x.ex.toLowerCase().indexOf(x.blank.toLowerCase()) >= 0),
     `[${S}] 每条 blank 都是例句的子串`);
+  /* 预生成跟读音频（assets/read/<n>.mp3）：构建期扫目录，有文件的条目带 ra:1。
+     有了它，安卓没 TTS 也能跟读 —— 页面优先播文件，没有才退回 TTS。 */
+  const withAudio = items.filter(x => x.ra);
+  ok(withAudio.length >= 250, `[${S}] 跟读音频已就位（${withAudio.length}/254 条带预生成 mp3）`);
+  ok(withAudio.every(x => window.PET_READ.canPlay(x)), `[${S}] 有音频的条目「能念」不看设备语音`);
   await tick();
 
   /* ---- 分组视图 ---- */
@@ -1974,12 +1984,15 @@ async function testPhrasesPage() {
   /* ---- 本地跟读：精读模式全手动（点「播放跟读」才念，念完不自动翻卡） ---- */
   ok(!!window.PET_READ && typeof window.PET_READ.card === "function", `[${S}] 跟读引擎 PET_READ 在（英音+中文女声、0.75 倍速）`);
   ok(window.PET_READ.rates.join() === "0.6,0.75,1", `[${S}] 语速三档：0.6 / 0.75 / 1`);
-  const readBtn = card.querySelector("[data-playread]");
+  const readBtn = doc.querySelector("[data-playread]");   // ⚠ 别用上面那个 card 引用：面板开关会重画卡片
   click(readBtn);
   await tick();
   ok(!!doc.querySelector("[data-playread]") &&
      /播放跟读|停止跟读|没有语音朗读/.test(doc.querySelector("[data-playread]").textContent),
     `[${S}] 点「播放跟读」不报错（jsdom 没有语音合成 → 提示一下；真机里开始念）`);
+  /* 有预生成音频 → 播的是 assets/read/<n>.mp3，不走 TTS（jsdom 播不出声，只看地址） */
+  ok(/assets\/read\/1\.mp3$/.test(String(window.PET_READ.nowPlaying())),
+    `[${S}] 跟读优先播预生成音频（${String(window.PET_READ.nowPlaying()).split("/").pop()}）`);
   ok(!!card.querySelector("[data-phfav]"), `[${S}] 卡上有 ☆`);
 
   /* 点单词 → 读音 + 释义 + 相关词组（翻到第 3 张，「people」在 a group of 里） */
@@ -2048,7 +2061,7 @@ async function testPhrasesPage() {
   ok(!x.querySelector('[data-x="toggle"]') && !x.querySelector('[data-x="snd"]') && !x.querySelector('[data-x="audio"]'),
     `[${S}] 老的「播放 / 开声音 / 跟读音频」按钮已经去掉`);
   ok(!doc.getElementById("xbwAudio") && !doc.getElementById("xbwAudioWrap"),
-    `[${S}] 关卡里不再挂 mp3 播放器（跟读统一走 TTS）`);
+    `[${S}] 关卡里不挂 mp3 播放器（跟读用 Audio 对象，页面里没有可见播放器）`);
   ok(x.querySelectorAll(".xbw-dot").length === 10, `[${S}] 第一关 10 个小圆点`);
   const rateBtn = x.querySelector('[data-x="speed"]');
   ok(/0\.75/.test(rateBtn.textContent), `[${S}] 默认 0.75 倍速（按钮上写着）`);
@@ -2067,13 +2080,15 @@ async function testPhrasesPage() {
   click(doc.getElementById("xbw").querySelector('[data-x="read"]'));
   await tick();
   ok(!!doc.getElementById("xbw"), `[${S}] 「暂停跟读」点了不报错（jsdom 里没有语音）`);
-  /* 被浏览器拦下（iOS 首次要手势）：按钮变成「点一下开始跟读」+ 一行说明 */
-  window.PET_XBW.state.blocked = true;
-  click(doc.getElementById("xbw").querySelector('[data-x="again"]'));
+  /* 被浏览器拦下（iOS 首次要手势）：起播失败 → PET_READ.onBlocked → 按钮变成「点一下开始跟读」+ 一行说明 */
+  window.PET_READ.onBlocked();
   await tick();
   ok(/点一下开始跟读/.test(doc.getElementById("xbw").textContent), `[${S}] 被拦下时按钮改成「▶ 点一下开始跟读」`);
   ok(/先点一次才肯出声/.test(doc.getElementById("xbw").textContent), `[${S}] 并给一句解释（iPhone/iPad 常见）`);
-  window.PET_XBW.state.blocked = false;
+  /* 用户点「重听本卡」= 在用户手势里重放 → 提示收掉 */
+  click(doc.getElementById("xbw").querySelector('[data-x="again"]'));
+  await tick();
+  ok(!/先点一次才肯出声/.test(doc.getElementById("xbw").textContent), `[${S}] 点「重听本卡」解除拦截提示`);
 
   click(x.querySelector('[data-x="skip"]'));
   await tick();
@@ -2142,7 +2157,7 @@ async function testPhrasesPage() {
       `[${S}] 深链 ?q=3 从第 3 题开始考（不从头自动播放）`);
   }
 
-  ok(logs.filter(l => !/404/.test(l)).length === 0, `[${S}] 运行期没有 JS 报错`);
+  ok(logs.filter(l => !/404/.test(l) && !/Not implemented: HTMLMediaElement/.test(l)).length === 0, `[${S}] 运行期没有 JS 报错`);
   if (logs.length) console.log(`\n  ${S} 细节：\n` + logs.slice(0, 4).map(l => "      ✗ " + l).join("\n"));
 }
 
@@ -2278,12 +2293,14 @@ const suites = [...targets.map(s => [s, () => testArticle(s)]),
                 ["复习（SRS）", testSrsTab],
                 ["门禁", testGates]];
 for (const [name, fn] of suites) {
+  const t0 = Date.now();
   try {
     await fn();
   } catch (e) {
     firstErr = firstErr || e;
     fail(`[${name}] 中断：${e.message}\n      ${(e.stack || "").split("\n").slice(1, 3).join("\n      ")}`);
   }
+  console.log("  · " + name + "  " + ((Date.now() - t0) / 1000).toFixed(1) + "s  （通过 " + nPass + " / 失败 " + nFail + "）");
 }
 
 console.log("\n" + (nFail === 0 ? "★ 全部通过" : "★ " + nFail + " 项失败") +
