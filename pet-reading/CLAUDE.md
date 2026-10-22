@@ -629,6 +629,29 @@ Edge 按 375/744/768/820/1194/1440 逐宽度验收：每句「析/🔊」都在�
     - ⚠ 冒烟「逐字比对」对 cloze 的期望值从「空格」改成「空串」（填空位渲染为输入框、文本里没有空格）。
     - 结果：verify 0 警告 / smoke **2773** 全绿 / test-store 144 / server 130；已部署、截图验收过。
 
+**2026-10-21（通用视频课 · `video.html`）：**
+
+44. **不绑 PET 的课程视频播放页 + 三张通用表**：
+    - 首页「今天的作业」里的「数学补习」改成课程名，入口 → `videos.html`（课程目录，
+      `engine/videos.js`）；播放页 `video.html?id=<edu_video.id>`（静态壳，`engine/video.js`）；
+      倍速 `0.75/1.0/1.25/1.5/2.0`，选择记 `edu:video:rate`；打开只定位不自动播放。
+    - 进度规则（用户拍板，纯函数在 `server/lib.mjs` 的 `videoProgressNext`）：
+      5 分钟 = **墙钟实际观看**；累计满 300 秒才启用续播点；本次拖动过
+      （`seeked=true`）不更新续播点，拖动前会单独上报一次；自然播放到剩余 ≤5 秒
+      算看完，下次从头开始；拖动到结尾不算看完；只留最新进度，不建历史表。
+    - 表：`edu_course` / `edu_video` / `edu_video_progress`（`server/migrate.mjs` 幂等建）；
+      API：`GET /api/video`、`POST /api/video/progress`；`engine/store.js` 加
+      `getVideo / saveVideoProgress / videoProgressBeacon`。
+    - 数据：`data/videos.json`（数学 / 六年级 / 2025秋下 六年级数学A+ 洪然，26 条）；
+      `tools/import-videos.mjs --dry|--sql|--write`；`server/video-tables.sql` + `server/video-seed.sql`
+      可直接在 ECS 用 mysql 跑（也可以走 `migrate.mjs`）。
+    - 视频文件本身不上传数据库：放 nginx `/var/www/html/videos/...` 或 OSS；
+      MKV/HEVC 用 `tools/prepare-videos.mjs` 统一转 H.264/AAC MP4（带 faststart）。
+    - 测试：server 单测 130 → **159**（新增视频进度规则 / 路由断言）；smoke 2773 → **2774**
+      （首页课程入口断言）；`npm run videos:dry` 体检 26 条通过；构建产物含
+      `dist/videos.html` / `dist/video.html`。`deploy.sh` 只清 `*.html/engine`，
+      不会删服务器上的 `videos/` 目录。
+
 **未做 / 待办：**
 
 - **Redis 的「学到哪一篇哪个位置」**（用户明确说放最后单独讨论）——

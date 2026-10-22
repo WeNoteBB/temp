@@ -1394,8 +1394,11 @@ async function testHomePage() {
     ok(doc.querySelectorAll("#tilesMain .tile").length === 8,
       `[${S}] 八个学习入口（实际 ${doc.querySelectorAll("#tilesMain .tile").length}）`);
     const labs = [...doc.querySelectorAll(".tile-lab")].map(x => x.textContent.trim());
-    ["我的词书", "PET 阅读理解", "PET 同义替换", "PET 词组库", "PET 口语", "PET 听力", "PET 写作", "错题记录", "数学补习", "语文补习"]
+    ["我的词书", "PET 阅读理解", "PET 同义替换", "PET 词组库", "PET 口语", "PET 听力", "PET 写作", "错题记录", "2025秋下 六年级数学A+ 洪然", "语文补习"]
       .forEach(t => ok(labs.some(l => l.indexOf(t) >= 0), `[${S}] 入口里有「${t}」`));
+    const mathTile = [...doc.querySelectorAll(".tile")].find(a => a.getAttribute("data-go") === "videos");
+    ok(mathTile && mathTile.getAttribute("href") === "videos.html",
+      `[${S}] 数学课入口指向 videos.html（实际 ${mathTile && mathTile.getAttribute("href")}）`);
     const synTile = [...doc.querySelectorAll("#tilesMain .tile")].find(a => /同义替换/.test(a.textContent));
     ok(synTile && synTile.getAttribute("href") === "synonyms.html",
       `[${S}] 「PET 同义替换」入口指向 synonyms.html`);

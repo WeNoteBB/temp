@@ -13,6 +13,7 @@
      pet_phrase     词组库内容镜像（uk_phrase_text 唯一；真源 data/phrases.json）
      user_phrase    用户-词组关联（uk: user_id + level + phrase_id；带内容快照）
      pet_phrase_mistake 词组选择题错题（uk: user_id + phrase_id，重复错就计数）
+     edu_course / edu_video / edu_video_progress 通用视频课（不绑 PET）
 
    设计约定：
    · 收藏 = 建关联。pet_word / pet_sentence 里没有就补一条（只填我们知道的字段，
@@ -26,7 +27,7 @@
 */
 
 import mysql from "mysql2/promise";
-import { sha256Hex, fitText, levelColor } from "./lib.mjs";
+import { sha256Hex, fitText, levelColor, videoProgressNext, videoResume } from "./lib.mjs";
 
 export function createPool(cfg) {
   return mysql.createPool({
@@ -570,6 +571,171 @@ export function createDb(pool, opts) {
     return { items: items };
   }
 
+  /* ---------- 通用视频课 ----------
+     三张表：edu_course / edu_video / edu_video_progress。
+     进度只留最新一条；累计观看秒数（watched_sec）用来判断 5 分钟门槛，
+     不是历史记录。规则细节在 lib.mjs 的 videoProgressNext。 */
+
+  async function getVideo(videoId) {
+    const [rows] = await pool.query(
+      "SELECT v.`id`, v.`course_id` AS courseId, v.`seq`, v.`lesson_name` AS lesson, " +
+        "v.`lesson_type` AS lessonType, v.`file_name` AS fileName, v.`file_url` AS fileUrl, " +
+        "v.`duration_sec` AS duration, c.`subject`, c.`grade`, c.`name` AS course " +
+        "FROM `edu_video` v JOIN `edu_course` c ON c.`id` = v.`course_id` " +
+        "WHERE v.`id` = ? AND v.`status` = 1 AND c.`status` = 1 LIMIT 1",
+      [videoId]
+    );
+    if (!rows.length) return null;
+    const r = rows[0];
+    return {
+      id: Number(r.id) || 0,
+      courseId: Number(r.courseId) || 0,
+      seq: Number(r.seq) || 0,
+      lesson: r.lesson || "",
+      lessonType: r.lessonType || "",
+      fileName: r.fileName || "",
+      fileUrl: r.fileUrl || "",
+      duration: Number(r.duration) || 0,
+      subject: r.subject || "",
+      grade: r.grade || "",
+      course: r.course || ""
+    };
+  }
+
+  async function getVideoProgress(phone, videoId) {
+    const userId = await getUserId(phone);
+    if (!userId) return null;
+    const [rows] = await pool.query(
+      "SELECT `position_sec` AS position, `duration_sec` AS duration, " +
+        "`watched_sec` AS watched, `completed`, " +
+        "UNIX_TIMESTAMP(`last_played_at`) * 1000 AS lastPlayedAt " +
+        "FROM `edu_video_progress` WHERE `user_id` = ? AND `video_id` = ? LIMIT 1",
+      [userId, videoId]
+    );
+    if (!rows.length) return null;
+    const r = rows[0];
+    const position = Number(r.position) || 0;
+    const duration = Number(r.duration) || 0;
+    const completed = !!Number(r.completed);
+    return {
+      position: position,
+      duration: duration,
+      watched: Number(r.watched) || 0,
+      completed: completed,
+      resume: videoResume(position, duration, completed),
+      lastPlayedAt: Number(r.lastPlayedAt) || 0
+    };
+  }
+
+  /* 课程 + 视频列表（带该用户的进度），给 videos.html 用。
+     一次 join 拿全；没有进度的视频 position/watched/completed 都是 0。 */
+  async function listVideoCourses(phone) {
+    const userId = await getUserId(phone);
+    const [rows] = await pool.query(
+      "SELECT c.`id` AS courseId, c.`subject`, c.`grade`, c.`name` AS courseName, " +
+        "v.`id` AS videoId, v.`seq`, v.`lesson_name` AS lesson, v.`lesson_type` AS lessonType, " +
+        "v.`duration_sec` AS videoDuration, " +
+        "p.`position_sec` AS position, p.`duration_sec` AS progressDuration, " +
+        "p.`watched_sec` AS watched, p.`completed`, " +
+        "UNIX_TIMESTAMP(p.`last_played_at`) * 1000 AS lastPlayedAt " +
+        "FROM `edu_course` c " +
+        "JOIN `edu_video` v ON v.`course_id` = c.`id` AND v.`status` = 1 " +
+        "LEFT JOIN `edu_video_progress` p ON p.`video_id` = v.`id` AND p.`user_id` = ? " +
+        "WHERE c.`status` = 1 ORDER BY c.`id` ASC, v.`seq` ASC",
+      [userId || 0]
+    );
+    const courses = [];
+    const byId = {};
+    rows.forEach(function (r) {
+      const cid = Number(r.courseId) || 0;
+      let c = byId[cid];
+      if (!c) {
+        c = {
+          id: cid,
+          subject: r.subject || "",
+          grade: r.grade || "",
+          name: r.courseName || "",
+          videos: []
+        };
+        byId[cid] = c;
+        courses.push(c);
+      }
+      const position = Number(r.position) || 0;
+      const duration = Number(r.progressDuration) || Number(r.videoDuration) || 0;
+      const completed = !!Number(r.completed);
+      c.videos.push({
+        id: Number(r.videoId) || 0,
+        seq: Number(r.seq) || 0,
+        lesson: r.lesson || "",
+        lessonType: r.lessonType || "",
+        duration: duration,
+        position: position,
+        watched: Number(r.watched) || 0,
+        completed: completed,
+        resume: videoResume(position, duration, completed),
+        lastPlayedAt: Number(r.lastPlayedAt) || 0
+      });
+    });
+    return { courses: courses };
+  }
+
+  /* 一次上报 = 累加 watchedDelta + 按规则决定要不要更新续播点。
+     拖动的本次（seeked=true）只累加观看时长，不动 position；
+     累计满 5 分钟之前也只累加，不动 position。 */
+  async function saveVideoProgress(data) {
+    const userId = await ensureUser(data.phone);
+    const conn = await pool.getConnection();
+    try {
+      await conn.beginTransaction();
+      const [rows] = await conn.query(
+        "SELECT `position_sec` AS position, `duration_sec` AS duration, " +
+          "`watched_sec` AS watched, `completed` " +
+          "FROM `edu_video_progress` WHERE `user_id` = ? AND `video_id` = ? FOR UPDATE",
+        [userId, data.videoId]
+      );
+      const old = rows.length ? {
+        position: Number(rows[0].position) || 0,
+        duration: Number(rows[0].duration) || 0,
+        watched: Number(rows[0].watched) || 0,
+        completed: !!Number(rows[0].completed)
+      } : null;
+      const next = videoProgressNext(old, data);
+
+      if (rows.length) {
+        await conn.query(
+          "UPDATE `edu_video_progress` SET `position_sec` = ?, `duration_sec` = ?, " +
+            "`watched_sec` = ?, `completed` = ?, `last_played_at` = NOW() " +
+            "WHERE `user_id` = ? AND `video_id` = ?",
+          [next.positionSec, next.durationSec, next.watchedSec, next.completed,
+           userId, data.videoId]
+        );
+      } else {
+        await conn.query(
+          "INSERT INTO `edu_video_progress` " +
+            "(`user_id`, `video_id`, `position_sec`, `duration_sec`, `watched_sec`, `completed`, `last_played_at`) " +
+            "VALUES (?, ?, ?, ?, ?, ?, NOW())",
+          [userId, data.videoId, next.positionSec, next.durationSec, next.watchedSec, next.completed]
+        );
+      }
+
+      /* 顺手把视频总时长回填到内容表（只在还是 0 时写，不覆盖人工填的值） */
+      if (next.durationSec > 0) {
+        await conn.query(
+          "UPDATE `edu_video` SET `duration_sec` = ? WHERE `id` = ? AND `duration_sec` = 0",
+          [next.durationSec, data.videoId]
+        );
+      }
+
+      await conn.commit();
+      return next;
+    } catch (e) {
+      try { await conn.rollback(); } catch (e2) { /* 回滚失败也没别的办法 */ }
+      throw e;
+    } finally {
+      conn.release();
+    }
+  }
+
   return {
     ping: ping,
     ensureUser: ensureUser,
@@ -588,6 +754,10 @@ export function createDb(pool, opts) {
     listPhraseMistakes: listPhraseMistakes,
     addPhraseReview: addPhraseReview,
     listPhraseReviews: listPhraseReviews,
+    getVideo: getVideo,
+    getVideoProgress: getVideoProgress,
+    saveVideoProgress: saveVideoProgress,
+    listVideoCourses: listVideoCourses,
     listFavs: listFavs,
     addMistake: addMistake,
     listMistakes: listMistakes

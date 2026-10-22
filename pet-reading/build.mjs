@@ -44,6 +44,12 @@ const template = read(P("engine", "template.html"));
 const ENGINE_SIG = assets.map(a => a.name + ":" + a.hash).join("|") + "|template.html:" + hash(template);
 const coreGlossary = readJSON(P("data", "glossary.core.json"));
 const manifest = readJSON(P("data", "manifest.json"));
+/* 首页「今天的作业」里的数学课入口：课程名来自视频目录真源，别在模板里手写第二份 */
+let videoCourseName = "课程视频";
+try {
+  const vd = readJSON(P("data", "videos.json"));
+  if (vd && vd.course && vd.course.name) videoCourseName = vd.course.name;
+} catch (e) { /* 没有视频目录也能构建，入口显示通用文案 */ }
 
 /* 顶栏那个「字号缩放」条：所有固定页面都用这一份（文章页的模板里另有一份同样的）
    —— 样式在 .zoom，逻辑在 store.js 的 mountZoom()。
@@ -62,7 +68,9 @@ const PAGES = [
   { out: "words.html", render: () => renderWords(manifest, present) },
   { out: "synonyms.html", render: () => renderSynonyms(manifest) },
   { out: "collocations.html", render: () => renderCollocations(manifest) },
-  { out: "phrases.html", render: () => renderPhrases(manifest) }
+  { out: "phrases.html", render: () => renderPhrases(manifest) },
+  { out: "videos.html", render: () => renderVideos(manifest) },
+  { out: "video.html", render: () => renderVideo(manifest) }
 ];
 const PAGE_OUTS = new Set(PAGES.map(p => p.out));
 
@@ -345,7 +353,7 @@ ${THEME_HEAD}
     <h2 class="home-sec-t">今天的作业</h2>
     <section class="tiles" aria-label="今天的作业">
       <a class="tile soon" data-go="hw-words" href="#"><span class="tile-ico">🔁</span><span class="tile-lab">今天要复习的词书</span></a>
-      <a class="tile soon" data-go="hw-math" href="#"><span class="tile-ico">➗</span><span class="tile-lab">数学补习</span></a>
+      <a class="tile wide" data-go="videos" href="videos.html" title="${escHTML(videoCourseName)}"><span class="tile-ico">➗</span><span class="tile-lab">${escHTML(videoCourseName)}</span></a>
       <a class="tile soon" data-go="hw-cn" href="#"><span class="tile-ico">🉐</span><span class="tile-lab">语文补习</span></a>
     </section>
   </main>
@@ -756,6 +764,94 @@ ${THEME_HEAD}
 <script src="engine/phrase.js?v=${assetV("phrase.js")}"></script>
 <script src="engine/xbw.js?v=${assetV("xbw.js")}"></script>
 <script src="engine/srs.js?v=${assetV("srs.js")}"></script>
+</body>
+</html>`;
+}
+
+/* ============================================================
+   通用视频课 · 课程目录（videos.html）
+   ------------------------------------------------------------
+   静态壳；课程/视频/进度走 /api/videos。首页「数学补习」入口指向这里。
+   ============================================================ */
+function renderVideos(man) {
+  return `<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>课程视频</title>
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#eef1f6">
+${THEME_HEAD}
+<link rel="stylesheet" href="engine/style.css?v=${assetV("style.css")}">
+<script src="engine/store.js?v=${assetV("store.js")}"></script>
+<!-- 门禁：和文章页同一道（存储不可用时放行，见 store.js） -->
+<script>PETStore.guard().catch(function(){});</script>
+</head>
+<body class="page-body video-body">
+<div class="page-wrap video-wrap">
+  <header class="page-top">
+    <a class="page-back" href="index.html">← 首页</a>
+    <h1 class="page-title">课程视频</h1>
+    <span class="who" id="who" hidden></span>
+    <button class="tool" id="tglTheme" type="button" title="主题：跟随系统">◐ 跟随</button>
+    ${ZOOM_HTML}
+  </header>
+
+  <p class="page-sub" id="vcSub">加载中…</p>
+  <div id="vcList" class="vc-list"><div class="vc-empty">加载中…</div></div>
+</div>
+<script src="engine/videos.js?v=${assetV("videos.js")}"></script>
+</body>
+</html>`;
+}
+
+/* ============================================================
+   通用视频课（video.html）
+   ------------------------------------------------------------
+   一个静态壳，视频信息与进度全部走 /api/video（?id=1）。
+   不绑 PET：标题、文案、表名都是通用的；课程分类从数据库来。
+   ============================================================ */
+function renderVideo(man) {
+  return `<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>课程视频</title>
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#eef1f6">
+${THEME_HEAD}
+<link rel="stylesheet" href="engine/style.css?v=${assetV("style.css")}">
+<script src="engine/store.js?v=${assetV("store.js")}"></script>
+<!-- 门禁：和文章页同一道（存储不可用时放行，见 store.js） -->
+<script>PETStore.guard().catch(function(){});</script>
+</head>
+<body class="page-body video-body">
+<div class="page-wrap video-wrap">
+  <header class="page-top">
+    <a class="page-back" href="index.html">← 首页</a>
+    <h1 class="page-title" id="videoTitle">课程视频</h1>
+    <span class="who" id="who" hidden></span>
+    <button class="tool" id="tglTheme" type="button" title="主题：跟随系统">◐ 跟随</button>
+    ${ZOOM_HTML}
+  </header>
+
+  <p class="page-sub" id="videoMeta">加载中…</p>
+
+  <div class="video-shell">
+    <video id="video" controls playsinline preload="metadata"></video>
+  </div>
+
+  <div class="video-bar">
+    <span class="video-bar-label">播放速度</span>
+    <div class="video-speeds" id="videoSpeeds" role="group" aria-label="播放速度"></div>
+  </div>
+
+  <p class="video-status" id="videoStatus" aria-live="polite"></p>
+  <p class="video-tip" id="videoTip">加载中…</p>
+</div>
+<script src="engine/video.js?v=${assetV("video.js")}"></script>
 </body>
 </html>`;
 }

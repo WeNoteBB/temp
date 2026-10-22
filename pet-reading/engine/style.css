@@ -7,6 +7,7 @@
   /* ---- 表面 ---- */
   --bg:#f5f6f8;
   --panel:#ffffff;
+  --video-bg:#0b0d12;          /* 视频播放器的底色：亮暗主题都用它 */
   --sunken:#eceef2;            /* 凹陷底：小黑板顶部的原句框 */
   --field:#eef1f6;             /* 输入 / 代码 / 空位底 */
   --field-line:#b9c3d4;        /* 空位的虚线边 */
@@ -1230,6 +1231,7 @@ button.nat:hover{border-color:var(--border-accent);color:var(--accent);backgroun
 .tile-lab{font-size:calc(13px * var(--zoom));font-weight:600;color:var(--ink-2);text-align:center;line-height:1.35}
 .tile.soon .tile-ico{background:var(--line-2)}
 .tile.soon .tile-lab{color:var(--ink-3)}
+.tile.wide{grid-column:span 2}                 /* 课程名比较长，占两格更舒展 */
 .home-hr{border:0;border-top:1px solid var(--line);margin:28px 0 20px}   /* 「横线划开」两个部分 */
 .home-sec-t{margin:0 0 12px;font-size:calc(14px * var(--zoom));color:var(--ink-2);font-weight:700;letter-spacing:.5px}
 
@@ -1833,4 +1835,87 @@ button.nat:hover{border-color:var(--border-accent);color:var(--accent);backgroun
   background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
 }
 .vp-none{color:var(--ink-3);font-size:calc(13px * var(--zoom));line-height:1.8;margin:8px 0}
+
+/* ============================================================
+   通用视频课（video.html）
+   只做播放器 + 倍速 + 进度提示；分类/标题从 /api/video 来。
+   ============================================================ */
+.video-wrap{max-width:1000px}
+.video-shell{
+  position:relative;margin-top:8px;overflow:hidden;
+  background:var(--video-bg);border:1px solid var(--line);border-radius:var(--radius);
+}
+.video-shell video{
+  display:block;width:100%;aspect-ratio:16/9;
+  background:var(--video-bg);object-fit:contain;
+}
+.video-bar{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  margin:14px 0 4px;
+}
+.video-bar-label{
+  flex:none;color:var(--ink-3);font-weight:600;
+  font-size:calc(13px * var(--zoom));
+}
+.video-speeds{display:flex;gap:6px;flex-wrap:wrap}
+.video-rate{
+  min-width:58px;text-align:center;
+  font-variant-numeric:tabular-nums;
+}
+.video-status{
+  min-height:1.7em;margin:8px 0 0;
+  color:var(--ink-2);font-size:calc(13px * var(--zoom));line-height:1.7;
+}
+.video-tip{
+  margin:2px 0 0;color:var(--ink-3);
+  font-size:calc(12.5px * var(--zoom));line-height:1.75;
+}
+
+/* 课程目录（videos.html）：一门课一张卡 + 每课一行 */
+.vc-list{display:flex;flex-direction:column;gap:16px;margin-top:14px}
+.vc-course{
+  padding:16px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+}
+.vc-head{display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.vc-head-main{flex:1 1 240px;min-width:0}
+.vc-title-h{
+  margin:0;font-size:calc(18px * var(--zoom));line-height:1.35;color:var(--ink);
+  overflow-wrap:anywhere;
+}
+.vc-meta{margin:5px 0 0;font-size:calc(12.5px * var(--zoom));color:var(--ink-3)}
+.vc-go{flex:none;text-decoration:none}
+.vc-rows{display:flex;flex-direction:column;gap:7px}
+.vc-row{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  padding:10px 11px;border:1px solid var(--line-2);border-radius:10px;
+  background:var(--panel);color:inherit;text-decoration:none;
+  transition:background .15s,border-color .15s;
+}
+.vc-row:hover{background:var(--hover);border-color:var(--border-accent)}
+.vc-row.done{opacity:.78}
+.vc-seq{
+  flex:none;width:30px;height:30px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--field);color:var(--ink-2);
+  font-size:calc(12px * var(--zoom));font-variant-numeric:tabular-nums;
+}
+.vc-main{flex:1 1 220px;min-width:0;display:flex;flex-direction:column;gap:4px}
+.vc-title{
+  font-size:calc(14px * var(--zoom));font-weight:600;line-height:1.45;
+  color:var(--ink);overflow-wrap:anywhere;
+}
+.vc-sub{font-size:calc(12px * var(--zoom));color:var(--ink-3)}
+.vc-bar{display:block;height:3px;border-radius:2px;background:var(--line-2);overflow:hidden}
+.vc-bar i{display:block;height:100%;background:var(--accent)}
+.vc-row.done .vc-bar i{background:var(--ok)}
+.vc-state{
+  flex:none;font-size:calc(12px * var(--zoom));color:var(--accent);
+  white-space:nowrap;
+}
+.vc-state.ok{color:var(--ok)}
+.vc-empty{
+  padding:26px 14px;text-align:center;color:var(--ink-3);
+  font-size:calc(13px * var(--zoom));line-height:1.8;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+}
 

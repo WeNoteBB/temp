@@ -1,0 +1,192 @@
+{
+  "course": {
+    "subject": "数学",
+    "grade": "六年级",
+    "name": "2025秋下 六年级数学A+ 洪然"
+  },
+  "urlPrefix": "/videos/math/grade6/2025autumn",
+  "videos": [
+    {
+      "seq": 1,
+      "lesson": "圆的认识与周长",
+      "type": "正课",
+      "fileName": "1圆的认识与周长.mkv",
+      "playName": "01.mp4"
+    },
+    {
+      "seq": 2,
+      "lesson": "【真题练】圆的认识与周长",
+      "type": "真题练",
+      "fileName": "2【真题练】圆的认识与周长.mkv",
+      "playName": "02.mp4"
+    },
+    {
+      "seq": 3,
+      "lesson": "圆的面积初步",
+      "type": "正课",
+      "fileName": "3圆的面积初步.mkv",
+      "playName": "03.mp4"
+    },
+    {
+      "seq": 4,
+      "lesson": "【真题练】圆的面积初步",
+      "type": "真题练",
+      "fileName": "4 【真题练】圆的面积初步.mp4",
+      "playName": "04.mp4"
+    },
+    {
+      "seq": 5,
+      "lesson": "百分数的认识",
+      "type": "正课",
+      "fileName": "5百分数的认识.mp4",
+      "playName": "05.mp4"
+    },
+    {
+      "seq": 6,
+      "lesson": "【真题练】百分数的认识",
+      "type": "真题练",
+      "fileName": "6【真题练】百分数的认识.mp4",
+      "playName": "06.mp4"
+    },
+    {
+      "seq": 7,
+      "lesson": "百分数应用题",
+      "type": "正课",
+      "fileName": "7百分数应用题.mkv",
+      "playName": "07.mp4"
+    },
+    {
+      "seq": 8,
+      "lesson": "【真题练】百分数应用题",
+      "type": "真题练",
+      "fileName": "8【真题练】百分数应用题.mkv",
+      "playName": "08.mp4"
+    },
+    {
+      "seq": 9,
+      "lesson": "圆的面积进阶",
+      "type": "正课",
+      "fileName": "9圆的面积进阶.mp4",
+      "playName": "09.mp4"
+    },
+    {
+      "seq": 10,
+      "lesson": "【真题练】圆的面积进阶",
+      "type": "真题练",
+      "fileName": "10【真题练】圆的面积进阶.mp4",
+      "playName": "10.mp4"
+    },
+    {
+      "seq": 11,
+      "lesson": "圆的综合应用",
+      "type": "正课",
+      "fileName": "11圆的综合应用.mkv",
+      "playName": "11.mp4"
+    },
+    {
+      "seq": 12,
+      "lesson": "【真题练】圆的综合应用",
+      "type": "真题练",
+      "fileName": "12【真题链】圆的综合应用.mkv",
+      "playName": "12.mp4"
+    },
+    {
+      "seq": 13,
+      "lesson": "扇形统计图",
+      "type": "正课",
+      "fileName": "13扇形统计图.mp4",
+      "playName": "13.mp4"
+    },
+    {
+      "seq": 14,
+      "lesson": "【真题练】扇形统计图",
+      "type": "真题练",
+      "fileName": "14【真题练】扇形统计图.mp4",
+      "playName": "14.mp4"
+    },
+    {
+      "seq": 15,
+      "lesson": "按比例分配进阶",
+      "type": "正课",
+      "fileName": "15按比例分配进阶.mp4",
+      "playName": "15.mp4"
+    },
+    {
+      "seq": 16,
+      "lesson": "【真题练】按比例分配进阶",
+      "type": "真题练",
+      "fileName": "16【真题练】按比例分配进阶.mp4",
+      "playName": "16.mp4"
+    },
+    {
+      "seq": 17,
+      "lesson": "圆的倍数问题",
+      "type": "正课",
+      "fileName": "17圆的倍数问题.mp4",
+      "playName": "17.mp4"
+    },
+    {
+      "seq": 18,
+      "lesson": "【真题练】圆的倍数问题",
+      "type": "真题练",
+      "fileName": "18【真题练】圆的倍数问题.mp4",
+      "playName": "18.mp4"
+    },
+    {
+      "seq": 19,
+      "lesson": "分数应用题综合",
+      "type": "正课",
+      "fileName": "19分数应用题综合.mkv",
+      "playName": "19.mp4"
+    },
+    {
+      "seq": 20,
+      "lesson": "【真题练】分数应用题综合",
+      "type": "真题练",
+      "fileName": "20【真题练】分数应用题综合.mkv",
+      "playName": "20.mp4"
+    },
+    {
+      "seq": 21,
+      "lesson": "浓度问题",
+      "type": "正课",
+      "fileName": "21浓度问题.mp4",
+      "playName": "21.mp4"
+    },
+    {
+      "seq": 22,
+      "lesson": "【真题练】浓度问题",
+      "type": "真题练",
+      "fileName": "22【真题练】浓度问题.mp4",
+      "playName": "22.mp4"
+    },
+    {
+      "seq": 23,
+      "lesson": "百分比应用题综合",
+      "type": "正课",
+      "fileName": "23百分比应用题综合.mp4",
+      "playName": "23.mp4"
+    },
+    {
+      "seq": 24,
+      "lesson": "【真题练】百分比应用题综合",
+      "type": "真题练",
+      "fileName": "24【真题练】百分比应用题综合.mp4",
+      "playName": "24.mp4"
+    },
+    {
+      "seq": 25,
+      "lesson": "直击考场",
+      "type": "正课",
+      "fileName": "25直击考场.mp4",
+      "playName": "25.mp4"
+    },
+    {
+      "seq": 26,
+      "lesson": "【真题练】直击考场",
+      "type": "真题练",
+      "fileName": "26【真题练】直击考场.mp4",
+      "playName": "26.mp4"
+    }
+  ]
+}

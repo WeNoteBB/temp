@@ -35,6 +35,18 @@
         → {ok, level, days}               词组复习（间隔重复：对升级、错回 1 级）
      GET  /api/phrase-review?phone=138…[&all=1][&limit=20]
         → {ok, items:[{no, phrase, level, reps, wrongs, due, meaning, example, exampleCn, use}]}
+     GET  /api/videos?phone=138…
+        → {ok, courses:[{id,subject,grade,name,videos:[{id,seq,lesson,lessonType,duration,
+           position,watched,completed,resume,lastPlayedAt}]}]}
+     GET  /api/video?id=1&phone=138…
+        → {ok, video:{id,courseId,seq,lesson,lessonType,fileName,fileUrl,subject,grade,course,duration},
+           progress:{position,duration,watched,completed,resume,lastPlayedAt}|null,
+           recordAfter:300, completeWithin:5}
+     POST /api/video/progress {phone, videoId, position, duration, watchedDelta, seeked, completed}
+        → {ok, watchedSec, positionSec, durationSec, completed, savedPosition, resume}
+        · watchedDelta 是本次实际观看的墙钟秒数（2 倍速也只算墙钟）
+        · 累计满 5 分钟前不更新续播点；seeked=true 的本次也不更新
+        · 自然播放到剩余 ≤5 秒时客户端报 completed=true
      GET  /api/health       → {ok, db:"up"}
 
    ⚠ 认证口径：除了注册/登录校验密码，其余接口仍按手机号认人（软认证）。
@@ -53,6 +65,7 @@ import {
   validPhone, normPhone, normWord, normSentence,
   normNickname, validNickname, validPassword, verifyPassword, hashPassword,
   SLUG_RE, srsNext,
+  VIDEO_RECORD_AFTER_SEC, VIDEO_COMPLETE_WITHIN_SEC, VIDEO_MAX_DURATION_SEC, VIDEO_MAX_WATCHED_DELTA,
   WORD_MAX, TEXT_MAX_BYTES, TITLE_MAX, fitText, fitChars, byteLen
 } from "./lib.mjs";
 
@@ -354,6 +367,70 @@ export function createApp(db, opts) {
       const all = String((req.query && req.query.all) || "") === "1";
       const r = await db.listPhraseReviews(phone, { limit: limit, all: all });
       res.json({ ok: true, items: r.items });
+    } catch (e) { next(e); }
+  });
+
+  /* ---------- 通用视频课 ----------
+     进度规则由 lib.mjs 的 videoProgressNext 统一算：
+     累计墙钟观看满 5 分钟才启用续播点；本次拖动过（seeked）不更新续播点。
+     客户端 engine/video.js 只负责「如实上报看了多少秒、当前位置、是否拖动」。 */
+  app.get("/api/videos", async function (req, res, next) {
+    try {
+      const phone = phoneOf(res, req.query && req.query.phone);
+      if (!phone) return;
+      const r = await db.listVideoCourses(phone);
+      res.json({ ok: true, courses: r.courses });
+    } catch (e) { next(e); }
+  });
+
+  app.get("/api/video", async function (req, res, next) {
+    try {
+      const phone = phoneOf(res, req.query && req.query.phone);
+      if (!phone) return;
+      const id = parseInt((req.query && req.query.id) || "0", 10);
+      if (!(id >= 1)) return bad(res, "视频 id 不合法");
+      const video = await db.getVideo(id);
+      if (!video) return bad(res, "视频不存在或已下架");
+      const progress = await db.getVideoProgress(phone, id);
+      res.json({
+        ok: true,
+        video: video,
+        progress: progress,
+        recordAfter: VIDEO_RECORD_AFTER_SEC,
+        completeWithin: VIDEO_COMPLETE_WITHIN_SEC
+      });
+    } catch (e) { next(e); }
+  });
+
+  app.post("/api/video/progress", async function (req, res, next) {
+    try {
+      const b = req.body || {};
+      const phone = phoneOf(res, b.phone);
+      if (!phone) return;
+      const videoId = parseInt(b.videoId, 10);
+      if (!(videoId >= 1)) return bad(res, "视频 id 不合法");
+      const video = await db.getVideo(videoId);
+      if (!video) return bad(res, "视频不存在或已下架");
+
+      const position = Number(b.position);
+      const duration = Number(b.duration);
+      const watchedDelta = Number(b.watchedDelta);
+      if (!Number.isFinite(position) || position < 0) return bad(res, "position 不合法");
+      if (!Number.isFinite(duration) || duration < 0 || duration > VIDEO_MAX_DURATION_SEC) {
+        return bad(res, "duration 不合法");
+      }
+      if (!Number.isFinite(watchedDelta) || watchedDelta < 0) return bad(res, "watchedDelta 不合法");
+
+      const r = await db.saveVideoProgress({
+        phone: phone,
+        videoId: videoId,
+        position: Math.floor(position),
+        duration: Math.floor(duration),
+        watchedDelta: Math.min(Math.floor(watchedDelta), VIDEO_MAX_WATCHED_DELTA),
+        seeked: b.seeked === true || b.seeked === 1,
+        completed: b.completed === true || b.completed === 1
+      });
+      res.json(Object.assign({ ok: true, recordAfter: VIDEO_RECORD_AFTER_SEC }, r));
     } catch (e) { next(e); }
   });
 

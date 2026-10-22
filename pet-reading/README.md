@@ -270,9 +270,9 @@ verify 会在两种写法之间对账：正文里的每个 `{n}` 必须有题；
 |---|---|---|
 | `npm run verify` | ①内容：词数/句数对账、每句每选项都有 `ana`、词组字面存在且有词条、100% 词形覆盖、空位与题号对得上、答案唯一、干扰项齐全、**同一词在不同篇里释义不打架**。②引擎：分词正则三处逐字一致、断点两处一致、模板占位符齐全、`:root` 外无彩色字面量、暗色令牌齐全、hover 藏起来的控件都在常显名单里、`<!--V:x-->` 引用的文件都存在 | 秒级 |
 | `npm run build` | 合并共享词库、算引擎哈希、生成全部固定页面、**清理孤儿 HTML**（manifest 里删掉的篇目，dist 里的产物连 `.gz` 一起删）、预压缩 | 秒级 |
-| `npm run smoke` | 真在 jsdom 里跑一遍引擎：**2773 条断言**（每篇 + 首页 + 错题页 + 词书页 + 同义替换页 + 固定搭配页 + 词组库页），两种题型（Part 4 共享选项池 / Part 1 每题自带选项）都跑；Part 1 的正文内联作答（答案横排/句内二选一/整行选项/解析按钮/隐藏 tab/标题整段「译」）全链路断言；Part 3 的扉页标题/插图/徽章/Tip/下划线/选项盒；Part 5 的真表格/Remember 框/边框盒/真题空位与 6 排胶囊；Part 6 的开放填空输入框（判分/落盘/同步）、笔记并进「本句词组」（带中文、无单独区块）与**「总结」页**（手写分组/跳原文/☆ → ★、收藏表 +1）；**同义替换页**（300 行/30 段、点词小卡片、收藏回写、搜索、遮住自测、连线题按分组出题与配对对错）；**固定搭配页**（10 张短语卡、短语标黄、组号条、短语库乱序、填错记次、填对回填、对答案/重做、门禁）；**词组库**（254 条数据/26 组、精读卡/小黑板/历史/☆/点词、小霸王三关、跟读音频有文件优先播 mp3、SRS）；含逐字比对防丢字、点词/点句/点词组/点空格的交互、历史记录、目录列开合、**做题与错题登记、学到哪儿、收藏、词书点开详情、首页按钮、题号徽章、门禁、主题切换、存储不可用时放行** | **约 25 分钟**（12 篇；每篇跑完打一行耗时，大多花在 jsdom 的样式查询上） |
+| `npm run smoke` | 真在 jsdom 里跑一遍引擎：**2774 条断言**（每篇 + 首页 + 错题页 + 词书页 + 同义替换页 + 固定搭配页 + 词组库页），两种题型（Part 4 共享选项池 / Part 1 每题自带选项）都跑；Part 1 的正文内联作答（答案横排/句内二选一/整行选项/解析按钮/隐藏 tab/标题整段「译」）全链路断言；Part 3 的扉页标题/插图/徽章/Tip/下划线/选项盒；Part 5 的真表格/Remember 框/边框盒/真题空位与 6 排胶囊；Part 6 的开放填空输入框（判分/落盘/同步）、笔记并进「本句词组」（带中文、无单独区块）与**「总结」页**（手写分组/跳原文/☆ → ★、收藏表 +1）；**同义替换页**（300 行/30 段、点词小卡片、收藏回写、搜索、遮住自测、连线题按分组出题与配对对错）；**固定搭配页**（10 张短语卡、短语标黄、组号条、短语库乱序、填错记次、填对回填、对答案/重做、门禁）；**词组库**（254 条数据/26 组、精读卡/小黑板/历史/☆/点词、小霸王三关、跟读音频有文件优先播 mp3、SRS）；含逐字比对防丢字、点词/点句/点词组/点空格的交互、历史记录、目录列开合、**做题与错题登记、学到哪儿、收藏、词书点开详情、首页按钮、题号徽章、门禁、主题切换、存储不可用时放行** | **约 25 分钟**（12 篇；每篇跑完打一行耗时，大多花在 jsdom 的样式查询上） |
 | `node tools/test-store.mjs` | `store.js` 单测 **144 条**：注册/登录（含假后端的密码校验分支）、**14 天过期**、手机号校验、收藏去重、**补写队列（离线排队 / 联网推送 / 400 条目丢弃）**、**拉取合并（跨设备星标、本机已删的不复活）**、**错题登记与列表**、**学到哪儿（按手机号分账）**、主题读写、`safeNext` 拒外站、**假一个会抛异常的 localStorage 断言 `available` 返回 false 而不是抛出去** | 毫秒 |
-| `cd server && npm test` | 后端单测 **130 条**：sha256 已知向量、scrypt 散列/校验、昵称/密码/手机号/slug 校验、全部路由的成功与 400 分支、**db 抛异常 → 500 且不透传内部细节**。`selftest.mjs` 打真库，在部署机上跑 | 毫秒 |
+| `cd server && npm test` | 后端单测 **159 条**：sha256 已知向量、scrypt 散列/校验、昵称/密码/手机号/slug 校验、全部路由的成功与 400 分支、**视频进度规则（5 分钟墙钟 / 拖动本次不记 / 最后 5 秒算看完）**、**db 抛异常 → 500 且不透传内部细节**。`selftest.mjs` 打真库，在部署机上跑 | 毫秒 |
 
 `npm run check` = 四个连跑（verify → build → smoke → test-store），提交前跑这个。
 
@@ -324,6 +324,8 @@ node tools/promote.mjs --write      # 真的写
 | `dist/synonyms.html` | `build.mjs` 里的 `renderSynonyms()`（内联 `data/synonyms.json`） | `style.css` + `store.js` + `syn.js` |
 | `dist/collocations.html` | `build.mjs` 里的 `renderCollocations()`（内联 `data/phrases.json`） | `style.css` + `store.js` + `col.js` |
 | `dist/phrases.html` | `build.mjs` 里的 `renderPhrases()`（内联 `data/phrases.json` + 随身小词典） | `style.css` + `store.js` + `phrase.js` + `xbw.js` |
+| `dist/videos.html` | `build.mjs` 里的 `renderVideos()`（课程目录，走 `/api/videos`） | `style.css` + `store.js` + `videos.js` |
+| `dist/video.html` | `build.mjs` 里的 `renderVideo()`（静态壳，视频信息走 `/api/video`） | `style.css` + `store.js` + `video.js` |
 
 **没有单独的登录/注册页** —— 首页左上角那个圆圈（`avatar`）点开是弹框，逻辑全在 `engine/home.js`。
 固定页面**不加载 `app.js`**：`app.js` 开头无条件读 `window.PET_CONTENT`，那些页没有内容数据，一加载就崩。
@@ -490,6 +492,56 @@ window.PETStore = {
   **2026-10-16 改版**（注册/登录/等级色/错题/学到哪儿）的迁移要先在服务器上跑
   `node --env-file=.env migrate.mjs`（或直接走 `deploy-api.sh`，它会顺带跑），
   前端要重新 `node build.mjs` 后发布 `dist/`。
+
+---
+
+## 通用视频课（video.html）
+
+一套**不绑 PET** 的课程视频播放页：同一个静态页通过 `?id=` 播放不同视频，进度按手机号存 MySQL，换设备登录后能续播。
+
+- 首页「今天的作业」里的「数学补习」已换成课程名，入口指向 `videos.html`；课程目录列出 26 课和每课进度，点任意一课进播放页。
+- 播放页：`video.html?id=1`（`id` 是 `edu_video.id`）。
+- 倍速：`0.75 / 1.0 / 1.25 / 1.5 / 2.0`，选择记在本机 `edu:video:rate`。
+- 规则（2026-10 与用户对齐）：
+  - **5 分钟 = 实际观看墙钟时间**，2 倍速看 3 分钟也只算 3 分钟；
+  - 同一用户 + 视频**累计**观看满 300 秒后，才启用续播点；之前的短进短出只累加 `watched_sec`，不改续播位置；
+  - 本次页面一旦**用户拖动**（`seeked`），之后的位置不再更新续播点；拖动前客户端会单独上报一次，所以「拖动前自然播放到的位置」仍可保存；
+  - 自动续播的程序跳转不算拖动；关掉页面重新打开，拖动锁解除；
+  - 自然播放到**剩余 ≤5 秒**算看完，下次打开从 0 开始；拖动到结尾不算看完；
+  - 只保留最新进度，不建历史表。
+- 三张表（`server/migrate.mjs` 幂等建）：
+  - `edu_course`：科目 / 年级 / 课程名；
+  - `edu_video`：课程 id / 序号 / 课名（正课不带前缀，真题练保留「【真题练】」）/ `lesson_type`（另存一份供筛选统计）/ 原始文件名 / 播放地址 / 总时长；
+  - `edu_video_progress`：`user_id + video_id` 唯一，`position_sec` / `duration_sec` / `watched_sec` / `completed` / `last_played_at`。
+- 接口：`GET /api/videos?phone=…`（课程目录）、`GET /api/video?id=…&phone=…`、`POST /api/video/progress`（详见 `server/README.md`）。
+- 数据源：`data/videos.json`（课程 + 26 条视频目录）。导入的是**目录信息**，不是视频文件。
+- 导入：
+  ```bash
+  npm run videos:dry                                  # 体检，不连库
+  npm run videos:sql                                  # 生成 server/video-seed.sql
+  npm run import:videos                               # 连库写 edu_course / edu_video（需 server/.env）
+  ```
+  没有本机数据库权限时，把 `server/video-tables.sql` + `server/video-seed.sql` 传到 ECS，在服务器上执行（不跑 Node 迁移也行）：
+  ```bash
+  mysql -u<用户> -p <库名> < /opt/pet-api/video-tables.sql
+  mysql -u<用户> -p <库名> < /opt/pet-api/video-seed.sql
+  ```
+  如果已经跑过 `server/migrate.mjs`，第一句可以跳过（`IF NOT EXISTS` 不会重复建）。
+  在 ECS 上也可以直接用 Node 脚本跑种子（会顺带打印 id → 课名）：
+  ```bash
+  cd /opt/pet-api
+  /opt/node-v22/bin/node --env-file=.env seed-videos.mjs
+  ```
+  插完查一下 id（播放页 URL 用的是 `edu_video.id`）：
+  ```sql
+  SELECT id, seq, lesson_name, lesson_type FROM edu_video ORDER BY seq;
+  ```
+- 视频文件本身放 ECS 的 nginx 目录（`/var/www/html/videos/...`，`deploy.sh` 不会删这个目录），或阿里云 OSS/CDN；数据库里只存 URL。MKV/HEVC 浏览器支持不稳定，建议先跑 `tools/prepare-videos.mjs` 统一转成 **H.264 + AAC 的 MP4**（能 `-c copy` 就只换容器，带 `+faststart`）：
+  ```bash
+  node tools/prepare-videos.mjs --dir "D:\\BaiduNetdiskDownload\\【2025秋下】六年级数学A+ 洪然 （完结）" --out videos-out
+  ```
+  然后把 `videos-out/01.mp4 … 26.mp4` 上传到 `/var/www/html/videos/math/grade6/2025autumn/`。
+- 当前这批数据：数学 / 六年级 / `2025秋下 六年级数学A+ 洪然`，26 个视频（13 正课 + 13 真题练）；`12【真题链】` 在数据里已统一按「真题练」处理，原始文件名仍保留在 `file_name`。
 
 ---
 

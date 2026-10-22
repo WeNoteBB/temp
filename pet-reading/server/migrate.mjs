@@ -6,6 +6,7 @@
      ③ 建 pet_mistake 错题记录表（阅读理解）
      ④ 建词组库三张表：pet_phrase（内容镜像）/ user_phrase（用户收藏）/ pet_phrase_mistake（词组错题）
      ⑤ 建 pet_phrase_review 词组复习表（间隔重复：等级 1-6 → 1/2/4/7/15/30 天）
+     ⑥ 建通用视频课三张表：edu_course / edu_video / edu_video_progress（不绑 PET）
 
    用法（在能连上 MySQL 的机器上跑，比如部署后的 ECS）：
      node --env-file=.env migrate.mjs         真的执行
@@ -238,6 +239,88 @@ try {
       changed++;
     }
   }
+
+  /* ---------- ⑥ 通用视频课（不绑 PET） ----------
+     三张表：
+       edu_course           课程（科目 + 年级 + 课程名）
+       edu_video            视频/课（序号 + 课名 + 类型 + 原始文件名 + 播放地址）
+       edu_video_progress   每人每视频的最新进度（累计观看秒数用来判断 5 分钟门槛）
+     没有历史表：产品口径是「只要最新进度」。 */
+  if (await tableExists("edu_course")) {
+    skip("表 edu_course 已存在");
+  } else {
+    plan("建表 edu_course（科目 / 年级 / 课程名）");
+    if (!DRY) {
+      await pool.query(
+        "CREATE TABLE `edu_course` (" +
+          "`id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT," +
+          "`subject` VARCHAR(32) NOT NULL COMMENT '科目，如 数学'," +
+          "`grade` VARCHAR(32) NOT NULL COMMENT '年级，如 六年级'," +
+          "`name` VARCHAR(128) NOT NULL COMMENT '课程名，如 2025秋下 六年级数学A+ 洪然'," +
+          "`status` TINYINT NOT NULL DEFAULT 1 COMMENT '1 上架 / 0 下架'," +
+          "`created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP," +
+          "`updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP," +
+          "PRIMARY KEY (`id`)," +
+          "UNIQUE KEY `uk_edu_course` (`subject`, `grade`, `name`)" +
+        ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='通用视频课 · 课程'");
+      log("建表 edu_course");
+      changed++;
+    }
+  }
+
+  if (await tableExists("edu_video")) {
+    skip("表 edu_video 已存在");
+  } else {
+    plan("建表 edu_video（序号 / 课名 / 类型 / 文件名 / 播放地址）");
+    if (!DRY) {
+      await pool.query(
+        "CREATE TABLE `edu_video` (" +
+          "`id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT," +
+          "`course_id` BIGINT UNSIGNED NOT NULL COMMENT 'edu_course.id'," +
+          "`seq` SMALLINT UNSIGNED NOT NULL COMMENT '文件名序号 1、2、3…'," +
+          "`lesson_name` VARCHAR(128) NOT NULL COMMENT '课名，如 圆的认识与周长'," +
+          "`lesson_type` VARCHAR(16) NOT NULL DEFAULT '' COMMENT '正课 / 真题练 等'," +
+          "`file_name` VARCHAR(255) NOT NULL COMMENT '原始文件名（含扩展名，原样保存）'," +
+          "`file_url` VARCHAR(512) NOT NULL COMMENT '实际播放地址（相对路径或完整 URL）'," +
+          "`duration_sec` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '视频总时长（首次播放后回填）'," +
+          "`status` TINYINT NOT NULL DEFAULT 1 COMMENT '1 上架 / 0 下架'," +
+          "`created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP," +
+          "`updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP," +
+          "PRIMARY KEY (`id`)," +
+          "UNIQUE KEY `uk_edu_video` (`course_id`, `seq`)," +
+          "KEY `idx_edu_video_course` (`course_id`)" +
+        ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='通用视频课 · 视频/课'");
+      log("建表 edu_video");
+      changed++;
+    }
+  }
+
+  if (await tableExists("edu_video_progress")) {
+    skip("表 edu_video_progress 已存在");
+  } else {
+    plan("建表 edu_video_progress（user_id + video_id 唯一，只留最新进度）");
+    if (!DRY) {
+      await pool.query(
+        "CREATE TABLE `edu_video_progress` (" +
+          "`id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT," +
+          "`user_id` BIGINT UNSIGNED NOT NULL COMMENT 'user.id'," +
+          "`video_id` BIGINT UNSIGNED NOT NULL COMMENT 'edu_video.id'," +
+          "`position_sec` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '上次自然播放位置（秒）'," +
+          "`duration_sec` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '上次已知视频总时长（秒）'," +
+          "`watched_sec` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '累计有效观看秒数（墙钟）'," +
+          "`completed` TINYINT NOT NULL DEFAULT 0 COMMENT '是否看完 0/1'," +
+          "`last_played_at` DATETIME NULL COMMENT '最近一次播放时间'," +
+          "`created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP," +
+          "`updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP," +
+          "PRIMARY KEY (`id`)," +
+          "UNIQUE KEY `uk_edu_video_progress` (`user_id`, `video_id`)," +
+          "KEY `idx_edu_video_progress_user` (`user_id`, `updated_at`)" +
+        ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='通用视频课 · 每人每视频最新进度'");
+      log("建表 edu_video_progress");
+      changed++;
+    }
+  }
+
 
   await pool.end();
   console.log("\n" + (DRY ? "（--dry）以上是从现在到目标状态要做的事" :

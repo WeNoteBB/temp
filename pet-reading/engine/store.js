@@ -618,6 +618,46 @@ window.PETStore = (function () {
     getZoom().then(paintZoom);
   }
 
+  /* ---------- 通用视频课 ----------
+     视频信息 + 进度读写都走这里，页面（engine/video.js）不直接 fetch。
+     进度规则（5 分钟墙钟 / 拖动本次不记）在服务端算；这里只负责把
+     「看了多少秒、当前位置、是否拖动过」如实送上去。 */
+  async function listVideoCourses() {
+    var u = await getUser();
+    if (!u || !u.phone) throw apiErr("请先登录", 401);
+    var r = await api("/videos?phone=" + encodeURIComponent(u.phone));
+    return Array.isArray(r.courses) ? r.courses : [];
+  }
+
+  async function getVideo(id) {
+    var u = await getUser();
+    if (!u || !u.phone) throw apiErr("请先登录", 401);
+    return api("/video?id=" + encodeURIComponent(id) + "&phone=" + encodeURIComponent(u.phone));
+  }
+
+  async function saveVideoProgress(data) {
+    var u = await getUser();
+    if (!u || !u.phone) return { ok: false, err: "请先登录" };
+    var body = Object.assign({}, data || {}, { phone: u.phone });
+    return api("/video/progress", { method: "POST", body: body });
+  }
+
+  /* 关闭页面时的兜底：sendBeacon 同步发出，不等待响应。
+     这里只能读本地登录态（不能 await getUser），所以顺手检查 14 天过期。 */
+  function videoProgressBeacon(data) {
+    try {
+      var u = readKey(K_USER, null);
+      if (!u || !u.phone) return false;
+      var ts = Number(u.ts) || 0;
+      if (!ts || Date.now() - ts > LOGIN_TTL) return false;
+      if (typeof navigator === "undefined" || typeof navigator.sendBeacon !== "function" ||
+          typeof Blob !== "function") return false;
+      var body = Object.assign({}, data || {}, { phone: u.phone });
+      return navigator.sendBeacon(API_BASE + "/video/progress",
+        new Blob([JSON.stringify(body)], { type: "application/json" }));
+    } catch (e) { return false; }
+  }
+
   /* ---------- 错题 ----------
      登记走直连（不排队）：错了就报一次，报不上先算了 —— 错题本要的是
      「哪几道错了」这个事实，漏一次比拦着学生做题强。列表页（mistakes.html）
@@ -819,6 +859,10 @@ window.PETStore = (function () {
     isFav: isFav,
     addFav: addFav,
     syncFavs: syncFavs,
+    listVideoCourses: listVideoCourses,
+    getVideo: getVideo,
+    saveVideoProgress: saveVideoProgress,
+    videoProgressBeacon: videoProgressBeacon,
     addMistake: addMistake,
     listMistakes: listMistakes,
     addPhraseMistake: addPhraseMistake,

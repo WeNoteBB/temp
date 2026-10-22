@@ -67,7 +67,7 @@ log "服务器上装依赖（npm install --omit=dev）…"
 $SSH "test -x $NODE_DIR/bin/node || { echo '找不到 $NODE_DIR/bin/node —— 先跑一次 --setup'; exit 1; }; export PATH=$NODE_DIR/bin:\$PATH; cd $APP_DIR && npm install --omit=dev --no-audit --no-fund" >/dev/null \
   || die "npm install 失败 —— 到服务器上看： cd $APP_DIR && $NODE_DIR/bin/npm install --omit=dev"
 
-# ---------- 数据库迁移（幂等：建等级色表 / 给 user 加列 / 建错题表） ----------
+# ---------- 数据库迁移（幂等：等级色表 / user 加列 / 错题表 / 词组库 / 通用视频课） ----------
 # 失败不拦发布：服务本身能起，但注册/登录/错题会 500 —— 所以这里把话喊响。
 log "数据库迁移（migrate.mjs，幂等）…"
 if $SSH "test -f $APP_DIR/.env"; then

@@ -9,6 +9,10 @@
     "test:store": "node tools/test-store.mjs",
     "server": "node server/server.mjs",
     "test:server": "node server/test.mjs",
+    "videos:dry": "node tools/import-videos.mjs --dry",
+    "videos:sql": "node tools/import-videos.mjs --sql --out server/video-seed.sql",
+    "import:videos": "node --env-file=server/.env tools/import-videos.mjs --write",
+    "prepare:videos": "node tools/prepare-videos.mjs",
     "check": "node tools/verify.mjs && node build.mjs && node tools/smoke.mjs && node tools/test-store.mjs"
   },
   "type": "module",

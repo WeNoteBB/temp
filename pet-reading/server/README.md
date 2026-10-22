@@ -1,8 +1,9 @@
 # PET 精读 · 后端（server/）
 
-页面是纯静态的（nginx 直接伺服 `dist/`），这个 Node 服务干四件事：
+页面是纯静态的（nginx 直接伺服 `dist/`），这个 Node 服务干五件事：
 **注册/登录（密码校验）、把学生点的单词/句子收藏落进 MySQL（bud 库）、
-记阅读理解错题（pet_mistake）、给首页供用户资料（昵称/等级/等级色）**。
+记阅读理解错题（pet_mistake）、给首页供用户资料（昵称/等级/等级色）、
+存通用视频课的观看进度（edu_video_progress）**。
 前端唯一的对接点是 `engine/store.js`（本地即时 + 补写队列），见仓库根 README。
 
 ## 接口一览
@@ -18,6 +19,9 @@
 | `POST /api/favs/remove` | `{phone, kind, word 或 sentence}` | 只删 `user_word` / `user_sentence` 关联行，公共词句库不动 |
 | `POST /api/mistakes` | `{phone, slug, q, chosen, correct}` | 错题登记：用户+篇+题号唯一，重复错只计数 +1（chosen 换成最新） |
 | `GET /api/mistakes?phone=` | — | `{ok, items:[{slug,q,chosen,correct,count,ts}]}` |
+| `GET /api/videos?phone=` | — | 课程目录：课程 + 每个视频 + 该用户进度（给 `videos.html` 用） |
+| `GET /api/video?id=&phone=` | — | 视频信息 + 该用户进度；`progress.resume` 是算好的续播点（看完停在结尾时为 0） |
+| `POST /api/video/progress` | `{phone, videoId, position, duration, watchedDelta, seeked, completed}` | 累加墙钟观看秒数；累计满 5 分钟且本次没拖动才更新续播点；剩余 ≤5 秒自然播完才算 completed |
 | `GET /api/health` | — | `{ok, db:"up"}`；部署脚本拿它做健康检查 |
 
 失败一律 `{ok:false, err:"…"}` + 4xx/5xx，成功 `{ok:true, …}`。
@@ -36,6 +40,10 @@ node --env-file=.env migrate.mjs --dry    # 只看会做什么
   `user_level TINYINT DEFAULT 1`。已有列自动跳过 —— MySQL 没有 ADD COLUMN IF NOT EXISTS，
   脚本靠 information_schema 判断。
 - `pet_mistake` 建表：`user_id + slug + q_n` 唯一键，`wrong_count` 计数。
+- `edu_course` / `edu_video` / `edu_video_progress`：通用视频课（不绑 PET）。
+  `edu_course` 按 `(subject, grade, name)` 唯一；`edu_video` 按 `(course_id, seq)` 唯一；
+  `edu_video_progress` 按 `(user_id, video_id)` 唯一，只留最新进度（`watched_sec` 是
+  累计墙钟观看秒数，用来判断 5 分钟门槛，不是历史表）。
 
 ## 约定（改代码前先读）
 
@@ -62,7 +70,8 @@ node --env-file=.env migrate.mjs --dry    # 只看会做什么
 cd server
 cp .env.example .env          # 填 DB_PASS
 npm install
-npm run migrate               # 建等级色表 / 给 user 加列 / 建错题表（幂等）
+npm run migrate               # 建等级色表 / 给 user 加列 / 建错题表 / 建视频课表（幂等）
+npm run seed:videos           # 导入 data/videos.json 对应的视频目录（需先 migrate）
 npm run start:env             # = node --env-file=.env server.mjs
 ```
 

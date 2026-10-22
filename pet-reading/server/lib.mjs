@@ -138,3 +138,76 @@ export function srsNext(level, ok) {
   const next = Math.min(SRS_LEVEL_MAX, lv + 1);
   return { level: next, days: SRS_DAYS[next - 1] };
 }
+
+/* ---------- 通用视频课 · 进度规则（纯函数，单测在 test.mjs） ----------
+   产品口径（2026-10 对齐）：
+     · 5 分钟 = **实际观看时间（墙钟）**，2 倍速看 3 分钟也只算 3 分钟；
+     · 同一用户 + 视频累计观看满 300 秒后，才允许写入续播点；
+     · 本次页面一旦发生用户拖动（seeked=true），本次不再更新续播点；
+       拖动前客户端会单独上报一次，所以「拖动前自然播放到的位置」仍可保存；
+     · 自然播放到剩余 ≤5 秒算看完（拖动到结尾不算，客户端不会发 completed）；
+     · 只保留最新进度，不建历史表。
+   客户端 engine/video.js 里有同名常量，改动要同步。 */
+export const VIDEO_RECORD_AFTER_SEC = 300;
+export const VIDEO_COMPLETE_WITHIN_SEC = 5;
+export const VIDEO_MAX_DURATION_SEC = 24 * 60 * 60; // 24h，防脏数据写出 INT 上限
+export const VIDEO_MAX_WATCHED_DELTA = 600;         // 单次上报最多算 10 分钟
+
+function intOrZero(v) {
+  const n = parseInt(v, 10);
+  return Number.isFinite(n) && n > 0 ? n : 0;
+}
+
+/* 续播点：看完并且停在结尾 → 下次从头开始；否则用保存的自然位置。
+   重看了一部分（position < duration-5）时仍从那里继续，不会因为 completed=1 就永远从 0。 */
+export function videoResume(position, duration, completed) {
+  const pos = Math.max(0, intOrZero(position));
+  const dur = Math.max(0, intOrZero(duration));
+  if (completed && dur > 0 && pos >= dur - VIDEO_COMPLETE_WITHIN_SEC) return 0;
+  return pos;
+}
+
+/* 根据旧进度 + 本次上报，算出新进度。
+   prev: {position, duration, watched, completed} | null
+   input: {position, duration, watchedDelta, seeked, completed}
+   返回的 savedPosition 表示这次是否真的更新了续播点（前端可据此提示）。 */
+export function videoProgressNext(prev, input) {
+  const old = prev || {};
+  const oldPos = Math.max(0, intOrZero(old.position));
+  const oldDur = Math.max(0, intOrZero(old.duration));
+  const oldWatched = Math.max(0, intOrZero(old.watched));
+  const oldCompleted = !!old.completed;
+
+  let duration = Math.max(0, intOrZero(input && input.duration));
+  if (duration > VIDEO_MAX_DURATION_SEC) duration = VIDEO_MAX_DURATION_SEC;
+  if (!duration) duration = oldDur;
+  let position = Math.max(0, intOrZero(input && input.position));
+  if (duration > 0) position = Math.min(position, duration);
+
+  let watchedDelta = Math.max(0, intOrZero(input && input.watchedDelta));
+  if (watchedDelta > VIDEO_MAX_WATCHED_DELTA) watchedDelta = VIDEO_MAX_WATCHED_DELTA;
+  const watched = oldWatched + watchedDelta;
+
+  const seeked = !!(input && input.seeked);
+  const completedReq = !!(input && input.completed);
+  /* 看完是强证据：即使累计不足 5 分钟（短视频）也允许落完成状态；
+     但拖动过的这次仍然不算（客户端也不会发 completed）。 */
+  const eligible = watched >= VIDEO_RECORD_AFTER_SEC || completedReq;
+  const savedPosition = !seeked && eligible;
+
+  let newPos = oldPos;
+  let newCompleted = oldCompleted;
+  if (savedPosition) {
+    newPos = completedReq && duration > 0 ? duration : position;
+    if (completedReq) newCompleted = true;
+  }
+
+  return {
+    watchedSec: watched,
+    positionSec: newPos,
+    durationSec: duration,
+    completed: newCompleted ? 1 : 0,
+    savedPosition: savedPosition,
+    resume: videoResume(newPos, duration, newCompleted)
+  };
+}

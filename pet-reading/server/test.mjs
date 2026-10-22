@@ -10,7 +10,9 @@
 import { createApp } from "./server.mjs";
 import { sha256Hex, fitText, fitChars, validPhone, normPhone, normWord, normSentence,
          normNickname, validNickname, validPassword, hashPassword, verifyPassword,
-         levelColor, LEVEL_COLORS, SLUG_RE, srsNext } from "./lib.mjs";
+         levelColor, LEVEL_COLORS, SLUG_RE, srsNext,
+         videoProgressNext, videoResume,
+         VIDEO_RECORD_AFTER_SEC, VIDEO_COMPLETE_WITHIN_SEC } from "./lib.mjs";
 
 let nPass = 0, nFail = 0;
 const failures = [];
@@ -90,6 +92,48 @@ function eq(a, b, msg) {
   eq(srsNext(3, true), { level: 4, days: 7 }, "等级是数字字符串也认（'" + "3" + "'）");
   eq(srsNext("3", true), { level: 4, days: 7 }, "level 传字符串照样算");
   eq(srsNext(99, true), { level: 6, days: 30 }, "level 超界往上钳到 6");
+
+  /* ---- 视频进度规则（5 分钟墙钟 / 拖动本次不记 / 最后 5 秒算看完） ---- */
+  eq(VIDEO_RECORD_AFTER_SEC, 300, "视频记录门槛是 5 分钟");
+  eq(VIDEO_COMPLETE_WITHIN_SEC, 5, "最后 5 秒算看完");
+
+  let vn = videoProgressNext(null, { position: 120, duration: 3600, watchedDelta: 120, seeked: false, completed: false });
+  eq([vn.watchedSec, vn.positionSec, vn.savedPosition], [120, 0, false],
+    "看了 2 分钟：只累计观看秒数，不写续播点");
+
+  vn = videoProgressNext({ position: 0, duration: 3600, watched: 240, completed: false },
+    { position: 310, duration: 3600, watchedDelta: 70, seeked: false, completed: false });
+  eq([vn.watchedSec, vn.positionSec, vn.savedPosition], [310, 310, true],
+    "累计跨过 5 分钟：这一次开始写续播点");
+
+  vn = videoProgressNext({ position: 600, duration: 3600, watched: 900, completed: false },
+    { position: 1200, duration: 3600, watchedDelta: 30, seeked: true, completed: false });
+  eq([vn.watchedSec, vn.positionSec, vn.savedPosition], [930, 600, false],
+    "本次拖动过：观看时长照加，续播点不动（只保留拖动前的位置）");
+
+  vn = videoProgressNext({ position: 0, duration: 3600, watched: 10, completed: false },
+    { position: 30, duration: 3600, watchedDelta: 20, seeked: false, completed: true });
+  eq([vn.watchedSec, vn.positionSec, vn.completed, vn.savedPosition, vn.resume],
+    [30, 3600, 1, true, 0], "自然播到结尾：完成状态写入，下次从头开始");
+
+  vn = videoProgressNext({ position: 600, duration: 3600, watched: 900, completed: false },
+    { position: 3600, duration: 3600, watchedDelta: 20, seeked: true, completed: true });
+  eq([vn.positionSec, vn.completed, vn.savedPosition], [600, 0, false],
+    "拖动到结尾不算看完（seeked 时 completed 不生效）");
+
+  vn = videoProgressNext({ position: 3598, duration: 3600, watched: 900, completed: true },
+    { position: 3598, duration: 3600, watchedDelta: 10, seeked: false, completed: false });
+  eq(vn.resume, 0, "已完成且停在结尾：续播点回到 0");
+
+  vn = videoProgressNext({ position: 500, duration: 3600, watched: 900, completed: true },
+    { position: 520, duration: 3600, watchedDelta: 10, seeked: false, completed: false });
+  eq(vn.resume, 520, "看完后重看了一部分：仍从重看的位置继续，不强行归零");
+
+  vn = videoProgressNext(null, { position: 9999, duration: 3600, watchedDelta: 301, seeked: false, completed: false });
+  eq([vn.positionSec, vn.watchedSec], [3600, 301], "位置超过总时长会被钳到 duration；单次 watchedDelta 照常累计");
+
+  eq(videoResume(120, 3600, false), 120, "没看完：续播点就是保存的位置");
+  eq(videoResume(3600, 3600, true), 0, "看完停在结尾：续播 0");
 }
 
 /* ============================================================
@@ -159,6 +203,31 @@ function fakeDb(opts) {
       return { items: [{ no: 1, phrase: "a couple of", level: 2, reps: 1, wrongs: 0,
                          due: "2026-10-20", meaning: "几个", example: "Anyway,…", exampleCn: "不管怎样…",
                          use: "后接可数名词复数" }] };
+    },
+    async listVideoCourses(phone) {
+      calls.push(["listVideoCourses", phone]);
+      return { courses: [{
+        id: 2, subject: "数学", grade: "六年级", name: "2025秋下 六年级数学A+ 洪然",
+        videos: [{ id: 1, seq: 1, lesson: "圆的认识与周长", lessonType: "正课",
+          duration: 3600, position: 600, watched: 900, completed: false, resume: 600, lastPlayedAt: 1 }]
+      }] };
+    },
+    async getVideo(id) {
+      calls.push(["getVideo", id]);
+      if (id !== 1) return null;
+      return {
+        id: 1, courseId: 2, seq: 1, lesson: "圆的认识与周长", lessonType: "正课",
+        fileName: "1圆的认识与周长.mkv", fileUrl: "/videos/math/grade6/2025autumn/01.mp4",
+        duration: 0, subject: "数学", grade: "六年级", course: "2025秋下 六年级数学A+ 洪然"
+      };
+    },
+    async getVideoProgress(phone, id) {
+      calls.push(["getVideoProgress", phone, id]);
+      return { position: 600, duration: 3600, watched: 900, completed: false, resume: 600, lastPlayedAt: 1 };
+    },
+    async saveVideoProgress(a) {
+      calls.push(["saveVideoProgress", a]);
+      return { watchedSec: 930, positionSec: 600, durationSec: 3600, completed: 0, savedPosition: false, resume: 600 };
     },
     async addMistake(a) { calls.push(["addMistake", a]); return { ok: true }; },
     async listMistakes(phone) {
@@ -385,6 +454,59 @@ const get = (base, p) =>
     eq(c[2], { limit: 20, all: true }, "all=1&limit=20 原样传给 db");
     r = await get(base, "/api/phrase-review?phone=oops");
     ok(r.status === 400, "复习列表手机号非法 → 400");
+
+    /* -- 通用视频课：课程列表 + 视频信息 + 进度 -- */
+    r = await get(base, "/api/videos?phone=13800138000");
+    ok(r.status === 200 && r.j.ok === true, "视频课程列表接口成功");
+    eq([r.j.courses[0].subject, r.j.courses[0].name, r.j.courses[0].videos.length],
+      ["数学", "2025秋下 六年级数学A+ 洪然", 1], "课程列表字段完整（科目/课程名/视频数）");
+    eq([r.j.courses[0].videos[0].seq, r.j.courses[0].videos[0].resume, r.j.courses[0].videos[0].watched],
+      [1, 600, 900], "课程列表带每个视频的进度");
+    r = await get(base, "/api/videos?phone=oops");
+    ok(r.status === 400, "课程列表手机号非法 → 400");
+
+    r = await get(base, "/api/video?id=1&phone=13800138000");
+    ok(r.status === 200 && r.j.ok === true, "视频信息接口成功");
+    eq([r.j.video.id, r.j.video.lesson, r.j.video.lessonType, r.j.video.subject],
+      [1, "圆的认识与周长", "正课", "数学"], "视频信息字段完整（id/课名/类型/科目）");
+    eq([r.j.progress.position, r.j.progress.resume, r.j.recordAfter, r.j.completeWithin],
+      [600, 600, 300, 5], "进度 + 5 分钟门槛 + 最后 5 秒口径都返回");
+    r = await get(base, "/api/video?id=999&phone=13800138000");
+    ok(r.status === 400, "视频不存在 → 400");
+    r = await get(base, "/api/video?id=1&phone=oops");
+    ok(r.status === 400, "视频信息手机号非法 → 400");
+    r = await get(base, "/api/video?id=0&phone=13800138000");
+    ok(r.status === 400, "视频 id 0 → 400");
+
+    r = await post(base, "/api/video/progress", {
+      phone: "13800138000", videoId: 1, position: 600, duration: 3600,
+      watchedDelta: 30, seeked: true, completed: false
+    });
+    ok(r.status === 200 && r.j.ok === true, "视频进度上报成功");
+    c = db.calls.filter(x => x[0] === "saveVideoProgress").pop()[1];
+    eq([c.phone, c.videoId, c.position, c.duration, c.watchedDelta, c.seeked, c.completed],
+      ["13800138000", 1, 600, 3600, 30, true, false], "进度字段透传到 db（seeked=true 原样传）");
+
+    r = await post(base, "/api/video/progress", {
+      phone: "13800138000", videoId: 1, position: 3598, duration: 3600,
+      watchedDelta: 5, seeked: false, completed: true
+    });
+    ok(r.status === 200, "完成状态上报成功");
+    c = db.calls.filter(x => x[0] === "saveVideoProgress").pop()[1];
+    ok(c.completed === true && c.seeked === false, "completed=true 透传到 db");
+
+    r = await post(base, "/api/video/progress", {
+      phone: "13800138000", videoId: 1, position: -1, duration: 3600, watchedDelta: 1
+    });
+    ok(r.status === 400, "负 position → 400");
+    r = await post(base, "/api/video/progress", {
+      phone: "13800138000", videoId: 1, position: 10, duration: 999999, watchedDelta: 1
+    });
+    ok(r.status === 400, "duration 超过 24h → 400");
+    r = await post(base, "/api/video/progress", {
+      phone: "13800138000", videoId: 999, position: 10, duration: 100, watchedDelta: 1
+    });
+    ok(r.status === 400, "给不存在的视频报进度 → 400");
 
     /* -- remove -- */
     r = await post(base, "/api/favs/remove", { phone: "13800138000", kind: "word", word: "century" });
